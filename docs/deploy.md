@@ -85,7 +85,7 @@ docker compose -f deploy/docker-compose.yml exec api python scripts/compare_roun
 ## 五、安全要点
 
 - 密钥（`ARK_API_KEY`、`SECRET_KEY`、数据库密码）只在 `.env`，不进仓库、不进数据库、页面不显示。
-- 登录失败限流按"用户名 + 客户端 IP"计数：Caddy 2.5 以后默认不信任客户端自带的 `X-Forwarded-For`，会用真实来源 IP 覆盖后转给 api，api 开了 `--proxy-headers`。**不要**在 Caddyfile 里加 `trusted_proxies`，除非前面还有一层负载均衡，并且只信任它的网段。
+- 登录失败限流按"用户名 + 客户端 IP"计数：Caddyfile 里的 `header_up X-Forwarded-For {remote_host}` 会用直连 IP 覆盖客户端自带的 `X-Forwarded-For`（Caddy 默认是追加，不加这行会被伪造头部绕过限流），api 开了 `--proxy-headers` 读取这个值。**不要**去掉这行，也不要在前面再加一层代理，除非相应调整信任链。
 - `COOKIE_SECURE=true`：会话 cookie 只走 HTTPS。
 - 没有公开页面；账号由管理员在"设置 → 账号"或 CLI 创建。
 
