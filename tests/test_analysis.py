@@ -67,7 +67,7 @@ def test_weak_competitor_ahead(session):    # 7 条都提到澳觅，4 条 mFood
     assert (w["Q02"].aomi_first, w["Q02"].competitor_first) == (3, 4)
 
 
-def test_weak_uses_only_recent_n_and_skips_branded_and_healthy(session):
+def test_weak_skips_branded_and_healthy(session):
     for k in range(10):                      # 最近 7 天都提到澳觅，更早 3 天没提到
         d = D1 - timedelta(days=k)
         add_run(session, "Q04", d, mention={"aomi": k < 7}, order={"aomi": 1 if k < 7 else None})
@@ -105,3 +105,24 @@ def test_owned_citations(session):
     add_source(session, r, "https://aomi.mo/x", is_owned=True)
     add_source(session, r, "https://sohu.com/a/1", rank=2)
     assert [s.url for s in owned_citations(session, "api-custom", D0, D0)] == ["https://aomi.mo/x"]
+
+
+def test_ref_articles_latest_is_by_collect_date_not_collected_at(session):
+    # 补跑往日时 collected_at 是当下：10-22 的补跑比 10-23 的正常采集 collected_at 更晚，但"最近一次"应是 10-23
+    from datetime import datetime
+
+    from app.timeutil import CST
+    late = datetime(2026, 10, 24, 9, 0, tzinfo=CST)
+    r_old = add_run(session, "Q01", D0, collected_at=late)
+    r_new = add_run(session, "Q01", D1)
+    add_source(session, r_old, "https://sohu.com/a/9", title="旧标题")
+    add_source(session, r_new, "https://sohu.com/a/9", title="新标题")
+    assert reference_articles(session, "Q01", "api-custom", D1)[0].title == "新标题"
+
+
+def test_weak_window_really_limits_to_recent_n(session):
+    # 最近 7 天都提到澳觅，更早 10 天都没提到：全取是 7/17 < 50% 会误判；只取最近 7 条是健康的
+    for k in range(17):
+        d = D1 - timedelta(days=k)
+        add_run(session, "Q05", d, mention={"aomi": k < 7}, order={"aomi": 1 if k < 7 else None})
+    assert [w.qid for w in weak_questions(session, "api-custom", D1)] == []

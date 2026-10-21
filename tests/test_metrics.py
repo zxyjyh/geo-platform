@@ -86,3 +86,11 @@ def test_trend_includes_empty_days(session):                # 3 天里只有 1 �
     t = trend(session, date(2026, 10, 20), date(2026, 10, 22), "api-custom", 1)
     assert [m.date for m in t] == [date(2026, 10, 20), date(2026, 10, 21), date(2026, 10, 22)]
     assert [m.n_valid for m in t] == [0, 1, 0]
+
+
+def test_duplicate_valid_runs_for_one_question_flagged(session):
+    # 同一天同一题出现两条 valid（比如以后别的采集器用了另一套 run_id），不能被字典悄悄吞掉一条
+    add_run(session, "Q01", D, mention={"aomi": True}, order={"aomi": 1})
+    add_run(session, "Q01", D, run_id="daily-other-Q01", mention={"aomi": False})
+    m = daily_metrics(session, D, "api-custom", 1)
+    assert "duplicate_qid" in m.selfcheck_failures

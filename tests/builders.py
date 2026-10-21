@@ -10,9 +10,12 @@ UNBRANDED = ["Q01", "Q02", "Q04", "Q05", "Q06", "Q07", "Q08", "Q09", "Q10", "Q11
 
 def add_run(session, qid: str, d: date, channel: str = "api-custom", status: str = "valid",
             mention: dict | None = None, order: dict | None = None, alias_version: int = 1,
-            round_: str = "daily", text: str = "回答"):
-    run = new_run(daily_run_id(channel, qid, d) if round_ == "daily" else f"{round_}-{channel}-{qid}-{d}",
-                  qid, "v3", channel, d, datetime.combine(d, time(6), tzinfo=CST), round_=round_)
+            round_: str = "daily", text: str = "回答", run_id: str | None = None,
+            collected_at: datetime | None = None):
+    if run_id is None:
+        run_id = daily_run_id(channel, qid, d) if round_ == "daily" else f"{round_}-{channel}-{qid}-{d}"
+    run = new_run(run_id, qid, "v3", channel, d, collected_at or datetime.combine(d, time(6), tzinfo=CST),
+                  round_=round_)
     run.status = status
     run.answer_text = text if status == "valid" else ""
     session.add(run)

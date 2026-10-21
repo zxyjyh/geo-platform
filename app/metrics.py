@@ -53,33 +53,33 @@ def daily_metrics(session: Session, d: date, channel: str, alias_version: int,
         .where(Run.round == ROUND, Run.collect_date == d, Run.channel == channel, Run.qid.in_(qids))
     ).all()
     failures: list[str] = []
-    codings = {}
+    cs: list[Coding] = []
+    valid_qids: list[str] = []
     for run, coding in rows:
         if run.status != "valid":
             continue
         if coding is None:
             failures.append("coding_missing")       # valid 的 run 没有这个版本的编码：说明重算没跑完
             continue
-        codings[run.qid] = coding
-    n_valid = len(codings)
-    cs = list(codings.values())
+        cs.append(coding)
+        valid_qids.append(run.qid)
+    n_valid = len(cs)
     mention = {e: Ratio(sum(getattr(c, f"mention_{e}") for c in cs), n_valid) for e in ENTITIES}
     first = {e: Ratio(sum(getattr(c, f"order_{e}") == 1 for c in cs), n_valid) for e in ENTITIES}
     total = sum(r.num for r in mention.values())
     share = {e: Ratio(mention[e].num, total) for e in ENTITIES}
 
+    # 自检。"不混渠道"由查询条件保证，"份额分子之和 = 分母"是代数恒等式，都不另设检查（写了也永远不会失败）
     for e in ENTITIES:
         if first[e].num > mention[e].num:
             failures.append(f"first_{e}")
-    if sum(r.num for r in share.values()) != total:
-        failures.append("share")
-    if len({run.channel for run, _ in rows}) > 1:
-        failures.append("channel")
+    if len(valid_qids) != len(set(valid_qids)):
+        failures.append("duplicate_qid")            # 同一天同一题多条 valid：分母会被多算
     if n_valid > len(qids):
         failures.append("n_valid")
 
     return DailyMetrics(date=d, channel=channel, n_expected=len(qids), n_valid=n_valid,
-                        missing_qids=[q for q in qids if q not in codings], mention=mention, first=first,
+                        missing_qids=[q for q in qids if q not in set(valid_qids)], mention=mention, first=first,
                         share=share, selfcheck_failures=sorted(set(failures)))
 
 

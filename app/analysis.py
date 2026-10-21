@@ -98,20 +98,22 @@ def reference_articles(session: Session, qid: str, channel: str, end: date, days
                        limit: int = 5) -> list[RefArticle]:
     """按 url_norm 分组，count = 引用过它的 run 数；url / title 取最近一次出现时的值。"""
     rows = session.execute(
-        _daily_sources(channel, end - timedelta(days=days - 1), end).add_columns(Run.collected_at)
+        _daily_sources(channel, end - timedelta(days=days - 1), end).add_columns(Run.collect_date, Run.collected_at)
         .where(Run.qid == qid)).all()
     groups: dict[str, dict] = {}
-    for s, collected_at in rows:
+    for s, collect_date, collected_at in rows:
         g = groups.setdefault(s.url_norm, {"runs": set(), "latest": None, "at": None})
         g["runs"].add(s.run_id)
-        if g["at"] is None or (collected_at, -s.rank) > g["at"]:
-            g["latest"], g["at"] = s, (collected_at, -s.rank)
+        # 先比 collect_date：补跑往日时 collected_at 是补跑当下，不能算"更近"
+        at = (collect_date, collected_at, -s.rank)
+        if g["at"] is None or at > g["at"]:
+            g["latest"], g["at"] = s, at
     tagged = set(session.scalars(select(SourceTag.url_norm).where(SourceTag.tag == "external_geo",
                                                                   SourceTag.url_norm.in_(list(groups)))))
     out = [RefArticle(url_norm=k, url=g["latest"].url, title=g["latest"].title, domain=g["latest"].domain,
                       platform_key=g["latest"].platform_key, count=len(g["runs"]), external_geo=k in tagged)
            for k, g in groups.items()]
-    out.sort(key=lambda a: (-a.count, -groups[a.url_norm]["at"][0].timestamp()))
+    out.sort(key=lambda a: (-a.count, -groups[a.url_norm]["at"][0].toordinal(), a.url_norm))
     return out[:limit]
 
 
