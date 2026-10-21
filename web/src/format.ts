@@ -93,3 +93,9 @@ export function plainSnippet(s: string): string {
     .replace(/\s*\|\s*/g, " · ")
     .trim();
 }
+
+/** KPI 卡和竞品对比里的"前一天 x/y"：和当天一样要过自检，未通过不出数。 */
+export function prevText(prev: DailyMetrics | undefined, metric: Metric, entity: Entity): string {
+  if (!prev) return "无数据";
+  return selfcheckReason(prev.selfcheck_failures, metric, entity) ? "自检未通过" : formatRatio(prev[metric][entity]);
+}

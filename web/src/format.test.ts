@@ -116,3 +116,15 @@ describe("plainSnippet", () => {
     expect(plainSnippet("- 公开资料显示 `澳觅`")).toBe("公开资料显示 澳觅");
   });
 });
+
+import { prevText } from "./format";
+
+describe("prevText", () => {
+  it("前一天也要过自检：未通过不出数", () => {
+    expect(prevText(undefined, "mention", "aomi")).toBe("无数据");
+    expect(prevText(day(), "mention", "aomi")).toBe("5/6（83%）");
+    expect(prevText(day({ selfcheck_failures: ["coding_missing"] }), "mention", "aomi")).toBe("自检未通过");
+    expect(prevText(day({ selfcheck_failures: ["first_aomi"] }), "first", "aomi")).toBe("自检未通过");
+    expect(prevText(day({ selfcheck_failures: ["first_aomi"] }), "mention", "aomi")).toBe("5/6（83%）");
+  });
+});

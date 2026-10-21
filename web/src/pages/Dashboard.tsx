@@ -5,7 +5,7 @@ import { AimOutlined, PercentageOutlined, QuestionCircleOutlined, TrophyOutlined
 import dayjs from "dayjs";
 import { get } from "../api";
 import EChart from "../EChart";
-import { formatRatio, missingNotice, pct, plainSnippet, selfcheckReason, trendValue, type Metric } from "../format";
+import { formatRatio, missingNotice, pct, plainSnippet, prevText, selfcheckReason, trendValue, type Metric } from "../format";
 import { ENTITIES, ENTITY_NAME, orderText, type DailyMetrics, type DashboardData, type Entity, type RunItem } from "../types";
 
 const METRICS: Record<Metric, { label: string; hint: string; icon: JSX.Element }> = {
@@ -40,6 +40,8 @@ export default function Dashboard() {
   useEffect(() => {
     let stale = false; // 快速切换日期时，旧请求晚到不能覆盖新数据
     setError(null);
+    setTrend([]); // 换日期/渠道时先清空，免得"前一天"和逐题表短暂显示旧渠道的数
+    setRuns([]);
     get<DashboardData>("/dashboard", query)
       .then((d) => {
         if (stale) return;
@@ -116,7 +118,7 @@ export default function Dashboard() {
       <Card className="ab-card" size="small">
         <Tooltip title={METRICS[k].hint}><div className="ab-kpi-title">{METRICS[k].icon}澳觅{METRICS[k].label}</div></Tooltip>
         <div className="ab-kpi-value">{cell(m, k, "aomi")}</div>
-        <div className="ab-kpi-sub">前一天 {prev ? formatRatio(prev[k].aomi) : "无数据"}</div>
+        <div className="ab-kpi-sub">前一天 {prevText(prev, k, "aomi")}</div>
       </Card>
     </Col>
   ));
@@ -178,7 +180,7 @@ export default function Dashboard() {
             <div style={{ background: "#F7F8FB", borderRadius: 8, padding: "8px 12px", marginBottom: 8, fontSize: 13 }}>
               澳觅：<b style={{ color: "#5B5CF6" }}>{barBlocked || m.n_valid === 0 ? "—" : `三家中${aomiTied ? "并列" : ""}第 ${aomiRank}`}</b>
               <span style={{ margin: "0 10px", color: "#ddd" }}>|</span>最新 {cell(m, metric, "aomi")}
-              <span style={{ margin: "0 10px", color: "#ddd" }}>|</span>前一天 {prev ? formatRatio(prev[metric].aomi) : "无数据"}
+              <span style={{ margin: "0 10px", color: "#ddd" }}>|</span>前一天 {prevText(prev, metric, "aomi")}
             </div>
             {barBlocked ? <Alert type="error" message="自检未通过，不出数" /> : <EChart option={barOption} height={200} />}
           </Card>

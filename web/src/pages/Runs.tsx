@@ -22,22 +22,30 @@ const STATUS: Record<string, string> = { valid: "green", void: "default", failed
 
 function Detail({ runId, aliases }: { runId: string; aliases: Record<Entity, string[]> | null }) {
   const [d, setD] = useState<RunDetail | null>(null);
-  const load = () => get<RunDetail>(`/runs/${encodeURIComponent(runId)}`).then(setD);
+  const [error, setError] = useState<string | null>(null);
+  const [reload, setReload] = useState(0);
   useEffect(() => {
+    // 先点 A 再点 B：A 的响应晚到不能盖住 B，否则右侧显示 A、打标签也会打到 A 的信源上
+    let stale = false;
     setD(null);
-    load();
-  }, [runId]); // eslint-disable-line react-hooks/exhaustive-deps
+    setError(null);
+    get<RunDetail>(`/runs/${encodeURIComponent(runId)}`)
+      .then((r) => !stale && setD(r))
+      .catch((e) => !stale && setError(e.status === 404 ? `没有这条回答：${runId}` : String(e.message || e)));
+    return () => { stale = true; };
+  }, [runId, reload]);
 
   const toggleGeo = async (s: SourceRow, on: boolean) => {
     try {
       if (on) await send("POST", "/sources/tags", { url: s.url, tag: "external_geo", note: "" });
       else await send("DELETE", `/sources/tags?url=${encodeURIComponent(s.url)}`);
-      await load();
+      setReload((n) => n + 1);
     } catch (e) {
       message.error(String((e as Error).message));
     }
   };
 
+  if (error) return <Alert type="error" showIcon message={error} />;
   if (!d) return <Spin />;
   const segs = aliases ? highlightSegments(d.answer_text, aliases) : [{ text: d.answer_text, entity: null }];
   return (
@@ -83,6 +91,8 @@ export default function Runs() {
   const [filters, setFilters] = useState<Record<string, string | undefined>>({ round: "daily" });
   const [page, setPage] = useState(1);
   const [data, setData] = useState<{ total: number; items: RunItem[] } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [params, setParams] = useSearchParams();
   const selected = params.get("run");
   const setSelected = (id: string) => setParams((p) => { p.set("run", id); return p; });
@@ -90,14 +100,23 @@ export default function Runs() {
   const [aliases, setAliases] = useState<Record<Entity, string[]> | null>(null);
 
   useEffect(() => {
-    get<{ qid: string; text: string }[]>("/questions").then(setQuestions);
-    get<Record<Entity, string[]>>("/settings/aliases").then(setAliases);
+    // 这两个只影响筛选项和高亮，失败时页面照常可用，只提示
+    get<{ qid: string; text: string }[]>("/questions").then(setQuestions).catch(() => message.warning("题目列表加载失败"));
+    get<Record<Entity, string[]>>("/settings/aliases").then(setAliases).catch(() => message.warning("别名表加载失败，原文不高亮"));
   }, []);
   useEffect(() => {
+    // 快速翻页或改筛选：只接受最后一次请求的结果
+    let stale = false;
+    setLoading(true);
+    setError(null);
     get<{ total: number; items: RunItem[] }>("/runs", {
       ...filters, page, size: 20,
       date_from: range?.[0]?.format("YYYY-MM-DD"), date_to: range?.[1]?.format("YYYY-MM-DD"),
-    }).then(setData);
+    })
+      .then((r) => !stale && setData(r))
+      .catch((e) => !stale && (setData(null), setError(String(e.message || e))))
+      .finally(() => !stale && setLoading(false));
+    return () => { stale = true; };
   }, [filters, page, range]);
 
   const setF = (k: string) => (v: string | undefined) => {
@@ -122,7 +141,8 @@ export default function Runs() {
             <Select allowClear placeholder="状态" style={{ width: 100 }} value={filters.status} onChange={setF("status")}
               options={[{ value: "valid" }, { value: "void" }, { value: "failed" }]} />
           </Space>
-          <Table<RunItem> size="small" rowKey="run_id" loading={!data} dataSource={data?.items}
+          {error && <Alert type="error" showIcon message={`列表加载失败：${error}`} style={{ marginBottom: 12 }} />}
+          <Table<RunItem> size="small" rowKey="run_id" loading={loading} dataSource={data?.items ?? []}
             onRow={(r) => ({ onClick: () => setSelected(r.run_id), style: { cursor: "pointer",
               background: r.run_id === selected ? "#eef4ff" : undefined } })}
             pagination={{ current: page, pageSize: 20, total: data?.total, onChange: setPage, showSizeChanger: false,
