@@ -74,10 +74,11 @@ def store_run(session: Session, run: Run, result: ArkResult) -> None:
                            order_mfood=r.order["mfood"], order_shanfeng=r.order["shanfeng"]))
 
 
-def _new_run(run_id: str, q: Question, channel: str, run_date: date, collected_at) -> Run:
-    return Run(run_id=run_id, round=ROUND, qid=q.qid, question_version=q.version, platform="doubao",
+def new_run(run_id: str, qid: str, question_version: str, channel: str, run_date: date, collected_at,
+            round_: str = ROUND, collector: str = "app.collector") -> Run:
+    return Run(run_id=run_id, round=round_, qid=qid, question_version=question_version, platform="doubao",
                channel=channel, channel_detail=f"{DEFAULT_MODEL} / web_search {channel}", mode="联网",
-               collected_at=collected_at, collect_date=run_date, collector="app.collector",
+               collected_at=collected_at, collect_date=run_date, collector=collector,
                account_ref="ark-default", location="中国/广东/深圳" if channel == "api-plugin" else "未设置",
                new_session=True, answer_text="", raw_path="", sources_visible=False, sources_count=0,
                search_queries="", search_rounds=0)
@@ -121,7 +122,7 @@ def run_daily(session: Session, client: ArkClient, run_date: date, channel: str,
             except ArkError as e:
                 error = f"第 {attempt + 1} 次：{e}"
         collected_at = timeutil.now_cst()
-        run = _new_run(run_id, q, channel, run_date, collected_at)
+        run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at)
 
         if resp is None:
             run.status, run.error = "failed", error
