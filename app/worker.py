@@ -21,18 +21,19 @@ from app.models import JobRun
 log = logging.getLogger("geo.worker")
 JOB = "daily_collect"
 DAILY_AT = time(6, 0)
-_lock = threading.Lock()  # 单线程执行器之外再加一道：任何入口调用都不会并发执行采集
+_lock = threading.Lock()  # 单线程执行器之外再加一道（只在本进程内有效：worker 只能起一个副本）
 
 
 def _execute(session: Session, jr: JobRun, client: ArkClient, raw_dir) -> JobRun:
     jr.status, jr.started_at = "running", timeutil.now_cst()
     session.commit()
+    run_date = jr.run_date  # rollback 后 jr 会过期，日志里不再回库读取（断连时那一读会再抛一次，盖掉原异常）
     try:
         with _lock:
-            s = run_daily(session, client, jr.run_date, jr.channel, raw_dir)
+            s = run_daily(session, client, run_date, jr.channel, raw_dir)
     except Exception as e:  # noqa: BLE001  任务失败要落到 JobRun 上，不能让调度器线程悄悄吞掉
         session.rollback()
-        log.exception("daily_collect %s 异常", jr.run_date)
+        log.exception("daily_collect %s 异常", run_date)
         jr.status, jr.message = "failed", f"异常 {type(e).__name__}: {e}"
     else:
         jr.n_ok, jr.n_failed = s.n_ok + s.n_skipped, s.n_failed
@@ -61,6 +62,21 @@ def process_requested(session_factory: sessionmaker, client: ArkClient, raw_dir)
             _execute(session, jr, client, raw_dir)
             n += 1
     return n
+
+
+def recover_stale(session_factory: sessionmaker) -> int:
+    """启动时收回上次进程留下的 running：worker 是单实例，启动时不可能有别人在跑。
+    手动补跑请求改回 requested 重新执行，定时任务记 failed（当天的补跑由 needs_catchup 负责）。"""
+    with session_factory() as session:
+        stale = list(session.scalars(select(JobRun).where(JobRun.status == "running")))
+        for jr in stale:
+            if jr.requested_by:
+                jr.status = "requested"
+            else:
+                jr.status, jr.finished_at = "failed", timeutil.now_cst()
+                jr.message = (jr.message + "；" if jr.message else "") + "worker 重启，任务中断"
+        session.commit()
+    return len(stale)
 
 
 def needs_catchup(session_factory: sessionmaker, at: datetime | None = None) -> bool:
@@ -96,6 +112,8 @@ def main() -> None:
     session_factory = sessionmaker(make_engine(cfg.database_url), expire_on_commit=False)
     with session_factory() as s:
         seed_all(s)
+    if n := recover_stale(session_factory):
+        log.warning("收回 %d 条上次中断的任务", n)
     client = HttpArkClient(cfg.ark_api_key)
     sched = build_scheduler(session_factory, client, cfg.raw_dir)
     if needs_catchup(session_factory):

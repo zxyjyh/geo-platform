@@ -74,3 +74,20 @@ def test_scheduler_is_serial_and_scheduled_at_6_cst(session_factory, tmp_path):
     assert str(daily.trigger.timezone) == "Asia/Shanghai" and "hour='6'" in str(daily.trigger)
     assert sched._job_defaults == {"coalesce": True, "max_instances": 1, "misfire_grace_time": 3600}
     assert "process_requested" in jobs
+
+
+def test_recover_stale_running_jobs_on_startup(session_factory, session):
+    from app.worker import recover_stale
+
+    session.add_all([
+        JobRun(job="daily_collect", run_date=date(2026, 10, 22), channel="api-custom", status="running",
+               requested_by="alice", n_ok=0, n_failed=0, message=""),
+        JobRun(job="daily_collect", run_date=date(2026, 10, 22), channel="api-custom", status="running",
+               requested_by=None, n_ok=0, n_failed=0, message=""),
+    ])
+    session.commit()
+    assert recover_stale(session_factory) == 2
+    session.expire_all()
+    manual, scheduled = session.query(JobRun).order_by(JobRun.id).all()
+    assert manual.status == "requested"                       # 手动补跑请求重新排队，不静默丢失
+    assert scheduled.status == "failed" and "重启" in scheduled.message
