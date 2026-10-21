@@ -4,6 +4,7 @@ import pytest
 from sqlalchemy.orm import sessionmaker
 
 os.environ.setdefault("SECRET_KEY", "test-secret")
+os.environ.setdefault("BCRYPT_ROUNDS", "4")
 
 from app.db import Base, make_engine  # noqa: E402
 

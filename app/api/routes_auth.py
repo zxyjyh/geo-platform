@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, Request
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
@@ -11,14 +11,15 @@ router = APIRouter(prefix="/auth")
 
 
 class LoginBody(BaseModel):
-    username: str
-    password: str
+    # 上限挡掉超长输入：限流字典按用户名存，不能让人用超长用户名撑内存
+    username: str = Field(min_length=1, max_length=64)
+    password: str = Field(min_length=1, max_length=256)
 
 
 @router.post("/login")
 def login(body: LoginBody, request: Request, session: Session = Depends(get_session)):
     limiter = request.app.state.login_limiter
-    key = (body.username, request.client.host if request.client else "")
+    key = limiter.key(body.username, request.client.host if request.client else "")
     if limiter.blocked(key):
         raise HTTPException(status_code=429, detail="失败次数过多，请 15 分钟后再试")
     user = session.scalars(select(User).where(User.username == body.username)).first()
@@ -32,7 +33,7 @@ def login(body: LoginBody, request: Request, session: Session = Depends(get_sess
     return {"username": user.username}
 
 
-@router.post("/logout")
+@router.post("/logout", dependencies=[Depends(current_user)])
 def logout(request: Request):
     request.session.clear()
     return {"ok": True}

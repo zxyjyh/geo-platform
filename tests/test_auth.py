@@ -91,3 +91,32 @@ def test_cli_create_user(tmp_path, monkeypatch, capsys):
     with Session(create_engine(url)) as s:
         u = s.scalars(select(User).where(User.username == "carol")).one()
         assert verify_password("pw3", u.password_hash)
+
+
+def test_oversized_credentials_rejected_before_limiter(client, app):
+    assert login(client, "a" * 65, "x").status_code == 422
+    assert login(client, "alice", "x" * 257).status_code == 422
+    assert len(app.state.login_limiter) == 0
+
+
+def test_limiter_does_not_grow_without_bound(client, app, user_alice, monkeypatch):
+    t = [1000.0]
+    monkeypatch.setattr(auth.time, "monotonic", lambda: t[0])
+    for i in range(30):
+        login(client, f"nobody{i}", "bad")
+    assert len(app.state.login_limiter) == 30
+    t[0] += 15 * 60 + 1
+    login(client, "someone", "bad")                    # 任意一次失败都会顺手清掉过期记录
+    assert len(app.state.login_limiter) == 1
+    assert not app.state.login_limiter.blocked(("ghost", "1.2.3.4")) and len(app.state.login_limiter) == 1
+
+
+def test_username_variants_share_one_counter(client, user_alice):
+    # MySQL 的 utf8mb4_unicode_ci 不区分大小写、忽略末尾空格：这些变体查到的是同一个用户
+    for name in ["alice", "Alice", "alice ", "ALICE", " alice"]:
+        assert login(client, name, "bad").status_code == 401
+    assert login(client, "alice", "correct").status_code == 429
+
+
+def test_logout_requires_login(client):
+    assert client.post("/api/auth/logout").status_code == 401
