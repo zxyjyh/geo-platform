@@ -4,7 +4,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 DROP_PARAMS = {"spm", "from", "share_token", "source"}
 
 
-def _host(netloc: str) -> str:
+def host_key(netloc: str) -> str:
     host = netloc.lower()
     # scheme 统一成 https 之后，:80 / :443 都是默认端口
     for port in (":80", ":443"):
@@ -28,7 +28,7 @@ def normalize_url(url: str) -> str:
     parts = urlsplit(url)
     params = sorted((k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True)
                     if not (k.lower().startswith("utm_") or k.lower() in DROP_PARAMS))
-    return urlunsplit(("https", _host(parts.netloc), parts.path.rstrip("/"), urlencode(params), ""))
+    return urlunsplit(("https", host_key(parts.netloc), parts.path.rstrip("/"), urlencode(params), ""))
 
 
 def platform_for(domain: str, platforms) -> str | None:

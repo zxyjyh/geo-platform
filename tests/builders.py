@@ -24,3 +24,19 @@ def add_run(session, qid: str, d: date, channel: str = "api-custom", status: str
                            order_aomi=o["aomi"], order_mfood=o["mfood"], order_shanfeng=o["shanfeng"]))
     session.commit()
     return run
+
+
+def add_source(session, run, url: str, title: str = "t", rank: int = 1, is_owned: bool = False):
+    from urllib.parse import urlparse
+
+    from sqlalchemy import select
+
+    from app.models import Platform, Source
+    from app.urls import normalize_url, platform_for
+
+    domain = urlparse(url).netloc
+    s = Source(run_id=run.run_id, rank=rank, title=title, url=url, url_norm=normalize_url(url), domain=domain,
+               platform_key=platform_for(domain, list(session.scalars(select(Platform)))), is_owned=is_owned)
+    session.add(s)
+    session.commit()
+    return s
