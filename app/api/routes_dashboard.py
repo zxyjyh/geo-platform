@@ -4,12 +4,12 @@ from fastapi import APIRouter, Depends
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.api.common import alias_version, api_channel, date_range, latest_date, to_json
+from app.api.common import alias_version, api_channel, date_range, first_date, latest_date, to_json
 from app.auth import current_user
 from app.collector import ROUND, setting
 from app.db import get_session
-from app.metrics import daily_metrics, trend
-from app.models import JobRun, Run
+from app.metrics import daily_metrics, trend, unbranded_qids
+from app.models import JobRun, Question, Run
 from app.timeutil import today_cst
 
 router = APIRouter(prefix="/dashboard", dependencies=[Depends(current_user)])
@@ -28,7 +28,14 @@ def dashboard(date: date | None = None, channel: str | None = None, session: Ses
     channel = api_channel(session, channel)
     latest = latest_date(session, channel)
     d = date or latest or today_cst()
-    m = daily_metrics(session, d, channel, alias_version(session))
+    v = alias_version(session)
+    m = daily_metrics(session, d, channel, v)
+    # 按场景分组（参考 Answerbit 的"分组"和诊断报告的场景划分）：口径和总指标相同，只是题目范围按场景切开
+    qids = unbranded_qids(session)
+    scenes: dict[str, list[str]] = {}
+    for q in session.scalars(select(Question).where(Question.version == setting(session, "question_version", "v3"),
+                                                    Question.qid.in_(qids)).order_by(Question.qid)):
+        scenes.setdefault(q.scene, []).append(q.qid)
     jr = session.scalars(select(JobRun).where(JobRun.job == "daily_collect", JobRun.run_date == d,
                                               JobRun.channel == channel).order_by(JobRun.id.desc())).first()
     billed, tin, tout = session.execute(
@@ -40,7 +47,10 @@ def dashboard(date: date | None = None, channel: str | None = None, session: Ses
     # 三项单价都配置了才估算，缺一项就显示"未配置单价"，不拿 0 顶替
     cost = None if None in prices else billed * prices[0] + tin / 1000 * prices[1] + tout / 1000 * prices[2]
     return {
-        "date": d, "channel": channel, "latest_date": latest, "metrics": to_json(m),
+        "date": d, "channel": channel, "latest_date": latest, "first_date": first_date(session, channel),
+        "today": today_cst(), "metrics": to_json(m),
+        "by_scene": [{"scene": sc, "qids": qs, "metrics": to_json(daily_metrics(session, d, channel, v, qs))}
+                     for sc, qs in scenes.items()],
         "job": None if jr is None else {"status": jr.status, "n_ok": jr.n_ok, "n_failed": jr.n_failed,
                                         "message": jr.message},
         "usage": {"billed_searches": billed, "input_tokens": tin, "output_tokens": tout, "est_cost_yuan": cost},

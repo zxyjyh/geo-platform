@@ -27,6 +27,26 @@ def code_answer(text: str, aliases: dict[str, list[str]]) -> CodingResult:
                         order={e: (ranked.index(e) + 1 if e in pos else None) for e in ENTITIES})
 
 
+_SENTENCE_END = "。！？!?\n"
+
+
+def mention_snippet(text: str, aliases: list[str], width: int = 60) -> str | None:
+    """别名第一次出现所在的那句话，用作"提及摘要"（取自真实回答原文，不做改写）。太长时以提及处为中心截断。"""
+    hits = [i for i in (text.find(a) for a in aliases if a) if i >= 0]
+    if not hits:
+        return None
+    pos = min(hits)
+    start = max(text.rfind(c, 0, pos) for c in _SENTENCE_END) + 1
+    ends = [i for i in (text.find(c, pos) for c in _SENTENCE_END) if i >= 0]
+    end = min(ends) + 1 if ends else len(text)
+    sentence = text[start:end].strip()
+    if len(sentence) <= width:
+        return sentence
+    off = pos - start - (len(text[start:end]) - len(text[start:end].lstrip()))
+    lo = max(0, min(off - width // 2, len(sentence) - width))
+    return ("…" if lo > 0 else "") + sentence[lo:lo + width] + ("…" if lo + width < len(sentence) else "")
+
+
 def load_aliases(session: Session, version: int) -> dict[str, list[str]]:
     out: dict[str, list[str]] = {e: [] for e in ENTITIES}
     for a in session.scalars(select(Alias).where(Alias.version == version).order_by(Alias.id)):

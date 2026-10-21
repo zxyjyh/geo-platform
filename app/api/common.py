@@ -26,6 +26,11 @@ def latest_date(session: Session, channel: str) -> date | None:
                           .where(Run.round == ROUND, Run.channel == channel, Run.status == "valid"))
 
 
+def first_date(session: Session, channel: str) -> date | None:
+    return session.scalar(select(func.min(Run.collect_date))
+                          .where(Run.round == ROUND, Run.channel == channel, Run.status == "valid"))
+
+
 def date_range(start: date | None, end: date | None, default_days: int = 30) -> tuple[date, date]:
     end = end or today_cst()
     start = start or end - timedelta(days=default_days - 1)

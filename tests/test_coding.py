@@ -32,3 +32,13 @@ def test_load_aliases_v1(session):
     seed_all(session)
     got = load_aliases(session, 1)
     assert {k: sorted(v) for k, v in got.items()} == {k: sorted(v) for k, v in A.items()}
+
+
+def test_mention_snippet_first_occurrence_sentence():
+    from app.coding import mention_snippet
+    text = "澳门外卖有几个选择。\n首推 mFood，覆盖广。其次是澳覓，游客友好！闪蜂也行"
+    assert mention_snippet(text, A["aomi"]) == "其次是澳覓，游客友好！"
+    assert mention_snippet(text, ["美团"]) is None
+    long = "很长的铺垫" * 20 + "澳觅" + "很长的后文" * 20
+    s = mention_snippet(long, ["澳觅"], width=30)
+    assert "澳觅" in s and len(s) <= 32 and s.startswith("…") and s.endswith("…")

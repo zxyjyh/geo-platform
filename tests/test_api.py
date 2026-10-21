@@ -224,3 +224,23 @@ def test_alias_change_backfills_runs_written_during_recode(authed, seeded_one_da
     assert authed.put("/api/settings/aliases", json=aliases).status_code == 200
     session.expire_all()
     assert session.get(Coding, ("daily-doubao-api-custom-Q02-20261023", 2)) is not None
+
+
+def test_dashboard_gives_cst_today_and_first_date(authed, seeded_daily_two_days):
+    # 前端不用浏览器时区算"今天"：由后端按北京时间给出
+    from app.timeutil import today_cst
+    j = authed.get("/api/dashboard").json()
+    assert j["today"] == today_cst().isoformat() and j["first_date"] == "2026-10-22"
+
+
+def test_dashboard_by_scene(authed, seeded_one_day):
+    j = authed.get("/api/dashboard").json()
+    scenes = j["by_scene"]
+    assert [s["scene"] for s in scenes] == sorted({s["scene"] for s in scenes}, key=[s["scene"] for s in scenes].index)
+    assert sum(s["metrics"]["n_valid"] for s in scenes) == j["metrics"]["n_valid"]
+    assert sum(s["metrics"]["n_expected"] for s in scenes) == 10          # 只算不带品牌名的题
+
+
+def test_runs_list_has_aomi_snippet(authed, seeded_one_day):
+    it = authed.get("/api/runs", params={"qid": "Q01"}).json()["items"][0]
+    assert "澳觅" in it["aomi_snippet"] and it["scene"]

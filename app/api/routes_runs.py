@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.api.common import alias_version
 from app.auth import current_user
-from app.coding import ENTITIES
+from app.coding import ENTITIES, load_aliases, mention_snippet
 from app.db import get_session
 from app.models import Coding, Question, Run, Source, SourceTag
 
@@ -27,7 +27,7 @@ def list_runs(date_from: date | None = None, date_to: date | None = None, qid: s
               status: str | None = None, page: int = Query(1, ge=1), size: int = Query(20, ge=1, le=100),
               session: Session = Depends(get_session)):
     v = alias_version(session)
-    q = (select(Run, Coding, Question.text)
+    q = (select(Run, Coding, Question.text, Question.scene)
          .outerjoin(Coding, (Coding.run_id == Run.run_id) & (Coding.alias_version == v))
          .outerjoin(Question, (Question.qid == Run.qid) & (Question.version == Run.question_version)))
     if date_from:
@@ -42,10 +42,12 @@ def list_runs(date_from: date | None = None, date_to: date | None = None, qid: s
     total = session.scalar(select(func.count()).select_from(q.subquery()))
     rows = session.execute(q.order_by(Run.collect_date.desc(), Run.channel, Run.qid)
                            .offset((page - 1) * size).limit(size)).all()
+    aomi_aliases = load_aliases(session, v)["aomi"]
     items = []
-    for run, coding, text in rows:
+    for run, coding, text, scene in rows:
         cj = _coding_json(coding)
         items.append({"run_id": run.run_id, "collect_date": run.collect_date, "qid": run.qid, "question": text,
+                      "scene": scene, "aomi_snippet": mention_snippet(run.answer_text, aomi_aliases),
                       "round": run.round, "channel": run.channel, "status": run.status,
                       "mention": cj["mention"] if cj else None, "order": cj["order"] if cj else None,
                       "sources_count": run.sources_count})
