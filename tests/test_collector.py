@@ -81,3 +81,13 @@ def test_collect_date_is_cst(session, tmp_path, freeze_utc_2026_10_21_2200):
     r = session.get(Run, "daily-doubao-api-custom-Q01-20261022")
     assert r is not None and r.collect_date == date(2026, 10, 22)
     assert r.collected_at.isoformat() == "2026-10-22T06:00:00+08:00"
+
+
+def test_unexpected_error_on_one_question_records_failed_and_continues(session, tmp_path):
+    # 响应结构异常（parse 会抛 TypeError）不能打断当天其余的题，也不能不留记录
+    c = FakeClient.from_trial("custom", overrides={"Q03": {"output": None}})
+    s = run_daily(session, c, D, "api-custom", tmp_path, sleep_s=0)
+    r = session.get(Run, "daily-doubao-api-custom-Q03-20261022")
+    assert r.status == "failed" and "TypeError" in r.error
+    assert (s.n_ok, s.n_failed, s.failed_qids) == (14, 1, ["Q03"])
+    assert session.query(Source).filter_by(run_id=r.run_id).count() == 0

@@ -122,20 +122,27 @@ def run_daily(session: Session, client: ArkClient, run_date: date, channel: str,
             except ArkError as e:
                 error = f"第 {attempt + 1} 次：{e}"
         collected_at = timeutil.now_cst()
-        run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at)
 
-        if resp is None:
-            run.status, run.error = "failed", error
-            session.add(run)
-            summary.n_failed += 1
-            summary.failed_qids.append(q.qid)
-        else:
+        if resp is not None:
             raw_path = raw_dir / f"{run_id}.json"
-            raw_path.write_text(json.dumps({"request": body, "response": resp,
-                                            "collected_at": collected_at.isoformat(timespec="seconds")},
-                                           ensure_ascii=False, indent=1), encoding="utf-8")
-            run.raw_path = str(raw_path)
-            store_run(session, run, parse(resp))
-            summary.n_ok += 1
+            try:
+                raw_path.write_text(json.dumps({"request": body, "response": resp,
+                                                "collected_at": collected_at.isoformat(timespec="seconds")},
+                                               ensure_ascii=False, indent=1), encoding="utf-8")
+                run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at)
+                run.raw_path = str(raw_path.resolve())
+                store_run(session, run, parse(resp))
+                session.commit()
+                summary.n_ok += 1
+                continue
+            except Exception as e:  # noqa: BLE001  一题的响应异常 / 字段超长不能打断其余的题
+                session.rollback()
+                error = f"入库失败 {type(e).__name__}: {e}"
+
+        run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at)
+        run.status, run.error = "failed", error
+        session.add(run)
         session.commit()
+        summary.n_failed += 1
+        summary.failed_qids.append(q.qid)
     return summary
