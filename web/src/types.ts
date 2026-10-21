@@ -24,7 +24,10 @@ export interface DashboardData {
   date: string;
   channel: string;
   latest_date: string | null;
+  first_date: string | null;
+  today: string; // 北京时间的今天，由后端给出
   metrics: DailyMetrics;
+  by_scene: { scene: string; qids: string[]; metrics: DailyMetrics }[];
   job: { status: string; n_ok: number; n_failed: number; message: string } | null;
   usage: { billed_searches: number; input_tokens: number; output_tokens: number; est_cost_yuan: number | null };
 }
@@ -34,4 +37,45 @@ export interface PlatformCount {
   name: string;
   count: number;
   verified: boolean;
+}
+
+export interface WeakQuestion {
+  qid: string;
+  text: string;
+  n_runs: number;
+  aomi_mentions: number;
+  aomi_first: number;
+  competitor_first: number;
+  reasons: string[];
+}
+
+export interface RefArticle {
+  url_norm: string;
+  url: string;
+  title: string;
+  domain: string;
+  platform_key: string | null;
+  count: number;
+  external_geo: boolean;
+}
+
+export interface RunItem {
+  run_id: string;
+  collect_date: string;
+  qid: string;
+  question: string | null;
+  scene: string | null;
+  aomi_snippet: string | null;
+  round: string;
+  channel: string;
+  status: string;
+  mention: Record<Entity, boolean> | null;
+  order: Record<Entity, number | null> | null;
+  sources_count: number;
+}
+
+export function orderText(order: Record<Entity, number | null> | null): string {
+  if (!order) return "—";
+  const ranked = ENTITIES.filter((e) => order[e] !== null).sort((a, b) => order[a]! - order[b]!);
+  return ranked.length ? ranked.map((e) => ENTITY_NAME[e]).join(" > ") : "三家都没提";
 }

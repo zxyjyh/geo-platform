@@ -14,7 +14,7 @@ export default defineConfig({
       output: { manualChunks: { antd: ["antd", "@ant-design/icons"], echarts: ["echarts"], react: ["react", "react-dom", "react-router-dom"] } },
     },
     // 内部后台，antd / echarts 单包本身就超过 500kB，按实际大小设阈值
-    chunkSizeWarningLimit: 1200,
+    chunkSizeWarningLimit: 1500,
   },
   test: { include: ["src/**/*.test.ts"] },
 });
