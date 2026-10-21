@@ -6,6 +6,10 @@ DROP_PARAMS = {"spm", "from", "share_token", "source"}
 
 def _host(netloc: str) -> str:
     host = netloc.lower()
+    # scheme 统一成 https 之后，:80 / :443 都是默认端口
+    for port in (":80", ":443"):
+        if host.endswith(port):
+            host = host[: -len(port)]
     while True:
         for p in ("www.", "m."):
             if host.startswith(p):
@@ -18,7 +22,10 @@ def _host(netloc: str) -> str:
 def normalize_url(url: str) -> str:
     """scheme 统一 https；host 小写并去掉开头的 www. / m.；删掉追踪参数（utm_*、spm、from、share_token、source），
     其余参数按名字排序；去掉 fragment 和末尾的 /。路径大小写保留。"""
-    parts = urlsplit(url.strip())
+    url = url.strip()
+    if "://" not in url and not url.startswith("//"):
+        url = "//" + url  # 不带 scheme 的「sohu.com/a/1」，否则 urlsplit 会把 host 当成路径
+    parts = urlsplit(url)
     params = sorted((k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True)
                     if not (k.lower().startswith("utm_") or k.lower() in DROP_PARAMS))
     return urlunsplit(("https", _host(parts.netloc), parts.path.rstrip("/"), urlencode(params), ""))
