@@ -17,15 +17,14 @@ import json
 import os
 import sys
 import time
-import urllib.error
-import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-ENDPOINT = "https://ark.cn-beijing.volces.com/api/v3/responses"
-DEFAULT_MODEL = "doubao-seed-2-1-pro-260915"
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from app.ark import DEFAULT_MODEL, ArkError, HttpArkClient, build_body, parse  # noqa: E402
 CST = timezone(timedelta(hours=8))
 
 RUN_FIELDS = ["run_id", "round", "qid", "question_version", "platform", "channel", "channel_detail", "mode",
@@ -33,55 +32,6 @@ RUN_FIELDS = ["run_id", "round", "qid", "question_version", "platform", "channel
               "answer_capture", "sources_visible", "sources_count", "status",
               "search_queries", "search_calls", "input_tokens", "output_tokens"]
 SOURCE_FIELDS = ["run_id", "rank", "title", "url", "domain", "site_name", "publish_time", "source_type", "is_owned"]
-
-
-def build_body(question, variant, model, location, limit, max_tool_calls):
-    if variant == "custom":
-        tool = {"type": "web_search", "sources": ["doubao"]}
-    else:
-        tool = {"type": "web_search", "limit": limit}
-        if location:
-            # 字段名来自文档；country/region 的取值格式（中文名还是代码）文档未写明，首次实测后确认
-            tool["user_location"] = {"type": "approximate", "country": location[0],
-                                     "region": location[1], "city": location[2]}
-    return {
-        "model": model,
-        "input": [{"role": "user", "content": [{"type": "input_text", "text": question}]}],
-        "tools": [tool],
-        "max_tool_calls": max_tool_calls,
-    }
-
-
-def parse_response(resp):
-    """返回 (answer_text, citations)。citations 按出现顺序去重（同一 url 只记一次）。"""
-    texts, citations, seen = [], [], set()
-    for item in resp.get("output", []):
-        if item.get("type") != "message":
-            continue
-        for part in item.get("content", []):
-            if part.get("type") != "output_text":
-                continue
-            texts.append(part.get("text", ""))
-            for ann in part.get("annotations", []) or []:
-                if ann.get("type") != "url_citation" or ann.get("url") in seen:
-                    continue
-                seen.add(ann.get("url"))
-                citations.append(ann)
-    return "".join(texts), citations
-
-
-def search_queries(resp):
-    """模型实际发出的搜索词（web_search_call.action.query，文档未写，2026-10-21 实测发现）。"""
-    return [item.get("action", {}).get("query", "") for item in resp.get("output", [])
-            if item.get("type") == "web_search_call"]
-
-
-def call_api(body, api_key, timeout=180):
-    req = urllib.request.Request(ENDPOINT, data=json.dumps(body).encode("utf-8"), method="POST",
-                                 headers={"Authorization": f"Bearer {api_key}",
-                                          "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode("utf-8"))
 
 
 def append_csv(path, fields, rows):
@@ -137,6 +87,7 @@ def main():
         sys.exit("缺少环境变量 ARK_API_KEY")
 
     channel = f"api-{args.variant}"
+    client = HttpArkClient(api_key) if api_key else None
     loc_label = "/".join(location) if (location and args.variant == "plugin") else "未设置"
     runs_path = ROOT / "data/runs" / f"runs-{args.round}.csv"
     sources_path = ROOT / "data/runs" / f"sources-{args.round}.csv"
@@ -146,7 +97,7 @@ def main():
         drop_channel_rows(sources_path, SOURCE_FIELDS, lambda r: f"-doubao-{channel}-" in r["run_id"])
 
     for i, q in enumerate(questions):
-        body = build_body(q["question"], args.variant, args.model, location, args.limit, args.max_tool_calls)
+        body = build_body(q["question"], channel, args.model, location, args.limit, args.max_tool_calls)
         run_id = f"{args.round}-doubao-{channel}-{q['qid']}-{args.rep}"
         if args.dry_run:
             print(run_id, json.dumps(body, ensure_ascii=False))
@@ -163,19 +114,16 @@ def main():
         else:
             collected_at = datetime.now(CST).isoformat(timespec="seconds")
             try:
-                resp = call_api(body, api_key)
-            except urllib.error.HTTPError as e:
-                print(f"{run_id} 失败 HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:500]}", file=sys.stderr)
-                continue
-            except (urllib.error.URLError, TimeoutError) as e:
-                print(f"{run_id} 失败: {e}", file=sys.stderr)
+                resp = client.create(body)
+            except ArkError as e:
+                print(f"{run_id} 失败 {e}", file=sys.stderr)
                 continue
             raw_dir.mkdir(parents=True, exist_ok=True)
             raw_path.write_text(
                 json.dumps({"request": body, "response": resp, "collected_at": collected_at}, ensure_ascii=False, indent=1),
                 encoding="utf-8")
-        text, cites = parse_response(resp)
-        queries = search_queries(resp)
+        result = parse(resp)
+        text, cites, queries = result.text, result.citations, result.search_queries
         usage = resp.get("usage", {})
         append_csv(runs_path, RUN_FIELDS, [{
             "run_id": run_id, "round": args.round, "qid": q["qid"], "question_version": args.qversion,
