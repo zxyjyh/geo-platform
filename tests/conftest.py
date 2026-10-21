@@ -50,3 +50,44 @@ def platforms(session):
 
     seed_all(session)
     return list(session.scalars(select(Platform)))
+
+
+@pytest.fixture
+def app(session_factory):
+    from app.api import create_app
+
+    return create_app(session_factory)
+
+
+@pytest.fixture
+def client(app):
+    from fastapi.testclient import TestClient
+
+    with TestClient(app) as c:
+        yield c
+
+
+def make_user(session, username, password, is_active=True):
+    from app.auth import hash_password
+    from app.models import User
+    from app.timeutil import now_cst
+
+    u = User(username=username, password_hash=hash_password(password), is_active=is_active, created_at=now_cst())
+    session.add(u)
+    session.commit()
+    return u
+
+
+@pytest.fixture
+def user_alice(session):
+    return make_user(session, "alice", "correct")
+
+
+def login(client, username, password):
+    return client.post("/api/auth/login", json={"username": username, "password": password})
+
+
+@pytest.fixture
+def authed(client, user_alice):
+    assert login(client, "alice", "correct").status_code == 200
+    return client
