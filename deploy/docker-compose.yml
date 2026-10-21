@@ -1,0 +1,87 @@
+# 在仓库根目录执行：docker compose -f deploy/docker-compose.yml --env-file .env up -d --build
+name: doubao-geo
+
+x-app-env: &app-env
+  TZ: Asia/Shanghai
+  # 由 MYSQL_PASSWORD 拼出来；密码请只用字母数字，否则要做 URL 编码
+  DATABASE_URL: mysql+pymysql://geo:${MYSQL_PASSWORD}@mysql:3306/geo?charset=utf8mb4
+  ARK_API_KEY: ${ARK_API_KEY}
+  SECRET_KEY: ${SECRET_KEY}
+  COOKIE_SECURE: ${COOKIE_SECURE:-true}
+
+services:
+  mysql:
+    image: mysql:8.4
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_DATABASE: geo
+      MYSQL_USER: geo
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # 只绑本机回环，便于在服务器上用 mysql 客户端排查；不要改成 0.0.0.0
+    ports:
+      - "127.0.0.1:${MYSQL_HOST_PORT:-3307}:3306"
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  api:
+    build: { context: .., dockerfile: deploy/Dockerfile, target: app }
+    image: doubao-geo-app:latest
+    environment: *app-env
+    # --proxy-headers：取 Caddy 转发的真实来源 IP；api 不对外暴露端口，只有 compose 内网的 Caddy 能连到它
+    command: >
+      sh -c "alembic upgrade head &&
+             uvicorn app.api:create_app --factory --host 0.0.0.0 --port 8000
+             --proxy-headers --forwarded-allow-ips='*'"
+    volumes:
+      - raw_data:/app/data/raw/daily
+    depends_on:
+      mysql: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  worker:
+    image: doubao-geo-app:latest
+    environment: *app-env
+    command: ["python", "-m", "app.worker"]
+    volumes:
+      - raw_data:/app/data/raw/daily
+    depends_on:
+      api: { condition: service_healthy }   # 等 api 跑完 alembic 迁移
+    # 只能有一个副本：采集的串行保护只在进程内有效，两个 worker 会重复调用 API
+    deploy:
+      replicas: 1
+    restart: unless-stopped
+
+  caddy:
+    build: { context: .., dockerfile: deploy/Dockerfile, target: web }
+    image: doubao-geo-web:latest
+    environment:
+      TZ: Asia/Shanghai
+      SITE_DOMAIN: ${SITE_DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+  raw_data:
+  caddy_data:
+  caddy_config:
