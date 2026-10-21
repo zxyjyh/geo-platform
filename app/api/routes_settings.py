@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.ark import CHANNELS
 from app.auth import current_user, hash_password
-from app.coding import ENTITIES, recode_all
+from app.coding import ENTITIES, backfill_missing, recode_all
 from app.collector import setting
 from app.db import get_session
 from app.models import Alias, JobRun, OwnedPrefix, Platform, Setting, Source, User
@@ -101,6 +101,8 @@ def put_aliases(body: dict[str, list[str]], session: Session = Depends(get_sessi
     n = recode_all(session, new_version)
     session.get(Setting, "alias_version").value = str(new_version)
     session.commit()
+    # 重算开始之后、切换版本之前，采集器可能又写入了只带旧版本编码的 run
+    n += backfill_missing(session, new_version)
     return {"version": new_version, "recoded": n, "aliases": cleaned}
 
 
@@ -201,9 +203,10 @@ class RerunBody(BaseModel):
 
 @router.post("/jobs/rerun")
 def rerun(body: RerunBody, user: User = Depends(current_user), session: Session = Depends(get_session)):
-    """只登记请求，由 worker 执行（worker 串行执行，不会和定时任务重叠）。"""
-    if body.date > today_cst():
-        raise HTTPException(422, "不能补跑未来的日期")
+    """只登记请求，由 worker 执行（worker 串行执行，不会和定时任务重叠）。
+    只允许补跑当天（spec §4.3）：补跑往日会把今天采到的回答记成那一天的数据。"""
+    if body.date != today_cst():
+        raise HTTPException(422, "只能补跑当天")
     j = JobRun(job="daily_collect", run_date=body.date, channel=setting(session, "api_channel", "api-custom"),
                status="requested", requested_by=user.username, n_ok=0, n_failed=0, message="")
     session.add(j)

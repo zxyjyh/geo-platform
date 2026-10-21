@@ -34,6 +34,16 @@ def load_aliases(session: Session, version: int) -> dict[str, list[str]]:
     return out
 
 
+def _coding_for(run, aliases: dict[str, list[str]], alias_version: int):
+    from app.models import Coding
+
+    r = code_answer(run.answer_text, aliases)
+    return Coding(run_id=run.run_id, alias_version=alias_version,
+                  mention_aomi=r.mention["aomi"], mention_mfood=r.mention["mfood"],
+                  mention_shanfeng=r.mention["shanfeng"], order_aomi=r.order["aomi"],
+                  order_mfood=r.order["mfood"], order_shanfeng=r.order["shanfeng"])
+
+
 def recode_all(session: Session, alias_version: int) -> int:
     """用指定版本的别名表给所有 valid 的 run 重新编码，写入该版本的 Coding（旧版本保留）。返回编码条数。"""
     from app.models import Coding, Run
@@ -42,11 +52,21 @@ def recode_all(session: Session, alias_version: int) -> int:
     session.query(Coding).filter(Coding.alias_version == alias_version).delete()
     n = 0
     for run in session.scalars(select(Run).where(Run.status == "valid")):
-        r = code_answer(run.answer_text, aliases)
-        session.add(Coding(run_id=run.run_id, alias_version=alias_version,
-                           mention_aomi=r.mention["aomi"], mention_mfood=r.mention["mfood"],
-                           mention_shanfeng=r.mention["shanfeng"], order_aomi=r.order["aomi"],
-                           order_mfood=r.order["mfood"], order_shanfeng=r.order["shanfeng"]))
+        session.add(_coding_for(run, aliases, alias_version))
         n += 1
     session.commit()
     return n
+
+
+def backfill_missing(session: Session, alias_version: int) -> int:
+    """给缺少该版本编码的 valid run 补编码。别名表升版本和采集并发时，空窗里入库的 run 只有旧版本编码，靠它补齐。"""
+    from app.models import Coding, Run
+
+    has = select(Coding.run_id).where(Coding.alias_version == alias_version)
+    runs = list(session.scalars(select(Run).where(Run.status == "valid", Run.run_id.not_in(has))))
+    if not runs:
+        return 0
+    aliases = load_aliases(session, alias_version)
+    session.add_all(_coding_for(run, aliases, alias_version) for run in runs)
+    session.commit()
+    return len(runs)

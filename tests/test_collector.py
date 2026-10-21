@@ -91,3 +91,17 @@ def test_unexpected_error_on_one_question_records_failed_and_continues(session, 
     assert r.status == "failed" and "TypeError" in r.error
     assert (s.n_ok, s.n_failed, s.failed_qids) == (14, 1, ["Q03"])
     assert session.query(Source).filter_by(run_id=r.run_id).count() == 0
+
+
+def test_run_daily_backfills_runs_missing_current_alias_version(session, tmp_path):
+    # 采集中途别名表升了版本：先前用旧版本编码入库的 run，在本次采集结束时补上当前版本的编码
+    from app.models import Alias, Setting
+    from tests.builders import add_run
+
+    old = add_run(session, "Q01", date(2026, 10, 20), mention={"aomi": True}, order={"aomi": 1}, alias_version=1)
+    for a in session.query(Alias).filter_by(version=1).all():
+        session.add(Alias(version=2, entity=a.entity, alias=a.alias))
+    session.get(Setting, "alias_version").value = "2"
+    session.commit()
+    run_daily(session, FakeClient.from_trial("custom"), D, "api-custom", tmp_path, sleep_s=0)
+    assert session.get(Coding, (old.run_id, 2)) is not None

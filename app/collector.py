@@ -15,7 +15,7 @@ from sqlalchemy.orm import Session
 
 from app import timeutil
 from app.ark import DEFAULT_MODEL, ArkClient, ArkError, ArkResult, build_body, parse, parse_publish_time
-from app.coding import code_answer, load_aliases
+from app.coding import backfill_missing, code_answer, load_aliases
 from app.models import Coding, OwnedPrefix, Platform, Question, Run, Setting, Source
 from app.urls import is_owned, normalize_url, platform_for
 
@@ -145,4 +145,6 @@ def run_daily(session: Session, client: ArkClient, run_date: date, channel: str,
         session.commit()
         summary.n_failed += 1
         summary.failed_qids.append(q.qid)
+    # 采集期间别名表可能升了版本：先前按旧版本编码入库的 run 补上当前版本的编码
+    backfill_missing(session, int(setting(session, "alias_version", "1")))
     return summary

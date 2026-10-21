@@ -132,19 +132,26 @@ def test_suggestions_has_notice(authed, seeded_daily_two_days):
 
 
 def test_rerun_creates_requested_job(authed, session):
-    from datetime import timedelta
-
     from app.timeutil import today_cst
-    yesterday = today_cst() - timedelta(days=1)
-    r = authed.post("/api/settings/jobs/rerun", json={"date": yesterday.isoformat()})
+    today = today_cst()
+    r = authed.post("/api/settings/jobs/rerun", json={"date": today.isoformat()})
     assert r.status_code == 200
     jr = session.query(JobRun).one()
-    assert (jr.status, jr.run_date, jr.channel, jr.requested_by) == ("requested", yesterday, "api-custom", "alice")
+    assert (jr.status, jr.run_date, jr.channel, jr.requested_by) == ("requested", today, "api-custom", "alice")
     assert authed.get("/api/settings/jobs").json()[0]["status"] == "requested"
 
 
+def test_rerun_rejects_past_date(authed):
+    # spec §4.3 只允许补跑当天：补跑往日会把今天采到的回答记成那一天的数据
+    from datetime import timedelta
+
+    from app.timeutil import today_cst
+    assert authed.post("/api/settings/jobs/rerun",
+                       json={"date": (today_cst() - timedelta(days=1)).isoformat()}).status_code == 422
+
+
 def test_rerun_rejects_future_date(authed):
-    assert authed.post("/api/settings/jobs/rerun", json={"date": "2999-01-01"}).status_code == 422
+    assert authed.post("/api/settings/jobs/rerun", json={"date": "2999-01-01"}).status_code == 422  # 未来同样拒绝
 
 
 def test_settings_rejects_unknown_key(authed):           # PUT {"ARK_API_KEY": "x"} → 422
@@ -197,3 +204,23 @@ def test_recode_all_keeps_old_version(session, seeded_one_day):
     assert recode_all(session, 2) == session.query(Run).filter_by(status="valid").count()
     assert session.query(Coding).filter_by(alias_version=1).count() == session.query(Coding).filter_by(alias_version=2).count()
     assert recode_all(session, 2) == 15      # 重跑不产生重复行
+
+
+def test_alias_change_backfills_runs_written_during_recode(authed, seeded_one_day, session, monkeypatch):
+    # 重算进行中采集器又写入一条 run（它读到的还是旧版本 v1）：切到 v2 后它也必须有 v2 编码
+    from app.api import routes_settings
+    from app.models import Coding
+    from tests.builders import add_run
+
+    real = routes_settings.recode_all
+
+    def recode_then_collector_writes(s, v):
+        n = real(s, v)
+        add_run(session, "Q02", D1, mention={"aomi": True}, order={"aomi": 1}, alias_version=1)
+        return n
+
+    monkeypatch.setattr(routes_settings, "recode_all", recode_then_collector_writes)
+    aliases = authed.get("/api/settings/aliases").json()
+    assert authed.put("/api/settings/aliases", json=aliases).status_code == 200
+    session.expire_all()
+    assert session.get(Coding, ("daily-doubao-api-custom-Q02-20261023", 2)) is not None
