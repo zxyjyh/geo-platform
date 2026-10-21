@@ -12,6 +12,11 @@ UTF8MB4 = {"mysql_charset": "utf8mb4", "mysql_collate": "utf8mb4_unicode_ci"}
 LongText = Text().with_variant(mysql.MEDIUMTEXT(), "mysql")
 
 
+def BinString(n: int):
+    """区分大小写的字符串列：表级 utf8mb4_unicode_ci 不区分大小写，别名（Aomi/aomi）和 URL 路径都需要区分。"""
+    return String(n).with_variant(mysql.VARCHAR(n, collation="utf8mb4_bin"), "mysql")
+
+
 class CSTDateTime(TypeDecorator):
     """库里存北京时间的墙上时间（MySQL DATETIME / SQLite 都不保存时区），读出来补回 Asia/Shanghai。"""
     impl = DateTime
@@ -78,7 +83,7 @@ class Source(Base):
     rank: Mapped[int] = mapped_column(Integer)
     title: Mapped[str] = mapped_column(String(512), default="")
     url: Mapped[str] = mapped_column(Text)
-    url_norm: Mapped[str] = mapped_column(String(768), index=True)
+    url_norm: Mapped[str] = mapped_column(BinString(768), index=True)
     domain: Mapped[str] = mapped_column(String(255), default="")
     site_name: Mapped[str] = mapped_column(String(255), default="")
     publish_time_raw: Mapped[str] = mapped_column(String(64), default="")
@@ -106,7 +111,7 @@ class Alias(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     version: Mapped[int] = mapped_column(Integer, index=True)
     entity: Mapped[str] = mapped_column(String(32))
-    alias: Mapped[str] = mapped_column(String(64))
+    alias: Mapped[str] = mapped_column(BinString(64))
 
 
 class Platform(Base):
@@ -129,7 +134,7 @@ class OwnedPrefix(Base):
 class SourceTag(Base):
     __tablename__ = "source_tags"
     __table_args__ = UTF8MB4
-    url_norm: Mapped[str] = mapped_column(String(768), primary_key=True)
+    url_norm: Mapped[str] = mapped_column(BinString(768), primary_key=True)
     tag: Mapped[str] = mapped_column(String(32))  # external_geo
     note: Mapped[str] = mapped_column(Text, default="")
 

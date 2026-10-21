@@ -1,8 +1,8 @@
 """init
 
-Revision ID: 993738f56856
+Revision ID: 79106b7850c9
 Revises: 
-Create Date: 2026-10-21 16:09:07.944295
+Create Date: 2026-10-21 16:11:50.171242
 
 """
 from typing import Sequence, Union
@@ -13,7 +13,7 @@ import app.models
 from sqlalchemy.dialects import mysql
 
 # revision identifiers, used by Alembic.
-revision: str = '993738f56856'
+revision: str = '79106b7850c9'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -26,7 +26,7 @@ def upgrade() -> None:
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('version', sa.Integer(), nullable=False),
     sa.Column('entity', sa.String(length=32), nullable=False),
-    sa.Column('alias', sa.String(length=64), nullable=False),
+    sa.Column('alias', sa.String(length=64).with_variant(mysql.VARCHAR(collation='utf8mb4_bin', length=64), 'mysql'), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('version', 'entity', 'alias'),
     mysql_charset='utf8mb4',
@@ -127,7 +127,7 @@ def upgrade() -> None:
     mysql_collate='utf8mb4_unicode_ci'
     )
     op.create_table('source_tags',
-    sa.Column('url_norm', sa.String(length=768), nullable=False),
+    sa.Column('url_norm', sa.String(length=768).with_variant(mysql.VARCHAR(collation='utf8mb4_bin', length=768), 'mysql'), nullable=False),
     sa.Column('tag', sa.String(length=32), nullable=False),
     sa.Column('note', sa.Text(), nullable=False),
     sa.PrimaryKeyConstraint('url_norm'),
@@ -165,7 +165,7 @@ def upgrade() -> None:
     sa.Column('rank', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=512), nullable=False),
     sa.Column('url', sa.Text(), nullable=False),
-    sa.Column('url_norm', sa.String(length=768), nullable=False),
+    sa.Column('url_norm', sa.String(length=768).with_variant(mysql.VARCHAR(collation='utf8mb4_bin', length=768), 'mysql'), nullable=False),
     sa.Column('domain', sa.String(length=255), nullable=False),
     sa.Column('site_name', sa.String(length=255), nullable=False),
     sa.Column('publish_time_raw', sa.String(length=64), nullable=False),
