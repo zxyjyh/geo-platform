@@ -1,0 +1,141 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳觅APP有哪些功能？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548495,
+  "id": "resp_0217925484948244d0c5c47996149bb448eacb5e2f81b9bfa96e8",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254849587400000000000000000000ffffac150391f267fc",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. Searching to confirm what 澳觅 APP is."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFlXVEwpLY56EWsFPt99FNkkFhIv/SPS4z5X80/+8sAr4KS23qczioyNXbJLXkYDXZnyrB2PQvmFR1VjgsWrxUHh/6l1y/jIl2VqXwZrAQ76cn2NC4/GceWfJdhqqhzH4QUw5LHwT9YiZ9cxVVtNSSyd7GsimHuJTTBfKaUX/fogyo6+vRwD3dbq5uw6YcQkE0XIuJWfzet9u3IbvIrBVDmVHsNQzqu70Jilwr0kFix9CpSm3RmTzw8FmdrpGSN4iegFFG8Jr1od2XvsDJFpjOsIlGhg6cGdHwow60="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅APP 功能",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254849841600000000000000000000ffffac150391f4660a"
+   },
+   {
+    "id": "rs_02179254850079300000000000000000000ffffac150391d5b586",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We have enough.  We need to provide answers with cited sources for the user's general query. We will categorize the content to cover multiple service modules, include relevant local life services, note the difference between current and older App Store descriptions, and cite sources like App Store, 应用宝 and 抖音百科 without showing links.We don't have exact URLs, won't fabricate them, and can search for official information if needed."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHTz8REcoRyN3VnJlrJMakiJkGisztEsfamcJOOeAhyo17Bk2TL3OMEakznmysF9VE5z+Uhjpphvt93CsPELxx9wYh1chbGp6iNwrIfz/AwgS2xpfuYk2GpsxH5uf44YWoLRBsaPjIIqlmX3XY8M2f4uhee1pkLaEzMs5EU+ExIgop6pviqxfDFyupk9pyCDlQROrYXU7U0nNIFuuJ5L5cEXHjCE9fxsJu02a1tPqeeqdpmLhSQqkwwBwUrNdqtzspbg+qoDD8ZD/VchKyTkRL7NmNPXBCzc8lxNz4VYAjC2bH9lV+xWMNqdHWPXi1OwaxjD5OjzDH+F8EhsKMr/5VvbnfCFr3P1dirl5L8zZedXEbZ+fXxLcrADB2yzsNZt2i/l8mANGBRn7i52Rkur9oVRFJRprChtH8S+2q7KZczmjJfP/8VobgsBzqGoBG6cvnkY/prneJHG5hDmsQYhx8JuPm5vNE18yGPgVHYUHOVV/CFe9PNFpjQJ14vtgFhUBPSVUTgPOMNaA3wR50pBHIDQkH2GmOfh9rkNhEWxAZdIHEs14pEWYvbxz1e50rrEmxArFNYLFHmPFcjouJg/5GExbzVA9kYDhC3uXneweuJshDQz5DFBXu5A3xqBSH82MAmg12lyD5rnAlR2oj4iasDSalOSOiTLqndqd9QlKpWAmiTgD+D3zCxXvRgnS7qpC7QLwt25Jx6Zp0nhrT581FV6nKSK+OXQSj2Escv7AiZH2+s4DwE0XmOc1srKMtwkylA6yTkXoeQj4z76GYUxO9nu9gmMRrP1IR8klber4piwpyZFuzD2dRbHvbMX14rcmbINsqIIU6uJJSUHI8G7aZ+SypJZUyLSQObKLCCeQJqfApqYl8SMLUjhwPpEHdZDiqt0WwZTzjMv/JOFDOFWtCAqHkUUBeUWfLxpG4Yk3f0wjgc9OisN4TA0cIiRlflY1KwHqEDtlFKvqYwbXblhkCPneGUO+AkFol67/z9ToqbsagVkmTvpspjH1ACZge0/MQxPzekDWqCKcg7EkYV3gFbAgpb5IHyydf0UdVedtH+Pmx+wLzl3B5JmkZPFtnQR0+Tglu3BUP4xn2CUywOCfgK6O3tCxM92zeBqpL30dalLmuMaCA9Gbcd/r5ZzVymY/CDFMYCXbP7Ukn9uZEIG+sYFZhxrWvkEGsAjPcY6RuXiCUnzd0dAoqZpjfp9eT9LrVFVc9gJuBOaib02A=="
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "澳觅是面向澳门的一站式本地生活服务平台，主要功能包括：\n\n1. **美食外卖**：订餐、水果、宵夜、下午茶、鲜花、蛋糕等配送。\n2. **团购与优惠**：覆盖餐饮、娱乐、购物等领域的团购、折扣、秒杀。\n3. **超市便利/生鲜配送**：超市百货、生鲜果蔬、生活用品等极速送达。\n4. **电商购物**：支持直播购物、拼团、全球好货及品牌食品、家居百货等。\n5. **跑腿服务**：同城帮买、帮取、帮送。\n6. **酒店旅游**：酒店住宿优惠预订、澳门旅游及周边推荐。\n7. **出行服务**：澳门电召的士/打车。\n8. **休闲娱乐**：KTV、按摩足疗、桌游电玩、演出票务等。\n9. **旅游便民服务**：洗衣服务、充电宝租借、澳觅地图检索与路线指引。\n10. **信息查询与评价**：商家资讯、用户消费评价、商家评分等；App内还提供在线客服。\n\n根据应用宝 2026 年 9 月更新的版本介绍，其定位仍是“澳门吃喝玩乐购”一站式生活服务平台，合作商家覆盖澳门本地。\n\n**来源**：应用宝“澳觅”应用详情页（2026-09-24，版本 8.9.0）、Apple App Store“澳觅”页面、抖音百科“澳觅”词条。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳觅app-官方正版软件2026最新版本免费下载-应用宝官网",
+        "url": "https://sj.qq.com/appdetail/com.mem.MacaoLife",
+        "site_name": "应用宝",
+        "publish_time": "2026-09-24T00:00:00+08:00",
+        "summary": "澳觅\n4.5\n本地宝\n澳觅\n4.5 19.9万下载\n本地宝\n预览\n澳觅\n开发者：珠海城觅科技有限公司\nV 8.9.0\n运营者：珠海城觅科技有限公司\n2026.9.24更新\n应用宝\n开发者：深圳市腾讯计算机系统有限公司\nV 9.2.8\n运营者：深圳市腾讯计算机系统有限公司\n2026.9.22更新\n简介\n【特色服务】 1.澳门吃喝玩乐一应俱全 ◇外卖订餐水果宵夜，酒店旅游周边推荐； ◇团购优惠折扣秒杀，吃喝玩乐购全覆盖； ◇超市便利极速闪送，生鲜蔬果鲜花蛋糕； ◇澳觅拼团全球好货，品质好货省钱省心； ◇澳觅跑腿同城取送，极速帮买帮取帮送。 2.来澳门旅行必备APP，所有事项一站搞定 ◇美食优惠，全澳覆盖； ◇酒店住宿，优惠预订； ◇洗衣服务，游玩无忧； ◇观看演出，钜惠购票； ◇手机充电，即租即充； ◇澳觅地图全面升级，点击店铺地址栏，提供检索、路线指引等特色功能，更多惊喜功能期 待您去发现。 【产品特点】 澳门吃喝玩乐购，澳觅全都有：美食精选、外卖订餐、团购秒杀、旅游出行、电召打车、演 出票务、充电宝租借、洗衣服务，澳门一站式生活服务全覆盖。 ◇情侣约会：吃美食、看电影、住酒店、去旅游； ◇懒宅点餐：美食、水果、鲜花、下午茶、超市百货； ◇朋友轰趴：按摩足疗、KTV、桌游电玩； ◇旅游手信：充电宝租借，安德鲁蛋挞、茅台代买； ◇团购秒杀：产地果蔬、品牌食品、家居百货、一站购齐； ◇买赠优惠：来来超市、百佳超市、新苗超市、7-E\n2024-06-21\n如何在电脑上下载并使用\n澳觅\n澳觅\n是一款移动应用程序，通常在手机上使用。如果您想在电脑上使用\n澳觅\n，可以尝试使用应用宝电脑版， 它能在电脑上运行Android13系统，并允许您下载和使用\n澳觅\n应用程序，通过以下步骤即可在应用宝电脑版下载并使用\n澳觅\n1.打开电脑浏览器，访问应用宝官网 sj.qq.com\n2.在官网下载应用宝电脑版exe文件，运行并完成安装\n3.打开应用宝电脑版，搜索“\n澳觅\n”进入应用详情页\n4.点击详情页“安装”按钮，下载并安装“\n澳觅\n”应用程序\n澳觅\n开发者：\n珠海城觅科技有限公司\nV\n8.9.0\n运营者：\n珠海城觅科技有限公司\n2026.9.24\n更新\n简介\n备案号：\n粤ICP备16081851号-7A\n详细信息\n无病毒\n已通过腾讯手机管家、金山手机毒霸检查\n无广告\n已通过腾讯手机管家、金山手机毒霸检查\n腾讯下载\n已通过腾讯下载数据审核\n开发商\n珠海城觅科技有限公司\n运营商\n珠海城觅科技有限公司\n备案号\n粤ICP备16081851号-7A\n主办者\n珠海城觅科技有限公司\n更新时间\n2026.9.24\n版本号\n8.9.0\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅",
+        "url": "https://m.baike.com/wiki/%E6%BE%B3%E8%A7%85/7297255419683651620",
+        "site_name": "抖音百科",
+        "publish_time": "2024-08-08T12:04:43+08:00",
+        "summary": "产品简介\n澳觅为您提供美食、外卖、团购、超市便利、电商、直播购物、酒店、旅游、KTV、洗衣、跑腿等全面服务。\n关于澳觅\n‘澳觅APP’于2016年6月1日正式上线，现已成为汇聚美食外卖、团购优惠、直播电商、超市便利，跑腿服务、酒店住宿、洗衣服务及各项本地生活服务于一体的城市一站式生活服务平台，是澳门最大的生活电商平台。澳觅秉承客户第一的价值观，与全澳5000+商家紧密合作，持续为用户带来更好的服务。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "App StorePreview",
+        "url": "https://apps.apple.com/cn/app/%E6%BE%B3%E8%A6%93/id1104177940?l=nl",
+        "site_name": "App Store",
+        "publish_time": "2016-06-01T00:00:00+08:00",
+        "summary": "App Store Preview\n澳觅-澳门一站式生活服务平‪台‬ 4+\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\nOntworpen voor iPhone\n#24 in 美食佳饮\n4,5 • 235 beoordelingen\nGratis\niPhone-schermafbeeldingen\nBeschrijving\n【特色服务】\n1.吃喝玩乐一应俱全\n◇外卖订餐水果宵夜，酒店旅游周边推荐;\n◇团购优惠折扣秒杀，吃喝玩乐购全覆盖;\n◇超市便利极速送达，生鲜蔬果生活百货;\n◇澳觅直播全澳钜惠，直播电商购物体验;\n◇澳觅拼团全球好货，品质好货省钱省心;\n◇澳觅跑腿同城取送，极速帮买帮取帮送。\n2.旅游出行一站搞定\n◇电召打车，方便快捷;\n◇美食优惠，全面覆盖;\n◇酒店住宿，优惠预订;\n◇洗衣服务，游玩无忧;\n◇澳觅地图全面升级，点击店铺地址栏，提供检索、路线指引等特色功能，更多惊喜功能期待您去发现。\n【产品特点】\n吃喝玩乐购，澳觅全都有:美食精选、外卖订餐、酒店预订、旅游出行、品牌秒杀、洗衣服务，澳门一站式生活服务全覆盖。\n◇情侣约会:吃美食、看电影、住酒店、去旅游;\n◇懒宅点餐:美食、水果、鲜花、下午茶、超市百货;\n◇朋友轰趴:按摩足疗、KTV、桌游电玩;\n◇旅游周边:合作商家覆盖澳门湾区;\n◇打车出行:电召的士，方便快捷;\n◇品牌秒杀:产地果蔬、品牌食品、家居百货、一站购齐。\n【产品简介】\n澳觅为您提供美食、外卖、团购、超市便利、电商、直播购物、酒店、旅游、KTV、洗衣、跑腿等全面服务。除各种优惠，澳觅提供用户消费评价、商家评分、商家资讯查询等功能，旨在为用户提供好的服务!\n【关于澳觅】\n『澳觅APP』于2016年6月1日正式上线，现已成为汇聚美食外卖、团购优惠、直播电商、超市便利，跑腿服务、酒店住宿、洗衣服务及各项本地生活服务于一体的城市一站式生活服务平台，是澳门最大的生活电商平台。澳觅秉承客户第一的价值观，与全澳5000+商家紧密合作，持续为用户带来更好的服务。\n【用户帮助】\n感谢您使用澳觅APP手机客户端，使用中有任何问题可通过以下方式查询解决:\n1. 客户端查询入口:『我』—『在线客服』;\n2. 官方公众号:澳觅APP;\n3. 官方Facebook:澳觅-让城市生活更美好。\nNieuw\n6 jun. 2023\nVersie 6.17.3\n已知问题修复，\n用户体验优化。\nBeoordelingen en recensies\n4,5\nvan 5\n235 beoordelingen\n235 beoordelingen\n水江钱.8 , 14-05-2023\n正在使用中，感觉还不错​   ‍\n真心很实用。  没有花里胡哨的界面.一如既往的好    ‍\nGxDaisy , 15-12-2022\n手机接收不到验证码\n登录不了\nssMi啧啧6 , 16-05-2023\n很不错，很不错，你值得拥有\n挺不错的手机哦- 不错不错不错赞赞赞‍  ​\nApp-privacy\nDe ontwikkelaar, FRESH LIFE TECHNOLOGY COMPANY LIMITED\n, heeft aangegeven dat volgens de toepassing van het privacybeleid van de app gegevens kunnen worden beheerd zoals hieronder staat beschreven. Ga voor meer informatie naar het\nprivacybeleid van de ontwikkelaar\n.\n用于追踪你的数据\n以下数据可能会用于在其他公司的 App 和网站中追踪你:\n购买项目\n与你关联的数据\n开发者可能会收集以下数据，且数据与你的身份关联:\n购买项目\n未与你关联的数据\n开发者可能会收集以下数据，但数据不会关联你的身份:\n标识符 诊断\nToepassing van het privacybeleid kan variëren op basis van bijvoorbeeld de functies die je gebruikt of je leeftijd. Lees meer\nInformatie\n供应商\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\nGrootte\n375,6 MB\nCategorie\n美食佳饮\nCompatibiliteit\niPhone\n设备需装有 iOS 10.0 或更高版本。\niPod touch\n设备需装有 iOS 10.0 或更高版本。\nMac\n需要 macOS 11.0 或更高版本以及装有 Apple M1 或更高版本芯片的 Mac。\nTalen\n简体中文, 繁体中文, 英文\nLeeftijd\n4+\nCopyright\n© 2022 Macao FreshLife Inc\nPrijs\nGratis\nApp-support Privacybeleid App-support Privacybeleid\nMeer van deze ontwikkelaar\n松鼠专送\n工具\n澳觅商家\n美食佳饮\n松鼠众包\n工具\nWeBite-团体用餐首选服务平台\n美食佳饮\n澳觅直播\n娱乐\nWeBite Biz\n美食佳饮\nSuggesties voor jou\nmFood\n美食佳饮\nOpenRice《开饭喇!》\n美食佳饮\n喜茶GO\n美食佳饮\nMcDonald's Hong Kong\n美食佳饮\nTHE GULU\n美食佳饮\n香港寿司郎\n美食佳饮"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254851341200000000000000000000ffffac150391be1ed5"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 3896,
+   "output_tokens": 641,
+   "total_tokens": 4537,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 280
+   },
+   "tool_usage": {
+    "web_search": 1
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 1
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807694,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:08:14+08:00"
+}

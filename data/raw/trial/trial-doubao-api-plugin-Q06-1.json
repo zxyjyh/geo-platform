@@ -1,0 +1,218 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "去澳门旅游吃什么用什么APP点外卖？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548668,
+  "id": "resp_021792548667212f4adc67380408827a42ccf664af7aaa2b73e87",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254866843000000000000000000000ffffac183596de2b16",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户问的是去澳门旅游吃什么，接下来我将搜索相关信息。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGYyDAsg0WugQm/zCCbK7oErhZQIYfdWWNvyX1YXya9fMYh+mdgFjW7gFAiWyI1tyeacj23arD4EHwi/QHfYJndFGidaVibFfh2SN4RYPNC/yzikgrMyX8fW7ZcnLOMzwJOjkvVTDY/e/LFkxBr3mPQ++93/P+ggefKDvm6YUWJRUQComelXirFL+L430XmG/Q/RaaRxngQk0VwVvLvLQF3WAE+7Q6dXvL4+K1J+hEjFW8Lsg6Rv2xuzFzJR3QnldFqR2r/MeBCYtlcIPu/FNgTcv8="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门旅游必吃美食推荐 2025;澳门外卖APP推荐 内地游客;澳门点外卖用什么软件",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254867080100000000000000000000ffffac18359652f183"
+   },
+   {
+    "id": "rs_02179254867457700000000000000000000ffffac183596e78463",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "我已经获取了澳门美食和外卖APP的信息。接下来我将搜索更多澳门外卖平台及美食推荐。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGOJ59ckGUakh0TvOwgUuveo03BilCac4GcjDPQhKx4o4ZkcwPYvOMtZJmIUF0EGcA9ZHV/oqJcY+k7rSSVMegMJioGVK6HZkRfTOLMf2Ozm+So8+kcF9UsVKG4wxOSwbGjCJIw/6y6n1PwWKhcQA37i1zK7wNJdf2fQH8M2CLHpeIGEWmY613QDetaoXp+dqy4mDM+4APqu/T0l+bJPbquwtwVDPJkSONeLK/wMlq36YCjhjaT8rWns4A5i+odkKZsgMMSWqLDbE3ba02taA0BNmvtfLBLIrSpBbMyN6dwfuBK0A=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门外卖平台 澳觅 闪蜂 foodpanda 对比;澳门美食 官也街 大三巴 小吃推荐",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254867649100000000000000000000ffffac183596cf62c1"
+   },
+   {
+    "id": "rs_02179254867974800000000000000000000ffffac183596cf7d99",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "我已经收集了足够的信息，可以回答用户的两类问题，我已整理出涵盖安德鲁饼店葡挞、大利来记猪扒包等12类澳门特色美食的推荐清单，以及官也街、大堂巷等美食聚集地，还梳理出澳觅、mFood两款核心澳门外卖平台的相关信息，mFood的详细内容暂未完整呈现。\n\n我已补全澳门外卖平台全部信息，明确澳觅是游客首选，还整理了外卖配送相关注意事项，接下来将按要求整理结构清晰的实用回答。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGZxczJEPpbk4lMb9tP1yy+qoBk8+sWNSG7CW06qOSj79g/yDrRubp1xfSka+2cIeDw0tw1b7IO3oK8hlFsxKInilishipc9h10S+xb7JChfl3JqoUa4eWwgM8keGZELUIrB9YRT3xQwYB8lT0Vaap12QG0vld5IYJIRbNhGEUzsTUvaNdyE6po6SHiPaWtpjJaQJJQDRKCb1EkRXlQ9jklo8QRLuBhcE3547VQEPPBTsND371DW3UPFeIWnPrZoOiHtkraBDwTVpv1SQWjH7MZu8uLu2GTL00AM/f08VUP2MJ7xoUVnGwz3VYLiD6nnS6ut4IHSXHNhtrEI2/3tW3ITTXr/2q/IW7i/dEJ97jI8i3LOVWjivzSbGw76ysfagbjqiih9f9L2SiNNhkAZbA5YUMZpIJ4LcDFN5iyl/kUjcZmsThP85D21z3FZg7iS54Dy0/rJpCOrEDERGLAX91LR4UdncnPQ9JTs8gvyplFzBWnJNsj+KiczZ9UDZQKBsvw+BajcuSerEh58QyVzQ9EqvpR0yHfiQTxk9+7WcTBIcxWBi/0Fn/bAngH73JdMu6tYV1mBLE6TC1mUanDiGQT9zHKhdRJcMQImdBuK4ZHXtm96k52wyuKLuMuU8YJQd3i8Tk2/FuB0DjYFX8Wpqo/htJtTOtQ5kLliAwkPuWbmRqiferpMr5z6HGegu5q+7dc3I/LPpf3RmlrnklC2hn4RUnMJwdQcqWX0BjQ1p6WgVBl3a3RNaqXqNAsEI8Fw/bhGQCoMR6gT2fEONGAlGsSF700kPwWnHolC6SGt41NdjUY1v9Qi30Yi2qaUeTfixVefbfwVvUfE/dR+85zSxYusvy6VfJR5mJdFvb/3OI/VvyN1Xe+BOH6tb9fNWG61w4Qq2wKGHECQdMZ+pVRy9gKpFT4JARn5NwEv8+KBQFO6E0JdA2bRq5/Q1ztVWykHLDm/34/SE/eB5JEwOHL2r/KPrUqpd6kK9nQPe9j5NGV4qZ1k3FEwsEOvBJfhqyrtV/yf35yxWioizggMopfi1QWeIkmWolBnYaQBsnJ4Zc13xOK+aXdT7hd+SfCnvQwZOzsGJZ8DStkQp86IqRCBM/J0F1ctokPVPxxzIaJEWQKKru4j73zI9qclvalSE4cfWEi1f+zJJbmz+s2h09qzwfBWlJFvrGPBDUyotgcnC1MJ/5dK54W3wC6VOMVxcBj2+xSwARnyp0yYuLHlARhhK5cveFC9r8WX+HGuUNTUpQPaOIF2Q9W7D6E9Us5OoFJt88unwFElRF36CGa+UC00FYxg3X21qcgu8jJ32SPxzj/RPFWcryTvFtP3/85NHfbCJ47/TuVp80gNxu+B+FsgTMOrb6t50D/ITs8tZpydwN7b/ofCk/Lc0Dan8CG1Jcg6R3bUoPmbo9pr4XGnMDJ9oHlr6rNBkLKx800k2zjAH6dRG5LkQuxl57qZP1g3JVaQBpp0AmEqeAa+/zbMZbekGinL8KWFTqJnPDsuUwgE9gtW+ksdA2WU+3pTtJWJn7tOZaZWLHQlbKkuXtOareaPy7Os9MyuhQabvAhGsBHmhMRox6xpUym0cr+zW+tmHd9wep7A2MQG2PcpJar2hIt2aQy44vTAuocxqOSD95TJIWWEmRSW4IRBPyLACvsIQaRC52dnS7sN9lG39vsfwPUKkZRQd2JxnKKgp99VP85Js1sxEfv5P8jFvUL7rjKXk+L9kL853OwhuSPOrd0WeuDy5/ERUsb12X0zoP493jlQFyOQ4guEw86HUBiI4/++8OnQJWD2HGAxFhDaM2D8DrYy5a5ak844H0kc2xCUDoZCkRxeseHARjQphAFwXFYxPlzin/Tjlq4BcjCc1Y4hJ0rKsTeQ08/pCA12Ji8uzJG9v0PuRjJLBBAPgoXKlHEef/0I6gcwTvYa6d5CVeBiTfspovw089GiV3v3yGGx2L3Z3HtQKW9XliGUd6j85irsCYqz6Vg3qYJxN9LuwwHusHqxvsKNt4r7fb++8nlaeq+T91fnZ2nMBDZL74LMNeZ2k4vEWAVcebE01V+09R9GGexAbq1bWsu0Z/SdNN1RTQS"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "# 澳门旅游：吃什么 + 外卖APP全攻略\n\n## 一、必吃美食清单 🇲🇴\n\n### 🥧 标志性小吃\n| 美食 | 推荐店铺 | 备注 |\n|------|---------|------|\n| **葡挞** | 安德鲁饼店（路环总店最正宗） | 澳门美食\"头号名片\"，制作技艺是非遗 |\n| **猪扒包** | 大利来记（官也街附近） | 香脆烤包夹烤猪扒，澳门式\"汉堡\" |\n| **水蟹粥** | 诚昌饭店（官也街） | 整只新鲜水蟹熬粥，突出蟹肉鲜甜 |\n| **咖喱牛杂/鱼蛋** | 老Day牛杂（官也街8号） | 大众点评必吃榜，全澳首家上榜牛杂店 |\n| **猫山王榴莲雪糕** | 莫义记（官也街） | 榴莲味浓郁，还有大菜糕 |\n\n### 🍜 本地风味\n- **虾籽捞面 / 云吞面**：弹牙蛋黄面配鲜虾云吞\n- **马介休球**：葡国菜代表，金黄香脆，内裹薯蓉和鳕鱼\n- **葡国海鲜饭**：酱汁浓郁、海鲜丰富\n- **免治肉碎、猪肉炒蜆、柠檬炒蜆**：土生葡人特色菜\n- **鸡蛋仔、热可乐加姜**：街头小食与本地特饮\n\n### 🍪 手信伴手礼\n钜记、咀香园、晃记饼家（百年老店，全澳只此一家）——杏仁饼、凤凰卷、花生糖、肉干、老婆饼，大多可现试现买。\n\n### 📍 觅食地点\n- **氹仔官也街**：百余米手信美食街，必逛（诚昌、莫义记、老Day、钜记都在这）\n- **大堂巷**（议事亭前地→大三巴途中）：咖喱鱼蛋、小吃聚集地\n- **路环市区**：安德鲁饼店总店，环境悠闲\n\n---\n\n## 二、点外卖用什么APP 📱\n\n澳门主要有三大外卖平台：\n\n### 🥇 澳觅 AOMI（最推荐游客使用）\n澳门版\"美团\"，2016年上线，**功能最全**：\n- ✅ **内地手机号直接注册**：区号选 +86，收短信验证码即可（需开通漫游）\n- ✅ **支付友好**：支付宝、微信支付、云闪付都支持，按汇率自动扣人民币\n- ✅ **不用下载也能点**：微信搜\"澳觅外卖\"小程序即可下单\n- ✅ 5700+合作商户，除外卖外还能**团购自助餐、买景点演出票、超市闪购、租借充电宝**\n- ✅ 支持英文模式，配送一般30–60分钟\n\n### 🥈 mFood\n- 专注餐饮外卖，主打**速度快**（宣传最快15分钟）\n- 常有免配送费活动，适合单纯高频点餐\n\n###�� 闪蜂\n- \"超市+外卖\"双模式，背靠新花城集团，**超市日用品采购强**\n- 3公里生活圈，阶梯配送费（满299澳门元免基础配送费）\n\n> 💡 **建议**：游客装一个**澳觅**基本够用；想多比价或mFood有免配送费活动时，可以两个都装。\n\n---\n\n## 三、酒店点外卖的实用提醒 ⚠️\n\n1. **送不到房间门口**：澳门绝大多数酒店只允许在**大堂礼宾台或指定区域**交收，快到时提前下楼。\n2. **地址务必写全**：酒店中英文全名 + 楼栋/塔楼 + 取餐位置（如\"XX酒店主大堂礼宾台\"），澳门酒店综合体入口多，写笼统骑手容易绕路。\n3. **提前下单**：旺季（如11月格兰披治大赛车、节假日）餐厅排队久、运力紧张，平均送达可能要1小时左右。\n4. **出发前准备**：建议在珠海/内地就装好澳觅、完成注册，到澳门打开定位先看看酒店附近能送哪些店，第一顿就不慌了。\n\n祝你在澳门吃得开心！🥧🍤",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳門必食地道美食推介",
+        "url": "https://guide.michelin.com/hk/zh_HK/best-of/best-place-taste-macau",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/9475ad4928189345c33bfc3de7c81a35~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620673&x-signature=mM0erj1VE9Pb2bwsdm3818naNJA%3D",
+        "site_name": "MICHELIN Guide",
+        "publish_time": "2025年11月11日 00:00:00(CST) 星期二",
+        "summary": "若說葡撻是澳門最具代表性的地道小吃，著實當之無愧，其製作技藝更是當地非物質文化遺產項目，重要地位可見一斑。安德魯餅店（戴紳禮街）是幾乎無人不曉的老字號餅店，總店設於路環市區，每天定時出爐的葡撻屬鎮店之寶，蛋香與奶香交融的餡料，醇甜軟滑，跟鬆脆外層形成強烈對比，讓人欲罷不能。\n\n金黃香脆的炸馬介休球，內餡軟腍帶鹹香，味道和口感俱佳。\n\n即點即製的馬介休球，香脆外層包裹著綿綿的薯蓉和肉魚，味道突出。\n\n豬肉炒蜆加入薯仔粒，以特製醬汁同炒，惹味可口。\n\n檸檬炒蜆加入蒜蓉和芫荽等香料，並以檸檬汁畫龍點睛，味道出眾。\n\n不妨來一客澳門土生炒免治肉碎，品嚐鹹香交織的美味。葡國海鮮飯的醬汁調配得宜，配料豐富且新鮮，同樣出色。"
+       },
+       {
+        "type": "url_citation",
+        "title": "去澳门旅游住酒店，怎么点外卖?内地手机号能不能用、送到哪里取_配送_App_订单",
+        "url": "https://m.sohu.com/a/1087161898_123029547/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/6b1d3a6f49304d84d8268210e144399e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620673&x-signature=Ylxo7lVQWg%2FSKslNLrtlhFNjg0g%3D",
+        "site_name": "手机搜狐网",
+        "publish_time": "2026年10月13日 15:12:00(CST) 星期二",
+        "summary": "大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖。\n没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间——这几个问题最常见。按操作顺序说明如下。\n一、注册：内地手机号一般可用\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n二、地址：写全名称、楼栋和取餐点\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n三、取餐：多数要到大堂或指定区域\n一般不能指望送到房门口。澳门大多数酒店只允许在大堂或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交收点在哪里，可以先问前台或礼宾，再写进备注。\n四、付款：以结算页实际选项为准\n结算页常见的有支付宝、微信支付、银联云闪付、VISA/MasterCard 信用卡，以及 MPay、支付宝（澳门）等本地钱包。不同账户、设备和订单显示的选项会不一样，以结算页为准。内地游客用支付宝或微信付款时，扣款通常按当时汇率折算成人民币。\n五、售后：订单页或「我 > 在线客服」\n下单后在「订单」页能看到商户接单、备餐和配送的实时状态。餐品有问题或迟迟没送到，先打开对应订单，看有没有「客服」「售后」或「申请退款」入口；没有的话走「我 > 在线客服」。\n六、同 App 还可团购、闪购\n同一个 App 里还有团购（自助餐订座、餐厅套餐券、景点和演出票务）、超市和便利店的闪购配送，以及面向游客的充电宝等服务，2024年起客户端支持英文模式。酒店自助餐、节日套餐这类团购，建议先确认是否需要预约再安排行程。大赛车周末想看比赛又不想挤餐厅，可以提前买好附近餐厅的团购券，或者回酒店点外卖。\n出发前把 App 装好、注册完成，到了澳门打开定位看看酒店附近有哪些商户能送，第一顿就不用临时找路了。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "去澳门旅游住酒店，怎么点外卖?内地手机号能不能用、送到哪里取_配送_App_订单",
+        "url": "https://m.sohu.com/a/1087161898_123029547/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/6b1d3a6f49304d84d8268210e144399e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855417236&x-signature=fNYCD6v89Gt5cVSLOavYqwrubpA%3D",
+        "site_name": "手机搜狐网",
+        "publish_time": "2026年10月13日 15:12:00(CST) 星期二",
+        "summary": "去澳门旅游住酒店，怎么点外卖？内地手机号能不能用、送到哪里取\n莫伊拉\n2026-10-13 15:12\n今年国庆假期，澳门7天入境旅客114.3万人次，10月4日单日达21.0万人次，酒店平均入住率91.3%（澳门旅游局 2026-10-08 公布的初步数据）。11月19日至22日还有第73届澳门格兰披治大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖。\n没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间——这几个问题最常见。按操作顺序说明如下。\n一、注册：内地手机号一般可用\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用\n微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n二、地址：写全名称、楼栋和取餐点\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n三、取餐：多数要到大堂或指定区域\n一般不能指望送到房门口。澳门大多数酒店只允许在大\n或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交收点在哪里，可以先问前台或礼宾，再写进备注。\n四、付款：以结算页实际选项为准\n结算页常见的有支付宝、微信支付、银联云闪付、VISA/MasterCard 信用卡，以及 MPay、支付宝（澳门）等本地钱包。不同账户、设备和订单显示的选项会不一样，以结算页为准。内地游客用支付宝或微信付款时，扣款通常按当时汇率折算成人民币。\n五、售后：订单页或「我 > 在线客服」\n下单后在「订单」页能看到商户接单、备餐和配送的实时状态。餐品有问题或迟迟没送到，先打开对应订单，看有没有「客服」「售后」或「申请退款」入口；没有的话走「我 > 在线客服」。\n六、同 App 还可团购、闪购\n同一个 App 里还有团购（自助餐订座、餐厅套餐券、景点和演出票务）、超市和便利店的闪购配送，以及面向游客的充电宝等服务，2024年起客户端支持英文模式。酒店自助餐、节日套"
+       },
+       {
+        "type": "url_citation",
+        "title": "地道美食 - 澳门特别行政区政府旅游局",
+        "url": "https://www.macaotourism.gov.mo/zh-hant/dining/taste-of-macao/local-food",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/06cd1bf4aabff1605646b71306c5fceb~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620673&x-signature=kk2N9S4e%2Btcq2tpuXw60eqKuM9c%3D",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2025年04月10日 00:00:00(CST) 星期四",
+        "summary": "地道美食\n品嚐澳門的地道美食\n讓您的胃留一點空間，然後在澳門的小巷、小餐廳或路邊店去尋找屬於澳門的美味吧！\n地道美食種類 蝦籽撈麵 雲吞麵 豬扒包 粥 咖喱魚蛋店 肉乾 杏仁餅 熱可樂加薑 雞蛋仔\n蝦籽撈麵\n在蛋黃麵中放入蝦籽的撈麵。雖然蝦籽每顆都只是小小的，但鮮味十足，吃一小口也會讓您齒頰留香。\n這道最有名的麵料理叫做雲吞麵。在彈牙的蛋黃麵上放上蝦仁餃子（雲吞），再澆上用魚熬製成的鮮湯，定能勾起眾多遊客的食慾。\n澳門式漢堡的一種。在香脆的烤麵包中放入切好的烤豬扒。與一般的漢堡不同的是麵包和肉之間沒有放蔬菜和調味料，讓人可以單純地享受烤肉的香味。\n粥是澳門本地人及中國人喜愛的早餐之一，而當中最常見的就是白米粥。視乎熬粥時放入的材料，這道菜也可以做成高級粥料理。這裏特別推薦的粥料理就是放入一整隻新鮮水蟹熬成的水蟹粥，因為清淡的白米粥能把蟹肉的鮮味突顯出來。\n從議事亭前地走到主教座堂途中會經過一條名為大堂巷的街道，這是澳門其中一條有名的美食街。咖喱魚蛋店除了使用魚蛋之外，還會把牛雜、魚豆腐、貢丸、麵條等各式各樣美食。蘸上辣椒醬或咖喱汁一起吃。吃的時候雖然會辣得揮汗如流，但很受年輕人的喜愛。不同的咖喱魚蛋店都有獨家的秘製醬汁。\n是澳門有名的零食。有牛肉、雞肉和豬肉等各種各樣的口味。\n澳門有名的傳統餅乾。內裏佈滿了香脆可口的杏仁粒，每一口都香脆無比。由於杏仁餅吃起來口感比較乾，因此建議配合飲品一起食用。\n這是一種在可樂中加入生薑煮成的飲品。煮可樂聽上去對旅客來說也許有點匪夷所思，但當您感冒或身體疲憊時，喝一杯熱可樂加薑能幫助恢復體力。可樂和生薑的味道異常搭配，非常好喝。\n雞蛋仔是把將蛋漿倒在固定的模子裏烤製出來。「雞蛋仔」這個名字的由來：有人說是因為麵粉中放了很多雞蛋；也有另外一個說法是因為它的模子看上去像很多顆雞蛋。剛烤出來的雞蛋仔外脆內軟，可以在路上買一包邊走邊吃。\n更新於：2025年4月10日\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620678&x-signature=Jx5B1JwLu0JhLkW5VdZNqdWlBrw%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。\n\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n\nmFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。\n\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\n\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n\n有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。"
+       },
+       {
+        "type": "url_citation",
+        "title": "老day牛杂 - 澳门特别行政区政府旅游局",
+        "url": "https://www.macaotourism.gov.mo/zh-hans/dining/specialty-foods/special-snacks/lao-day-beef-offal",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/06cd1bf4aabff1605646b71306c5fceb~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855506556&x-signature=tNCqgHe9GR23F5lTqTxPRh%2FiFxI%3D",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2025年05月15日 00:00:00(CST) 星期四",
+        "summary": "老day牛杂\n#特色店 #特色小吃\n特色小吃\n老Day牛杂，自2017年创立以来，秉持匠心独运的精神，从默默无闻到声名鹊起。经过数年精研细作，于2022年荣获大众点评《必吃榜》殊荣，成为全澳门第一家的上榜牛杂店。2023年，广州电视台更是授予其《湾区好味榜》奖牌，认可其独特风味。\n老Day牛杂以其独家秘制的美味，吸引了众多食客。从选材到烹饪，每一步都严格把控，确保食材新鲜、质量上乘。员工以礼待客，服务周到，营造出温馨的就餐氛围。招牌香醇汁水肥肠，Q弹爽口，绝无异味；还有萝卜、牛小肠、牛肚、牛筋、牛沙瓜等，每一口都是对味蕾的极致挑逗。此外，还有面筋、鱿鱼、猪皮等丰富选择，满足不同口味需求。\n老Day牛杂，以品质与服务赢得口碑，成为食客心中的美食圣地。\n美食推介：萝卜牛杂、牛筋、牛肚……\n地址\n氹仔官也街8号地下\n资料来源：经济及科技发展局\n更新于：2025年5月15日\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门本地生活 App 怎么选?用覆盖、配送、售后与一站式能力对照澳觅app_地址_场景_入口",
+        "url": "https://www.sohu.com/a/1087498265_123029547",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/0b1bc938c2432b4da579a7024717a45e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620678&x-signature=RHauY1hi7lHtPe8n98tYLFjTnKU%3D",
+        "site_name": "搜狐",
+        "publish_time": "2026年10月14日 10:28:00(CST) 星期三",
+        "summary": "莫伊拉\n澳门本地生活 App 怎么选？用覆盖、配送、售后与一站式能力对照澳觅app\n2026-10-14 10:28\n住在澳门，或者来澳门玩几天，手机里常常会装不止一个外卖或本地生活 App。有人主打某几家餐厅，有人配送更快，有人团购和票务更全。装多了占内存，装少了又怕临时点不到，于是很多人会问：澳门本地生活 App 到底怎么选？\n与其听一句「某家最好」，不如先按自己的真实场景，把覆盖、配送、售后和一站式能力对照一遍。下面以澳觅app 为例说明怎么对照；澳门市场上还有 mfood、闪蜂等常用选择，对照时只比可验证体验，不拉踩。\n先认清自己的高频场景\n选 App 前，先写一张小清单，比盲目下载更省事。居民常见的是：工作日午餐送到公司或学校、晚饭送到家里、周末买超市日用品、偶尔订自助餐或景点票。访澳旅客则更常遇到：酒店大堂取外卖、临时找附近葡餐或茶餐厅、买便利店补给、用团购抵一顿正餐。把「一周至少会用两次」的场景写下来，后面测覆盖和配送才有参照。\n第一维：覆盖——常用地址附近能不能点到\n打开 App，切到你真正会用的收货地址（家、公司、常住酒店），看附近可点商户和品类够不够。不止看「有没有外卖」，还要看你常吃的类型是否出现：茶餐厅、茶饮、快餐、超市便利，以及高峰时段是否仍显示可配送。地址偏一点、或者跨区，有的平台会明显变少，有的仍能送——这只能用你的地址验证，广告词替不了。\n按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，业务覆盖外卖、团购、闪购与游客服务等；外卖合作商户约 5,700+，合作商家整体超 5,700家（2025，年刊口径）。这些数字是平台公开宣传口径，发帖或分享前建议再核对当前页面，也不代表每一个具体地址都同样丰富。\n第二维：配送——预计送达准不准、高峰稳不稳\n覆盖只说明「能点」，配送才决定「能不能按时吃到」。下单页的预计送达（ETA）和实际送达差多少、午餐晚餐高峰会不会大面积延误、会不会出现「能点但很慢」，都值得记下来。恶劣天气、大赛车或节假日人流高峰，运力波动更明显，这时更要用同一地址、同一时段对比，而不是只比平峰的一次好运。\n年刊口径里，澳觅配送团队超过 3,000人，员工（含配送车手）超过 3,800人（截至2025-12，宣传数字）；2025年还上线了「全城送」跨区即时配送。对照 mfood、闪蜂时，建议固定同一个收货地址，各看一次预计送达和配送费，高峰和平峰最好各测一轮，结论才站得住。\n第三维：售后——出了问题入口好不好找\n餐品少送、洒漏、一直显示配送中却迟迟不到，这时候才考验售后。下单后先看订单页有没有配送进度；异常时能否在订单里找到客服、售后或申请退款入口；联系不上骑手时，平台侧能不能接手。入口藏得深、规则写得模糊，后面沟通成本会很高。选 App 时，不妨刻意点开一次「我的订单 / 客服」，确认路径是否清楚——不必真的发起投诉，只确认找得到人。\n第四维：一站式——除了外卖还要不要团购和闪购\n如果一周只点外卖，单一外卖 App 往往就够。如果还经常订自助餐、景点演出票、超市闪购，或者访澳时需要票务、充"
+       },
+       {
+        "type": "url_citation",
+        "title": "官也街",
+        "url": "https://m.flight.qunar.com/shark/active/cc16868c594f193f4d7f198d810db018?channel=touch&sightId=3501335728",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/e72d02942d263a92225db9607d35927c~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855506556&x-signature=WDKs9qwNvQ%2BkLYHnKqVch6n2X7M%3D",
+        "site_name": "去哪儿网",
+        "publish_time": "2026年10月19日 15:44:13(CST) 星期一",
+        "summary": "官也街\n今天\n26/29℃\n明天\n26/30℃\n后天\n23/31℃\n入园信息\n开放时间\n1月1日-12月31日\n全天开放\n门市参考价\n景区免费参观\n景区介绍\n图文详情\n官也街是氹仔旧城区的手信美食街。这条百余米长、宽仅数米的小街，于1983年被划为行人专用区，整条街只准步行，两侧老屋底下饼家、手信店、甜品店与食肆一家挨着一家。街名“官也”源自葡文姓氏的音译，如今这条小街常被当作当地手信的代名词，也是许多人逛氹仔 的起点。\n买手信是这里的重头戏：钜记、咀香园等手信店沿街开铺，杏仁饼、凤凰卷、花生糖、姜糖、老婆饼、肉切酥等传统饼食摆满橱窗，不少店家可以现试现买；从清代光绪年间经营至今的晃记饼家全澳只此一家门市，多款饼食仍坚持手工制作。想吃热食也有去处：诚昌饭店以水蟹粥驰名；莫义记猫山王的猫山王榴莲雪糕和大菜糕，则是逛街途中的甜品。\n小街一端出去便是巴波沙总督前地，广场上立着和丽女神喷泉，以猪扒包闻名的大利来记就在附近；街旁还有由十九世纪旧街市改建成的休憩广场，走累了可以歇脚。时间充裕的话，穿过几条旧城巷弄，还能探访始建于十九世纪中叶的北帝庙。\n游玩指南\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254869156900000000000000000000ffffac1835962204d1"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 11736,
+   "output_tokens": 1756,
+   "total_tokens": 13492,
+   "input_tokens_details": {
+    "cached_tokens": 3896
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 626
+   },
+   "tool_usage": {
+    "web_search": 5
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 5
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807867,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:11:06+08:00"
+}

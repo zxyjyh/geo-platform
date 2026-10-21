@@ -1,0 +1,161 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门外卖平台有哪些？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548594,
+  "id": "resp_021792548593519d4be1129d6d4d98edebd93c59b039a06e92381",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254859483400000000000000000000ffffac15c15aa80f82",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户问澳门外卖平台有哪些。因信息需时效性与地域性，我将搜索相关内容。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHZMJgZ7qfEP0DOSRJBdvsYN659Y+SjHZKOiODTJb52jQ32ENOvt56xhS5hQ3c7zK0+HJfVDOwTM3fNNUSsFT/Qs8WGX4hud+P8LF12z26s6BMXOhPVF4T55B5Pikh9+wZk8H5FPkUk0M0Ojd09QCtBPoUeHWycUvfDat8ShoAWIpRILUK0VTXc5HtFL7QqXUlVL0BrU7nDMSo++gmKyobst4ke9LmsF5U6Kgk7Q3EHJvAUdwXnIUpZj32Ecxe/2iHC4uik+1ewNdPIu3F6d/zSJMLnvBfiA8J50N7p6Yewltd/WY7i2ohaKc5k9F2CyTp+BvPCAuobo/mnSE2Exm7aJndJgZuaN9iVQRusNcjx7XSKaGQ9qy9OuCZtvtVagwePEfY3v1QkQn8tH4p0WxTULA=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门外卖平台有哪些;澳门外卖app推荐 2025 2026;澳門 外賣平台 閃蜂 澳覓",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254859726500000000000000000000ffffac15c15a911e61"
+   },
+   {
+    "id": "rs_02179254860099400000000000000000000ffffac15c15a440895",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "搜索结果非常清晰。\n\n经核实，澳门主要有澳觅、mFood、闪蜂三家外卖平台，信息来源包括澳门政府新闻局及相关权威媒体的公开报道。我将从游客视角整理包含平台简介、特点对比、实用支付提示的清晰中文回答。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEgUb2wj/rBgTAqPO4WLG7FktYxuzorSeu6dBHflanXd2VFc+aOKy3r+UtK+V/e0bpi0wb7MYCVyd10kxycwV7+yiWnt3lQKoJpxQhG+LbHpAjcDFRYidMs8rQCqzYeN86BExV+mJ8GUf9Zn6kvhfCLaTDkXGA/BYsiVU3dyRW+1LvS9qXfn3M+6zI4CvDT5Iag0GYT7pvThGYJfKxJXYRU7Zat3CYgssznlllUPqgQz9LHbL9ZLB+/ED01crqBawJ9+9w/Aen79Tyfq/UztV9L+7FeGJFKLMFCYTGeYvtL8ctGJX0ebgyAe3uybkzrQjOvgmAf2ajq/ygnttRLxQWeKUvtn5VgE1AB9wo86ZDer3tZom11K72yF0JKxq72prTyY1KI3w2s1WLQVZUcivSjZ63GHtW5egXeXmFxhxMRDarH5hTbD1FDd23lQ2dR7aPmxhlYro2TwR8z3F33tDFvmqUFHeYkPgKiDDh2Bdf3/DKbpsAeX8MygREAAoHLgECFZaIcvh0JmYsZaauoZZCMMnJSiAtZ8+rDU6UvSFUasmj2PULBIv37mYe3yz3CHRzwvxd0/Tq3/8ffQrUHiKkADVVr1JGwlEVsry5D/N9VieC6ZdG8KgZ/dettHMJizHjYSzjPzvnEkeIbsJ9fRIpeYoJcdbHZQ/7OTTVcU3MwG1oLtBbh3fCtzObuQLobV3ho2mCV4LgUZiVshYftp1rSaa9AO6unVsrJ+ydqJpX/FAIPaKA2G1Wlc4DCPO1IDQ=="
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "# 澳门外卖平台一览\n\n截至2026年，澳门主要有**三大外卖平台**，澳门经济及科技发展局与消委会约见的也正是这三家：\n\n## 🥡 三大主流平台\n\n| 平台 | 定位与特点 | 适合人群 |\n|------|-----------|---------|\n| **澳觅（AOMI）** | 澳门本地规模最大、最主流的一站式生活服务平台，对标内地美团，除外卖外还整合了生鲜超市、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户约70万 | 想要一个App搞定多种本地服务的用户 |\n| **mFood** | 专注餐饮外卖，签约商户众多，主打\"极速配送\"（宣传最快15分钟，实际取餐后约30分钟），免配送费等优惠活动频繁 | 高频点餐、追求速度和优惠的用户 |\n| **闪蜂（Flashbee）** | \"新零售+本地生活服务\"平台，依托新花城集团资源，超市到家与美食外送双轮驱动，主打3公里生活圈，覆盖澳门半岛及离岛，配送费阶梯计价、规则透明 | 家庭采购、超市日用品+外卖一起下单 |\n\n## 💡 实用提示\n\n- **支付方式**：普遍支持支付宝、微信支付、澳门通等，对内地游客比较友好；不过澳门部分小店仍只收现金，建议备少量澳门元/港币现金。\n- **配送时间**：多数订单30–60分钟送达，旺季或高峰期可能接近1小时，游客赶行程建议提前下单；闪蜂在凌晨0–8点及法定假期会加收约10澳门元。\n- **覆盖范围**：三家均覆盖澳门半岛及氹仔、路环等离岛主要区域。\n- **下载**：在 App Store / Google Play 搜索\"澳觅\"\"mFood\"\"闪蜂\"即可下载。\n\n**简单选择建议**：游客随便点餐、薅优惠选 **mFood**；想顺便买超市零食日用品选 **闪蜂**；希望一个App解决吃饭+打车+杂事选 **澳觅**。不少餐厅会同时入驻多个平台，下单前可以互相比比价和配送费。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门人常用的app有哪些?这份实用指南请收好",
+        "url": "https://www.gskjb.cn/gskuu/20260703/tkbrj2-220825.html",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/img/a56fc0bbeabeba7d3d2c5b925a336e19~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855548270&x-signature=jMnu7LX%2F55iq%2B8V4pdGYm00O2Qo%3D",
+        "site_name": "甘肃科技报",
+        "publish_time": "2026年09月28日 21:54:00(CST) 星期一",
+        "summary": "着支付、叫车、缴费等多种功能。澳门版本的微信与内地版本功能基本一致，但部分服务如红包、小程序可能因地区政策略有差异。此外，Facebook、Instagram和WhatsApp在澳门同样拥有大量用户，尤其对于与海外亲友保持联系的人群来说，这些国际社交软件是必不可少的。澳门年轻人还喜欢使用TikTok（抖音国际版）和YouTube观看短视频与长视频内容，这部分app的使用习惯与香港更为接近。\n在生活服务方面，澳门人常用的app涵盖外卖、打车、导航与本地资讯。外卖平台中，澳觅（AOMI）是澳门本地最主流的应用，它集合了餐厅外卖、生鲜超市、便利店配送等业务，界面操作简单，支付方式支持支付宝、微信和澳门通。另一个常见的是闪蜂（Flashbee），同样提供外卖与跑腿服务，与澳觅形成竞争。打车方面，澳门没有滴滴，但可以使用澳门电召（Macau Taxi Call）以及Uber（优步）国际版，前者是本地出租车预约平台，后者有时因法律限制无法正常使用，因此很多居民也会直接在路上拦车。导航地图则普遍使用Google\n Maps，它提供准确的公交路线和步行指引，部分用户也会用百度地图或高德地图，但澳门地区的数据更新不如本地化app全面。\n电子支付是澳门人常用的app中增长最快的类别。除了微信支付和支付宝（Alipay）在澳门逐渐普及外，澳门本地还有澳门通（Macau Pass）App，它不仅可以用于乘坐巴士、轻轨和在便利店小额消费，还能绑定银行卡进行线上充值。澳门通App还集成了电子支付、交通卡查询、商户优惠等功能，是本地居民日常出行的好帮手。值得注意的是，虽然澳门大部分商铺已经接受移动支付，但仍有部分小店只收现金或仅支持本地支付工具，因此建议游客和初来乍到者同时准备澳门通和现金。\n在公共服务领域，澳门人常用的app包括澳门卫生局的“澳门健康码”应用、交通事务局的“巴士报站”以及市政署的“澳门市政服务”。其中巴士报站App可以实时查看澳门所有公交线路的到站时间、路线调整和站点信息，非常实用。此外，澳门电讯、CTM（澳门电信）等运营商的官方App也常用于查询话费、办理\n套餐和缴付账单。对于需要办理政府业务的市民，一网通App（澳门公共服务）整合了社保查询、车辆登记、税务申报等多项功能，但使用前需进行实名认证。\n关于下载与安装，澳门人常用的app大多可在iOS的App Store和Android的Google Play商店直接搜到。由于澳门地区没有像内地那样统一的应用市场，部分国产应用（如支付宝、微信）在澳门版本与内地版本上并无差异，只需在商店搜索中文名称即可。需要注意的是，一些澳门本地app可能未上架某些第三方市场，建议通过官方网站或官方商店下载，避免安装到仿冒或携带广告插件的非官方版本。另外，部分应用（如澳觅）在首次使用时需要授权地理位置和短信权限，这是为了让外卖和配送服务正常运作，可以放心授权。\n在使用过程中，有几个误区值得留意。一是澳门人常用的app并非全部免费：虽然下载基本不收费，但像外卖平台会收取配送费，部分导航软件的高端功能需要订阅会员，电子支付工具在提现或跨境转账时可能产生手续费。二是安全性问题：澳"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620599&x-signature=8KiR3tceCM7K6ontS5KsScfxcSg%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。\n\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n\nmFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。\n\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\n\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n\n有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。"
+       },
+       {
+        "type": "url_citation",
+        "title": "经科局联同消委会向外卖平台介绍《推动外卖餐饮行业健康发展的指引》 共推促进行业的健康及可持续发展",
+        "url": "https://www.gcs.gov.mo/news/detail/zh-hant/N25DQA5AD0",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/b67960c8c7a0029b30977cfdae27ec7c~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620599&x-signature=sFbsun%2FxGvlEThe6l9ScN%2BrzL1g%3D",
+        "site_name": "澳门特别行政区政府新闻局",
+        "publish_time": "2025年04月17日 10:30:00(CST) 星期四",
+        "summary": "經科局聯同消委會向外賣平台介紹《推動外賣餐飲行業健康發展的指引》 共推促進行業的健康及可持續發展經科局與消委會約見外賣平台代表為推動本澳外賣餐飲行業的健康及可持續發展，鼓勵外賣平台與餐飲商戶和消費者建立更清晰的收費標準，經濟及科技發展局聯同消費者委員於日前約見本澳主要的三間外賣平台（包括澳覓、mFood及閃蜂）的代表，就《推動外賣餐飲行業健康發展的指引》進行介紹，以便平台了解及遵守指引。要求外賣平台與商戶保持正面的合作關係《指引》明確指出外賣平台不得以任何形式要求商戶簽訂排他性合作條款，應充分尊重商戶選擇參與推廣或優惠活動的自主權，不得以強迫方式要求商戶參與營銷活動，同時須向商戶提供明確的服務收費標準及計算方式，以提高透明度。為消費者提供良好服務外賣平台應誠信地履行合同及服務承諾，建立完善的配送管理機制，確保配送人員按時完成訂單配送。同時，平台上的收費項目和價格須清晰顯示，並應設專屬的消費者投訴及意見反饋渠道，確保意見能迅速得到受理及解決。"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855548270&x-signature=I%2BvjAlnB%2FXXPAHGH8olPfzRSq5Q%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。\n\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n\nmFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。\n\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\n\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n\n有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254860604200000000000000000000ffffac15c15aea9dcf"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 4653,
+   "output_tokens": 823,
+   "total_tokens": 5476,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 235
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807793,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:09:53+08:00"
+}

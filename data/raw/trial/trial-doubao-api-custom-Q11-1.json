@@ -1,0 +1,171 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门外卖平台哪个配送最快？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548327,
+  "id": "resp_0217925483270517ca105f5574cf73b805fb1b9d3d8cfa01d033a",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254832796300000000000000000000ffffac155f4ca090e0",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. Web search will be conducted to find fastest Macau food delivery platforms."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEBsFs8OaLiYwqef3TB4a1AARjCvO94sBzyHmHe3F8dNEwiJZtRMCQrvtUpL12Km1WdRfiBI8OqoTH5BduFzRuUl+96gW8yulgT3wFf+V2ORB4w5RwJefsfpo5ukBYy45sBp6bPr0eV6GyjGxxb9IBdpglpnESNInRDk2T8zjawYzu8yj/gEG/sqRMKzS1YBOJB7L4KG8bYGm6U/cEXdsIybXmbSNTlTAlWytMd8G8DLM8zkXoGnkCIqqQP7fd9jAk5WwDjQ/h74HLvQ2QmpgIgwzfg06H2lof0vir6VjWeb9QxgRHZOIAaGAKRq73ZXnHUds9tGXjmEz10iHY="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖平台 配送速度 澳觅 MFood 闪锋 对比",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254833112500000000000000000000ffffac155f4c8551d5"
+   },
+   {
+    "id": "rs_02179254833342400000000000000000000ffffac155f4cb00254",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need perhaps search more specific,For users seeking the fastest restaurant delivery service, I've collated comparison data of three mainstream platforms. Their advertised delivery windows vary by category and scenario, with real-time in-app ETA applicable for same-store comparisons. Next, I'll search user reviews and related news for more details."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFQODM/6yYgi3PhjvnCZzrnHqQrXwJvStknWX1jll8kynis/CUTdnenit/CHnhGE1AYkEedRqokBjIpFtGLD5JTnSbRcvwDqJTfIxl4U8Rw5mIIzm3syOV6YMEBXKUnhKsTKxzOgZAgeBLk1ZHixxqDqFjjQOfk9kFiVvIemIgUmQyRNHgfHq01fLaGXAbdhsRiKIWvm09L3Lu0Dm/VRF1rILMDKyKQqSxJAUKwCG/pK917nPquO8VU6jmus9PAxGpwaZkgIyHWx2SUnPFzsTa7ncXQDuSzst8g2Y1h1FesqEYrcVijmPOdEfvdt5EcekOBrgPbWcCTG5TeGyM8tndCBLc1PsJBRH1ZJ+zeu/xTna8mQIy6SFAeSD+C2e/JXPv62xSIO88+fdcHBuQj/hFmBU4yIAcJoswwC+QBY5JRTsVsOfA61M3vEQM9hawE0DhiTz/FAU5w/uqaZw4V5q/9TQLwIKBuQmGhpNxdQ/YicYYT2VlS4FHoWi0XyoDVGeGfEghtDjXFjx/cCicXLT+/GOA+IKcMPTJp1zmmKuY1ln86BoQN0wicFbvN5nCKWB7Rc/YYJLYqvWDSYcuQ5Mvd1GMhf6xem77q6De+zAC4Cn/uh2hb6I861NHFPhd7YdXvBzBInUOA5DUXXrsC+LLmrgWmEurcKufgZp5kTABALT/ufiB46w/UfAUKZjUlm/XZmGySRj19HBvt086uA6AB38pNWGdjERwZEVIVyjmDinbf/TEOKQ=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "mFood 澳门 最快 15分钟 送达 配送",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254834271400000000000000000000ffffac155f4c48a772"
+   },
+   {
+    "id": "rs_02179254834568800000000000000000000ffffac155f4cf5ae92",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need answer in Macau Chinese maybe Traditional? I've clarified the answer requirements: it needs to be simplified, cite sources, cover the fastest nominal mFood, include practical tips, and use in-text links after claims. I've confirmed mFood is the top option for pure dining and urgent orders, with official data claiming its fastest delivery takes 15 minutes, supported by a dedicated team and partnerships with 4,000 restaurants, and most independent comparisons rank it first in speed.\n\nActual ETA varies by scenario, with mFood's 15min speed only an ideal benchmark. 澳觅 offers broad services with reliable stability, while 闪蜂 excels at supermarket deliveries. I'll compare estimated fees and ETA on all three platforms, and verify relevant sources."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djF4cpwoLlMsq6gav0RIgG+kCDBD5kPerOOg+D4lZjlkAccJGXrJvBf+GbTb0n9cPrL46NwJiu2oEVq8aZsHB30b+/MST5Lr+HBacGhZ/z1ROLh4wyug5k/5aTJ1I7Zl/yxARhbpoMy5SLurhI6SfxVt6lfm3wlW4spxJqKhBTIAxnOhvXHpnedp5/GAsmNI9IIEjjnw4CKpQ6rXjLGSxDX4KiwDJxbq9XhPymd8qmnNonUM3dY5DALnkj89oDrnKVJA6uS1vBOWNRNoSo3bjM2dHYdVd6pDvT9jEqG+QDBNaaTqfArkBn/m3p4G143FuBi+hyOlpEuHTrKwTRUEbNSzvolshQvfJ7USxBg2OLXITLAvPPjHQQQ7qureNXHcOd0JThltDdmbx6DaRpSXIfH9wDrahAOJAlAPVarwnvJIzBH13uZCCAdbBXyjcUANF7lWHcbaS8m/owx8vYQVLIdeftgBMRY9VgOQgys+i1eBKqPrRIbEkBOIIrkUTUZrfVp8go0zT6zdHGU+JNSWl31GkOjrbU8XctTBr4jdXmnDd0UZheL3dxWqc7VFoew0jvzmVB6V0YeoC1muHj20DzrmgHXBMay584sZkWmqjQy9Lh1GzZul2r0cw1NCosTRljv7OrQsjKr/ZDvMebT3nzA0m+8eQomB1RwXrGHI0FAMfIrhhnywy4Vme+BnCaiFSkNdPzx7gmHOLW+nYIPNdnicSonDemfru3ORQbWAASSK825aNaG7cbPe4lPt2rQouAfZ/kDQNhBsfphX3oI8hkbJTFA+nOmQdamWk7T4X7bXHJaWeFyTwlV8Q2fmgsTw8FA5q8+UV9UzqpQW759Ih76P07ad1b85hivUKC5TNTzS4F4OyhTg37ImRwJuXzQkp7PtGwzqVfcpQeCJfOJkIskSUuPB7Ixn93fa+l3BVWrAWBYAe+V0afs2qMe5E4YBbefNC7OTdTa10RVlPYTTTeyx8BdgcR57JQsFLxfm5ukP3HkGkqh87hde7WqtR8AG2qY8F0oj7LmTCLEJ0BgA4SLGSOwCXnKxyALDc2vUZStbEEcTbWt7TECaR+LAkIFJkkFM2w9pbo4c8+zcb2+WQzvTf2vARQToeXLioDy4yAIz6YCUTNZNQY/B8JwVL1SJ/nKih6p0AZfpW6a0vOtkH52WGdhoxqTQY8ES6zTM+SpWsHcaKL2SeNqFbsnCri2RpF0+bNUqnycS00RFHgTvMtZY9Ks/wHO9dz4bf+3KiWXxgLMe9eIrjkiPHF+CkSzY5UjZZLmlNmnyNVRiwZhv32mlMZC8ZCl8Juazpm5IrKsA0K4zzgLdIVclpJ/6pY29nafj4W8rPTp3UNXpjO6WSyqJS/GX7sFH00wN/4VWWrjvdQN1CV3OKQBhBRJ6g/MuwpFR43CKKoW4M2rtEF5N360wpNTWpmF0/sqiZ9O4KwYjXDPbNFfHM+lFlJDhPL/tczyVeQ3zztGfHLRBLlwEsUEawFj/eUu3n7e/TOHMKF+zTJu2axNn5A1dfHLjFt+Ee6fp9aWIyL3SAEf1tRuU+gG+0pwuFCAR239bMGGNY77gxA3ybahcgd4wbDKvLWnGRwlLOKNlJy1HQy7u9DZWMUPgnpY="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "闪蜂 澳门 外卖 最快 1小时 3公里生活圈",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254836441400000000000000000000ffffac155f4c9e5aed"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**结论：以澳门主流平台的公开时效和用户反馈看，餐饮外卖优先选 mFood，通常是“最快”的选择。** mFood 在 App Store 官方介绍中称覆盖澳门约 4,000 间餐厅，**最快 15 分钟送达**；第三方平台对比也提到其取餐后约 30 分钟送达，专送响应速度较突出。\n\n### 三家平台大致时效\n\n| 平台 | 配送时效特点 | 更适合 |\n|---|---|---|\n| **mFood** | 官方称最快 15 分钟，常见口径为取餐后约 30 分钟；高峰期实际可能更久 | **餐饮外卖、赶时间点餐** |\n| **澳觅** | 多数订单约 30–60 分钟，服务覆盖和稳定性较均衡 | 外卖、团购、打车等一站式服务 |\n| **闪蜂** | 主打约 1 小时、3 公里生活圈 | 超市百货、家庭采购 |\n\n不过，“最快 15 分钟”是理想条件下的宣传时效，不代表每单都能达到。澳门半岛、氹仔、路环的配送差异很大，且会受餐厅出餐速度、距离、天气、高峰时段和骑手数量影响。\n\n**实用建议：** 如果你赶时间，最好同时打开 mFood、澳觅、闪蜂，输入同一收货地址和目标餐厅，直接比较 App 显示的“预计送达时间”和配送费；同一商家在不同平台的时效、费用可能不同。\n\n资料来源：mFood App Store 官方介绍（2026年10月页面）、什么值得买《澳门三大外卖平台深度对比》（2026年6月）。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026-06-09T00:00:00+08:00",
+        "summary": "澳门三大外卖平台深度对比：谁更快更省更全能？\n源自11位全网作者\n06-18 20:07\n截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。根据公开资料与用户反馈，各平台在配送时效、费用结构、服务范围及附加功能上存在明显差异。本文基于多源素材，对三款平台的核心服务维度进行结构化梳理与横向对比，帮助用户厘清各自特点。\n01 配送时效与覆盖范围\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n02 配送费用结构对比\n配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。值得注意的是，有用户观察到“不同平台同一距离配送费存在差异”，例如京东外卖1公里约7–8元，而美团、饿了么仅4–6元，侧面反映本地平台定价策略的灵活性。\n维度 mFood 闪蜂 澳觅\n[object Object] [object Object] [object Object] [object Object]\n03 服务生态与附加功能\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n04 用户实际体验反馈\n配送可靠性对比\n高效便捷派\n“边走边下单，找个休息的地方就能直接开吃，省下不少排队时间”（闪蜂用户）\n“订单状态从接单、制作到配送都有显示，等待过程中对时间预期更好把握”（mFood用户）\n服务波动派\n“骑手7楼不送上来……送到5楼叫你在5楼拿”（闪购平台用户）\n“配送延迟原因包括澳门地形复杂、订单高峰期、地址填写错误等”（mFood官方说明）\n用户实际体验呈现两极分化。一方面，有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。\n精选参考来源\n1\nmFoodapp-官方正版软件2026最新版本免费下载-应用宝官网\n网络用户 2026-06-09\n2\nmFood官方版下载-mFood外卖App下载 v7.1.6安卓版-蜂窝安卓移动站\n网络用户 2026-05-10\n3\nmfood(澳门生活服务软件) v6.9.5 安卓版\n网络用户 2026-01-26\n4\n闪蜂 V3.3.2 安卓版\n网络用户 2026-01-28\n5\nmFood(澳门点外卖软件) V6.9.5 安卓版\n网络用户 2026-02-01\n6\n为什么外卖配送费时高时低，之生活中的经济学（21）\nSTABLE ANALYSIS\n2026-04-25\n7\nmFood软件安卓版下载-mFood软件手机版下载v7.2.1 安卓版-2265安卓网\n网络用户 2026-06-09\n8\n闪蜂app-闪蜂app官方正版软件最新版本免费下载_6137游戏网\n网络用户 2025-12-22\n9\n澳觅-澳门一站式生活服务平台\n网络用户 2026-06-01\n10\n澳门Citywalk｜一天逛遍老城与氹仔。第一次来澳门，吸引我的不是纸醉金迷的繁华，而是那些藏在街角里的欧式建筑、老街和随手一拍就出片的电影感街景 如果你只有一天时间游澳门，时间上可能会有点赶，全程暴走打卡根本没时间排队吃饭，很容易耽误行程节奏，这个【闪蜂】就很好的解决了吃饭问题，不用线下排队等位，边走边下单，找个休息的地方就能直接开吃，省下不少排队时间 - 🚶‍♀️澳门一日citywalk路线 拱北口岸➠新葡京➠玫瑰圣母堂➠大三巴➠东望洋新街➠永利澳门➠永利皇宫➠伦敦人➠巴黎人➠威尼斯人 - 😋澳门美食攻略 🍛叠记咖喱（氹仔花城店） 地道老字号咖喱面，咖喱味道浓郁，搭配主食很绝。我原本准备现场排队，结果到店发现人真的不少，时间比较赶，所以我直接用【闪蜂】点外卖，不用排队、不用等位，省下不少排队时间 - 📍新葡京：澳门极具辨识度的建筑，外形设计很有特色，门口的网红机位就很好出片 📍玫瑰圣母院：黄色外墙搭配绿色百叶窗，这里很适合拍复古风照片 📍大三巴：站在台阶下往上看真的很壮观，大炮台就在这附近，可俯瞰半岛全景 📍东望洋新街：道路两旁是彩色建筑，远处还能看到澳门地标建筑，整条街充满电影感，很多人专门为了这条街来拍照 📍永利澳门：看发财树表演和打卡发财鱼缸。PS：发财树表演5.11~6.30停止开放 📍永利皇宫：可以看音乐喷泉，还可以做观光缆车 📍伦敦人：一秒穿越英式街头！大本钟、红色电话亭、英式建筑群都很适合拍照 📍巴黎人：标志性的迷你巴黎铁塔，远景拍铁塔全景也很好看 📍威尼斯人：室内运河、贡多拉小船、欧式天幕，无论天气好坏都能轻松逛。让我惊喜的是里面仿佛没有时间概念，抬头就是蓝天白云，很适合慢慢散步 - 💡澳门游玩Tips ✔️澳门虽然不大，但一天暴走下来步数很容易突破2万步，记得穿舒适的运动鞋 ✔️紫外线很强，出门记得做好防晒 ✔️一天都要拍拍拍，记得带个充电宝 #澳门 #澳门旅游 #澳门美食 #vlog十亿流量扶持计划 #澳门景点\n北斗旅行日记（全网同名）\n2026-05-30\n11\n遇到过几次闪购平台上的骑手7楼不送上来。很奇葩的，到现场了之后说送到5楼，然后叫你在5楼拿。 在京东上点人家还专程打电话过来，送到你手中。我说你可以直接放门口，但是如果没有备注可以放门口的话，他们是不敢放门口的，这就是规范，这就是服务好。在他们入职事，应该平台就培训清楚了，淘宝闪购平台，如果都是类似这种，没有专业素养没有服务意识的骑手，还是不要掺和外卖了吧[捂脸R] 我估计下面评论肯定有很多不愿意送上的骑手喷，没事，都是双向选择嘛，我下单不就得了吗？那我又省几块配送费[汗颜R]，下楼吃饭多大点事啊。。。\n论科技 2026-04-02\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "site_name": "App Store",
+        "publish_time": "2026-10-21T04:38:49+08:00",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦！ 真0元起送，告別40元湊單! 一口價低至19.9咖啡奶茶送到手! 單單無門檻，全免配送費！\n即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\n\"即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\"\n【離島區復活歡樂季】 天天領$20外賣＆團購紅包！ 助力領$100實體現金券包！ 【mFood外賣】 每週完成3單，返$60減30外賣半價券！\n【mFood外賣】 逢星期一領「麥當勞」$30無門檻紅包！ 【mFood團購】 嘗新優惠新客價，品質大牌低至$1！\n【mFood外賣】 天天領馬到成功紅包，嗌外賣滿68減20、滿150減50！ 【mFood團購】 疊加紅包最高減$60，團購下單即抽「惠聚新口岸」消費金\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n版本 7.3.5\n9月12日\n开发者“MACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED”已表明该 App 的隐私规范可能包括下述数据处理方式。更多相关信息，请参阅开发者隐私政策 。\n用于追踪你的数据\n标识符\n与你关联的数据\n开发者可能会收集以下数据，且数据与你的身份关联：\n联系信息\n用户内容\n标识符\n使用数据\n未与你关联的数据\n位置\n搜索历史记录\n使用数据\n诊断\n隐私规范可能因你使用的功能或你的年龄等因素而异。进一步了解\n辅助功能\n开发者尚未表明此 App 支持哪些辅助功能。进一步了解\n信息\n提供者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n大小\n231.4 MB\n类别\n美食佳饮\n兼容性\n设备需装有 iOS 12.0 或更高版本。\niPhone\n设备需装有 iOS 12.0 或更高版本。\niPod touch\n设备需装有 iOS 12.0 或更高版本。\nMac\n需要 macOS 11.0 或更高版本以及装有 Apple M1 或更高版本芯片的 Mac。\nApple Vision\n设备需装有 visionOS 1.0 或更高版本。\n语言\n简体中文和另外2种\n简体中文、繁体中文、英语\n年龄分级\n4+\n4+\n包含\n广告\n版权\n© MACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026-06-09T00:00:00+08:00",
+        "summary": "澳门三大外卖平台深度对比：谁更快更省更全能？\n源自11位全网作者\n06-18 20:07\n截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。根据公开资料与用户反馈，各平台在配送时效、费用结构、服务范围及附加功能上存在明显差异。本文基于多源素材，对三款平台的核心服务维度进行结构化梳理与横向对比，帮助用户厘清各自特点。\n01 配送时效与覆盖范围\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n02 配送费用结构对比\n配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。值得注意的是，有用户观察到“不同平台同一距离配送费存在差异”，例如京东外卖1公里约7–8元，而美团、饿了么仅4–6元，侧面反映本地平台定价策略的灵活性。\n维度 mFood 闪蜂 澳觅\n[object Object] [object Object] [object Object] [object Object]\n03 服务生态与附加功能\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n04 用户实际体验反馈\n配送可靠性对比\n高效便捷派\n“边走边下单，找个休息的地方就能直接开吃，省下不少排队时间”（闪蜂用户）\n“订单状态从接单、制作到配送都有显示，等待过程中对时间预期更好把握”（mFood用户）\n服务波动派\n“骑手7楼不送上来……送到5楼叫你在5楼拿”（闪购平台用户）\n“配送延迟原因包括澳门地形复杂、订单高峰期、地址填写错误等”（mFood官方说明）\n用户实际体验呈现两极分化。一方面，有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。\n精选参考来源\n1\nmFoodapp-官方正版软件2026最新版本免费下载-应用宝官网\n网络用户 2026-06-09\n2\nmFood官方版下载-mFood外卖App下载 v7.1.6安卓版-蜂窝安卓移动站\n网络用户 2026-05-10\n3\nmfood(澳门生活服务软件) v6.9.5 安卓版\n网络用户 2026-01-26\n4\n闪蜂 V3.3.2 安卓版\n网络用户 2026-01-28\n5\nmFood(澳门点外卖软件) V6.9.5 安卓版\n网络用户 2026-02-01\n6\n为什么外卖配送费时高时低，之生活中的经济学（21）\nSTABLE ANALYSIS\n2026-04-25\n7\nmFood软件安卓版下载-mFood软件手机版下载v7.2.1 安卓版-2265安卓网\n网络用户 2026-06-09\n8\n闪蜂app-闪蜂app官方正版软件最新版本免费下载_6137游戏网\n网络用户 2025-12-22\n9\n澳觅-澳门一站式生活服务平台\n网络用户 2026-06-01\n10\n澳门Citywalk｜一天逛遍老城与氹仔。第一次来澳门，吸引我的不是纸醉金迷的繁华，而是那些藏在街角里的欧式建筑、老街和随手一拍就出片的电影感街景 如果你只有一天时间游澳门，时间上可能会有点赶，全程暴走打卡根本没时间排队吃饭，很容易耽误行程节奏，这个【闪蜂】就很好的解决了吃饭问题，不用线下排队等位，边走边下单，找个休息的地方就能直接开吃，省下不少排队时间 - 🚶‍♀️澳门一日citywalk路线 拱北口岸➠新葡京➠玫瑰圣母堂➠大三巴➠东望洋新街➠永利澳门➠永利皇宫➠伦敦人➠巴黎人➠威尼斯人 - 😋澳门美食攻略 🍛叠记咖喱（氹仔花城店） 地道老字号咖喱面，咖喱味道浓郁，搭配主食很绝。我原本准备现场排队，结果到店发现人真的不少，时间比较赶，所以我直接用【闪蜂】点外卖，不用排队、不用等位，省下不少排队时间 - 📍新葡京：澳门极具辨识度的建筑，外形设计很有特色，门口的网红机位就很好出片 📍玫瑰圣母院：黄色外墙搭配绿色百叶窗，这里很适合拍复古风照片 📍大三巴：站在台阶下往上看真的很壮观，大炮台就在这附近，可俯瞰半岛全景 📍东望洋新街：道路两旁是彩色建筑，远处还能看到澳门地标建筑，整条街充满电影感，很多人专门为了这条街来拍照 📍永利澳门：看发财树表演和打卡发财鱼缸。PS：发财树表演5.11~6.30停止开放 📍永利皇宫：可以看音乐喷泉，还可以做观光缆车 📍伦敦人：一秒穿越英式街头！大本钟、红色电话亭、英式建筑群都很适合拍照 📍巴黎人：标志性的迷你巴黎铁塔，远景拍铁塔全景也很好看 📍威尼斯人：室内运河、贡多拉小船、欧式天幕，无论天气好坏都能轻松逛。让我惊喜的是里面仿佛没有时间概念，抬头就是蓝天白云，很适合慢慢散步 - 💡澳门游玩Tips ✔️澳门虽然不大，但一天暴走下来步数很容易突破2万步，记得穿舒适的运动鞋 ✔️紫外线很强，出门记得做好防晒 ✔️一天都要拍拍拍，记得带个充电宝 #澳门 #澳门旅游 #澳门美食 #vlog十亿流量扶持计划 #澳门景点\n北斗旅行日记（全网同名）\n2026-05-30\n11\n遇到过几次闪购平台上的骑手7楼不送上来。很奇葩的，到现场了之后说送到5楼，然后叫你在5楼拿。 在京东上点人家还专程打电话过来，送到你手中。我说你可以直接放门口，但是如果没有备注可以放门口的话，他们是不敢放门口的，这就是规范，这就是服务好。在他们入职事，应该平台就培训清楚了，淘宝闪购平台，如果都是类似这种，没有专业素养没有服务意识的骑手，还是不要掺和外卖了吧[捂脸R] 我估计下面评论肯定有很多不愿意送上的骑手喷，没事，都是双向选择嘛，我下单不就得了吗？那我又省几块配送费[汗颜R]，下楼吃饭多大点事啊。。。\n论科技 2026-04-02\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254836732700000000000000000000ffffac155f4c7e4c35"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 16403,
+   "output_tokens": 1079,
+   "total_tokens": 17482,
+   "input_tokens_details": {
+    "cached_tokens": 7792
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 553
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807527,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:05:26+08:00"
+}

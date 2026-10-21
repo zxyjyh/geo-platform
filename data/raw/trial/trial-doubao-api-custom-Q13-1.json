@@ -1,0 +1,162 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳觅外卖配送速度怎么样？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548419,
+  "id": "resp_0217925484189153b26f60694b4a4d01765152ce7a5feb61e9e10",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254841998000000000000000000000ffffac181e97b2dbc7",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer in Chinese. To check delivery speed of Macau's澳觅外卖, I'll search relevant information."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGab52/gJpb5k0BKQOhA80mQYSDn5KNryEgQN0R4GrsDAr+M2oEQdK1aFdLhha3/jvcyu/YIjr0L3TRz+qEBEEDL2Ejw/tUjVHgbLcvDsaB9i+KPv+RnSdb26dzGGYzTMneWQhaziKghkbnlgNsi8Ci8zIGtoDh8/SruiROA4FCUoalJuRujU2y6wfwmUkeiLmH+UVVLJc5UA/D8YWnpgcPSpmK9BVjQi74wixOK1K4OrZ2Kz5W9yZJPXvL22HZyAVLCsdHqqVFk+ASadyU0DjwR1pruWRhdletlnBqNbpYqtkk6LuScCLFqIyfcRkVfJGShnoHKdVyy+/eWVxuQEKAn4WW85/O08cM"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅外卖 配送速度 怎么样",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254842408800000000000000000000ffffac181e975d2699"
+   },
+   {
+    "id": "rs_02179254842689900000000000000000000ffffac181e97d8b9bb",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need answer likely based on search. It is my plan to search for relevant queries."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEJe/OLPDHs2XHapbl1enpx/FRNCUWAx1xVjcDaWhzRXYzavnrgLmgbDIbVetR2fyW07OnBKsx1TFa4p0bVKccJIFenWjsHuQqv5EE9zXJs6mN9YpCD9DeH16+FIF6bePO0JVHUE8UasuwB4PMZxX86onwhweEZW+syL7MgoF3O3hEYYGv8pHD+mvnmvTSAHTPUQSCE05XXlSGPePYN7iZSc1ox0D4un0uRDvx+1UVWmLld85xPe9XZF6AudSEcXp+0sL0kmV/ic3XqM8jaqBhmUg=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅 外卖 配送 慢 多久 评价",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254842967800000000000000000000ffffac181e976d950d"
+   },
+   {
+    "id": "rs_02179254843307000000000000000000000ffffac181e97fbf0e0",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need formulate answer with current date,\n\nI’ve confirmed core points for the ETA answer: delivery times vary from 30-60 minutes to longer during special scenarios, with mixed reviews. The app offers ETA, which is stable overall. I’ll provide practical tips and cite sources from what we have, without overclaiming. As no explicit URLs are available, I’ll cite site names with links if possible.\n\nI’ll draft the answer in Chinese with headings, citing sources by name and publication date without hyperlinks. I’ll note that SF SoFast delivers items in Macau peninsula in as fast as 1 hour, while food deliveries take 30-60 minutes, avoiding overstating speed.\n\nThe App Store reviews are mixed, with anecdotal varying experiences. I’ve finalized four core answer points covering ETA variations, platform strengths, reference rules and comparison suggestions, and will produce the final answer now."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "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"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "## 判断依据\n\n- 公开平台对比资料显示，澳觅外卖多数订单通常在 **30–60 分钟**送达，整体更偏“覆盖广、节奏稳”，而不是主打极限极速。\n- 但澳门受 **午晚高峰、雨天、节假日、大赛车/大型活动、旧城区道路、酒店或赌场取餐位置复杂**等影响，实际时间可能拉长。\n- App Store 用户评价分化：有人反馈“骑手很快”，也有个别极端评价称高峰或异常订单等待超过 2 小时。这类评论属于个案，不能代表普遍速度。\n- 下单前最可靠的是看澳觅 App 内按具体地址显示的 **预计送达时间（ETA）**；不同酒店、街区甚至同一度假区的不同塔楼，可送商家和时效都可能不同。\n\n## 实用建议\n\n1. **赶时间提前 30–60 分钟下单**，不要卡着饭点。\n2. 下单前可同时对比澳觅、mFood、闪蜂在同一地址显示的预计时间和配送费。\n3. 地址尽量写完整，例如酒店名称、塔楼、楼层/大堂附近，并保持手机畅通。\n4. 遇到暴雨、节假日或大型活动，建议把心理预期放宽到 **60–90 分钟**。\n\n## 最终答案\n\n**澳觅外卖日常一般约 30–60 分钟送达，稳定性尚可，但不算澳门最快；高峰期或天气、地址复杂时可能明显变慢。** 实际速度以下单页的预计送达时间为准，紧急订单建议多平台对比后再下单。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026-06-09T00:00:00+08:00",
+        "summary": "澳门三大外卖平台深度对比：谁更快更省更全能？\n源自11位全网作者\n06-18 20:07\n截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。根据公开资料与用户反馈，各平台在配送时效、费用结构、服务范围及附加功能上存在明显差异。本文基于多源素材，对三款平台的核心服务维度进行结构化梳理与横向对比，帮助用户厘清各自特点。\n01 配送时效与覆盖范围\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n02 配送费用结构对比\n配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。值得注意的是，有用户观察到“不同平台同一距离配送费存在差异”，例如京东外卖1公里约7–8元，而美团、饿了么仅4–6元，侧面反映本地平台定价策略的灵活性。\n维度 mFood 闪蜂 澳觅\n[object Object] [object Object] [object Object] [object Object]\n03 服务生态与附加功能\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n04 用户实际体验反馈\n配送可靠性对比\n高效便捷派\n“边走边下单，找个休息的地方就能直接开吃，省下不少排队时间”（闪蜂用户）\n“订单状态从接单、制作到配送都有显示，等待过程中对时间预期更好把握”（mFood用户）\n服务波动派\n“骑手7楼不送上来……送到5楼叫你在5楼拿”（闪购平台用户）\n“配送延迟原因包括澳门地形复杂、订单高峰期、地址填写错误等”（mFood官方说明）\n用户实际体验呈现两极分化。一方面，有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。\n精选参考来源\n1\nmFoodapp-官方正版软件2026最新版本免费下载-应用宝官网\n网络用户 2026-06-09\n2\nmFood官方版下载-mFood外卖App下载 v7.1.6安卓版-蜂窝安卓移动站\n网络用户 2026-05-10\n3\nmfood(澳门生活服务软件) v6.9.5 安卓版\n网络用户 2026-01-26\n4\n闪蜂 V3.3.2 安卓版\n网络用户 2026-01-28\n5\nmFood(澳门点外卖软件) V6.9.5 安卓版\n网络用户 2026-02-01\n6\n为什么外卖配送费时高时低，之生活中的经济学（21）\nSTABLE ANALYSIS\n2026-04-25\n7\nmFood软件安卓版下载-mFood软件手机版下载v7.2.1 安卓版-2265安卓网\n网络用户 2026-06-09\n8\n闪蜂app-闪蜂app官方正版软件最新版本免费下载_6137游戏网\n网络用户 2025-12-22\n9\n澳觅-澳门一站式生活服务平台\n网络用户 2026-06-01\n10\n澳门Citywalk｜一天逛遍老城与氹仔。第一次来澳门，吸引我的不是纸醉金迷的繁华，而是那些藏在街角里的欧式建筑、老街和随手一拍就出片的电影感街景 如果你只有一天时间游澳门，时间上可能会有点赶，全程暴走打卡根本没时间排队吃饭，很容易耽误行程节奏，这个【闪蜂】就很好的解决了吃饭问题，不用线下排队等位，边走边下单，找个休息的地方就能直接开吃，省下不少排队时间 - 🚶‍♀️澳门一日citywalk路线 拱北口岸➠新葡京➠玫瑰圣母堂➠大三巴➠东望洋新街➠永利澳门➠永利皇宫➠伦敦人➠巴黎人➠威尼斯人 - 😋澳门美食攻略 🍛叠记咖喱（氹仔花城店） 地道老字号咖喱面，咖喱味道浓郁，搭配主食很绝。我原本准备现场排队，结果到店发现人真的不少，时间比较赶，所以我直接用【闪蜂】点外卖，不用排队、不用等位，省下不少排队时间 - 📍新葡京：澳门极具辨识度的建筑，外形设计很有特色，门口的网红机位就很好出片 📍玫瑰圣母院：黄色外墙搭配绿色百叶窗，这里很适合拍复古风照片 📍大三巴：站在台阶下往上看真的很壮观，大炮台就在这附近，可俯瞰半岛全景 📍东望洋新街：道路两旁是彩色建筑，远处还能看到澳门地标建筑，整条街充满电影感，很多人专门为了这条街来拍照 📍永利澳门：看发财树表演和打卡发财鱼缸。PS：发财树表演5.11~6.30停止开放 📍永利皇宫：可以看音乐喷泉，还可以做观光缆车 📍伦敦人：一秒穿越英式街头！大本钟、红色电话亭、英式建筑群都很适合拍照 📍巴黎人：标志性的迷你巴黎铁塔，远景拍铁塔全景也很好看 📍威尼斯人：室内运河、贡多拉小船、欧式天幕，无论天气好坏都能轻松逛。让我惊喜的是里面仿佛没有时间概念，抬头就是蓝天白云，很适合慢慢散步 - 💡澳门游玩Tips ✔️澳门虽然不大，但一天暴走下来步数很容易突破2万步，记得穿舒适的运动鞋 ✔️紫外线很强，出门记得做好防晒 ✔️一天都要拍拍拍，记得带个充电宝 #澳门 #澳门旅游 #澳门美食 #vlog十亿流量扶持计划 #澳门景点\n北斗旅行日记（全网同名）\n2026-05-30\n11\n遇到过几次闪购平台上的骑手7楼不送上来。很奇葩的，到现场了之后说送到5楼，然后叫你在5楼拿。 在京东上点人家还专程打电话过来，送到你手中。我说你可以直接放门口，但是如果没有备注可以放门口的话，他们是不敢放门口的，这就是规范，这就是服务好。在他们入职事，应该平台就培训清楚了，淘宝闪购平台，如果都是类似这种，没有专业素养没有服务意识的骑手，还是不要掺和外卖了吧[捂脸R] 我估计下面评论肯定有很多不愿意送上的骑手喷，没事，都是双向选择嘛，我下单不就得了吗？那我又省几块配送费[汗颜R]，下楼吃饭多大点事啊。。。\n论科技 2026-04-02\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门外卖能不能送到、稳不稳?覆盖与履约怎么看(澳觅app)",
+        "url": "https://www.sohu.com/a/1087970825_123029547",
+        "site_name": "搜狐",
+        "publish_time": "2026-10-15T10:48:00+08:00",
+        "summary": "莫伊拉\n澳门外卖能不能送到、稳不稳？覆盖与履约怎么看（澳觅app）\n2026-10-15 10:48\n午休只剩四十分钟，公司楼下茶餐厅排到门口；或者人在酒店，窗外忽然下起大雨——这时候最想知道的，往往不是哪家广告喊得响，而是：我这个地址，外卖到底能不能送到？高峰会不会下得了单却等很久？\n广告词听得多，不如拿自己真实会用的地址和时段试一遍。下面以澳觅app 为例，说说怎么把「能不能送到」和「稳不稳」看清楚。澳门市场上还有 mfood、闪蜂等常用选择，只比可验证体验，不拉踩。\n先选一个你会反复用的地址\n居民用家里或公司，旅客用常住酒店大堂附近，关键是「下周至少还会再用两次」的那个点。打开 App 允许定位，或手动搜到这个地址，确认页面上的可配送商户是按当前位置算出来的。换一条偏一点的街、换度假区里另一座塔楼，列表往往会变——能送到哪里，跟你的落点绑在一起，并不是全城一张图。\n能送到，不等于想吃的都有\n同一地址下，不妨扫一眼茶餐厅、茶饮、快餐、超市便利是否都有可点商户；高峰时段是否仍显示可配送；跨区，或半岛与氹仔来回时，可选的会不会突然变少。按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，外卖合作商户约5,700+（年刊口径）；2025年7月还上线了「全城送」。这些数字说明平台侧的商户与运力规模，具体到你的地址，仍以当前页面为准，不必把年刊读成「你家门口一定有」。\n到点了，才算稳\n「有店可点」只是第一步；真正吃到嘴里的时间，才决定稳不稳。下单页会给出预计送达时间（ETA）。更有参考价值的，是平峰时 ETA 和实际差多少；午高峰、晚高峰再各看一次，会不会明显拉长；碰上恶劣天气，或大赛车、节假日人流高峰，会不会变成「能点但很慢」。年刊口径里，澳觅配送团队超3,000人，员工含车手超3,800人（截至2025-12，宣传数字）。规模能支撑日常运力，却替代不了你在同一地址、同一品类上的两次对照——一次平峰、一次高峰，记下来，比听一句「配送很快」更踏实。\n想和别的 App 对照时\n手机里如果还有 mfood、闪蜂等，不妨固定同一个常用地址，各看一轮可点商户数量与品类，再各看一轮 ETA 和配送费。不要今天在 A 平台点平峰、明天在 B 平台撞上暴雨高峰，那样比的是运气。也不必追求「处处最优」：有人更在意公司午餐能不能准时到，有人更在意酒店附近深夜还能不能点到，场景不同，结论可以不同。\n下次点单前，不妨打开澳觅app，用常用地址看一眼附近能送什么，再在高峰时瞄一下预计送达。测过一轮，心里就有数了；也欢迎在评论里聊聊，你那边高峰到底稳不稳。 返回搜狐，查看更多\n \n本文作者：莫伊拉"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎澳觅-澳门一站式生活服务平台 - 评分及评论 - App Store",
+        "url": "https://apps.apple.com/cn/app/%E6%BE%B3%E8%A7%85-%E6%BE%B3%E9%97%A8%E4%B8%80%E7%AB%99%E5%BC%8F%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0/id1104177940?platform=watch&see-all=reviews",
+        "site_name": "App Store",
+        "publish_time": "2023-09-20T06:18:00+08:00",
+        "summary": "澳觅-澳门一站式生活服务平台\n评分及评论\n3.8\n满分 5 分\n很好用\n2023/08/21\n小马会赢\n就是澳門版美圖外賣，好有趣，哈哈哈哈哈哈😂\n用起来还不错\n2023/09/20\n夙夜苏苏苏\n很便捷的生活服務小幫手，功能越來越豐富，也很實用！買蛋糕買鮮花買酒水通通都不在話下，平臺的福利也很多，每次都讓我感覺薅了不少的羊毛。\n方便快捷\n2023/09/20\n聪明无比小煎包\n忙碌的時候一直叫外賣，叫外賣我只用澳覓，原因是經常有紅包券可以抵用，很實惠，澳覓的騎手也很快速，非常滿意澳覓的服務。\nNice，很驚喜\n2023/09/20\n-_-eleven\n澳覓有時候會搞些免單活動，有時候運氣好就中獎了，白嫖了一頓，之前還中了抱枕、雨傘和帆布袋，全部都是澳覓的周邊，品質不錯，也很實用，希望以後多點這樣的活動。\n霸王条款\n2024/03/31\n正想你呢UIUII\n只能快递员单线客户，说是大陆号码电话信息有延时，他们默认联系了客户，就算没成功联络到客户也算送餐成功，然后餐食不知所踪，浪费我的钱，投诉无门，垃圾得很！！！\n开发者回复\n親親，我是澳覓客服小覓，給您帶來不便真的抱歉，訂單配送到指定地址車手會主動聯繫您的，如果沒有聯繫到客人，騎手會持續跟進并短信通知客人。建議客人可以在澳覓APP-點擊我--在線客服，由客服為您跟進處理。\n霸王条款\n2024/03/31\n正想你呢UIUII\n只能快递员单线客户，说是大陆号码电话信息有延时，他们默认联系了客户，就算没成功联络到客户也算送餐成功，然后餐食不知所踪，浪费我的钱，投诉无门，垃圾得很！！！\n开发者回复2024/04/07\n親親，我是澳覓客服小覓，給您帶來不便真的抱歉，訂單配送到指定地址車手會主動聯繫您的，如果沒有聯繫到客人，騎手會持續跟進并短信通知客人。建議客人可以在澳覓APP-點擊我--在線客服，由客服為您跟進處理。\n客服是摆设不作为的垃圾平台\n2024/01/02\nsherry2880\n外卖配送平均时间超过2小时及以上，和商家沟通语言永远有障碍，客服的处理从来不直面回答，回避和不处理。\n开发者回复\n客戶您好！感謝您反饋的服務問題，平臺非常重視且會跟進努力改善。方便可以提供一下您订单后6位尾数或聯繫客服经理 :853-62883902，平臺一定會認真處理好您的問題，給您一個滿意的答復。\n客服是摆设不作为的垃圾平台\n2024/01/02\nsherry2880\n外卖配送平均时间超过2小时及以上，和商家沟通语言永远有障碍，客服的处理从来不直面回答，回避和不处理。\n开发者回复2024/01/18\n客戶您好！感謝您反饋的服務問題，平臺非常重視且會跟進努力改善。方便可以提供一下您订单后6位尾数或聯繫客服经理 :853-62883902，平臺一定會認真處理好您的問題，給您一個滿意的答復。\n手机接收不到验证码\n2022/12/15\nGxDaisy\n登录不了\n好好用\n2024/03/14\n小明1233218\n好好用，很方便，喜欢去澳门用澳门觅\n开发者回复\n親親，我是澳覓客服小覓，非常感謝您的澳覓APP的支持~\n好好用\n2024/03/14\n小明1233218\n好好用，很方便，喜欢去澳门用澳门觅\n开发者回复2024/04/07\n親親，我是澳覓客服小覓，非常感謝您的澳覓APP的支持~\n客服态度差\n2024/04/23\nwieeirdnxxavz\n不知道在拽什么。。。\n开发者回复\n親親，我是澳覓客服小覓，非常抱歉給您帶來不好的體驗，客服問題這邊已登記反饋相關部門跟進處理，會對客服進行重新培訓和警告，希望您能給我們一次改進的機會，也非常感謝您對澳覓APP的支持~\n客服态度差\n2024/04/23\nwieeirdnxxavz\n不知道在拽什么。。。\n开发者回复2024/04/25\n親親，我是澳覓客服小覓，非常抱歉給您帶來不好的體驗，客服問題這邊已登記反饋相關部門跟進處理，會對客服進行重新培訓和警告，希望您能給我們一次改進的機會，也非常感謝您對澳覓APP的支持~\n垃圾\n2023/09/26\nxrsssss8183\n真的很垃圾\n垃圾\n2023/09/26\nxrsssss8183\n真的很垃圾\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254845168600000000000000000000ffffac181e9711db20"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 9244,
+   "output_tokens": 1114,
+   "total_tokens": 10358,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 678
+   },
+   "tool_usage": {
+    "web_search": 2
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 2
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807619,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:06:58+08:00"
+}

@@ -1,0 +1,203 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "内地游客在澳门用什么 App 点外卖比较方便？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548302,
+  "id": "resp_02179254830119633d44b650730fd07bb29a2150d8432a07c3e83",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254830232200000000000000000000ffffac1592678d965b",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. \n\nSearching for current local food delivery apps in Macau is what I will do."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFxMxD1dL0AMx7cw+YWJLTFtEz3HNHgmxGCA8FVn2dGoI9fvvzBxvlshhf4QXfecvSi8opPngCt3z6sSOVNsSk0qkmZXhwKpOT5tl2eUe7QEVFCLbIgnSWA8aLPa9FzxzxSsB11T/M8EFDhGxH5X3PKfqGiXNyfcGAus4U8jC+ok5i5BmnFl9m6NthfsrHVCUlBIwgaxdFrtDBgEeZ1V0zUXc9X22y9ZAimWJAlMjU2wKCeD9iWLK72sNDuvMBqpd4psE93uZCaXWhiFwq7A2GepFtyW767w4PTOzdVvWIwUMrXJNfnfOl8pJxLfvQD1EyxPVAICnmAMs6CnMsX0AmG1KikLt9eQtbQDQjNeu/yVPLrQJm0iidyXw=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖 app 内地游客 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254830543700000000000000000000ffffac159267e5791b"
+   },
+   {
+    "id": "rs_02179254830891400000000000000000000ffffac15926775e931",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need perhaps other apps. Search 2026 Macau food delivery apps."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djF7IEhsUhmRzIjkD5UNAd2x/Ll9I0oS8jIRE34d0lFOP28xSjWF1XVAvUCkBN+zk2GdE6BlbltvZGJ0gc3mVdBLQ9yjXAZqZPyBRh8DeCbYrUoNte839eOtGBuMdW9dGdEEruhuHdYWbhu9TrlWd5EJA/o3zppo2e0PzDQubFq5z4pxIyMPCvHwrIEksv2ZOPQh"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖平台 澳觅 foodpanda Uber Eats 闪锋 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254831011100000000000000000000ffffac159267b05416"
+   },
+   {
+    "id": "rs_02179254831223000000000000000000000ffffac1592676fa7cf",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Search result dubious generic AI article,Uber Eats/Macau and Uber Eats status are unverified and will be checked via reliable search."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djF5OG3Cx78gGWRIP0N335CuADCLW+16RO+UUVY/kaLBbkkrsvdOEnDkDrsD2X7jw2Pdahq6/9Yzkd0ge2Ds+Xr8eEhyZY0g0i4QhKxPuLbMuEhMNUYO+N6sS7/FHOFmzGQFXau/6e7DzFgQEzfu6qLnxy8tXkTDbdNJkZMS9iReeZUHEbFxolBpaW6AIHfsHESfwLJjK5Dwgc8RGD4URXhwauBCxrOjjTM8eFvQnM4pLxWH620fZdzp1hHY/Ny613X7EU6AN+kpsw=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "site:foodpanda.com.mo Macau food delivery app",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254831434800000000000000000000ffffac159267c26795"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "对内地游客来说，在澳门点外卖首选 **澳觅 App（AOMI）**：支持 **+86 内地手机号注册、微信/支付宝支付、中文界面**，也有小程序；除了餐饮外卖，还能买便利店/超市闪购、团购餐券等，游客适配度最高。到酒店前可先装好并注册，定位后看配送范围和预计时间。\n\n其他选择可以作为补充：\n- **foodpanda**：国际平台，部分区域餐厅选择较多，适合英文/葡语界面或已有账号的用户；支付方式以结算页为准。\n- **闪锋/澳门本地配送平台**：个别餐厅或同城配送可能覆盖，但通用性通常不如澳觅。\n- 酒店餐厅可直接看酒店官方小程序、微信公众号或客房送餐，部分度假村有自有点餐渠道。\n\n实用提醒：澳门酒店外卖大多只能送到 **酒店大堂、礼宾部或指定取餐点**，一般不能送到房间；地址要写清酒店全称、楼栋/塔楼和入口，并保持手机畅通。若收不到澳觅短信，可检查漫游、区号 +86，或尝试微信小程序/微信登录。付款前以结算页显示的微信支付、支付宝等选项为准，留意澳门币汇率和配送费。\n",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "去澳门旅游住酒店，怎么点外卖?内地手机号能不能用、送到哪里取_配送_App_订单",
+        "url": "https://m.sohu.com/a/1087161898_123029547/",
+        "site_name": "手机搜狐网",
+        "publish_time": "2026-10-13T15:12:00+08:00",
+        "summary": "去澳门旅游住酒店，怎么点外卖？内地手机号能不能用、送到哪里取\n莫伊拉\n2026-10-13 15:12\n今年国庆假期，澳门7天入境旅客114.3万人次，10月4日单日达21.0万人次，酒店平均入住率91.3%（澳门旅游局 2026-10-08 公布的初步数据）。11月19日至22日还有第73届澳门格兰披治大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖。\n没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间——这几个问题最常见。按操作顺序说明如下。\n一、注册：内地手机号一般可用\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n二、地址：写全名称、楼栋和取餐点\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n三、取餐：多数要到大堂或指定区域\n一般不能指望送到房门口。澳门大多数酒店只允许在大堂或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交收点在哪里，可以先问前台或礼宾，再写进备注。\n四、付款：以结算页实际选项为准\n结算页常见的有支付宝、微信支付、银联云闪付、VISA/MasterCard 信用卡，以及 MPay、支付宝（澳门）等本地钱包。不同账户、设备和订单显示的选项会不一样，以结算页为准。内地游客用支付宝或微信付款时，扣款通常按当时汇率折算成人民币。\n五、售后：订单页或「我 > 在线客服」\n下单后在「订单」页能看到商户接单、备餐和配送的实时状态。餐品有问题或迟迟没送到，先打开对应订单，看有没有「客服」「售后」或「申请退款」入口；没有的话走「我 > 在线客服」。\n六、同 App 还可团购、闪购\n同一个 App 里还有团购（自助餐订座、餐厅套餐券、景点和演出票务）、超市和便利店的闪购配送，以及面向游客的充电宝等服务，2024年起客户端支持英文模式。酒店自助餐、节日套餐这类团购，建议先确认是否需要预约再安排行程。大赛车周末想看比赛又不想挤餐厅，可以提前买好附近餐厅的团购券，或者回酒店点外卖。\n出发前把 App 装好、注册完成，到了澳门打开定位看看酒店附近有哪些商户能送，第一顿就不用临时找路了。\n \n本文作者：莫伊拉"
+       },
+       {
+        "type": "url_citation",
+        "title": "内地游客到澳门点外卖怎么支付？澳覓APP支付攻略🍜",
+        "url": "http://m.toutiao.com/group/7687875919410692650/?upstream_biz=VolcEngine",
+        "site_name": "今日头条",
+        "publish_time": "2026-09-21T14:46:37+08:00",
+        "summary": "第一次来澳门旅游，想点外卖，很多内地游客都会问：微信、支付宝在澳门能不能用？还需要准备现金吗？其实澳门目前有多种电子支付方式。对内地游客来说，比较常见的包括： 澳门常见电子支付方式微信支付｜支付宝｜MPay｜银联/银行卡其中，微信支付和支付宝对内地游客来说比较熟悉；MPay（澳门钱包）则是澳门本地常用的电子支付工具。如果来澳门旅游，建议至少准备一种常用电子支付方式，同时保留银行卡作为备用。不过要特别注意：不同平台、商户和订单支持的支付方式可能不同，具体能使用哪一种，请以实际订单结算页面显示为准。 内地游客点外卖，为什么推荐澳覓？如果来澳门想点外卖，可以提前下载澳覓APP。澳覓从餐饮外卖起步，目前除了外卖到家，还覆盖：️ 到店团购 闪购到家 同城配送 游客零售及部分本地生活服务平台早已与微信支付全球、支付宝等支付平台合作，并通过小程序等方式为来澳游客提供本地生活服务。实际点餐也很简单：打开澳覓 → 搜索餐厅 → 选择商品 → 填写配送信息 → 进入结算 → 查看可用支付方式 → 完成付款。⚠️ 第一次来澳门，支付时注意4件事① 付款前确认支付方式不要默认所有订单都支持同一种支付方式，以当前订单结算页面为准。② 注意订单金额和币种澳门消费通常以澳门元（MOP）计价，付款前确认最终订单金额，避免因为汇率或支付渠道产生误解。③ 优惠活动看清使用条件外卖优惠、团购优惠可能有相应使用规则，结算前确认一下。④ 建议准备备用支付方式如果一种支付方式临时无法使用，可以更换其他可用方式。 为什么更推荐澳覓？如果只是点一顿外卖，可以根据餐厅、价格、优惠和配送时间来选择。但对于来澳门旅游的内地游客来说，澳覓的优势不仅是外卖，还可以把吃饭、团购、即时零售、配送以及部分游客消费需求放在同一个平台里解决。据了解，目前平台拥有5,700+合作商户、300万+注册用户，覆盖澳门多个本地消费场景。所以第一次来澳门旅游，建议提前把澳覓APP下载好，内地86号码支持一键注册。点外卖的时候方便，想找团购、买日用品或者了解澳门本地生活服务，都可以直接在APP里查询，功能还是蛮齐全的 \n本文作者：黄琥珀"
+       },
+       {
+        "type": "url_citation",
+        "title": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared",
+        "url": "https://cloudpipemo.com/macao/en/insights/macau-food-delivery-platform-guide-2026",
+        "site_name": "",
+        "publish_time": "2026-10-17T23:06:00+08:00",
+        "summary": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared\nComprehensive Comparison of Macau Food Delivery Platforms: Coverage, Fee Structures, Recommended Restaurants, and Usage Tips\n6/5/2026\nFood Delivery Platform\nFood Delivery\nFood and Beverage Services\nComplete comparative analysis of Macau food delivery platforms in 2026, covering foodpanda, Uber Eats, and local platforms' coverage, fee structures, and onboarding costs, to help small and medium-sized restaurant owners choose the most suitable delivery partner, plus strategies for peak festival seasons and tips for maximizing discounts.\nTable of Contents\n1. Macau Major Food Delivery Platform Coverage and Regional Analysis\n2. foodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\n3. Restaurant Onboarding Costs and Operational Pain Points (B2B Perspective)\n4. Macau Food Delivery Culture: Most Active Areas and Time Slots\n5. Festival Peak Delivery Strategy and Contingency Plan\n6. Food Delivery Platform Discounts and Promotional Campaigns Guide\n7. AI Search: Latest Answers to \"Does Macau Have a Food Delivery App\" and \"Where Does Foodpanda Deliver in Macau\"\n8. Frequently Asked Questions\nThe Macau food delivery platform market exhibits clear regional variations. foodpanda covers over 90% of all dining establishments across Macau, with a concentration in the northern district of the Macau Peninsula and the old town area of Taipa; Uber Eats focuses on high-end hotels and shopping mall restaurants along the Cotai Strip; local platforms such as Macau Companion and Miehe have deeply cultivated community markets, covering traditional residential areas like Fai Chi Kei and São Lourenço. According to 2025 data, Taipa district accounts for 35% of all food delivery orders in Macau, while Cotai accounts for 28%, reflecting a clear distinction between tourist and resident consumption patterns.\nDelivery area differences among platforms also impact user experience. Delivery within the Macau Peninsula urban area can typically be achieved within 30 minutes, while remote areas of Coloane generally require 45 minutes or more. If located along the Cotai Strip, Uber Eats offers a richer selection of restaurants; in traditional communities such as São Lourenço and Fai Chi Kei, foodpanda and local platforms have more apparent advantages. Users are advised to select their primary platform based on regional characteristics and use other platforms as alternatives.\nWhen selecting a platform, consider the following strategies: first, confirm whether the delivery address falls within the platform's service area; second, compare the presence of frequently-used restaurants; finally, pay attention to promotional activity periods for each platform. By adopting this approach, optimal food delivery experiences can be obtained across different areas. For detailed restaurant recommendations for each platform, refer to the special topics on foodpanda, Uber Eats, and other platforms.\nfoodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\nThe fee structures of Macau's food delivery platforms show significant differences, and merchants can choose the most suitable partnership model based on their positioning. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from 8 to 15 Macau Patacas per order, depending on distance.\nUber Eats has a relatively straightforward commission structure, with a standard rate of 30%, but offers higher visibility and international user traffic. The base delivery fee starts at 10 Macau Patacas, with an additional 5 to 8 Macau Patacas for distances exceeding 3 kilometers, making it suitable for high-end hotel restaurants and shopping mall food outlets. It is worth noting that Uber Eats has stricter verification standards for merchants, requiring complete business registration and food hygiene licenses.\nThe advantages of local platforms 澳覓 and 米盒 lie in their low commission rates, averaging only 12% to 18%, and their flexible payment options for small to medium-sized neighborhood restaurants. 澳覓 charges a delivery fee of 5 to 12 Macau Patacas per order, while 米盒 offers free delivery in specific areas (such as Ilha Verde and Madre de Deus).\nCost Optimization Recommendations: If a merchant is located in the Cotai Strip area and targets high-end customers, Uber Eats' international user base can provide additional visibility; if focusing on neighborhood resident business, 澳覓 or 米盒's low commission strategy offers better cost efficiency; foodpanda is suitable for comprehensive restaurants seeking to cover diverse customer segments across Macau.\nRestaurant Settlement Costs and Operational Pain Points (B2B Perspective)\nThe fee structure of Macau's food delivery platforms significantly impacts restaurant profit margins. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from MOP 8 to 15 per order depending on distance; Uber Eats has a standard rate of 30%, but offers higher visibility and international user traffic; local platforms like Ao Life offer more flexible commission structures, with some using monthly subscription fees instead of per-order commissions, which is more beneficial for high-volume merchants.\nBeyond explicit fees, restaurants face multiple operational pain points. First, cross-platform order integration is challenging—managing the backend systems of foodpanda, Uber Eats, and local platforms simultaneously often leads to dish preparation sequence confusion and customer complaints. Second, platforms have strict requirements for menu photos, with professional photography costing approximately MOP 500 to 1,500 per set. Third, production capacity is limited during peak hours, and conflicts between delivery orders and dine-in service lead to quality degradation.\nRecommendations for Restaurants: (1) Calculate the actual net revenue from each platform before deciding on a primary channel, rather than blindly listing on all channels; (2) Design delivery-specific menus, replacing lower-margin side dishes with higher-profit items; (3) Consider using third-party order integration systems like Toast or Square, which cost an additional MOP 200 to 500 per month but can significantly reduce human errors. Many Portuguese restaurants and tea shops in Macau have adopted this strategy, increasing their delivery revenue share to 35%-40% of total income.\nIf restaurants wish to further optimize operational efficiency, refer to Takeaway Packaging Solutions or Kitchen Equipment Procurement Guide to reduce packaging costs and dish preparation time.\nMacau Food Delivery Culture: Which Areas and Time Slots Are Most Active\nAccording to the 2025 University of Macau Smart City Research Report, the geographic distribution of food delivery orders in Macau shows significant variation. Taipa and Cotai areas account for approximately 38% of total orders, primarily driven by the high-frequency demand from employees and visitors at large integrated resort complexes. The Northern Peninsula area (Taishan, Qingzhou) and Central Peninsula area (Banco Cheng, Senate Square) together contribute approximately 42% of orders, representing traditional residential and commercial mixed-use zones. Remote areas such as Coloane and Ka Ho account for only approximately 8% of orders due to lower restaurant density, but the average order value is，反而高出15% higher by 15%.\nIn terms of time slots, the lunch peak period runs from 11 AM to 1 PM, accounting for approximately 35% of daily orders, with Chinese fast food and light meals being the main categories. The dinner peak is concentrated from 7 PM to 9 PM, accounting for approximately 40%, with notably increased demand for hot pot,烧烤, and Japanese cuisine. Although late-night orders (10 PM to 2 AM) represent only 12% of total volume, the average order value exceeds 120 MOP, with congee, desserts, and sweet soup shops performing exceptionally well. It is worth noting that food delivery orders in Macau are approximately 20% higher on Wednesdays through Fridays compared to weekends, reflecting the local residents' reliance on food delivery during weekdays.\nFor restaurants, establishing a presence in Taipa or the Northern Peninsula can provide a solid foundation for higher visibility, while developing high-value menu categories for late-night hours (such as seafood and tonic soups) can effectively enhance profit margins.\nFestival Delivery Peak Strategies and Emergency Plans\nAccording to 2025 data from the Macau Restaurant Association, during the Lunar New Year and Christmas periods, Macau's food delivery orders increase by 180% to 220% compared to regular days, with the Taipa and Cotai areas experiencing the most significant growth. Average delivery times are also extended by 15 to 25 minutes.\nPeak Festival Response Strategies: First, it is recommended that consumers place orders at least 90 minutes in advance and utilize the \"scheduled delivery\" function to avoid peak hours. According to Uber Eats' 2025 Macau market report, the busiest delivery periods during festivals are from 5 PM to 7 PM. Distributing orders to the lunch hours between 11 AM and 1 PM can increase success rates by approximately 35%. Additionally, consider prioritizing restaurants with \"dedicated delivery teams,\" such as dining merchants within Galaxy Macau, whose in-house delivery systems can maintain relatively stable cooking and delivery speeds during peak periods.\nEmergency Plans: When experiencing delivery delays or restaurant overloads, it is recommended that consumers simultaneously place orders across multiple platform apps and select platforms that offer \"real-time tracking\" features. According to foodpanda's ..."
+       },
+       {
+        "type": "url_citation",
+        "title": "美食外卖 ~ 网上订购邻近你的香港餐厅美食 | foodpanda",
+        "url": "https://www.foodpanda.hk/zh/?k=foodora",
+        "site_name": "foodpanda",
+        "publish_time": "2026-09-19T13:24:35+08:00",
+        "summary": "Free delivery on first order\n沒有餐廳可供選擇\n對不起，我們暫時不送往此地區。\n一個app餵百萬人\n香港出名多好嘢食，各國菜式只要你諗到就食到，foodpanda亦深知香港人為食又識食，特地搜羅過萬間餐廳任你選擇，七百萬人七百萬種口味，我哋都滿足到你！\n各式美食天天新款，上foodpanda每日輪住嗌\n食得多中港日韓菜想轉下口味？印度菜啱唔啱？意大利菜又點睇？再唔係試試墨西哥菜、阿根廷菜、俄羅斯菜同尼泊爾菜？foodpanda就係咁多選擇：由本地小店以至國際知名餐廳都一應俱全，想食咩就嗌咩，隨時隨地撳幾下轉眼就送到，菜式多到數唔晒，365日唔同款都仲得！\n外賣唔知食咩好？foodpanda已經幫你諗好\n肚餓又唔想自己煮或者出街食？由早午晚餐、下午茶到宵夜，foodpanda都隨時ready送到你門口！無論任何場合 － 朋友聚會、公司聚餐、定係同另一半二人世界，只要上我哋嘅應用程式或者網頁，大量附近優質餐廳等你發掘，實有一間啱你心水！\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "香港美食外卖与杂货速递 | foodpanda",
+        "url": "https://www.foodpanda.hk/zh/city/hong-kong",
+        "site_name": "foodpanda",
+        "publish_time": "2022-08-30T10:37:29+08:00",
+        "summary": "香港島美食外賣\n所有餐廳\n霸嗎拉麵 (中環) Ramen Bari-Uma\n5 (100+)\n菜式 拉麵\n拉麵\n8折\n免運費\n串起來 Stick it Up\n菜式 串燒\n串燒\n滿HK$ 100享85折\n免運費\n何蘭正 Ho Lan Jeng\n菜式 粵菜\n粵菜\n滿HK$ 80享9折\n免運費\n蛋白男生 Protein Boy\n4.5 (50)\n菜式 西式\n西式\n62折\n免運費\n珍姐海鮮火鍋飯店 (中環) Big JJ Seafood Hotpot Restaurant\n5 (100+)\n菜式 港式\n港式\n滿HK$ 80享9折\n免運費\nRizzy Cafe & Bar\n菜式 西式\n西式\n滿HK$ 80享9折\n免運費\ncan.teen (長江集團中心)\n4.8 (500+)\n菜式 快餐\n快餐\n滿HK$ 120享8折\n免運費\nCentral Table (置地廣場)\n菜式 國際佳餚\n國際佳餚\n滿HK$ 140享8折\n免運費\nL'amour (中環) [跨區送遞]\n菜式 國際佳餚\n國際佳餚\n•\n跨區送遞\n滿HK$ 200享7折\n圓貝 (蘭桂芳) Mother Pearl\n菜式 珍珠奶茶\n珍珠奶茶\n滿HK$ 100享85折\n免運費\n都爹利會館 Duddell's (中環)\n4.6 (29)\n菜式 粵菜\n粵菜\n•\npanda select\n免運費\n雞飯小子 by FOOD LE PARC (長江集團中心) Chicken Express\n菜式 海南雞飯\n海南雞飯\n免運費\nChocolux Cafe\n菜式 西式\n西式\n滿HK$ 80享9折\n免運費\nOKA's (日式) by FOOD LE PARC (長江集團中心)\n菜式 港式\n港式\n免運費\nHYPEBEANS (中環)\n菜式 西式\n西式\n滿HK$ 80享9折\n免運費\n福和雍點心茶館 House of Orient\n5 (78)\n菜式 點心\n點心\n•\npanda select\n免運費\n連和燒豬餐廳 (中環) Lin Wo Roasted Pork Restaurant\n4.8 (100+)\n菜式 燒味\n燒味\n滿HK$ 120享8折\n免運費\n北京樓 (歷山大廈) Peking Garden Restaurant\n5 (61)\n菜式 京菜\n京菜\n•\npanda select,少鹽少糖食店\n免運費\nThe Jeju Black (中環) [跨區送遞]\n菜式 韓式\n韓式\n•\n跨區送遞\nServo [跨區送遞]\n菜式 西式\n西式\n•\n跨區送遞\nSPIGA\n4.7 (53)\n菜式 西式\n西式\n滿HK$ 100享85折\n免運費\n太平洋咖啡 (中建大廈) Pacific Coffee\n5 (15)\n菜式 咖啡\n咖啡\n滿HK$ 120享9折\n免運費\nQuiero Más Restaurant and Bar\n4.7 (17)\n菜式 西班牙菜\n西班牙菜\n免運費\n千両 (世紀廣場) sen-ryo\n5 (1000+)\n菜式 日式\n日式\n•\npanda select\n滿HK$ 400享9折\n免運費\nBACI Trattoria & Bar\n4.8 (46)\n菜式 意大利菜\n意大利菜\n•\npanda select\n滿HK$ 300享8折\n免運費\nPorterhouse\n菜式 西式\n西式\n•\n少鹽少糖食店\n滿HK$ 300享8折\n免運費\nHeybo (怡和大廈)\n5 (100+)\n菜式 日式\n日式\n免運費\nTrois Cafe (中建大廈)\n5 (1000+)\n菜式 西式\n西式\n滿HK$ 150享8折\n免運費\nGrill ขุนทอง (中環)\n5 (2000+)\n菜式 泰國菜\n泰國菜\n免運費\n兩草 (M88) [跨區送遞] Two Greens\n菜式 港式\n港式\n•\n跨區送遞\n狗毛 Infinity Thai Restaurant & Bar\n4.9 (1000+)\n菜式 泰國菜\n泰國菜\n免運費\nShi/Kuro Bistro 新可樂\n4.9 (100+)\n菜式 茶餐廳/冰室\n茶餐廳/冰室\n滿HK$ 80享9折\n免運費\n東京冠軍咖哩飯專門店 Caligari\n4.7 (87)\n菜式 咖喱\n咖喱\n滿HK$ 200享8折\n免運費\nNocino - Basehall 01\n4.9 (30)\n菜式 西式\n西式\n免運費\nEmmer Pizza (中環)\n4.7 (23)\n菜式 意大利菜\n意大利菜\n免運費\nLawry's The Prime Rib (嘉軒廣場)\n5 (30)\n菜式 西式\n西式\n85折\n免運費\n廚魔新厝 THE DEMONIA HOME\n4.9 (31)\n菜式 潮州菜\n潮州菜\n滿HK$ 100享85折\n免運費\nRosjad X Kin-Gyonk Corn by FOOD LE PARC (長江集團中心)\n菜式 泰國菜\n泰國菜\n免運費\nOMUSUBI (蘭桂坊)\n5 (85)\n菜式 日式\n日式\n滿HK$ 80享85折\n免運費\n重新營業於 週五 12:55\nSam Fancy\n菜式 西式\n西式\n滿HK$ 100享85折\n免運費\n重新營業於 週五 12:55\nBrickhouse (自助)\n菜式 墨西哥菜\n墨西哥菜\n免運費\n重新營業於 週五 13:31\nGrand Majestic Sichuan - Black Sheep的瑰麗川菜廳 [跨區送遞]\n菜式 中式\n中式\n•\n跨區送遞\n重新營業於 週一 17:00\n五行 (歷山大廈) GOGYO\n菜式 日式\n日式\n滿HK$ 400享9折\n免運費\n重新營業於 週五 11:00\nQueen’s Bar\n菜式 快餐\n快餐\n滿HK$ 120享8折\n免運費\n重新營業於 週一 18:00\n好蘭好味 [跨區送遞] In The Mood For Food\n菜式 港式\n港式\n•\n跨區送遞\n重新營業於 週五 12:55\nCafé Landmark\n5 (100+)\n菜式 西式\n西式\n•\npanda select\n免運費\n重新營業於 週五 12:55\nOliver's The Delicatessen - 外帶飯盒\n菜式 港式\n港式\n免運費\n重新營業於 週一 18:00\nA Lux\n菜式 意大利菜\n意大利菜\n滿HK$ 80享9折\n免運費\n一個app餵百萬人\n香港出名多好嘢食，各國菜式只要你諗到就食到，foodpanda亦深知香港人為食又識食，特地搜羅過萬間餐廳任你選擇，七百萬人七百萬種口味，我哋都滿足到你！\n各式美食天天新款，上foodpanda每日輪住嗌\n食得多中港日韓菜想轉下口味？印度菜啱唔啱？意大利菜又點睇？再唔係試試墨西哥菜、阿根廷菜、俄羅斯菜同尼泊爾菜？foodpanda就係咁多選擇：由本地小店以至國際知名餐廳都一應俱全，想食咩就嗌咩，隨時隨地撳幾下轉眼就送到，菜式多到數唔晒，365日唔同款都仲得！\n外賣唔知食咩好？foodpanda已經幫你諗好\n肚餓又唔想自己煮或者出街食？由早午晚餐、下午茶到宵夜，foodpanda都隨時ready送到你門口！無論任何場合 － 朋友聚會、公司聚餐、定係同另一半二人世界，只要上我哋嘅應用程式或者網頁，大量附近優質餐廳等你發掘，實有一間啱你心水！\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "foodpanda app: 美食和生鲜杂货",
+        "url": "https://www.foodpanda.my/zh/contents/apps",
+        "site_name": "foodpanda",
+        "publish_time": "2025-07-06T21:26:47+08:00",
+        "summary": "foodpanda app: 美食和生鲜杂货\n美食外卖及生鲜杂货外送服务，一指轻松掌握所有订购！\n无论是比萨、汉堡包、炸鸡还是本地小吃，我们都清楚你周围的所有餐厅，並可以向你推荐餐厅－无论是大品牌或者地方小店，我们都可以配送！还有独家和个性化优惠等你享用。免除购物的烦恼，一切都交给我们－杂货配送应用程序，从 pandamart 到便利店、超市，我们提供零食、饮料、生鲜杂货、日常必需品、生鲜食品、冷冻食品、个人护理用品、甚至宠物用品的配送。立即下载！\nFood delivery in Kuala Lumpur\nSantinos Pizza Bangsar, Havana Bar Grill, Burger On 16, Kenny Rogers Roasters,\nFood delivery in Petaling Jaya\nPappa Rich, Goodness Greens Cafe, Madam Kwan, Goodness Greens Cafe , Sushi King\nFood delivery in Cyberjaya\nDapur Penyet Cyberjaya, My Burger Lab, Aroma Village, BBQ Chicken,\nFood delivery in Shah Alam\nPenyet Express, Syed Bistro , ABC Bistro Cafe, WTF Restaurant , Juice Work Vivo\nFood delivery in Subang\nCarl's Jr., Santinos, Tasty Porridge, Simple Life Healthy Vegetarian, Din Tai Fung ,\nFood delivery in Penang\nXuan Xin Ramen Kitchen, Old Town , Canton-i, Granny's Cottage , Gong Cha ,\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "foodpanda: Food and groceries delivery service in Hong Kong",
+        "url": "https://www.foodpanda.hk/?k=foodora",
+        "site_name": "foodpanda",
+        "publish_time": "2025-10-09T12:00:00+08:00",
+        "summary": "Free delivery on first order\nUnlock exclusive deals and more in our mobile app\nMeal for one, fast checkout, food & grocery deals: get it all on foodpanda\nNo restaurants nearby\nWe don't have restaurants here yet. Try looking in another area.\nDiscover millions of tastes in one app\nHong Kong is home to a wide-range of crave-worthy cuisines. Excited to go on a yummy and filling food trip? foodpanda is your guide to the best restaurants throughout Hong Kong. No need for restaurant guides – we deliver the city's top-quality eats right to your doorstep.\nLooking for food delivery near you? foodpanda has the answer.\nLooking for Indian restaurants  in the city? Craving Italian? In the mood for Chinese food? Good news! foodpanda is home to the foodie-rated restaurants in Hong Kong. From international names to local faves, they're all here! Enjoy good food from well-loved restaurants in just a few taps – anytime, anywhere.\nCan't decide what to eat? foodpanda's here to help\nHungry, but not in the mood to cook or go out? From breakfast faves to midnight munchies, foodpanda's ready to deliver.\nWhether you're organising an event or celebrating with loved ones, make it more special by ordering from top restaurants in the city. Visit our website or use the app to explore nearby restaurants – wherever you are in Hong Kong.\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254831687800000000000000000000ffffac1592672af0dd"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 16123,
+   "output_tokens": 554,
+   "total_tokens": 16677,
+   "input_tokens_details": {
+    "cached_tokens": 6768
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 138
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807501,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:05:00+08:00"
+}

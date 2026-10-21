@@ -1,0 +1,170 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门外卖支持支付宝微信吗？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548775,
+  "id": "resp_0217925487733617e47c7855acee132b02b74812875712f9fb4f0",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254877502200000000000000000000ffffac155ead211d4b",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. \n\nVerification of Macau food delivery platforms supporting Alipay and WeChat Pay is needed, and a web search will be conducted."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGM4ko6OpCNX1zpRwX5l6QUSWBJSxD1jMekbQ2BcjXN0FVid9nKfEEeQQTSxYKYJL/ueu6V0d7ZE9qCLsN06+9Vw3fQFL3o5oFGMkVMDX4+syEHqls95oUiBs5qsFNON97GgM9MGNoBkTNl+ur2hUR6n7U3ZLJlT8FW0ueC+6S9OLDtm7+zmfHwBn+CPQ4gdFeoHQxZ6b9FDti7EfL+l++fA6Mbdt4LQswxuXe3hEGiHOhZC1buGV5utqiUDI/WhysKuA29epx2JkC/CWqPRibDMkEHd7ZvAYQCEdDG/Ui+ekFghEbn4XuQVgEUUsT6NA3TPL7iSliQDgaGogNJ54eGFiVzdKrFJsU7d7edVZidW6blgkvJMJVEDV0fFDuHeB7mlwQwkV0000oO4Ud4O2O44YauVKK3"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门外卖 支付宝 微信支付 支持;澳门外卖平台 MFood 澳觅 支付方式 支付宝微信;Macau food delivery app Alipay WeChat Pay accepted",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254877833800000000000000000000ffffac155ead1cf56c"
+   },
+   {
+    "id": "rs_02179254878181300000000000000000000ffffac155ead6fe671",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need answer. All relevant information has been sorted out. For the user's inquiry, a Markdown response will be generated in Chinese as required, with the structure of \"query steps + answer\", citing local information from 2025 and 2026, and no links will be included. Payment methods, currency settlement and Uber Eats availability across different platforms are clarified, and direct restaurant phone orders are not guaranteed, so checkout confirmation will be reminded. The response will be kept concise."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFIkFbXWb3ncdgSTUKQa0qB8QIEBUOZbSo0omAUSmYDW8SMbICnnaLETCJOkv96jTxGpIyB2glc1bMZZ2X44fFftm8ZwiJRHlm3GGH4kPSgOApIjD6UOPQwZEnN1P+28s5vRNreiF8Fnpc3bie+zDjuf5UYjBC59U3wYM5A4tMLqE6jzLqVFL0sTIjw/Z+72b75xzZKCfwH3T+5ciSdelXyAlPTq8JDmGGZgg2LDzCqW/arCJBtIcHEEmyJEjgS4PSJzuCNbKqqTfHroCsw5QNAiQPLEfgu4DQwPY9Uiwm/fXf2Ehk2pf+F78tcfEEa6vI9VrOoWMlsprFeuAJvj1T7cuiFpIpzLaFbifLme9jLsgt3f1GO6SoUTxQppI5bmDJr5EhOBXGW4WeBmNhpWT00IjxUhbqtVbR8elrTl8RtxXDxCyq+3R/FrjtSLCiYMOlO1dB0SRiv3+mwSxcd/dIOAAlJIMTwVMjoM/6blqAQy2cbJ1+UTgFJSPjYMsmZzF9WjFWAHLDSD8GkQEsop0ad6zIqqDTu/RoG/FcQUhwpOW8LD0HAU2n3ffE4qgW7HT9g872xY373uBCLxnUXacOiZt1Vu+O900pcLifighUddv0bERXlmDKmxHpGX0FCtSe6W0Yzoa4I+0UKQDmY/tMN+Lu5CoEiYA+LI267gcPEVUKV6UA1DLmXz6SVy0vFF1XxcNTUcROnfv301XBt4L+CLUlZ7Qfqlp0Ghrk5JKNMBLrHH+LKqRQTiVW5JOditTRMgF6eTh6WHBPGIzy/BM85U/t7IEzvCOmYlqyxZoVGNo8WMJLt032oyOVmEV279GmYKTCDoWQ0qkHKr/TVwWJELGyhTIboAVwJUQ5v9epts5qWTo8QhY4y/egX94vrAD37N3eziWA85hiT1uC0YHbHzkVFXbjBX7AqkyYKgq7zCHa5yqHjOr3UwF0rm3Wjg2vbNbpwoThUIYE+VGRXVjLPGul3y71KeEAAEjdPdnJ3sfc="
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "## 查询结果\n\n支持。澳门主流外卖平台一般都可以用支付宝和微信支付：\n\n- **mFood**：支持支付宝、微信支付、MPay、银联、VISA 等。\n- **澳觅**：支持中国大陆支付宝、微信支付（中国大陆及中国香港）等。\n- **闪蜂**：支持中国大陆支付宝、支付宝（澳门）、微信支付（中国大陆及中国香港）等。\n\n### 注意事项\n\n- 实际可选支付方式可能因 **App版本、商家、订单类型** 不同而变化，以下单结算页为准。\n- 支付宝/微信通常按当天汇率以人民币扣款，建议确认支付页面金额。\n- 如果是直接打电话给餐厅点餐，是否支持电子支付要提前问商家；平台线上下单通常更稳妥。\n\n**结论：用澳门主流外卖 App 点外卖，大陆支付宝和微信支付基本都可以用。**",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620780&x-signature=A7TQqe32LLXgr3awGC29AZnJrpo%3D",
+        "site_name": "App Store",
+        "publish_time": "2026年10月21日 04:38:49(CST) 星期三",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620780&x-signature=no9frjL2QITkCrXZwbxdkdDKlbc%3D",
+        "site_name": "App Store",
+        "publish_time": "2026年10月21日 04:38:49(CST) 星期三",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦"
+       },
+       {
+        "type": "url_citation",
+        "title": "Food Delivery Apps in Macau",
+        "url": "https://www.bento.travel/macau/food-delivery",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/e7ec7894cbbdc36ffdcc24f5902a8bfb~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620780&x-signature=WJGJ3%2FZVBv7PmcMWFT6Q62mA468%3D",
+        "site_name": "",
+        "publish_time": "2026年05月01日 00:00:00(CST) 星期五",
+        "summary": "Food Delivery Apps in Macau\nOrder food from local restaurants, curated for travelers visiting Macau.\n1 app 1 essential\nmFood (MerryDelivery) is Macau's go-to food delivery app, covering 4,000 restaurants with 15-minute delivery. It accepts MPAY, Alipay, WeChat Pay, UnionPay, and VISA. Aomi and Food4U are local alternatives (primarily Chinese-language). Uber Eats does NOT operate in Macau.\nOpenRice\nEssential\nLeading dining discovery app for Hong Kong and Macau with restaurant listings, reviews, menus, and table booking.\nPro tip: Filter by Macanese cuisine to find rare authentic dishes like African chicken and minchi. These spots fill up fast.\nLast updated: May 2026\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "mFood-澳门美食外卖超市团购",
+        "url": "https://app.mi.com/details?id=com.m.mfood",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/020537a2301f82aeacd1c5dce6ff07fe~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620780&x-signature=nCUfrVmgcMolZJI9jAqkqdyAoE4%3D",
+        "site_name": "小米应用商店",
+        "publish_time": "2026年05月11日 00:00:00(CST) 星期一",
+        "summary": "尽享美食盛宴。\n持续优惠：定期举办各类促销活动、特价套餐以及折扣优惠，带来更多惊喜和福利。\n服务特色\n品质保证：精心挑选具备完整资质、卫生可靠的商家，确保高品质服务。\n商品齐全：汇集全澳门各类餐饮外卖，让您轻松满足各种口味需求。\n快速配送：专业的即时物流团队全面覆盖澳门，保证即时送达。\n线上支付：支持 MPAY、支付宝、微信、银联、VISA 等安全便捷的支付方式。\n特色功能\n智能搜索附近外卖美食并提供预订服务。\n即时订单状态通知，确保快速送达，正所谓 mFood 速度，领先一步。\n智能展示餐厅排序以及个性化推荐功能。\n提供各种优惠折扣信息，品质有保障。\nmFood 外卖与超市，您身边的幸福生活圈。感谢您选择 mFood，让我们共同创造更便利、更美好的生活。\n新版特性\n【mFood 星选一口价】氹仔区正式上线啦！\n真正0元起送，不用再凑满40元下单！\n一口价低至19.9元，咖啡奶茶直接送到家！\n每单都无门槛，全程免配送费！\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门外卖支付方式(澳觅+mFood+闪蜂)- 澳门本地宝",
+        "url": "https://m.am.bendibao.com/news/1682.shtm",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/5abb085d64997563786b1678cbfa1fe0~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620780&x-signature=nkx%2Bz5DH%2BIRKn%2FUaV7nhv0kITiI%3D",
+        "site_name": "澳门本地宝",
+        "publish_time": "2025年09月24日 14:59:00(CST) 星期三",
+        "summary": "澳门外卖支付方式(澳觅+mFood+闪蜂)\n2025-09-24 14:59 本地宝综合\n导语 澳门的外卖服务较为发达，有多个本地外卖软件可供选择。其中，澳觅和mFood和闪蜂是最常用的平台，为澳门居民和游客提供了便捷的餐饮配送服务。\n澳门外卖支付方式(澳觅+mFood+闪蜂)\n澳觅：支持澳门中银手机银行、工银e支付-工银卡、丰付宝、Luso Pay国际支付、银联云闪付、银联无感支付、Mpay、支付宝（澳门）、VISA/MasterCard信用卡、中银全币种信用卡、支付宝（中国大陆）、Apple Pay银联卡、微信支付（中国大陆及中国香港）、澳门大西洋银行\nmFood： 支持MPay、银联/云闪付、澳门中银手机银行、VISA/MasterCard信用卡、工银e支付-工银卡、丰付宝、Luso Pay国际付、支付宝（中国大陆）、微信支付（中国大陆及中国香港）\n闪蜂：支持MPay、澳门中银手机银行、工银e支付-工银卡、丰付宝、澳门大西洋银行、Luso Pay国际支付、极易付UePay、微信支付（中国大陆及中国香港）、支付宝（中国大陆）、支付宝（澳门）、中银银联信用卡、银联云闪付、中银淘宝卡、澳门中银信用卡\n内容来源澳门本地宝\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254879120000000000000000000000ffffac155ead15efea"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 4846,
+   "output_tokens": 541,
+   "total_tokens": 5387,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 258
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807973,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:12:53+08:00"
+}

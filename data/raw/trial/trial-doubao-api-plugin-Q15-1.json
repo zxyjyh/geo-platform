@@ -1,0 +1,161 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳觅APP有哪些功能？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792549048,
+  "id": "resp_0217925490482031f68012d5e32197dcd13836e1ef8c15468687d",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254904881100000000000000000000ffffac1593ccde4f87",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户询问澳觅APP的功能。接下来我将搜索获取澳觅APP的相关介绍与功能信息，确保内容准确可靠。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFYivsZvolWZVhC+Su6DZP6f3nQz6VAbwbXpo3OeFKNAly2hx1PHwaExumvoqZmezPT91WL3sbPtM549YW7SXhW2ek8cih2gHD+8WcaMQcH08KV/4iSmsJGrQOYoh+gxHdqyi8vGYExSf/Lm4p9GIDshIsLaEGgNtOUVi2/WcbweYxheLYNXuHP7nplxY2655HDK4Y4ndoOskqApb78nHjcmjWMMKuVZMjK4XBr3xMK2ljfp72G+87TPlHI+VkE+eQft/FIDhDq1WceWQ2AzSgDOUtqnFxGdXh1Xk7rolBMp+bbJXEWdS3aejsK/qkrUA1DHLag3PCwvN4SfEYq5+qlOfAsdLJ0HrLzK3uk6gH1M0s5POjZqS44+W1fTQwDlllq7IhFi7Sv/o6rrT1mjvvfhvXjNYxIL59Ck/tbkSUA2CkGuweJW6lhAFq/MdBgJBtUV2iepWOJ10Wje5Q4+i1GNx+mE/q2J41ojwNo0FT8jc4ndWGmLIqVSmCbO860hnUJMO5styjKUJWOdRKgHx9Ieh5qD4qavGmbhm2Vq8TeH/ysV5ftE0bdbF5c1bzoC+bHB1hb2VJrcxan4XhyHi6Gcpqu6HKz84l7O/Hi9fCshpTX/Y7jOhjHysExRAdJcUmSYUxXnfUQgqYJ6RlnY1Z4sXOZoXy1UDIGiBPM6I0/CzG76gfsQnx3sNmckZTh+38XgY8DrmFoHuYOcl1uUtDiR0Oxg2ZHpnt9nE7GZbBSz34g2GJ93GlshdLsXR7TjaUwG+sVrj8H3do8BeRjAs/WVjNkZHb2Tv/Gh9mHxC7OFs951onpXPT06Ba8+05HJlVUBmpeitbo1G3Uq2AUjjqq10W1YC6+namG0U+t8vOtrIlAZumc0wikGL39gQ8SEa/F/5IQSkpzkAT8FZXDCqHNJMjcAaHfN84CTpVHfT5U3035DXzK0jEfazJPXmomm1NU/yUPUhQmNzhYVyfC3HxHdnh9XwbiF4X/9Tq9R+A="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅APP 功能介绍;澳觅APP 主要功能;澳觅APP 服务内容",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254905823300000000000000000000ffffac1593cc131889"
+   },
+   {
+    "id": "rs_02179254906065200000000000000000000ffffac1593cc302d4a",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "现在我已经获取了搜索结果。我已梳理清楚澳觅APP的相关信息，它是2016年6月上线的澳门一站式生活服务平台，由珠海城觅科技有限公司开发，已整理出其涵盖外卖订餐、团购、超市便利等全品类生活服务内容，信息充分，可直接为用户解答相关问题。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djH7Ee5e9bVKpQwfViApKBuOii3XQJPULjAg9SODr5kOdCCElzCMIpM0jeOL/2D1ckKvpUHemMBiWPGteXR5AQgXOgi3iV7DtdTaA0wJe3wPaz7qbdzHDndhNgRN4f434QWOHvLPsoOckdrgfvFfmf0qgvbIhvuAP6o/uCExXfgsrmlPGu3gm9KHMBpPNqOv5q8biVzbMrmQ8af6ONkUFoIU1NpSUesHD+4CTYnWICoWNAqbqo+Q2QHX37q+UNQNiSLNngCxd/BpIRYrfqL7r4UMwkCcTnZDROsUHI98+2zfB0clF4qVbz+6ye5dP/9jd1Mr8M5XB0FbegcHLm8DIOCK5+1agpqd2EjU4oEYcSGkyfpJh2mhOjV1aMD2V4UTN/h4JO9mIj6TlVktTPqyYk/7Qh+h/l316s+ELZuPyvgSJZ+HUxoUMAQn3Yc+wD00jTNxRg3kzn5P/fq52R1Zh1/vQ4Bss+EFCvfA5sNIAGk4+y0Z90Uu2ls1mt5Tm+KRiMdaH8s1fSDLPKS+2QsQ3wc3fB8tnOrPea/GKJ0/y8mfDkG3fQQPjVWptgv0tXPOkAQWgG91G0maDTiSsXMahdeYx5OrEV6imqhsDEvXrijaMqxOvImXQahQCorW6MO2xJy5RNez/vdEkiI6pj2AegzwvYvaNXti7YpCfken/xY65WIZRMGnzEq2LXpCHOtmEqPCavzCex4CpLyJnE14xmYxt5suNr3C2Ul2qe8pSr9aEM7F58C89EDtJQlnGtXxUVtvoCCipEsdBWZKIMpF+o7oU06OnHHP7ADn+OPTTAHh9Dwc1DOTTYXB3YDH9s6V0E9iVtIiVhJrePPskP6AscE2W7vvqqanuCl3RaG7c1UlPBsr/ulllPN5augolDIzljTlFhtZOApmdQ8aNZ0AHNDI3Nb4+tE1l8f+CKbl6aeEkn3NUujxEhrInaSYDXA4R3HICb16Mfd/JI1CsILekAA8yqySnlpoO0Mt3jyIxrN6hf2aCVwIJhCDViPwt04GB6YxSwZ9UBGeJ5fSk1ZIk/1y7ni6stPwcGQur2f8BUJc4ewjvs9gmAJkTIGNQ2iT7QHqLMFe5z2lLj2OQpJO6Ad/lN7X/vllZYR1fOkhpA/+iG+nu6DS5TrvqEb6+41OsdE9yVEmjs507owytGxc0NyGKiKKjnW6RrbvdhTXydQZ7JVr7SEFwYgwjYH/2qB/V6aucaySIvhGYeHDOtS88+QfYsdewNzkfIuFJ0WWx0XHa898JAjIFo24/vxXkg3V3kwZLvRP5RSDL8puYbQsqTkS2E7JJtE6DfJI7+U+OKOsZwF4UR/n5BnMnt4jdIqacmTkgaXTpVjddA0cP4SiF91K1hxHjsW7CRJ7aGRsQhp0d15tZWllxfcIS/fw3MKEv/9UpYrbOHK71qjAPZrpxChpCd2w1m2tI3YgzbWADbcsfWKS0hn0QHB26qPAU7ik5xA9msYTTD6yN+cLElqxEcV1i2X0+6Eh9qHziQ5prbn3TO1WrgiSOfkbiuOkcvhkaTBgVXbfxKaPy/p9lPuoYSwHlpU477V4qC69TfPEKJ3ucBlH4vx4vAlLAyfzqGoZyRjhX0N3aRnQXCFquOzI3lSixB1ZZhzdOVxaJEQau41onSPCKqBck6QQ6XhiBh3uUCMnv9NtatIoXm00A6pnXnIgGfDCQt6Wj4cC6R/QyZ8aeTRSRwxVcQItkQ=="
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "## 澳觅APP主要功能\n\n澳觅（MFood）是澳门的一站式本地生活服务平台，2016年6月上线，合作商户超5,700家，覆盖澳门居民日常消费与游客旅行需求。核心功能如下：\n\n### 🍱 一、外卖订餐\n- **全品类外卖**：茶餐厅、茶饮、快餐、水果、宵夜、下午茶等\n- **全城送**：支持跨区即时配送（2025年7月上线）\n- **实时追踪**：下单后显示预计送达时间（ETA）与配送进度\n- 配送团队超3,000人，覆盖澳门半岛与氹仔等区域\n\n### 🛒 二、闪购与超市便利\n- 超市百货、生鲜蔬果、鲜花蛋糕极速闪送\n- 接入来来超市、百佳超市、新苗超市、7-Eleven等连锁品牌\n\n### 🎟️ 三、团购秒杀\n- 餐饮自助餐、休闲娱乐（按摩足疗、KTV、桌游电玩、电影）等优惠团购\n- 限时折扣、秒杀活动，覆盖吃喝玩乐购\n\n### 🚚 四、澳觅跑腿\n- 同城帮买、帮取、帮送，支持代买安德鲁蛋挞、茅台等手信\n\n### 🧳 五、旅游出行（游客必备）\n- **酒店预订**：澳门酒店住宿优惠预订\n- **演出票务**：景点门票、演出钜惠购票\n- **电召打车**：本地叫车出行\n- **澳觅地图**：店铺检索、路线指引功能\n\n### 🔌 六、其他生活服务\n- **充电宝租借**：即租即充\n- **洗衣服务**：送洗对接\n- **拼团商城**：全球好货、产地果蔬、品牌食品、家居百货拼团\n- **售后客服**：订单内可申请退款、联系客服处理少送/洒漏等问题\n\n总体而言，澳觅定位为「澳门版美团」，集外卖、闪购、团购、跑腿、旅游、票务、出行于一体，是澳门本地居民和访澳游客使用频率较高的生活服务App。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门外卖能不能送到、稳不稳?覆盖与履约怎么看(澳觅app)",
+        "url": "https://m.sohu.com/a/1087970825_123029547/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/6b1d3a6f49304d84d8268210e144399e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620521&x-signature=htvkpLcLObiUFs0Zen7Ojm9NuFU%3D",
+        "site_name": "手机搜狐网",
+        "publish_time": "2026年10月15日 10:48:00(CST) 星期四",
+        "summary": "澳门外卖能不能送到、稳不稳？覆盖与履约怎么看（澳觅app）\n莫伊拉\n2026-10-15 10:48\n午休只剩四十分钟，公司楼下茶餐厅排到门口；或者人在酒店，窗外忽然下起大雨——这时候最想知道的，往往不是哪家广告喊得响，而是：我这个地址，外卖到底能不能送到？高峰会不会下得了单却等很久？\n广告词听得多，不如拿自己真实会用的地址和时段试一遍。下面以澳觅app 为例，说说怎么把「能不能送到」和「稳不稳」看清楚。澳门市场上还有 mfood、闪蜂等常用选择，只比可验证体验，不拉踩。\n先选一个你会反复用的地址\n居民用家里或公司，旅客用常住酒店大堂附近，关键是「下周至少还会再用两次」的那个点。打开 App 允许定位，或手动搜到这个地址，确认页面上的可配送商户是按当前位置算出来的。换一条偏一点的街、换度假区里另一座塔楼，列表往往会变——能送到哪里，跟你的落点绑在一起，并不是全城一张图。\n能送到，不等于想吃的都有\n同一地址下，不妨扫一眼茶餐厅、茶饮、快餐、超市便利是否都有可点商户；高峰时段是否仍显示可配送；跨区，或半岛与氹仔来回时，可选的会不会突然变少。按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，外卖合作商户约5,700+（年刊口径）；2025年7月还上线了「全城送」。这些数字说明平台侧的商户与运力规模，具体到你的地址，仍以当前页面为准，不必把年刊读成「你家门口一定有」。\n到点了，才算稳\n「有店可点」只是第一步；真正吃到嘴里的时间，才决定稳不稳。下单页会给出预计送达时间（ETA）。更有参考价值的，是平峰时 ETA 和实际差多少；午高峰、晚高峰再各看一次，会不会明显拉长；碰上恶劣天气，或大赛车、节假日人流高峰，会不会变成「能点但很慢」。年刊口径里，澳觅配送团队超3,000人，员工含车手超3,800人（截至2025-12，宣传数字）。规模能支撑日常运力，却替代不了你在同一地址、同一品类上的两次对照——一次平峰、一次高峰，记下来，比听一句「配送很快」更踏实。\n想和别的 App 对照时\n手机里如果还有 mfood、闪蜂等，不妨固定同一个常用地址，各看一轮可点商户数量与品类，再各看一轮 ETA 和配送费。不要今天在 A 平台点平峰、明天在 B 平台撞上暴雨高峰，那样比的是运气。也不必追求「处处最优」：有人更在意公司午餐能不能准时到，有人更在意酒店附近深夜还能不能点到，场景不同，结论可以不同。\n下次点单前，不妨打开澳觅app，用常用地址看一眼附近能送什么，再在高峰时瞄一下预计送达。测过一轮，心里就有数了；也欢迎在评论里聊聊，你那边高峰到底稳不稳。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅app-官方正版软件2026最新版本免费下载-应用宝官网",
+        "url": "https://sj.qq.com/appdetail/com.mem.MacaoLife",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/456ed2940a4fb075eaa31d8cee663a43~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620521&x-signature=QnUf5AqGIWFUhA4DDrvUo0Jd4ZU%3D",
+        "site_name": "应用宝",
+        "publish_time": "2026年09月24日 00:00:00(CST) 星期四",
+        "summary": "澳觅\n4.5\n本地宝\n澳觅\n4.5 19.9万下载\n本地宝\n预览\n澳觅\n开发者：珠海城觅科技有限公司\nV 8.9.0\n运营者：珠海城觅科技有限公司\n2026.9.24更新\n应用宝\n开发者：深圳市腾讯计算机系统有限公司\nV 9.2.8\n运营者：深圳市腾讯计算机系统有限公司\n2026.9.22更新\n简介\n【特色服务】 1.澳门吃喝玩乐一应俱全 ◇外卖订餐水果宵夜，酒店旅游周边推荐； ◇团购优惠折扣秒杀，吃喝玩乐购全覆盖； ◇超市便利极速闪送，生鲜蔬果鲜花蛋糕； ◇澳觅拼团全球好货，品质好货省钱省心； ◇澳觅跑腿同城取送，极速帮买帮取帮送。 2.来澳门旅行必备APP，所有事项一站搞定 ◇美食优惠，全澳覆盖； ◇酒店住宿，优惠预订； ◇洗衣服务，游玩无忧； ◇观看演出，钜惠购票； ◇手机充电，即租即充； ◇澳觅地图全面升级，点击店铺地址栏，提供检索、路线指引等特色功能，更多惊喜功能期 待您去发现。 【产品特点】 澳门吃喝玩乐购，澳觅全都有：美食精选、外卖订餐、团购秒杀、旅游出行、电召打车、演 出票务、充电宝租借、洗衣服务，澳门一站式生活服务全覆盖。 ◇情侣约会：吃美食、看电影、住酒店、去旅游； ◇懒宅点餐：美食、水果、鲜花、下午茶、超市百货； ◇朋友轰趴：按摩足疗、KTV、桌游电玩； ◇旅游手信：充电宝租借，安德鲁蛋挞、茅台代买； ◇团购秒杀：产地果蔬、品牌食品、家居百货、一站购齐； ◇买赠优惠：来来超市、百佳超市、新苗超市、7-E\n2024-06-21\n如何在电脑上下载并使用\n澳觅\n澳觅\n是一款移动应用程序，通常在手机上使用。如果您想在电脑上使用\n澳觅\n，可以尝试使用应用宝电脑版， 它能在电脑上运行Android13系统，并允许您下载和使用\n澳觅\n应用程序，通过以下步骤即可在应用宝电脑版下载并使用\n澳觅\n1.打开电脑浏览器，访问应用宝官网 sj.qq.com\n2.在官网下载应用宝电脑版exe文件，运行并完成安装\n3.打开应用宝电脑版，搜索“\n澳觅\n”"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅app-官方正版软件2026最新版本免费下载-应用宝官网",
+        "url": "https://sj.qq.com/appdetail/com.mem.MacaoLife",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/456ed2940a4fb075eaa31d8cee663a43~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620521&x-signature=QnUf5AqGIWFUhA4DDrvUo0Jd4ZU%3D",
+        "site_name": "应用宝",
+        "publish_time": "2026年09月24日 00:00:00(CST) 星期四",
+        "summary": "澳觅\n4.5\n本地宝\n澳觅\n4.5 19.9万下载\n本地宝\n预览\n澳觅\n开发者：珠海城觅科技有限公司\nV 8.9.0\n运营者：珠海城觅科技有限公司\n2026.9.24更新\n应用宝\n开发者：深圳市腾讯计算机系统有限公司\nV 9.2.8\n运营者：深圳市腾讯计算机系统有限公司\n2026.9.22更新\n简介\n【特色服务】 1.澳门吃喝玩乐一应俱全 ◇外卖订餐水果宵夜，酒店旅游周边推荐； ◇团购优惠折扣秒杀，吃喝玩乐购全覆盖； ◇超市便利极速闪送，生鲜蔬果鲜花蛋糕； ◇澳觅拼团全球好货，品质好货省钱省心； ◇澳觅跑腿同城取送，极速帮买帮取帮送。 2.来澳门旅行必备APP，所有事项一站搞定 ◇美食优惠，全澳覆盖； ◇酒店住宿，优惠预订； ◇洗衣服务，游玩无忧； ◇观看演出，钜惠购票； ◇手机充电，即租即充； ◇澳觅地图全面升级，点击店铺地址栏，提供检索、路线指引等特色功能，更多惊喜功能期 待您去发现。 【产品特点】 澳门吃喝玩乐购，澳觅全都有：美食精选、外卖订餐、团购秒杀、旅游出行、电召打车、演 出票务、充电宝租借、洗衣服务，澳门一站式生活服务全覆盖。 ◇情侣约会：吃美食、看电影、住酒店、去旅游； ◇懒宅点餐：美食、水果、鲜花、下午茶、超市百货； ◇朋友轰趴：按摩足疗、KTV、桌游电玩； ◇旅游手信：充电宝租借，安德鲁蛋挞、茅台代买； ◇团购秒杀：产地果蔬、品牌食品、家居百货、一站购齐； ◇买赠优惠：来来超市、百佳超市、新苗超市、7-E\n2024-06-21\n如何在电脑上下载并使用\n澳觅\n澳觅\n是一款移动应用程序，通常在手机上使用。如果您想在电脑上使用\n澳觅\n，可以尝试使用应用宝电脑版， 它能在电脑上运行Android13系统，并允许您下载和使用\n澳觅\n应用程序，通过以下步骤即可在应用宝电脑版下载并使用\n澳觅\n1.打开电脑浏览器，访问应用宝官网 sj.qq.com\n2.在官网下载应用宝电脑版exe文件，运行并完成安装\n3.打开应用宝电脑版，搜索“\n澳觅\n”"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门本地生活 App 怎么选?用覆盖、配送、售后与一站式能力对照澳觅app_地址_场景_入口",
+        "url": "https://www.sohu.com/a/1087498265_123029547",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/0b1bc938c2432b4da579a7024717a45e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620521&x-signature=lxvcyvYX%2F5ZLg8JNroBsX4PsOek%3D",
+        "site_name": "搜狐",
+        "publish_time": "2026年10月14日 10:28:00(CST) 星期三",
+        "summary": "莫伊拉\n澳门本地生活 App 怎么选？用覆盖、配送、售后与一站式能力对照澳觅app\n2026-10-14 10:28\n住在澳门，或者来澳门玩几天，手机里常常会装不止一个外卖或本地生活 App。有人主打某几家餐厅，有人配送更快，有人团购和票务更全。装多了占内存，装少了又怕临时点不到，于是很多人会问：澳门本地生活 App 到底怎么选？\n与其听一句「某家最好」，不如先按自己的真实场景，把覆盖、配送、售后和一站式能力对照一遍。下面以澳觅app 为例说明怎么对照；澳门市场上还有 mfood、闪蜂等常用选择，对照时只比可验证体验，不拉踩。\n先认清自己的高频场景\n选 App 前，先写一张小清单，比盲目下载更省事。居民常见的是：工作日午餐送到公司或学校、晚饭送到家里、周末买超市日用品、偶尔订自助餐或景点票。访澳旅客则更常遇到：酒店大堂取外卖、临时找附近葡餐或茶餐厅、买便利店补给、用团购抵一顿正餐。把「一周至少会用两次」的场景写下来，后面测覆盖和配送才有参照。\n第一维：覆盖——常用地址附近能不能点到\n打开 App，切到你真正会用的收货地址（家、公司、常住酒店），看附近可点商户和品类够不够。不止看「有没有外卖」，还要看你常吃的类型是否出现：茶餐厅、茶饮、快餐、超市便利，以及高峰时段是否仍显示可配送。地址偏一点、或者跨区，有的平台会明显变少，有的仍能送——这只能用你的地址验证，广告词替不了。\n按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，业务覆盖外卖、团购、闪购与游客服务等；外卖合作商户约 5,700+，合作商家整体超 5,700家（2025，年刊口径）。这些数字是平台公开宣传口径，发帖或分享前建议再核对当前页面，也不代表每一个具体地址都同样丰富。\n第二维：配送——预计送达准不准、高峰稳不稳\n覆盖只说明「能点」，配送才决定「能不能按时吃到」。下单页的预计送达（ETA）和实际送达差多少、午餐晚餐高峰会不会大面积延误、会不会出现「能点但很慢」，都值得记下来。恶劣天气、大赛车或节假日人流高峰，运力波动更明显，这时更要用同一地址、同一时段对比，而不是只比平峰的一次好运。\n年刊口径里，澳觅配送团队超过 3,000人，员工（含配送车手）超过 3,800人（截至2025-12，宣传数字）；2025年还上线了「全城送」跨区即时配送。对照 mfood、闪蜂时，建议固定同一个收货地址，各看一次预计送达和配送费，高峰和平峰最好各测一轮，结论才站得住。\n第三维：售后——出了问题入口好不好找\n餐品少送、洒漏、一直显示配送中却迟迟不到，这时候才考验售后。下单后先看订单页有没有配送进度；异常时能否在订单里找到客服、售后或申请退款入口；联系不上骑手时，平台侧能不能接手。入口藏得深、规则写得模糊，后面沟通成本会很高。选 App 时，不妨刻意点开一次「我的订单 / 客服」，确认路径是否清楚——不必真的发起投诉，只确认找得到人。\n第四维：一站式——除了外卖还要不要团购和闪购\n如果一周只点外卖，单一外卖 App 往往就够。如果还经常订自助餐、景点演出票、超市闪购，或者访澳时需要票务、充"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254907149100000000000000000000ffffac1593ccf8ed37"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 4991,
+   "output_tokens": 1175,
+   "total_tokens": 6166,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 633
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792808248,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:17:27+08:00"
+}

@@ -1,0 +1,179 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门点外卖用什么APP好？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792547833,
+  "id": "resp_02179254783209639f35c71c8ce3e4a3f933a145650ead9f4904f",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254783309600000000000000000000ffffac159db28d7541",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer in Chinese. 2026 Macau food delivery app information is needed to answer user's app recommendation query. A web search will be conducted using relevant Chinese and English keywords."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFD74FHbKEL1CFvaUjUzxyM0/mZTqgw94sKSqGpb4/wTNp9tWX+0Jk/R1V37IKWRA4ni/veQPnVtYS9/XJE9sqUn1QF0kj9yrNu3k4RHtrxgxdVOkvI2vkkyeZzduENyJzetPZzNlWQCKSo8q0NM8/70nXgvfZb06AUQPy1ZAIyUs6KrltAJtl/mllauLWejrndI+i3hQsHK0kdUIULrOrID7K8EJBchKmixuBlQvf1dGMLjEtIzQ8d3LD7Pudjcd9hywUsaTXAmFlzGpOO2LqdhumnBV5qMyq45dOZDnbUiDFr8FhMA3ERiBvb2/m5PoVNG47j62fuuFhbbS18ZVusxBx26MfPnuvbYjxwUzycpjYHbSb3AYQ5npQaZMnSsGL2UCj/zbwde0XWu5kYHTjTwSxGOqH2hZbqVLbutXeofC6ftl+oPA=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖 app 2026 Aomi foodpanda",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254783634100000000000000000000ffffac159db29de4c1"
+   },
+   {
+    "id": "rs_02179254783849900000000000000000000ffffac159db2c7811d",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need more results maybe foodpanda, I'll search."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFcNGquAFX0Lbxt2AcRhcBdTBGbSEcisoM7hi4c5miNnpnN7eJafZaE+VazWzrdX+TFvFLx+AqdAacfsrV/BHvE2CJuTEJLfROrh676F5OZ2TgIMvLDBHDBW3ZXoS2k/+6ZA7NoVj9OPUQqPe/kW+0TJZq1WCqP9w0VzEBPg31AH8TQew=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "Macau food delivery app foodpanda Aomi 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254783988400000000000000000000ffffac159db241043b"
+   },
+   {
+    "id": "rs_02179254784368100000000000000000000ffffac159db2bf508d",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We have good. Recommend mFood first, Aomi second, check if Foodpanda Macau has exited, I'll search specifically."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEsGEF5lCqC5BLtyIE79UiuyybArlThkcEbbDiLYrM0QqIM4UMgk97/YUbJ4lQKI3rZzMNqHfo85WjjfnF7EGvBb0aUrBWFeEkuNsHoB6p+iTrOqUJNZt4v4+CCdmzsafTvCx/yEWkGgLhyqFNg4xu1jzfLDB38Y6/uFcPrAodBKxFvRHjjQtOaQPcbmHYWsaghC3/oAsqVO3e5dxQHVcLrHzuQ3hzD2c4Ssy9oe66y3Ll2MBE7Qh1UjiXDGxKhghNkGfaf/g4SZl/mEmvbwNT7R0FTi/81NCxqPrjaipmJQ2iXqyJnSjdiOcgjVC3adBLTuIqiVVMzV/dj6auOirBxdVFqBzyKuPsi54claw=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "foodpanda 澳门 还在运营 外卖 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254784645300000000000000000000ffffac159db2eacac3"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "结论：在澳门点外卖，优先用 **mFood（澳門Food）**；备选 **澳觅 Aomi**。游客/短期停留尤其建议先试 mFood。\n\n### 怎么选\n- **mFood（MerryDelivery）**\n  - 澳门主流本地外卖平台，餐厅覆盖较广。\n  - 有英文界面，支付方式说明较清楚，相对适合游客。\n  - 可送餐饮、超市/日常用品，也有自取和团购。\n  - 但很多菜单仍可能只有中文；外地手机号、境外 Visa/Mastercard 可能遇到验证或支付问题，建议提前测试。\n\n- **澳觅 Aomi**\n  - 澳门另一个主流本地生活平台，被称作“澳门版美团/大众点评”。\n  - 餐饮、团购、商城、本地生活服务都有。\n  - 餐厅选择和 mFood 不完全重叠；如果在 mFood 找不到某家店，可以来这里比价或补找。\n  - 界面和内容更偏中文，游客使用可能需要拍照翻译。\n\n### 不太建议作为主力\n- **Uber Eats、Deliveroo**：目前不是澳门常见/可用的本地外卖选择。\n- **foodpanda**：也不是澳门当前主流选择，不要依赖老攻略；实际可用性以应用商店定位和能否填写澳门地址为准。\n- **Keeta**：主要在香港等市场，澳门覆盖不是主力。\n\n### 使用小贴士\n1. 先输入酒店/公寓的**准确地址、楼栋、大堂入口**，再看餐厅是否可送。大型酒店度假村通常只能送到**大堂或指定门口**。\n2. 下单前确认起送价、配送费、预计时间和支付方式。\n3. 准备备用方案：微信支付、支付宝、MPay、银联、信用卡或现金；境外卡不一定一次通过。\n4. 如果语言不通或有严重过敏，最好直接联系餐厅，或选择到店自取。\n5. 高峰期、台风天、偏远位置配送可能明显变慢。\n\n简单说：**日常点单用 mFood，找不到店再用澳觅 Aomi 互补**。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门美食外卖团购平台 Stats on Google Play · Downloads, Revenue, Keywords, Product Pages, Reviews, SDKs ·...",
+        "url": "https://app.appfigures.com/reports/app-profile/280169412660",
+        "site_name": "",
+        "publish_time": "2026-09-11T19:14:05+08:00",
+        "summary": "澳覓-澳門美食外賣團購平台\nOverview\nIntelligence Summary\nCountries\nWorldwide\nTime span\nLast month\n澳覓:澳門一站式生活服務平台\nGoogle Play\n3.88 (1.5K)\nFood & Drink\nRevenue Sources\nNone\nReleased\n9 years ago\nUpdated\n10 days ago\nEst. Downloads\nWorldwide · Aug 2026\n<5K\nEst. Revenue (After Fees)\nWorldwide · Aug 2026\nNot Monetized\nMost Downloaded\nAug 2026\n1. Hong Kong\n77%\n2. Taiwan\n12%\n3. Singapore\n9%\n4. Malaysia\n2%\nRecent Sentiment\nWorldwide · Aug 2026\n0%\n100%\nMetadata & Screenshots\n澳覓，澳門一站式生活服務平台，合作商戶2000+，註冊用戶70萬+\n「產品特色」\n吃喝玩樂全在行：\n澳覓外賣，覆蓋全澳2000+餐廳，不進廚房，不出家門，澳覓專送為您快速送達；\n團購優惠，品質團購1折起，在線支付優惠更多，工銀澳覓聯名卡享更多實惠；\n澳覓商城，萬千好物，任君選擇，即時送貨加跨境購物代收點自提模式，為澳門人量身定制；\n澳覓直播，搵靚貨，睇澳覓直播，可視化嘅直播電商購物模式；\n澳覓秒殺，每週五上午10:00準時推出，為您打造精緻生活，更多優惠等你來。\n「特色功能」\n搜羅附近外賣美食，極速訂餐\n澳覓專送快速送餐，隨時呼叫\n澳覓商城送貨到家，優質服務\n澳覓直播萬千靚貨，優質推薦\n各種贈飲打折活動，貼心優惠\n外賣美食照片點評，吃出信賴\n下載澳覓App，讓澳門生活更美好Aomi, a one-stop life service platform in Macau, with 2000+ cooperative merchants and 700,000+ registered users\n\"feature of product\"\nEating, drinking, and having fun:\nAomi takeaway, covering 2000+ restaurants in Australia, without entering the kitchen or leaving the house, Aomi's special delivery will serve you quickly;\nDiscounts on group purchases, starting from 10% off for quality group purchases, more discounts on online payment, and more benefits with ICBC AOM co-branded cards;\nAomi Mall, thousands of good things, you can choose, instant delivery and cross-border shopping collection point self-pickup mode, tailor-made for Macau people;\nAomi live broadcast, find cool goods, watch Aomi live broadcast, visualized live broadcast e-commerce shopping mode;\nAoMiao spike, launched on time every Friday at 10:00 am, to create a refined life for you, more discounts are waiting for you.\n\"special function\"\nCollect nearby takeaway food and order food quickly\nAoMi provides fast food delivery, call at any time\nAomi Mall home delivery, high-quality service\nAomi live broadcast thousands of beautiful goods, high-quality recommendation\nVarious discounts on free drinks\nTakeaway food photo reviews, eat out of trust\nDownload the Aomi App to make life in Macau better\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅外卖官方版下载-澳觅外卖app下载v{package_version_name} 安卓版-火火资源网",
+        "url": "http://m.hnfcjr.com/soft/29957.html",
+        "site_name": "火火资源网",
+        "publish_time": "2026-08-06T00:00:00+08:00",
+        "summary": "澳觅外卖app\n类型：生活服务版本：v{package_version_name} 安卓版\n大小：97.1M更新：2026-08-06\n官网：https://www.aomi.com/\n厂商：珠海澳觅网络科技有限公司\n应用截图\n导读：澳门吃喝玩乐一站搞定，点外卖查评价就靠它，推荐试试！\n应用介绍\n澳觅外卖是澳门本地一款安全可靠的一站式生活服务平台。无论是生鲜百货、美食佳肴，还是休闲娱乐，应有尽有，一应俱全，真正实现万物到家，极速配送服务，快来下载澳觅外卖App，开启你的无忧生活之旅吧！\n澳觅介绍\n澳门澳觅外卖致力于挖掘澳门最地道的吃喝玩乐体验，是本地化的生活服务优选平台，也被誉为“澳门版美团+大众点评”。它不仅为用户精选值得信赖的本地商家信息、真实消费评价和丰富优惠资讯，还为商家提供高效、精准的推广工具，助力品牌触达更多本地消费者。无论是寻找人气美食、特色店铺，还是享受便捷生活服务，澳觅外卖都是您探索澳门生活的理想指南。\n澳觅怎么添加收货地址\n1、点击最右侧的我的按键\n2、向下拉找到收货地址\n3、点击右上角的新增填入收货地址即可\n澳觅怎么看美食榜排名\n1、点击首页下方的团购优惠\n2、点击最上方的附近打卡人气榜\n3、进去之后就可以看到各种美食类别的榜单\n澳觅怎么联系外卖客服\n1、点击我的按键\n2、向下划找到在线客服选项\n3、点击进去发送订单联系外卖客服即可\n应用信息\n包名：com.mem.MacaoLife\n名称：澳觅\nMD5值：5aab9d82bfdad4593a9b247e9ca26349\n隐私政策：点击查看\n备案号：粤ICP备18132113号-12A\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Aplicativos de entrega de comida em Macau (2026) | bento.travel",
+        "url": "https://www.bento.travel/pt/macau/food-delivery",
+        "site_name": "",
+        "publish_time": "2026-08-21T00:00:00+08:00",
+        "summary": "Aplicativos de entrega de comida em Macau\nÚltima atualização: agosto de 2026\n·\nEscrito por Anthony Toast\n·\n6 fontes\n2 apps 1 essenciais\nO mercado de entrega de Macau é liderado por aplicativos locais, não pelos nomes globais esperados por muitos visitantes. mFood e Aomi oferecem inglês no aplicativo. Cardápios dos lojistas e a entrega final ainda podem exigir tradução.\nComece pelo mFood, que publica as formas de pagamento com clareza. Compare o Aomi se a primeira busca não mostrar seu restaurante ou endereço. Antes de depender de qualquer um, teste o prédio exato, o telefone e a forma de pagamento.\nEscolha pelo idioma e pelo risco no pagamento\nSua situação Recomendação\nVocê precisa da configuração mais clara para visitantes Abra o mFood em inglês e teste o endereço completo. 1 2\nO mFood não mostra o restaurante ou oferta Experimente o Aomi em inglês e depois busque o nome chinês do local, se necessário. 3 5 4\nVocê depende de um Visa ou Mastercard estrangeiro Adicione cedo e faça um pequeno teste de pagamento. 1\nUm hotel, resort ou apartamento protegido Coloque o pino na entrada pública e planeje a entrega no lobby.\nUma restrição de ingrediente importante para a saúde Ligue para o restaurante em um idioma comum ou não peça.\nPara patacas, cartões estrangeiros e alternativas de pagamento além da entrega, continue em Apps de Pagamentos em Macau\nDetalhes dos apps\nmFood Essencial\nO app local mais prático de Macau para visitantes, com refeições, retirada e algumas entregas do dia a dia.\nDica: Mude para inglês, mas espere cardápios em chinês. Informe o endereço completo, encontre o entregador no saguão e confirme primeiro o pagamento.\nAomi\nUm mercado de entrega e compras locais de Macau muito voltado ao chinês, que oferece um segundo catálogo de restaurantes.\nDica: Use capturas com tradução pela câmera e confira celular, endereço e pagamento antes de montar um pedido grande.\nResumo\nNão disponível aqui O Uber Eats não opera em Macau. O mFood é o app local de entrega mais prático para visitantes, enquanto o Aomi é uma alternativa muito mais voltada ao idioma chinês.\nNesta página\n1.\nOs nomes úteis são mFood e Aomi, não os padrões globais\n2.\nAs informações oficiais divergem; confirme a entrega na tela de pagamento\n3.\nA navegação em inglês deixa o conteúdo do restaurante sem tradução\n4.\nExibir a bandeira do cartão não garante a aprovação do pagamento\n5.\nOs últimos metros são problema do hotel, não do mapa\nOs nomes úteis são mFood e Aomi, não os padrões globais\nO mFood oferece interface web em inglês, entrega de restaurantes, rastreamento de pedidos, compras em grupo e uma seção de mercado anunciada como disponível 24 horas. É a opção mais sólida para testar primeiro em uma estadia curta, embora o conteúdo dos lojistas e o atendimento ainda possam priorizar o chinês. 1 2\nO site oficial do Aomi anuncia mais de mil restaurantes e cobertura de comida em Macau, além de ofertas em grupo e compras locais. A ficha atual inclui inglês. O conteúdo do lojista ainda pode ficar em chinês. É um aplicativo de comparação real, não apenas uma alternativa em chinês. 3 5 4\nAs informações oficiais divergem; confirme a entrega na tela de pagamento\nA ficha atual do mFood promove 4 mil restaurantes em Macau e entrega a partir de 15 minutos. O site em inglês ainda descreve círculo de 2 km e entrega em 30 minutos. Os números não combinam. Trate ambos como marketing, não garantia para restaurante ou endereço. 1 2\nDigite o prédio exato antes de olhar. Compare lista ativa, pedido mínimo, taxa de entrega e horário estimado no pagamento. Um resultado para Macau inteiro não prova que uma cozinha atenderá seu lado da península ou a entrada do resort. 1 4\nA navegação em inglês deixa o conteúdo do restaurante sem tradução\nNomes de restaurantes, pratos, opções e mensagens de suporte podem continuar em chinês depois de a interface mudar para inglês. Busque o nome chinês exato, traduza capturas e confira quantidades antes de pagar. Uma foto mostra o estilo, não os ingredientes. 5 6\nTeste a entrega de SMS antes de criar um carrinho grande e mantenha o telefone cadastrado acessível ao entregador. Se um número estrangeiro nunca for verificado, pedir direto ao restaurante é melhor alternativa do que solicitar códigos repetidamente.\nExibir a bandeira do cartão não garante a aprovação do pagamento\nO mFood lista atualmente Visa, Mastercard, UnionPay, MPay, WeChat Pay, Alipay e vários métodos bancários de Macau. Isso estabelece caminhos compatíveis, não garante aprovação de todo cartão estrangeiro, país da conta ou controle antifraude. 1\nComece pequeno. Adicione o cartão pretendido antes de precisar do jantar, mantenha um segundo cartão físico e confirme o total final em MOP. Se a autorização falhar, tente outro método ou pedido direto. Nunca envie dados de pagamento ao entregador por conversa não verificada.\nOs últimos metros são problema do hotel, não do mapa\nResorts com cassino, hotéis e residências protegidas podem impedir entregadores nos andares de hóspedes. Acrescente nome oficial, torre, lobby ou entrada da rua e uma referência curta. Desça antes da chegada, especialmente quando você e o entregador não falarem o mesmo idioma.\nEm caso de alergia grave, fale diretamente com o restaurante e obtenha resposta clara sobre ingredientes e contato cruzado. Rótulo traduzido, observação livre ou foto do prato não dão essa garantia. Se a resposta for incerta, escolha refeição que possa inspecionar pessoalmente.\nSe o app não funcionar\nLigue para o restaurante, peça ao concierge um lugar próximo que aceite pedidos diretos, escolha retirada ou vá a pé. Tenha patacas para pedido direto em dinheiro se o lojista aceitar, mas confirme total e ponto de retirada antes de começarem a cozinhar.\nO que este guia não cobre: Verificado em 21 de agosto de 2026. Cobertura, limites, idioma, verificação do telefone, taxas e aprovação de cartão mudam conforme a conta e o endereço. As páginas oficiais apresentam os produtos e meios de pagamento atuais. Relatos da comunidade revelam dificuldades para visitantes, não uma medição da confiabilidade das plataformas.\nPerguntas frequentes\nComo encontro um restaurante de Macau quando a busca em inglês falha?\nCopie o nome chinês exato da ficha oficial ou resultado do mapa e traduza as telas de pratos e opções antes do pagamento. Fotos parecidas ou nomes traduzidos automaticamente podem ser itens diferentes.\nfoodpanda, Deliveroo ou Uber Eats operam em Macau?\nNão são as escolhas locais normais. Use serviços de Macau como mFood ou Aomi, ou fale diretamente com o restaurante em vez de confiar em uma lista regional antiga.\nPosso usar telefone e cartão estrangeiros no mFood?\nO serviço aceita as principais bandeiras, mas um número estrangeiro ainda pode falhar na verificação e um cartão estrangeiro na autorização. Teste ambos antes de um pedido urgente e mantenha outro cartão ou a opção de pedir diretamente ao restaurante.\nUm entregador de Macau levará comida ao meu quarto de hotel?\nMuitas vezes não. A segurança pode exigir a entrega no saguão ou em uma entrada pública indicada. Acrescente o nome da torre e o ponto de encontro e chegue antes do entregador.\nPosso confiar em observações traduzidas sobre alergia em aplicativo de Macau?\nNão. Fale com o restaurante e confirme restrição e risco de contato cruzado em idioma comum. Se a cozinha não responder claramente, não dependa da observação.\nEsses apps precisam de dados\nA Guac eSIM cobre Macau com planos a partir de US$ 0,58 por GB. Instale antes de pousar e ative na hora.\nUm eSIM de dados oferece internet, não um número local, então não recebe códigos SMS de verificação.\nFontes\nDados verificados em agosto de 2026\nDas empresas\n1.\nmFood - MerryDelivery · mFood\n2.\nmFood-澳門美食外賣超市團購 · Apple App Store\n3.\n澳覓-澳門一站式生活服務平台 · Apple App Store\n4.\n澳覓APP-澳門最大的外賣美食平台 · Aomi\nRelatos de viajantes\n5.\nFood Apps for English Speakers · r/Macau\n6.\nQuestions about moving to Macau for studies · r/Macau\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Top Charts - Market Analysis - Sensor Tower",
+        "url": "https://app.sensortower.com/top-charts?category=food_and_drink&country=MO&os=android",
+        "site_name": "Sensor Tower",
+        "publish_time": "2026-08-23T00:00:00+08:00",
+        "summary": "Top Charts\nStore\nDate\n2026/10/06\nCountry/Region\nMacau\nCategory\nFood & Drink\n1\nBlinkit: Groceries & more\nBlinkit\n(9,748,352)\n↑1\nPrice : Free\n2\ntoing - Food Delivery\nSwiggy\n(700,136)\n↓1\nPrice : Free\n3\nZomato: Food Delivery & Dining\nZomato\n(14,551,743)\n—\nPrice : Free\n4\nSwiggy: Food Instamart Dineout\nSwiggy\n(13,603,059)\n—\nPrice : Free\n5\nZepto: Groceries in minutes\nZepto Marketplace Private Limited\n(4,936,146)\n—\nPrice : Free\n6\n麥當勞\nMcDonald's Apps\n(809,121)\n—\nPrice : Free\n7\nUber Eats：人氣餐廳美食和生鮮雜貨外送平台\nUber Technologies, Inc.\n(7,895,097)\n—\nPrice : Free\n8\nfoodpanda - 線上美食訂購及生鮮雜貨外送\nFoodpanda GmbH a subsidiary of Delivery Hero SE\n(3,578,082)\n—\nPrice : Free\n9\nKeeta - 外賣送遞及自取\nKANGAROO LIMITED\n(226,955)\n—\nPrice : Free\n10\nПятёрочка: доставка продуктов\nПятёрочка\n(375,147)\n—\nPrice : Free\n11\niFood comida e mercado em casa\niFood Delivery de Comida e Mercado\n(13,484,878)\n—\nPrice : Free\n12\ntalabat: Food, grocery & more\nTalabat\n(545,381)\n↑1\nPrice : Free\n13\nPedidosYa - Delivery Online\nPedidosYa S.A\n(2,240,781)\n↓1\nPrice : Free\n14\nDoorDash: Food, Grocery, More\nDoorDash\n(6,235,178)\n—\nPrice : Free\n15\nWolt Delivery: Food and more\nWolt Oy\n(505,555)\n—\nPrice : Free\n16\nBurger King India\nRestaurant Brands Asia Limited\n(344,234)\n—\nPrice : Free\n17\nTrendyol Go: Yemek, Market, Su\nTrendyol Go\n(465,343)\n—\nPrice : Free\n18\nBolt Food: Delivery & Takeaway\nBolt Technology\n(273,952)\n—\nPrice : Free\n19\nEatSure Food Delivery\nRebel Marketplace Private Limited\n(326,233)\n—\nPrice : Free\n20\nRestaurant - Cooking Games\nWowsomeSphere\n(178)\n↑2\nPrice : Free\n21\nYemeksepeti - Yemek & Market\nYEMEK SEPETİ ELEKTRONİK İLETİŞİM A.S.\n(1,509,062)\n—\nPrice : Free\n22\nDodo Pizza Delivery\nDODO BRANDS INTERNATIONAL FZCO\n(494,900)\n↑1\nPrice : Free\n23\nEatClub: Food Delivery App\nPHPL\n(485,712)\n↑2\nPrice : Free\n24\nВкусВилл: доставка продуктов\nVkusVill\n(143,548)\n↑2\nPrice : Free\n25\nBistro: Food in minutes\nBlinkit\n(90,455)\n↓1\nPrice : Free\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254785051900000000000000000000ffffac159db29dc267"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 13423,
+   "output_tokens": 784,
+   "total_tokens": 14207,
+   "input_tokens_details": {
+    "cached_tokens": 6256
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 176
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807032,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T09:57:11+08:00"
+}

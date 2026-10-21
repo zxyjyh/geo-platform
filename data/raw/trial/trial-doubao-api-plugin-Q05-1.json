@@ -1,0 +1,254 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门生鲜配送平台哪家好？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548619,
+  "id": "resp_02179254861709185f36e5500b1e72470cfcfcd79be288a77e29e",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254861908900000000000000000000ffffac191133cef205",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户询问澳门生鲜配送平台哪家好，2026年10月的最新相关信息，我将通过搜索工具查询。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGqzA8WZnSL1Oc3+FOjFwRDXx1ZZzqHP29DXtH7tjM2cXk9fKaiXnc7V7vcuWoAxV24VFVgxXGVxNxefsFcWQLspclEwkpqEMJDwQ3epcjuxpcJhpQz607PYUTNCOaD9OthXD5gGJHtrjQF1cqkUeaId9J/v5YlP+rC3qSb6gJOu2EYXh/VOR2f4d5/KIpdUYdYgjGmnGWN75UX9iqB/ZeZF9qkEF33Zb0c4nv0TXCOt9xJMu+Eu2NfC+op2p8/uY+PvdaJbwfQLXtVsnJ1rC1ij/bouhdVvg14+76AC6bQErEzq48inFmWzUNE45J+R+1ygPGN+I6rEGd72cZ9uo3BcXdESrU7JhQwq8cCJD7JMcjwt1osaYbziBZVPVP2IwPYQy/O7/Tnvut0RmxyDp26rEuXzZR35oZS6sGwWLO/89rR7A=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 生鲜配送平台 推荐 2025;澳门 网上超市 买菜 配送;澳门 生鲜电商 对比",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254862269700000000000000000000ffffac191133e5969d"
+   },
+   {
+    "id": "rs_02179254862584800000000000000000000ffffac191133b70c34",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "搜索结果提供了一些信息：\n1. 现有搜索结果提及了多款澳门本地及外来的生鲜配送相关平台，其中部分内容疑似营销不实，我将补充搜索核实澳门主流生鲜配送平台的相关信息。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFOJOEutD2qhNim5sbyxFeIke1QfsQwy9MiM4MbHhmDkJeB+dWxF0ALPIa2cO1vdJtIJFrMYfuJhr7EeMSDFk3ic3ckI4WaUlc3gmKsVtzVfGHRTJV1rZnyO2Fg+NJg7G6YMj0XBOFn0Kjogsk2rynyD52pSZRvUOYSYZvpiWuEOW+UtXX8pYPWuPKJmHfY6CKiEaq/4FgPd92Iv9ZITre3CSRx+rr1zSMoTsnRwGjktHCxENNscyGhiYL1RIofQE8nheScoE+qDIq0GIr3sLTf1b5EGGMGlby68SSRMaj6hmf9vXuenCnm/Riipo0aHYB3HttbrrGKoi/aI6zSVICsBYId8Q8HKsD2zc+H3Cl8r1Gw8UmR0iQcPm4UgLQE6RlpY96oD+QJCrorCZgr1S7fPcFZIEiSi+rtOOR9AsVS1WMRScRXb9GhIWxMl8Je0uMq5S7SwCbKn8ORwvkH2/+Gj1+2p8aXA+IOGWpz3lCNGIkiAgOZLk8clKNaS04TKZS7bKfcnPUWmEiMQ/9Pku0wzP71ANsT62bVh9jkDp6AK7IGqUuRmyhwWbK5zmQHuZhdah1mgBj2ZEHZcFc7VZC+vqRbd/rFBPOV9zfHK97XI+ohiK5/SYtjUjn11Q3O8c7Lr3OVeOnMttL3b/6us8nc2X8CCWlgERUYLFifcyMVCW2nzSnOGlBpR8U4XxOUNLOzeGNusvyS4Oy5y459j0DHNFEUBLouVcrv3Ye1nqL5d8hI85vzARhALxn6vtzvC+l3G+UkYseJ1KuCBdKzWFf0fTDsuRKJfYLe/YN5sIHyk2t5/bg3lB+5DKBKtUY7i7SjzXLCEeQ+ix/CBgLuMzeYET1hdfLWwsScnk0bl/5ThsBp+1poR5iwFavdP333wVx5VRFlSyWYK7/o"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門 網上買菜 生鮮 app 澳覓 mFood;澳門 百佳 來來超市 網購 送貨;澳門 鮮品達 生鮮配送 評價",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254863392800000000000000000000ffffac191133ce1069"
+   },
+   {
+    "id": "rs_02179254863942200000000000000000000ffffac19113362ef61",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "第二次搜索没有找到太多澳门本地生鲜平台的具体对比信息。已确认涉事为香港消委会相关，将调整关键词再次搜索。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHK988JBvKRkCxHEK1LdGLne2RlaqfIMQ8J5YooO+90apzsxwb/SIf7pS7nguqIW3MgWdDg+xMfmTV4B5AHaaI8ZFVGT6/vJ5UgE6fXJkiOzrdv0yG+by+zSb8bvFN7ilg3X7zcDsY2WSAj+4ze+5o4k72aY46c0X/FPqxLxSiShkBCnKLM5OpuX3jGtWAcptGD5LHrdaJeI3i70dBGJ8M9hYlAVdlAKByNj8aMEuOzzT/3ItNez4ZfNCA6CnpbP22c8mk8oE810IfxEPHgDsisxcdyTX2+6pDC16mJRvUkMwBOk02fscxau3ozL0zAr5vANu1SR4hyPoh83OlR+8Z5YqrK5z1/wYoZnfdu59/TwYJ0vCP1oaFXF+SYCMpv+PKTv99zUEwv80c="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳覓app 超市 生鮮 送貨 澳門;澳門 來來超市 網上下單 配送服務;澳門 網購蔬菜肉類 即日配送 平台",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254864291300000000000000000000ffffac191133fc4bf4"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "目前澳门主流的生鲜/超市配送主要集中在几款本地生活App和大型连锁超市自有渠道。没有绝对\"最好\"，按需求选更实际：\n\n## 🥇 综合首选：澳觅 App\n澳门规模最大的本地一站式生活服务平台，生鲜配送是其核心板块之一：\n- **超市便利极速闪送**：接入来来、百佳、7-Eleven 等，生鲜蔬果、鲜花蛋糕都能下单\n- 另有拼团/全球好货、跑腿代买（帮买街市食材等）功能\n- 2025年9月起与**顺丰同城\"SoFast\"**合作，澳门半岛可享快至1小时达，配送时效和稳定性进一步提升\n- 支付友好：支持澳门币信用卡、支付宝、微信、MPAY等，内地游客也能用\n- 适合：想一个App搞定外卖+买菜+日用，追求配送速度\n\n## 🥈 mFood App\n外卖+超市+团购一体，超市频道品类较全：\n- 涵盖**蔬菜水果、肉禽蛋、海鲜、粮油调味**等生鲜品类，也有日用品\n- 接入连锁品牌超市和便利店，提供全年24小时即时配送，号称约30分钟送达\n- 新人礼包、满减券（如满198减25）等促销较多，App Store 评分4.7\n- 适合：看重优惠力度、夜间或离岛（氹仔）下单\n\n## 🏪 大型超市自有渠道\n- **来来超市**：澳门本土最大连锁超市（\"澳门人的超市\"），可通过官网/小程序或经澳觅入口下单，品控稳、SKU全（5万+种商品），适合日常囤货\n- **百佳（PARKnSHOP）**：同样支持线上选购配送到家，品牌商品和进口食材有优势\n\n## 选择建议\n| 需求 | 推荐 |\n|---|---|\n| 追求速度、品类全 | 澳觅（顺丰同城运力） |\n| 薅优惠、买生鲜+外卖 | mFood |\n| 认准老牌超市、大宗采购 | 来来、百佳线上渠道 |\n\n**小提示**：澳门半岛配送覆盖最好、最快；氹仔及路环离岛建议下单前确认配送时段和运费。生鲜类尽量选择可预约时段、支持退款售后的平台，收到货时当场查验冷链状态。如果人在珠海想给澳门的亲友下单，上述平台多数支持内地手机号注册和跨境支付，非常方便。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "顺丰同城“SoFast”与“澳觅APP”强强联手，共建澳门全场景一站式即配服务_中华网",
+        "url": "https://m.tech.china.com/digi/articles/20250919/202509191735745.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/773c2abc4c250528c4e764465bb4398a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620624&x-signature=JDJ7nQb5R76ES4r6OW9mH%2Bnx8dw%3D",
+        "site_name": "中华网科技频道",
+        "publish_time": "2025年09月19日 17:57:00(CST) 星期五",
+        "summary": "顺丰同城“SoFast”与“澳觅APP”强强联手，共建澳门全场景一站式即配服务\n来源：看点时报 2025-09-19 17:57:54\n近日，中国规模最大的第三方即时配送平台顺丰同城（9699.HK）以“SoFast”品牌正式登陆澳门，这也是继去年7月“SoFast”登陆香港——首次在境外提供即配服务后，其境外业务布局的又一重要突破。\n据了解，此次“SoFast”登陆澳门，顺丰同城已与澳门本地规模最大的生活服务平台“澳觅APP”达成战略合作，双方将整合各自资源优势，强强联合，为澳门商户和用户提供更高效、便捷的同城即配一站式服务，共同推动澳门本地生活数字化升级。\n顺丰同城“SoFast”将在澳门构建起面向商家（To B）与消费者（To C）的业务矩阵，覆盖“餐饮+非餐饮”全场景，提供快至1小时送达的即时配送服务，配送范围包括文件、鲜花、餐食、茶饮、珠宝、数码产品等品类，通过“澳觅APP”及“顺丰速运（SF-EXPRESS APP）”等多种渠道实现业务落地。\n澳门商户可通过顺丰同城商家版下单；消费者用户通过“澳觅APP”或“顺丰速运（SF-EXPRESS APP）”选择“顺丰同城”服务，便可体验到顺丰同城提供的点到点全品类即时配送服务，初期配送范围覆盖澳门半岛。凭借更快速、稳定的配送体验，顺丰同城将进一步满足澳门居民对“即想即得”消费模式的需求。\n近年来，随着澳门本地生活平台服务的持续渗透，澳门消费者对快速配送和准时送达的需求持续提升，相较内地，港澳地区即配市场仍存在明显增长空间。顺丰同城有望在港澳地区进一步对标其内地服务，接入更多商户端品牌自营APP、外卖平台等，拓展个人用户端的“取送买办”服务，并与顺丰集团继续深度协同和运力融合，推进“最后一公里”业务并共同打造“一体化供应链解决方案”，为商户、用户及各大商流平台、物流平台等提供全场景、规模化、全天候的专业服务，并通过对餐饮外卖、同城零售、近场电商和近场服务全覆盖，承接更多元化渠道订单，进一步发挥其在内地积累的全场景第三方即配模式成功经验，为港澳地区即时配送市场注入新活力。\n随着顺丰同城在大湾区这些各具国际化特色的城市场景积累经验，也有望为公司未来开拓其他海外市场发展机遇扎稳根基。\n责任编辑：kj005\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620624&x-signature=MnCUniRutGFW0ORySbDPsVNgBEY%3D",
+        "site_name": "App Store",
+        "publish_time": "2026年10月21日 04:38:49(CST) 星期三",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有\n保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦！ 真0元起送，告別40元湊單! 一口價低至19.9咖啡奶茶送到手! 單單無門檻，全免配送費！\n即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\n\"即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\"\n【離島區復活歡樂季】 天天領$20外賣＆團購紅包！ 助力領$100實體現金券包！ 【mFood外賣】 每週完成3單，返$60減30外賣半價券！\n【mFood外賣】 逢星期一領「麥當勞」$30無門檻紅包！ 【mFood團購】 嘗新優惠新客價，品質大牌低至$1！\n【mFood外賣】 天天領馬到成功紅包，嗌外賣滿68減20、滿150減50！ 【mFood團購】 疊加紅包最高減$60，團購下單即抽「惠聚新口岸」消費金\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门线上生鲜竞争现状分析",
+        "url": "https://www.zcqtz.com/news4286418",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/3de2fc0bc4a8c2426322a71e3fb9cdfb~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620624&x-signature=dqWvgk%2Fjk%2BkYZo0T8jVwcKCMEyY%3D",
+        "site_name": "丝路印象",
+        "publish_time": "2024年12月24日 18:54:00(CST) 星期二",
+        "summary": "澳门线上生鲜竞争现状分析\n作者：丝路印象\n发布时间：2024-12-24 18:54:32 | 更新时间：2026-08-29 08:27:22\n澳门线上生鲜市场近年呈现爆发式增长，成为本地零售业重要赛道。本文从供应链建设、平台差异化、支付创新等八个维度深入剖析竞争格局，结合鲜品达、澳觅等主流平台案例，揭示行业面临的冷链物流瓶颈与跨境配送机遇，为消费者选择与从业者布局提供实用参考。\n澳门线上生鲜竞争现状分析\n作为全球人口密度最高的城市之一，澳门近年来线上生鲜业态的崛起悄然改变着居民的生活节奏。据澳门统计暨普查局数据显示，二零二二年当地网络购物交易额同比上升百分之三十四点六，其中生鲜品类增速尤为显著。这片面积仅三十多平方公里的土地上，正上演着传统街市与数字菜篮子的激烈碰撞。\n供应链布局决定市场半径\n在半岛与离岛的双城格局中，生鲜平台的仓储网络如同血管般延伸。拥有十五年历史的本地品牌鲜品达在澳门机场附近建立三千平方米的恒温仓储中心，其每日清晨五点的跨境配送车队成为保障供应的生命线。相比之下，新兴平台叮咚买菜则采取\"前置仓+合作店\"模式，在筷子基、黑沙环等住宅区设置九个微型仓储点，实现订单十分钟响应机制。更值得关注的是跨境生鲜平台\"大湾区优选\"，其依托横琴自贸区的仓储基地，通过港珠澳大桥实现两小时跨境直达，成功将供应半径扩展至珠江西岸。\n品质分级策略分化客群\n针对澳门特有的高端酒店与普通家庭双重需求，各平台形成鲜明的品质梯度。澳觅平台推出\"米其林星厨甄选\"专区，\n进日本宫崎和牛与法国吉拉多生蚝，配合真空冷鲜技术确保高端食材品质。而主打民生市场的\"街市通\"则聚焦本地街市联盟，每日上线近百种澳门渔民直供海产，其特色的\"渔船直播\"功能让顾客可实时挑选南海海域的鲜活渔获。这种差异化定位在价格带上体现得尤为明显，数据显示高端生鲜订单平均客单价超过五百澳门元，是普通订单的三倍以上。\n冷链技术构建竞争壁垒\n在亚热带气候条件下，冷链物流成为品质保障的关键。鲜品达投入千万澳门元引进德国双温区冷藏车，车内温度波动可控制在正负零点五摄氏度以内。其独创的\"时间温度标签\"技术，当商品经历温度异常时会触发标签变色，为品质追溯提供可视化依据。而专注社区团购的\"邻里优选\"则开发共享冷藏柜系统，在二百多个屋苑设置智能取货点，有效解决上班族收货时效难题。这些技术创新不仅降低商品损耗率至百分之三以下，更形成难以复制的运营壁垒。\n支付生态影响转化效率\n澳门多元的支付习惯促使平台构建复合型结算体系。主流平台均支持澳门通、中银智慧付等本地电子钱包，同时接入了内地游客熟悉的支付宝与微信支付。值得注意的是，部分平台开始尝试金融创新，\"澳觅\"与大丰银行合作推出\"先鲜后付\"服务，用户可享受七天账期而无需手续费。这种信用消费模式使平台复购率提升百分之二十，尤其受到年轻客群欢迎。而针对博彩从业者的特殊作息，更有平台推出凌晨时段专属折扣，支持赌场内部结算系统转账。\n跨境协作突破资源瓶颈\n面对本地农业资源有限的现状，跨境协"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855619926&x-signature=7rQdQJAleexkNutjCJyDMQ%2FvvwU%3D",
+        "site_name": "App Store",
+        "publish_time": "2026年10月21日 04:38:49(CST) 星期三",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質\n保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來\n啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦！ 真0元起送，告別40元湊單! 一口價低至19.9咖啡奶茶送到手! 單單無門檻，全免配送費！\n即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\n\"即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\"\n【離島區復活歡樂季】 天天領$20外賣＆團購紅包！ 助力領$100實體現金券包！ 【mFood外賣】 每週完成3單，返$60減30外賣半價券！\n【mFood外賣】 逢星期一領「麥當勞」$30無門檻紅包！ 【mFood團購】 嘗新優惠新客價，品質大牌低至$1！\n【mFood外賣】 天天領馬到成功紅包，嗌外賣滿68減20、滿150減50！ 【mFood團購】 疊加紅包最高減$60，團購下單即抽「惠聚新口岸」消費金\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25"
+       },
+       {
+        "type": "url_citation",
+        "title": "首次实试5大网上超市 小心送货脱期货品质素差 - 消费者委员会",
+        "url": "https://www.consumer.org.hk/tc/article/530-online-grocery-shopping/530_grocery_delivery",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/f350f5c998cc228f8510904329c751d7~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620637&x-signature=M9%2FTcsGYnKuzjvYpBqE1tGa3EaU%3D",
+        "site_name": "Consumer Council 消費者委員會",
+        "publish_time": "2020年12月01日 00:00:00(CST) 星期二",
+        "summary": "出，盡量避免到人多擠迫的超市購物，網上超市服務的需求因此變得殷切，惟在求過於供的情況下，消費者是否真的可安坐家中，透過網站或手機選購貨品，超市便準時快捷地將物品送到府上? 為了解實際情況，本會職員以一般消費者身分於5間本地網上超市進行實試，發現在網上訂購新鮮或冷凍食材的經驗大多欠佳，最差的情況下花了 1整天才完成整個訂購程序；貨物在落單後26天才送到；食材送到時已破爛變壞、不宜食用等。\n送貨安排\n送貨安排\n可否按自己意願揀選合適的送貨日子和時間?\n香港人工作繁忙，平日的上班時間一般都未必有人在家，因此是次實試亦審視各網上超市的送貨安排是否容許顧客揀選合適自己的送貨日期和時間。\n「HKTVmall」（#1）、「惠康」（#2）及「百佳」（#3）均容許顧客揀選送貨日期和時段，「HKTVmall」（#1）的送貨時段為3至4小時，「惠康」（#2）及「百佳」（#3）的送貨時段則可長達5小時，送貨的時段愈長代表顧客可能需要在家中等候送貨的時間愈久，較不方便。\n「city'super」（#4）只容許顧客揀選送貨日期，而結帳和確認頁面均沒有列明送貨時段，顧客無從得知送貨日的哪一個時段須要留在家中等候收貨。「city'super」（#4）的主網頁底部有一個名為「網上購物及送貨」的連結，10月時列出的每日送貨時段為下午2至8時，11月則改為下午3至8時，送貨時段資料位置不在網站的當眼處並會隨時更改，顧客購物期間難以察覺有關重要資訊。\n「big big shop」（#5）於結帳頁面會自動安排預計送貨日期但卻沒有列出送貨時間，然\n而由商戶指定的送貨安排，欠缺彈性之餘亦未必能配合顧客的時間表和送貨需要。\n可否盡快收到貨品？\n落單後，顧客當然希望可以盡快收到選購的貨品。「百佳」（#3）及「city'super」（#4）均聲稱可提供「即日送貨」，但實試中只有「city'super」（#4）能夠提供即日送貨服務。「city'super」（#4）的送貨安排最迅速，可安排落單後0至2日送貨；「百佳」（#3）最快可安排1至2日內送貨；「惠康」（#2）為2至4日；「HKTVmall」（#1）需等待2至6日；「big big shop」（#5）的預計送貨時間最長，落單後實試員獲告知需等候3至13日才收到貨品。\n可否一次過送貨？\n相信不少消費者都會認同網購後在家等收貨是很花時間的，故當然希望一次過收齊訂購的所有貨品，無需於不同時段等候收貨。實試員成功付款後，「惠康」（#2）、「百佳」（#3）及「city'super」（#4）於確認頁面均註明一次過送貨。於「HKTVmall」（#1）的5次實試中有4次為一次過收貨，另有一次實試訂購的雪糕為商戶直送，因此該次實試需分2次收貨。惟「big big shop」（#5）沒有提供一次過送貨的安排，5次的實試都需要分3至4次於不同時間收貨，該等送貨安排對不是常常在家的顧客難免造成困擾。\n送貨時間可否方便上班族？\n實試的5間網上超市均可讓顧客揀選或應顧客要求於週末或假期送貨，但沒有提供於晚上8時後送貨的選項，為體驗各公司能否提供彈性的送貨時間，於其中2次實試，實試員在「特別要求」欄目中註明要求晚上8時後送貨，最終只有「惠康」（#2）及「百佳」（#3）可按要求於晚上8時後把貨"
+       },
+       {
+        "type": "url_citation",
+        "title": "​空陆鲜活产品专属快线延伸至澳门(附图/短片)",
+        "url": "https://www.info.gov.hk/gia/general/202604/23/P2026042300568.htm",
+        "logo_url": "",
+        "site_name": "香港政府資訊中心",
+        "publish_time": "2026年04月23日 00:00:00(CST) 星期四",
+        "summary": "空陸鮮活產品專屬快線延伸至澳門（附圖／短片）\n空陸鮮活產品專屬快線（鮮活快線）再添里程碑，一批重約986公斤的鮮活龍蝦於昨日（四月二十二日）從加拿大空運抵港，隨即以跨境冷鏈貨車經由港珠澳大橋直接轉運至澳門，成為首票海外鮮活產品利用鮮活快線經香港直送至澳門，實現「海外—香港—澳門」一站式直送。\n鮮活快線得以延伸至澳門，有賴港澳兩地政府高效協同、深度合作，其中香港海關首次將「粵港澳三地一鎖（港澳段）」應用於鮮活快線，透過電子鎖及全球定位系統技術，實現「一鎖到底、全程監控」的閉環管理。\n另外，食物環境衞生署豁免參與鮮活快線的食物進口商的登記要求，進一步簡化清關流程，便利營商，讓鮮活貨物於香港國際機場完成清關後，可採用「一車到底」模式直接運抵澳門市內，全程無縫對接。新安排大幅縮短通關時間，減少鮮活水產損耗，保障食材新鮮。澳門進口商對新模式亦表示滿意，認為有效提升物流效率及產品質素。\n鮮活快線自去年開通至今，已有超過420噸海外鮮活產品經香港中轉至中國內地，成果豐碩，獲得業界正面評價，轉運產品包括冰鮮吞拿魚、活龍蝦、活象拔蚌、活鱔、車厘子及葡萄等。\n香港海關一直堅守嚴把關、利商貿的使命，與業界攜手推動多項創新的便商利貿措施，鞏固香港作為國際航空樞紐的領先地位。展望未來，香港海關會繼續推廣鮮活快線的應用，持續深化粵港澳三地合作，推動粵港澳大灣區高質量融合發展。\n空陸鮮活產品專屬快線於二○二五年九月二十六日全面開通，旨在充分利用香港國際機場和港珠澳大橋的優勢，以創新監管模式，簡化水果、冰鮮及活海鮮的清關流程，便利外地的鮮活食品經香港「引進來」內地消費市場，同時亦助力內地優質的鮮活食品「走出去」海外巿場，打造港珠澳大橋成為鮮活產品的「綠色通道」。\n圖片\n網上廣播\n空陸鮮活產品專屬快線延伸至澳門\n完\n2026年4月23日（星期四）\n香港時間19時38分\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳覓-澳門一站式生活服務平台",
+        "url": "https://apps.apple.com/do/app/%E6%BE%B3%E8%A6%93-%E6%BE%B3%E9%96%80%E4%B8%80%E7%AB%99%E5%BC%8F%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8B%99%E5%B9%B3%E5%8F%B0/id1104177940?platform=ipad",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620646&x-signature=vSZsdHCADLLh%2B%2Fz11r9iKY5r8Cg%3D",
+        "site_name": "App Store",
+        "publish_time": "2016年06月01日 00:00:00(CST) 星期三",
+        "summary": "澳覓-澳門一站式生活服務平台\nComida y bebida\nSólo para iPhone\nGratis · Diseñada para iPhone. No verificada para macOS.\nClasificación por edades\n18+\nAños\nCategoría\nComida y bebida\nDesarrollador\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\nIdioma\nZH\nTamaño\n343.5\nMB\niPhone\n【特色服務】 1.澳門吃喝玩樂一應俱全 ◇外賣訂餐水果宵夜，酒店旅遊周邊推薦； ◇團購優惠折扣秒殺，吃喝玩樂購全覆蓋； ◇超市便利極速閃送，生鮮蔬果鮮花蛋糕； ◇澳覓拼團全球好貨，品質好貨省錢省心； ◇澳覓跑腿同城取送，極速幫買幫取幫送。 2.來澳門旅行必備APP，所有事項一站搞定 ◇電召打車，方便快捷； ◇美食優惠，全澳覆蓋； ◇酒店住宿，優惠預訂； ◇洗衣服務，遊玩無憂； ◇觀看演出，鉅惠購票； ◇手機充電，即租即充； ◇澳覓地圖全面升級，點擊店鋪地址欄，提供檢索、路線指引等特色功能，更多驚喜功能期待您去發現。 【產品特點】 澳門吃喝玩樂購，澳覓全都有：美食精選、外賣訂餐、團購秒殺、旅遊出行、電召打車、演出票務、充電寶租借、洗衣服務，澳門一站式生活服務全覆蓋。 ◇情侶約會：吃美食、看電影、住酒店、去旅遊； ◇懶宅點餐：美食、水果、鮮花、下午茶、超市百貨； ◇朋友轟趴：按摩足療、KTV、桌遊電玩； ◇旅遊手信：充電寶租借，安德魯蛋撻、茅台代買； ◇打車出行：電召的士，方便快捷； ◇團購秒殺：產地果蔬、品牌食品、家居百貨、一站購齊； ◇買贈優惠：來來超市、百佳超"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅外卖app下载安装,澳觅外卖安卓下载入口-多特软件站安卓网",
+        "url": "https://m.duote.com/android/1173314.html",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/5e4e2b92f9e026e77055eb129088ef87~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620646&x-signature=ZH0Vu6cG1MjB5%2FTjDBRmIcCt3bA%3D",
+        "site_name": "多特软件站",
+        "publish_time": "2026年10月18日 00:00:00(CST) 星期日",
+        "summary": "澳觅外卖\n大小：190.55MB\n类别：生活休闲\n简介\n简介\n澳觅外卖App是澳门本地的一站式生活服务平台，由Fresh Life Technology Company Limited开发。它主要面向澳门居民和游客，整合了外卖订餐、团购 优惠、超市购物、跑腿代买、酒店旅游、充电宝租借等多种服务。核心目标是让用户用一个App搞定在澳门的吃喝玩乐和日常所需。\n软件功能\n1. 外卖订餐：覆盖全澳2000+餐厅，支持美食、水果、鲜花、下午茶等即时配送。\n2. 团购秒杀：提供自助餐、品牌食品、家居百货等商品的折扣团购，部分低至1折。\n3. 澳觅商城：支持超市便利（如来来、百佳、7-Eleven）极速闪送，生鲜日用品送货到家。\n4. 跑腿服务：可代买、代取、代送，比如帮忙买安德鲁蛋挞或茅台酒。\n5. 本地生活服务：包括KTV、按摩足疗、桌游电玩、洗衣、演出票务、酒店预订等。\n6. 电召打车与地图导航：内置打车功能，并升级店铺地图，提供路线指引。\n7. 直播购物：通过“澳觅直播”观看商品实时推荐，支持可视化电商下单。\n软件特色\n1. 支持澳门币支付：绑定Visa或MasterCard信用卡 后，5秒内完成本地货币结算。\n2. 支付安全可靠：由中国银行澳门分行和CyberSource提供支付保障，是澳门首批支持澳门币 移动支付的App之一。\n3. 商户认证严格：所有上线商家均经官方审核，附带用户真实点评和最新优惠信息。\n4. 界面简洁高颜值：上线2小时内就在澳门年轻人和大学生中走红，操作流畅体验好。\n5. 本地化深度强：专为澳门场景设计，比如跨境代收点自"
+       },
+       {
+        "type": "url_citation",
+        "title": "mFood - MerryDelivery",
+        "url": "https://mfoodapp.com/index_en.html",
+        "logo_url": "",
+        "site_name": "mFood",
+        "publish_time": "2026年09月11日 09:27:18(CST) 星期五",
+        "summary": "High quality with low price, one-stop solution!mFood Supermarket provides you with one-stop life services, covering high-quality chain brand supermarkets, retailers, convenience stores, etc. , and provides instant delivery 24/7 all year round. mFood supermarket online products include fruits and vegetables, meat, poultry, eggs, seafood, grains, oils and seasonings, snacks, daily cleaning, personal care and beauty, wine and beverages, etc., to meet customers' daily needs and shop all in one stop! mFood supermarket combines multiple business forms including “offline supermarket + online platform + logistics distribution” bringing new business opportunities to Macau's retail industry while providing users with an upgraded consumption experience.mFoodAn abundant selection of food and beverages for you to choose!Download the mFood app to enjoy every bit of Macao.Create a 2 km radius gourmet circle from your home or office simply by using mFood. Happy food hunt!mFood appmFood merchantWhy Choose UsFast DeliveryFast DeliveryWe will deliver every order you place to you within 30 minutes, so that you can savor the freshness of your food like you are dining at a restaurant.Exceptionally ConvenientExceptionally ConvenientStay at home or office and enjoy thousands of delicacies and takeaway discounts with just a few taps on your smartphone.Safety GuaranteedSafety GuaranteedOur delivery team will always make sure your food is well-packed and deliver it to your doorstep with utmost care and caution.Search All You Want, Search by One TapOur restaurants and catering providers offer you nothing less than a taste adventure with high sanitary standard and reliable food quality. All consumers can enjoy safe, convenient and user-friendly services. By performing a quick search in mFood, you can discover all kinds of food and beverage takeaways in Macao, including porridge, noodle, rice, Hong Kong style café food, coffee, pastry, dessert, sweet soup, fresh fruit, hot pot, street food, fast food, western cuisine, Japanese cuisine, Thai food, Macau style Portuguese cuisine, and so on."
+       },
+       {
+        "type": "url_citation",
+        "title": "澳覓-澳門一站式生活服務平台",
+        "url": "https://apps.apple.com/cn/app/%E6%BE%B3%E8%A6%93-%E6%BE%B3%E9%96%80%E4%B8%80%E7%AB%99%E5%BC%8F%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8B%99%E5%B9%B3%E5%8F%B0/id1104177940?uo=2#information",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620646&x-signature=4V1d202%2F035Zev%2FIoc9DAm7F1xE%3D",
+        "site_name": "App Store",
+        "publish_time": "2016年06月01日 00:00:00(CST) 星期三",
+        "summary": "澳覓-澳門一站式生活服務平台\n美食佳饮\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n3.9\n年龄分级\n18+\n岁\n排行榜\n#32\n美食佳饮\n开发者\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n343.5\nMB\niPhone\n【特色服務】 1.澳門吃喝玩樂一應俱全 ◇外賣訂餐水果宵夜，酒店旅遊周邊推薦； ◇團購優惠折扣秒殺，吃喝玩樂購全覆蓋； ◇超市便利極速閃送，生鮮蔬果鮮花蛋糕； ◇澳覓拼團全球好貨，品質好貨省錢省心； ◇澳覓跑腿同城取送，極速幫買幫取幫送。 2.來澳門旅行必備APP，所有事項一站搞定 ◇電召打車，方便快捷； ◇美食優惠，全澳覆蓋； ◇酒店住宿，優惠預訂； ◇洗衣服務，遊玩無憂； ◇觀看演出，鉅惠購票； ◇手機充電，即租即充； ◇澳覓地圖全面升級，點擊店鋪地址欄，提供檢索、路線指引等特色功能，更多驚喜功能期待您去發現。 【產品特點】 澳門吃喝玩樂購，澳覓全都有：美食精選、外賣訂餐、團購秒殺、旅遊出行、電召打車、演出票務、充電寶租借、洗衣服務，澳門一站式生活服務全覆蓋。 ◇情侶約會：吃美食、看電影、住酒店、去旅遊； ◇懶宅點餐：美食、水果、鮮花、下午茶、超市百貨； ◇朋友轟趴：按摩足療、KTV、桌遊電玩； ◇旅遊手信：充電寶租借，安德魯蛋撻、茅台代買； ◇打車出行：電召的士，方便快捷； ◇團購秒殺：產地果蔬、品牌食品、家居百貨、一站購齊； ◇買贈優惠：來來超市、百佳超"
+       },
+       {
+        "type": "url_citation",
+        "title": "来来超级市场有限公司简介",
+        "url": "https://www.royalsupermarket.com.mo/aboutus.asp",
+        "logo_url": "",
+        "site_name": "",
+        "publish_time": "2022年06月12日 05:50:01(CST) 星期日",
+        "summary": "來來超級市場有限公司簡介\n來來超級市場有限公司是澳門本土最具規模的連鎖式超級市場，首家來來超級市場於1997年正式營業。我們為客人提供琳琳種種的超市貨品、舒適的購物環境及一站式購物體驗。\n 2015年，來來超級市場已在本澳設有30間分店。憑藉專業及經驗豐富的零售團隊，我們經營逾40萬平方呎的超級市場，出售逾5萬種超市貨品。更不時為客人提供精選商品優惠及搜羅世界各地之新產品，務求締造一種親切購物新感受。\n 『來來超級市場係澳門人嘅超級市場』今時今日已成為一句深入民心的口號。我們將繼續拓展集團業務，提供嶄新超市模式，為您帶來更多新驚喜。\nFounded in 1997, the largest local supermarket chain in Macau. Royal supermarket is growing fast with the market by providing diversified merchandise, pleasant shopping environment and convenience one-stop shopping to our customer.\nAt 2015, we have 30 outlets covering every corner of Macau. Our professional and experienced retail team is operating over 400,000 sq.ft sales floor and offering >50,000 various products to our customer. We provide promotion discount on selected seasonal product and introduce latest trendy item from time to time. We promise to bring you a delighted shopping experience!\nOur slogan “Royal supermarket is your best choice at Macau”# has become a well known slogan for local residents. We will move forward by developing new supermarket model and bringing you more surprise and delight!\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254864801200000000000000000000ffffac191133ec4305"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 23071,
+   "output_tokens": 1170,
+   "total_tokens": 24241,
+   "input_tokens_details": {
+    "cached_tokens": 11376
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 322
+   },
+   "tool_usage": {
+    "web_search": 9
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 9
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807817,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:10:16+08:00"
+}

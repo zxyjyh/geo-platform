@@ -1,0 +1,161 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门外卖平台哪个配送最快？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548898,
+  "id": "resp_021792548897271d4be1129d6d4d98edebd93c59b039a0628d716",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254889888500000000000000000000ffffac15d8d8c4b92a",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. Comparison of Macau's fastest food delivery platforms is what I will search for."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEHbcjF+RJmR/IyUcxFDi0V0lqkYVWtLCWTSUmQqWqYDv6s0chbJ7Zg+vP+sUasjeBqhmh8i2a3O5tk0fKDrawI5nDbKVMf4URqBDNIG28zBhp5umBKrT1+8m0/p2ILUjFJB4PQKN0gcMt3i87JvHFuZjsYUA6rMalBnp3SLyMvuXTxW94lr9jqPNNolOykS1AJdiji3rjsIaCl0qnekzdcQI73X4fQOqrW5VSwC2VRcKc+jUq0kJRjKx0U7soO4MfEqkUm4A4VcVFeyfwevCQsWCU6GQ=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖平台 配送速度 最快 对比;澳門 外賣平台 MFood 閃蜂 澳門覓食 配送 時間;澳门外卖app推荐 2025 2026 配送费 速度",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254890236600000000000000000000ffffac15d8d825a833"
+   },
+   {
+    "id": "rs_02179254890633400000000000000000000ffffac15d8d8e6ea2c",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need answer direct with caveat depends location/restaurant/time. \n\nRelevant app performance has been sorted out, with delivery time differences across platforms, regions and periods noted. Comparing ETA at the same location is the most reliable way to choose, and final answers will be given in Chinese with markdown steps using 2026 data, noting no platform always offers the fastest delivery.\n\nI’ve finalized the priority selection rules: mFood leads for pure meal delivery in dense areas like Macau Peninsula, followed by 澳觅, while 闪蜂 suits supermarket delivery. Practical ordering tips are added, with clear steps upfront and final answer at the end."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEkMpuvAMxB+dSyk7ymoCyUsV6+v+Rz1RmkgVb/cINt3hrCHbGqO/Jfkt4UjjRUbx+9xyvl47FwGW2MFJV9t2B1QvINrB+yMM3hvV/GssTJagCkdwILH8i0Xv1suTh4Zvz0LWvkVt0IelVEukMmYVdbJ83ym91nzXxKfLYWFgVO4Yn61vxvNaiyB9OvfOw/ST9cCp82bQxR5rmVqCmJcEjfrueNpJSaUXNvb4Ia0ZQMY4OIFByEqXcUu/kp5bqfL+NFhNBlssdb5PogkjfiqfzflwzBxD+DpBk13BR3/Tozfi3IkGhriAYiBbfybQqxsPRRnjxmTFi2PudS/JX0HyWPtqsyRGMca9PKZBsAtX3tucrJRqBtGuC5akaIGn8sRtI7fGo55YyFjk5lJ4eBP+4FPklkbNRiP05DJxwr0K8N/LpBuYspIk53c8TkkrH0fjvU/2d+fC1bNxRUxWW2M/hzzi+J7gjh1Jld4upKRlfnm+S74en2obYEydrGUZCRx65Y6DGCuoZwI+vhdEu66omyX0n8XpLtQNvDdDeihsyw9zJMg1hbmpYTXJZsAZwzLTLM2SInyHx9Bw7NLbVfedOcwS0ZQ/H5/sUF1sQuYfRq6S6YdfPHuBCxoooFEZFbLXPMqNpI0mma5NjA9ifiYfRVN9A+fIkCAgnmtUsS+NfgYOEXzXkNw4m0AeunByZI4Lhjacw+k7M5ShuXKdfsd+8zY4Nu1ah6+yQnw3XKpLtKLVx4xjrSDkUwP07otMcxVmn07MOmt9iBqXcACs3SSBGMC4qTVaNpWNa2lGbRlPv8tJrH1fe9Kzx2NpwcrIfC1zsazkTu0Outnm6b3zPlXJ8m7817ioNo9eb/gdYapSo4oe0sQaBYxFjJL/EW3lH2WG7UN7wTBLUCQMXQCAH7d2+cXhOfS+tj8lREd5FMseFkogZsERtmcM5reZoaLVJHw8KtvInfbYuXuB/nogrPpmoWe+yujrqiGxHbO0rZnJPJiQo1EXNRdXSuL5ZJUaKwpd39+GuDSWjukY1cenPz5QnCXj5LR9c+45b77UB16W2039MYqJA9kSb0K9+WGxHk8I2r+4+oJZlYySdtSacoW9FH9jz5RTAArrdltJQuICp7jiBz+KcFTSXHQf+o/0L8R5XVCELk9vPCrlP6WqFCStRkhiMJXPLTlTt9nQR0aCwOQ6NssM4bgIZzLEni2nrgXkJZkUJGoiHCeL6xOC9a6mp6WEczDBkHS3JH8t9qH87l1DArdvtzGJmOvPhYD5ZEHVgORv5qEfiXnk9Pu217SGqEddKiB/eERCYWAFPaQ4kQSCqzmDaxTmgZTf+X+9gKG+JED54IlKqIqzm8TbqOam81ayWI1G3SazExYeQ8uB8F8jw2WosuGjxPAPuDkb94YwtQg/z0WDjKiEbJzCnc+gV0KB4RpmGpMAgB+66uN+VKAvcwYehSP4aJIvf2bz4B8JyFB6ycpSUTmEZX6KWDUT5n2vYQfRPueXQpD8oPwM2ZepuypwQL7byslr2J2yLPR0JQ88zlJYdxRRYH1k9G9b0BPaFVxsRK2yeAMt7OJUc4t3/3y3g6f+Zi"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "## 判断思路\n\n1. **看平台类型**：澳门主流外卖平台主要是 **mFood、澳觅、闪蜂**。\n2. **看餐饮即时配送**：根据 2026 年的平台对比，**mFood 最主打“极速配送”**，宣传有“最快 15 分钟送达”“取餐后约 30 分钟送达”，专送响应通常更快。\n3. **看稳定性和覆盖**：\n   - **澳觅**：多数餐饮订单约 **30–60 分钟**，并接入顺丰同城 **SoFast**，澳门半岛可提供快至 1 小时的即时配送，综合稳定性较好。\n   - **闪蜂**：更偏“超市+外卖”，主打 **3 公里生活圈、最快约 1 小时**，家庭采购更有优势。\n4. **实际以 App 预估时间为准**：澳门半岛商圈、氹仔赌场酒店区、路环等位置差异很大；午晚高峰、雨天、节假日也会明显影响速度。同一餐厅最好同时在 mFood 和澳觅查看预计送达时间。\n\n## 最终答案\n\n**单纯点餐饮、追求速度，优先选 mFood；它通常是澳门外卖平台中配送时效宣传最快、专送响应最积极的一个。**  \n若 mFood 在你所在区域运力紧张，再对比 **澳觅**；如果是超市百货、生活用品采购，则 **闪蜂**更合适。最稳妥的方法是：输入准确地址后，比较同一餐厅在各 App 上显示的“预计送达时间”。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855591964&x-signature=1KXUf49oWNnp41yPogRiUqzhxQA%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620904&x-signature=PEG%2BHdlBiQ2sBDE2427XEu0%2BVdI%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。\n\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n\nmFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。\n\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\n\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n\n有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620904&x-signature=PEG%2BHdlBiQ2sBDE2427XEu0%2BVdI%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。\n\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n\nmFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。\n\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\n\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n\n有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。"
+       },
+       {
+        "type": "url_citation",
+        "title": "顺丰同城SoFast 在澳门上线，与当地最大外卖平台澳觅App战略合作",
+        "url": "https://www.jfdaily.com.cn/wx/detail.do?id=983012",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/img/50ea594175fb93ab52dd5b44683f6d70~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855591964&x-signature=GH1yzbkVR%2FVL9zyhZXCOmV4Vk8s%3D",
+        "site_name": "上观新闻",
+        "publish_time": "2025年09月15日 18:21:00(CST) 星期一",
+        "summary": "顺丰同城SoFast 在澳门上线，与当地最大外卖平台澳觅App战略合作\n城生活2025-09-15 18:21\n来源：上观新闻  作者：新民晚报 金志刚\n强强联手，共建澳门全场景一站式即配服务。\n﻿中国规模最大的第三方即时配送平台顺丰同城近日以“SoFast”品牌正式登陆澳门，此前的去年7月，“SoFast”已登陆香港。此次“SoFast”登陆澳门，顺丰同城已与澳门本地规模最大的生活服务平台“澳觅App”达成战略合作，双方将整合各自资源优势，强强联合，为澳门商户和用户提供更高效、便捷的同城即配一站式服务，共同推动澳门本地生活数字化升级。\n顺丰同城“SoFast”将在澳门构建起面向商家（To B）与消费者（To C）的业务矩阵，覆盖“餐饮+非餐饮”全场景，提供快至1小时送达的即时配送服务，配送范围包括文件、鲜花、餐食、茶饮、珠宝、数码产品等品类，通过“澳觅App”及“顺丰速运（SF-EXPRESS App）”等多种渠道实现业务落地。\n澳门商户可通过顺丰同城商家版下单；消费者通过“澳觅App”或“顺丰速运（SF-EXPRESS App）”选择“顺丰同城”服务，便可体验到顺丰同城提供的点到点全品类即时配送服务，初期配送范围覆盖澳门半岛。凭借更快速、稳定的配送体验，顺丰同城将进一步满足澳门居民对“即想即得”消费模式的需求。\n近年来，随着澳门本地生活平台服务的持续渗透，澳门消费者对快速配送和准时送达的需求持续提升，相较内地，港澳地区即配市场仍存在明显增长空间。顺丰同城有望在港澳地区进一步对标其内地服务，接入更多商户端品牌自营App、外卖平台等，拓展个人用户端的“取送买办”服务，并与顺丰集团继续深度协同和运力融合，推进“最后一公里”业务并共同打造“一体化供应链解决方案”，为商户、用户及各大商流平台、物流平台等提供全场景、规模化、全天候的专业服务，并通过对餐饮外卖、同城零售、近场电商和近场服务全覆盖，承接更多元化渠道订单，进一步发挥其在内地积累的全场景第三方即配模式成功经验，为港澳地区即时配送市场注入新活力。\n栏目主编：杨玉红\n文字编辑：金志刚\n题图来源：采访对象提供\n图片来源：采访对象提供\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254892227800000000000000000000ffffac15d8d828fa55"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 4269,
+   "output_tokens": 844,
+   "total_tokens": 5113,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 383
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792808097,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:14:57+08:00"
+}

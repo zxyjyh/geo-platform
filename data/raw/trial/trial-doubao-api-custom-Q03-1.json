@@ -1,0 +1,195 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳觅APP怎么样？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792547981,
+  "id": "resp_021792547979978e47635ed4409d744027d1eb06218e8365db3d9",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254798110500000000000000000000ffffac182c513da30c",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer in Chinese likely. To answer the user about 澳觅APP, I'll search for relevant info."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFRJPwEkENekyDAFGrG0CCzlF6Xjh0Z6d3/g58NCCALgmMFC1MA3U/WTYWjsNZ93ODr1SpbDUq/asVvTPPO/VhI3o8yzdmbl4D8qwg+U/DMaCzWeVELsNrBl26ilTkjuAIbcvsVuxFpirRUjEpX//Igbxe+WQDxP6FbTTpK5xyQjvBo5mKzEWqkhUnb4WVq+dG33DVJcTP+f6pfXdiDpE/8wv0FOEzIk+GSW5rHve2yaDWrodLT+1jcDl9nhqhSidBE0J1g54J1lR9KUZ9zfHcjIuhdDi/IT8BdxVDXLOMoA4h+BZ12LE3Nr+vLBdzwYcwE90hxPw88jvYiV9uqylmtSgF1SHq8QqMN9IXIwK9bz1WFclibizCwPc3AeHcDZg=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅APP 怎么样 评价",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254798463500000000000000000000ffffac182c5183e590"
+   },
+   {
+    "id": "rs_02179254798699800000000000000000000ffffac182c515b2c0a",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need more current info,Search."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHFffAvrW+TUBIS898z+QVA1JJhoggPZkOi/IT79edf6s1skCm275NKkyTNvMtu74R9mXvXB/nsHtVGHQRjqShSUwI7Msa7v3K29R0f6J6opxG8ft6DvTcP3SgGCmbCU1PCOKr32ZU2IeKauEu/1FCoJc+kStDJnVh+ptQ="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅 澳门 一站式生活服务平台 外卖 团购 酒店 功能",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254798815400000000000000000000ffffac182c512b0b24"
+   },
+   {
+    "id": "rs_02179254799101600000000000000000000ffffac182c5171eee4",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "The current date is 2026 but search data only 2024.  Need to check app rating and reviews."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHM2OVA8xrA5zjnxygW5xL3w9WVrogG+bX5MQgbNQfjQEveziqD0JMG4yP6cyxXDTEjo6KO400JYvL8VCcpmsj79FWUlEea0Riwbw0I0Ks6oEq8dseJBdCH3FIsErqj+MFnCMfeiocvKzSXzrLfD6Jjn3TN7SR2okklUD4aYgsZtzxXFLJ7I5DiQpi7WMFiWM/ltnxs8tzSCMNhVNWO0d5DhTM="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅 Google Play 评分 评价 外卖 澳门",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254799322800000000000000000000ffffac182c5141b295"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "如果你在澳门生活或旅游，**澳觅APP整体值得装来备用**，它是澳门本地较大的一站式生活服务平台，核心优势是本地覆盖广、功能多、优惠较频繁；但外卖履约和客服体验存在一定不稳定性。\n\n## 主要用途\n\n澳觅不只是外卖APP，还包括：\n\n- **美食外卖、水果、鲜花、超市便利、生鲜百货**\n- **团购、秒杀、优惠券**\n- **酒店、旅游、KTV、按摩等本地生活预订**\n- **跑腿、帮买、帮取、帮送**\n- **电召打车、洗衣服务**\n- **直播电商、拼团、跨境购物自提等**\n\n平台2016年上线，官方/公开资料称其合作商户约有数千家，注册用户数十万，在澳门本地生活服务里属于头部平台之一。\n\n## 优点\n\n1. **澳门本地生活覆盖比较全**  \n   餐饮、外卖、超市、酒店、旅游、跑腿等都能在一个APP里完成，对澳门居民和游客都比较实用。\n\n2. **优惠活动较多**  \n   App Store评论中不少用户提到红包券、满减、免单、秒杀等活动，日常点外卖有时能省一些。\n\n3. **对游客友好**  \n   到澳门后可以用它查找附近餐饮、订酒店、叫外卖或使用本地生活服务，不用在多个平台之间切换。\n\n4. **商户和品类较丰富**  \n   除了茶餐厅、快餐、茶饮，也有蛋糕、鲜花、酒水、超市百货等，部分大型连锁和超市也已入驻。\n\n## 槽点和风险\n\n从App Store、Google Play用户评论及公开反馈看，主要问题集中在：\n\n- **高峰期或恶劣天气配送可能变慢**，有人反馈等待时间较长；\n- **客服处理争议的体验不稳定**，例如餐品未送达、联系不上骑手等问题；\n- 内地号码在澳门可能存在**短信、电话或验证码延迟**；\n- 个别地址，尤其是酒店、偏远处或跨区位置，实际可送商户和预计送达时间要以下单页为准；\n- App体积不算小，iOS端显示约400MB以上。\n\n评分方面，App Store约为**4.2分**，Google Play约为**3.9分**，属于“整体可用，但差评多集中在配送和售后”的类型。\n\n## 适合谁用？\n\n- **适合**：澳门居民、长期在澳门的人、想在澳门点外卖/买超市/订酒店/找本地优惠的游客。\n- **可作为备选**：如果你非常在意外卖准时率，建议同时对比 **mfood、闪蜂** 等澳门本地平台，看同一地址下的商户数量、配送费和预计送达时间。\n- **使用建议**：第一次使用时先确认手机号能正常收验证码；重要订单保留截图，遇到送达问题尽快通过APP内在线客服处理。\n\n## 结论\n\n**澳觅可以算是“澳门本地版美团/大众点评+外卖”的综合平台，功能全、优惠多、本地覆盖强，值得安装；但不要默认每一单都很快，尤其高峰期要留出时间，售后问题也要有心理预期。**",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "‎澳觅-澳门一站式生活服务平台 - 评分及评论 - App Store",
+        "url": "https://apps.apple.com/cn/app/%E6%BE%B3%E8%A7%85-%E6%BE%B3%E9%97%A8%E4%B8%80%E7%AB%99%E5%BC%8F%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0/id1104177940?platform=watch&see-all=reviews",
+        "site_name": "App Store",
+        "publish_time": "2023-09-20T06:18:00+08:00",
+        "summary": "澳觅-澳门一站式生活服务平台\n评分及评论\n3.8\n满分 5 分\n很好用\n2023/08/21\n小马会赢\n就是澳門版美圖外賣，好有趣，哈哈哈哈哈哈😂\n用起来还不错\n2023/09/20\n夙夜苏苏苏\n很便捷的生活服務小幫手，功能越來越豐富，也很實用！買蛋糕買鮮花買酒水通通都不在話下，平臺的福利也很多，每次都讓我感覺薅了不少的羊毛。\n方便快捷\n2023/09/20\n聪明无比小煎包\n忙碌的時候一直叫外賣，叫外賣我只用澳覓，原因是經常有紅包券可以抵用，很實惠，澳覓的騎手也很快速，非常滿意澳覓的服務。\nNice，很驚喜\n2023/09/20\n-_-eleven\n澳覓有時候會搞些免單活動，有時候運氣好就中獎了，白嫖了一頓，之前還中了抱枕、雨傘和帆布袋，全部都是澳覓的周邊，品質不錯，也很實用，希望以後多點這樣的活動。\n霸王条款\n2024/03/31\n正想你呢UIUII\n只能快递员单线客户，说是大陆号码电话信息有延时，他们默认联系了客户，就算没成功联络到客户也算送餐成功，然后餐食不知所踪，浪费我的钱，投诉无门，垃圾得很！！！\n开发者回复\n親親，我是澳覓客服小覓，給您帶來不便真的抱歉，訂單配送到指定地址車手會主動聯繫您的，如果沒有聯繫到客人，騎手會持續跟進并短信通知客人。建議客人可以在澳覓APP-點擊我--在線客服，由客服為您跟進處理。\n霸王条款\n2024/03/31\n正想你呢UIUII\n只能快递员单线客户，说是大陆号码电话信息有延时，他们默认联系了客户，就算没成功联络到客户也算送餐成功，然后餐食不知所踪，浪费我的钱，投诉无门，垃圾得很！！！\n开发者回复2024/04/07\n親親，我是澳覓客服小覓，給您帶來不便真的抱歉，訂單配送到指定地址車手會主動聯繫您的，如果沒有聯繫到客人，騎手會持續跟進并短信通知客人。建議客人可以在澳覓APP-點擊我--在線客服，由客服為您跟進處理。\n客服是摆设不作为的垃圾平台\n2024/01/02\nsherry2880\n外卖配送平均时间超过2小时及以上，和商家沟通语言永远有障碍，客服的处理从来不直面回答，回避和不处理。\n开发者回复\n客戶您好！感謝您反饋的服務問題，平臺非常重視且會跟進努力改善。方便可以提供一下您订单后6位尾数或聯繫客服经理 :853-62883902，平臺一定會認真處理好您的問題，給您一個滿意的答復。\n客服是摆设不作为的垃圾平台\n2024/01/02\nsherry2880\n外卖配送平均时间超过2小时及以上，和商家沟通语言永远有障碍，客服的处理从来不直面回答，回避和不处理。\n开发者回复2024/01/18\n客戶您好！感謝您反饋的服務問題，平臺非常重視且會跟進努力改善。方便可以提供一下您订单后6位尾数或聯繫客服经理 :853-62883902，平臺一定會認真處理好您的問題，給您一個滿意的答復。\n手机接收不到验证码\n2022/12/15\nGxDaisy\n登录不了\n好好用\n2024/03/14\n小明1233218\n好好用，很方便，喜欢去澳门用澳门觅\n开发者回复\n親親，我是澳覓客服小覓，非常感謝您的澳覓APP的支持~\n好好用\n2024/03/14\n小明1233218\n好好用，很方便，喜欢去澳门用澳门觅\n开发者回复2024/04/07\n親親，我是澳覓客服小覓，非常感謝您的澳覓APP的支持~\n客服态度差\n2024/04/23\nwieeirdnxxavz\n不知道在拽什么。。。\n开发者回复\n親親，我是澳覓客服小覓，非常抱歉給您帶來不好的體驗，客服問題這邊已登記反饋相關部門跟進處理，會對客服進行重新培訓和警告，希望您能給我們一次改進的機會，也非常感謝您對澳覓APP的支持~\n客服态度差\n2024/04/23\nwieeirdnxxavz\n不知道在拽什么。。。\n开发者回复2024/04/25\n親親，我是澳覓客服小覓，非常抱歉給您帶來不好的體驗，客服問題這邊已登記反饋相關部門跟進處理，會對客服進行重新培訓和警告，希望您能給我們一次改進的機會，也非常感謝您對澳覓APP的支持~\n垃圾\n2023/09/26\nxrsssss8183\n真的很垃圾\n垃圾\n2023/09/26\nxrsssss8183\n真的很垃圾\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅",
+        "url": "https://m.baike.com/wiki/%E6%BE%B3%E8%A7%85/7297255419683651620",
+        "site_name": "抖音百科",
+        "publish_time": "2024-08-08T12:04:43+08:00",
+        "summary": "产品简介\n澳觅为您提供美食、外卖、团购、超市便利、电商、直播购物、酒店、旅游、KTV、洗衣、跑腿等全面服务。\n关于澳觅\n‘澳觅APP’于2016年6月1日正式上线，现已成为汇聚美食外卖、团购优惠、直播电商、超市便利，跑腿服务、酒店住宿、洗衣服务及各项本地生活服务于一体的城市一站式生活服务平台，是澳门最大的生活电商平台。澳觅秉承客户第一的价值观，与全澳5000+商家紧密合作，持续为用户带来更好的服务。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门美食外卖团购平‪台‬",
+        "url": "https://apps.apple.com/cn/app/%E6%BE%B3%E8%A6%93-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E5%9C%98%E8%B3%BC%E5%B9%B3%E5%8F%B0/id1104177940#see-all/reviews",
+        "site_name": "App Store",
+        "publish_time": "2023-09-20T00:00:00+08:00",
+        "summary": "4+ \nFRESH LIFE TECHNOLOGY COMPANY LIMITED\nDesigned for iPhone\n#31 in Food & Drink \n4.2 • 298 Ratings \nFree \niPhone Screenshots \nDescription\n【特色服务】\n1.吃喝玩乐一应俱全\n◇外卖订餐水果宵夜，酒店旅游周边推荐;\n◇团购优惠折扣秒杀，吃喝玩乐购全覆盖;\n◇超市便利极速送达，生鲜蔬果生活百货;\n◇澳觅直播全澳钜惠，直播电商购物体验;\n◇澳觅拼团全球好货，品质好货省钱省心;\n◇澳觅跑腿同城取送，极速帮买帮取帮送。\n2.旅游出行一站搞定\n◇电召打车，方便快捷;\n◇美食优惠，全面覆盖;\n◇酒店住宿，优惠预订;\n◇洗衣服务，游玩无忧;\n◇澳觅地图全面升级，点击店铺地址栏，提供检索、路线指引等特色功能，更多惊喜功能期待您去发现。\n【产品特点】\n吃喝玩乐购，澳觅全都有:美食精选、外卖订餐、酒店预订、旅游出行、品牌秒杀、洗衣服务，澳门一站式生活服务全覆盖。\n◇情侣约会:吃美食、看电影、住酒店、去旅游;\n◇懒宅点餐:美食、水果、鲜花、下午茶、超市百货;\n◇朋友轰趴:按摩足疗、KTV、桌游电玩;\n◇旅游周边:合作商家覆盖澳门湾区;\n◇打车出行:电召的士，方便快捷;\n◇品牌秒杀:产地果蔬、品牌食品、家居百货、一站购齐。\n【产品简介】\n澳觅为您提供美食、外卖、团购、超市便利、电商、直播购物、酒店、旅游、KTV、洗衣、跑腿等全面服务。除各种优惠，澳觅提供用户消费评价、商家评分、商家资讯查询等功能，旨在为用户提供好的服务!\n【关于澳觅】\n『澳觅APP』于2016年6月1日正式上线，现已成为汇聚美食外卖、团购优惠、直播电商、超市便利，跑腿服务、酒店住宿、洗衣服务及各项本地生活服务于一体的城市一站式生活服务平台，是澳门最大的生活电商平台。澳觅秉承客户第一的价值观，与全澳5000+商家紧密合作，持续为用户带来更好的服务。\n【用户帮助】\n感谢您使用澳觅APP手机客户端，使用中有任何问题可通过以下方式查询解决:\n1. 客户端查询入口:『我』—『在线客服』;\n2. 官方公众号:澳觅APP;\n3. 官方Facebook:澳觅-让城市生活更美好。 \nWhat’s New \n10 Jul 2024\nVersion 6.30.5\n1.『澳觅外卖』麦当劳进驻澳觅喇，领券即减$20;\n2.『积分抽奖』搵好友助力，赢香港迪士尼双人门票;\n3.『游玩出行』夏天去珠海长隆横琴湾水世界玩水，$98就搞掂;\n4.『澳觅团购』人气打卡榜、热卖榜、好评榜热辣上线，美食盲选都好味;\n5.『超市便利』来来超市进驻澳觅喇，全场满$199-50，日日0蚊配送费添! \nRatings and Reviews \n4.2\nout of 5\n298 Ratings \n298 Ratings \n小马会赢\n,\n21/08/2023\n很好用 \n就是澳门版美图外卖，好有趣，哈哈哈哈哈哈😂 \n夙夜苏苏苏\n,\n20/09/2023\n用起来还不错 \n很便捷的生活服务小帮手，功能越来越丰富，也很实用!买蛋糕买鲜花买酒水通通都不在话下，平台的福利也很多，每次都让我感觉薅了不少的羊毛。 \n-_-eleven\n,\n20/09/2023\nNice，很惊喜 \n澳觅有时候会搞些免单活动，有时候运气好就中奖了，白嫖了一顿，之前还中了抱枕、雨伞和帆布袋，全部都是澳觅的周边，品质不错，也很实用，希望以后多点这样的活动。 \nApp Privacy \nThe developer, FRESH LIFE TECHNOLOGY COMPANY LIMITED\n, indicated that the app’s privacy practices may include handling of data as described below. For more information, see the\ndeveloper’s privacy policy\n.\nData Used to Track You\nThe following data may be used to track you across apps and websites owned by other companies: \nPurchases \nData Linked to You\nThe following data may be collected and linked to your identity: \nPurchases \nData Not Linked to You\nThe following data may be collected but it is not linked to your identity: \nIdentifiers \nDiagnostics \nPrivacy practices may vary based on, for example, the features you use or your age. Learn More \nInformation \nProvider\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\nSize\n405.3 MB\nCategory \nFood & Drink\nCompatibility \niPhone\nRequires iOS 11.0 or later. \niPod touch\nRequires iOS 11.0 or later. \nMac\nRequires macOS 11.0 or later and a Mac with Apple M1 chip or later. \nApple Vision\nRequires visionOS 1.0 or later. \nLanguages \nEnglish, Simplified Chinese, Traditional Chinese\nAge Rating\n4+"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门美食外卖团购平台 Stats on Google Play · Downloads, Revenue, Keywords, Product Pages, Reviews, SDKs ·...",
+        "url": "https://app.appfigures.com/reports/app-profile/280169412660",
+        "site_name": "",
+        "publish_time": "2026-09-11T19:14:05+08:00",
+        "summary": "澳覓-澳門美食外賣團購平台\nOverview\nIntelligence Summary\nCountries\nWorldwide\nTime span\nLast month\n澳覓:澳門一站式生活服務平台\nGoogle Play\n3.88 (1.5K)\nFood & Drink\nRevenue Sources\nNone\nReleased\n9 years ago\nUpdated\n10 days ago\nEst. Downloads\nWorldwide · Aug 2026\n<5K\nEst. Revenue (After Fees)\nWorldwide · Aug 2026\nNot Monetized\nMost Downloaded\nAug 2026\n1. Hong Kong\n77%\n2. Taiwan\n12%\n3. Singapore\n9%\n4. Malaysia\n2%\nRecent Sentiment\nWorldwide · Aug 2026\n0%\n100%\nMetadata & Screenshots\n澳覓，澳門一站式生活服務平台，合作商戶2000+，註冊用戶70萬+\n「產品特色」\n吃喝玩樂全在行：\n澳覓外賣，覆蓋全澳2000+餐廳，不進廚房，不出家門，澳覓專送為您快速送達；\n團購優惠，品質團購1折起，在線支付優惠更多，工銀澳覓聯名卡享更多實惠；\n澳覓商城，萬千好物，任君選擇，即時送貨加跨境購物代收點自提模式，為澳門人量身定制；\n澳覓直播，搵靚貨，睇澳覓直播，可視化嘅直播電商購物模式；\n澳覓秒殺，每週五上午10:00準時推出，為您打造精緻生活，更多優惠等你來。\n「特色功能」\n搜羅附近外賣美食，極速訂餐\n澳覓專送快速送餐，隨時呼叫\n澳覓商城送貨到家，優質服務\n澳覓直播萬千靚貨，優質推薦\n各種贈飲打折活動，貼心優惠\n外賣美食照片點評，吃出信賴\n下載澳覓App，讓澳門生活更美好Aomi, a one-stop life service platform in Macau, with 2000+ cooperative merchants and 700,000+ registered users\n\"feature of product\"\nEating, drinking, and having fun:\nAomi takeaway, covering 2000+ restaurants in Australia, without entering the kitchen or leaving the house, Aomi's special delivery will serve you quickly;\nDiscounts on group purchases, starting from 10% off for quality group purchases, more discounts on online payment, and more benefits with ICBC AOM co-branded cards;\nAomi Mall, thousands of good things, you can choose, instant delivery and cross-border shopping collection point self-pickup mode, tailor-made for Macau people;\nAomi live broadcast, find cool goods, watch Aomi live broadcast, visualized live broadcast e-commerce shopping mode;\nAoMiao spike, launched on time every Friday at 10:00 am, to create a refined life for you, more discounts are waiting for you.\n\"special function\"\nCollect nearby takeaway food and order food quickly\nAoMi provides fast food delivery, call at any time\nAomi Mall home delivery, high-quality service\nAomi live broadcast thousands of beautiful goods, high-quality recommendation\nVarious discounts on free drinks\nTakeaway food photo reviews, eat out of trust\nDownload the Aomi App to make life in Macau better\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门外卖能不能送到、稳不稳?覆盖与履约怎么看(澳觅app)",
+        "url": "https://www.sohu.com/a/1087970825_123029547",
+        "site_name": "搜狐",
+        "publish_time": "2026-10-15T10:48:00+08:00",
+        "summary": "莫伊拉\n澳门外卖能不能送到、稳不稳？覆盖与履约怎么看（澳觅app）\n2026-10-15 10:48\n午休只剩四十分钟，公司楼下茶餐厅排到门口；或者人在酒店，窗外忽然下起大雨——这时候最想知道的，往往不是哪家广告喊得响，而是：我这个地址，外卖到底能不能送到？高峰会不会下得了单却等很久？\n广告词听得多，不如拿自己真实会用的地址和时段试一遍。下面以澳觅app 为例，说说怎么把「能不能送到」和「稳不稳」看清楚。澳门市场上还有 mfood、闪蜂等常用选择，只比可验证体验，不拉踩。\n先选一个你会反复用的地址\n居民用家里或公司，旅客用常住酒店大堂附近，关键是「下周至少还会再用两次」的那个点。打开 App 允许定位，或手动搜到这个地址，确认页面上的可配送商户是按当前位置算出来的。换一条偏一点的街、换度假区里另一座塔楼，列表往往会变——能送到哪里，跟你的落点绑在一起，并不是全城一张图。\n能送到，不等于想吃的都有\n同一地址下，不妨扫一眼茶餐厅、茶饮、快餐、超市便利是否都有可点商户；高峰时段是否仍显示可配送；跨区，或半岛与氹仔来回时，可选的会不会突然变少。按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，外卖合作商户约5,700+（年刊口径）；2025年7月还上线了「全城送」。这些数字说明平台侧的商户与运力规模，具体到你的地址，仍以当前页面为准，不必把年刊读成「你家门口一定有」。\n到点了，才算稳\n「有店可点」只是第一步；真正吃到嘴里的时间，才决定稳不稳。下单页会给出预计送达时间（ETA）。更有参考价值的，是平峰时 ETA 和实际差多少；午高峰、晚高峰再各看一次，会不会明显拉长；碰上恶劣天气，或大赛车、节假日人流高峰，会不会变成「能点但很慢」。年刊口径里，澳觅配送团队超3,000人，员工含车手超3,800人（截至2025-12，宣传数字）。规模能支撑日常运力，却替代不了你在同一地址、同一品类上的两次对照——一次平峰、一次高峰，记下来，比听一句「配送很快」更踏实。\n想和别的 App 对照时\n手机里如果还有 mfood、闪蜂等，不妨固定同一个常用地址，各看一轮可点商户数量与品类，再各看一轮 ETA 和配送费。不要今天在 A 平台点平峰、明天在 B 平台撞上暴雨高峰，那样比的是运气。也不必追求「处处最优」：有人更在意公司午餐能不能准时到，有人更在意酒店附近深夜还能不能点到，场景不同，结论可以不同。\n下次点单前，不妨打开澳觅app，用常用地址看一眼附近能送什么，再在高峰时瞄一下预计送达。测过一轮，心里就有数了；也欢迎在评论里聊聊，你那边高峰到底稳不稳。 返回搜狐，查看更多\n \n本文作者：莫伊拉"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅商家 - Overview - Google Play Store - US - App Information, Downloads, Revenues, Category Rankings, Keyword Rankings, Ratings, and Reviews",
+        "url": "https://app.sensortower.com/overview/com.rocky.store?page_size=25",
+        "site_name": "Sensor Tower",
+        "publish_time": "2026-08-14T00:00:00+08:00",
+        "summary": "澳覓商家\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\nCategories\nFood & Drink\nPrice Free\nTop Countries / Regions\nMacau\n,\nHong Kong\n,\nTaiwan\nInstall Range 5K - 10K\nContent Rating Everyone\nIn-App Purchases\nNo\nDownloads\nby Sensor Tower\nWorldwide • Last Month\n< 5k\nRevenue\nby Sensor Tower\nWorldwide • Last Month\n< $5k\nRPD\nAvg. DAU\nTime Spent\nSession Count\nCategory Ranking\nby Sensor Tower\nToday\nN/A\nTop Personas for this App\nRelease Details\nCurrent Version :\n2.13.65\nLast Updated :\n2026/08/14\nPublisher Country :\nMacau\nCountry Release Date :\n2019/03/13\nWorldwide Release Date :\n2019/03/13\nMinimum OS Version :\n6.0\nFile Size :\nVaries with device\nSummary\n澳覓商家, published by a Macau-based company. The app was last updated on 14 August 2026. Released in US on 13 March 2019 and globally on 13 March 2019. 澳覓商家 belongs to the 'Food & Drink' category maintaining a content rating of 'Everyone'. Last month's estimates were < 5k downloads. The app is available in Macau, Hong Kong, and Taiwan but not being advertised actively. Sign up / Sign in to learn more about the time spent, session durations, usage & engagement (DAU, WAU, MAU), retention, churn, marketshare, growth trends, and other market statistics.\nDescription\nAomi Merchant is a mobile-end merchant backend launched by Aomi. Its main functions are to manage product information, view user orders, view operating data, view financial reconciliation information, conduct marketing and promotion of stores, manage basic store information, and so on.\n[Order Management] View order details anytime, anywhere;\n[Commodity management] Manage commodity information, batch operations on and off shelves, sold out, sold out by attributes, and commodity sorting;\n[Comment management] View and reply to user comments, and send comment red envelopes to users;\n【Business Analysis】View business data and provide data ranking analysis;\n[Financial settlement] View store settlement data, which is convenient for reconciliation at any time;\n[Marketing Promotion] Manage store promotion and marketing activity settings, etc.\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254799676200000000000000000000ffffac182c515c3d28"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 13081,
+   "output_tokens": 945,
+   "total_tokens": 14026,
+   "input_tokens_details": {
+    "cached_tokens": 1848
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 107
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807180,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T09:59:39+08:00"
+}

@@ -1,0 +1,170 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳觅外卖配送速度怎么样？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548993,
+  "id": "resp_021792548992112d5e3a06b1d3d650f0fc414a0e965c499cc768a",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254899328400000000000000000000ffffac15c15a32a8ba",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户询问澳觅外卖的配送速度。我将搜索澳觅外卖配送速度相关信息。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHBXyLg1lWxUlJTfB7zdrGLrpGNqHZJ0KqZqI/sksZBbrql1Dt0rQejnwui9pGTx98ituBFtoTl+zKisMfQbDPBDuVFknvO7OAoMNSfTujTU8747pTLmgqdGDayG9AjgDbhLapqGRoJo4ErLSFXJQ8QDS+wLDETswvo6mMpxdj6BpPJd5xsk3SViVffx7bHIwPpdfH1tWCjmrZR10fd6tyOWMrZHAsn3pFLc/KcTU+GsgiwG1EeKutZkFAS9CjF9tjfueJS67e0hZnCfEO370xybeD9fMiBOcU="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅外卖配送速度怎么样;澳觅外卖 配送时间 评价;澳觅外卖平台体验 送餐快吗",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254899521800000000000000000000ffffac15c15a45e24d"
+   },
+   {
+    "id": "rs_02179254899868400000000000000000000ffffac15c15a60174c",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "搜索结果已经提供了比较全面的信息。澳觅作为澳门主流外卖平台的相关配送信息已梳理完成，接下来将为用户提供结构化的相关说明。提醒用户为澳门本地平台。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHa3CExW9Ca23K4BwxV480RBLW6jUhipTa+GFmJh4NVvB9W6E6RxEt0PfDMjunSOYeGXBT0DF4lNz38q1j3J7ejldwbDVY+49q3sU7zpYPwZMg1r/f7MssYPa22iWqm0OykEkn8mIZp6BzKawzcCNp0EcWgQxC2wMr6qtkcO5bj8WW32Jt9MGdO/E14tIyNaOWJLxj8Qe7ZYj4G+bXFcwyFJ/eBS5gV0pmIq8mOmdVCV8TgQ+Txdg9tv01NEFlh0N3NrLc0wZVWyIXjRFcR2+kNStURq+V27dLd2nCNgMzLdTnMbhND5VnZwJk/E2rOX4YLDFRKe9L8uGvekJwXdHn/7GI5UQaTqRh2m1wlQ8pTnIfyvefYa689X9HAYcZ5RQEvI4W3a7KSOU459DwZIS3g+2tiQZYZd/Vw3V/TimqiGmMqz4fZqd7hKFLtIkYlQ/21J7YFM9PxPDug3zi6qIo4oA+6cc3oxHMctGizzNP2V1K++HzkSSkFtUdfWafBTe1xh8J442kKR9Rb9YyEr5+9z+A77jFwyMCQKvwxvOKO9h1rmNIe+DyBpAhDHOvl8wpkaPytZIgqDAUp7aNPGUU9EOeY59RSzGYurZjcKqbKoAI0PG3EqjMA3GNYqECUbFZjQpIy2s8Hfk004EhC2UGrimM4nA4zq0yC3dCg7IeexUyEPxzusCSzC/ESF1qrSpdubRDkGfZiDXG4sVKBFc2tmDhH8ch5C+qPI0T1S+cs2bfBLNc6X/mHRKboqHTkvbQ7VXXMEMFElsDt5p/8PBI3L5CJDSU9aPcFtxNDmK1l8iRCXQ3+Zz5nb2O1oKPs4I6tCZ4bKDUGLUB/myvEguxXgB2l1BnPleZVyGIL5k1WfQ4lOtn2ksSQFpRrE3aYkZbz+7Gid0vl1BH4Wl68WDb7XYRDem5jEuZPH5H1HTsjZqumn0DjoecMgtIC/n3QD4I2qcBznO49XvaN7fGjt1iDDn6iAs6q3VCMk6e/qWlwurUNCMslUJgzgKPqmhZBkdmElkGXoctswaMFN7x0pdWt9WpfqErPjkXu+9C3AqLg91bfQsg/YR/zJKvngP6EM+KJdnGdGg=="
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "# 澳觅外卖配送速度概况\n\n澳觅是澳门三大主流外卖平台之一（与 mFood、闪蜂并列），整体配送表现**以稳定可靠见长，而非极限速度**。\n\n## 配送时效\n\n- **常规订单**：多数订单 **30–60 分钟送达**\n- **高峰时段**：仍能保持较稳定的节奏，不容易出现大面积超时\n- **即时配送**：接入了顺丰同城\"SoFast\"服务，澳门半岛可提供快至 1 小时的即时配送（商超、跑腿类订单）\n\n## 横向对比（澳门三大平台）\n\n| 平台 | 时效特点 | 风格 |\n|------|----------|------|\n| **mFood** | 宣传\"最快15分钟\"，取餐后约30分钟 | 主打极速，专送团队 |\n| **澳觅** | 多数30–60分钟，高峰稳定 | 侧重全岛覆盖与稳定性 |\n| **闪蜂** | 最快1小时，3公里生活圈 | 商超配送较强 |\n\n## 近期优化\n\n2026年9月发布的 5.10.1 版本中，澳觅优化了配送算法，**高峰期预计送达时间缩短约 15%**，并上线了实时骑手轨迹地图，可以直观看到配送进度。\n\n## 实用建议\n\n1. 澳门地形多坡道、单行道，加上高峰拥堵，实际耗时可能接近 1 小时，**饭点建议提前下单**\n2. 澳觅的优势在于覆盖全岛（含离岛）和商家数量较多，如果追求极致快可以对比同商家在 mFood 上的配送费和预估时间\n3. 澳觅是澳门本地平台，主要服务澳门地区，在深圳内地无法使用，适合赴澳旅行/生活时使用\n\n总的来说，澳觅属于\"不一定最快，但比较稳\"的类型，日常点餐 30–60 分钟属于正常预期。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620425&x-signature=ETJ5kf0cLOzW1C6Mhzu5J7inuSQ%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "澳门三大外卖平台深度对比：谁更快更省更全能？\n源自11位全网作者\n06-18 20:07\n截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。根据公开资料与用户反馈，各平台在配送时效、费用结构、服务范围及附加功能上存在明显差异。本文基于多源素材，对三款平台的核心服务维度进行结构化梳理与横向对比，帮助用户厘清各自特点。\n01 配送时效与覆盖范围\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n02 配送费用结构对比\n配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620425&x-signature=ETJ5kf0cLOzW1C6Mhzu5J7inuSQ%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "澳门三大外卖平台深度对比：谁更快更省更全能？\n源自11位全网作者\n06-18 20:07\n截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。根据公开资料与用户反馈，各平台在配送时效、费用结构、服务范围及附加功能上存在明显差异。本文基于多源素材，对三款平台的核心服务维度进行结构化梳理与横向对比，帮助用户厘清各自特点。\n01 配送时效与覆盖范围\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n02 配送费用结构对比\n配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620425&x-signature=ETJ5kf0cLOzW1C6Mhzu5J7inuSQ%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "澳门三大外卖平台深度对比：谁更快更省更全能？\n源自11位全网作者\n06-18 20:07\n截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。根据公开资料与用户反馈，各平台在配送时效、费用结构、服务范围及附加功能上存在明显差异。本文基于多源素材，对三款平台的核心服务维度进行结构化梳理与横向对比，帮助用户厘清各自特点。\n01 配送时效与覆盖范围\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n02 配送费用结构对比\n配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅app下载-澳觅外卖app5.10.1官方版-精品下载",
+        "url": "http://m.j9p.com/azrj/553598.html",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/44d78602f883f4b1e79a11a3d47506dc~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620425&x-signature=ep4Ho%2Fcr%2B86T4ZQ9VPGhrbiK3nM%3D",
+        "site_name": "j9p精品下载站",
+        "publish_time": "2026年09月13日 22:48:00(CST) 星期日",
+        "summary": "澳觅外卖app5.10.1官方版\n时间：2026-09-13 22:48\n大小：51.7M\n系统：Android\n语言：中文\n简介 相关\n外卖配送软件app\n澳觅app提供在澳门吃喝玩乐所有方面的精品推荐，帮助用户轻松玩转澳门，畅享澳门精彩生活，还有更多优惠活动等着你哦，有需要的朋友快来精品网站下载吧！\n澳觅外卖app最新动态\n澳觅外卖迎来重磅升级，全面优化点餐流程与配送体验。新版本重构了首页推荐算法，基于用户历史偏好精准推送高性价比商家，大幅缩短决策时间。针对用户反馈集中的“订单追踪延迟”问题，技术团队对物流数据接口进行了深度调优，实现骑手位置实时毫秒级同步，让等待更透明、更安心。同时，新增“智能备注”功能，支持一键保存常用口味偏好（如少油少盐），避免重复输入繁琐信息。界面视觉上也更加清爽简洁，提升操作流畅度。我们持续倾听每一位食客的声音，致力于通过技术创新提供更便捷、温暖的外卖服务，助您轻松享受美味生活。\n澳觅外卖app最新动态\n澳觅外卖app 5.10.1官方版现已发布，带来多项功能改进与体验优化。新版本优化了配送算法，高峰期订单预计送达时间缩短约15%，并新增智能推荐菜品组合功能，根据用户历史偏好一键生成“今日推荐套餐”，下单更便捷。首页页面重构后加载速度提升30%，订单详情页增加实时骑手轨迹地图，配送进度一目了然。针对用户反馈较多的“支付失败”问题，团队已全面修复银行卡与数字钱包的兼容性bug，并新增微信、支付宝免密支付开关。同时，售后申诉入口移至订单页醒目位置，处理时效缩短至10分钟内。用户普遍反映新版操作更流畅，尤其是“常去店铺”置顶功能有效减少了点餐重复操作。感谢大家的支持，我们将持续根据用户反馈优化服务。\n应用描述\n澳觅致力于发现澳门最精彩的吃喝玩乐，为用户提供值得信赖的本地商家信息，消费评价及优惠信息，同时也为商家提供有效率的推广工具。\n食在澳门、外卖叫餐，澳觅提供最便利的叫餐方式。我们的商圈和用户群覆盖澳门区域。目前已收录澳门自助餐团购优质餐饮商家近1000家，会继续拓展澳门酒店、澳门旅行等其他本地生活优惠活动。\n唯有美食与玩乐不可辜负.\n软件功能\n1、高颜值APP\n简洁的页面设计以及良好的用户体验让这款app在上线2个小时内即受到澳门年轻人及大学生的热捧。\n2"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅app下载-澳觅外卖app5.10.1官方版-精品下载",
+        "url": "http://m.j9p.com/azrj/553598.html",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/44d78602f883f4b1e79a11a3d47506dc~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620425&x-signature=ep4Ho%2Fcr%2B86T4ZQ9VPGhrbiK3nM%3D",
+        "site_name": "j9p精品下载站",
+        "publish_time": "2026年09月13日 22:48:00(CST) 星期日",
+        "summary": "澳觅外卖app5.10.1官方版\n时间：2026-09-13 22:48\n大小：51.7M\n系统：Android\n语言：中文\n简介 相关\n外卖配送软件app\n澳觅app提供在澳门吃喝玩乐所有方面的精品推荐，帮助用户轻松玩转澳门，畅享澳门精彩生活，还有更多优惠活动等着你哦，有需要的朋友快来精品网站下载吧！\n澳觅外卖app最新动态\n澳觅外卖迎来重磅升级，全面优化点餐流程与配送体验。新版本重构了首页推荐算法，基于用户历史偏好精准推送高性价比商家，大幅缩短决策时间。针对用户反馈集中的“订单追踪延迟”问题，技术团队对物流数据接口进行了深度调优，实现骑手位置实时毫秒级同步，让等待更透明、更安心。同时，新增“智能备注”功能，支持一键保存常用口味偏好（如少油少盐），避免重复输入繁琐信息。界面视觉上也更加清爽简洁，提升操作流畅度。我们持续倾听每一位食客的声音，致力于通过技术创新提供更便捷、温暖的外卖服务，助您轻松享受美味生活。\n澳觅外卖app最新动态\n澳觅外卖app 5.10.1官方版现已发布，带来多项功能改进与体验优化。新版本优化了配送算法，高峰期订单预计送达时间缩短约15%，并新增智能推荐菜品组合功能，根据用户历史偏好一键生成“今日推荐套餐”，下单更便捷。首页页面重构后加载速度提升30%，订单详情页增加实时骑手轨迹地图，配送进度一目了然。针对用户反馈较多的“支付失败”问题，团队已全面修复银行卡与数字钱包的兼容性bug，并新增微信、支付宝免密支付开关。同时，售后申诉入口移至订单页醒目位置，处理时效缩短至10分钟内。用户普遍反映新版操作更流畅，尤其是“常去店铺”置顶功能有效减少了点餐重复操作。感谢大家的支持，我们将持续根据用户反馈优化服务。\n应用描述\n澳觅致力于发现澳门最精彩的吃喝玩乐，为用户提供值得信赖的本地商家信息，消费评价及优惠信息，同时也为商家提供有效率的推广工具。\n食在澳门、外卖叫餐，澳觅提供最便利的叫餐方式。我们的商圈和用户群覆盖澳门区域。目前已收录澳门自助餐团购优质餐饮商家近1000家，会继续拓展澳门酒店、澳门旅行等其他本地生活优惠活动。\n唯有美食与玩乐不可辜负.\n软件功能\n1、高颜值APP\n简洁的页面设计以及良好的用户体验让这款app在上线2个小时内即受到澳门年轻人及大学生的热捧。\n2"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254900622300000000000000000000ffffac15c15a3a9d9d"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 4822,
+   "output_tokens": 773,
+   "total_tokens": 5595,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 261
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792808192,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:16:31+08:00"
+}

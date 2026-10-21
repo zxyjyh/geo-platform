@@ -1,0 +1,227 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门旅游必备APP推荐"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548717,
+  "id": "resp_0217925487160713694b53d1b7644bc84f9058822e8eff246f0e6",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254871736100000000000000000000ffffac1559cdc1beb0",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户询问澳门旅游必备APP推荐。接下来我将搜索最新的澳门旅游APP推荐相关信息。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGLAEgFcL71RCQsWJO6LRAKFaq/IVYfr+DicQz3RC6HFIukgcv9DE6QekNtMU/0NQl0jMmykdfgq2ips/C0ndFQRvr4g7Hr20LpC92I/KQXTk2b1Jrs30r1YjhmNjv5Gf1Twk2EVFM1RPWlByarfLrIEYM5eDbzlBgnThsGSXsAs1ztVuXTHOC/aXs76Hsq+DMcsPWau3pVEHboPW6mBZ2eXJ/QpU+zwW6QZkXaL3pYrWzZHDy4gxkjltuyXrp9g0FePpBSbMUYu27ExOCn10/YfZ+gYL9YikJ28uLeW+/JGX9nc1O2U95IkbPFggLgmEo8rIN1IygMSuasxH2zX7U6a39TJItkPjpxCKlEEQufSi98gv0q5iqmeEwPIvygQOdAVLdDzKqqN+k="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门旅游必备APP推荐 2026;澳门自由行 实用APP 交通 支付;澳门巴士报站APP 发财车 攻略",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254871948400000000000000000000ffffac1559cd755384"
+   },
+   {
+    "id": "rs_02179254872316000000000000000000000ffffac1559cd51ed02",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "我已经获取了一些官方信息。接下来我将搜索相关APP信息。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGS0OdN38qNqM6ZGcECUkc9A1FkJegKGp5N8dh0EClqWK5/wmb8mRhbMN0Uu1Z11Kh/rkYWeyvUfq3uqPXJfnBsjY4QaljtIaA2UwW+LnjBwxnhPAuqe/YI/A01Tp4hcXjvTw6QXGPeScdBaQvWuFaCpcihxzKhh9U7hrkC1wZ4ajBIu9a5PdC+iEgwDXExe8rsAlgoq51taAoBSwfYelFfrBn9qn5hfFQV10RrjDqi2XFwO0YjzQTuTrHRCKH8Eci/N8g2ufRHljqtbndehjfz2GPZv3rl/aw="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门旅游 支付宝 微信 MPay 澳门通 支付方式;澳门出入境 海关健康申报 小程序 通关;澳门旅游 地图导航 打车APP 电召的士",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254872553200000000000000000000ffffac1559cd49e738"
+   },
+   {
+    "id": "rs_02179254873081200000000000000000000ffffac1559cdbf208f",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "我已经收集了足够的信息。\n\n澳门旅游必备APP推荐、发财车新规及实用出行贴士已梳理完成，接下来将按指定分类整理成清晰的表格形式回答，同时会补充深圳出发经港珠澳大桥或拱北过关的相关提示，目前正着手撰写最终回答。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "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"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "# 澳门旅游必备 APP 推荐（2026 最新版）\n\n结合澳门旅游局、交通局官方信息和近期实测，按\"必装 → 按需\"分类整理如下：\n\n## 一、官方必装（强烈推荐）\n\n| APP | 出品方 | 核心用途 |\n|---|---|---|\n| **感受澳門**（Experience Macao） | 澳门旅游局 | 官方一站式旅游 APP：景点/餐厅/酒店/购物查询、步行游览路线、每月活动盛事表、**景区客流热力图**（错峰神器）、AI 智能客服、巴士路线、的士资讯，支持离线地图下载和简繁英葡四语 |\n| **澳門出行**（Macao Smart Go） | 澳门交通事务局 | 原\"巴士报站\"\"交通资讯站\"已合并至此。可查**巴士实时位置与到站时间**、即時路况、停车场空位、路况视频、步行路线，还能购票和查跨境交通 |\n\n## 二、支付类（一个支付宝基本够用）\n\n- **支付宝**：澳门大部分商铺、便利店、连锁餐饮、巴士均可直接扫码（自动按汇率扣人民币），还可领\"澳门风情周\"等消费券。\n- **微信支付**：覆盖同样广泛，建议两个都备好。\n- **MPay（澳门钱包）**：澳门本地电子钱包，可坐巴士、缴停车费，2025 年已接入\"**高德打车**\"澳门叫车功能；深度游或经常往返者值得装。\n- **云闪付**：银联优惠较多，部分场景有满减。\n- 💡 建议仍换少量澳门币/港币现金（约 200–500），应对老字号小店、的士找零。\n\n## 三、交通与导航\n\n- **高德地图**：澳门步行、公交导航准确；**2025 年已在澳门开通\"黑的\"网约车叫车服务**，支持内地账号直接叫车+电子支付，解决路边拦车难和语言沟通问题。\n- **巴士乘坐补充**：上车投币 6 澳门币（不设找零），刷支付宝/MPay 更方便；氹仔–半岛往返可善加利用。\n- **发财车（酒店免费穿梭巴）2026 新规提醒**⚠️：\n  - 关闸发财车站点**已搬迁至少林邨广场新上落客区**，旧攻略的上车点已失效，出关后认准现场指示牌；\n  - 永利皇宫（限时免费）、金沙（需消费通行票）、永利澳门（需会员/积分）、新葡京（需进娱乐场领票，**带儿童家庭无法乘坐**）等已收紧；\n  - 威尼斯人、巴黎人、伦敦人、银河、美高梅等主力线路目前仍可免费乘坐，出发前建议在酒店官网再确认。\n\n## 四、通关必备（小程序即可，无需单独 APP）\n\n- **海关旅客指尖服务**（微信/支付宝小程序）：出入境前填报健康申报，生成\"黑码\"，过拱北/青茂/港珠澳大桥口岸均需扫码，建议截图保存（有效期内）。\n- **移民局 12366** 小程序：查询港澳通行证签注剩余次数、就近自助机网点。\n- 从深圳出发：拱北口岸（06:00–次日 01:00）、青茂口岸（24 小时）、港珠澳大桥珠海公路口岸（24 小时，可坐金巴直达澳门口岸）。\n\n## 五、吃喝玩乐与其他实用工具\n\n- **小红书 / 大众点评**：查最新打卡点、手信店、茶餐厅，澳门本地商户点评覆盖很全。\n- **携程 / Trip.com / Klook**：订澳门塔蹦顶、金光综艺馆演出、船票及酒店套票常有折扣。\n- **翻译类**：澳门以粤语、普通话为主，沟通基本无障碍；如需葡语/英语场景可用系统自带翻译。\n- **汇率工具**：支付宝内即可实时查 MOP/CNY 汇率（目前约 1 澳门币 ≈ 0.9 人民币，实际以交易时为准）。\n\n## 出发前 Checklist\n\n1. 📱 装好\"感受澳門\"+\"澳門出行\"+ 高德地图；\n2. 💳 支付宝/微信确认已实名认证、可正常境外支付；\n3. 📍 截图保存海关黑码、口岸发财车站点示意图；\n4. 🔌 带**英标三脚转换插头**（澳门用英式插座）；\n5. 📶 提前开通港澳漫游日包，或在支付宝买境外流量包。\n\n祝澳门之行顺利，玩得开心！🎰🥧",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "智能手机应用程式 - 澳门特别行政区政府旅游局",
+        "url": "https://www.macaotourism.gov.mo/zh-hans/travelessential/useful-info/mobile-apps",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/06cd1bf4aabff1605646b71306c5fceb~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620721&x-signature=olpA18SzJ%2FJ696o9OBi9HKjN1Fg%3D",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026年08月04日 00:00:00(CST) 星期二",
+        "summary": "智能手机应用程式\n感受澳门\n欢迎莅临澳门！这个一站式手机应用程式为您提供最新及热门旅游资讯，让您随时轻松自由地感受澳门，度过美好时光。\n设繁体中文、简体中文、英文及葡文版供选择。\n内容：\n观光、娱乐、餐厅、购物及住宿等资料\n步行路线\n节日盛事表及每月活动\n客流状况热力图\n智能客服\n巴士路线资讯\n的士参考资讯\n线上地图及导航\n离线资料下载\n我的收藏\n实用问题\niOS\nAndroid\nAPK\n更新于：2026年8月4日\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Macao Smart Go - Macao Government Tourism Office",
+        "url": "https://www.macaotourism.gov.mo/en/events/whatson/13934?month=202610",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/06cd1bf4aabff1605646b71306c5fceb~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620721&x-signature=WDo6S%2Fi%2FJ6QLqvKh2SR4QimlMBg%3D",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026年10月01日 00:00:00(CST) 星期四",
+        "summary": "Month: 2026/10\nMacao Smart Go\nOthers\nNavigate the city with ease: this mobile app from Macao’s Transport Bureau has information about buses (including live location updates), taxis, other forms of transport, and walking routes. It also gives fingertip access to information about hotels and food, as well as tourist attractions.\nEnquiries | (853) 8866 6363\nEmail | info@dsat.gov.mo\nOrganiser | Transport Bureau\nPhotos: Macao Government Tourism Office; Government Headquarters Affairs Bureau; Sands China Ltd.; Cultural Affairs Bureau; Parisian Macao; MGM; Macau Tower; Sports Bureau; Macau Historical Districts Developments Promotion Association; Cotai Ferry Company Limited; Buddhist Association of Macau; Industrial Association of Macau; Roads (Asia) Trading Technology Development Co. LTD; MACCREW; Caritas Macau; SJM Resorts, S.A.; StarMac Entertainment & Production; Commerce and Investment Promotion Institute; Hold On To Hope Project; Cheong Kam Ka; Studio City; City of Dreams.\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "“澳门发财车全免费”已经过时了:翻遍几十篇实测帖，帮你理清哪些还能坐、哪些要换路线_国内出行交通_什么值得买",
+        "url": "https://post.m.smzdm.com/p/arz6wedw/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620721&x-signature=wcEqAGKaHbJx804nEfH8AnMC5ss%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年08月25日 05:38:00(CST) 星期二",
+        "summary": "“澳门发财车全免费”已经过时了：翻遍几十篇实测帖，帮你理清哪些还能坐、哪些要换路线\n源自45位全网作者\n08-25 05:38\n如果你最近收藏过澳门攻略，大概率见过这句话：出关之后坐免费发财车，全澳门一分钱交通不用花。\n这句话以前没毛病。但翻完近几个月几十篇实测帖之后发现，2026年以来，好几家娱乐场的发财车（赌场免费穿梭巴士）规则已经悄悄变了：有的限时，有的要消费小票，有的要进场领券，有的干脆直接停运。而网上流传的大部分攻略，还停留在“全免费、随便坐”的版本。\n这篇把能核实的变化逐条列出来，顺便给带娃和带爸妈的家庭一套备用路线。\n一、规则已经变化的几家，条条有实测时间线\n先说结论：变化集中在2026年3月到8月之间，且几乎都是收紧。\n永利皇宫（氹仔）：加了时间限制。 3月底一位刚回来的游客发帖说，永利皇宫去关闸的发财车，之前全时段免费，现在只有下午5点前和晚上9点后才能免费坐，其余时段要在场内消费才能乘车。这条帖子引来了近千条评论，不\n少人表示是第一次听说。\n金沙（半岛）：要消费通行票。 4月下旬有人想从金沙蹭免费发财车去关闸，到地方才知道，需要持有在金沙内消费后取得的通行票，才能上车。\n永利澳门（半岛，发财树一侧）：要会员或消费积分。 5月初有游客看完发财树表演，想坐永利澳门的发财车回拱北，被告知需要会员卡或消费积分。\n新葡京（半岛）：要先领票，领票处在娱乐场内。 这是最坑的一条。8月中旬一位带娃游客发现，新葡京的发财车要先领票，而领票需要进入新葡京的娱乐场——娱乐场要求年满21岁。带孩子的家庭直接被卡死：大人不能带孩子进去领票，孩子也不能单独进。这位游客最后的替代方案是改坐公交或步行到对面的美高梅、永利酒店 乘车。\n十六浦：直接没了。 有游客在评论区确认，十六浦去关闸的发财车已经停运，而且这家娱乐场本身也已经不在了。\n新濠天地：口径打架，存疑。 有人说新濠天地也开始限制了，紧接着又有人反驳“昨天才去，都是免费的，也不限制时间”。两边体验冲\n时不下结论，建议出发前再确认。\n二、关闸上车点也搬了，别按旧攻略找位置\n就算背熟了哪家免费，你也可能栽在上车点上。\n今年5月中旬，关闸（也就是拱北口岸对接的澳门口岸一侧）发财巴站点完成了“近十年首次迁移”，统一搬到关闸广场的新上落客区。再往前，3月下旬就已经有博主提醒，发财巴原来的位置已经搬移，出关别按老习惯走。这意味着：旧攻略里的地图标注、流传很广的站点截图，指的都是旧位置。出关之后照着旧攻略走，大概率白跑一段。现在过关后认准关闸广场方向的新上落客区，以现场指示牌为准。\n三、目前还能正常坐的，和三条注意事项\n从多篇2026年实测帖交叉对照看，氹仔金光大道一带的综合度假村，发财车目前相对稳定：威尼斯人、巴黎人、伦敦人、银河、美高梅这一系的主力线路仍可免费乘坐，永利皇宫在免费时段内也可以。\n“零元游”的甜头也没有全消失：有游客8月中旬刚实测回来，发财车照坐，度假村里免费派发的奶茶、小吃照样领到了手。\n不要葱但"
+       },
+       {
+        "type": "url_citation",
+        "title": "Mobile App - Macao Government Tourism Office",
+        "url": "https://www.macaotourism.gov.mo/en/travelessential/useful-info/mobile-apps",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/06cd1bf4aabff1605646b71306c5fceb~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620721&x-signature=WDo6S%2Fi%2FJ6QLqvKh2SR4QimlMBg%3D",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026年08月04日 00:00:00(CST) 星期二",
+        "summary": "Mobile App\nExperience Macao\nWelcome to Macao! This all-in-one app provides the most sought after information essential to you. Come to experience for yourself the memorable moments while staying in Macao.\nLanguages in Traditional Chinese, Simplified Chinese, English and Portuguese are available.\nFeatures include:\nInformation of Sightseeing, Entertainment, Restaurants, Shopping and Accommodation\nWalking Tour Routes\nEvent Calendar and Monthly Events\nVisitor flow heatmap\nAI Chatbot\nBus route information\nReference information for taxi\nOnline Map and Navigation\nOffline Data Download\nMy Collection\nPractical Questions\niOS\nAndroid\nAPK\nUpdated on: 4/8/2026\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "交通事务局两APP合并 “澳门出行”2.0测试版功能升级 – 澳门特别行政区政府入口网站",
+        "url": "https://www.gov.mo/zh-hant/news/1073212/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/cfa9abb22e386eb1522580f73300390c~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620721&x-signature=jPu8S5%2FXEPlYERimHvH8FPNdu%2FM%3D",
+        "site_name": "澳门特别行政区政府",
+        "publish_time": "2024年06月27日 17:44:00(CST) 星期四",
+        "summary": "交通事務局兩APP合併 “澳門出行”2.0測試版功能升級\n來源：\n交通事務局（DSAT）\n2024年6月27日 17:44\n澳門出行2.0測試版功能升級\n交通事務局現時共推出4個分別提供巴士服務、出行類信息及行政服務資訊的手機應用程式(APP)，包括“交通資訊站”、“澳門出行”、“巴士報站”及“視障助乘巴士報站”。為方便用戶更集中地查看交通綜合資訊、使用出行服務及申辦交通事務局行政手續，6月29日（周六）凌晨零時起，“交通資訊站”及“澳門出行”兩個應用程式將進行合併，屆時“交通資訊站”APP的所有功能，包括公共停車場實時資訊、道路交通視頻、網上服務及電子繳費、即時路況消息推送及重要活動資訊等均會整合至“澳門出行”APP並升級為“澳門出行” 2.0測試版，除了會有更多的交通出行綜合資訊及服務外，兼具有購票、跨境交通服務及旅遊娛樂資訊等功能，部份原有功能亦同步作出優化，以進一步提升用戶的使用體驗。\n至於“交通資訊站”APP將逐步暫停更新，維持正常運作至8月16日（周五）後停用及從各網上平台下架。交通事務局提醒市民及旅客可先行下載“澳門出行”APP使用，以便提早熟悉APP的功能操作，便捷規劃行程。\n交通事務局將密切留意應用程式整合後的運作情況，並會適時優化各個出行應用程式，方便市民及旅客出行，助力智慧交通發展。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门发财车攻略2026: 关闸新站、休游线+发财车转乘技巧指南 | Trip.com",
+        "url": "https://hk.trip.com/guide/transport/%E6%BE%B3%E9%96%80%E7%99%BC%E8%B2%A1%E8%BB%8A%E8%B7%AF%E7%B7%9A.html",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/947337c251f4dfa173e7ccf3e7197f5e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620721&x-signature=9lJXfzq%2F%2F3UornBASEhUASgt%2BIY%3D",
+        "site_name": "Trip.com",
+        "publish_time": "2026年05月08日 04:04:00(CST) 星期五",
+        "summary": "时间表仅供参考： 虽然各大酒店均会公佈澳门发财车时间表，但實際開出時間會受路面交通狀況影響。建議旅客出發前再次瀏覽酒店官網獲取最新資訊。\n節假日班次變化： 在香港或澳門的公眾假期（如農曆新年、復活節、十一黃金週）或舉辦大型活動期間，發財車班次可能會作彈性調整，部分路線或會加密，但同時候車人潮亦會激增。\n預留充裕候車時間： 強烈建議旅客提前15分鐘到達候車點，尤其是在晚上準備乘搭尾班車返回口岸時，以免因滿座而錯過最後班次。\n留意現場站牌指示： 到達各主要口岸後，請密切留意現場的站牌告示。各酒店的專屬候車區劃分清晰，請排對隊伍。\n行程保持彈性： 澳門半島及路氹區在繁忙時間（如傍晚5時至7時）容易出現塞車，乘搭發財車往返兩地時，行程安排需留有彈性，切勿將時間計算得太過緊迫。\n候車位置指引： 步出關閘廣場後，向左方步行約2分鐘即可抵達龐大的發財車停泊區。現場有清晰的酒店標誌。\n服務時間： 關閘口岸開放時間為06:00至01:00。發財車的首班車通常約在09:00開出，尾班車則約在23:30至00:00之間結束。\n班次頻率： 高峰期間，主要酒店（如銀河、威尼斯人）的班次極密，約每5至15分鐘便有一班。\n排隊與秩序： 在旅遊旺季（如黃金週、農曆新年），口岸候車人潮眾多。請務必遵守現場圍欄及工作人員的指揮耐心排隊，切勿插隊。發財車採用「先到先上，滿座即開」原則。\n行李攜帶規定： 攜帶行李箱乘搭發財車是完全沒問題的。大型旅遊巴的車廂底部均設有寬敞的行李存放格，司機會協助或指示您放置。帶上車廂的手提行李則請放在腿上或座位上方行李架，切勿阻塞通道。\n深夜班次注意： 留意部分深夜班次或較冷門路線，酒店可能會改用中型或小型巴士行駛（俗稱小巴），車廂內存放大型行李的空間極其有限。若您攜帶多件大型行李且在深夜出行，建議預留多一班車的等候時間，或考慮直接截搭的士。\n口岸設有免費接駁至外港客運碼頭及氹仔客運碼頭的公共穿梭巴士（部分旅客俗稱白巴/接駁巴），這與直達酒店的「發財車」不同。若您的目的地是酒店，請直接排隊乘搭酒店發財車。"
+       },
+       {
+        "type": "url_citation",
+        "title": "付款方式 - DSEDT",
+        "url": "https://www.dsedt.gov.mo/zh_CN/web/public/pg_as_pm",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/118492b32faff8b4d950b076c58dc35a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620728&x-signature=yV3WrbdXVXyoXq6IUv%2BNYKkeJNk%3D",
+        "site_name": "澳門特別行政區政府經濟及科技發展局",
+        "publish_time": "2026年10月21日 00:34:52(CST) 星期三",
+        "summary": "付款方式\n于本局综合接待中心缴纳柜台支付费用及税款，可使用以下付款方式：\n一、亲临付款\n现金；\n支票1及银行本票：抬头注明“经济及科技发展局”；\n澳门通卡、银联闪付及银联云闪付2；\n澳门钱包(MPay) 3 ；\n澳门中银手机银行及工银e支付4；\n丰付宝、广发移动支付及国际付5；\nUePay澳门钱包6；\n支付宝(澳门) 7 ；\n微信支付(内地及香港居民适用) 及支付宝(内地及香港居民适用) 8 ；\n特区诸银行所发行之银联制式信用卡/借记卡；\n中国银行澳门分行或大西洋银行发出之信用卡及借记卡。\n二、网上付款\n邮政储金局电子支付平台\n大西洋银行企业网上银行\n大西洋银行个人网上银行\n注:\n1) 根据第22/2008号行政法规的规定，请注意支票的签发日期不得早于支付日期三日，如支票金额等同或超过澳门币五万元，必须为保付支票。\n2) 澳门通卡、银联闪付及银联云闪付：每次付款之金额上限为$1,000澳门元。\n3) 澳门钱包(MPay)：每次付款之金额上限为$1,000-20,000澳门元(取决账户等级)。\n4) 澳门中银手机银行及工银e支付：每次付款之金额上限为$50,000澳门元。\n5) 丰付宝、广发移动支付及国际付：每次付款之金额上限为$5,000澳门元。\n6) UePay澳门钱包：每次付款之金额上限为$1,000-30,000澳门元(取决账户等级)。\n7) 支付宝(澳门)：每次付款之金额上限为$1,000-20,000澳门元(取决账户等级)。\n8) 微信支付(内地及香港居民适用)、支付宝(内地及香港居民适用)：每次付款之澳门元金额上限按所绑定的银行卡规定(如以钱包余额支付则视乎支付者钱包余额及支付者使用的钱包规则而定)。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "类似事件中，航司和海关如何防止旅客用药物压制症状登机?|澳门特别行政区|沙门氏菌|柯萨奇病毒|退烧药|布洛芬_新浪新闻",
+        "url": "https://k.sina.cn/article_7880068208_1d5b04c7006801qbbi.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/d49a16889eed6b4372762458db3acc79~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620728&x-signature=GikRbcvkB3r0GmvOAT8vWRZjFKs%3D",
+        "site_name": "新浪看点",
+        "publish_time": "2026年07月10日 07:57:00(CST) 星期五",
+        "summary": "类似事件中，航司和海关如何防止旅客用药物压制症状登机？\n新浪生活服务社\n07.10 07:57\n一、事件背景与核心漏洞\n2026年7月3日，一家四口在澳门集体感染沙门氏菌、柯萨奇病毒等多种病原体后，服用布洛芬等退烧药强行压制体温，成功通过体温检测登上东航FM806航班飞抵上海，飞行途中幼子腹泻失控污染客舱坐垫、毛毯、靠枕。海关在入境环节拦截排查时确认检疫异常，但瞒报行为已造成同机乘客暴露风险。这一事件暴露了现行检疫流程的软肋：依赖体温检测与旅客主动申报，而药物可暂时掩盖发热症状。\n二、航司层面的前置拦截措施\n1. 强化值机环节健康问询与声明\n在值机柜台和网上值机页面增设专项健康问卷，除体温外增加“是否有腹泻、呕吐、腹痛、乏力”“同住人是否有类似症状”等条目。\n要求旅客签署电子健康声明书，明确告知隐瞒的法律后果（最高罚款5万元、刑事责任），并留存记录。\n对来自疫情高发地区或报告过集体腹泻事件的航班，航司可要求旅客提供登机前24小时内无腹泻证明（如酒店或诊所出具）。\n2. 配置便携式快速检测工具\n在登机口配备非接触式快速病原体检测试剂（如诺如病毒、沙门氏菌胶体金试纸），对声称“晕机”或“紧张”但伴有腹泻迹象的旅客进行自愿抽检。\n对商务舱、超经舱等高票价旅客，可提供免费自检包，鼓励主动筛查。\n3. 机组巡查与应急响应\n起飞后乘务员需增加客舱巡视频次，重点关注频繁上厕所、面色苍白、脱水的旅客。\n一旦发现旅客排泄物污染公共区域，立即启动隔离程序：将涉事旅客转移至最后排空座，用专用消毒包覆盖污染物，并广播征求医护人员协助。\n航司应建立机上医疗事件快速报告系统，将旅客异常状况实时通报目的地海关。\n三、海关层面的入境筛查与威慑\n1. 电子健康申报与风险评分\n旅客入境前需通过“海关旅客指尖服务”小程序填写详细的健康申报，包括是否服用退烧药、止泻药，并授权海关调取境内医疗机构就诊记录（澳门地区可通过联防联控机制共享）。\n系统根据暴露史、症状组合、同行人数自动生成风险评分，对高风险旅客触发“红色预警”，要求在入境通道接受额外流调。\n2. 反向查证与联动惩戒\n海关可与出入境管理局、民航局建立数据共享机制，对已知在境外就医却未申报的旅客，事后追溯调查。\n对确认瞒报者，除罚款外，可记入个人信用档案，限制未来享受快速通关、签证便利等权益，并公开通报。\n3. 重点航班“体检式”抽查\n对来自曾有集体腹泻、食物中毒报告地区的入境航班，海关派员在廊桥末端实施“一客一测”，包括红外体温复测、症状问询、必要时咽拭子病原体快检。\n涉事航司需在航班落地前向海关提交机上医疗突发情况清单，如有无腹泻旅客、污染物品处置记录。\n四、法律追责与公众教育\n海关和司法机关应及时公布典型惩处案例，明确“服用药物压制症状登机”属于“逃避检疫”行为，可依据《国境卫生检疫法》及《刑法》第三百三十二条追究妨害国境卫生检疫罪。\n航司应在机票预订页面、候机区循环播放警示短片，展示后果：不仅可能导致同机乘客感染，还可能因传染性疾病扩散面临数年刑期。\n鼓励旅客匿名举报同行者的异常症状，航司设立奖励机制（如里程积分），将监督权下沉到乘客群体。\n五、体系化联动建议\n建立“境外就医-航司预警-海关拦截”三方系统：当澳门等地医院记录到集体发热腹泻事件并建议上报后，可通过定点医院直接向口岸海关及涉事航司推送信息，航司在登机环节实施重点核验。\n每年开展“消毒与隔离”应急演练，模拟药物瞒报、客舱污染等场景，测试各环节响应时效与衔接流畅度。\n将健康行程保险纳入机票捆绑服务：对于因疾病被迫改签的旅客，航司可提供免费改签或补偿，从利益端化解“硬飞”动机。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "高德地圖開通「黑的」叫車服務",
+        "url": "https://www.exmoo.com/article/246972.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/img/bac3b274411c960fce4a89682098fdca~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855471666&x-signature=j7yAZyTvntCaQpCCmrj2jWB2g0Y%3D",
+        "site_name": "澳門力報",
+        "publish_time": "2025年06月30日 00:00:00(CST) 星期一",
+        "summary": "高德地圖開通「黑的」叫車服務\n交諮委：對司機及乘客均有幫助\n30/06/2025 52812\n阿里巴巴集團旗下的「高德地圖」近日正式在澳門開通的士叫車服務，支持澳門及內地用戶透過高德地圖在澳門叫的士，期望能有效緩解「的士叫車難」、支付煩、溝通不暢等問題。對此，有交諮委認為，網約的士叫車服務能方便居民和旅客精准對接供需，提高服務效率，對司機和用家都有幫助，又認為相關服務的需求很大。\n澳門是國際旅遊城市，旅客、居民出行搭車的需求殷切，尤其節假日，的士服務更是供不應求。 （林嘉欣攝）\n高德表示，目前已接入澳門首批俗稱「黑的」的士服務商，數字化後支援多語言界面、即時路線規劃及便捷電子支付等實用功能，有效解決跨境出行中常見的「換卡難」、「支付煩」、「溝通阻」等問題。相關服務不僅支援澳門及內地用戶透過高德地圖在澳門叫的士，亦支援澳門用戶於內地使用手機一鍵叫車，實現一個應用程式的「雙向互通」，進一步推動粵港澳大灣區出行一體化的發展。\n高德指，相關此服務不僅為用戶帶來更優質、便利的出行體驗，亦為本地合作夥伴提供更多元化的營運與管理選擇，推動整個行業的數字化升級。未來，將繼續以用戶需求為導向，透過技術升級與生態合作，拓展更多服務場景，為澳門及大灣區的數字出行建設貢獻更多力量。\nMPay上線「高德打車」\n另外，MPay亦於日前正式上線「高德打車」，實現澳門地區的士叫車、支付一站式服務。MPay表示，近年來，隨著澳門智慧城市發展與「世界旅遊休閒中心」建設提速，用戶對便捷出行的需求日益迫切。早於去年，澳門通便攜手高德，在其全球化業務佈局的方向下，優先於MPay 「跨境專區」引入「高德打車」小程序，為居民北上出行提供便利，反響熱烈。此次服務拓展至澳門本地出行場景，不僅回應居民呼籲，緩解「的士叫車難」等城市交通難題，亦進一步豐富了智慧出行選擇，提升智慧城市服務水平和運營效率。\nMPay正式上線「 高德打車 」，實現澳門地區的士叫車、支付一站式服務。 （相關機構提供圖片）\n服務能精准對接供需\n對於相關服務的推出，交通諮詢委員會委員葉偉強接受本報訪問時表示，相關服務能進一步方便居民和旅客更好地使用的士服務，因為平時有不少的士均聚集在博企、的士站等，有時候在社區中未必很容易能找到的士。現時有了這個網約的士的服務，利用科技輔助，更容易令供給和需求之間有一個更精準的對接。「作為一個的士司機可以透過相關應用程式，更加清楚、容易知道哪裡有客人，收到訂單後就可以馬上出發接客，無須一直在市區「兜來兜去」，令服務效率有所提高。」方便司機找到生意是一方面，另一方面也能令居民和旅客可以更便捷地出行。此外，他又認為相關服務需求很大，即使現在已經有了電召，但澳門作為一個旅遊休閒城市，有更多的叫車平台服務也是好事。\n引進網約車須審慎考量\n另外，談及澳門增設網約車服務的可行性方面，葉偉強表示，如果增設網約車就必須要平衡好"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254874369300000000000000000000ffffac1559cd1c1777"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 12051,
+   "output_tokens": 1866,
+   "total_tokens": 13917,
+   "input_tokens_details": {
+    "cached_tokens": 3896
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 615
+   },
+   "tool_usage": {
+    "web_search": 6
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 6
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807916,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:11:55+08:00"
+}

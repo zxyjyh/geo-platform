@@ -1,0 +1,227 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳觅和mFood哪个好用？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548935,
+  "id": "resp_021792548933510f9c14257dc53941c7842a2e8d7c1480418dd8f",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254893584900000000000000000000ffffac15641de9237b",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户询问澳觅和mFood哪个好用，我将搜索相关对比信息。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFUr/cYMwrhFfz5PcQbkuo1OfL6fj0EKpjXChIqiYMxuWHOqwm1T90uP0c+s5CEkFYJl/AT/NomNVNzYlHfqwyTeAIFPfkU6CJJuJej35EF07Q1T24Vberz8LRS3pcXj15EntmZgXlTnb/x81sEAKFZ8GwSIG7isXuJlCDz/x6/uFhRxZCSrY6RncPpKPLkXuTWo3E/V0OawwTK0CvApkXDvtkgfJHHJ80CUCoPUvM1RCNC6jhIgvFbTnAexE2UaQbtPyf58z4/H37CZJCl/CgfNvvd"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅 mFood 对比 哪个好用;澳门外卖平台 澳觅 mFood 区别 2025;澳觅外卖 优缺点 评价;mFood外卖 优缺点 用户评价",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254893721900000000000000000000ffffac15641df69944"
+   },
+   {
+    "id": "rs_02179254894103400000000000000000000ffffac15641dfd68d4",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "我已经获取了比较全面的信息。接下来我将搜索相关对比信息。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djES7XixP6vQASVYkkagTtUMAZCHcqgyHwQI418P48brF6058f48uCqm2peTdA2Wv9T3zhCv49EVhJjX0DzfyY0xz0qiIVqZsDHMlo96gbNAx9ywEa29efU/sq4OyTfx4J9mlWESUwrZZD+62pPEiu110z32v0ECU2xALiStQeMUhbx7hfNh5WEXe4JQrD6rDp1cyckl6IKc4Qktp/fjgUZw72gBhTggt4V5FHI6xIivIydCj3LaEW9BBklynNxq5SOytIDsH+XWY0S9McPkAcvsrA=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门旅游 澳觅 mFood 外卖 推荐 微信支付;澳觅 mFood 商家数量 配送费 优惠 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254894275500000000000000000000ffffac15641df989e5"
+   },
+   {
+    "id": "rs_02179254894673400000000000000000000ffffac15641d45b437",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "现在我已经掌握了足够的信息来全面对比澳觅和mFood。\n\n我已梳理完澳觅、mFood两大澳门本地平台的核心信息：澳觅是澳门老牌一站式生活服务平台，除外卖、团购等20余项生活服务外，还支持跨境购物等特色业务，游客可使用大陆微信支付、享受实时汇率结算，适合有一站式生活、旅游需求的用户，仅存在偶发配送慢、骑手态度等投诉；mFood聚焦餐饮外卖与超市业务，餐饮商家覆盖量更广，主打极速配送、优惠活动频繁，适合高频点餐、追求效率和性价比的用户，但存在英文支持差、配送范围受限等问题。结合你位于深圳、大概率是赴澳门旅游的用户身份，内容可稍倾向游客场景，同时注意两类平台商家数据存在口径差异，需留意区分。\n\n最终选购建议已敲定：追求性价比、点外卖选mFood，需一站式生活服务选澳觅，游客两款都装比价更划算。我将按清晰结构输出实用内容。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "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"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "# 澳觅 vs mFood：澳门两大外卖平台对比\n\n简单说：**纯点外卖选 mFood，想要\"吃喝玩乐行\"一站式选澳觅；最实际的做法是两个都装，下单前比个价。**\n\n## 核心差异一览\n\n| 维度 | 澳觅 Aomi | mFood |\n|---|---|---|\n| **定位** | 澳门版\"美团\"，一站式生活平台 | 专注餐饮外卖+网上超市 |\n| **餐饮商家** | 外卖覆盖 2000+ 餐厅（全平台商家 5500+） | 覆盖约 4000 家餐厅，餐饮选择更多 |\n| **配送速度** | 稳健型，多数 30–60 分钟，接入顺丰同城 SoFast | 主打极速，宣传最快 15 分钟、取餐后约 30 分钟 |\n| **优惠力度** | 有满减、周五秒杀、团购（低至 1 折） | 活动更频繁，常有免配送费、新人 50 澳门元礼包、满减券、\"星选一口价\" |\n| **其他服务** | 团购、超市、电召打车、酒店、演出票、充电宝、洗衣、跑腿等 20+ 项 | 以外卖和超市为主，功能聚焦 |\n| **支付方式** | 大陆微信/支付宝、银联云闪付、Mpay、VISA/MC、澳门本地银行等，渠道最全 | 大陆微信/支付宝、Mpay、银联、VISA/MC 等，游客也够用 |\n| **游客友好度** | 内置旅游攻略、酒店预订、打车，一个 App 搞定行程 | 点餐饮更直接，但英文/葡文界面支持一般 |\n\n## 怎么选？\n\n**选 mFood，如果你：**\n- 主要需求就是点外卖，尤其在澳门半岛、氹仔等核心区\n- 在意配送速度和满减/免配送费优惠\n- 常点的店想多一些选择（它家签约餐厅数量更多）\n\n**选澳觅，如果你：**\n- 是澳门居民，想要外卖+团购+超市+打车一个 App 全包\n- 是赴澳游客，除了点餐还想订酒店、叫电召的士、买景点门票、看攻略\n- 偏好更全的支付渠道（对大陆卡包和本地钱包的适配最广）\n\n## 实用建议\n\n1. **两个都下载**：澳门地方小，同一家餐厅可能同时入驻两个平台，但**配送费、满减力度不一样**，下单前花 30 秒比价往往能省几澳门元到十几澳门元。\n2. **高峰期（午晚餐、雨天）提前下单**：澳门地形多坡路、老街窄，两个平台高峰期实际都可能要等近 1 小时，宣传时效别太当真。\n3. **路环等偏远区域**：注意看配送范围，部分平台跨区可选餐厅会明显变少。\n4. 如果你从深圳去澳门旅游，**澳觅的游客生态更顺手；但单论\"吃饭\"本身，mFood 通常更快、优惠更多**——两者并不冲突。\n\n> 信息综合自 2026 年 6–10 月的平台对比资料及应用商店评价，具体配送费和活动以各 App 实时显示为准。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620939&x-signature=1mGBCJib9Q3sQnl6ofwh755zK4A%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "澳门三大外卖平台深度对比：谁更快更省更全能？\n源自11位全网作者\n06-18 20:07\n截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。根据公开资料与用户反馈，各平台在配送时效、费用结构、服务范围及附加功能上存在明显差异。本文基于多源素材，对三款平台的核心服务维度进行结构化梳理与横向对比，帮助用户厘清各自特点。\n01 配送时效与覆盖范围\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n02 配送费用结构对比\n配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤\n02 配送费用结构对比配送费是用户决策的关键变量。mFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。值得注意的是，有用户观察到“不同平台同一距离配送费存在差异”，例如京东外卖1公里约7–8元，而美团、饿了么仅4–6元，侧面反映本地平台定价策略的灵活性。维度 mFood 闪蜂 澳觅[object Object] [object Object] [object Object] [object Object]03 服务生态与附加功能三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620534&x-signature=ozX9qvWzHa6dWZ8qincVIdCsGk4%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。\n\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n\nmFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。\n\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\n\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n\n有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门美食外卖团购平台 评分及评论",
+        "url": "https://apps.apple.com/cn/app/%E6%BE%B3%E8%A6%93-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E5%9C%98%E8%B3%BC%E5%B9%B3%E5%8F%B0/id1104177940?see-all=reviews",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620939&x-signature=0TB8gSbdwn9UX3UHcZ36GRuY89I%3D",
+        "site_name": "App Store",
+        "publish_time": "2016年06月04日 00:00:00(CST) 星期六",
+        "summary": "外卖配送平均时间超过2小时及以上，和商家沟通语言永远有障碍，客服的处理从来不直面回答，回避和不处理。开发人员回复 ，客戶您好！感謝您反饋的服務問題，平臺非常重視且會跟進努力改善。方便可以提供一下您订单后6位尾数或聯繫客服经理 :853-62883902，平臺一定會認真處理好您的問題，給您一個滿意的答復。外卖有虫赔付10元优惠卷？点外卖有虫 要求商家赔偿外卖金额的三倍 商家无视 寻求平台 平台说替商家赔偿 结果赔偿了满五十减十元的优惠卷？太可笑了 我给你一百元优惠卷你吃掉十个虫子可以吗？食品卫生安全堪忧 售后服务也是非常的敷衍！！！好用好用，经常有优惠活动澳覓的外賣員服務態度真的很差澳覓的外賣員服務態度真的很差，咁巴閉唔好出來送外賣啦！聲大夾惡手机接收不到验证码一点都不好親親您好，我是澳覓客服小覓，實在抱歉給您帶來不好的體驗，平台不會偏幫任何一方的，如核實是騎手原因相關負責人也會對騎手做出相應的處罰的，您在我們app遇到問題可以及時反饋在線客服為您跟進處理的"
+       },
+       {
+        "type": "url_citation",
+        "title": "mFood-澳門美食外賣＆網上超市平台",
+        "url": "https://apps.apple.com/us/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3-%E7%B6%B2%E4%B8%8A%E8%B6%85%E5%B8%82%E5%B9%B3%E5%8F%B0/id1532413955?see-all=reviews",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620939&x-signature=S8KAGI2cdHW0GoENDF0zl%2B5qZCo%3D",
+        "site_name": "App Store",
+        "publish_time": "2023年07月11日 00:00:00(CST) 星期二",
+        "summary": "mFood-澳門美食外賣＆網上超市平台\nRatings and Reviews\n3.2\nout of 5\n够抵\n我係超市忠實用戶，我用得比較多超市，平臺提供好多discount，呢個真係好正，宜家甘唧世道，搵著數先係正道。而且平台有好多大超市入駐啦，送得又快，主要度係果句，夠便\nApp mostly works, but App is lacking\nApp has a setting for English, but most of the UX is not in English. When ordering, I’m forced to screen capture, load screen into translation app, then return to app. If customisations are made to order, I must repeat the process. I appreciate it would take work to get your vendors to provide menus in a western language (either English or Portuguese) but the app is cumbersome, especially compared to UberEats, FoodPanda & Deliveroo.\nAlso, delivery range is crazy. Macau is too small to have a restaurant be so easily out of range. Charge extra, but don’t make it impossible for me to order food if in Coloane (from a restaurant in Taipa).\nYou get two stars because it works consistently if an order can be placed. Placing an order is very difficult. You can do better.\nCan not use foreign visa/Mastercard to order\nI tried to use my Hon"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门本地生活 App 怎么选?用覆盖、配送、售后与一站式能力对照澳觅app_地址_场景_入口",
+        "url": "https://www.sohu.com/a/1087498265_123029547",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/0b1bc938c2432b4da579a7024717a45e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620939&x-signature=gZ8Hyw3TRQyD21O9MW5YDSi8giE%3D",
+        "site_name": "搜狐",
+        "publish_time": "2026年10月14日 10:28:00(CST) 星期三",
+        "summary": "莫伊拉\n澳门本地生活 App 怎么选？用覆盖、配送、售后与一站式能力对照澳觅app\n2026-10-14 10:28\n住在澳门，或者来澳门玩几天，手机里常常会装不止一个外卖或本地生活 App。有人主打某几家餐厅，有人配送更快，有人团购和票务更全。装多了占内存，装少了又怕临时点不到，于是很多人会问：澳门本地生活 App 到底怎么选？\n与其听一句「某家最好」，不如先按自己的真实场景，把覆盖、配送、售后和一站式能力对照一遍。下面以澳觅app 为例说明怎么对照；澳门市场上还有 mfood、闪蜂等常用选择，对照时只比可验证体验，不拉踩。\n先认清自己的高频场景\n选 App 前，先写一张小清单，比盲目下载更省事。居民常见的是：工作日午餐送到公司或学校、晚饭送到家里、周末买超市日用品、偶尔订自助餐或景点票。访澳旅客则更常遇到：酒店大堂取外卖、临时找附近葡餐或茶餐厅、买便利店补给、用团购抵一顿正餐。把「一周至少会用两次」的场景写下来，后面测覆盖和配送才有参照。\n第一维：覆盖——常用地址附近能不能点到\n打开 App，切到你真正会用的收货地址（家、公司、常住酒店），看附近可点商户和品类够不够。不止看「有没有外卖」，还要看你常吃的类型是否出现：茶餐厅、茶饮、快餐、超市便利，以及高峰时段是否仍显示可配送。地址偏一点、或者跨区，有的平台会明显变少，有的仍能送——这只能用你的地址验证，广告词替不了。\n按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，业务覆盖外卖、团购、闪购与游客服务等；外卖\n怎么和同类 App 公平对照把澳觅app 与 mfood、闪蜂放在同一张表里时，建议只比四项：常用地址的可点商户是否够用；同一时段 ETA 与实际送达；配送费和满减是否写清楚；售后入口是否好找。不同区域、不同楼宇结果可能差很多，所以「别人说快」不能直接当成你的结论。费用、活动与超时规则以各 App 当前页面为准，本文不承诺具体优惠或赔付比例。一套可立刻执行的实测步骤1. 写出 3～5 个高频场景（例如：公司午餐、家里晚饭、酒店大堂外卖、周末超市、周末团购）。2. 固定一个收货地址，在澳觅app 打开定位或手动选址，记录附近可点品类、预计送达和配送费。3. 在同一地址、同一时段，打开同类 App 各看一轮，记下同样三项。4. 午餐、晚餐高峰能各测一次最好；至少完成平峰一次、高峰一次。5. 点开订单/客服路径走一遍，确认异常时找得到入口。6. 若清单里有团购或闪购，再在同一 App 里搜一次你常去的餐厅套餐或便利店，看是否真能少装软件。"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620780&x-signature=no9frjL2QITkCrXZwbxdkdDKlbc%3D",
+        "site_name": "App Store",
+        "publish_time": "2026年10月21日 04:38:49(CST) 星期三",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门美食外卖团购平台 Stats on Google Play · Downloads, Revenue, Keywords, Product Pages, Reviews, SDKs ·...",
+        "url": "https://app.appfigures.com/reports/app-profile/280169412660",
+        "logo_url": "",
+        "site_name": "",
+        "publish_time": "2026年09月11日 19:14:05(CST) 星期五",
+        "summary": "澳覓-澳門美食外賣團購平台\nOverview\nIntelligence Summary\nCountries\nWorldwide\nTime span\nLast month\n澳覓:澳門一站式生活服務平台\nGoogle Play\n3.88 (1.5K)\nFood & Drink\nRevenue Sources\nNone\nReleased\n9 years ago\nUpdated\n10 days ago\nEst. Downloads\nWorldwide · Aug 2026\n<5K\nEst. Revenue (After Fees)\nWorldwide · Aug 2026\nNot Monetized\nMost Downloaded\nAug 2026\n1. Hong Kong\n77%\n2. Taiwan\n12%\n3. Singapore\n9%\n4. Malaysia\n2%\nRecent Sentiment\nWorldwide · Aug 2026\n0%\n100%\nMetadata & Screenshots\n澳覓，澳門一站式生活服務平台，合作商戶2000+，註冊用戶70萬+\n「產品特色」\n吃喝玩樂全在行：\n澳覓外賣，覆蓋全澳2000+餐廳，不進廚房，不出家門，澳覓專送為您快速送達；\n團購優惠，品質團購1折起，在線支付優惠更多，工銀澳覓聯名卡享更多實惠；\n澳覓商城，萬千好物，任君選擇，即時送貨加跨境購物代收點自提模式，為澳門人量身定制；\n澳覓直播，搵靚貨，睇澳覓直播，可視化嘅直播電商購物模式；\n澳覓秒殺，每週五上午10:00準時推出，為您打造精緻生活，更多優惠等你來。\n「特色功能」\n搜羅附近外賣美食，極速訂餐\n澳覓專送快速送餐，隨時呼叫\n澳覓商城送貨到家，優質服務\n澳覓直播萬千靚貨，優質推薦\n各種贈飲打折活動，貼心優惠\n外賣美食照片點評，吃出信賴\n下載澳覓App，讓澳門生活更美好Aomi, a one-stop life service platform in Macau, with 2000+ cooperative merchants and 700,000+ registered users\n\"feature of product\"\nEating, drinking, and having fun:\nAomi takeaway, covering 2000+ restaurants in Aus"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门外卖支付方式(澳觅+mFood+闪蜂)- 澳门本地宝",
+        "url": "https://m.am.bendibao.com/news/1682.shtm",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/5abb085d64997563786b1678cbfa1fe0~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620780&x-signature=nkx%2Bz5DH%2BIRKn%2FUaV7nhv0kITiI%3D",
+        "site_name": "澳门本地宝",
+        "publish_time": "2025年09月24日 14:59:00(CST) 星期三",
+        "summary": "澳门外卖支付方式(澳觅+mFood+闪蜂)\n2025-09-24 14:59 本地宝综合\n导语 澳门的外卖服务较为发达，有多个本地外卖软件可供选择。其中，澳觅和mFood和闪蜂是最常用的平台，为澳门居民和游客提供了便捷的餐饮配送服务。\n澳门外卖支付方式(澳觅+mFood+闪蜂)\n澳觅：支持澳门中银手机银行、工银e支付-工银卡、丰付宝、Luso Pay国际支付、银联云闪付、银联无感支付、Mpay、支付宝（澳门）、VISA/MasterCard信用卡、中银全币种信用卡、支付宝（中国大陆）、Apple Pay银联卡、微信支付（中国大陆及中国香港）、澳门大西洋银行\nmFood： 支持MPay、银联/云闪付、澳门中银手机银行、VISA/MasterCard信用卡、工银e支付-工银卡、丰付宝、Luso Pay国际付、支付宝（中国大陆）、微信支付（中国大陆及中国香港）\n闪蜂：支持MPay、澳门中银手机银行、工银e支付-工银卡、丰付宝、澳门大西洋银行、Luso Pay国际支付、极易付UePay、微信支付（中国大陆及中国香港）、支付宝（中国大陆）、支付宝（澳门）、中银银联信用卡、银联云闪付、中银淘宝卡、澳门中银信用卡\n内容来源澳门本地宝\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅app官方下载|澳觅 V8.9.0 安卓版下载_当下软件园",
+        "url": "https://m.downxia.com/downinfo/293041.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/29dc4357542a64d0df48dab72ac5364d~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620945&x-signature=imMHlc6CA8ZYIVDABAcvU5fvXZM%3D",
+        "site_name": "当下软件园",
+        "publish_time": "2026年09月25日 06:18:00(CST) 星期五",
+        "summary": "澳觅 V8.9.0 安卓版\n类别：饮食健康\n系统： 安卓\n大小：153.76M\n时间：2026-09-25 06:18:58\n应用简介\n澳觅APP是一款澳门本地生活服务平台，以客户第一为核心价值观，深度整合澳门餐饮、零售、美容美发、旅游出行等生活服务领域，覆盖全澳5500余家合作商家，为居民及游客提供外卖订餐、团购优惠、超市便利、电召打车、演出票务、充电宝租借等20余项服务。从一顿外卖到一次旅行，从日常购物到紧急跑腿，APP始终以用户需求为核心，持续拓展服务边界，成为澳门数字化进程中不可或缺的基础设施。\n【软件功能】\n外卖到家：汇聚全澳2000+餐厅，支持中餐、西餐、日料等全品类美食即时配送，用户可实时追踪配送进度，享受30分钟达服务。\n团购秒杀：每日10:00推出限时秒杀活动，涵盖餐饮、零售、娱乐等领域，折扣力度低至1折，支持在线支付与到店核销。\n超市便利：整合来来超市、百佳超市等连锁品牌，提供生鲜蔬果、日用百货的即时配送服务，满足家庭日常需求。\n本地出行：接入澳门电召的士服务，用户可通过APP直接呼叫出租车，并支持在线支付车费。\n生活服务：提供洗衣服务、充电宝租借、演出票务预订等场景化服务，覆盖用户从日常清洁到娱乐消费的全周期需求。\n本地商城：支持跨境购物与本地自提，用户可购买澳门特色手信、进口商品，并选择门店提货或配送到家。\n跑腿服务：提供同城帮买、帮取、帮送服务，解决用户临时性需求，如文件递送、药品购买等。\n酒店预订：整合澳门全域酒店资源，提供实时房态查询与优惠预订，支持住+玩\n餐组合购买。\n旅游指南：内置澳门景点地图、美食攻略、演出信息等内容，为游客提供一站式旅行规划支持。\n【软件特色】\n1、全场景覆盖能力\nAPP突破传统生活服务平台的单一功能定位，通过外卖+团购+商城+出行的复合业态，构建了覆盖衣食住行游购娱的全场景生态。\n2、本地化深度运营\n商家资源：与新濠天地、贡茶、Gathering等本土知名品牌建立独家合作，确保服务品质与地域特色。\n支付适配：支持微信、支付宝实时汇率结算，同时保留澳门币现金支付选项，兼顾本地居民与游客的使用习惯。\n文化融合：推出联名春节礼盒、澳门Hush音乐节等特色活动，将平台服务与本地文化深度结合。\n3、技术驱动体验升级\n配送优化：通过动态路径规划算法，将外卖平均送达时间缩短至28分钟，高峰期订单处理效率提升40%。\n支付安全：采用Cyber Source风控系统，实现交易零事故率，保障用户资金安全。\n界面设计：遵循简洁高效原则，主界面采用卡片式布局，核心功能入口深度不超过2层，降低用户操作成本。\n【软件优势】\n流量扶持：为合作商家提供首页推荐、搜索排序加权等曝光资源，助力新店冷启动周期缩短50%。\n运营工具：开放商家后台管理系统，支持菜品上传、优惠活动设置、订单数据分析等功能，降低线上运营门槛。\n成本优化：通过集中配送与数字化营销，帮助商家降低30%的运营成本，提升利润率。\n就业促进：平台直接创造2000余个就业岗位，包括骑手、客服、技术研发等职位，间接带动餐饮、零售等行业就业超1万人。\n【澳觅APP操作指南】\n步骤1"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254897173100000000000000000000ffffac15641d8ccae2"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 12776,
+   "output_tokens": 1786,
+   "total_tokens": 14562,
+   "input_tokens_details": {
+    "cached_tokens": 3896
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 851
+   },
+   "tool_usage": {
+    "web_search": 6
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 6
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792808133,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:15:33+08:00"
+}

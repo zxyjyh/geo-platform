@@ -1,0 +1,161 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "内地手机号能注册澳觅吗？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792549023,
+  "id": "resp_0217925490232149147904061828da2e34644a32f13ef27607651",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254902391000000000000000000000ffffac15952c27ee4c",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户询问内地手机号能否注册澳觅。为解答用户疑问，我将搜索澳觅的注册规则、支持的手机号类型等相关信息，确认内地手机号的注册可行性及其他附加要求。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djH1s0aICdWWCLjhn7RgTMPAePxZk6pN9Tj2kVcYvRomWpFmUIH/IT9JI7RPs7mB3oB4xvpvIKJ2rL1WgGyBEvZglyJgmGn3MJguzn9ZYTUFTBLGQh4duz/Gpp6B49zIdUqipceaAP11+7IE+LP0wFZzO5Sz0gXIygqLX1XOm6EGQDc8K5NAADISiKfDNRpFbC+ni3I2xt2biM2NLk2ITcmhKXGXxK4AUUY4g7IwOHH/hBw7yZeOdtOi4jLZDzr4Sc81ZefXBdl+L8JXFdkaHRNvLA4ZNeGNSsAHOwxW+K8L0LSUdxtxTeBFsQ9bTqIhwNRVAauRnDWiWnZqk+MsOXKAgE4Kx6FxYhHIXRTyDNNbcQDU/qEikMBhcaRuEJQQgresvGmI7Z5YBbWgNd9jH6rXH+clGOu/CEHmVQQeOSFg3uFyGG5mZ0DSZmvPY9QQUglTIY2jtkoSYqaDYrhkwW4iFFM6WLl7BnDZ+lQLQC2XGYG+jC3JURJFumKzcKM9AZWi8ert6BKQVF5YlElKr7CD2engkiuAavj/933O8PJh8VvghPLCPSUjjnt1KLKJ6oXry3+yzL5es6iw940kpNnURqe7tOI6SJVM6djk4rseCgSaFRy/zrcFdSgtC6Dc3TpRZlA/SSLi3K9sQMQJNlDMqZreT4VADo+cK8a7l3yUKqc5F6BU9soKGdLtJKyq6OwJtZu3DEU1zPG/srijKfPPvn9aNVWvWInr883LwA/iZt+dYdhMG0n7+Zvkke9xB085EhyINi3Z/hx8rcK1v+lvd8sXqfpmkqbi2LZ8wjB79TtfPaOUuwYZVqeLxSJH6Q/VmZsUFGWf3QCpWVenKTiZdVLdhzGW7FYANZczHKWoJLyl/Bpn2UHWEA5XU+OLzKpDAV4I3fYw2cTdmLXaEXy51Ga8EBqLm1PSqLHmOcHWzVcoV/Uk6aVS"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "内地手机号注册澳觅;澳觅注册手机号要求;澳觅APP内地用户注册",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254903283500000000000000000000ffffac15952c94832d"
+   },
+   {
+    "id": "rs_02179254903568500000000000000000000ffffac15952c97caa7",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "现在从搜索结果中看到，关于澳觅注册的相关信息，我已从多个时效性较强的来源核实完毕，接下来将整理成包含注册方式、注意事项及备选方案的清晰回答。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djH+2yKycFzXbWQc1MQOzhTlYITO9SdUkHLcIIpD8uHzSDxm59Nfz7PClYNb/ajQO7DHtqXz7RG6poCDU7rEu1SW/MBkZYLiIPSpPPPFWsYbUbaRgvHSP/08E0FxKnvDB5GpqPGWGAewmTOVcKUTGPgs984DVWkxx+hgooQpiJ9CQ2Qq7rprwThfWS5EPF228bj4xQlDZ3yh9noj3tPghC3ZwvPLsQrvwQBWZ6jxZwZjMTeXIAz1fmEzdbitmhrcWo5SEvCyJLIvZqnohMaeXXRTaZdH9OWy+Nnamtotli2z5FQ6BzGukAHeKNQILoRAEg1sDZpQt1tEe4/mLQYREphWKLekv/pk08g0z0GV/nw16WQHfvGGNKbUHUWjpegTln2X+Toa3S1UQkBJk2NfUJeedtTvDLplHz6VVT0zUdqlfAUs4zjX+EVtZiWDPT8jaVszEWFyw6sR1wqnhZxxo8HY4JxdHN4ZvRgzhjvBk2IuJlzgN/7Krup241JiRmZo+vX1vVIx0AGgMUhMNtTfhoyxzU+JKB5xHCvm8kLKeaYmO4d4okcjUdfTHWHIFA3+Q7Ri1C6YJ5l7kHYR930c7umolopyLkSD/0/qIIkWjuZ2e0oOnD8jnedaSAtXs2xDm22uFxgUF3jVYhDN50mtmYkCkQLEACPKG2UB+DxuZ9vbiMsY2Plc5mqXh3NBLg=="
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "内地手机号**可以注册澳觅（AOMI）**，具体方式和注意事项如下：\n\n### 注册方法\n1. 打开澳觅App，在注册页面选择区号 **+86（中国大陆）**；\n2. 输入内地手机号，接收短信验证码即可完成注册；\n3. 若App页面支持，也可直接选择**微信账号登录**，无需单独注册。\n\n### 关键前提\n在澳门使用时，内地手机号需**开通国际/港澳台漫游**，确保能正常接收短信验证码；若在内地提前注册，只需确保手机可正常收信即可。\n\n### 备选方案\n若遇到收不到验证码等问题，还可以直接在微信中搜索 **“澳觅外卖”小程序**，无需注册即可浏览商家、下单，基础功能齐全，但App的订单跟踪、联系骑手等功能更完整。\n\n以上信息来自澳觅帮助中心及2026年10月最新实测指南，政策稳定，内地游客可直接用内地手机号注册使用。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门酒店叫外卖实用指南:内地号注册、支付方式和取餐位置_国内度假_什么值得买",
+        "url": "https://post.m.smzdm.com/p/am93m7nv/",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620467&x-signature=KhgKnlG2G04c13un1bznSULjccc%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年10月08日 00:00:00(CST) 星期四",
+        "summary": "澳门酒店叫外卖实用指南：内地号注册、支付方式和取餐位置\n今年国庆假期，澳门7天入境旅客114.3万人次，10月4日单日达21.0万人次，酒店平均入住率91.3%（澳门旅游局 2026-10-08 公布的初步数据）。11月19日至22日还有第73届澳门格兰披治大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖，问得最多的几个问题是：没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间。\n没有澳门电话卡也能注册\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n酒店地址怎么填\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议这样填：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。\n2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。\n3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。\n4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n能不能送到房间\n一般不能指望送到房门口。澳门大多数酒店只允许在大堂或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门酒店叫外卖实用指南:内地号注册、支付方式和取餐位置_国内度假_什么值得买",
+        "url": "https://post.m.smzdm.com/p/am93m7nv/",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620467&x-signature=KhgKnlG2G04c13un1bznSULjccc%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年10月08日 00:00:00(CST) 星期四",
+        "summary": "澳门酒店叫外卖实用指南：内地号注册、支付方式和取餐位置\n今年国庆假期，澳门7天入境旅客114.3万人次，10月4日单日达21.0万人次，酒店平均入住率91.3%（澳门旅游局 2026-10-08 公布的初步数据）。11月19日至22日还有第73届澳门格兰披治大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖，问得最多的几个问题是：没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间。\n没有澳门电话卡也能注册\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n酒店地址怎么填\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议这样填：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。\n2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。\n3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。\n4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n能不能送到房间\n一般不能指望送到房门口。澳门大多数酒店只允许在大堂或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门酒店叫外卖实用指南:内地号注册、支付方式和取餐位置_国内度假_什么值得买",
+        "url": "https://post.m.smzdm.com/p/am93m7nv/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855621034&x-signature=1%2B3IxhibGjywyV1%2BcevicTphIqY%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年10月08日 00:00:00(CST) 星期四",
+        "summary": "澳门酒店叫外卖实用指南：内地号注册、支付方式和取餐位置\n今年国庆假期，澳门7天入境旅客114.3万人次，10月4日单日达21.0万人次，酒店平均入住率91.3%（澳门旅游局 2026-10-08 公布的初步数据）。11月19日至22日还有第73届澳门格兰披治大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖，问得最多的几个问题是：没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间。\n没有澳门电话卡也能注册\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n酒店地址怎么填\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议这样填：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。\n2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。\n3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。\n4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n能不能送到房间\n一般不能指望送到房门口。澳门大多数酒店只允许在大堂或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交收点在哪里，可以先问前台或礼宾，再写进备注。\n用什么付款\n结算页常见的有支付宝、微信支付、银联云闪付、VISA/MasterCard 信用卡，以及 MPay、支付宝（澳门）等本地钱包。不同账户、设备和订单显示的选项会不一样，以结算页为准。内地游客用支付宝或微信付款时，扣款通常按当时汇率折算成人民币。\n订单有问题找谁\n下单后在「订单」页能看到商户接单、备餐和配送的实时状态。餐品有问题或迟迟没送到，先打开对应订单，看有没有「客服」「售后」或「申请退款」入口；没有的话走「我 > 在线客服」。\n除了外卖还能用来做什么\n同一个 App 里还有团购（自助餐订座、餐厅套餐券、景点和演出票务）、超市和便利店的闪购配送，以及面向游客的充电宝等服务，2024年起客户端支持英文模式。酒店自助餐、节日套餐这类团购，建议先确认是否需要预约再安排行程。大赛车周末想看比赛又不想挤餐厅，可以提前买好附近餐厅的团购券，或者回"
+       },
+       {
+        "type": "url_citation",
+        "title": "去澳门旅游住酒店，怎么点外卖?内地手机号能不能用、送到哪里取_配送_App_订单",
+        "url": "https://m.sohu.com/a/1087161898_123029547/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/6b1d3a6f49304d84d8268210e144399e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620467&x-signature=GaHfU1XUOP5bK0g8gb9vE%2FRJ7kw%3D",
+        "site_name": "手机搜狐网",
+        "publish_time": "2026年10月13日 15:12:00(CST) 星期二",
+        "summary": "去澳门旅游住酒店，怎么点外卖？内地手机号能不能用、送到哪里取\n莫伊拉\n2026-10-13 15:12\n今年国庆假期，澳门7天入境旅客114.3万人次，10月4日单日达21.0万人次，酒店平均入住率91.3%（澳门旅游局 2026-10-08 公布的初步数据）。11月19日至22日还有第73届澳门格兰披治大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖。\n没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间——这几个问题最常见。按操作顺序说明如下。\n一、注册：内地手机号一般可用\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n二、地址：写全名称、楼栋和取餐点\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n三、取餐：多数要到大堂或指定区域\n一般不能指望送到房门口。澳门大多数酒店只允许在大堂或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254903984700000000000000000000ffffac15952c6e547f"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 4883,
+   "output_tokens": 602,
+   "total_tokens": 5485,
+   "input_tokens_details": {
+    "cached_tokens": 0
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 312
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792808223,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:17:02+08:00"
+}

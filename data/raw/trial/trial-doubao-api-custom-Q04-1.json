@@ -1,0 +1,195 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门外卖平台有哪些？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548020,
+  "id": "resp_021792548019438bcd9e2286c8e630eb6bd21bb14e8ed8f6f0a93",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254802099900000000000000000000ffffac180760a2f466",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer in Chinese,Search for Macau food delivery platforms as of 2026."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEZBrFvh7zS8owhOMi1Xw/TALtjE58fD9Pmzg4NFSkaWiBSo96JQRZeUISWueut/+I4Dy83K1cOxhg+aQlz1axPJQz4eje4XcorDzHTlXduizj1V+tWCbHMjrYSBipL/KszCTyIVCC7G1+GYLklXxeWooJrBK4e1kfXmiB04/JYw2ICpjqVFNUqiXMkKkOGS7/gtxFyPF54qrBumPMwmMDB32BDNoKNLYe6W+blyrsp6FRilgDFbP6NjazGvI6c/JtPALnu0IA+0608r7v6ib8i0i4e6L2j2Q6E88ImAynzVJxIBQDmnMFB4fLcZEaI"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖平台 2026 澳觅 闪锋 foodpanda",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254802403600000000000000000000ffffac1807601200c2"
+   },
+   {
+    "id": "rs_02179254802636400000000000000000000ffffac18076090f620",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need more platforms. Search."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGFFaX/OZkzW70mV+aKrgsKUoTuqL/OnCGb90+vAqNdMGv4DW4Wzf12pxbV2l/9FPwdmaPVQ3LelP1SMvXpChjHlZQw1tWSvRfkKFY="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門 外賣 app 平台 閃鋒 澳覓 foodpanda Deliveroo",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254802683300000000000000000000ffffac180760d75b9a"
+   },
+   {
+    "id": "rs_02179254802985400000000000000000000ffffac180760c8f85e",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Search results weird global charts.  Chinese search."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djE522JvrintiKoh6NBEH0l2naXw39+M34HwMqdID/Ue5Fgscu6rs3xPD6GPicpYrHUA5U7Y7iFfn5XPIO4K7gZLbUvccSSrcIpxVJUwvKVCcm6HVZSLU2vEMLTpzLtpzUlF/t6Fd+nBvUADTz7xUith7g=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門 外賣平台 閃峰 閃鋒 配送",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254803091700000000000000000000ffffac180760ea59c2"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "目前澳门常用的外卖平台主要有以下三个：\n\n1. **澳觅 Aomi**\n   - 澳门本地大型生活服务平台，类似“澳门版美团/大众点评”。\n   - 除餐饮外卖外，还有团购、商城、直播、本地生活优惠等服务。\n   - 支持信用卡、支付宝、微信支付等，内地游客使用较方便。\n\n2. **mFood**\n   - 澳门本地主流外卖平台之一，背后与澳门通、MPay 等本地支付生态关系较深。\n   - 餐饮商户覆盖较广，也常有红包和配送优惠，适合本地居民和旅客使用。\n\n3. **闪蜂**\n   - 最初由澳门本地超市/零售配送发展起来，后来扩展到餐饮外卖。\n   - 除餐厅美食外，也可购买超市、生鲜、日用品等，优惠活动较多。\n\n**简单选择建议：**\n- 想找餐厅种类多、本地生活服务齐全：优先用 **澳觅**。\n- 想对比餐饮外卖配送费和红包：可以同时看 **mFood**。\n- 需要超市、生鲜、日用品一起配送：试试 **闪蜂**。\n- 游客建议把这三个 App 都下载，同一地址比较商户数量、配送费和预计送达时间。\n\n截至 2026 年 10 月，澳门市场上较常见、实际可使用的主要就是 **澳觅、mFood、闪蜂**；foodpanda、Uber Eats 等国际平台在澳门并非主流选择，部分可能并未在澳门提供服务。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门美食外卖团购平台 Stats on Google Play · Downloads, Revenue, Keywords, Product Pages, Reviews, SDKs ·...",
+        "url": "https://app.appfigures.com/reports/app-profile/280169412660",
+        "site_name": "",
+        "publish_time": "2026-09-11T19:14:05+08:00",
+        "summary": "澳覓-澳門美食外賣團購平台\nOverview\nIntelligence Summary\nCountries\nWorldwide\nTime span\nLast month\n澳覓:澳門一站式生活服務平台\nGoogle Play\n3.88 (1.5K)\nFood & Drink\nRevenue Sources\nNone\nReleased\n9 years ago\nUpdated\n10 days ago\nEst. Downloads\nWorldwide · Aug 2026\n<5K\nEst. Revenue (After Fees)\nWorldwide · Aug 2026\nNot Monetized\nMost Downloaded\nAug 2026\n1. Hong Kong\n77%\n2. Taiwan\n12%\n3. Singapore\n9%\n4. Malaysia\n2%\nRecent Sentiment\nWorldwide · Aug 2026\n0%\n100%\nMetadata & Screenshots\n澳覓，澳門一站式生活服務平台，合作商戶2000+，註冊用戶70萬+\n「產品特色」\n吃喝玩樂全在行：\n澳覓外賣，覆蓋全澳2000+餐廳，不進廚房，不出家門，澳覓專送為您快速送達；\n團購優惠，品質團購1折起，在線支付優惠更多，工銀澳覓聯名卡享更多實惠；\n澳覓商城，萬千好物，任君選擇，即時送貨加跨境購物代收點自提模式，為澳門人量身定制；\n澳覓直播，搵靚貨，睇澳覓直播，可視化嘅直播電商購物模式；\n澳覓秒殺，每週五上午10:00準時推出，為您打造精緻生活，更多優惠等你來。\n「特色功能」\n搜羅附近外賣美食，極速訂餐\n澳覓專送快速送餐，隨時呼叫\n澳覓商城送貨到家，優質服務\n澳覓直播萬千靚貨，優質推薦\n各種贈飲打折活動，貼心優惠\n外賣美食照片點評，吃出信賴\n下載澳覓App，讓澳門生活更美好Aomi, a one-stop life service platform in Macau, with 2000+ cooperative merchants and 700,000+ registered users\n\"feature of product\"\nEating, drinking, and having fun:\nAomi takeaway, covering 2000+ restaurants in Australia, without entering the kitchen or leaving the house, Aomi's special delivery will serve you quickly;\nDiscounts on group purchases, starting from 10% off for quality group purchases, more discounts on online payment, and more benefits with ICBC AOM co-branded cards;\nAomi Mall, thousands of good things, you can choose, instant delivery and cross-border shopping collection point self-pickup mode, tailor-made for Macau people;\nAomi live broadcast, find cool goods, watch Aomi live broadcast, visualized live broadcast e-commerce shopping mode;\nAoMiao spike, launched on time every Friday at 10:00 am, to create a refined life for you, more discounts are waiting for you.\n\"special function\"\nCollect nearby takeaway food and order food quickly\nAoMi provides fast food delivery, call at any time\nAomi Mall home delivery, high-quality service\nAomi live broadcast thousands of beautiful goods, high-quality recommendation\nVarious discounts on free drinks\nTakeaway food photo reviews, eat out of trust\nDownload the Aomi App to make life in Macau better\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅外卖官方版下载-澳觅外卖app下载v{package_version_name} 安卓版-火火资源网",
+        "url": "http://m.hnfcjr.com/soft/29957.html",
+        "site_name": "火火资源网",
+        "publish_time": "2026-08-06T00:00:00+08:00",
+        "summary": "澳觅外卖app\n类型：生活服务版本：v{package_version_name} 安卓版\n大小：97.1M更新：2026-08-06\n官网：https://www.aomi.com/\n厂商：珠海澳觅网络科技有限公司\n应用截图\n导读：澳门吃喝玩乐一站搞定，点外卖查评价就靠它，推荐试试！\n应用介绍\n澳觅外卖是澳门本地一款安全可靠的一站式生活服务平台。无论是生鲜百货、美食佳肴，还是休闲娱乐，应有尽有，一应俱全，真正实现万物到家，极速配送服务，快来下载澳觅外卖App，开启你的无忧生活之旅吧！\n澳觅介绍\n澳门澳觅外卖致力于挖掘澳门最地道的吃喝玩乐体验，是本地化的生活服务优选平台，也被誉为“澳门版美团+大众点评”。它不仅为用户精选值得信赖的本地商家信息、真实消费评价和丰富优惠资讯，还为商家提供高效、精准的推广工具，助力品牌触达更多本地消费者。无论是寻找人气美食、特色店铺，还是享受便捷生活服务，澳觅外卖都是您探索澳门生活的理想指南。\n澳觅怎么添加收货地址\n1、点击最右侧的我的按键\n2、向下拉找到收货地址\n3、点击右上角的新增填入收货地址即可\n澳觅怎么看美食榜排名\n1、点击首页下方的团购优惠\n2、点击最上方的附近打卡人气榜\n3、进去之后就可以看到各种美食类别的榜单\n澳觅怎么联系外卖客服\n1、点击我的按键\n2、向下划找到在线客服选项\n3、点击进去发送订单联系外卖客服即可\n应用信息\n包名：com.mem.MacaoLife\n名称：澳觅\nMD5值：5aab9d82bfdad4593a9b247e9ca26349\n隐私政策：点击查看\n备案号：粤ICP备18132113号-12A\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅外卖app下载_澳觅app下载 v8.9.0安卓版 - 87G手游网",
+        "url": "https://m.87g.com/az/50426.html",
+        "site_name": "87G手游网",
+        "publish_time": "2026-09-25T06:10:00+08:00",
+        "summary": "澳觅app\n系统：IOS\n版本：v8.9.0\n大小：153.76MB\n时间：2026-09-25 06:10:47\n软件简介\n澳觅app是由珠海市蜜瓜科技有限公司打造的吃喝玩乐软件，是专门为澳门本地用户打造的外卖平台，与内地的美团、饿了么十分的相似，app里面集结了美食、美容美发、充电宝等诸多便捷功能供大家使用，帮助你轻松玩转澳门，同时里面所有的商家都是经过官方认证的，还有体验过的客户留下的留言、以及店铺近期的优惠信息，如果不想出门还可以选择外卖方式送货上门！\n软件特色\n吃喝玩乐全在行：\n澳觅外卖，覆盖全澳2000+餐厅，不进厨房，不出家门，澳觅专送为您快速送达；\n团购优惠，品质团购1折起，在线支付优惠更多，工银澳觅联名卡享更多实惠；\n澳觅商城，万千好物，任君选择，即时送货加跨境购物代收点自提模式，为澳门人量身定制；\n澳觅直播，搵靓货，睇澳觅直播，可视化嘅直播电商购物模式；\n澳觅秒杀，每周五上午10:00准时推出，为您打造精致生活，更多优惠等你来。\n软件功能\n搜罗附近外卖美食，极速订餐\n澳觅专送快速送餐，随时呼叫\n澳觅商城送货到家，优质服务\n澳觅直播万千靓货，优质推荐\n各种赠饮打折活动，贴心优惠\n外卖美食照片点评，吃出信赖\n软件亮点\n1、本地生活服务\n澳觅满足澳门居民手机线上团购美食，寻找自助餐优惠，澳门币手机支付多多种需求，收到本澳居民关注和下载使用。\n2、体验澳门币5秒支付\n下载澳觅app之后，只需绑定自己的VISA或MasterCard信用卡，填写信用卡好及有效日期就可以直接购买。\n3、在线支付安全有保障\n支持澳门币手机支付的消费应用app。澳觅的澳门币移动支付服务是由中国银行澳门分行及Cyber Source提供，让支付快捷又安全。\n4、澳门人觅食利器\n澳觅覆盖了全澳的吃喝玩乐，目前已有新濠旗下餐厅，名门，贡茶，Gathering等近200家餐饮名店，并不断有新的合作伙伴加入。\n5、高颜值APP\n简洁的页面设计以及良好的用户体验让这款app在上线2个小时内即受到澳门年轻人及大学生的热捧。\n6、商家推荐彪悍工具\n澳觅能帮助商户在手机端展现品牌，推广商品，增加曝光率，为商户带来客流量，力促销售，且低成本线上运作，是企业的推广神器。\n怎么注册\n澳觅app怎么注册？很多在澳门旅行的小伙伴在下载完app之后需要注册账号才可以继续使用，但是不会操作，那么接下来小编就给大家带来操作步骤。\n1、首先打开app进入右下角个人中心，找到最上方【先注册登录】；\n2、接着将自己的手机号、验证码输入登录即，（新登录账号就会自动注册）如果你想要微信登录，在最下方选择第三方登录也可以的。\n怎么用内地手机登录\n澳觅app怎么用内地手机登录？其实平台上面不单单只有用澳门手机号登录，其实还可以用大陆本地的手机号登录，所以就来给大家带来流程。\n1、其实操作十分的简单，在登录时输入电话号码的左侧，可以看到区号选项，点击进入；\n2、选择大陆登录的+86，最后继续操作上面的步骤就可以了。\n怎么自取\n澳觅app怎么自取？虽说这是一款外卖软件，但是如果你是周围的住户也可以点单完毕之后，自己前往店铺自取的。\n1、选择好自己需要购买的食物之后，可以看到最下方有【自取】的选项，选中它；\n2、接着选择好时间等许多需求，最后提交订单就完成啦~\n怎么用微信支付\n澳觅app怎么用微信支付？如果你没有澳门本地的第三方支付方式、银行卡的话，也不用担心，因为app上面可以通过微信支付，接着小伙伴们就可以学习操作了。\n1、大家首先进入购买界面，点击提交订单；\n2、在支付界面里，拉到最下面可以找到【微信支付】，选中它，点确认支付就可以继续了。\n怎么注销\n澳觅app怎么注销？如果你不再需要使用这款app外卖，就可以将账号退出再卸载app，所以应该如何操作呢？\n1、第一步依旧还是进入右下方个人中心，找到里面的【设置】选项；\n2、最后在设置里面可以看到最下面的【退出登录】，点击它就可以完成注销啦！\n更新内容\nv8.9.0：\n『澳觅秒杀』麦当劳低至$1抢！每周五六日锁定澳觅秒杀！\n外卖\n美食\n吃喝玩乐\n团购\n软件信息\n厂商：珠海城觅科技有限公司\n包名：com.mem.MacaoLife\nMD5：DBAB9F2BE2E054B89E18DF89510682EB\n备案号：粤ICP备16081851号7A\n系统要求：Android 5.0 或更高版本\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Top Charts - Market Analysis - Sensor Tower",
+        "url": "https://app.sensortower.com/top-charts?category=food_and_drink&country=MO&os=android",
+        "site_name": "Sensor Tower",
+        "publish_time": "2026-08-23T00:00:00+08:00",
+        "summary": "Top Charts\nStore\nDate\n2026/10/06\nCountry/Region\nMacau\nCategory\nFood & Drink\n1\nBlinkit: Groceries & more\nBlinkit\n(9,748,352)\n↑1\nPrice : Free\n2\ntoing - Food Delivery\nSwiggy\n(700,136)\n↓1\nPrice : Free\n3\nZomato: Food Delivery & Dining\nZomato\n(14,551,743)\n—\nPrice : Free\n4\nSwiggy: Food Instamart Dineout\nSwiggy\n(13,603,059)\n—\nPrice : Free\n5\nZepto: Groceries in minutes\nZepto Marketplace Private Limited\n(4,936,146)\n—\nPrice : Free\n6\n麥當勞\nMcDonald's Apps\n(809,121)\n—\nPrice : Free\n7\nUber Eats：人氣餐廳美食和生鮮雜貨外送平台\nUber Technologies, Inc.\n(7,895,097)\n—\nPrice : Free\n8\nfoodpanda - 線上美食訂購及生鮮雜貨外送\nFoodpanda GmbH a subsidiary of Delivery Hero SE\n(3,578,082)\n—\nPrice : Free\n9\nKeeta - 外賣送遞及自取\nKANGAROO LIMITED\n(226,955)\n—\nPrice : Free\n10\nПятёрочка: доставка продуктов\nПятёрочка\n(375,147)\n—\nPrice : Free\n11\niFood comida e mercado em casa\niFood Delivery de Comida e Mercado\n(13,484,878)\n—\nPrice : Free\n12\ntalabat: Food, grocery & more\nTalabat\n(545,381)\n↑1\nPrice : Free\n13\nPedidosYa - Delivery Online\nPedidosYa S.A\n(2,240,781)\n↓1\nPrice : Free\n14\nDoorDash: Food, Grocery, More\nDoorDash\n(6,235,178)\n—\nPrice : Free\n15\nWolt Delivery: Food and more\nWolt Oy\n(505,555)\n—\nPrice : Free\n16\nBurger King India\nRestaurant Brands Asia Limited\n(344,234)\n—\nPrice : Free\n17\nTrendyol Go: Yemek, Market, Su\nTrendyol Go\n(465,343)\n—\nPrice : Free\n18\nBolt Food: Delivery & Takeaway\nBolt Technology\n(273,952)\n—\nPrice : Free\n19\nEatSure Food Delivery\nRebel Marketplace Private Limited\n(326,233)\n—\nPrice : Free\n20\nRestaurant - Cooking Games\nWowsomeSphere\n(178)\n↑2\nPrice : Free\n21\nYemeksepeti - Yemek & Market\nYEMEK SEPETİ ELEKTRONİK İLETİŞİM A.S.\n(1,509,062)\n—\nPrice : Free\n22\nDodo Pizza Delivery\nDODO BRANDS INTERNATIONAL FZCO\n(494,900)\n↑1\nPrice : Free\n23\nEatClub: Food Delivery App\nPHPL\n(485,712)\n↑2\nPrice : Free\n24\nВкусВилл: доставка продуктов\nVkusVill\n(143,548)\n↑2\nPrice : Free\n25\nBistro: Food in minutes\nBlinkit\n(90,455)\n↓1\nPrice : Free\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "【澳门】澳门人常用的外卖平台2025年・外卖APP・外送APP",
+        "url": "https://mcmooncake.com/2023/02/11/%E3%80%90%E6%BE%B3%E9%96%80%E3%80%91%E6%BE%B3%E9%96%80%E4%BA%BA%E5%B8%B8%E7%94%A8%E7%9A%84%E5%A4%96%E8%B3%A3%E5%B9%B3%E5%8F%B0%E3%83%BB%E5%A4%96%E8%B3%A3app%E3%83%BB%E5%A4%96%E9%80%81app%E3%83%BB2023/",
+        "site_name": "",
+        "publish_time": "2023-02-11T00:00:00+08:00",
+        "summary": "澳門\n【澳門】澳門人常用的外賣平台2025年・外賣APP・外送APP\n2025年月餅常用的外賣APP 優缺點\nmFood 快\n澳覓 中等\n閃蜂 繁忙時段需要等候較長時間\n1. mFood\nmFood在澳門擁有雄厚的本地實力，因為mFood的大佬是澳門通及澳門錢包 Mpay的公司（澳門乘搭交通工具唯一可使用的卡，現金也可乘車，澳門通類似台灣的悠遊卡或香港的八達通，在澳門只有一種交通卡就是澳門通了。暫時來說，Mpay是澳門本地除了本地銀行APP以外唯一可充值的支付方式，類似 Line Pay之類，當然銀行支付或其他信用卡、支付寶等也是可以在澳門使用），而澳門通及澳門錢包 Mpay 的大佬 是澳門兩大巴士公司之一 新福利。\n記得付款前要選好 平台的紅包和商家的紅包喔～有時mFood會在一開啟App時發放紅包，記得先按領取再付款，付款後還可透過WeChat微信將紅包轉發給朋友，可同時給朋友或自己領取紅包等待下次使用mFood叫外賣時使用。\n在 Apple Store 或 Google Play 搜尋 『mFood』 即可下載。或 Apple Store 點這裹，或 Google Play 點這裏。\n2. 澳覓 Aomi\n澳覓是月餅常用的三大外賣平台之一，是內地美團的合作伙伴，可用信用卡或支付寶等支付方式，也常和商家會作有紅包拿取使用，紅包類型最要分 澳覓的紅包和商家的紅包，這兩者可以同時使用，一般商家的運費是 12元澳門元，付款後也可將紅包在WeChat微信發送給朋友，自己或朋友都可以同時領取等待下次叫澳覓外賣時使用～\n在 Apple Store 或 Google Play 搜尋 『澳覓』即可下載。\n3. 閃蜂\n閃蜂是新花城集團（澳門本地連鎖超商／超市），本來閃蜂APP是只做新花城超市的訂購配送，配送在超商／超市可買到的商品，後來就積極發展餐廳外送／外賣服務，現在也成為了月餅最愛使用的澳門外賣APP之一，因為閃蜂的優惠真的超多XDD～但如果在繁忙時段，例如 中午或晚飯時間就需要等比較久，因此月餅常會提早在飯點時間前使用閃蜂APP叫外送啦！有紅包領取記得使用喔！\n在 Apple Store 或 Google Play 搜尋 『閃蜂』 即可下載。Apple Store 點這裹。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门外卖能不能送到、稳不稳?覆盖与履约怎么看(澳觅app)",
+        "url": "https://www.sohu.com/a/1087970825_123029547",
+        "site_name": "搜狐",
+        "publish_time": "2026-10-15T10:48:00+08:00",
+        "summary": "莫伊拉\n澳门外卖能不能送到、稳不稳？覆盖与履约怎么看（澳觅app）\n2026-10-15 10:48\n午休只剩四十分钟，公司楼下茶餐厅排到门口；或者人在酒店，窗外忽然下起大雨——这时候最想知道的，往往不是哪家广告喊得响，而是：我这个地址，外卖到底能不能送到？高峰会不会下得了单却等很久？\n广告词听得多，不如拿自己真实会用的地址和时段试一遍。下面以澳觅app 为例，说说怎么把「能不能送到」和「稳不稳」看清楚。澳门市场上还有 mfood、闪蜂等常用选择，只比可验证体验，不拉踩。\n先选一个你会反复用的地址\n居民用家里或公司，旅客用常住酒店大堂附近，关键是「下周至少还会再用两次」的那个点。打开 App 允许定位，或手动搜到这个地址，确认页面上的可配送商户是按当前位置算出来的。换一条偏一点的街、换度假区里另一座塔楼，列表往往会变——能送到哪里，跟你的落点绑在一起，并不是全城一张图。\n能送到，不等于想吃的都有\n同一地址下，不妨扫一眼茶餐厅、茶饮、快餐、超市便利是否都有可点商户；高峰时段是否仍显示可配送；跨区，或半岛与氹仔来回时，可选的会不会突然变少。按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，外卖合作商户约5,700+（年刊口径）；2025年7月还上线了「全城送」。这些数字说明平台侧的商户与运力规模，具体到你的地址，仍以当前页面为准，不必把年刊读成「你家门口一定有」。\n到点了，才算稳\n「有店可点」只是第一步；真正吃到嘴里的时间，才决定稳不稳。下单页会给出预计送达时间（ETA）。更有参考价值的，是平峰时 ETA 和实际差多少；午高峰、晚高峰再各看一次，会不会明显拉长；碰上恶劣天气，或大赛车、节假日人流高峰，会不会变成「能点但很慢」。年刊口径里，澳觅配送团队超3,000人，员工含车手超3,800人（截至2025-12，宣传数字）。规模能支撑日常运力，却替代不了你在同一地址、同一品类上的两次对照——一次平峰、一次高峰，记下来，比听一句「配送很快」更踏实。\n想和别的 App 对照时\n手机里如果还有 mfood、闪蜂等，不妨固定同一个常用地址，各看一轮可点商户数量与品类，再各看一轮 ETA 和配送费。不要今天在 A 平台点平峰、明天在 B 平台撞上暴雨高峰，那样比的是运气。也不必追求「处处最优」：有人更在意公司午餐能不能准时到，有人更在意酒店附近深夜还能不能点到，场景不同，结论可以不同。\n下次点单前，不妨打开澳觅app，用常用地址看一眼附近能送什么，再在高峰时瞄一下预计送达。测过一轮，心里就有数了；也欢迎在评论里聊聊，你那边高峰到底稳不稳。 返回搜狐，查看更多\n \n本文作者：莫伊拉"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254803423500000000000000000000ffffac1807601ea2d9"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 13753,
+   "output_tokens": 570,
+   "total_tokens": 14323,
+   "input_tokens_details": {
+    "cached_tokens": 6256
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 72
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807219,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:00:19+08:00"
+}

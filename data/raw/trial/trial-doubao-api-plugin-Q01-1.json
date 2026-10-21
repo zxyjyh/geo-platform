@@ -1,0 +1,272 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门点外卖用什么APP好？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548407,
+  "id": "resp_0217925484070683472b452131530d7d1d28285be3fe78b5ca1be",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254840784400000000000000000000ffffac1917965ae386",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. \n\nThe user is inquiring about Macau food delivery apps, so I'll search relevant information using Chinese sources."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHzOLMirdnESDT6fbXf7g+9SG6Z6HkYGuc72A0jfa9ssEAjryiyYZIwF00dS2j+Akee0V1ZPbvPiBd52CRu6PbJg6YMtM6i6ZzdmG/ohnVZqIJbinQIRBKuLdInY15DR1h+4FukXYoTuCeSCp0t/porn/bzqE+H1W0B/nQqPv+qzDFuO5VJwHx94QTq2RYEWHxlfbQGA64+RAkieTFdZ30cTtczTZ85t3cRtU9ZctYiGNsllw+fcg4jXHHV/C1jAWdGwET313RnG2Oj+Gb/wCRyhPXupOo0xfTFnfWwzB1tuSuDkMa33UQLYReeMM0D3/PqcIWmxKYPyyG+xHTGrDpeFw61c0NfzfSVDoI5MJzA5Rhv/b5CsOgQLeUNpz69LHteW+fZHg3H9mcFWPds8suOUzNeqmkWIC1V/t8PA/Im89cuJAzzNBUuSGJ3+J7Didd/Dn5K9YfERA=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖 app 推荐 2026;澳门 点外卖 澳觅 美团 foodpanda;澳门本地外卖平台 最新",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254841209300000000000000000000ffffac1917962669ef"
+   },
+   {
+    "id": "rs_02179254841615300000000000000000000ffffac1917962c1b1e",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need answer likely recommend mFood and 澳觅,Consider adding Flashbee, Foodpanda and Meituan to search."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djH029/4MXgk6dTInPML87P7a5ZNKDycqfomYloY+tXIzZFApuC8DyWp/h9YsqbQA9eInR7VdPHUH6RVGEAmpShUg5a6Gtg7CCR5W5XiiBGsZfjCX4MkpmiIWuwYZuKEtAmcavwhfsSld7rXwi9s9fgnLGeM+nDFtLU9n1iC1/cEyxn9ugtcBgAwFHPZS+hanwbX8QgkdMok/aqF6kTLNL0a1uKnNYF21qsooWrpJTir+QrFWffFma8xwfz5d0PDZSgBsdUHPqzBUS7vmapwcZqStJgm6hQQye/IfbMcUA=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "foodpanda 澳门 外卖 2026;美团外卖 澳门 2026;澳门 闪蜂外卖 FlashBee",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254841817500000000000000000000ffffac191796e57813"
+   },
+   {
+    "id": "rs_02179254842190800000000000000000000ffffac1917965ad553",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need formulate practical recommendation. Current search results are abnormal when checking food delivery platform information in Macau. I will search for accurate relevant information to confirm the platform's operation status there."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEgGKEjt6QpVTzAgiFtLR3QK3BlkZZbk5o32Uk6gB8BH2KwDjFuhkBx7v5LaQIbi6wf22+j17bKIbhCmWhYqwCh9+UiijPSUZYg95TfAAqhsmulchKuO/UCW/ciDNYgu83Q4osOzZnlrBc/eG2apKBI9cd9K09o6AtsQRbZyTyZcit1OnQMpZL27QgySi+bQQsRNu9z7uYiZ2kd2r2LPtP8XtgLvvIqTwfocTuzmpYPOYcsryfXqnDH9RHYkNOCRBxF5zs34ezaug1H9YbnQsgmdk6Y3N8BR/6lJPvH0lxOJhE3ZfzrWtrO/HhZ24VtDcqw3F4HSZSxqKKFg4IvJSi3dnJaIbaz+7PqXFuCQ7zDYmlNTNIjZ+bwM5S5ajJitRCcXRCTYCUiDrIfH3MXaUuTutxxgP1k6sKVlWA910ezt1eOAvUxJpz8gwBILVHwqADg4UFIBduTIBs/jbd59UBZf3eHY3GNAAQ2bTH2J6GnzTBDQje04+9mBVt0ld4ZEZcrpw/FwtWU0rRwxLaXSas5C/ozhkNO0jaocH5YYGIf2EP2tVSsQElhrRzgqCk7pUnr1yiPos1ycefgGz/HQ1FEtPq+jyLLNrr4WGI2rjvV995eNomu7hxG4MkzMGxiIzXTqOiNGVj2BHBtq7Z8s0x/AZex5G37CqTdqQW5CXN8tv6gcHHOyl6NeaHo56UGQsG7wb+Hh3pJ7yTiU00qVbBanXI="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "site:foodpanda.hk/macau 澳門 foodpanda;foodpanda Macau delivery app;澳門 foodpanda 外賣",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254843110500000000000000000000ffffac191796e1eea8"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "在澳门点外卖，优先装这两个本地平台：\n\n### 首选：mFood\n- 澳门本地主流外卖平台，餐厅覆盖较全，快餐、茶餐厅、本地小吃、连锁餐饮都多。\n- 配送速度通常较快，优惠和免配送费活动较多。\n- 适合游客或临时在澳门想快速点餐的人。\n\n### 次选：澳觅（AOMI）\n- 类似“澳门版美团/大众点评”，除了外卖，还有团购、超市生鲜、便利店、本地生活服务等。\n- 本地商家和用户评价信息较丰富，适合想顺便找餐厅、看优惠、买日用品的人。\n\n### 其他可选\n- **闪蜂 Flashbee**：外卖 + 超市百货 + 跑腿，适合一起买生活用品、零食饮料。\n- **foodpanda**：在部分区域和酒店也能用，但商家丰富度通常不如本地平台，可作为补充比价。\n\n### 实用建议\n1. 先在应用商店下载 **mFood**，再装 **澳觅**；同一个商家可以在两个平台对比价格、配送费和满减。\n2. 澳门半岛、氹仔、路氹城酒店区覆盖通常较好；路环偏远区域可选餐厅会少一些。\n3. 支付一般支持支付宝、微信支付、银联、信用卡等，游客使用比较方便。\n4. 内地美团外卖在澳门不是最主流，不建议只依赖它。\n\n**简单结论：只装一个就选 mFood；想兼顾本地优惠和超市采购，再加澳觅。**",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620414&x-signature=av%2Bu%2BCiLP4jBNRdBDkvVK9AxhBs%3D",
+        "site_name": "App Store",
+        "publish_time": "2026年10月21日 04:38:49(CST) 星期三",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質\n持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。特色功能 智能搜索附近外賣美食和預訂服務。即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。智能展示餐廳排序和個性化推薦功能。提供各種優惠折扣信息，品質有保障。mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！"
+       },
+       {
+        "type": "url_citation",
+        "title": "十大澳门购物网站 澳门主流网购平台排名 澳门人常用的购物网站(2026)→买购APP",
+        "url": "https://m.maigoo.com/top/437151.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/e4ad3444212aa4d54383a884a27c416f~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620414&x-signature=98YNesQtSuHz%2FXcpfIaYdNSpNak%3D",
+        "site_name": "买购网",
+        "publish_time": "2026年10月19日 20:47:30(CST) 星期一",
+        "summary": "★★★\n澳门十大购物网站\n十大澳门购物网站 澳门主流网购平台排名 澳门人常用的购物网站(2026)\nM生活榜\n0\n澳门人用什么网购？澳门线上购物平台有哪些？小编为大家带来了澳门十大购物网站，如：澳觅、Buystation Macau、MFood、新八佰伴网上商店、澳门好帮手、惠澳优优站、电脑时代等，一起来看看吧。\n排排榜\n01\n澳觅\n91.5\n本地生活服务电商龙头外卖服务/全品类购物平台全面覆盖超市百货/生鲜食材/餐饮到店优惠提供配送服务/团购业务\n02\nBuystation Macau\n90.2\n澳门头部百货网购平台食品/营养品/美妆/家居/母婴等全品类 线上线下同价/配送覆盖15个海外地区\n03\nMFood\n89.0\n与“澳觅”齐名餐饮外卖/超市购物/跑腿服务提供全面线上购物和配送网络适合餐饮外卖和日常杂货采购\n04\n新八佰伴\n87.5\n澳门知名百货公司线上平台商品正品保证/支持线上购买线下提货或送货上门美妆/母婴/家电/服饰为主\n05\n澳门好帮手\n85.7\n澳门电子优惠券推平台生活百货/数码影音/餐饮美食一应俱全 售后服务便捷/可以申请退换货\n06\n惠澳优优站\n84.0\n澳门政府认可的B2C网购平台进口母婴用品/食品/化妆品/玩具手办等100%正货/澳门直购直邮/海关备案\n07\nComputing Age Co\n83.0\n澳门老牌3C供应商个人电脑到商用产品全覆盖70+品牌数码产品专注于软硬件产品及解决方案服务\n08\n橙式生活\n81.1\n澳门本地的网上超市提供当季性价比高的优质产品新鲜蔬菜/肉类海鲜/干货零食/生活用品等\n09\n澳门街机\n79.6\n澳门本土数码购物网站提供最新游戏主机/正版软件/配件周边 预订/免费送货服务\n10\niSPORT线上商城\n78.1\n澳门领军体\n用品连锁店官方线上商城涵盖运动鞋服/健身器材/户外装备品牌齐全/正品保证\n澳门广星传讯售票网\nTriangle Sport Macau\n秋叶原\nPrice853\n01\nBuystation Macau\n4771\n澳门头部百货网购平台食品/营养品/美妆/家居/母婴等全品类 线上线下同价/配送覆盖15个海外地区\n02\n澳门广星传讯售票网\n1920\n澳门主流票务平台\n03\n惠澳优优站\n1244\n澳门政府认可的B2C网购平台进口母婴用品/食品/化妆品/玩具手办等100%正货/澳门直购直邮/海关备案\n04\n橙式生活\n1180\n澳门本地的网上超市提供当季性价比高的优质产品新鲜蔬菜/肉类海鲜/干货零食/生活用品等\n05\n澳门街机\n1091\n澳门本土数码购物网站提供最新游戏主机/正版软件/配件周边 预订/免费送货服务\n06\nPrice853\n903\n电子产品供应商\n07\n秋叶原\n796\n澳门最多fans的潮流生活产品商户之一\n08\nComputing Age Co\n585\n澳门老牌3C供应商个人电脑到商用产品全覆盖70+品牌数码产品专注于软硬件产品及解决方案服务\n09\n澳觅\n190\n本地生活服务电商龙头外卖服务/全品类购物平台全面覆盖超市百货/生鲜食材/餐饮到店优惠提供配送服务/团购业务\n10\nMFood\n100\n与“澳觅”齐名餐饮外卖/超市购物/跑腿服务提供全面线上购物和配送网络适合餐饮外卖和日常杂货采购\n01\n新八佰伴\n231\n澳门知名百货公司线上平台商品正品保证/支持线上购买线下提货或送货上门美妆/母婴/家电/服饰为主\n02\n澳门好帮手\n澳门电子优惠券推平台生活百货/数码影音/餐饮美食一应俱全 售后服务便捷/可以申请退换货\n03\n澳觅\n3\n本地生活服务电商龙头外卖服务/全品类购物平台全面覆盖超市百货/生鲜食材/餐饮到"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门人常用的app有哪些?这份实用指南请收好",
+        "url": "https://www.gskjb.cn/gskuu/20260703/tkbrj2-220825.html",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/img/a56fc0bbeabeba7d3d2c5b925a336e19~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855548270&x-signature=jMnu7LX%2F55iq%2B8V4pdGYm00O2Qo%3D",
+        "site_name": "甘肃科技报",
+        "publish_time": "2026年09月28日 21:54:00(CST) 星期一",
+        "summary": "着支付、叫车、缴费等多种功能。澳门版本的微信与内地版本功能基本一致，但部分服务如红包、小程序可能因地区政策略有差异。此外，Facebook、Instagram和WhatsApp在澳门同样拥有大量用户，尤其对于与海外亲友保持联系的人群来说，这些国际社交软件是必不可少的。澳门年轻人还喜欢使用TikTok（抖音国际版）和YouTube观看短视频与长视频内容，这部分app的使用习惯与香港更为接近。\n在生活服务方面，澳门人常用的app涵盖外卖、打车、导航与本地资讯。外卖平台中，澳觅（AOMI）是澳门本地最主流的应用，它集合了餐厅外卖、生鲜超市、便利店配送等业务，界面操作简单，支付方式支持支付宝、微信和澳门通。另一个常见的是闪蜂（Flashbee），同样提供外卖与跑腿服务，与澳觅形成竞争。打车方面，澳门没有滴滴，但可以使用澳门电召（Macau Taxi Call）以及Uber（优步）国际版，前者是本地出租车预约平台，后者有时因法律限制无法正常使用，因此很多居民也会直接在路上拦车。导航地图则普遍使用Google\n Maps，它提供准确的公交路线和步行指引，部分用户也会用百度地图或高德地图，但澳门地区的数据更新不如本地化app全面。\n电子支付是澳门人常用的app中增长最快的类别。除了微信支付和支付宝（Alipay）在澳门逐渐普及外，澳门本地还有澳门通（Macau Pass）App，它不仅可以用于乘坐巴士、轻轨和在便利店小额消费，还能绑定银行卡进行线上充值。澳门通App还集成了电子支付、交通卡查询、商户优惠等功能，是本地居民日常出行的好帮手。值得注意的是，虽然澳门大部分商铺已经接受移动支付，但仍有部分小店只收现金或仅支持本地支付工具，因此建议游客和初来乍到者同时准备澳门通和现金。\n在公共服务领域，澳门人常用的app包括澳门卫生局的“澳门健康码”应用、交通事务局的“巴士报站”以及市政署的“澳门市政服务”。其中巴士报站App可以实时查看澳门所有公交线路的到站时间、路线调整和站点信息，非常实用。此外，澳门电讯、CTM（澳门电信）等运营商的官方App也常用于查询话费、办理\n套餐和缴付账单。对于需要办理政府业务的市民，一网通App（澳门公共服务）整合了社保查询、车辆登记、税务申报等多项功能，但使用前需进行实名认证。\n关于下载与安装，澳门人常用的app大多可在iOS的App Store和Android的Google Play商店直接搜到。由于澳门地区没有像内地那样统一的应用市场，部分国产应用（如支付宝、微信）在澳门版本与内地版本上并无差异，只需在商店搜索中文名称即可。需要注意的是，一些澳门本地app可能未上架某些第三方市场，建议通过官方网站或官方商店下载，避免安装到仿冒或携带广告插件的非官方版本。另外，部分应用（如澳觅）在首次使用时需要授权地理位置和短信权限，这是为了让外卖和配送服务正常运作，可以放心授权。\n在使用过程中，有几个误区值得留意。一是澳门人常用的app并非全部免费：虽然下载基本不收费，但像外卖平台会收取配送费，部分导航软件的高端功能需要订阅会员，电子支付工具在提现或跨境转账时可能产生手续费。二是安全性问题：澳"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门美食外卖团购平台 Stats on Google Play · Downloads, Revenue, Keywords, Product Pages, Reviews, SDKs ·...",
+        "url": "https://app.appfigures.com/reports/app-profile/280169412660",
+        "logo_url": "",
+        "site_name": "",
+        "publish_time": "2026年09月11日 19:14:05(CST) 星期五",
+        "summary": "澳覓-澳門美食外賣團購平台\nOverview\nIntelligence Summary\nCountries\nWorldwide\nTime span\nLast month\n澳覓:澳門一站式生活服務平台\nGoogle Play\n3.88 (1.5K)\nFood & Drink\nRevenue Sources\nNone\nReleased\n9 years ago\nUpdated\n10 days ago\nEst. Downloads\nWorldwide · Aug 2026\n<5K\nEst. Revenue (After Fees)\nWorldwide · Aug 2026\nNot Monetized\nMost Downloaded\nAug 2026\n1. Hong Kong\n77%\n2. Taiwan\n12%\n3. Singapore\n9%\n4. Malaysia\n2%\nRecent Sentiment\nWorldwide · Aug 2026\n0%\n100%\nMetadata & Screenshots\n澳覓，澳門一站式生活服務平台，合作商戶2000+，註冊用戶70萬+\n「產品特色」\n吃喝玩樂全在行：\n澳覓外賣，覆蓋全澳2000+餐廳，不進廚房，不出家門，澳覓專送為您快速送達；\n團購優惠，品質團購1折起，在線支付優惠更多，工銀澳覓聯名卡享更多實惠；\n澳覓商城，萬千好物，任君選擇，即時送貨加跨境購物代收點自提模式，為澳門人量身定制；\n澳覓直播，搵靚貨，睇澳覓直播，可視化嘅直播電商購物模式；\n澳覓秒殺，每週五上午10:00準時推出，為您打造精緻生活，更多優惠等你來。\n「特色功能」\n搜羅附近外賣美食，極速訂餐\n澳覓專送快速送餐，隨時呼叫\n澳覓商城送貨到家，優質服務\n澳覓直播萬千靚貨，優質推薦\n各種贈飲打折活動，貼心優惠\n外賣美食照片點評，吃出信賴\n下載澳覓App，讓澳門生活更美好Aomi, a one-stop life service platform in Macau, with 2000+ cooperative merchants and 700,000+ registered users\n\"feature of product\"\nEating, drinking, and having fun:\nAomi takeaway, covering 2000+ restaurants in Australia, without entering the kitchen or leaving the house, Aomi's special delivery will serve you quickly;\nDiscounts on group purchases, starting from 10% off for quality group purchases, more discounts on online payment, and more benefits with ICBC AOM co-branded cards;\nAomi Mall, thousands of good things, you can choose, instant delivery and cross-border shopping collection point self-pickup mode, tailor-made for Macau people;\nAomi live broadcast, find cool goods, watch Aomi live broadcast, visualized live broadcast e-commerce shopping mode;\nAoMiao spike, launched on time every Friday at 10:00 am, to create a refined life for you, more discounts are waiting for you.\n\"special function\"\nCollect nearby takeaway food and order food quickly\nAoMi provides fast food delivery, call at any time\nAomi Mall home delivery, high-quality service\nAomi live broadcast thousands of beautiful goods, high-quality recommendation\nVarious discounts on free drinks\nTakeaway food photo reviews, eat out of trust\nDownload the Aomi App to make life in Macau better\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "美团外卖澳门配送遇阻，客服能打通顾客电话我却不行",
+        "url": "https://tousu.sina.cn/complaint/view/17396480203?sld=bfd9e173cc0bf56461c7d8c7d82c8c82",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/42f428720369bf9d0b246d7812d1e957~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620420&x-signature=IJEzvE%2FLazTwl49dBaD645wabKc%3D",
+        "site_name": "黑猫投诉",
+        "publish_time": "2026年04月27日 10:41:00(CST) 星期一",
+        "summary": "投诉编号：17396480203\n美团客服小美\n使用服务\n美团外卖\n投诉问题\n霸王条款 联系不到客服\n投诉要求\n退款\n涉诉金额\n10元\n美团外卖澳门配送遇阻，客服能打通顾客电话我却不行\n友爱喵 于黑猫投诉平台发起\n2026-04-27 10:41:09\n那边属于澳门特区 过不去 客服打电话给顾客通了 我打几个顾客都不接\n黑猫消费者服务平台 审核通过\n2026-04-27 11:28:12\n黑猫消费者服务平台 商家处理中\n2026-04-27 11:28:12\n已分配商家 美团客服小美\n美团客服小美 回复\n2026-04-27 11:29:30\n已隐藏内容\n友爱喵 补充投诉\n2026-04-27 23:47:03\n没人打电话给我 这叫已处理？\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门三大外卖平台深度对比:谁更快更省更全能?_小吃快餐_什么值得买",
+        "url": "https://post.m.smzdm.com/p/apq25el9/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620420&x-signature=WcKywsK4NT7PGcCB6x1mOrzENAY%3D",
+        "site_name": "什么值得买社区频道",
+        "publish_time": "2026年06月09日 00:00:00(CST) 星期二",
+        "summary": "截至2026年6月，澳门本地生活服务市场已形成以mFood、闪蜂和澳觅为代表的三大主流外卖及即时配送平台。三者均覆盖餐饮外卖核心业务，并逐步拓展至超市配送、跑腿代购等多元场景。\n\n在配送时效方面，mFood多次被描述为“最快15分钟送达”或“取餐后约30分钟送达”，强调其专送团队的响应速度。部分素材指出，实际送达时间受澳门地形复杂、高峰期拥堵等因素影响，建议用户“提前下单，平均送达时长约1小时”。闪蜂则主打“最快1小时送达”，并明确其“3公里生活圈”模式，覆盖澳门半岛及离岛区域，日均处理订单超2万单。澳觅的配送时效表述较为稳健，多数订单“30–60分钟送达”，高峰时段仍能保持可靠节奏，且通过接入顺丰同城“SoFast”服务，在澳门半岛提供快至1小时的即时配送能力。三者中，mFood在宣传口径上最强调“极速”，而闪蜂与澳觅更侧重全岛覆盖与稳定性。\n\nmFood常提供“免配送费活动”，但部分商家可能单独收费，且同一商家在不同平台（如澳觅）的配送费可能不同。闪蜂的超市配送采用阶梯计价：满299澳门元免基础配送费，满199收5元，未满199收9元；默认限重15公斤，超重每公斤加收2元（上限30公斤）；此外，凌晨0–8点及法定假期每单额外加收10元。澳觅未公开详细计价规则，但作为综合服务平台，其外卖板块通常包含基础配送费，部分促销期可享减免。\n\n三平台在服务生态上呈现不同路径。mFood专注餐饮外卖，强调“成千间签约商户”与“菜品新鲜热辣”，功能聚焦于餐厅搜索、在线订餐、订单跟踪及高频优惠活动。闪蜂定位为“新零售+本地生活服务平台”，业务涵盖超市到家、美食外送、百货拼团等，依托新花城集团资源，构建12类生活服务网络。澳觅则对标内地美团，打造“一站式生活服务平台”，整合外卖、团购、打车、酒店、充电宝租借、洗衣等20余项服务，合作商家超5500家，注册用户达70万。从功能广度看，澳觅最全面，闪蜂次之，mFood最垂直。\n\nmFood：餐饮垂直深耕，优惠活动频繁，适合高频点餐用户\n闪蜂：超市+外卖双轮驱动，阶梯配送费透明，适合家庭采购与日常用餐结合场景\n澳觅：全场景生活服务集成，服务种类最多，适合需要多类型本地服务的用户\n\n有旅行用户称赞闪蜂“不用线下排队等位”，极大提升行程效率；mFood的订单进度透明化也获得认可。另一方面，也有用户抱怨骑手服务不规范，如拒送上楼、沟通不清等问题。值得注意的是，这些负面案例多指向“闪购平台”而非特指某一品牌，但因闪蜂同时运营超市与外卖，易被关联。各平台均设有客服通道应对异常订单，但服务一致性仍是挑战。"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅外卖官方版下载-澳觅外卖app下载v{package_version_name} 安卓版-火火资源网",
+        "url": "http://m.hnfcjr.com/soft/29957.html",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/img/3d3391cbf5cfa5dc8016b3a8ddddced9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855619837&x-signature=RyvZDx6Gd81yla6e8%2FJzxlve2cY%3D",
+        "site_name": "火火资源网",
+        "publish_time": "2026年08月06日 00:00:00(CST) 星期四",
+        "summary": "澳觅外卖app\n类型：生活服务版本：v{package_version_name} 安卓版\n大小：97.1M更新：2026-08-06\n官网：https://www.aomi.com/\n厂商：珠海澳觅网络科技有限公司\n应用截图\n导读：澳门吃喝玩乐一站搞定，点外卖查评价就靠它，推荐试试！\n应用介绍\n澳觅外卖是澳门本地一款安全可靠的一站式生活服务平台。无论是生鲜百货、美食佳肴，还是休闲娱乐，应有尽有，一应俱全，真正实现万物到家，极速配送服务，快来下载澳觅外卖App，开启你的无忧生活之旅吧！\n澳觅介绍\n澳门澳觅外卖致力于挖掘澳门最地道的吃喝玩乐体验，是本地化的生活服务优选平台，也被誉为“澳门版美团+大众点评”。它不仅为用户精选值得信赖的本地商家信息、真实消费评价和丰富优惠资讯，还为商家提供高效、精准的推广工具，助力品牌触达更多本地消费者。无论是寻找人气美食、特色店铺，还是享受便捷生活服务，澳觅外卖都是您探索澳门生活的理想指南。\n澳觅怎么添加收货地址\n1、点击最右侧的我的按键\n2、向下拉找到收货地址\n3、点击右上角的新增填入收货地址即可\n澳觅怎么看美食榜排名\n1、点击首页下方的团购优惠\n2、点击最上方的附近打卡人气榜\n3、进去之后就可以看到各种美食类别的榜单\n澳觅怎么联系外卖客服\n1、点击我的按键\n2、向下划找到在线客服选项\n3、点击进去发送订单联系外卖客服即可\n应用信息\n包名：com.mem.MacaoLife\n名称：澳觅\nMD5值：5aab9d82bfdad4593a9b247e9ca26349\n隐私政策：点击查看\n备案号：粤ICP备18132113号-12A\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "市政署与餐饮行业交流座谈 促外卖店及露天茶座规范经营 – 澳门特别行政区政府入口网站",
+        "url": "https://www.gov.mo/zh-hans/news/889412/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/cfa9abb22e386eb1522580f73300390c~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620420&x-signature=MPUw5%2FsyDqTVrl4W6%2F5%2BltUlBA0%3D",
+        "site_name": "澳门特别行政区政府",
+        "publish_time": "2026年02月13日 16:26:00(CST) 星期五",
+        "summary": "市政署与餐饮行业交流座谈 促外卖店及露天茶座规范经营\n市政署（IAM）\n2026年2月13日 16:26\n市政署举办“外卖店及露天茶座专题会议”，与本澳餐饮行业商会广泛交流。\n为进一步加强食品业界对露天茶座准照、外卖店登记的规范认知，共同推动饮食行业合法、有序经营，市政署于二月十日举行“外卖店及露天茶座专题会议”，就经营外卖食品活动，以及饮食或饮料场所、餐厅等申请露天茶座准照旳相关申请流程、监管规范及经营要求等与多个本澳餐饮业商会进行讲解与交流。市政署期望传达合法经营的规范要求，推动守法经营，提升业界食品安全及环境卫生管理，营造良好的经营条件。\n逾四千外卖登记生效中 提醒须完成登记才能开业\n会上，市政署代表介绍了《外卖食品活动场所的登记制度》实施概况，指出制度实施至今，整体运作顺畅，目前持有外卖登记证明的场所逾四千二百间，绝大部分业者均依法完成登记，但偶有零星违规个案，主要是未获取登记证明已对外营业。为此，特别提醒食品业界注意，外卖店在开业前必须向市政署提出登记申请，并在获发登记证明后，方可对外开放营业；同时亦须向公众展示登记证明或编号等资料。违反相关规定，可被科处五千至三万五千澳门元罚款。\n近八十场所申开露天茶座 专题会讲解申请流程\n市政署自去年八月以试点形式，重新接受符合条件的食肆提出露天茶座准照申请，为本澳中小企营商环境带来新机遇。开放申请至今，市政署共接获近八十间场所提出申请，反应踊跃。市政署代表于会上亦介绍了露天茶座准照的申请流程、相关管理措施及实施成效；并逐一解答与会业界的疑问，如占用位置、范围、发牌时间等，加强业者对经营外卖店及露天茶座的瞭解，推动守法经营。为方便业界掌握相关规范，市政署已制作“外卖食品活动场所的登记制度”、“露天茶座准照申请方式”图文包等资料，并上载至市政署网页供有需要人士作进一步了解。\n出席专题讲座的行业团体代表分别来自：澳门餐饮业联合商会、澳门中小型餐饮业商会、澳门餐饮行业协会、澳门美食同业联合商会。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Macau King of Stir Fry Menu, Price & Delivery Near You | foodpanda",
+        "url": "https://www.foodpanda.hk/restaurant/rj06/macau-king-of-stir-fry",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/img/28008101f9da8a6be9bfc5d1f7a41c08~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620433&x-signature=mfMSdE7Xc81OgcIUjDWGOKuWi9s%3D",
+        "site_name": "foodpanda",
+        "publish_time": "2026年08月20日 14:48:32(CST) 星期四",
+        "summary": "eakfast\nfrom HK$ 48.5 HK$ 57\nServed with homemade turnip cake or bread (1 type), egg (1 type) and topping (1 type) | Served with drinks\nPopular\nA. Traditional Silver Pin Noodles with Minced Meat and Mushroom in Soup\nfrom HK$ 48.5 HK$ 57\nServed with homemade turnip cake or bread (1 type) and egg (1 type) | Served with drinks\nPopular\nB. Macau Famous Fresh Tomato Beef Brisket Soup and Luncheon Meat Cube with Macaroni\nfrom HK$ 48.5 HK$ 57\nServed with Macanese crispy bun with butter (half) and egg (1 type) | Served with drinks\nPopular\nC. 4 Fillings Instant Noodle Set\nfrom HK$ 48.5 HK$ 57\nServed with luncheon meat, egg, red sausage and chicken mid-joint wing | Served with drinks\nPopular\nD. Pineapple Bun with Butter and Pan-seared Thin Beef Steak\nfrom HK$ 51 HK$ 60\nServed with luncheon meat and egg (1 type) | Served with drinks\nD. Pineapple Bun with Butter and Pan-seared Chicken Steak\nfrom HK$ 51 HK$ 60\nServed with luncheon meat and egg (1 type) | Served with drinks\nE. Pineapple Bun with Butter and Cream of Tartar Cutlet Fish Fillet\nfrom HK$ 51 HK$ 60\nServed with luncheon meat and egg (1 type) | Served with drinks\nPopular\nF. Milk Oatmeal and Sandwich with 2 Fillings Set\nfrom HK$ 48.5 HK$ 57\nServed with drinks\nG. Sandwich with 1 Filling Set\nfrom HK$ 43.4 HK$ 51\nServed with drinks\nG. Sandwich with 2 Fillings Set\nfrom HK$ 45.0 HK$ 53\nServed with drinks\nI. Pineapple Bun with Butter\nfrom HK$ 32.3 HK$ 38\nServed with drinks\n套餐\n招牌胡椒浸蜆2人餐\nfrom HK$ 306.9 HK$ 361\n泰汁冰鎮鮑魚 (2隻)、招牌軟骨皇子鴿 (1隻)及XO醬鴛鴦牛肉炒河粉 | 奉送飲品\n菠蘿咕嚕肉2人餐\nfrom HK$ 262.6 HK$ 309\n招牌軟骨皇子鴿 (1隻)及招牌咖喱牛腩飯 | 奉送飲品\n砂鍋雲吞雞煲2人餐\nfrom HK$ 328.9 HK$ 387\n泰汁冰鎮鮑魚 (2隻)、豉椒炒鵝腸及澳門炒飯 | 奉送飲品\n避風塘田雞2人餐\nfrom HK$ 362.1 HK$ 426\n泰汁冰鎮鮑魚 (2隻)、豉椒炒蜆及招牌咖喱牛腩飯 | 奉送飲品\n生啫滑雞大煲2人餐\nfrom HK$ 340 HK$ 400\n泰汁冰鎮鮑魚 (2隻)、馬拉盞通菜及招牌咖喱牛腩飯 | 奉送飲品\n砂鍋雲吞雞煲4人餐\nfrom HK$ 627.3 HK$ 738\n泰汁冰鎮鮑魚 (4隻)、招牌軟骨皇子鴿 (2隻)、避風塘田雞、菠蘿咕嚕肉及XO醬鴛鴦牛肉炒河粉 | 奉送飲品\n生啫滑雞大煲4人餐\nfrom HK$ 660.5 HK$ 777\n泰汁冰鎮鮑魚 (4隻)、鐵板葡式炒辣蝦、避風塘田雞、豉椒炒蜆及澳門炒飯 | 奉送飲品\nBBQ\nRoasted Pork Cheek\nHK$ 102 HK$ 120\nPortuguese Roasted Chicken (Half)\nHK$ 130.1 HK$ 153\nChinese BBQ\nSteamed Chicken with Salted Sauce Chicken\nfrom HK$ 163.2 HK$ 192\nBBQ Crispy Pork Brisket (Regular)\nHK$ 108.0 HK$ 127\nBBQ Pork with Honey Sauce (Regular)\nHK$ 108.0 HK$ 127\nTwo-kinds of BBQ Meat\nHK$ 229.5 HK$ 270\nThree-kinds of BBQ Meat\nHK$ 295.8 HK$ 348\nCurry\nCurry Pork Chop with Rice\nHK$ 94.3 HK$ 111\nSpicy\nCurry Chicken with Rice\nHK$ 94.3 HK$ 111\nSpicy | Macau's recommend\nCurry Beef Brisket with Rice\nHK$ 94.3 HK$ 111\nSpicy | Macau's recommend\nFried Dish\nFried Cashew Nut, Beef Chuck and Eggplant in Gravy Sauce\nHK$ 119 HK$ 140\nFried Celery with Prawns and Scallops\nHK$ 119 HK$ 140\nFried Celery and Prawns with Cashew Nut\nHK$ 108.0 HK$ 127\nScrambled Egg with BBQ Pork, Shrimp and Chopped Green Onion\nHK$ 85.8 HK$ 101\nFried Frog and Cashew Nuts in Typhoon Shelter-style\nHK$ 96.9 HK$ 114\nSpicy\nDeep Fried Pork Chop with Spicy Salt and Chilli\nHK$ 85.8 HK$ 101\nSpicy\nFried Prawns with Sweet and Sour Sauce\nHK$ 108.0 HK$ 127\nFried Spare Ribs with Sweet and Sour Sauce\nHK$ 85.8 HK$ 101\nFried Dish Series\n澳門小炒王\nHK$ 96.9 HK$ 114\n椒鹽田雞\nHK$ 96.9 HK$ 114\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Hotel Sogo brings its comfort food closer to home with foodpanda | The Manila Times",
+        "url": "https://www.manilatimes.net/2026/10/17/tmt-newswire/hotel-sogo-brings-its-comfort-food-closer-to-home-with-foodpanda/2447309",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/6a7852db5032f96acf9c99d0f680d4d9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620433&x-signature=awGf%2FesC11OiB%2F3Izo%2BXzRhKuGc%3D",
+        "site_name": "The Manila Times",
+        "publish_time": "2026年10月17日 00:03:00(CST) 星期六",
+        "summary": "TMT Newswire\nHotel Sogo brings its comfort food closer to home with foodpanda\nOctober 17, 2026\nFOR more than three decades, Hotel Sogo has welcomed Filipinos looking for a clean, comfortable place to rest. For guests who have come to enjoy its food, a stay also means a familiar meal. Now, through a partnership with foodpanda, Sogo Food is reaching customers beyond the hotel’s doors.\nThe concept grew out of a recurring request from guests. Through Hotel Sogo’s Communication Center, many had been asking whether Sogo Food was available for delivery. These inquiries inspired the brand to make its meals accessible beyond a hotel stay.\nSOGO MEETS FOODPANDA Whether at home or at work, customers can now order Sogo Food through foodpanda, subject to outlet and delivery availability. PHOTO FROM HOTEL SOGO\nSOGO MEETS FOODPANDA Whether at home or at work, customers can now order Sogo Food through foodpanda, subject to outlet and delivery availability. PHOTO FROM HOTEL SOGO\nBy listening to its guests and responding to their needs, Hotel Sogo is giving those who crave its food — but are unable to check in — a way to enjoy their favorites.\nLaunched on Sept. 28, 2026, at Hotel Sogo Santolan, the partnership makes Sogo Food available for delivery from six branches: LRT Monumento, EDSA Cubao, EDSA Guadalupe, Pasay Rotonda, Pasay Harrison and Santolan, with the hotel targeting expansion to all 52 of its branches nationwide before 2026 ends.\nAmong the dishes are pancit, crispy pata, half-fried chicken, clubhouse sandwich and pakbet. These familiar choices bring the brand’s take on Filipino comfort food to customers ordering through the app.\nCustomers can search for “Sogo Food” on the foodpanda app to check available outlets and menu selections for their delivery location.\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "foodpanda app: 美食和生鲜杂货",
+        "url": "https://www.foodpanda.my/zh/contents/apps",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/img/3b60d7d7b24a057b9c2ff4f03ee46c52~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620433&x-signature=DSVuzIE8KJ1F96Cg04ci632fank%3D",
+        "site_name": "foodpanda",
+        "publish_time": "2025年07月06日 21:26:47(CST) 星期日",
+        "summary": "foodpanda app: 美食和生鲜杂货\n美食外卖及生鲜杂货外送服务，一指轻松掌握所有订购！\n无论是比萨、汉堡包、炸鸡还是本地小吃，我们都清楚你周围的所有餐厅，並可以向你推荐餐厅－无论是大品牌或者地方小店，我们都可以配送！还有独家和个性化优惠等你享用。免除购物的烦恼，一切都交给我们－杂货配送应用程序，从 pandamart 到便利店、超市，我们提供零食、饮料、生鲜杂货、日常必需品、生鲜食品、冷冻食品、个人护理用品、甚至宠物用品的配送。立即下载！\nFood delivery in Kuala Lumpur\nSantinos Pizza Bangsar, Havana Bar Grill, Burger On 16, Kenny Rogers Roasters,\nFood delivery in Petaling Jaya\nPappa Rich, Goodness Greens Cafe, Madam Kwan, Goodness Greens Cafe , Sushi King\nFood delivery in Cyberjaya\nDapur Penyet Cyberjaya, My Burger Lab, Aroma Village, BBQ Chicken,\nFood delivery in Shah Alam\nPenyet Express, Syed Bistro , ABC Bistro Cafe, WTF Restaurant , Juice Work Vivo\nFood delivery in Subang\nCarl's Jr., Santinos, Tasty Porridge, Simple Life Healthy Vegetarian, Din Tai Fung ,\nFood delivery in Penang\nXuan Xin Ramen Kitchen,"
+       },
+       {
+        "type": "url_citation",
+        "title": "中式 美食，随时送到香港岛",
+        "url": "https://www.foodpanda.hk/zh/city/hong-kong/cuisine/chinese",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/img/28008101f9da8a6be9bfc5d1f7a41c08~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620433&x-signature=fJ6iOo2xLRa3%2FSs1HFFEupLXWmA%3D",
+        "site_name": "foodpanda",
+        "publish_time": "2016年09月06日 00:00:00(CST) 星期二",
+        "summary": "糖為主，調味擅長鹹、甜、糟、酸，這兩種菜色雖同為中式料理，但卻是兩種截然不同的地方特色菜餚。\n多樣化選擇，心水中菜外賣任你點\n各地不同的文化也發展出各式不同的飲食文化特色，例如起緣於香港的茶餐廳，即是揉合了香港特色的西式餐飲，並以其多樣化的美食、快捷的上菜速度及適中的價格，成為香港平民化的飲食場所。而foodpanda為了能滿足饕客對各式不同中菜的需求，與多家餐廳合作，不論是一盤色香味俱全的炒飯、一份飽滿鮮美的水餃，還是用料豐富、華麗美味的盆菜、火鍋，外賣速遞服務讓你能輕鬆享有這些美食。喜愛中菜的朋友絕對不能錯過下面這幾間餐廳的美味料理，foodpanda祝你用餐愉快！\n唐宮小聚：招牌名菜有烤白玉王鴿、松露香菇和猛虎咬豬等。\n四姐川菜：嗜辣人士必點水煮魚、四川涼麵。\n書湘門第：辣味豐富的湖南菜，必點孜然寸骨、酸辣雞雜。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared",
+        "url": "https://cloudpipemo.com/macao/en/insights/macau-food-delivery-platform-guide-2026",
+        "logo_url": "",
+        "site_name": "",
+        "publish_time": "2026年10月17日 23:06:00(CST) 星期六",
+        "summary": "ear distinction between tourist and resident consumption patterns.\nDelivery area differences among platforms also impact user experience. Delivery within the Macau Peninsula urban area can typically be achieved within 30 minutes, while remote areas of Coloane generally require 45 minutes or more. If located along the Cotai Strip, Uber Eats offers a richer selection of restaurants; in traditional communities such as São Lourenço and Fai Chi Kei, foodpanda and local platforms have more apparent advantages. Users are advised to select their primary platform based on regional characteristics and use other platforms as alternatives.\nWhen selecting a platform, consider the following strategies: first, confirm whether the delivery address falls within the platform's service area; second, compare the presence of frequently-used restaurants; finally, pay attention to promotional activity periods \nfor each platform. By adopting this approach, optimal food delivery experiences can be obtained across different areas. For detailed restaurant recommendations for each platform, refer to the special topics on foodpanda, Uber Eats, and other platforms.\nfoodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\nThe fee structures of Macau's food delivery platforms show significant differences, and merchants can choose the most suitable partnership model based on their positioning. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from 8 to 15 Macau Patacas per order, depending on distance.\nUber Eats has a relatively straightforward commission structure, with a standard rate of 30%, but offers higher visibility and inte\nrnational user traffic. The base delivery fee starts at 10 Macau Patacas, with an additional 5 to 8 Macau Patacas for distances exceeding 3 kilometers, making it suitable for high-end hotel restaurants and shopping mall food outlets. It is worth noting that Uber Eats has stricter verification standards for merchants, requiring complete business registration and food hygiene licenses.\nThe advantages of local platforms 澳覓 and 米盒 lie in their low commission rates, averaging only 12% to 18%, and their flexible payment options for small to medium-sized neighborhood restaurants. 澳覓 charges a delivery fee of 5 to 12 Macau Patacas per order, while 米盒 offers free delivery in specific areas (such as Ilha Verde and Madre de Deus).\nCost Optimization Recommendations: If a merchant is located in the Cotai Strip area and targets high-end customers, Uber Eats' international user base can p\nrovide additional visibility; if focusing on neighborhood resident business, 澳覓 or 米盒's low commission strategy offers better cost efficiency; foodpanda is suitable for comprehensive restaurants seeking to cover diverse customer segments across Macau.\nRestaurant Settlement Costs and Operational Pain Points (B2B Perspective)\nThe fee structure of Macau's food delivery platforms significantly impacts restaurant profit margins. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from MOP 8 to 15 per order depending on distance; Uber Eats has a standard rate of 30%, but offers higher visibility and international user traffic; local platforms like Ao Life offer more flexible commission structures, with some using monthly sub"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254843519100000000000000000000ffffac191796352955"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 23131,
+   "output_tokens": 879,
+   "total_tokens": 24010,
+   "input_tokens_details": {
+    "cached_tokens": 10352
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 274
+   },
+   "tool_usage": {
+    "web_search": 9
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 9
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807607,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:06:46+08:00"
+}

@@ -1,0 +1,13 @@
+.env
+.venv/
+.venv-app/
+__pycache__/
+*.pyc
+web/node_modules/
+web/dist/
+data/raw/daily/
+graphify-out/
+collect/.doubao-profile/
+.superpowers/
+.pytest_cache/
+*.db

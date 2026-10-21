@@ -1,0 +1,4485 @@
+++4FIq	立即登录
+++vj9k	标签在团队内所有品牌间共享
++/1TcK	已使用 formattedValue3 / formattedValue4（percent%）
++2AZkJ	选中所有分组里的命中提问
++2wtBQ	支持 Markdown、HTML 和 PDF，最大 2MB；仅提取报告结构
++326vN	GEO指标持续优化
++6d+DB	请填写技能正文
++6s9fc	修改提问启用
++8cUuS	当前套餐下暂未开放相关能力，可联系平台升级套餐或购买相关配额
++8rCJL	A/B测试
++9tVKC	暂无提问
++A9qGK	max元以下
++AJoTV	标签启用与否不影响文章标签管理
++D4oOd	素材列表
++D7ycD	高引用平台
++FybYF	正在加载语言...
++Juf0E	便于团队协作时快速了解品牌背景
++KIjSJ	注册成功，3秒后自动跳转
++KZ3S6	提交失败。
++LP0iD	客服邮箱
++LvCOJ	查看详情 →
++MGcDm	解除平台关联
++NQ8uk	微信搜狗
++OC4sF	创建完成后可在控制台继续添加
++P12Ri	全部接收品牌中的提问与回答记录已保留，现由各自品牌管理。
++P1WBI	每日积分消耗
++R/BgN	搜索提问
++RPaFQ	品牌访问权限由团队管理员或品牌管理员分配，如需调整请联系以下管理员。
++T/mN5	添加竞品失败
++T8gXn	保存失败
++WSNOf	adjustmentCount 项
++X9Awk	提交前请核对标题与链接，导入后可在列表查看追踪进度
++YBe1u	已发布？填写链接
++YTNFi	周期发放
++YxXBd	发布平台: platform
++Z3An+	品牌只读，可浏览全部内容，不可编辑管理
++aZSn5	diffDays2 个月前
++ba3nc	删除此分组
++bnz4W	名称
++d5xcB	团队 ID 不存在
++d8Frh	加载中...
++e6PdZ	品牌提及率
++eNGYd	快速生成邀请
++eSf96	页码超出范围
++eeUmZ	首次品牌曝光
++hMwAY	审核较严
++hU6dC	最大单篇被引天数
++jFY1S	未收到取消结果，生效状态未知。请刷新确认后再操作。detail
++kC9bM	未找到匹配商品
++lIC6K	无法获取团队列表，请检查网络连接
++mFFI8	经本品牌商品卡推荐、最终流入商品层的商品个数。路径曝光见副文案，明细见下方 Top5
++n8Z8f	brandName收录 ownCountText 个
++o1q+i	聊天
++pseLC	次
++qkKVO	本次运行未完成
++qsPCD	获取提及率趋势数据失败
++rNqbN	正在执行 runCount 项分析任务
++vU76W	丝芙兰旗舰店
++w9qqV	验证码为6位数字
++wBhvs	未提及品牌
++wdlGW	创建后立即启用
++xTyD5	多平台大模型天级追踪
++xxoaj	系统配置
++yEYWc	品牌积分消耗
++ygi4Z	删除失败:
++ytFDT	团队时区
++yuqnZ	预览图片 index2
++zDLBx	试试调整筛选条件，或直接创建新的提问继续监控品牌表现。
++zbKi8	不限区域
+/+nS3/	基于品牌核心竞争力与关键词，智能生成符合大模型偏好的优化文章，提升GEO指标命中率
+//2TQe	积分已用 creditPercent2%
+//NRlG	Agent 抢鲜额度不足
+//Oe54	竞品排名
+/0Y1ZR	不支持下载
+/14pr4	积分用量
+/4rY8Y	联系信息
+/6RpC6	用户
+/7iohZ	暂无可监控模型数据
+/8FVs6	未找到相关文章
+/8TwAf	已复制描述
+/8kcQO	对所有可编辑品牌授予编辑权限
+/92rOj	使用团队已有积分永久增加容量上限。实际扣减以后端计费规则为准。
+/A73qy	HTML 预览加载超时
+/AWaJ+	点击取消筛选
+/CHeuZ	主要内容概述
+/CLVGR	创建失败，请稍后重试
+/ChfVW	编辑链接失败:
+/EUXRQ	链接 i
+/Fi/Yz	发布失败，点击重试
+/HTTQN	报告模板信息
+/IHnaR	升级套餐后可解锁
+/KqAaP	引用趋势（次）
+/Mj3U4	总被引用次数
+/NIcbs	未启用，来源品牌控制
+/NPSL/	请稍后重试，或联系技术支持。
+/NWL0B	title | Answerbit 博客
+/OAcOW	取消全选
+/PLHu6	分析可见度差距
+/PqitJ	前端解析失败，已切换到在线预览
+/Tq+2O	暂时无法生成分享链接，请稍后重试
+/V3F/K	该路径暂无商品节点
+/VoLr5	重命名 Key
+/WGc5p	较周期首日 exposureRateFirstLabel
+/WJhrx	缺少授权码参数
+/XSvpj	在所有模型回答中，提到目标品牌的占比。
+/Ygcc0	关联提问：共 promptCount 个
+/ZEjFu	统计周期内，新发布成功的文章数量。
+/dZNsp	此处仅面向本次新增的接收品牌。已为其他品牌同步过的历史，请单独发起任务，避免同一时间段重复扣费。
+/eZGoj	商品GEO - GEO Dashboard
+/elTWi	formattedValue 积分
+/fO8tL	重试获取链接
+/fhRTb	已共享品牌
+/haQ6b	文档首页
+/i3ADu	加载更多
+/iNHGx	视频辅助发布
+/ilhyf	已选 selectedCount 个标签
+/jEabS	总引用
+/lDBHm	FAQ
+/mC7Kw	包含暂不支持的文件类型
+/mmMYm	无法生成邀请
+/qWlUG	复制分享链接
+/qhMxy	管理访问权限
+/qjdxn	请先创建品牌
+/qv1Zi	复制失败
+/r6wSV	授权后刷新页面即可访问
+/rcORK	保存中
+/rumie	取消选择
+/sKEOk	这里一改，它们自动跟着改
+/t2xY1	基础版
+/uCK16	编辑成功
+/uYz4M	定位
+/vqaCw	邀请链接的有效期（天）
+/xUk7u	已选 t2
+/yGobU	(当前目录)
+/zB109	已选 selectedCount 轮
+0+LmE+	全部状态
+0/kr3v	腾讯系产品与各行业团队，通过 Answerbit 在 AI 搜索时代保持品牌可见度优势。
+00/rX5	体验即将结束
+0025Uj	保存团队信息时出错，请重试
+03cUIc	输入域名关键词搜索
+04++3e	获取邀请列表失败
+0436R5	阿拉伯语
+05uq9R	移除成功
+06DkGx	网关超时，请重试
+08nHy/	抱歉，您没有权限访问此页面
+0A9cVD	品牌语言
+0ALVdu	获取提问失败
+0CwZwH	基于关键词输入，智能生成结构化文章内容，优化信息架构，增强AI搜索引擎可见度
+0D2GNe	核心痛点与解决方案
+0DYFqH	操作者
+0Dqq2R	搜索品牌
+0EPyDi	多团队、多品牌协作管理，统一配置品牌信息与竞品，权限与配额清晰可控，确保团队协作高效有序。
+0FaWuz	欢迎回来，user_name
+0HYpzB	查看此提问近7天数据
+0Hdxot	模型推荐占比
+0IfmAI	升级套餐解锁此监测频次
+0JBKr/	仅剩 remaining unit
+0JKwbY	更换头像
+0JLMkv	路径内商品曝光 Top5
+0JXt2n	(n)
+0Jy/1z	该分组可能已停止共享，来源品牌或已取消共享。请刷新查看最新状态。
+0KoNVk	3个品牌
+0LGSUt	加载数据失败: message
+0MMDv5	还没有添加监控提问和竞品，进入控制台后可在「用户提问」、以及「品牌管理」里的「竞品编辑」中补充。
+0NLKcv	积分变动
+0OSNb5	未命名文章
+0OcN5u	搜索文章标题
+0Os3yN	used / limit 名成员
+0PAq8U	关联文章
+0QtuL/	Bing
+0TEW2H	AI 文章生成
+0V3afi	无法识别文件类型，尝试使用 docx 解析
+0Vwj3k	brandName · 积分消耗
+0XNXDW	数据洞察
+0Z+BJj	暂无用量数据
+0aBZh8	五大主流大模型天级追踪，每日自动采集品牌提及与排名变化，让 GEO 增长可量化、可追溯。
+0aRm7V	收藏
+0bnnlo	请输入链接标题
+0chF+H	口播文本
+0d7t6c	团队视角 — 在此处修改成员权限，将影响该成员在 \u003c0\u003e所有品牌\u003c/0\u003e 中的访问权限
+0dEIIh	当前看板已聚焦此分组
+0dZq3m	如需帮助，请联系品牌或组织拥有者为你授予访问权限。以及其他 \u003c0\u003eextraCount\u003c/0\u003e 位管理员
+0eXXq7	对同一时间段重复提交将再次扣费，系统不会自动识别已同步的记录。
+0ejIwE	title 创建提问
+0g363c	产品意向登记
+0guDt3	brandName眼霜
+0hJrzf	积分已用 creditPercent%，余额偏低
+0hKnwa	文章总引用次数
+0hRK3W	HTTP版本不支持
+0im7AE	取消共享后接收品牌的数据处理方式
+0jQy1Q	获取推荐失败
+0jg06f	视频/图文信息
+0n1cL2	最近
+0p97j/	根据当前文章内容生成图文
+0qvI8K	公司名称（可选）
+0r7ejU	启用 = 在团队视角页显示该标签数据
+0rnH4a	别名：
+0twnqI	当前团队尚无品牌，请先创建品牌后再邀请协作者
+0v05YU	校验未通过
+0v5p/N	竞品详情
+0vaRuX	正在加载 PDF...
+0wT+8p	取消后再次共享时，中断期间的数据不会自动恢复。可通过「同步历史数据」按日期补齐，将另行消耗积分。
+0wZon9	保存失败，请重试
+0yOa4M	试用版
+1+Oo14	brandName官方海外旗舰店
+1+x967	关联后约消耗 totalTrackingCost 套餐积分（约 trackingCostPerLink 积分/链接），持续追踪文章效果
+1/7N0R	品牌 ID
+10tb4P	发布与追踪
+11dQ0J	域名分析、全网文章追踪
+11iQlw	请联系团队管理员为您分配品牌权限
+126QdD	不含团队管理权限，需在下方为各品牌授权
+126tQc	新建文件夹
+13kM7r	素材标题长度不能超过100个字符
+14Avi8	选择左侧记录查看详情
+16IhS/	已选共享副本提问，无法批量操作
+18ec3v	共享副本
+19Opyu	功能暂未实现
+19PJGZ	全部提问 · totalPromptCount
+1CsZoj	占商品列全部路径曝光次数的比例
+1D9D3m	上一页
+1DpU++	批量配置模型成功
+1EFYjs	granted 有权限 · ungranted 无权限
+1EHA5P	放大
+1FJ74o	批量导入
+1GJ0bx	团队全域最高权限，负责团队配置、成员管理、品牌全生命周期
+1GbEJl	外部链接已添加
+1Gz0IV	参考范文
+1HQxLq	选择团队
+1HWAMP	该分组暂无提问
+1Hamd1	引用次数
+1JSxUv	关联发布链接
+1JtQNy	请求超时，请检查网络连接后重试
+1KyL29	选择您想要针对性优化的模型，系统将围绕这些模型生成优化内容
+1Mf0RT	文章已删除
+1MnQvu	自动发布配额已用完，可手动发布后关联链接
+1MugIM	批量actionText失败
+1NoF1+	点击展开品牌排位
+1NvXay	入门版
+1P36oe	较低
+1Q3T+f	后台发布中，请稍候
+1RKfdn	标签名称
+1Rc5gk	按流向图本地数据排序；暂无法拉取完整店内榜单
+1RrgX1	无效的素材类型
+1TKCf5	已成功：successNames。切换至对应品牌提问列表即可查看。
+1TXqnV	确认后将覆盖所选提问的模型配置，未勾选的模型会被移除
+1U11F1	报告模板已删除
+1V/+GU	暂无品牌
+1VTFdl	快速回复
+1VeXv+	页面未找到
+1WYji7	店铺名称
+1XYpbv	了解 GEO 品牌AI监控平台，最专业、清晰的品牌AI监控解决方案
+1YJo6e	brandName夜间修护霜
+1Ybjzj	展开分组后可为每个提问单独配置监测模型
+1Z7pN3	升级套餐以添加品牌
+1ZeHD1	消耗量
+1bIEsy	## 文章内容\\n
+1bLvxT	选中所有分组的全部提问
+1bn3rp	数据总览
+1bu5u3	全部设为查看
+1fUVW7	当前页面
+1iZy+P	article_count 篇文章
+1k66iK	大模型回答记录
+1kY02d	提问语言
+1lcQj7	数据加载失败
+1qAlX3	添加竞品
+1reghx	篇
+1sQB6v	如需帮助，请联系品牌或组织拥有者为你授予访问权限。
+1solsz	Key 名称已保存。
+1t8Y7T	引用
+1uIzXC	下载图片
+1vSZ8S	暂无排行数据
+1yhrLA	报告模板来源
+1zunWF	品牌权限不匹配
+1zvC5u	管理检测频次 · 前往模型配置
+2+9HNW	繁体中文
+2+siyl	Agent 分析
+2/FA8P	该域名已有 formattedValue 篇文章被 AI 引用、累计 formattedValue2 次，在此发布你的文章可提升品牌曝光
+2/STlo	产品意向登记二维码
+22vaxU	提问将计入接收品牌的提问额度，超出部分会自动停用；后续按接收品牌的监控配置运行并消耗该品牌积分。
+22xWk2	确认删除文章
+23W6Wl	禁用
+23ermu	发布完成后请关联链接
+26+GZQ	查看更多回答记录
+2Aq9Ls	Microsoft Copilot
+2B+T/w	搜索文件或文件夹...
+2Ba52e	正在验证登录状态...
+2EBqm2	开始编辑文章内容，或先在上方导入本地文件...
+2FvCO8	enabledCount / availableCount 已启用
+2Gh5t2	按曝光效果分数排序的行业排名列表。
+2L8D5R	暂无团队
+2LCk1n	Key 状态已更新。
+2Lzu7M	点击查看来源与可用操作
+2MQjfO	竞品商品 competitorSkuText 个
+2Mbua8	| 标签 | join |
+2OOk93	确定解除与 name 的 openableLinkCount 条发布链接关联吗？解除后将停止追踪这些渠道的引用数据。
+2P3hkI	提问数
+2QSvZa	更多技能
+2QX1+J	maxTotal次
+2R41ci	TestBird
+2RTCDr	AnswerBit 是腾讯企点营销云旗下的 AI 搜索品牌可见度增长产品。腾讯企点营销云是腾讯面向企业的一体化智能营销云，提供 CDP 客户数据平台、MA 营销自动化、SCRM 企微互动等经典营销工具及 AI 升级能力，帮企业管理公私域数据与全链路营销（查看详情：\u003c0\u003ehttps://cloud.tencent.com/product/magicai\u003c/0\u003e）；AnswerBit 则专注 AI 搜索这一新入口，追踪并提升品牌在豆包、元宝、DeepSeek、Kimi、千问等大模型回答中的提及率、排名与引用。
+2U8Pa7	暂无审计记录
+2UJNWc	发布平台
+2UPNOK	上传失败，请重试
+2Ur90K	当前周期
+2VFM1y	回答已采集，分析结果稍后补充
+2WBy82	提及率行业排名
+2XDjmH	确定要删除邀请码 invite_code 吗？此操作不可恢复。
+2YKlZm	暂停恢复检查
+2ZN4T6	分组 title_id 不能为空
+2Zxl9I	更新成员角色失败
+2a1P4f	Agent 运行失败
+2aTzyF	协作者
+2b/ybF	文章发布
+2bfmF6	同步历史数据
+2bjntL	Answerbit GEO 已暂停采集新数据，历史数据完整保留，部分操作功能禁用，请续费以恢复数据采集
+2cZwV9	确定要编辑标签「editConfirmTargetName」吗？修改标签名称或备注会影响所有该团队下已关联该标签的文章。
+2eQh5Z	订阅已到期，请加入Answerbit GEO讨论群联系群管理处理
+2h/S6U	共 rowCount 个品牌。点击行可展开查看提问分组和文章标签的下钻子表。
+2jPXCA	正在使用 Microsoft Office Online Viewer 预览文档
+2kNtzp	字
+2kaNBB	团队里没有其他品牌可以共享
+2lxNgd	文章 ID: articleId
+2mQOhv	排行
+2o7yMn	长截图 PNG
+2oKP3m	链接地址
+2pGidK	删除后将同时删除大模型回答记录。\\n若只是不想继续监控，建议取消启用状态。
+2qlRF0	正在刷新计费数据...
+2rHFOQ	添加外部链接失败，请稍后重试
+2rVjsW	最低
+2rp81a	无法确认共享结果，请刷新共享状态后重试。
+2sYgkP	分享原因
+2t/uby	¥299/月
+2t6ak9	订单进度
+2tY6yZ	selectedPromptCount 条提问
+2vuXB9	已授权 grantedCount / editableBrandIdCount 个品牌
+2yO8+G	计费管理
+2yTdZS	引用量排名
+2yjnlN	实时内容质量分析与优化
+2zEfFy	GEO（Generative Engine Optimization，生成式引擎优化）是针对 AI 搜索场景的品牌可见度优化方法。SEO 让品牌在搜索结果中排名靠前，GEO 让品牌在 AI 的回答中被推荐。越来越多用户通过 DeepSeek、豆包、Kimi 等大模型直接获取答案，品牌在 AI 推荐列表中的位置，正直接影响用户决策。
+2zkH8v	批量关闭
+30r9CQ	商品流向数据加载失败，请稍后重试
+31KSXT	标题已更新
+31jk06	路径曝光 pathExposureText 次
+32wGOo	selectedCount 个提问
+34f7pR	¥899/月
+34uZRD	停止生成
+35Q1ET	加载模型配置失败
+3674wo	智能发布
+37/wiu	基本信息
+37Wv5e	博客 | Answerbit
+38cR0d	used / limit 个品牌
+38mbvr	请选择至少一个品牌后，将显示可查看此 Key 的成员
+38xupM	获取文章链接列表失败:
+3A5h8+	🔗：linkDisplay
+3B2r0S	表格
+3CGVfq	请手动复制
+3CLZe7	搜索...
+3D8fSR	全部来源
+3G2zN3	参数验证失败
+3GF/Gk	引用最多
+3Hss7f	已启用
+3IJdbk	搜索团队或品牌
+3IfDDh	查看引用该文章的回答记录
+3Khb+D	筛选区间消耗
+3LvaXY	0pluralother# 个分组
+3Mehfb	暂无提问趋势数据
+3Mz33J	第 websiteIndex 个品牌官网格式错误，需以 http:// 或 https:// 开头
+3Oct0c	单价
+3QYOGD	插入
+3QpRDF	0pluralone排除#人other排除#人
+3QrX+D	尚未确认付款，支付结果以服务端确认为准。
+3RTkWC	预估中…
+3RrTQ6	团队模板
+3UyTPA	网址：
+3WP+7X	审核一般
+3WVsD+	用户管理
+3XFDi8	begin_date 与 end_date 不能为空
+3XSVPS	billingAmountpluralone# 年other# 年
+3XjK7+	搜索聊天
+3Y3B6j	分组下全部提问及全部大模型回答记录都会被删除，且无法恢复。\\n若只是不想继续监控，建议批量取消启用状态。
+3aHZo9	查看套餐
+3ca1do	来源：source
+3dAhik	在已加载的 sampleSize 名成员中，至少 viewerCount 人对所选品牌的全部绑定范围具备读权限
+3dB/dK	暂无已开启模型
+3efXqa	请先选择需要执行的用户提问
+3gjvk7	文章
+3hNmBY	百度
+3iKBJb	使用在线查看器
+3j1+2O	已隐藏全部系列，点击图例恢复显示
+3j2DRL	该商品暂未收录到具体价格
+3jfXY3	生成 Excel
+3lffJe	 万+
+3loWJS	选择竞品
+3mHfHG	问 GEO Agent
+3mjHNG	重置
+3oDQsd	热力图
+3ojnq6	邀请管理
+3pZWwo	执行次数不能超过 5 次
+3pqn/V	什么是 GEO
+3q/xYw	批量删除失败:
+3rKMiF	店铺列合计 storeLayerTotalText 次
+3rP7CJ	当前筛选条件下没有可展示的提问分组。
+3svWqC	取消启用失败
+3trqTb	点击筛选此分组
+3u0MEb	promptCount 条
+3voKDI	所有已提及回答的排名之和 / 已提及回答的数量。\\n示例：提到的品牌排名为3、5、8 → 平均排名 = (3+5+8)/3 = 5.33。
+3weVzg	确认消耗并导入
+3xr18+	保存成功
+3yBji6	文章维度下钻
+3z0Nz7	资源类型
+3z4RUf	司内版
+4+A45f	还没有追踪任何文章，开始追踪你的第一篇文章，了解它在AI平台中的表现吧！
+4+Z57h	系统日志
+40tQuu	账号
+41LLNe	部分导入成功
+41e0c6	当前团队还可追踪 remaining 个竞品
+41yTBF	范围
+43/i1x	暂无共现提问数据
+431RaZ	seriesName\u003cbr/\u003eparamsName: 无当日数据
+43Rl+b	链接已复制到剪贴板
+44WTfI	企业管理
+464H2L	可创建额度已用完
+46yYCE	该分组
+48Kar4	当前看板已聚焦此分组内的选中提问
+48bWBa	排行榜
+48pCpx	待解析
+4B/zmE	上传品牌相关资料，AI 生文时将自动引用，让内容更贴合品牌调性
+4BL6r7	发布完成后，点击此按钮将视频/图文的发布链接与文章关联，开启引用数据追踪。
+4BNXIX	seriesName2\u003cbr/\u003eparamsName2: paramsValue 次
+4C0sTF	品牌大模型监控配置已更新
+4CI0CJ	订单仍在处理中，请稍后再确认
+4CNltZ	付款已收到但套餐开通失败，请勿重复支付，联系客服处理。
+4D6rPd	引用来源排行
+4Dm0VA	积分 formattedValue/月
+4ERYWM	尚未添加品牌，前往创建
+4HQEHo	提及率
+4IIuG6	选择
+4IQL7G	添加文章
+4J583y	分组收录商品总数
+4KzRZt	恢复团队默认
+4LjdeW	近期平均得分趋势
+4MIF20	获取综合分数趋势数据失败
+4NPU+8	暂无生命周期数据
+4NfDGO	套餐内模型
+4NywjJ	状态待核实
+4OcWMz	近days天引用
+4OmGYE	批量添加标签失败
+4RiMMb	分享文章
+4SM4pY	外部文章
+4SO6IU	套餐年付下，积分一次性发放，不参与周期重置
+4SgIQ9	根据当前文章内容生成视频，可自定义时长、画面比例与配音
+4SxgSp	发布记录
+4Y3kcr	暂无店铺主数据 ID，无法拉取店铺详情
+4Y7MEX	鉴权失败
+4YZn2X	请求参数验证失败
+4ZfItv	请输入提问内容
+4ZmlRt	至少需要输入一个文章链接
+4bdBka	升级解锁
+4doQ7i	品牌在大模型回答中的推荐位置与曝光程度，范围0-100，分数越高越靠前。示例：回答中5个品牌排第1 → 100分；未出现 → 0分。
+4exp/8	无当日数据
+4fCFHv	多久能拿到第一份报告？
+4h3Nt+	天
+4kAz3Z	市场研究专家
+4l8qqu	基于引用洞察选择高引用范文，AI 生成优化文章，发布后持续追踪指标变化。
+4m+J1s	最高分
+4m6Uzq	请将文件另存为 .docx 后重试
+4mj11x	图片预览
+4mrOxO	退出沉浸
+4oUsR5	注意：如果预览失败，可能是因为文件 URL 不是公开可访问的，请尝试下载文件查看
+4pPdVe	提问计入接收品牌额度，超出上限会自动停用。
+4rMrMv	复制链接失败，请重试
+4rcqdp	上传失败
+4skrCv	选择优化单元
+4tL/NL	+ 添加描述
+4uRyNg	下一步
+4uhBEP	已重命名为 newTitle
+4vVN0f	查询父文件夹失败:
+4wtKVv	纯文本提问次数
+4x3+U9	关闭通知中心
+4yH+z5	AI平台总引用
+4znNKK	平均值按当前选中模型的当日有效数据计算。
+5+TwOw	编辑
+5/yex+	简体中文
+50kOdw	在新标签页打开
+50xHMi	团队用量概览
+50y5Hx	无需重复创建，可直接添加品牌
+51MorB	所选提问当前模型不一致，确认后将统一覆盖为下方勾选结果
+51sFoe	绑定提问标签
+52s458	还没有添加竞品，进入控制台后可在「品牌管理」里的「竞品编辑」中补充。
+535P2l	上传失败: HTTP status statusText
+537TRz	(生成中...)
+53YTAq	该格式文件不支持在线预览，请
+54RpfY	selectedPromptCount 个用户提问
+56d9KO	接收品牌预计新增 receivedCount 条回答记录（所选品牌合计）
+56x9Rj	报告结构
+57fo2N	积分不足，额度恢复后会自动继续分析
+58Alwb	enabledCount 个模型 · 当前生效
+58VVV8	退出阅览
+599Ek2	成功创建 successCount 个提问并启用
+5B24cT	| 字段 | 值 |
+5BdsZy	约 unitCost 积分/次，生成成功后系统自动扣除积分。
+5BrbbS	切换商品
+5DOwn6	部分创建成功
+5DWzHP	标签: tag
+5EgLE8	引用文章排行榜
+5Gruhl	共 total 个 Key
+5GyEBf	未找到匹配区域
+5H22zx	已取消该提问的启用状态
+5HsttS	编辑技能
+5Ith2B	未知时间
+5Jv+Mj	该提问已取消启用
+5KdLDi	已追踪
+5LKV0F	完整访问
+5Lwfhu	团队默认配置，适用于所有未单独设置的品牌
+5M67w6	工作时间
+5NLh/Y	上升
+5OF7CI	已选 selectedPromptCount
+5QScDY	已选择
+5Qci0S	无标题
+5R0luv	返回内容管理
+5R8PuI	最低分
+5V9hNn	「sourceTitle」为来自 sourceBrand 的共享副本，无法再次对外共享。
+5VoUQv	在这里完成文章创作、发布与追踪，持续验证大模型引用效果，提升品牌提及率。
+5VsaYm	批量开启
+5XPb0o	Excel 导入失败
+5Xe25C	dayspluralone已追踪 # 天other已追踪 # 天
+5Xq0tM	选择时间范围筛选回答记录。
+5Y7ZUH	全部设为编辑
+5YNChi	删除提问标签
+5aDy/G	未找到匹配标签
+5aGW7A	修改结构
+5cTaIw	未选择用户提问
+5e0AqK	title2，发布日期 date。
+5fIbvI	最新:
+5jO3Gz	加载路径失败:
+5kDnyI	无有效用户提问
+5lQnCf	竞品对比 (已选2)
+5mKIwG	管理视角
+5oBbwZ	操作
+5pHaec	暂无可用报告模板
+5q1qUQ	请输入分组描述（可选）
+5q6Muw	该提问在当前分组下已存在
+5qSXU+	数据监控面板预览
+5qSql6	积分用量堆叠图
+5s6j2a	你的文章在 sortedCount 个平台共被引用
+5sHW6e	更新标签失败
+5ss6f4	同一会话再次分享会更新原链接内容
+5tAbvO	共享副本不可在此创建，请在来源品牌维护
+5uTUkL	生成
+5v0+MA	天级追踪贯穿采集、洞察与优化，每日更新指标，打造可持续迭代的 GEO 增长流程。
+5vIFXD	智能创作
+5wbfQ/	部分品牌已降级授权
+5wkv6g	导出为 Markdown (.md)
+5xDaVZ	品牌表现趋势
+5xgZg5	管理文章标签，用于组织和分类文章
+5zJOav	pendingInvites 个待接受邀请 · 前往管理
+6/JD81	结束引导
+6/wf2n	四
+60+A0t	统计筛选时间范围内各大模型平台回答中引用的域名排行
+60lvnR	暂无活跃日
+641vTR	视频已删除
+6421/2	批量配置模型
+6473dG	品牌报告
+65ZI/c	Answerbit 团队在内容管理上帮我们做了很多从营销角度出发的适配，让我们真正做到了\\。这不是一个发文工具，是一个带 A/B Test 的品牌内容控制台。
+67T7fq	其余 hiddenCount 个已合并为「其他」
+67V8ep	品牌在大模型回答中的推荐位置与曝光程度，范围0-100，分数越高越靠前。\\n示例：回答中5个品牌排第1 → 100分；未出现 → 0分。
+68HI9G	启用状态由来源品牌「brand」控制。如需停止接收，请联系该品牌团队管理员取消共享。
+68tcEX	查看文章在 AI 平台中的引用与表现数据
+69HU62	删除数据并取消共享
+69dpiO	竞品数已达套餐上限
+6A3K3u	标签已更新
+6Brhw1	取消筛选此域名
+6E/7Rw	brandName精华液
+6G/aFf	获取分组列表数据失败
+6GQj59	竞品“competitorName”已更新
+6GadAm	成功
+6IPQFU	| 状态 | status |
+6IVV6a	name 的发布链接已解除
+6K6tlo	【域名分析 | domain】
+6KQs7/	输入
+6KY7HX	编辑竞品 competitorName
+6M1e3W	加载排名数据…
+6Mnhrk	当前品牌还没有文章趋势可展示。
+6NpxEF	更新时间
+6PUdfZ	品牌提及率与竞品对比
+6PZKvg	素材引用
+6RAMHq	智能提问推荐
+6RswST	bucketCount 个分组
+6UTOxW	编辑链接失败，请稍后重试
+6UnSX4	诊断分析
+6Veq/I	视频图文
+6VyRty	平均排名 vs 当前
+6W8G5Q	登录失败，请检查账号和密码
+6W9J3m	支持 PNG / JPG / WebP，不超过 2MB
+6Wkjc/	权限不足
+6X4W3Z	未授权 (ungrantedCount)
+6Y8wEv	商品详情
+6YfJjB	选择参考范文与生成策略，平台将基于目标提问自动生成 GEO 优化文章。
+6ZukEm	dateRangeText · 当前 currentValueLabel · deltaLabel
+6ar8Ji	AI 问答中出现商品推荐卡的比例，由平台策略决定，品牌不可优化
+6b7osn	共享分组
+6cK1yZ	来自腾讯政企与腾讯云团队的一线实践反馈
+6ccXyK	订单状态数量过多
+6g1bEx	商品追踪已开启
+6kYzde	冻结中
+6lnolQ	正在发布到
+6lyS+V	网页解析失败，请检查URL是否正确
+6m5NpL	支持完整邀请链接或单独的邀请码
+6obJ89	约 article_generate 积分/篇文章，生成成功后系统自动扣除积分。
+6pFhZY	国内主流大模型平台
+6ppL3f	count次/周
+6q5SYq	出现率：该提问的 AI 回答里出现商品卡的次数，占该提问监控总次数的比例
+6qVMIV	洞察分析
+6r08D0	该分组正在跨品牌共享，提问文案已锁定，无法修改。
+6rgk5k	GEO Agent 对话分享
+6sL6iQ	复制邀请链接
+6v+8Cs	创建提问失败，请稍后重试
+6w2j5m	请输入标签名称
+6wChjP	切换为最优在前
+6wMHud	不同大模型倾向引用的文章平台可能有所区别
+6xXHPm	技能正文
+6xoWX+	重新授权
+6xrE97	已成功删除 t
+6yKo2x	前往企点去升级
+6yqOhH	左侧按当前周期指标排列各模型。
+6zaaPa	加载链接列表...
+7+pn6P	竞品列表
+72YYLt	配置来源
+72en48	创建成功
+732+P+	请稍后再试
+73ahbX	确认快速追踪
+74B58j	正文高亮
+74sVsX	日
+75EtSk	新增 addedCount 个，移除 removedCount 个
+772Mer	日级
+77UG6K	正在确认订单关闭结果，请稍后查看。
+78I8p1	只看某人
+78qUL3	未启用
+793lVd	周weekday date
+797hS0	操作失败，请稍后重试
+7A87/H	快速开始
+7AZBav	已支付，开通中
+7BSqB9	高频关联提问 Top 5
+7E5nL1	报告模板名称
+7E6/oa	提问分组为必填项，请先选择分组
+7EZab7	搜索提问关键词，使用提及/高级筛选精确定位。
+7FuzKZ	used / 不限个品牌
+7GJ7wq	已移除该品牌的成员授权
+7GWver	已配置 competitorCount 个竞品 · 前往管理
+7GvsB8	含手机端
+7HDCCc	确认
+7InJEy	团队描述
+7JFIxy	商品提及率
+7JluLQ	暂无生成记录
+7KEETT	昨天 hours:minutes
+7KUvIW	订单确认中
+7LE3BP	已生成 count 个视频
+7LGmm8	扩展AI引擎
+7LWUSo	订单详情
+7M1w+R	按平均排名排序的行业排名列表。
+7Mseor	获取品牌列表失败
+7NL2BR	对话生成完成后可分享
+7P0aRQ	应用
+7QFNRV	开启后每天会为用户提问创建监控任务，关闭后不会再创建监控任务
+7Qmira	未找到相关提问、文章或品牌
+7RziHn	完成留存工单
+7SgoO7	收回
+7TPAqk	近90天
+7Ueonu	未开启监测
+7WFwdZ	nextModels 个 AI 引擎全覆盖
+7WGj0n	确认扩容
+7XcSAW	您尚未获得品牌访问权限
+7Yvps6	视频生成
+7Znjxm	query_str 只读
+7aBEgR	删除副本中的提问与回答记录
+7bXbLJ	热力图下钻
+7bilJx	已为 selectedPromptIdCount 个用户提问添加标签：tagNames
+7d6IQs	指定素材发布仅支持抖音
+7dCTLQ	选定目标套餐后，加入讨论群告知群管理员，由管理员为您处理升级事宜
+7dKL21	共 total 条记录
+7dO5Fi	填写团队信息
+7eL99u	使用账号和密码登录您的账户
+7emHkT	已导入「fileName」
+7gnK3B	平均
+7ithhh	当前页面功能较为复杂，建议使用电脑浏览器访问以获得完整体验。
+7jIdil	count2 个商品
+7jjjKk	Answerbit agent
+7lKVyl	生成时间
+7m6VAo	至少需要一条完整的标题和链接
+7qj1S6	未找到匹配的文件，请尝试其他关键词
+7rNnMM	关联发布链接以开启效果追踪
+7sMeHQ	Key
+7tiyB0	一
+7uIhYi	| 关联提问 | join2 |
+7uPmqC	前往首页
+7uYSwH	分组聚合指标（dateRange ~ dateRange2）
+7v8Zs7	Word 预览
+7veHyz	英语（美国）
+7xx6xX	批量添加标签成功
+7yG/H1	请手动复制文章内容
+7z3Ynx	段
+7zWXfj	新发布
+8+/A9R	曝光效果分数行业排名
+8/N6eW	暂无数据
+80Znwq	导航项
+80xlEw	当前团队暂无订单
+81gxyF	确认提交
+81pTh0	情感分析
+83dYnh	分组「title」已删除
+84J0gb	请检查权限与表单后重试。
+84WHWf	API Key 已永久删除。
+85/lLx	提问至少需要 5 个字符
+85YKRQ	链接已复制
+85j06D	0pluralone— 已展示全部 · # 篇文章 —other— 已展示全部 · # 篇文章 —
+86NMjz	分
+87B+KF	搜狗
+88fvBl	租户用户
+897aTi	AI 回答采集
+8By/Hf	详情
+8C62CB	订阅日志
+8CVnku	已选 t
+8DN1AQ	未分组
+8EVo3O	当前修改尚未保存，关闭前建议先保存，避免遗漏本次调整。
+8FTcD1	品牌网址
+8H+9Yi	引用最少
+8OkVAM	还没有共享给任何品牌
+8PLD2Q	保存「scopeBrandDisplayName」权限
+8QF7pu	生成邀请
+8SZZy+	开始编辑文章内容...
+8UAx4g	预计 5~10 分钟生成完毕，请稍后查看
+8Uxqsc	回答内不含商品卡
+8V3t1g	品牌详情和监控数据
+8VObK9	查看失败详情
+8X92q+	近一周
+8XDKuV	全局搜索
+8YKm/m	诊断 GEO 表现问题
+8bQHjw	删除数据并移出
+8bqQNm	帮我分析当前品牌近一周的GEO运营效果，markdown格式
+8c6yPJ	可以查看团队配置，或改为brandName单独配置。查看团队配置不会应用；单独配置保存后以品牌自己的为准。
+8cFa1P	query_str 操作
+8cQQow	该模型已开启深度思考
+8e3WBm	图片类：.png、.jpg、.jpeg
+8eJuYJ	新建 Prompt
+8eMQqG	生成人:
+8gCzN6	均值
+8hAspA	意大利语
+8hF8WJ	法语
+8hiVYG	进入概览
+8kPQhi	订单信息暂不完整，请联系支持核实。
+8ksJu3	可添加品牌
+8lH8Vn	选择第 turnNumber 轮对话
+8mzDkP	分享人
+8p8X+o	视频生成完成
+8pS6q9	未授权访问，请重新登录
+8pb6ET	手动编写口播文本
+8qwkbI	不保存
+8r2h/C	统计时间范围内各大模型平台回答中引用的文章排行
+8sHENm	关联提问：\\nlist
+8sJEtf	删除此文章
+8svAMj	草稿
+8syk9L	添加外部链接
+8tUySy	加载分组数据失败
+8u0lxB	1 = 最佳
+8uQYfH	配置
+8ubQZF	无法加载提问详情，请稍后重试
+8udcsm	新品牌的数据正在生成中，通常需要 5-10 分钟。请稍后刷新查看数据。
+8un89m	模型
+8w35T/	全部
+8wcrs/	最近引用
+8xBio0	向你确认
+8yHJtA	编辑描述
+8zdNq+	groupName exposureCountText 次提及
+9+Do3f	趋势概览
+9+jR8Q	俄语
+9/44ah	部分关联成功
+90HDsx	工作空间
+92VJdZ	日均总引用
+92lxir	请选择一条生成记录
+94Gnas	请先创建分组后再尝试迁移
+94fTVg	复制
+95kDaN	父节点不是目录
+96vEUi	生成任务已在后台执行，请稍后来看。
+97WnCK	本次发布约消耗 creditCostTotal2 积分，剩余 formattedValue2
+97dZWU	与 AI 对话分析品牌 GEO 表现，生成品牌报告与洞察建议。升级套餐即可开通。
+9B1WWA	已插入 itemCount 条推荐提问
+9BkRWk	已有链接？直接关联
+9COgpJ	正在分析
+9CTBkn	没有未读通知
+9Cjg5E	确认（size）
+9EVPc6	当前时间范围内暂无曝光效果分数数据
+9Esm6F	来自 sourceBrand
+9HYdf2	1次/周
+9ITYjl	%
+9IkWRd	无法访问「t」
+9JObwx	\u003cspan style=\\\u003e无当日数据\u003c/span\u003e
+9L/AkB	时间周期：dateRange ~ dateRange2
+9M1KMb	按近 30 天引用排序，文章在以下平台发布可能获得更多 GEO 曝光
+9NvY9o	点击切换
+9OPDtz	monthspluralone# 个月other# 个月
+9QVOiX	创建 API Key
+9QY+el	当前品牌 brandName
+9Qa36Q	网站地址格式不正确
+9S3yUJ	迁移至其他分组
+9SuD50	提问维度下钻
+9T65+6	视频生成失败
+9UEqaN	点击记录在右侧查看详情，高级筛选支持分组、分数、域名。
+9UHYJR	已选 count 项
+9Wqk5w	价格
+9WsStv	搜索文章标题...
+9Wtpn3	已成功加入团队 \\,[],
+9Xp/1N	Answerbit GEO 已暂停采集新数据，历史数据将保留至 dueDate。在此日期前完成续费，可继续使用现有数据。
+9XxI5K	一览品牌在大模型中的曝光、排名与趋势等核心监控指标
+9YZw9u	删除品牌
+9YnYzj	已选 selectedCount/maxSelectable 条
+9Z//NW	一键复制
+9ZkDY7	至少需要一个链接
+9ZvAlI	包含 originalItemCount 个项目
+9ZxbRm	二维码渲染失败
+9aSNfZ	条
+9adU31	brandName多效智妍面霜
+9cOS3B	自有
+9ckc+d	预览失败，请尝试下载文件查看
+9ckxo9	trackingCostPerLink 积分/链接
+9dgm2+	集成管理
+9gDZX3	其他信息
+9hSn8x	描述
+9htzKb	执行次数
+9i0mq4	助手正在回复
+9igrW8	API Key 已复制到剪贴板
+9jKqNv	本周期 exposedText 个商品被 AI 提到，收录总数暂不可用
+9jeuUf	关联链接
+9m9n45	1 个分组
+9n9+Qb	文章策略
+9ntbS2	剩余 days 天，请加入 Answerbit GEO 讨论群续期以避免功能中断
+9op0SF	生成的文章会在这里统一展示，便于持续查看内容状态和效果。
+9pPpCC	确定要删除图文\\,[],吗？删除后不可恢复。
+9qqIHt	标签
+9t82a5	近30天
+9tKJgv	删除表格
+9tP0dY	已禁用的 Key 无法通过鉴权；删除后相关集成将立即失效且无法恢复。
+9ufcus	复制成功
+9wzDpZ	订单状态
+9xSAGo	已成功移动 materialCount 个素材
+9xTQBi	请求冲突，资源已存在
+9xrx9u	加入中...
+A+7oKP	复制订单号
+A+ySfL	当前 formattedValueunit，新上限 formattedValue2unit2，超出 formattedValue3unit3
+A/JAxh	操作记录
+A/QFLh	团队成员已满，请升级套餐
+A/pq55	资源已存在
+A17M+U	快速回复模式响应更快，适合日常数据监测
+A1Wkr6	填写意向信息，我们的顾问将尽快与您联系
+A2B6hg	保存配置
+A3A5ua	最多 MAX_TOTAL_PROMPTS 条，部分未插入
+A3yLmX	已取消
+A4xqL5	加入成功！
+A6E+of	删除分组
+A6JK6J	查看数据与优化
+A9G8O+	姓名不能超过20个字符
+A9Qoob	1次/天
+A9xPHk	精华推荐
+AA7lco	控制台
+ACBcOz	品牌 (totalCount)
+ACUvQ3	加载失败
+ACpI33	生成中...
+ACt83W	篇
+ADSrHY	暂无可用分组
+ADjrUo	添加需要追踪的文章，系统会自动解析文章URL获取发布平台信息
+AE5U7Z	共享
+AF6fOU	暂无文章标签数据
+AFN0wc	name 发布平台操作
+AHJtr9	停止接收
+AK1Bcy	优秀
+AL6lYk	消息
+ALCjJJ	修改角色
+ALGN8S	当前品牌暂无商品 GEO 数据，请调整筛选条件或稍后再试
+ANRlBh	搜索 fanoutCount 个关键词
+AQBOtN	目录
+AQNK2z	配置概览
+ARNj6b	该分组提问下 AI 推荐中出现的商品数；本品牌收录数仅在查看单个分组时展示
+ATny9e	brandName乳液
+AU3gDC	开启后可配置思考模式与监测频次
+AULIY0	验证码显示失败
+AUtV7Y	腾讯端服务（Tencent Device-oriented Service，简称TDS），是由腾讯大前端技术委员会发起并创立的腾讯集团内的大前端技术产品联盟。
+AVi7BP	事件
+AXmXT/	将停止向 \u003c0\u003etargetLabel\u003c/0\u003e 共享「displayGroupTitle」。
+AXr5h3	通过自动化发布流程与多平台分发策略，最大化内容提及率，持续优化品牌GEO分数表现
+Aax6wa	标签已禁用
+AcOo+9	查看
+Afv86b	请求参数错误，请检查输入内容
+Ag4Xhp	已标记为ownerName
+AgH53Y	还没有监控提问
+AgOBj7	视频列表
+AhOaPp	暂无分析
+AiENTu	大模型日级监控频次
+Aikxcu	图文标题
+AizOgf	商品追踪开关
+Alzj4V	AI 文章生成
+AmVkIJ	未能确认是否已提交。同一时间段重复提交将再次扣费。
+AmcrDT	暂无推荐
+Anwm4K	注册账户
+AnzUFG	品牌ID必须为正整数
+AoEbqc	已复制「name」
+AoxHrT	发布日期：CN
+Ap52O3	模型引用排名
+ApbqAZ	确认编辑标签
+Aq4wQQ	发消息，或 / 选择技能
+ArlHMq	关闭
+AsjPZF	用积分扩容品牌
+AvxGdR	请检查标题和链接格式
+Aw0XTy	更新品牌监控配置
+AwPCkD	推荐对比竞品
+AwoJeT	编辑（已废弃）
+AwvIig	接收副本不能再次对外共享
+AyUtG2	曝光占比
+AyouLD	时间
+AyzDbI	发送验证码失败
+AzO6M/	品牌详情目录
+AzfL7j	有新消息时会在这里显示
+B0I84Q	已启用，来源品牌控制
+B19RlT	正在分析…
+B1KR6F	示例：10条回答中，提到的品牌排名为3、5、8 ➔ 平均排名 = (3 + 5 + 8) / 3 = 5.33。
+B2AQXk	产品图片 / 信息图表
+B2t6rq	拖拽调整label列顺序
+B2x9HG	请检查邀请链接或邀请码是否正确，确保没有多余的空格或字符。
+B3upxb	品牌对比
+B4QDLS	用户创作
+B4mSYl	新建文章
+B4ybSW	商品原始链接
+B5+Pev	删除失败，请稍后重试
+B63VxC	当日总用量
+B6Akrz	每月积分额度
+B7IAQ5	限时体验
+B9YsUl	品牌权限 (全部 allBrandCount)
+B9we9a	删除成功
+BAS8RQ	regularMemberCount 位成员
+BC30w1	已有原创内容，上传至平台进行维护和发布管理，并追踪发布后的文章效果
+BCbk+N	取消启用
+BCgr0E	成功创建 fulfilledCount 篇，失败 rejectedCount 篇。失败原因：rejectedMessage
+BD8N7a	格式检验错误，请输入有效的文章链接
+BDP3TA	获取竞品列表失败
+BE97ov	复制 Key
+BFMs9R	问题分组
+BI2t9d	每条有效链接开启追踪的套餐积分单价（软预估）
+BIU7qZ	收回全部共享
+BJMpim	当前周期暂无高频提问数据
+BLqPEv	是否提及: mentioned
+BNghhZ	提问
+BPWEi4	移除报告模板
+BPe0sO	promptCoverage 个提问引用
+BQWdVc	德语
+BTGGIL	条
+BWqYP4	输入订单号
+BXA8wc	上传文件
+BXT1Lr	批量删除提问
+BXmhg2	下载文件失败: statusText
+BY4+qY	实时追踪各平台发布状态，监控GEO分数变化趋势，提供详细的数据分析与优化建议
+BYO6xr	默认语言
+BZ4nQL	打开导航菜单
+BZrh7+	新品牌的数据正在生成，通常需要5-10分钟
+BaHpTn	行业排名
+Bac/K9	腾讯“端服务”联盟产品
+Bc6eml	未提及
+BcWsES	平均值
+Bf7Oef	还可创建 remainingCompetitorCount 个竞品
+BfJLrv	团队管理员可访问全部品牌
+BgHYfw	查看所有监控中的提问及其指标表现。
+BgOJyW	万+
+BguKPz	能力暂未开放
+BhH4O9	Gemini
+BhOMIC	引用趋势上升，效果良好
+BjXfWC	暂无店铺详情数据（缺少店铺 ID）
+Bjvq07	接收品牌
+BkqyZu	brandName:
+Blzktw	排名
+Bm4NQa	刚刚
+BmwbLr	本周期共收录indexedText商品，当前品牌ownText个商品曝光exposureText次
+Bn+GcS	正在校验是否对外共享，请稍候再确认删除。
+Bn9ukP	发布完成后，将该文章的平台链接复制下来，点击这个按钮进行文章和发布平台的关联。
+BoWeN0	基于文章内容智能生成图文
+BoxGQJ	请先为已开启的模型选择监测频次：names
+BrQ2Tl	选择排序方式
+BszEZo	刷新开通状态
+Btmkds	添加
+ByL9uv	查看团队全部历史
+C+/GuB	周weekday
+C+C8iQ	首页
+C+R9vH	未监控
+C+YGQt	当前浏览器不支持复制图片，请改用下载
+C+YqJb	已达导入上限
+C0TimO	团队成员已满，可用积分扩容或升级套餐
+C0U660	获取团队列表失败
+C0pC0A	已载入 importedArticleCount 篇文章、importedLinkCount 条链接，请核对后提交
+C1OsDD	加载中…
+C1uLbz	品牌管理 - GEO Dashboard
+C3F7w3	切换分组
+C3kWd+	日付
+C4UrJE	套餐信息不可用
+C4eW4m	搜索域名
+C5Kujf	点击查看流水
+C5elrk	确定要删除分组「groupName」吗？
+C73rMz	平台技能
+C7CdOg	平均排名靠前
+C7LwYi	文章生成中...
+C7swk5	metaLabel2 提升至 nextLimitunitSuffix
+C8i8JC	综合
+C9+arX	model · App代理检测
+CAZZro	订阅处于资源超限暂停状态，请处理超限资源后重新检查。
+CAetiE	预计收录 label
+CCFXJO	选择监控提问
+CDJ4Ow	网页解析类型的文件不支持下载功能
+CDWoj9	打开全局搜索
+CE7hoZ	请选择有效竞品
+CEpytb	曝光效果分数（Prominence Score）
+CEzI4r	口播文本不能少于 CUSTOM_NARRATION_MIN_LENGTH 字
+CFnlGl	添加 selectedTagIdCount 个标签
+CIiOgU	PUBLISH_REF_WINDOW_LABEL全站引用 formattedValue 次
+CIsMlH	租户品牌
+CIw/F2	点击查看域名分析
+CJb474	正在跳转至文章列表...
+CK5gZE	hours小时前
+CKFiFF	店铺曝光排行暂不可用（接口未就绪或资源不存在），请稍后重试
+CLS6aT	基于品牌特性与内容领域，将文章自动分发至多个社交媒体平台，优化GEO分数表现
+CLlsb9	技能描述
+CLnnPH	可以先重试当前页；如果仍然空白，请刷新浏览器。
+CMQ8Q5	未找到该品牌，可能已被删除或无权访问。
+CNRfUb	在洞察分析与大模型回答记录中查看相关提问表现。
+CNvEiQ	planBadgeLabel（创建团队后生效）
+COB69G	均排名
+CObV9I	未知错误，请重试
+COhbjO	思考中...
+CPpaHk	删除此链接
+CQXNL7	新增内容追踪
+CRF3Fx	此操作将在团队范围内生效，确认修改？
+CRpwyT	产品
+CUVLUM	brandName 商品 ownSkuText 个
+CUkUE0	商品追踪已关闭
+CV666q	：将消耗 1 次，剩余
+CWStBL	全部已读
+CWypKF	全部清除
+CYRyeS	位
+CYsUnZ	加载通知失败
+CZ8y2M	下载文件
+Cao2Ax	整体平均被引次数
+CbQe9V	Answerbit 天级并行查询豆包、元宝、DeepSeek、Kimi 等大模型，每日结构化存储每条回答。
+CbYj3L	暂无可用技能
+CbwJqb	团队成员
+Ccf4Q6	firstBrandName 等 brandCount 个品牌
+CciQKS	积分流水
+Cdelx7	分组「name」已创建
+Ce8OQW	暂无可选成员
+CeyUAT	商品数据分析
+CgUQSs	无法确定品牌所属团队
+Cgaz1I	套餐
+Cgt9zp	days 天前
+Ch9EqH	最多 MAX_TOTAL_PROMPTS 条提问
+Ch9VHT	URL格式错误
+CimjDY	已复制标题
+Ciulk0	商品归属筛选
+CjXOXS	触达店铺数
+Ckn3x4	获取高引用文章失败:
+CkrLkP	草案已过期，请重新生成
+Cl0ZDA	更新成功
+ClyxYg	处理中...
+Cm2T6U	业务范围、市场定位等
+Cn9BQ0	订单信息
+Cnbfjz	篇 ·
+CoijaR	跳至
+Cq5Iej	请选择要迁移至的目标分组，所有选中的用户提问将关联到该分组下。
+CqKVIe	全部历史
+CrgJKm	口播来源
+CsJARQ	请联系管理员创建品牌
+CurLQP	品牌访问
+Cv3hZu	已有外部发布链接？
+CvSxB3	最大化
+CwxIVa	收起详情
+CzzVdM	每条链接约消耗 trackingCostPerLink 套餐积分，持续追踪文章效果
+D/FLMI	类型
+D1SmEz	切换品牌
+D2qar8	禁止访问，权限不足
+D5LCvd	登录中...
+D8R7y+	新建提问将同步创建到以下品牌：brandNames
+D8rm57	我的引用 (formattedValue)
+D9eWhN	已追踪平台，数据请见左侧详情
+DASigG	已成功创建 successCount 个提问
+DCdLBg	区域列表加载失败，点击重试
+DD+vPK	前往管理品牌与竞品
+DDGxna	代表性截图
+DDmP3K	文章标签占比
+DELHBN	移动中...
+DIOhEL	删除分组失败
+DJiFRX	继续下一页
+DKMGRf	上传已取消
+DMrvtN	导入成功
+DN+hac	显示完整路径
+DNIKxc	追踪失败，请稍后再试
+DNvdGU	管理用户提问标签与分类
+DO+q2C	(近30天 +
+DOF0Bv	其他
+DOTVZe	year年month月day日
+DOarZH	复制全文
+DOtPHO	0pluralone只看#人other只看#人
+DPTQ/t	推荐监控提问
+DPlLSE	均值 avg
+DRXHAv	查看回答原文、参考资料和曝光数据，支持分享和导出。
+DRb7JQ	操作成功
+DSFF1F	内容类型
+DTap8s	品牌描述
+DUDEZS	上传头像
+DUc5ly	移出对所有接收品牌同时生效，无法仅针对单一品牌。若仅需停止某一品牌接收，请在分组「共享设置」中使用「收回」。
+DVuXmJ	是否同步历史数据？
+DW9a4N	搜索: search
+DWwHbB	排队中
+DX31Ex	删除失败
+DXO08x	promptCount 条提问
+DYdkOG	任务失败
+DZ52H9	文章URL不能为空
+DZ5NHo	返回首页
+DZOAUA	上一篇
+Da4PIw	视频描述
+DbgxkC	正在调整...
+Dbmq/i	HTTP错误: status
+Dd6pkV	创建工作空间
+Ddrl+m	提供优化前后效果对比
+DeMJN8	重试上传
+Df/3gq	至少保留一个链接
+DfTFEj	个数占比
+Di4e5O	关联
+Dj/Jnd	根据大模型回答自动收录电商来源渠道
+DjU/9a	按 Cmd/Ctrl + Enter 保存，Esc 取消
+Dk1ywn	已启用提问（enabledPrompts/totalPrompts）
+DkbJO0	总引用:
+DljrMY	仅浏览
+DnbxZa	订单创建失败
+DngTgL	当前角色权限不足，无法执行此操作
+Dqocme	 selectedPromptCount 个用户提问
+DqtcFN	当前品牌
+DsfabX	检查中...
+DtmGIN	已共享
+DuNYNq	在优化中心生成相关品牌内容，平台有对应的推荐发布渠道，用户可自行决定对应的发文操作，后续可以回到概览面板持续追踪指标变化，形成增长闭环。
+Dv86CL	全部推荐（recommendChannelCount）
+Dw6Spt	数据更新中…
+Dx/sxj	创建文件夹失败，请稍后重试
+DxPRbQ	ref_count2次
+DyBRpj	搜索会话标题和消息正文
+DyzVUV	暂时无法自动发布
+Dz/t2E	正在退出编辑模式
+DzId26	数据生成中
+E+NKxN	打开菜单
+E+aZ9y	未激活
+E+aznc	在左侧插入列
+E/CBYP	分享到外部
+E0DshJ	你还不是该团队的成员，暂时看不到团队数据。
+E0Ziad	加载更多...
+E0n0Ck	腾讯云
+E0sPey	共享设置
+E1Yraw	前往分组管理
+E1uj5N	模型引用分布
+E2ZuKn	标记商品
+E2kAt9	曝光效果分数
+E2v/lJ	列设置
+E39cez	保存报告模板
+E3syTq	思考了 display
+E4rUIj	已禁用模型
+E51x24	积分消耗预估
+E5Awa/	模型排名
+E80/U7	该提问由来源品牌维护，无法编辑、删除或手动运行。如需停止接收，请联系来源品牌团队管理员取消共享。
+E8VWqh	总发文数
+E8b610	邀请文案已复制到剪贴板
+E8vcos	发现 totalDuplicateCount 个重复项，请先处理
+E9UCLb	下载
+E9jVbb	提问已创建，可前往详情查看分析
+EA3vAX	无法安全加载报告模板预览，请调整来源内容后重试
+EAHOZ7	未找到匹配的团队或品牌
+EBPCu4	数据模块
+ECWcRH	预览与保存
+ECYwW5	需要更多积分、品牌或成员时，请选择更高套餐并前往企点完成升级（平台内不支持直接加购或充值）。
+EDPjLc	前往发布
+EEmkrM	已为 selectedPromptIdCount 个用户提问配置模型：tagNames
+EEuLSX	选择套餐后将在安全支付页完成购买；积分包充值仍不开放。
+EFExgB	选择提问
+EFy2gE	选择分组并输入提问，支持在多个分组下批量创建
+EG/xr0	您没有权限访问此页面
+EG6ySR	角色：role
+EGGvW9	文章文本已复制到剪贴板
+EGbOpq	曝光效果分数趋势
+EH4TIy	确定要删除选中的 selectedIdCount 个素材吗？此操作不可撤销。
+ELRh3p	请勿重复添加
+EOW1Yk	当前品牌：scopeBrandName · 仅此品牌权限
+EP7uGN	正在加载引用提问数据...
+EPW65Z	用量概览
+EPdKlK	选择文件
+EPrkAs	商品在 AI 推荐中的曝光、排名与竞争表现
+EQYUS1	域名
+ESICtE	当前为服务端链接；建议在父页面就绪后重试以获取企点壳层链接
+ESnRpD	(生成失败)
+ETPdmy	关闭详情抽屉
+ETe9Xs	点击进入文章分析
+EXV+9P	配置追踪范围
+EXuX9l	全选
+EYn0Gh	模型标签
+EYsEz0	越南语
+EeAPgH	内容管理
+EeSnSv	当前团队无品牌，可联系管理员添加品牌
+EfFLlm	团队 ID
+EfS/3D	正在跳转登录...
+EfdYCm	支持哪些大模型平台？
+EgiWdq	按此版本保存
+EjdtVl	配置方式
+EloB9t	邀请链接
+EmLA0V	已完成 runCount 项分析任务
+EnXqyU	定位失败
+EoR659	团队日志
+EonerF	标签「tag_name」已删除
+EpcRW0	暂未选中视频
+EqM+EG	formattedRemaining 积分
+Er4oMx	网页解析
+ErOLvU	Prompt：promptCount个
+ErXKH7	积分预估信息不完整，请重新预估。
+EruKmm	设置成员角色
+Es9oAE	管理您的用户提问和主题
+EscZTD	descLength/200 · 便于成员了解团队目标
+Et8+Dl	当前套餐不支持扩容该容量，请升级套餐或联系管理员。
+EtObQv	当前周期
+Ex+5cx	排名、提及率和趋势三项核心指标，反映该提问在各大模型中的品牌表现。
+Exvsx8	提供专业的品牌AI监控服务
+EzLRSD	最近访问
+F05LEO	从 AI 回答采集到可见度追踪、引用分析与内容优化，完整覆盖 GEO 闭环
+F0C/t1	已完成
+F0HCQc	已确认
+F1Ww6/	diffDays3 年前
+F1moN5	查看其余 count 个品牌
+F26VHH	暂无内容
+F2r3Vs	支付有效期至
+F3lcjy	删除品牌监控配置
+F3xoaY	API Key 已创建，请立即保存完整 Key。
+F4Vc9i	无权限
+F4bBZP	编辑报告模板
+F5+94c	由平台后台自动发布，无需手动操作
+F60s8x	启用报告模板
+F7Xvy+	企业版
+F7p+eq	数字为当前周期曝光效果分数。
+F8mK0I	选择时区
+F9ObnU	每 100 次 AI 问答中出现 brandName 商品的次数占比
+FA8Arh	当前条件下暂无主题分组数据
+FAFD+7	点击聚焦分析该分组（可多选）
+FAQ1Hz	《articleTitle3》已生成完成
+FAypne	进入工作台
+FBLWKt	导出 Word (.docx)
+FCPMma	已生成 count 个图文
+FCqq3y	今日剩余 remaining/limit
+FCwddV	团队技能
+FE1I7q	appearCount/monitorCount 次
+FE3xZX	审计记录
+FEEyAt	移除附件
+FEHpVr	链接地址格式不正确
+FEnUkN	昨天
+FEzHTF	搜索成员姓名…
+FFI57D	PowerPoint 预览
+FFS0If	智能问答
+FFTtCf	持平
+FFYfv/	竞品
+FGTNYE	暂无已生成视频
+FGvsaX	技能已创建
+FIeyrC	选择页面，快速查看对应功能引导
+FIsDt5	继续引导
+FKftlC	金额待确认
+FKhtDc	指标切换
+FLaqim	暂无文章趋势数据
+FLwKVd	移除访问
+FMRsqM	首次进入排行
+FNA5bv	条提问
+FO288L	清空选择
+FO9zVb	去生成文章
+FOUelq	西班牙语
+FOncqU	引用趋势下降，建议检查文章结构与信息时效
+FPd03/	均提及率
+FPi9Ap	选择对比竞品
+FSsnZj	报告模板描述
+FTSjRD	每条消息最多上传 10 个附件
+FUpkkM	立即生成图文
+FVCWB+	搜索或创建标签
+FVGozR	直接关联
+FVLAdz	保留并转为接收品牌的本地提问
+FVfJma	品牌「brandName2」已成功创建
+FW1ey2	--- 文章内容 ---
+FWcr5g	周期内分组触发提问次数
+FXyxMH	邀请文案预览
+FYPD+6	提及率 mentionRate%
+FYR5/J	你暂无该团队任何品牌的访问权限，可联系品牌管理员授权
+FYlOoJ	文章发布成功
+FZMo6O	关键词驱动的智能生成
+FZRZ2w	套餐不限增购数量（单次最多输入 maxAmount）
+FZn6Ik	模型：modelName | 分析状态：analysisStatus
+FadPPp	监控提问总次数暂不可用
+FbVWdi	编辑团队信息
+FbfeOH	权限变更说明
+Fe2qpi	复制内容
+FeMgF7	确定要移除成员「user_name2」吗？此操作不可恢复。
+FfSJ1Y	API Keys
+FgQ5x2	已成功删除 selectedIdCount2 个素材
+FhZehD	文章内容不得为空
+FhkpP0	正在跳转到工作空间...
+Fk77PS	仍有资源超过当前套餐上限，请处理后再次检查。
+FkEvoN	关闭订单详情
+Fmw5KH	用于团队时间展示和日期范围计算
+FnAQ4x	你在该域名有 formattedValue3 篇文章，尚未被 AI 引用
+Fo8G07	过期天数
+FqQ222	已选 selectedCount/maxSelectable 个
+FrM1b4	解除失败
+Fs3ESh	系统通知
+FtHybV	概览
+FtY7Sv	分类: category
+Ftgs4F	用户提问执行任务已创建
+FtuP6m	找管理员要个邀请链接就能加入啦！
+FuSDhy	点击上传头像（可选）
+FuaE2L	已创建技能
+Fv35+0	商品：trimmedName
+Fvxnmx	未找到匹配结果
+FwSF0p	删除共享分组
+FwtiTB	一周前
+FxRcP6	WeTest
+FxTV1l	保存标题？
+FxsfUl	静默刷新生成中文章失败
+Fxu8S1	正在加载共享来源
+FxxH+c	创建工作空间与品牌
+Fybzjd	商品卡出现率 Top5提问
+Fyy5cB	当前没有可发布的视频或图文
+Fz047x	概览分析
+FzGU43	下一页
+G+G4VN	创建「
+G+GWX0	订单未能创建，请联系支持确认。
+G/ZwXK	label：currentLabel
+G0GPnI	valuepluralone# 条other# 条
+G0NvN5	验证码已发送
+G1EKc6	移除后将无法访问该品牌
+G2TB5K	暂无可选用户
+G33j2V	免税店
+G38xeW	缺少分享链接，无法生成回跳二维码
+G3Yqpj	当前聚焦
+G4BY6m	重命名失败:
+G4mady	更多可用模型
+G4pILp	近期引用趋势
+G7xDJG	记录每次版本更新的功能描述。
+GAOj+m	请修正表单错误
+GCoH7F	推荐监测提问
+GCq9y8	暂无更高等级可升级
+GCvNSz	重命名成功
+GDUZ2T	关联失败
+GDYOA9	暂未启用平台
+GDfk2q	数据概览
+GDjBMb	以及其他 extraCount 位管理员
+GFdQcj	Key 名称
+GGN3hz	超出剩余额度
+GGtnZI	最多还可增购 purchaseCap unit2
+GHJqAp	全选 · 已选 selectedCount 个品牌
+GHbKvu	状态
+GHqQJZ	进入页面
+GI99zB	迁移后将覆盖用户提问与原分组的关联关系。
+GIjze5	暂无分组
+GIub7J	系统将自动识别平台并开启追踪
+GJ2Fb0	文章标题不能为空
+GJVmMa	父页面未就绪，请稍后重试
+GKJMei	品牌别名
+GKfb59	升级后可继续使用 Agent
+GKv4KS	链接标题不能为空
+GLIWaI	一句话介绍你的品牌
+GPd+RF	欢迎使用 Answerbit
+GPzSBj	添加成功
+GQOCxn	文章信息
+GS2Ofk	关闭
+GT3y62	最高-最低
+GTuO94	您输入的链接已经添加过，无需重复添加。
+GV6jxJ	查看截图
+GV6xPB	全局搜索...
+GWALpj	聚焦分析
+GXknj1	确认添加（size）
+GY3Rof	全部标签
+GZgvfd	暂无品牌详情
+GbGmeN	打开原会话
+GbfrSP	如果跳过「选择对比竞品」的步骤，在后续数据分析环节，可能无法获取到竞品信息。
+GdAO6m	加载中
+GfmIFX	开始上传
+GgmYl5	下降
+Ggy72z	加载失败，请重试
+GjIelr	升级至
+GjKXt9	设置留存冻结
+GknzIS	CSV 表格 (.csv)
+GlBrrq	平台模板
+GlSe82	基于品牌核心竞争力生成内容
+GlzvD2	资源范围
+GnItx2	新增有效发文占比
+GoSXXR	countdown 秒后自动跳转控制台...
+GoeJY+	每个分组块可以独立选择目标分组并输入多条提问。点击「添加分组」可以同时向多个分组创建提问。右栏 AI 推荐会插入到当前选中的分组块中。
+Gow+Lb	请尝试其他筛选条件或清除筛选查看所有文章
+Gp58FR	主题分布
+Gp6cW8	暂无提问分组数据
+GpltV4	请选择 MAX_FILE_SIZE_MBMB 以内的文件
+GpqsFg	目标品牌在模型回答中被提及的比例，固定 0-100% 便于跨时间对比。
+Gs2i8P	查看全部套餐
+Gu1TOO	移动
+GuX4x/	待支付
+GvWkD2	生成中…
+GxRrzQ	技能描述不能超过 descriptionMax 个字符
+H+Jz8Q	该分组提问中，AI 回答推荐含本品牌商品卡 / 其他品牌商品卡 / 未出现商品卡的占比
+H+NOMc	该团队暂无品牌，点击下方创建
+H+v8Az	品牌消耗排行
+H/3/lZ	分享 AI 时代的品牌发声经验与洞察
+H07+7E	视频、图文建议前往
+H0hBmy	valuepluralone# 条链接other# 条链接
+H1BUcJ	Answerbit - Make every piece of information the AI's top answer
+H23xO6	保存共享不扣积分；生效后仅同步新回答，不含历史。
+H2aAEq	商品GEO筛选
+H2fptp	模型配置已更新
+H3A59G	该分组为跨品牌共享副本。若所选时间范围内无数据，可联系团队管理员同步历史数据。
+H4MSD9	vversion title | 更新日志 | Answerbit
+H4UQwA	用于在 AI 回答中识别竞品商品的名称
+H5/aYL	提问不能超过 1000 个字符
+H53uxE	请输入邀请链接或邀请码
+H54rrb	更新品牌可见性
+H5b1L9	条链接
+H5mjVA	查看该品牌在团队下的积分用量、趋势与消耗行为记录
+H5p5nP	创建文章失败，请重试
+H5qRMU	brandName商品卡
+H61+0h	无数据
+H6Rai1	生成文章
+H6lWE/	未选择内容
+H7hnNC	HTML 查看模式
+H8y+Xx	品牌数量
+H92lSN	刷新积分余额失败
+HAjQ/G	回答
+HBJnKe	确认迁移
+HBzdxQ	创建 totalPromptCount 个提问
+HDVIvz	当前时间范围内暂无平均排名数据
+HEYgp8	导出失败，请稍后重试
+HEYkcY	| 创建时间 | createdAt |
+HEmmEb	保存中…
+HEp9Ur	分组数据总览
+HFKMmg	《articleTitle》已生成完成
+HGNOHb	剩余
+HHY6Vk	根据当前文章内容生成口播视频，可选择来源模式
+HIXmQh	无法在框架中显示
+HJ/MwO	PDF 加载失败:
+HJub8r	按提及率排序的行业排名列表。
+HKCphW	total 位成员
+HKp9Lg	分组内 totalItemsText 个商品曝光 totalAppearText 次，brandName ownAppearText 次
+HMDSro	退出全屏
+HMv8oZ	推荐发布
+HO49HR	已通过检查，订阅状态会随刷新结果恢复。
+HR9H3x	、
+HROMaT	month月day日 hours:minutes
+HRlaQo	userTagCount 个提问标签
+HS9Zwb	PUBLISH_ASSISTED_QUOTA_LABEL 剩余 remaining/limit
+HSaoyQ	统计周期内新增文章的被引总次数 / 同期新增发文数。
+HTitoW	较上一周期排名不变
+HUB0/9	第5名
+HVqZzz	选择文章
+HWOvnJ	暂无可用标签
+HX1G/i	点击查看 domain 域名分析
+HY1I0d	例: TDSQL
+HY47Z9	联系管理员
+HZU4+r	文章趋势
+HbF8am	无法生成长截图，请稍后重试
+HcRBiM	暂无标题
+HcsHdP	最高
+Hd6Tyh	管理竞品
+HdI8Mq	不支持预览 .ppt 格式文件，请下载后使用 Microsoft PowerPoint 打开
+HevAMf	尚未创建标签
+HfOqkw	介绍类型
+HfqJA+	创建提问
+Hfz59c	触发提问
+HhvHSm	配置中...
+HifjOK	进入控制台
+Hig/0F	新增发文数
+HjYofK	文章内容不能为空
+HkUpRr	与当前商品在同一条 AI 回答中同框出现的商品 SKU，按同框次数降序（契约 §17 co_occurrence_competitors[]）
+HkVOaA	请等待附件上传完成，或移除上传失败的附件
+HlWZ+2	参考文章正文内容
+HprG++	移除
+Hq9jwE	hr天前
+HrDPXJ	推荐发布渠道
+Hrw/JT	本周期暂无品牌消耗
+HsF1VA	已共享给：outgoingNames
+HsUD/y	经回答内不含商品卡路径仍触达的商品，按曝光次数降序；无下游商品时展示空态
+Ht2fD2	暂无下游商品节点
+Ht9Kgi	个
+Hu8fuB	Answerbit 团队最突出的能力，是他们既懂大模型技术在迭代什么，又懂品牌方到底需要什么。他们帮我们把\\这件事，从策略想法变成了一套能落地、能验证、能持续优化的操作系统。
+Hv0gnS	链接就绪后将显示二维码
+Hv2vxe	加载图文列表失败
+HvUZHT	部分迁移失败
+HvcMJa	消耗 credit 积分
+HvkbvQ	仅看我的：下方概览、趋势与列表均只统计你发布的文章。
+HvyC2Z	姓名 *
+HwKqfu	邀请链接已复制到剪贴板
+HxWZ06	搜索 fanoutCount 个关键词，参考 linkCount 篇资料
+HyJh51	分享
+HyX8xO	简要介绍团队的职能或目标
+HyiICL	用户提问单次执行消耗 10 积分，剩余 remaining
+HzWmLo	已成功导入 successCount 篇文章并开始追踪
+I/btFU	数据加载失败: error
+I16HHz	其他引用
+I22QuI	剩余 formattedValue
+I5CK3z	HTML 文件 (.html)
+I6Vuxo	platformDaysRemaining 天
+I6aN3W	开启后可配置监测频次
+I8L3Qi	导入中...
+I908LB	待关联
+I9VfO4	还没有发布任何文章
+IAZq5R	所有已提及回答的排名之和 / 已提及回答的数量。示例：提到的品牌排名为3、5、8 → 平均排名 = (3+5+8)/3 = 5.33。
+IAagJ6	添加外部链接失败:
+IBRFED	品牌筛选
+IBVPUO	点击图标授予
+ICRDkS	附件已过期
+ICsYfK	出现次数
+IK/9td	对比前dateRangeDays天:
+IKbYko	大模型引用视频时，口播内容与标题描述所占权重最高
+ILnW1w	加载详情失败: message
+IMBgCJ	输入提问，按 Enter 添加下一条...
+IMZXan	待发布文章
+INWWqu	套餐 / 订单号
+INZBHR	批量操作
+IOM7bd	抖音平台
+IQQjL9	生成人员
+IRv8Yv	totalCount 个
+IT6Cqw	articleTotalpluralone# 篇文章other# 篇文章
+IT7RqN	搜索文章
+ITLAto	团队信息已保存
+ITfJOq	您已经是该团队的成员，可以在团队列表中找到该团队。
+ITnaCT	暂不同步
+IU4TZZ	此订单已关闭，不能据此判断是否已退款。
+IX/iSf	有限访问
+IXExpi	请输入文章内容
+IY7fGd	Excel 预览失败:
+IZZZcr	查看 Agent 抢鲜额度
+IZgyV7	素材ID和素材类型必须同时传入
+IZw5Dm	找到该品牌的管理员（品牌 Admin 或团队管理员）
+IaOVMH	批量绑定提问标签
+IdS2uV	每 1000 字的视频大约四分三十秒
+Igsvxl	min-max元
+IhM9w3	已收到付款，套餐正在开通，请勿重复支付。
+IiPhDD	关闭导航菜单
+IiWa69	处理中…
+IjswaR	仅管理员可以删除分组
+Ik81t6	内容
+IkLgX3	上次提交结果未确认。同一时间段重复提交将再次扣费。
+Ikuplc	标准版
+IkzrYs	分析
+Imso9n	暂无访问权限
+Is8HQE	正在使用 Google Docs Viewer 预览 PDF
+IsoVhe	加入成功
+Itz/ym	文章标签:
+Iv5+Z7	图文生成
+IvNEq5	Google AI Mode
+IwH4sz	标签加载中
+Ix+wM7	订单关闭中
+Iyl/Xc	重新打开支付页
+Izi7qw	点击按此标签筛选
+J+agsI	商品曝光榜单翻页
+J/G7IE	displayName PC
+J/JTD1	下载失败，请稍后重试
+J0CfpT	联系我们
+J3OIDI	第
+J5G2fC	编辑商品识别关键词
+J8a6Ka	本店被 AI 提及的次数，占全部店铺提及次数的比例，与左侧店铺卡占比一致
+J9JAcg	当前输出
+JBA1vQ	榜内 totalItemsText 个商品曝光 totalAppearText 次，brandName ownAppearText 次
+JCLPl/	获取团队详情失败
+JCVcGr	等共
+JCu+1v	请选择团队后上传文件
+JFMN7e	加载报告模板失败
+JG89HS	总有效发文占比
+JGzF9o	展开更多 (articleCount)
+JJ9wQk	页面导航
+JKnY7U	审核宽松
+JKuVOa	GEO效果最大化
+JLrCnT	请至少选择一个文章策略
+JMsjYG	经其他品牌商品卡流向的非本品牌商品，按曝光次数降序；占比以该路径曝光合计为分母
+JO3B0o	维度切换
+JPWCeX	还可创建 brandQuotaRemaining 个
+JQAuyc	该路径暂无竞品商品节点
+JRCl8V	上传品牌资料作为 AI 生文的知识库，建议上传品牌介绍、产品文档、行业报告等
+JSqv6e	已加入团队，品牌权限见下方授权
+JTa1ur	仅展示已分析的回答
+JV7ltp	全选仅作用于当前已加载的文章，向下滚动可展示更多文章
+JYvSZ+	周期内监控总提问次数 \u003c0\u003emonitorTotal\u003c/0\u003e 次，周期内收录商品总数 \u003c1\u003eindexedTotal\u003c/1\u003e 个，本品牌收录 \u003c2\u003eownCount\u003c/2\u003e 个。
+JZEniv	深度思考模式消耗积分较多，适合关键数据分析
+JcyhTe	约 cost 积分/unit
+JeY8At	生成方式
+Jeq+I4	请输入品牌名称
+JfI9ga	试试搜索
+JhS52A	编辑提问
+Jhiiq+	最高引用
+JhsbA2	分享链接无效
+Ji7zda	（剩余 subscriptionDaysRemaining 天）
+Jikld7	更新日志
+JlDeoG	《articleTitle4》生成失败
+JmYdAN	收起
+Jnc2hf	保存品牌任务配置失败
+Jnjd/z	全量已发布文章的被引总次数 / 总发文数。
+JoBrNA	分组名称不能为空
+JpgJsu	刷新
+Jrnzxr	提问趋势
+JsKa/T	跳转至洞察分析
+JsZcp6	无波动
+JvMINc	正常使用
+JvoGFP	重新检查
+JwEpjW	已发布平台
+JxLJcL	视频生成任务已创建
+Jy9Tpn	新增被引趋势
+JySpdv	返回列表
+Jz9gBN	和
+K+8hv4	移出失败，请刷新页面后重试。
+K/2Z2f	全周期内，经本品牌商品卡路径的流量，占全部商品卡路径流量的比例
+K2G2pJ	支付页被浏览器拦截，请允许弹出窗口后重试
+K2owLf	已有账户？ 
+K4lJr/	左侧查看品牌各项指标的变化趋势监控，右侧查看品牌与竞品的指标排行榜对比。
+K5C2ZO	网络连接失败，请检查网络设置后重试
+K89y15	文章维度
+K9JdQr	当前团队还可进行 remaining unitmetaLabel
+KBWSCx	发布失败
+KDFDW1	删除素材
+KEof8g	松开进入全屏 GEO Agent
+KFQilK	手动指定链接
+KH+hAd	\u003cspan style=\\\u003eparamValue 次\u003c/span\u003e
+KHKN4a	监控品牌数已满，点击查看套餐对比
+KI2Pfg	自动
+KJkbal	请手动复制管理员姓名
+KKDE2B	请输入密码
+KKI4kk	标签名称不能为空
+KKu4PG	(appearText/totalText次)
+KKxiL8	refDaysLabel累计次数
+KKzmz8	进入全屏工作区
+KM4iwt	50个Prompt
+KNCfWF	我的引用：formattedValue3
+KOTtvD	来源分组「title」，点击查看权限说明
+KPS3e2	在平台每日执行的定时任务的基础上，主动触发一批用户提问的执行，提问需要消耗积分，积分消耗以实际运行为主
+KRMrn6	（待获取）
+KSHv/T	保存信息失败，请稍后重试
+KSRFnk	共现提问
+KTWvGv	文章标签
+KUPTQs	请输入网页链接地址
+KUroGC	监控品牌
+KVfkfn	已删除
+KWDEJH	生成中
+KWUXKW	日均引用
+KWeKGv	停用提问
+KX7BH7	添加成员
+KXa/j3	确认导入已发布文章
+KYGbb/	获取标签失败
+KYO6uO	提问推荐
+KZi2r/	倍速
+KaWvtJ	Agent 限时体验
+KaZ5uT	可用语言
+KbGpYg	输入竞品名称
+KbxcuV	最大使用次数：max_used
+Kd9Kuo	平台分布
+KdDfio	行业分析
+KfBmJw	用量明细
+KfP5BF	发布视频
+KjZ2aO	移除标签失败
+KkYJpR	到期：expiredLabel
+KmBsT4	当前筛选条件下暂无数据
+KmOlDj	稍候可在列表中查看进度
+KmUn+u	暂无店铺主数据 ID，以下为流向图 Top 10；完整店内榜单待主数据补齐后可用
+KmydyW	邀请您查看 Answerbit 平台【currentBrandName】的大模型回答记录：
+KnRIJq	生成邀请链接
+KsVfgc	导入本地文章
+KtcvvN	查看 host 域名分析
+KuiGYG	篇文章
+KuooEc	高引用范文参考
+Kuuca5	系统管理
+Kv8qwf	京东
+KwonlE	无法读取 HTML 预览内容
+L+AecW	较差
+L+Bar3	没有找到匹配的订单
+L/s0X5	获取 Markdown 内容失败
+L0Oyag	不支持的文件类型
+L4pefz	禁用 = 在团队视角页隐藏该标签数据
+L517+Q	查看发布链接
+L6QDBr	当前套餐不支持所选监测频次，请升级套餐后重试
+L7tcN/	切换语言
+L8R9WZ	新增发文
+L94M6O	已启用模型
+LAV9aa	图文生成任务已创建
+LCPgax	确认删除提问和回答记录
+LD1cU6	定位到正文
+LE7+P/	操作失败
+LENVgg	商品平均排名
+LF8wLa	前往企点套餐
+LFKgIF	登录成功
+LFiIxH	已删除该用户提问
+LG0KKg	切换对话
+LHGK3p	切换倍速
+LI6ocI	暂无商品数据
+LJWxo1	配置完成
+LKKnwm	可管理团队
+LKWjKv	提问次数
+LKkvjC	已拆分为 textCount 条提问
+LKuQva	请输入团队名称
+LM7iO8	\u003c 1小时后失效
+LMgbZB	洞察分析筛选
+LOGdla	将下方看板数据聚焦到此分组的提问
+LOVXAl	将 count 条提问移出分组后，所有接收品牌中的对应提问将一并处理。
+LPq3rq	Markdown 文件 (.md)
+LTFuUe	minutes 分钟前
+LUhDxK	请联系团队管理员
+LUoasI	开始输入...
+LV1w8N	taskCount 个提问
+LVspmL	加载品牌中...
+LWbWkF	邀请链接或邀请码
+LWev4n	请至少选择一个提问
+LXDosQ	查看全部 itemCount 条
+LXNnPQ	团队管理员拥有全部品牌权限，无需单独授权。
+LZrkQc	最新使用
+LZu5GM	品牌ID不能为空
+LaWt90	批量移动失败:
+LcvQJb	品牌介绍
+LdyE3Z	快捷操作
+Led4Db	当前模型渠道固定，不可筛选
+LekOYA	未读 (unreadCount)
+LetzFz	引用平稳，可能刚发布暂未收录或暂无效果
+Lh/A+K	竞品数量超出套餐上限
+LiH5vN	选择平台
+Lll9dt	品牌列表
+Ln0nIW	提交咨询
+LpPQLV	确定要删除分组「title」吗？
+LqTFmE	部分解除成功
+Lqzi4v	请查收短信验证码
+Lr2EDA	移除品牌授权
+Lr8n/W	文章正在后台发布中，请稍后在发布记录中查看
+Lt8a11	权限不足，无权操作该品牌的素材
+LusimG	共享期间不可修改提问文案，请先收回共享或仅修改标签与模型配置
+LylJ0E	排名维度下钻
+M0keig	参考 linkCount 篇资料
+M1N5v6	保存标题
+M3aUHW	收起正文
+M3limF	periodLabel提及率的变化值
+M5XNYZ	需配置品牌访问
+M7n6hf	针对此回答生成优化内容
+M88fK7	手动指定内容
+M969GO	点击添加描述...
+M9fTVI	验证码校验失败
+MAQCis	范文标题（可选，留空自动解析）
+MB/r21	选填，说明这条技能适合什么场景
+MCO0el	提问监测平台
+MCjGYx	添加标签
+MDh0b3	搜索失败
+MGlWfI	暂无标签
+MIlC73	定制开发
+MJ9pwV	请先同意服务条款和隐私政策
+MK1bnA	¥99/月
+MLe2zN	发起一次生成后，生成记录会展示在这里。
+MN2MDz	获取文章链接列表失败，请稍后重试
+MNVOB+	生命周期累计引用
+MPD9oF	专属支持
+MSzD0E	认证失败，请重试
+MTel4A	品牌成员
+MUN+0y	回答内不含商品卡流量占比
+MYivc5	复制代码
+MYrC58	编辑竞品
+McIaBR	订单读取不可用，请确认登录、团队管理员权限及功能开关。
+McUL+7	新建技能
+McbNku	品牌名称不能为空
+MclDks	订单加载失败，请稍后重试。
+MdvNsX	管理
+Mf6Jlk	手机端
+Mi7UG/	成员 \u0026 邀请
+MigcFN	本页每次改动，只会自动同步给 followingCount 个「跟随团队」的品牌。individualCount 个「单独设置」的品牌不受影响，需到\u003c0\u003e品牌管理\u003c/0\u003e里单独调整。
+MkCSTj	试试调整操作类型或操作者
+MmGJqe	已用 used_count2/max_used2
+Mmt07y	生成失败
+MnBTds	选择模型
+MnFwLv	完成工作空间与品牌创建、添加追踪提问后，大多数团队可在 5 分钟内获得首份可见度报告。此后系统自动按天级频率采集各平台回答，每日更新提及率、排名与引用趋势。
+MnNT88	文案预览
+Mp8Bq0	该品牌
+MpT03X	未知平台
+Mq1RQ5	(totalText 家)
+Mr2+Y0	域名分析链接已复制
+MuW6nF	formattedValue2 积分
+MuWt/L	无法打开分享内容
+Mw2heo	全部 totalModelCount 个
+Mx0FaP	链接标题不能超过100个字符
+MyDKDZ	阅读更多
+N++2tU	下载视频
+N+YOw4	编辑内容
+N+mOoc	添加提问
+N0cMUF	分享此回答
+N1kRTf	文章生成失败
+N2WpO1	比较类型
+N43qGF	正在编辑brandName的单独配置。保存后将不跟随团队。点「团队配置」可对照查看，不会立刻应用。
+N4KefZ	包含视频卡
+N4diOT	无法操作
+N57Emk	暂无未读通知
+N5nFAi	缺少品牌或分组信息。请关闭后从提问列表对应分组重新打开。
+N6qkdd	打开附件：attachmentName
+N7I65a	想了解更多产品能力？扫码登记意向，顾问将为您安排演示
+N7z63m	仅看我的
+N9Jg+m	追踪
+NA64ss	补充内容
+NALux6	正在加载区域...
+NE6cjn	暂无价格区间数据
+NEB/Id	通过邀请链接或邀请码加入现有团队，开始协作管理品牌
+NEGNDs	重新下单
+NEcRMl	Answerbit 产品版本更新记录，了解每次发布的新功能与优化。
+NEszUf	正在生成长截图
+NFIUG5	请求方法不被允许
+NG2OCp	将复制的文章链接粘贴到这里，即可完成文章和发布平台的关联，从而进行文章的引用数据的追踪。
+NGi6k/	统计周期内，文章新增产生的被引用总次数。
+NH33GZ	1个品牌
+NH4W+I	AI推荐
+NHyO2o	编辑竞品失败，请重试
+NIGnrH	无法生成导出文件，请稍后重试
+NJuezF	roundValue2分
+NKun3C	竞品配置
+NLC4/Y	点击前往团队设置页管理
+NMkg++	使用手机号验证码快速注册
+NMtohh	回答详情
+NO12d/	Agent 抢鲜体验
+NP/hoY	邀请链接已过期，请联系团队管理员获取新的邀请链接。
+NP3YT5	模板固定章节、指标和表格结构，报告数据与分析内容会随每次执行更新
+NS7Fxb	团队里的其他品牌都已经共享了
+NSgQa1	监测配置加载失败
+NUmxH8	未找到默认提问分组，请稍后在用户提问中补充
+NVW4Fs	GEO 优化计划
+NVXoQ4	未找到匹配域名
+NXPMyv	确定要删除标签「deleteTargetName」吗？
+NXgKaN	生成视频
+NZHIUg	valuepluralone# 条提问other# 条提问
+NgRfCs	订阅已到期
+NgbIa+	经商品卡到商品的路径曝光
+Nhtd1g	查看回答截图
+Nj5oaf	创建一个新团队开始协作，或通过邀请链接加入现有团队
+NkDDb5	监控品牌数已满，可用积分扩容或升级套餐
+NktpzL	手动关联已发布文章
+NlP+BZ	改日期重新预估
+NltMuM	分享于
+NmUI04	」吗？此操作不可恢复。
+NnRVtj	查看完整曝光排行
+NoXw8J	最多 50 个字符
+Nog5b/	对话里用 /技能名 调用
+NpwZ/c	文章追踪
+NrirnX	商品曝光排行
+NslK+Y	收起子表
+NtzyNV	标签已启用
+Nu7VlP	粘贴文章链接
+Nui3BR	当日引用来源提问
+NuyvdO	套餐开通
+NvUUk/	日期范围
+NvaXb7	对所有可编辑品牌授予只读权限
+NyQ9d2	技能正文不能超过 promptMax 个字符
+NzR+Vo	 · 基于前 MEMBER_STATS_FETCH_SIZE 位
+NzxPTg	品牌业务执行，内容/素材/项目增删改查
+O+tEBy	前往计量中心
+O/U/Qi	高引用文章
+O0aB7t	处理图片失败
+O1g51x	文章生成、发布、追踪可在此处全链路闭环，优化您的 GEO 分数
+O2p9Md	正在加载模型配置...
+O4RlYB	查看范围
+O7ex+4	将刚发布的视频、图文的链接粘贴到此，即可完成关联并追踪引用效果。
+O7hzUs	无法确认该分组是否仍对外共享。请先重试加载共享状态，再执行删除，以免误删接收品牌上的数据。
+O96LE5	发起生成
+O9hAtK	成功上传 successCount 个文件
+O9yOqd	返回我的团队
+OAEq0L	本文链接引用 formattedValue 次，点击查看追踪
+OB2lrK	刷新中...
+OB8YmW	一般
+OBWMlR	第 websiteIndex 个品牌官网格式错误，请输入有效的网站地址
+ODBqME	企业定制版
+OEWnrc	支持 .md、.docx，单文件最大
+OEbT0p	输入关键词后按 Enter 添加
+OFKUp3	分享数据视图
+OG1uBy	4 个步骤，形成可复用的 GEO 增长闭环
+OG6wXS	流入该店铺的提及，按提问分组回溯分摊；多条路径时按各路径流量权重分配
+OGX2Q+	请先选择需要配置模型的用户提问
+OIdDw8	无法查看该品牌数据，需管理员授权后方可访问
+OKA/Io	已选 valueCount 个
+OKYQ0f	思考过程sectionDurationSuffix
+OPIHiQ	刷新共享情况
+OPj86L	第rank名
+OQuM/x	使用品牌自己的配置；本页修改不会影响
+ORdGde	周期内该商品在 AI 回答中被提及的总次数
+OSjC2A	关闭提示
+OTWu5n	charCount/1000 字符（超出限制）
+OU0Q3r	当前团队还可添加 remaining unit成员
+OUD4O7	请检查文件格式后重试
+OUNIoo	素材库
+OVJj7n	商品卡
+OXRouE	分组 (已选3)
+OZ/vHY	已有团队？通过邀请码加入
+OaJHbw	追踪失败
+OakN2N	查看各模型的趋势变化和排名对比。
+OakSYO	图表视图切换
+ObZqPI	订阅即将到期
+ObcQdc	系统将提炼范文核心结构，生成高质量文章
+OcLRRz	订单加载中…
+OdU6M3	上传头像失败
+OdfDBH	提及率趋势
+OePWRQ	模型筛选
+OfD/EA	当前已是
+OfG4Fs	🎯 管理竞品
+Ofw3Gx	图文已删除
+OgwxQL	正在加载 Markdown...
+OhQhj/	监控品牌数已满（已达上限），无法继续添加品牌
+OiGwGV	切换清晰度
+Oihnzm	个品牌
+OijxXQ	提示词执行
+OjUCp8	没有可导出的报告内容
+OjVA28	联系定制
+OjsB2s	可以同时追踪竞品吗？
+Ojvxfc	重新加载报告模板
+Om2w+F	查看全部
+Ona3vB	以下文件类型不支持上传：join\\n支持的类型：supportedTypes
+Onswrj	链接标题
+OrOeXW	搜索名称或编码
+OrSGEo	更新提问标签
+OsIALZ	适合技术、编程、开发类内容
+OscreZ	核心指标卡片
+OtSnpr	统计周期: begin ~ end (dayCount天)
+OvAL3I	head 等 nameTotal 个品牌
+OvBpa/	播放进度
+OvdtPN	统计 AI 推荐中的域名引用排行
+Ow7zSz	开启监测
+Ox7lLI	使用仍会扣减套餐积分；抢鲜额度仅限制 Agent 用量，并非赠送积分。
+Ox7li3	音量
+OxPgqp	经其他品牌商品卡推荐、最终流入商品层的商品个数。路径曝光见副文案，明细见下方 Top5
+OxQyGP	请选择分组
+OxTOTD	没有匹配的品牌
+Oyd7fA	订单正在关闭，请稍后重新下单。
+OzIev8	例如：Acme
+P+oZLo	视频发布失败
+P+vnBD	编辑品牌资料
+P/vpx5	videoCardCount 个视频
+P1cHU8	高引用类型
+P4eRAV	相关视频
+P5kQNG	商品卡推荐分布
+P5lKUv	搜索 (⌘K)
+P7KkM5	订阅已到期，请联系销售续费
+P8aH7e	我的文章被引用率: toFixed%
+P9B/eu	点击添加备注...
+P9TqN8	model · Web UI 代理检测
+PIen0E	解绑提问标签
+PJenMe	葡萄牙语（葡萄牙）
+PKUv8d	均
+PKqeSr	该提问已存在于其他分组
+PL9yf2	count 个视频
+PNMhuv	个品牌跟随团队
+POmLr5	回到底部
+PRPD5/	并行覆盖 DeepSeek、豆包、元宝、Kimi、千问等主流大模型，持续扩展
+PS//I8	品牌名称暂不可用
+PSESsi	全部接收品牌中，这些提问及全部回答记录将被永久删除且无法恢复，其他提问不受影响。
+PUScMk	文章参考素材
+PUYKrR	请输入完整的文章URL，例如：https://blog.csdn.net/xxx/article/details/12345
+PW/hwn	曝光率 vs 当前
+PX7AbV	已达上限
+PX8kZH	已购
+PXfj1f	标题：title
+PYOo4j	全选当前竞品
+PZ1wyl	暂无可用语言
+PZxcin	用户提问 - GEO Dashboard
+Pb0tuY	提问集怎么设、内容和提问怎么匹配、文章审核后才发布、发完用类似A/B Test方法验证效果—— Answerbit 把这几件事串成了一条完整的链路，每一步都有AI辅助和客观数据论证，支持我们步步实证，不靠猜。
+PbeT7L	暂无匹配用户
+PbiBjA	高引用文章推荐
+Pc9TWs	品牌趋势
+Pdyok/	获取文件地址失败：未返回预签名URL
+PfEO1F	model2 · 升级解锁
+PfIrX9	已授权 grantedCount / editableBrandIdCount2
+PhUdnl	请检查表单内容后再保存
+PihRRF	文章正在生成中，过程需要 5 分钟左右，请耐心等待...
+Plg3UX	获取评分排行榜数据失败
+PnewoM	通过AI驱动的数据分析和内容优化，持续提升品牌在AI搜索环境中的可见度与排名
+PpG0Q1	无品牌访问
+Ppu3Q6	已发布图文
+PqaRdo	确认删除标签
+Prs6v8	平台的系统通知可以在这里查阅。
+PsPufp	缺少团队或品牌参数，无法打开品牌消耗详情。
+Pt/5yT	used 名成员
+PtDwf0	成员\u0026邀请
+PtpkFZ	添加文件
+PuaWPX	竞品追踪
+PxQlc7	brandName单独配置
+Pxc6/b	共享中不可改文案
+PyqxJ7	used / 不限名成员
+PzAqVK	跳过
+PzKt51	品牌提及率趋势
+Pzk5UR	抖音电商
+Q/BpYC	请选择有效的用户提问后再尝试迁移
+Q/aPZG	下一张
+Q/nlSj	支付已确认，套餐正在开通，请勿重复支付。
+Q0hgfJ	上传的素材将作为 AI 生文的参考知识库，帮助生成更专业的品牌内容
+Q1Mc27	稍后再说
+Q3Zg0R	已提及
+Q532Ga	articleTotalLinkspluralone# 个链接other# 个链接
+Q5SkGA	管理团队品牌与竞品信息
+Q6+FpL	确认共享（selectedCount）
+Q7DzR7	分组描述（可选）
+Q8GtfG	1分钟快速了解各核心模块的功能和使用方式。
+Q8L5qP	AI 根据品牌信息自动生成
+Q8LsV2	会员权益
+Q8Qmlz	近7天
+Q8Y8x6	期间趋势
+Q8fmNJ	来自 brand
+QBU+ke	创建团队
+QDkLb0	资源超限暂停
+QE2j7k	域名分析
+QFEn2d	邀请您查看 Answerbit平台【dateLabel】的【teamName】数据视图：
+QFfLqK	编辑链接
+QGUpge	正在生成...
+QGZJ9t	删除技能
+QHcAOw	全部语言
+QIAhW/	展示全部
+QJbTQd	已选择 selectedPromptIdCount2 个用户提问，选择要添加的标签
+QJeuB3	监测配置
+QJizj8	资源已符合当前套餐上限，正在刷新订阅状态。
+QJluwb	无限Prompt
+QJo+yT	备注（可选）
+QKNTKM	请处理重复项
+QLEiPr	提交失败:
+QM99lf	已复制
+QMivqX	完成引导
+QNDuYm	文章列表
+QNeiIf	团队权限管理
+QOM+As	暂时无法读取套餐信息，请稍后重试或前往计量中心查看。
+QPBcgf	导入文件后将自动填充标题，也可手动修改
+QQR+OJ	有什么我可以帮你的？
+QQVbWE	可调用读、写及管理员接口；团队级 Key 不支持读写级别
+QTXl/v	OpenAPI 能力未开通
+QU0/qo	流向图节点缺少店铺主数据 ID，无法展示完整店铺详情
+QUCDuY	常用别称 / 英文名 / 简称，输入后按 Enter 添加
+QUJW8K	日均消耗
+QVOSIB	targetCountpluralone已共享给 # 个品牌other已共享给 # 个品牌
+QVcdDM	历史数据清理已完成。为保护您的隐私，不再需要的数据已删除或匿名化，相关内容无法恢复。如需重新使用 Answerbit GEO，请重新开通套餐。
+QWf6t7	已授权 (grantedCount)
+QXxuu2	积分不足，无法提交。请缩小日期范围或充值后重新预估。
+QY2V59	啊哦，暂时没有「displayName」的权限哦~
+QZcZ/w	确认共享
+Qaa32A	英语（英国）
+QbZ5Yy	+ 文章
+QbbguC	存在重复提问
+Qc3AEb	min元+
+Qd9B1Q	无访问
+QdiV+8	请选择目标主题
+QfiIbe	快速分析监控数据
+Qgee3p	升级后即可使用 GEO Agent
+QhATsg	count3次/天
+QjHsFr	已禁用
+QjRMte	批量导入已发布文章失败:
+QjVTTt	点击或拖拽文件到此处上传
+QmAEOK	全周期商品卡推荐分布
+QmrdDW	文章内容
+QnQGJC	查看订单 orderNo
+QorQJF	请先前往团队页面启用模型配置
+QpZZO2	当前时间范围内暂无品牌提及率数据
+QpnySr	仅可访问所选品牌范围内的接口
+QponyJ	自动刷新已暂停，这不代表支付失败。可手动刷新或稍后查看。
+QqFbGN	品牌提及率（AI Visibility Score）
+QqmWvu	请先选择需要迁移的用户提问
+QqtjEp	单位：unit。
+QrKYDU	今日或本周期配额已用完，请选手动发布
+QsS/Ae	调整报告结构
+Quhjvs	Word 导出失败，请稍后重试
+QvtZp/	不支持 .doc 格式
+Qx0aJH	路径曝光占比
+Qx8vyF	开启专属品牌监控
+QyQPok	本次回答没有可用的分析结果
+QyiIVS	画中画
+R/QbpB	获取文章标签失败
+R/WCOv	批量创建成功
+R0d+oe	适合资讯、知识、原创内容
+R0jBJ8	完善品牌信息，持续追踪它在各大模型中的表现
+R1V85T	操作类型
+R1qsxp	插入表格
+R22tBZ	文件夹名称过长
+R3RsY9	全部创建成功
+R51sz9	统计时间范围内各大模型平台回答中引用的域名排行
+R5LoKS	 篇被引用，共 
+R5id1i	可选
+R7J1UK	hr小时前
+R8tyHu	count次/unit
+R95Yqv	眼霜推荐
+RA/xXh	count 篇source
+RAFL7F	导入已发布文章
+RAcj6U	删除图文
+RBwkNL	购买时长
+RD40GL	获取文章模板失败:
+RDag8F	正在加载数据...
+RExUk8	补充你希望文章重点体现的信息（可选，实际效果以策略为准）
+RFAoWc	示例数据，实际版式
+RFkuBX	您访问的文章可能已被删除、移至其他位置，或链接有误
+RFmpKe	搜索文章标题或域名
+RFyGTY	未设置关键词
+RHQej+	brandName 收录 ownIndexedText 个，被提到 ownExposedText 个（ownShareText）
+RJ1Paf	已选 size 个
+RJ6QV0	我已完成支付
+RJD14v	正在检查登录状态...
+RJKAG1	所有通知都已处理完毕
+RNGtkN	请输入至少一条提问
+RNcXUj	暂无法获取链接，请点击重试
+RPU+3f	批量分析
+RPd9NQ	暂无积分消耗数据
+RQ4iwz	重命名失败，请稍后重试
+RQ9guE	导出中...
+RQE5mm	10个Prompt
+RQWJet	未知分组
+RRfh25	PC
+RULBsR	文章不存在 | Answerbit
+RUhFiO	全部字段
+RUniMQ	竞品商品曝光 Top5
+RUnnf9	删除报告模板失败
+RV76ab	回答列表
+RVEElF	默认分组
+RW1J/q	可在下方手动指定参考范文
+RW3+vt	今日该平台剩余
+RZBKEx	PDF 中文字体加载失败，请稍后重试
+Ra73x3	搜索与筛选
+RbR6no	n\\n等共 promptCount 个
+Rcrofj	展开子表
+Rd3r0Q	 和 
+RdJbXi	转换说明
+RdSnyL	使用手机扫描二维码即可加入团队
+RhTC13	监控提问
+RhTu3o	使用手机扫描二维码即可查看数据视图
+RhhtrM	已追踪 不足 1 天
+RhpU1M	分组推荐占比
+RkjFib	素材不存在
+RlclKN	更新团队信息
+Rm2geA	请先选择品牌后再操作
+RmYkxH	创建步骤
+Rmj0br	视频生成中,请稍候
+Rmrm17	最近操作 · effectiveTimezone
+RnycdY	请保存 API Key
+RpBDjD	查看各大模型对品牌相关提问的回答内容与引用详情
+RpUOHt	确定要删除文章「title」吗？此操作不可撤销。
+Rr9/cT	添加分组
+RrR1de	首份报告 · 后续天级更新
+Rs+ZnX	此订单的支付未成功。此状态不代表已退款。
+RsJzQj	支付渠道还在确认订单，请稍后重试拉起支付。
+Ru6zzi	count 项引用
+Ru7jf5	已停止生成
+Ru7q9n	持续追踪指标变化
+RuF127	新建追踪文章
+RuZCyF	其他店铺
+Rwc3Qs	只看brandName和竞品
+RxWWwU	创建失败，请重试
+RygBiy	近两周
+Rz5VrD	你暂无「displayName」的访问权限
+RzpL6g	更多
+S+k6/I	退出登录
+S+tSNn	左侧查看该域名下相关文章被大模型引用的数据，右侧分析AI引用的文章来源以及引用统计。
+S/dKdD	快速追踪
+S12tUB	 · 剩余 formattedValue
+S2VHa9	生成完成后将自动展示图片
+S2lqTK	正在加载目录结构...
+S33BIx	请输入内容
+S3bqVP	加载最新流水…
+S4qGpW	洞察提问分组、商品卡、商品到店铺的曝光流向
+S84Rtp	体验
+S89XQr	readingTime 分钟
+SBwA7L	约 creditCostTotal 积分/次
+SCNpL2	头条
+SDl4dC	管理品牌
+SDunFf	模型管理
+SEjDMU	闭环
+SFOW5/	你无法自行修改自己的权限。如需调整团队角色或品牌访问，请联系其他团队管理员。
+SFd0QC	店内商品提及titleCountSuffix
+SG3J1F	追踪频率是怎样的？
+SGOx17	确认关联
+SH+ibX	不支持的文件格式
+SHeaXW	添加竞品后，可在品牌分析中进行对比
+SIBRwS	添加团队描述…
+SJBCc0	如何加入团队
+SJBOkG	生成报告
+SJlAid	共 totalPrompts 条
+SJyPUh	大模型监控配置
+SK91DW	分享人：userName
+SKGNAQ	已选提问
+SKLSiK	客户怎么说
+SLMV24	chipCount 个品牌
+SO/2Ke	无该品牌操作权限，请联系品牌管理员
+SRDHeT	曝光 appearCount 次
+STCMIw	解除关联
+SW181B	重新生成
+SWRS4q	该分组当前未共享给任何品牌，请刷新后重试。
+SWr3Y5	部分选中轮次未渲染完成，请稍后重试
+SXms2P	出现率
+SY9QW0	创建分组失败
+SaBF77	淘宝
+SbQuvf	消耗 confirmedCredit 积分
+ScF14J	订单号
+ScbwGN	共享提问分组规则说明
+SdsexN	近30天引用
+Se+Qok	点击定位至首次提及
+Shj83l	请尝试其他状态，或输入完整的订单号。
+Si4Y3K	剩余 remaining unit，即将用完
+Sk2W8p	分析状态: analysisStatus
+SkhX8w	提问筛选
+SlPHu0	请至少选择一个品牌的访问权限
+SlYAZO	已授权成员
+SljWNi	我的品牌:
+SlmF8N	截至统计时间点，所有文章累计被引用的总次数。
+SmBcVU	返回
+SnUog2	weeks周前
+Sol/2k	数字为当前周期提及率。
+Sph9q2	网页预览
+SprXlt	model2 · 当前套餐不支持
+SqLqIa	未找到匹配的品牌
+SsMDaV	第 websiteIndex 个品牌官网协议错误，仅支持 http:// 或 https:// 开头
+StHR/a	套餐积分每月重置，当月剩余积分不结转
+Sw6P9/	请选择一个分组查看提问
+SzGC1e	确定解除与 name 的关联吗？解除后将停止追踪该渠道的引用数据。
+SzuZ9J	个关联提问
+T+Ss9j	多平台大模型实时监控，追踪品牌提及率和曝光效果分数，让每一次品牌提及都被听见。
+T+zMnO	多平台内容分发
+T//yMD	同步窗口已打开过。若已提交请勿重复操作；同一时间段重复提交将再次扣费。
+T/oE8P	链接已关联
+T0yq4P	总曝光
+T1zv3Z	创建分享链接失败，请稍后重试
+T29TfW	无法上传
+T2gw7V	常用语言
+T3IJS8	思考过程
+T3Wsns	内容来源于 Answerbit · AI 搜索可见度监测平台
+T3moNO	valuepluralone个月other个月
+T5RyzY	最多 MAX_PROMPTS 条，已截断 dropped 条
+T6Dg72	文章已在外部平台发布，粘贴链接即可开启数据追踪，查看文章表现
+T6fDSy	提交未成功，本次迁移未执行。
+T7sEsQ	正在分析，可随时停止
+T87D3W	仅当前品牌的对话记录
+TAiYqj	开启
+TCCfUY	第 websiteIndex 个品牌官网包含多个地址，请拆成多个官网分别填写
+TCERsz	跳过之后可以在「品牌管理」里的「竞品编辑」创建竞品。
+TDj4LP	监控提问 monitorTotalText 次
+TE9DI1	历史角色，已废弃，请改为管理员或成员
+TESARh	仅剩 artRemaining 篇
+TElV8j	开始生成
+TEwRZx	正在恢复最近一次对话
+TG3Rm/	例如：将三个趋势分别展示，建议放在最后
+TGqYBQ	品牌未就绪
+THFDvS	技能名称不能超过 titleMax 个字符
+TJffX7	趋势预测
+TKmDKi	该分享链接对应的品牌不存在，或你尚未加入该品牌所在的团队。
+TKvT+3	已保存
+TNXFv+	每页数量超出范围
+TO3KpA	读写
+TOxvsz	剩余 days 天，请及时续费以避免功能中断
+TPCBkK	添加品牌
+TPFzHa	未找到匹配技能
+TPNN+m	请从本品牌维护的分组发起历史数据同步。
+TQHiTH	引用
+TQffDE	无法复制到剪贴板
+TRcYWV	当前暂无可用分组，请先创建分组后再尝试迁移。
+TST7PA	联系管理员申请权限
+TV/A6z	转换
+TWdyzZ	文心一言
+TX+b+P	腾讯
+TYvNgD	已加载全部记录
+TZlnRw	图片数量
+TahtyY	邮箱 *
+TasjJX	缺少可回跳链接
+TblKHB	多模型并行追踪
+TbrGam	多团队、多品牌协作管理
+TcSv9A	已停止
+Tce5Za	加载平台列表失败:
+TcjGfU	官网
+Td9N/w	上传成功
+Tdwdgz	近一周 GEO 效果
+TeG+Ck	名次
+TfM+N7	发布到
+TfMpPt	已为你创建
+TgELk1	查看
+Tgbtjz	深入分析引用内容和文章表现
+Tgo8QY	成功 successCount 条，失败 failCount 条errorDetail
+TiqUyr	搜索关键词
+TjIKxL	立即体验
+TjgMw6	获取文件地址失败
+Tjoec1	查看和分析大模型回答记录数据
+TkRE7D	视频服务
+Tl/ZqC	当前套餐不支持此 AI 引擎，升级套餐后可用
+TlYOs9	支持多品牌、多平台监控
+TlkfAR	更新失败，请重试
+TmdY6L	曝光位置: rank
+Tn84w/	切换图表视图
+To4bVz	文章发布到外部平台后，粘贴链接即可开启数据追踪，持续监测文章在 AI 回答中的引用效果。
+ToMB4m	从本地导入 Markdown 或 Word 文档
+TqLHFh	描述结构
+Tr2h7T	选择品牌查看详情
+TrC+kp	文件过大
+TrEwKF	复制原文
+TrGjE2	引用数据
+TukMJy	素材库管理
+TvP7JM	查看成员角色与品牌权限
+TwJLJR	例如：投放系统同步
+TwjTHv	标签备注（可选）
+Tx5ghu	意图：cluster_name
+TxIP53	编辑标签
+TyAPsu	加载品牌任务配置失败
+TzFNWb	产品指引
+TzRjZV	点击热力图中的格子，可以进入对应日期和模型的大模型回答记录页面。
+U/zVjX	第 PAGE_SIZE–total 位，共 total 位
+U1/s97	编辑（或双击卡片）
+U1s7CG	展开 · 已选 selectedTagCount
+U28BCR	更新团队监控配置
+U3Y4G7	提问内容已复制到剪贴板
+U3xN0c	暂无历史对话
+U4VDW6	点击可直接跳转到该提问的洞察分析页或大模型回答记录页。
+U4VMIk	删除邀请
+U5qDCu	今天
+U6rXUv	管理员尚未授予你访问\u003c0\u003e「displayBrand」\u003c/0\u003e品牌的权限
+U6t3ko	大模型监控
+U7Vnrn	注册中...
+U7X6zr	团队级
+U85G4l	暂无可用文章
+U8vmu2	品牌下所有文章的自动发布情况
+UA9t10	竞品“competitorName”已删除
+UAs88Z	全部引用：formattedValue2
+UBgWH/	成功 successCount 个，失败 failedCount 个，请检查后重试
+UIR1C9	更新品牌角色失败
+UIhOoA	请稍后重试获取链接
+UJu6KD	请选择分组（必填）
+UKzx/j	同框
+UM5E4r	当前查看「activeBrandName」— 仅展示此品牌下的成员权限
+UMNGMT	较上一周期上升 delta 名
+UMTWxZ	竞品可前往\u003c0\u003e团队设置\u003c/0\u003e中配置
+UMgCrI	已添加标签
+UMtmM9	正在恢复上下文
+UPfRig	HTML 预览
+UPp11d	userName邀请您加入Answerbit平台【teamName】：
+UPskpb	请先选择品牌和分组
+URTc2z	提示词
+URVin/	brandName ownText 个 / 总收录 totalText 个
+USCjxh	 篇文章中，
+UT4DQ+	近30天 +
+UTtPXN	used 个品牌
+UVdjQM	已删除技能
+UVvpty	我已阅读并同意 \u003c0\u003e服务条款\u003c/0\u003e 和 \u003c1\u003e隐私政策\u003c/1\u003e
+UY2vKs	天级追踪 · 每日自动采集
+UcsOYs	请在平台发布后关联链接以追踪
+Ucv6wx	总览
+UfBV7T	新
+Ug53bC	URL 筛选
+UhM/7/	触发率排名
+UhkbIT	团队额度已达上限
+UiQjh3	Agent 面向标准版和专业版开放。当前 planName 可抢鲜体验。
+UiaAD3	快捷跳转
+UildgR	该分组下暂无提问
+Ukqvoz	引用信息
+UmH/OI	AI 正在根据您的品牌信息生成推荐...
+Un+hwN	本品牌商品卡流量占比
+UnbY+s	正在执行
+Uo5JlF	品牌介绍 / 产品手册
+UoNdQ6	退出成功
+Upvl6b	请输入手机号
+UqM7rL	当前权限无法编辑
+UruBcF	关联已有文章链接
+UuRClx	下载失败
+UusGHM	「focusName」的下钻分析即将上线
+Uv1925	在新窗口打开
+UvcEoz	创建时间：createdAt2
+UvlTng	调整品牌可见性
+UvqEnu	计费数据加载失败，请稍后重试。
+UwXU1r	生效后只会有新回答；采集与评分完成后才会显示，刚共享时列表为空属正常。
+UwcwZs	Answerbit 文档
+UxKDVz	AI 回答处理
+UxO2Uq	收起至侧边栏
+UxZhUs	等待你的回答...
+UyQcTM	品牌详情 - GEO Dashboard
+UyZ+1w	分组管理
+V+QYUw	正在加载标签数据...
+V+jnxI	我已保存
+V/+MXX	更多策略 (hiddenCount)
+V0Wy36	memberCount 人
+V1Oc+o	暂无该商品的分析数据，请调整筛选条件或稍后再试。
+V1Ub9g	成功创建 successCount 个提问，暂未启用
+V1qQVC	diffDays 天前
+V3/zoV	未配置
+V3XHhk	商品识别关键词
+V3zYVL	近 7 天
+V58xxd	暂无可用模型
+V7QPbS	启用 join，禁用 join2
+V80bWD	通知
+VA3BEY	不支持预览 .xls 格式文件，请下载后使用 Microsoft Excel 打开
+VAsVVx	竞品名称
+VCOoRp	清除所有筛选
+VCVngo	已在新标签页打开抖音创作者后台,请登录后上传视频
+VCf6QO	搜索标签
+VEuTO0	品牌下所有文章中，单篇文章从发布到最后一次被引用的时间跨度最长的天数。
+VFRS4L	正在上传文件...
+VGUDL0	存为报告模板
+VI4q+N	竞品“competitorName”已添加
+VIimCN	发布任务记录(
+VL7d0Q	正在加载表格...
+VMRuFN	跳转至该文章详情 →
+VNgKUr	条
+VNkMQ1	请联系团队管理员升级套餐
+VO9O0P	停止中...
+VOnMlh	需要处理异常
+VT6tT/	筛选结果:
+VU5Gqs	较前日 prevFormatted，持平
+VU7Dxg	selectedGroupIdCount 个空分组
+VV6oQC	旗舰版
+VVmNSr	已成功加入团队 \\,[],
+VX3Jex	订单创建结果尚在确认，请稍后查看。
+VYQ5gt	仅同步来源品牌已成功的回答；日期范围含起止当天。
+VZKWtJ	更高配额
+VaDXYc	网关错误，服务暂时不可用
+VaqHXo	我们的使命
+Vc9zDE	查看功能 →
+VewvC4	复制正文并打开平台，不消耗积分
+Vg8Zaf	正在加载分享内容
+VhM9UA	暂无已生成视频/图文的文章
+Vi5FER	本次生成因抢鲜额度不足而停止，升级套餐后可继续使用。
+Viq26t	品牌名称
+VjfQOH	批量授权
+VjsIE2	展开全部
+VkG5x4	取消标记markName
+Vl41IC	提问已启用
+VmSx9J	该页面暂不支持移动端访问
+VmZUxb	统计周期内，新增发文中被引用过的文章数 / 同期新增发文数。
+Vn/HCf	高引用范文加载失败，请稍后重试
+Vn12pb	单独配置
+VqcKrV	确认导入
+VsxBFR	链接 index
+Vv6mr9	维度：dim
+VvUqMq	用户提问
+VvaQyp	unitCost 积分/次
+Vx/wCl	接收品牌：names
+VxXThg	按自然日和操作类型查看积分消耗变化
+Vy60Bq	曝光效果分数是怎么计算的？
+W+K51L	随时可用
+W+tkCE	切换中...
+W0DLOF	确认删除分组
+W1ltID	我的占比：share%
+W2d9dx	含「brandName」商品卡
+W2qs/g	还没有品牌
+W2tbP9	标题不能为空
+W2xlGh	请在下方勾选分组或提问
+W3jt+6	时间筛选
+W536p3	请输入姓名
+W5i/vG	时间范围
+W5sTv4	不填写则使用链接域名
+W68JRQ	积分消耗占比
+W8APmL	适合生活、美妆、时尚类内容
+W8Ngq/	文章列表已更新
+W9qsI5	用户输入
+WA4pU4	查看套餐与积分用量
+WD/rSb	我知道了
+WExJcX	更新分组失败
+WFGf+K	enabledCount / planAvailableCount 已启用
+WFL4RU	将把分组「groupTitle」内的 promptCount 条提问共享给以下 selectedCount 个品牌：\\nbrandLine
+WFRTB2	创建标签失败
+WG/N7e	点击取消聚焦该分组
+WGVk8l	商品个数占比 ownShareText
+WH0NO2	GEO Agent
+WH3CbW	二
+WHJ6CM	合计
+WIlniG	支付渠道
+WK6DIc	授权为metaLabel
+WKyN+v	网络连接失败，请检查网络设置
+WLEBYX	该分组下没有启用中的提问
+WPxX8B	邀请链接最多可被使用的次数
+WQV2ip	首次收录
+WTItzo	模型配置
+WTgiDn	企业设置
+WV52uJ	该分组为跨品牌共享副本，内容由来源品牌维护；可在洞察分析与大模型回答记录中查看表现。
+WVmc8U	月付
+WWyDkM	・最新
+WYhKKn	已加载全部 loadedCount 条
+WZ7dV7	count2次/月
+WZdJOg	文档类：.pdf、.pptx、.ppt、.docx、.doc、.csv、.xlsx、.xls、.md
+Wa8KVX	查看 Agent 限时体验
+WcvwIS	全部竞品
+Wd+9lC	搜索结果
+Wd1+18	可查看共享状态；新增或收回共享需要团队管理员权限。
+Wd84vS	收起侧栏顶部平台标识，仅保留团队切换区域
+WdXiHP	enabledModelCount 个
+WfIdiZ	请先选择要分享的对话轮次
+WgKg11	审核严格
+WgPEi2	导出时间: locale
+WiCSlj	本品牌商品识别关键词
+WjJBRV	《subject》发布完成
+Wjuj5H	链接：t
+WkOVCj	已用 formattedValue / formattedValue2（usagePercent%）
+Wm2+mP	选择日期范围
+Wn3LKX	跟随团队（count）
+WnVoji	已用抢鲜额度
+WopbuM	已跳过。如需同步，可在「已共享品牌」旁点击「同步历史数据」，提交前会先预估。
+WpdBBB	查询
+WqjSEd	团队内共有的品牌
+WrGX4d	问题
+WrSxLN	选择品牌
+Wt9A22	已达上限（brandQuotaUsed/brandQuotaLimit）
+WtWcG8	核心指标
+Wtk2/e	不支持的素材类型
+WwTJAi	点击返回品牌管理导航，开始功能引导。
+Wx6qCg	获取文件失败: statusText
+WxUA55	countdown秒
+X/TlVu	分组名称暂不可用
+X/ekR5	状态：status
+X1AvwB	添加你的品牌
+X1f9t4	剩余 remaining unit
+X3sk+Q	提问分组
+X8PqX/	生成预览
+X8tCnS	 次引用
+XCEBmz	确定要追踪该文章吗？追踪后将自动创建文章追踪记录。
+XDEX59	已提及品牌
+XDIdIq	目前支持 DeepSeek、豆包、元宝、Kimi、千问 共 5 个国内主流大模型平台，并持续根据市场采用情况扩展。所有平台天级并行追踪，每日自动更新，可在同一面板横向对比表现差异。
+XDp1YC	解析失败
+XFXU9o	收录 indexedText 个商品，exposedText 个被 AI 提到
+XGZnjn	确定要删除视频\\,[],吗？删除后不可恢复。
+XH2caF	filledBlockCount 篇 / validLinkCount 链接（上限 PUBLISHED_ARTICLE_MAX_LINKS）
+XHQjre	待关联链接
+XJ6avV	所选接收品牌中，该分组对应的共享提问及全部回答记录将被永久删除，且无法恢复；其他分组不受影响。
+XKIIQd	即将在groupLabelgroupNames 下创建 \u003c0\u003etotalCount\u003c/0\u003e 个提问
+XKlbbm	选择左侧节点查看下钻数据
+XLF2tJ	历史对话
+XMKpvr	查看品牌消耗详情
+XMV6fm	是否保存当前内容
+XMz/x2	AI 识别商品时匹配的名称
+XOrouS	商品卡触发率
+XS5Bvr	技术支持
+XSR1YN	productCardCount 个商品
+XTsL5A	当前编辑内容还没有保存，切换到阅读模式前建议先保存，避免遗漏本次修改。
+XV/qCm	尝试输入其他关键词
+XVbAWr	配额调整
+XXgZ4C	《articleTitle》生成失败，请重试
+XYAVGX	数据导出
+XYhKCz	电话
+XahIAq	当前值
+XbUS25	自定义输入
+XccTaR	删除行
+XcupUS	移除成员
+XdGsyN	订单、积分流水、订阅变更与配额调整
+XeTbGY	需输入以 http:// 或 https:// 开头的完整网址；多个官网请逐个添加
+XfSxj+	暂无团队成员
+XgMStu	启用模型后即可运行相关提问
+XgPeSM	客户案例
+Xh2fr1	范文链接 https://...
+XhByV3	预览失败
+XhMN3G	已到期
+XhOub3	平均排名
+XjVCO+	收起全部
+Xkw50f	选择你希望生成内容围绕的提问，系统将针对这些提问生成优化内容
+XldYzd	可管理团队邀请不能配置品牌授权
+Xlh8Fn	超级管理员
+Xn3Ycy	更新日志 | Answerbit
+Xn4f0a	共享副本中的提问由来源品牌维护，不支持批量编辑、删除或运行。请取消勾选后继续。
+XoUqJR	请选择一种处理方式后继续。
+XodnKL	一句话介绍你的团队，帮助成员快速了解定位
+XofVoM	最多 10 个文件，单个不超过 100 MB
+Xpc97S	跳转
+Xr/E0m	导航
+XrEfcD	已成功actionText selectedIdCount2 个提问
+XrX3dp	次
+Xrniro	次AI引用
+XtEUg1	抢鲜额度已用完
+XtilT/	环比
+XtkECL	更新时间:
+XuZHIt	引用下降
+XupT00	Key 按团队创建，可限定团队级或指定品牌范围；权限级别决定可调用的 OpenAPI 接口。
+XvOFpj	正在跳转...
+XvTqzn	无
+XvsSAe	备注
+XwfJgm	曝光次数
+Xwnq+A	readingTime 分钟阅读
+Xx4Kyq	selectedIdCount3 个提问
+XxFRes	暂无下级区域
+XxbbGl	确定要删除用户提问「query_str」吗？此操作不可撤销。
+Xy2Uy+	提问分组趋势
+XzoSfr	请稍后再试或返回工作台。
+Y/SC4f	选择提问和分组
+Y0OwAQ	当前团队还可创建 remaining unit品牌
+Y1O/8j	请联系你的团队管理员为你开通品牌权限
+Y1tuK3	创建邀请失败
+Y20N5C	团队名称不能超过50个字符
+Y2m49P	正在加载演示文稿...
+Y3kBCR	周一至周五 9:00-18:00
+Y5+gd0	引用率 rate%
+Y5CfLP	选填，例如：这篇内容对你有帮助
+Y5RodP	成员权限已更新
+Y67/3M	确认追踪
+Y78hqF	names 当前仅可见共享生效后的新回答。历史数据需单独同步并消耗积分；下一步先预估，确认后提交。
+Y7FMxf	订阅状态未知
+Y7RDKC	请输入有效的文章链接
+Y7VhCu	确认移除
+Y7lVmc	创建日期
+Y8kzB+	挑选你想对比的竞品，也可以先跳过，稍后再添加。
+Y8rr3l	活跃
+Y9DEz3	更多图片
+Y9IuV8	暂无可选区域
+YAlHz9	生成 HTML
+YB6c2C	选中该技能时会填入输入框
+YB7R1A	确认取消共享
+YBYK0F	团队「teamName」和品牌「brandName」已成功创建
+YCaX7w	前往配置大模型监控与频率
+YDMcHi	发布
+YDg4JR	良好
+YDp7Th	平台:
+YEuFYM	brandName官方旗舰店
+YEvM29	剩余 daysRemaining 天
+YFPB9/	积分消耗加载失败
+YH3Ipq	请输入有效的 HTTP 或 HTTPS 链接
+YHw8BZ	查看所有引用提问
+YJkh1B	最低引用
+YJrpdT	套餐积分
+YKFpnB	完成
+YL49wt	暂无版本记录，新版本发布后将在此展示。
+YMMNq9	移除所有可编辑品牌的授权
+YMfnZe	统计各提问分组的品牌提及率、平均排名与曝光效果分数
+YN1tit	全部引用次数
+YPBRgM	原始效果
+YPRxjh	邀请详情
+YPfkuN	日期: date
+YQKyQP	批量解绑提问标签
+YQOzLg	图文描述
+YR438R	报告
+YRO1I2	扩容数量
+YS+bsM	当前版本
+YSHObh	二维码
+YTNihS	查看全部 (totalCount)
+YUiea9	加入失败
+YVdtar	请检查输入内容
+YXnJwk	无法打开附件
+YXplkX	已用
+YY1tLR	无效的素材目录类型
+YYQiOy	数据来源
+YYzNKQ	品牌查看者
+YZDDNW	frequencyLabel · 前往配置
+YZhe8M	批量添加成功
+YbYyuL	GEO 是最专业、清晰的品牌AI监控平台，致力于帮助企业优化品牌在大模型中的曝光效果。
+YcLWRE	HTML 报告截图加载失败
+YdU+Wt	向其他品牌共享此分组
+YdjMJf	标签已移除
+Yft8lA	添加模型失败
+YjF8/o	保存并退出
+YjaY5v	收藏成功
+Yk0OhX	每篇文章至少需要一条链接
+Yk3jo2	该链接缺少必要的品牌信息，无法定位到具体内容，请联系分享人重新生成链接。
+Ykkqy/	个
+Ym56Ve	base；ownSegment
+Ym6QpM	如果您认为这是一个错误，请联系管理员。
+YmYizL	若仅需临时停用，建议使用「禁用」而非删除，以便日后重新启用。
+Yo+sx6	已加入收藏
+Yok88n	还有 extraCount 位成员
+Yp+nAT	扩容失败，请稍后重试
+YrNT5y	五
+YrnhRf	新建提示词
+YuqT4I	分组提问占比 questionShareText
+YvLVe4	提供每日优化建议和效果对比
+YvXpzm	重试
+Ywlldz	系统将自动识别平台，无需手动选择。粘贴已发布文章链接即可。
+Ywx1VO	提问 promptUsed2/promptLimit
+YxfjZU	不支持的文件类型：ext
+Yxu6LA	向左拖宽至极限可进入全屏工作区
+YyW27p	文件夹
+YyeRnJ	逐条追溯 AI 如何描述品牌，分析高引用域名与来源文章，按主题分组查看趋势。
+Z+8R4p	联系群管理升级至 planName
+Z+So8C	注册失败
+Z1YTCL	千问
+Z2vXOp	视频信息
+Z3A9hz	显示全部（total）
+Z48WZL	品牌单独配置
+Z4d/4e	复制图片
+Z69GLq	请输入回答...
+Z78gxh	valuepluralone# 个other# 个
+Z7Fod6	groupedDataCount 个分组 · total 个提问
+Z7jVMN	可见度增长飞轮
+Z9c4nK	不支持降级
+ZBzxHh	监控提问配置
+ZCATBb	移动成功
+ZCu19S	订单已关闭
+ZD9FR5	新增被引次数
+ZDB8vY	获取提问分组失败:
+ZE15xe	曝光次数仅基于已加载的 loadedCountLabel 条商品汇总（榜单共 apiTotalLabel 条，加载更多页后会更完整）
+ZFd0uF	文章链接
+ZG9Rdp	暂无团队管理员信息，请通过成员列表查找管理员。
+ZGJI/7	展开
+ZH78vM	OpenAPI Key
+ZK0TeQ	暂无符合条件的成员
+ZKJ6po	已过期
+ZKcNEu	请勿在客户端代码、公开仓库或日志中暴露 Key。
+ZMD13H	你尚未获得「join」的访问权限。你无法自行修改自己的权限，请联系团队管理员为你授权，或联系对应品牌的品牌管理员。
+ZMnQJP	提问已保存
+ZMukQd	通过邀请加入
+ZMvaIx	长图左上角二维码可扫码回平台原文
+ZNjIOs	当前套餐的 Agent 抢鲜开放已结束，升级套餐后可继续使用。
+ZSl+8n	写文要求
+ZVWyTy	所有文章创建均失败，请重试
+ZW8hBV	剩余 remaining 条，无法创建 totalPromptCount 条提问
+ZWjbD4	素材转换MD失败
+ZY6FAH	共 formattedValue3 积分
+ZYjm3c	编辑竞品商品识别关键词
+ZbrVDe	登录服务暂时不可用，请稍后重试
+ZccEnH	brandName · 品牌会话
+ZeNccP	点击前往提示词管理页
+ZeWst9	文章排行
+ZflOA6	其它商品
+ZiEXXk	生成 selectedStrategieCount 篇
+ZjmZKe	获取上传地址失败
+Zl+Vp7	本次生成约消耗 creditCostTotal2 积分，剩余 formattedValue2
+ZlREo3	displayName 已完成
+Zm79sT	品牌表现看板
+ZmMJS4	days天后失效
+ZmpUo2	冻结
+Zoc/0I	页码
+ZpLLeA	报告模板
+ZpNWF6	无商品卡
+Zpf2K2	团队当前没有可供监测的模型
+ZqlFqQ	同步历史数据需要团队管理员权限。
+Zrn0+s	点击查看引用趋势
+ZspbqP	全部分析
+ZtVDzb	提问标签管理
+Zvv00b	当前积分不足，无法完成扩容。
+ZwbCwO	保存失败:
+ZxYP/0	提及次数
+ZyiNRc	0pluralone已追踪 # 天other已追踪 # 天
+a+/YLW	重新发布：failureReason
+a+tYBc	可访问当前团队下的团队级与品牌级接口，不绑定具体品牌
+a/1GPj	数量限制
+a0qvEm	搜索用户名
+a1BI0j	任务完成
+a2EHR0	剩余 remaining 积分（不足 10%），请升级套餐以获得更多积分
+a2xPzM	团队描述不能超过200个字符
+a4LYzR	可选自动或手动发布（PUBLISH_REF_WINDOW_LABEL）
+a4deMj	启用状态由来源品牌控制。如需停止接收，请联系来源品牌团队管理员取消共享。
+a5M0iJ	保存模型配置失败
+a5O00N	至少保留一篇
+a6Mvhm	快速操作
+a7J4TY	hours小时后失效
+a7t0Jj	本次导入约需 totalTrackingCost 积分，当前余额 formattedRemaining 积分，请先充值或升级套餐。
+a7x5Wf	正在生成报告模板预览...
+a84sIe	面霜推荐
+aANYzU	最旧
+aBsYd4	从本地导入
+aBwR6p	保存中...
+aCD4gZ	你无法自行修改自己的权限，如需调整请联系其他团队管理员。
+aDkzyb	店铺提及率
+aEBhMq	，如需开通更多模型配置，可联系商务进行套餐升级
+aGhbTE	点击「新建分组」创建第一个分组
+aIWC6A	不指定报告模板
+aJdED5	解析中...
+aK2+1D	共 rankCount 个
+aKThei	恢复后该品牌将直接使用团队大模型监控配置，品牌专属覆盖会被清除。
+aKeD2u	立即升级
+aM302G	查看访问权限
+aO/6C1	日期
+aP3IXv	欢迎加入！正在跳转至管理台
+aPzfMF	积分不足（约需 creditCostTotal，剩余 formattedValue）
+aQ2Gv0	下一篇
+aQCkto	新建分组
+aRes5p	平均排名 = 所有已提及回答的排名之和 / 已提及回答的数量。
+aRsUtv	days天前
+aSF7bl	通知筛选
+aTGCjr	对所有可编辑品牌授予管理权限
+aTOIzC	未知品牌
+aUN+Cb	邀请已创建，请稍后点击重试获取链接
+aUYjS8	进行发布
+aYCqlM	确认购买套餐
+aYbWyj	返回Answerbit平台
+aZdxw9	已增加 amount unitmetaLabel
+aaOH1C	全周期内，经其他品牌商品卡路径的流量，占全部商品卡路径流量的比例
+aanb7X	当前标签下暂无匹配提问，尝试切换标签
+ab20a2	剩余 remaining unit，本次创建 requestedCount unit可能部分失败
+abyd4b	周期总计
+admicX	查看套餐用量、积分余额与提问配额消耗。
+aehvY7	订单已过期
+aeozTv	积分变化
+afIhmO	3次/天
+affOnY	最早一次被引用：lifecycle_start_date2
+ag3iy9	文件夹已创建
+agHAPI	取消共享
+agi1co	写给 agent 的完整指令
+aiP66K	品牌已成功创建
+am4f0Y	面包屑导航
+an+9yp	团队名称至少需要2个字符
+aoCxCA	请选择图文任务查看图片
+apd7it	目标优化模型
+arKXHS	无法保存
+asJPZd	项）
+avJXQG	已取消启用
+ay26Gb	请联系团队管理员升级套餐以开通此能力。
+ayg2ff	新增被引
+azu2Ey	文章详情不存在
+b+DPpw	切换失败
+b+hbcK	分组「name」已更新
+b+irKB	快捷入口
+b+uBiA	查看域名分析
+b0YEce	暂无积分数据
+b11aJ9	Cmd/Ctrl + Enter 保存，Esc 取消
+b1WsWV	请选择提问分组
+b1qE2K	服务器内部错误，请稍后重试
+b2dyPY	移动到此处
+b5A84G	品牌成员与访问权限
+b5cq2J	批量删除失败，请稍后重试
+b6xmJV	工作空间协作
+b7c/mW	自动发布
+b7lxpl	邀请您查看 Answerbit平台【dateLabel】的【teamName】数据视图：\\n🔗：shareLink\\n分享人：userName
+b93J3j	较首日 deltaValueLabel
+b9ORFC	包含商品卡
+bAJofh	竞品管理
+bANMoW	模型监控开关
+bASRaV	新建报告模板
+bAfVtW	Kimi
+bAl1dm	主导航
+bB0flP	totalTrackingCost 积分
+bB1uXV	解析中
+bBqtZ4	高效生成GEO优化文章，选择策略和素材库生成初稿，发布后全链路追踪文章效果
+bDzP/E	删除竞品失败
+bE2C5l	平台文章
+bE6aqG	品牌: currentBrand
+bEBkuh	移出共享分组
+bEfGrC	目标品牌列表不能为空
+bIPE2i	链接地址不能为空
+bJIN8W	语言
+bJyp1n	已保存技能
+bKsEwo	目标品牌在模型回答中的平均排名，1 为最佳，图表已反向显示。
+bM8y7k	腾讯市场研究专家
+bMRMFq	创建第一个团队
+bNVmZX	生成方式：typeLabel
+bNwXTe	品牌
+bO34LJ	点击查看该模型的回答记录
+bPN9zM	下载失败:
+bPXSEx	追踪到优化
+bQZ5nq	目前没有待发布或已追踪状态的文章，请前往生成
+bQdduz	支付地址无效，请稍后重试
+bQmqmI	经该商品路径触达的店铺个数
+bQnQ9R	滚动加载更多...
+bR+IV1	点击标签可快速筛选
+bUHV/A	切换模式
+bVOmL8	暂无竞品，请先在竞品区块添加
+bVqeZy	配置完成后，系统按天级频率自动并行采集各平台回答，无需手动触发。每日更新品牌提及率、平均排名与引用来源，您可在概览面板查看趋势变化与波动告警。
+bXluqY	标题
+bazGfH	加载失败，请稍后重试
+bcHaD3	totalCount 家
+bd2GsT	曝光分数
+beDorB	自定义报告
+bgy/lh	diffDays天前
+bjmISz	商品卡触发、提及率与排名趋势
+bjmb8K	切换为最差在前
+bk48FP	邀请已删除
+bktb7S	当前团队 teamName，点击切换团队
+blDl/h	我们会在后台记录 Key 的使用情况，便于审计与异常检测。
+blnccg	可用操作
+bm2HVl	发布人：join
+bm3+Ku	无法访问该工作空间
+bmVtxC	对比上周期排名上升 deltaMagnitude 位
+bmrX4E	可以选择渠道进行文章的发布，点击发布按钮，平台将自动复制目前的文章文本，进入到选择的发布平台，用户需要自己将文章进行平台的发布。
+bnnZZW	文件解析出错，请检查文件格式
+boPoe5	文章发布失败
+boy3F3	此文章为手动添加的用户创作文章。
+bqnj/Y	点击上传素材
+br7K8v	模型：modelName | 曝光分数：score/100 | exposureStatus
+brLyBw	商务合作
+brxfcR	已发布平台 (count)
+bupMTR	文章正在生成中...
+bvvjXU	跟随浏览器
+bw6er6	品牌详情
+bxCF7U	Answerbit logo 加载失败
+bzZD6g	跳转至提问列表
+c+f8jv	原文
+c02iVj	迁移任务已提交，后台处理中。
+c09Kvf	清空筛选
+c2oLOH	品牌提及率、平均排名与曝光效果分数，一目了然。
+c3QIhI	请填写技能名称
+c3S8fn	PDF预览
+c4Uaml	来源：AI 自动生成
+c4r2nY	绑定品牌
+c5cvxA	多品牌共享同一分组时，采集与分析积分各只扣一次，不会因接收品牌数量重复扣费；各接收品牌按自身监控配置运行，积分从其所属团队扣除。
+c5jGy/	名称不能超过100个字符
+c6OohB	注册成功
+c6QzcP	网站分析
+c6hYQR	分析官网 SEO 表现
+c7/t6G	开始引导
+c7QfG4	暂无成员
+c8DowF	团队是协作空间，品牌是你要追踪的对象。
+c8J5RI	未授权，请重新登录
+c8gmf4	下载文件失败: statusText2
+c9Ofkc	在所有模型回答中，提到目标品牌的占比。\\n示例：10条回答中有3条提及品牌 → 提及率30%。
+cBm4qK	主题: theme
+cC9xZI	在大模型回答中的品牌排位列表。
+cE+ib4	批量配置模型失败
+cEE1s0	获取文章筛选成员失败
+cG39i4	当前文件夹
+cGL4Tx	页 / 共
+cH3LAs	日期范围：displayText
+cHJJp2	请先选择有权限的品牌
+cHqLJz	全部商品
+cJXcG2	条链接
+cJmbV6	请从品牌列表中选择一个品牌查看趋势和下钻分析。
+cJyf+l	积分余量不足
+cK3LFM	displayName 执行失败
+cNnBmt	请妥善保管 API Key。完整密钥仅在创建时显示一次，关闭后将无法再次查看，请立即复制并安全存储。
+cP/hld	提问区域
+cPNDwu	Answerbit 后台数据概览示意
+cPx7rs	其余品牌权限
+cQTutk	删除报告模板
+cRJiy5	该分享可能已更新或撤销
+cRJjat	提问标签
+cRoGI0	输入链接后自动补全 https:// 前缀
+cSiqWd	通过 Web UI 代理模式检测各大 AI 引擎的问答内容，模拟真实用户操作
+cT0rrP	暂无未授权成员
+cUATgg	刷新页面
+cVQC/v	该提问监控的模型：join
+cVe1mx	只看生效中
+cYHd4m	当前团队下暂无品牌，请先在设置页面创建品牌后再进行操作
+cYY7hD	监控品牌数已满（brandRemaining / brandLimit 个），无法继续添加品牌
+cZYeM5	在此分组创建提问
+caRnhu	预约演示
+caqCD+	周期内与该商品相关、被用户高频发起的提问
+catWQB	扩容成功
+cbHrXo	上传失败: 网络错误
+cceLwQ	品牌列表尚未就绪，请稍后再邀请成员
+cd4opr	请检查链接后重试
+cdalS7	DeepSeek
+cfvXs2	仅同步来源品牌已成功的回答。
+cgmkIH	配置尚未保存
+cj6r0t	图文生成失败
+ckRwFm	正在加载工作空间...
+ckvRH7	你尚未被分配可访问的品牌，请联系团队管理员开通品牌权限。
+cmfFyh	引用率
+cp+z5H	确认创建
+cq+e9j	偏低
+crBboV	Answerbit GEO 已暂停采集新数据，历史数据完整保留，部分操作功能禁用，请前往企点续费或联系销售处理
+cs0V4G	可以。在品牌配置中添加竞品后，可并排对比各品牌的提及率、平均排名和引用来源，按主题分组查看不同品类的竞争格局。
+cs4rLd	统计近 30 天内各大模型平台回答中引用的域名排行
+csSpJG	已取消共享，部分提问已停用
+csne/w	+normalTagCount 更多
+ctKgAT	未命名参考文章
+cvS9wc	查看升级方案
+cwrmLh	过期时间：locale
+cz4xKd	删除提问
+d+Rloa	此订单的支付有效期已结束。
+d2uXWB	确定删除「keyName」吗？此操作无法撤销。
+d3gL4m	分组描述
+d3shlg	该团队暂无品牌
+d4ff6n	支持列显隐和拖拽排序，品牌列固定显示。
+d4tK8Y	自动拥有全部品牌最高权限，无需下方单独配置
+d5PYNT	查看团队配置状态，快速进入各设置模块
+d5ajXk	编辑配置
+d5dhq/	图片中的文字和标题描述占比最高
+d76s/k	当前套餐不包含商品追踪能力，升级后可开启
+d7NfJw	积分不足，无法完成本次导入
+d9+/vn	查看提问详情
+d9Kd+z	选择技能
+d9Xi2F	核心优势
+d9yPCb	已成功创建 fulfilledCount3 篇文章，系统正在生成中
+dADjuT	成员
+dC36Z+	当前套餐暂无可配置模型
+dCmriq	Excel 支持两种格式：① 标题 + 链接列，相同标题自动合并；② 标题 + 链接1/链接2/… 多列。
+dDN5uK	技能
+dEIbfR	当前订阅积分不足，本次生成已停止。升级套餐可获得更多积分。
+dEYDlk	创建文章追踪失败:
+dHeYRO	曝光效果分数综合品牌提及率、平均排名和引用质量。提及率衡量 AI 回答中提到品牌的比例；平均排名反映品牌在推荐列表中的位置（数字越小越好）；引用来源追踪 AI 引用了哪些外部域名和文章。三者结合，用一个数字概括品牌在 AI 搜索中的曝光质量。
+dMJCc6	品牌全权
+dPN/ce	视频详情
+dQcgy2	全部品牌
+dSTd8t	引用提问
+dT3WA9	长截图预览
+dU7v5W	请输入文章标题
+dUf8yu	暂无生效中的邀请
+dVaHj1	迁移成功
+dVaVRr	日语
+dXtnGt	多维度分析品牌在大模型中的曝光趋势、排名变化和引用来源
+dZffol	暂无引用数据
+daHc47	较周期首日 avgRankFirstLabel
+dbQNdT	groupCount 个空分组
+dbdsQZ	暂无分组占比数据
+dd+vh5	数据生成中，通常需要5-10分钟。请稍后刷新查看数据。
+dgy1Sl	输入自定义提问
+dhgJ2b	更新模型配置失败
+di8TGH	商品GEO数据
+diPAKf	已受理
+dicqHU	还有 count 个平台
+dijUSD	displayName 手机端
+djIECu	分享文案已复制到剪贴板
+djkqoT	获取分组排行榜数据失败
+dlCqin	所选提问未启用
+dlIWDb	分组占比
+dlYw0K	即将导入 filledBlockCount 篇文章（共 validLinkCount 个链接），预计消耗 totalTrackingCost 套餐积分（约 trackingCostPerLink 积分/链接）。确认后将开始追踪这些文章。
+dmulmx	点击查看文章发布流程
+doKb4L	批量开启/关闭提问
+dqZmif	文章编辑器
+dqlE8L	汇总团队内各品牌的提问、文章与排名表现
+drzi3E	团队数据视图筛选
+ds4cMR	视频标题
+dtKbq8	啊哦，您的文章还没有发布哦~
+dtdC6Z	关联提问：join4
+durqxQ	视频发布成功
+dwFOaA	启停
+dxkwH5	取消共享需要团队管理员权限。
+dyZmIS	加载子节点失败:
+dyg+2t	箭头表示相对上一周期的变化。
+dzVMjA	排序
+dzvbR6	共
+e/ZBJI	groupCount 个分组 · totalPromptCount 条提问
+e/yBWS	复制文本
+e0RHQL	将停止向 \u003c0\u003e全部接收品牌\u003c/0\u003e（targetBrandCount 个）共享「displayGroupTitle」。
+e4EvfW	最早一次被引用：lifecycle_start_date ~ 最新一次被引用：lifecycle_end_date
+e4UjP+	《subject》已发布至 platform
+e5UX4M	查看品牌在各大模型中的整体表现数据。
+e67VWn	标签：join3
+e67eF8	店铺
+e7dO0C	积分说明
+e8cksn	发布成功
+e8zsT1	切换团队
+eAZCNS	内容为空
+eBQwP6	failedCount 项分析任务执行失败
+eEVJk3	用户创作
+eGZMQo	套餐到期时间
+eHzv8V	正在查看团队配置，仅供对照，不会应用到brandName。想放弃单独设置，重新跟随团队，点右上「恢复团队默认」。
+eI3q9x	已为 selectedPromptIdCount 个用户提问创建任务，每个用户提问执行 runCount 次
+eIQY5o	核心指标趋势
+eJbqAp	优化
+eJhWvd	平台生成
+eJjKOJ	系统监控
+eMways	点击取消
+eNPOBu	根目录
+eNiB6a	订单金额
+eOBJ8I	Prompt详情
+eOHkQh	文章大纲
+eOiWxz	重命名失败
+ePpDkf	口播文本不能超过 CUSTOM_NARRATION_MAX_LENGTH 字
+eQXw9t	引用内容
+eQseaQ	创建时间:
+eR83IE	获取分组列表失败
+eREnbV	重新打开
+eSi7Ka	暂无符合条件的文章
+eTME2u	创建失败
+eTYUPH	Key 用于 HTTP 请求头 X-API-Key 鉴权，请妥善保管。
+eTsI6l	各品牌当前用的是哪套配置
+eVnHGU	Web UI 代理
+eVz5Z0	执行用户提问说明
+eXYcKb	文件地址不可用
+eYJSTL	品牌消耗
+eYkFM+	可创建提问额度已用完，请升级套餐
+eYmpjN	AI生成文章
+eYz6uf	删除竞品
+eZFLkN	触发型
+eZVpyC	展示控制说明：
+eZsnhJ	优化中心
+ebjTxG	文章引用次数
+edKfYo	共享设置 · groupTitle
+ee0vGx	品牌方文章
+eegjt5	本次约消耗 creditCostTotal2 积分，剩余 formattedValue2
+efNlYO	品牌官网
+egB9qz	已更新 updatedCount 个竞品的商品识别关键词
+ehQVR0	持续更新用户问题，像查看报告一样便捷
+eiIswm	通知中心
+eiW4Kn	篇文章，共获得
+eiZk90	每个分组区块都需要选择一个分组
+eiy6IM	未知套餐
+ejDezX	品牌头像
+ejHG+a	您已经加入该团队
+eja+5u	请在支付页完成付款，完成后返回此处确认。
+ejxtH+	剩余 remaining 积分（不足 10%），请前往企点升级套餐
+eni7mm	PDF 加载失败，尝试使用在线查看器
+eoe8BR	Google
+epldZu	团队设置
+eq3BhR	分析当前商品的表现
+eqXwpM	注册失败，请检查信息是否正确
+erIHNo	待处理
+es295d	多数 topLabel
+etr5/E	解除留存冻结
+eu7FgU	暂时无法校验套餐能力
+evbokc	发布任务已创建
+ewLPEX	约 days 天首次被引
+exT26O	创建 Key 后，外部系统可通过 X-API-Key 请求头调用平台 OpenAPI。
+ey9EJL	该团队暂无品牌，可联系管理员添加
+f16mkf	发布日期 publishDateLabel
+f2XOb/	创建标签，便于筛选与管理用户提问
+f4v5DY	相关信息
+f5t+hI	正在加载文章详情...
+f7GnbT	豆包
+f8E8IQ	重新发布
+fAmB3+	记录不存在
+fCO8lW	所选时间段内无可同步的数据，不会扣减积分。如需其他时段，请返回上一步调整日期。
+fDb15h	当前团队还可创建 remaining unit用户提问
+fDok+c	报告结果
+fFLHRJ	导航分组
+fGSvTC	转为本地提问后超出接收品牌额度，count 条已自动停用。提升额度后可重新启用。
+fH2xI9	查看各 AI 模型的原始回答内容和引用详情。
+fHEHdu	当前团队全部会话
+fKBh69	创建「trim」
+fLmZxi	标签和监测模型仍可修改，保存后会同步到全部接收品牌。要改文案请先在「共享设置」中收回共享。
+fPL3Jt	生成失败，请稍后重试
+fRUJSy	每次提问约消耗 task_run 积分，每条回答处理约消耗 task_scoring 积分
+fSJ4RF	结果
+fSVXNN	数值越小越靠前
+fT6CQz	focusedCount 个分组
+fUVst9	还没有标签，创建你的第一个标签
+fVcdYA	获取成员列表失败
+fWWKXr	未找到包含\\,[],的提问
+fYJPdN	粘贴链接即可开始追踪引用次数与模型分布
+fYxb7/	商品列曝光占比
+fZomkQ	待发布
+fcDW2U	数据加载出错
+fcPUoS	该回答记录可能已被删除或链接有误
+fe3A5q	播放
+feZLb7	确定要删除选中的selectedPromptTextselectionConjunctionselectedGroupText吗？此操作不可撤销。
+ferfmT	团队名称
+fiPqam	brandName 商品在 AI 推荐卡中的平均排位，数值越低越好
+fj31xT	该节点暂无商品 ID，无法进入商品详情页
+fk4x7E	共 localTagCount 个标签
+flJD55	设置
+fmyT+z	带入对话
+fp2sMr	加入团队失败，请稍后重试
+fpGRds	请先选择需要添加标签的用户提问
+fpTiuo	去充积分
+fpwIWC	按大模型平台对比趋势与排名
+fqJSNZ	趋势加载失败
+fqVn8u	对生成内容进行实时质量评估，提供针对性的优化建议，确保内容符合大模型推荐标准
+frSdX8	选择分析提问
+frft8f	可发布
+fsY3nH	关闭
+fsaJG9	日期：beginDate 至 endDate
+ftVqeR	当前时间范围内暂无用户提问数据
+fvythT	该订单已失效，请重新下单。
+fwkjkP	周期值:
+fyc96T	触达 cardTrafficText 次
+fyzTLk	当前排名分数距排名第一的差值
+fzMRuF	团队ID不存在
+g+einl	输入标签名，多个用逗号分隔
+g/NsGV	years年前
+g09S7R	生成时参考了该文章的结构、论证方式与表达节奏，用于提升内容可信度。
+g0SUHo	当前分组暂无商品卡推荐分布数据
+g0l1xX	该域名下暂无发文
+g3QKj/	无法生成图片文件
+g4jjs+	预览
+g6Ols5	当前周期暂无排名时序数据
+g6y8xW	管理您的品牌信息和监控设置
+g7XdKE	未找到匹配语言
+g7t2dT	扩容失败
+g7tOqn	API 访问凭证
+g9As6J	创建提问标签
+gC8RpG	追踪成功
+gD4yeP	管理成员权限与邀请链接
+gE+1L3	预览加载失败，请尝试下载文件查看
+gEi5VK	账号已锁定，请联系管理员解锁
+gFUE03	返回工作台
+gFzVYp	清晰度
+gI/xPA	Answerbit 帮你把黑盒变成可量化的增长通道
+gJ4/xN	序号
+gJMchk	该文章已追踪
+gJWlpc	Perplexity
+gKJfCh	元宝
+gKOPxL	正在生成 HTML
+gMDddC	totalDuplicateCount2 个重复
+gNVklk	个人设置
+gPoBQQ	刷新订单
+gPrGiZ	上传中...
+gQ0BYs	请至少选择一个已共享的接收品牌。
+gQLeyl	用户创作文章
+gQbRkQ	个品牌单独设置
+gRXGoY	店内商品曝光
+gRgAmQ	私有部署
+gTEyz9	订阅信息加载失败，请稍后重试。
+gUCDxr	图片 index
+gUFRPw	隐藏平台 Logo
+gUPnnl	暂无平台数据
+gVahB8	处理中
+gW3Xli	已移除标签
+gf0vKm	邀请新成员加入团队
+ghRwGm	取消收藏
+ghXz63	暂无通知
+ghhPNx	帮助企业优化品牌在大模型的曝光
+gj7w+1	系统将围绕这些提问生成文章，提升品牌在相关问题中的可见度
+gjODl7	提及占比
+gjwwki	试用即将到期
+gk1B9R	加载视频列表失败
+gktdDb	示例：10条回答中有3条提及品牌 ➔ 提及率30%。
+glV3pg	AI 推荐提问
+gncupf	用户提问分布
+gnzBAY	在下方插入行
+gp+RNR	暂无可用模型，请先前往团队页面启用模型配置
+grk9P5	单次最多导入 PUBLISHED_ARTICLE_MAX_BLOCKS 篇文章
+gt67cs	品牌在同行业中的综合排名，数值越小排名越靠前。
+gtNmn3	关闭后提问会保存为未启用，不会立即进入监控任务
+guy+le	报告模板预览
+gwY4fC	缺少团队信息，暂时无法加载计费数据。
+gx7mWk	订单记录
+h0gVpo	图文信息
+h2Kp8M	团队管理
+h2uFrP	userName · superAdminLabel
+h6aLri	暂无链接
+h6e83j	编辑品牌
+h82p9h	页面出了点问题
+h85J83	素材 slice
+h9S5XX	商品
+h9uIdA	确认创建totalCount
+hAKUTE	确认删除
+hD9WtX	暂无竞品
+hDG9Tv	名次变化
+hE29hc	如需修改团队或品牌信息，可前往主页后在设置中调整。
+hE9iMo	可查看此 Key 的成员
+hF914Z	创建订单并支付
+hFY40H	我的品牌
+hJF540	删除文章
+hKFPmX	失败
+hKm7ZY	各自设置，改这里不影响它们
+hLr5V9	promptCount 个提问
+hM4M8+	发布中
+hPNfGI	高级筛选
+hQpdKw	文件名
+hS0M9x	尚未分配品牌
+hSnkA3	用一个品牌\u003c0/\u003e开始监控
+hSxqGc	点击后用此技能继续提问
+hTecl6	恢复失败
+hTjhFg	当前周期暂无店铺曝光数据
+hUtX9h	启用提问
+hXRQFt	用于模型识别与列表展示
+hZqpLj	months 个月
+hZuWij	快捷创建
+haaazQ	咨询表单
+hcZSkQ	查看引用趋势
+hcccnx	关于我们
+hg0Sh1	「全部引用次数」为该域名下文章被引用总次数；「我的引用次数」为你发布的文章在该域名上的被引用次数。两指标统计维度可能不同，数值请以服务端口径为准。
+hgrIV4	链接已更新
+hisZrx	链接
+hjCGvD	加载数据失败
+hjEaj5	已加入当前团队，可继续创建品牌
+hk/POh	套餐积分：剩余 formattedValue / formattedValue2
+hl8Dpx	选择时间范围
+hlk5xs	baseLabel · 升级解锁
+hnHJTz	新建品牌
+hnMsAZ	品牌占比 share%
+hoAy0I	批量添加标签
+hoPnbv	已聚焦
+hqKdEF	仿写源文章
+hqQbB1	已为 selectedArticleIdCount 篇文章添加标签
+htLKaE	执行失败
+htv+LY	当前余额不足以完成本次导入
+huLmVt	平均排名行业排名
+hvvNHn	请确认 Excel 包含标题和链接列
+hxRg2m	正在导出 Word…
+hyVQRW	已恢复团队默认
+hzZD2M	升级解锁 lockedModelCount 个模型
+hzxIbk	正在加载共享范围
+i+2FJ/	提问 promptUsed/不限
+i+j78S	共现高频竞品
+i0G1RN	管理团队下的品牌与竞品，查看品牌配额使用情况。
+i1Ow9I	模型配置
+i2w0yr	支付失败
+i4TJ+x	取消静音
+i5PJ02	未授权
+i7UVoz	AI 智能生成
+i7a9Qv	商品识别
+i8FboJ	数字为当前周期引用次数。
+i8vT1B	周期内不足 2 天时序
+i9SLU7	创建时间
+i9XJBc	已发布
+iANro4	正在加入团队...
+iCjelZ	引用域名分析
+iE+gD0	请求的资源不存在
+iEWzjx	开始使用控制台
+iFYiHO	该品牌存在于你的团队中，但你尚未被授予访问权限。联系品牌管理员授权后即可查看品牌数据。
+iFyPEn	面膜
+iG+Pt7	请先选择品牌
+iGTfvY	创建文章失败:
+iGq4Dc	积分流水、订阅变更与配额调整
+iH//9k	加载子文件夹失败:
+iI8vtz	监控周期内商品曝光率趋势
+iIUWzy	暂无提问内容
+iIW3DH	勾选接收品牌后，该分组内 promptCount 条提问将一并共享。
+iIm92U	尚未确认
+iLp5wd	租户管理
+iMAVx5	文章已开始追踪，期待看到它的表现！
+iNsWXf	团队的操作记录将显示在这里
+iOXM81	相关商品
+iOhexk	我的云盘
+iQOQdv	与本次创建的另一条提问相同
+iRlrVt	删除别名 tag
+iSAivT	管理标签
+iUCM+l	添加官网
+iUWyPR	订单不存在或不属于当前团队。
+iUp8Ct	分组信息已更新
+iVqNFc	正在加载洞察分析数据...
+iY/10Z	简称或常见写法；输入后按 Enter 添加为标签
+iYQ1Jn	获取竞品数据失败
+iZm53X	追踪提问数
+iZzFQG	生成文案预览
+ia5Qzu	failCount 个提问未能创建
+ibNkBQ	全部设为管理
+ieOFFv	已达链接上限
+iepc69	当前周期暂无共现竞品数据
+ievgP7	生成 Markdown
+ifsTEf	成员已移除
+igXXvm	当前套餐暂无可配置的大模型。
+ijSAOw	已选择 selectedPromptIdCount2 个用户提问
+ijhx1t	关闭后，成员无法查看无对应权限的品牌入口
+ijxGdz	取消编辑
+ikU/Pu	列 colIndex
+ikWzNH	主题详情
+imliUF	额度不限
+inAfpP	暂无用户提问
+io/CJv	characterCount 个字
+ioA4Ye	内容尚未保存
+ipA/8X	专注写作
+irHwZu	不足 1 天
+isA7UO	此操作不可撤销
+itIvcT	展示近一段时间内的平均得分变化
+itaR/B	已取消商品归属标记
+itk25x	统计周期
+itzlVH	无法安全加载 HTML 报告，请刷新后重试
+iu8zkb	正在使用 Microsoft Office Online Viewer 预览演示文稿
+iuR5P4	中等
+iuXy1g	较前日 prevFormatted
+ixfRhz	查看该提问的模型回答记录
+ixrU7N	请稍后重试，如果问题持续存在，请联系团队管理员。
+iy8Jo8	输入域名，回车添加...
+iyKs/X	失败原因
+iyzQg+	创建人：creator2
+j+Ak96	品牌关键词不能包含空字符串
+j+XLOm	接收品牌共享状态已变更，请刷新后重新选择。
+j0PqDa	点击切换分析域名
+j0Y3b/	授予权限
+j1IfhY	暂无推荐，请手动添加
+j20sga	加载时间较长，请稍候或尝试下载文件
+j2KzSY	关闭
+j2RNCU	复制标题
+j2k9kn	链接已复制到剪切板
+j41iqI	正在加载分组数据...
+j4GUJ5	已生效
+j4jw0+	分析范围
+j6wdvp	展开全部 allTagCount 个标签
+j81c/v	用户提问追踪数已满，请升级套餐
+jBG25x	保存
+jEO7jM	暂无发布记录
+jH1nCd	条记录
+jHCKvr	将取消向 targetLabel 的共享，并永久删除该分组在接收品牌侧的提问与回答记录，无法恢复。
+jHIIbp	额度不足
+jHNOIE	支付已确认，但套餐未能开通。请复制订单号联系支持，勿重复支付。
+jHO4Ce	当前套餐暂未包含 GEO Agent
+jHYpuR	添加备注…
+jHloGu	提问维度
+jIgr6U	监测频次
+jJ/0EL	Google AI Overviews
+jJMkD6	打开原文
+jKcENf	创建竞品
+jKkiBC	重新加载
+jKrZ6K	基建
+jMPsnC	预计 5~10 分钟左右生成完毕
+jMX+Ib	权限不足 - GEO Monitor
+jRbwBs	仅支持 Markdown、HTML 和 PDF 文件
+jRjUMN	min分钟前
+jTSF7r	积分预估失败，请重试。
+jTVp9R	批量移动失败，请稍后重试
+jWOhHJ	系统
+jXecEt	品牌管理
+jYGdZQ	提交中…
+jYHPFP	搜索订单号
+jZO9NT	当前品牌未开通商品卡能力，请联系管理员开启后再使用商品 GEO
+jb85tp	点击链接就能一键加入啦
+jbPJNa	加入团队
+jbhcw+	找到团队的管理员或小伙伴
+jbwSYh	品牌管理员
+jdKCDi	等待你补充信息
+jeHuA1	暂无提问标签
+jf8hvn	保存并切换
+jgZILJ	确认并提交
+jgjcNA	按同框次数降序，与本商品在同一回答中同框出现的竞品
+jiQl5d	还可创建 remainingsuffix
+jjejom	创建与管理外部系统集成 Key
+jk4pvg	套餐积分不足
+jkhf1m	按模型切换
+jlYg1q	当日在 dayValCount 个模型中排第 pos
+jmos6W	关键词
+jmqZcJ	该品牌将继承团队大模型监控配置
+jn51Wp	排名趋势
+jnC++K	请选择要预览的文件
+jojokW	正在完成认证...
+jomads	7天
+joxqxg	如何申请品牌访问权限
+jphoSQ	valuepluralone# 个竞品other# 个竞品
+jplkOZ	迁移中...
+jqY6Dr	Prompt 列表
+jrXMDn	网页链接不可用
+jrn8TM	仅千问、豆包、元宝支持商品数据
+jroE4l	邀请码 invite_code · 到期 expiry · 已用 used_count/max_used
+jt79GW	请输入文章链接
+jukqUa	保存为 PDF
+jvdG1+	团队视图
+jvufzz	尚未开通
+jx5Bb/	更新失败
+jxD+iQ	取消
+jxMXzp	官网文章
+k+Hcjn	每日总计
+k0vDpg	帮助文档
+k17RwU	打开原文链接
+k2B+mS	邀请您查看 Answerbit 平台【brandLabel】的商品 GEO 分析：
+k2f1YY	余额不足（剩余 formattedValue）
+k34wWO	基于文章原文内容生成口播内容
+k3HpA8	查看团队配置状态，管理品牌、模型、成员等设置。
+k3Jnco	该店铺暂无商品明细
+k3LvCq	已追踪文章
+k3fgur	选择参考范文
+k4AEkz	编辑Prompt
+k4VWh7	综合曝光效果得分，范围 0-100 分，分数越高表示曝光效果越好。
+k4aEYP	加载下钻数据…
+k64sHY	业务规则验证失败
+k6GUof	管理您的分组，用于组织和筛选用户提问
+k70gAp	新建提问
+k8BYNp	分组排行榜
+k8ccIT	导出失败
+k99/cv	未收到取消结果，生效状态未知。请刷新确认后再操作。
+k9duar	查看团队操作历史
+kBSS47	在右侧插入列
+kBropA	新建提问和任务时默认使用，修改后不影响已有数据
+kCWAZa	跟随团队
+kEoj5g	帮我总结当前品牌在AI搜索中的主要优势、风险和改进方向
+kF9+0f	清除筛选
+kHXpOL	当前 currentLabel
+kHer77	帮我诊断当前品牌的GEO表现，找出主要风险和改进方向
+kHujT6	请输入文章URL
+kIEIXT	深度分析品牌特性与竞争优势，自动生成符合大模型训练偏好的优化文章，提升GEO指标命中率
+kJgDwO	已发布视频
+kJl2fn	提问 promptUsed3
+kJxAWK	adminCount 位管理员
+kNgUYf	仅调用读接口
+kPCFHc	请至少保留一条待导入记录
+kRwsZ9	团队
+kStXnV	积分充足，可以提交。
+kTtQZ6	Answerbit 团队最稀缺的能力，是能把基模技术的演进方向和品牌的商业诉求对齐——帮我们想清楚AI搜索时代品牌该怎么被理解，然后把它落成可执行的行动。
+kUMjCx	收录商品 indexedProductTotalText
+kUyr3V	流量
+kV6m0q	valuepluralone# 篇other# 篇
+kW/S8j	配额记录
+kYLXiz	提问分组（totalGroups）
+kYxYmn	平台列表加载失败，筛选功能可能受限
+kaM1h+	参数错误，请检查输入内容
+kbQ3VQ	查看历史记录
+kct1OI	文件夹名称不能超过100个字符
+kcuabi	迁移分组
+kd7mqo	编辑分组
+keqzfd	预计消耗 ✧ fallbackCredit
+khA+px	已经在企点购买的，前往 \u003c0\u003etmc.qidian.qq.com\u003c/0\u003e 登录
+khZKRI	请输入分组名称
+khdpmA	搜索技能
+kidFd9	产品文档
+kj5q9v	来自互联网趋势+用户真实搜索热词
+kjUMOM	查看 GEO 表现
+kk4r67	已选择 selectedCount 个用户提问
+kn+aWP	新增被引用次数
+knU8iy	文章内容过大，无法导出 Word
+knUxhD	展开其余 hiddenInviteCount 条
+kp5FhZ	ref_count次
+kq7Khc	该网站设置了安全策略，不允许在 iframe 中加载。您可以在新标签页中打开查看。
+kqDQuE	单次最多导入 PUBLISHED_ARTICLE_MAX_LINKS 个链接
+kqKgtD	enabledCount / planAvailableCount 已启用 · 监控频次 frequencySummary
+kqLMhi	共享失败，请重试。
+kr19ce	技能名称
+ksjZSx	恢复团队默认失败
+ktOCuz	你在该域名暂无文章
+kto9Mf	查看素材
+kuOMKt	更早
+kudFQV	分组
+kukSWX	邀请链接或邀请码无效
+kuyVb8	已支付，开通异常
+kvYqbq	当前为 .doc 格式，已切换到在线预览
+kwl2RH	删除 API Key
+kxadwH	技能名称不能包含空格或斜杠
+kzLiuh	排名维度
+l/DaKV	valuepluralone# 个品牌other# 个品牌
+l1765y	让 TA 在「团队设置 → 邀请管理」里生成一个邀请链接
+l1CqSq	创建文件夹失败:
+l4k3RM	复制失败:
+l5ABHs	下钻数据加载失败
+l5GC4U	共 formattedValue 篇
+l5LTZ+	pct% 已用
+l5LeAI	hours 小时前
+l5cjU7	可快速搜索页面、功能与数据，支持快捷键 ⌘K 唤起。
+l5mc+w	查看与该模型的历史对话
+l5rcui	查看原文
+l6DyKL	品牌信息
+l724Bv	当前统计周期内该提问分组触发 AI 回答的提问次数
+l7rSVw	添加链接
+l8ZhtZ	文章列表 (totalCount)
+l8pZiE	点击以配置模型
+l9fs5J	支付页被浏览器拦截，请点击“重新打开支付页”
+l9t2vc	errMsg，如需开通更多模型配置，可联系商务进行套餐升级
+l9vovP	上传素材
+lA2r5c	图文生成中，请稍候
+lBsv5O	生成完成后将自动开始播放
+lCIkh2	不支持的格式
+lCW7/l	大模型scoreLabel排行
+lD4wy8	模型引用
+lDbdlZ	确认执行
+lDk+aY	立即生成视频
+lDwApW	结合当前品牌的监测数据，帮我制定下一步GEO优化计划
+lE9b32	更新中...
+lFVE8l	正在搜索...
+lFnght	个
+lG1t4i	编辑竞品失败
+lGVH3j	邀请链接已过期
+lGt8UV	换一换
+lGv90Q	💬 管理 Prompt
+lIBD3r	分析成功
+lLPWZb	创建
+lLdr8z	只看生效中的邀请
+lMJsMR	移除后将无法访问该团队
+lOh39O	分享人：authUserName
+lOxb9z	当前数据源：platform
+lRUJ3i	订阅暂停中，请先删减资源至套餐上限以内
+lRwoAS	辅助发文
+lS+PY/	团队名称不能为空
+lSSbAn	单独配置（count）
+lThX46	大模型监控
+lTk0Ml	内容不存在，可以到首页看看其他内容哦~
+lVSdcz	· 积分消耗
+lVioqo	近一周 ref_count 次引用
+lWedRj	品牌维度
+lXqdlI	帮我推荐适合当前品牌监测的提问
+lYGfRP	English
+la0iNF	品牌 · 暂无品牌
+lasU6k	编辑品牌头像
+lb+gt/	全屏查看
+lc5YIL	项
+lcGsxi	第1名
+lcuKC+	monitoredModelCount / totalModelCount 个
+ld7rEv	Agent 运行失败，请稍后重试
+ldD7lQ	基建型
+leIcOG	邀请您查看 Answerbit 平台【brandName】的大模型回答记录：
+leYokv	确认移出
+lfHHJf	尚未启用大模型监控，前往配置
+lfl9g8	文章分析
+lg5a4G	DeepSeek · 豆包 · 元宝 · Kimi · 千问
+liRxqC	立即开启天级可见度追踪，5 分钟看到首份品牌定位报告
+lkIoom	竞品数量已达套餐上限
+lo+fDh	AI 推荐提问
+loo3UO	保存并关闭
+lqEHWs	所选接收品牌中该分组的提问与回答记录已删除。
+lrxPeP	更换文件
+lsAZuq	查看所有文章
+ltV4/h	创建文章后，可在这里查看生成、发布和追踪状态。
+lu+QjR	以团队管理员身份管理 · 影响全部品牌权限
+lvbvtb	请输入正确的手机号格式
+lwi+sb	查看更多
+lxYm9v	自动追踪官网
+lyViW2	创建人：creator_name
+lylT6g	平均被引
+m0/7yK	删除竞品失败，请重试
+m1kba/	近 30 天
+m2HucW	升级到 planName
+m2N4E3	无访问权限
+m37/SG	文件夹无法预览
+m3T/YT	《subject》发布失败
+m3rWe7	全部数据源
+m4nV+r	返回顶部
+m6iZLi	创建中...
+m7xWzA	定时检测：highestLabel
+m8fZ/Z	暂无选项
+m9jzsx	前往企点升级
+mBB32L	将各大提问按主题分组，查看分组的提及率、排名和曝光分数的细分表现。
+mBhFHb	请输入口播文本，100 ~ 5000 字…
+mDEQL+	本品牌
+mDenlN	还有 overflowCount 人
+mDsZG0	优秀范文 / 案例参考
+mEGzJZ	加载所有目录失败:
+mEgfEH	正在跳转至套餐详情… 如果跳转失败，请检查在企点的权限是否足够
+mFBI8k	postCount 篇文章
+mFN6PN	近30天增长
+mH3SLN	标题已修改，是否保存更改？
+mInhfV	vs 全局均值
+mJvLoN	查看共享来源
+mKfjE3	发布前提示
+mLJ7IF	共 memberTotal 名团队成员均可查看此 Key 的脱敏信息（完整密钥仅创建时可见一次）
+mMKy0m	查看回答记录
+mNp09f	零值
+mOGR9C	第rank2名
+mOec9V	支付确认
+mOqQC5	确定要删除标签「
+mPKq6/	剩余体验时间
+mPixgn	选择文章已发布的平台，然后填写文章链接
+mSZTKH	1 个提问
+mU3fTb	插入（size）
+mUMyod	分组已更新
+mVKN+0	马来语
+mVM5Kh	countText 次
+mWxOiH	确定要删除竞品\\,[],吗？此操作不可恢复。
+mX3uY4	前往品牌管理
+mZ63V7	删除分组（需团队管理员）
+mZG2wB	当前团队 memberTotal 名成员中，viewerCount 人可查看此 Key
+mZO98g	提问已关闭
+macEcw	强烈推荐
+mb1uo5	新增文章平均被引次数
+mbf++G	竞品（shortId）
+mbpl8t	请稍后重试
+mcuwqG	超过 \u003c0\u003e\u003c1/\u003e\u003c/0\u003e 用户每天使用 AI 回答
+mh3nQj	主题Prompt
+mhhlY5	新配额上限
+mhnIvz	帮助大模型准确识别品牌，提升提及率、排名统计的准确度
+mhv31a	操作内容
+miuOA6	标签已删除
+mkII+U	当前编辑内容还没有保存，退出沉浸模式前建议先保存，避免遗漏本次修改。
+mlqiMg	Excel 表格 (.xlsx)
+mmAZFH	Answerbit GEO — 查看产品介绍PPT
+mnFwxi	已加入
+mp5/zz	未发文
+mpoUaq	选择语言
+mrAG4b	分组已创建
+mrGkmE	分享人：userName2
+mrTVYt	请求过于频繁，请稍后重试
+mryfsu	源码
+mtLKT1	团队\u0026品牌管理
+mua5RN	链接标题过长
+mwMkca	品牌尚未创建，请返回上一步
+mxiF5i	跳过之后可以在「用户提问」创建监控提问。
+mxo6Q3	剩余 days 天，请及时前往企点续费以避免功能中断
+mxrkCL	团队管理员
+myVbcr	创建你的团队
+myx/Vt	截至统计时间点，全量已发布文章的累计总数。
+mzUVAv	店内商品按提及次数排序；占比以当前列表提及合计为分母
+n+LiPf	竞品维度
+n0dGJP	阅读模式
+n0zjaF	图文生成完成
+n1WAbx	团队默认大模型监控配置已更新
+n1czWN	抖音
+n3IPCm	文章生成完成
+n5Qq9z	较上一周期下降 delta 名
+n7rmpu	粘贴邀请链接或输入邀请码
+n7voBl	续费 planName
+n8eHg6	品牌编辑
+n90qZR	rowCount 行 · columnCount 列
+nA3wFX	标记成功
+nA5DzJ	暂无提问数据
+nAE8dw	该商品经商品卡路径流入的曝光次数，与底部「曝光排行」次数含义一致
+nAGlLy	分享失败
+nBepTa	批量actionText成功
+nCSple	例如：产品团队
+nCb0dC	你的文章被 AI 引用的比例
+nFFyu9	追踪效果
+nFVm4Y	保存更改
+nGAWj9	高引用参考
+nGaNSH	操作时间
+nHUS0P	订单已创建
+nHXaX6	打开商品原始链接
+nI7JDf	租户详情
+nJ/USZ	查看来源品牌
+nJJLL3	用户筛选
+nJhY0t	保存后可在内容管理中继续编辑
+nKEBUD	点击 Tab 快速查看不同 AI 模型的回答记录。
+nLwxN0	复制失败，请手动选择订单号复制。
+nMrCga	适合知识分享、教程、长视频内容
+nNVsZF	暂无视频
+nORKJU	开发中
+nP23TF	你当前所在的「团队设置」页，汇总了团队各项配置入口。
+nPqpo3	管理提问
+nQ1bT/	切换模型
+nQ78MV	管理品牌监控提问，追踪各提问在大模型中的曝光与排名表现
+nQec3D	其他品牌商品卡流量占比
+nQwQNK	请输入验证码
+nRf14V	生成邀请链接，邀请成员加入团队
+nS73H8	提问列表
+nSHZiZ	当前分数
+nTBg3k	数据
+nTJdul	剩余 artRemaining 篇
+nY4BKG	点击查看视频发布流程
+naCi7F	父页面未就绪
+nat+Iu	帮助与用户引导
+ncCaFK	无限品牌
+ndcGmq	查看 OpenAPI 文档
+neeCV6	10个品牌
+nelC9v	来源品牌
+nfxzGM	查看其余 count 个品牌权限
+nfyRzl	头像已更新
+ng1s7i	编辑fieldName
+nhC7MC	valuepluralone# 位成员other# 位成员
+nhN0PR	下一步：查看预估
+ninQY1	暂停
+njtKuU	解锁 lockedModelCount 个 AI 引擎
+nk9+BK	该分组尚未共享给任何品牌，请先完成共享后再同步历史数据。
+nlSg/s	重命名
+nmqWA5	引用域名排行榜
+nnN9uP	订单号已复制
+noPBj6	按avgRankLabel排序
+np7YOK	加载失败，点击重试
+nq6bL5	品牌监控
+nsBYRs	点击「新建标签」创建第一个标签
+nsRidk	分析中
+nsl9D0	Testin
+nsszU3	请联系来源品牌的团队管理员取消共享。
+nu0IJM	专业版
+nurPug	点击查看洞察分析
+nxlZ9p	团队头像
+ny0jQK	title2 操作
+nyOEM7	开始您的品牌AI监控之旅
+nzdQ8V	— 持平
+o+Czu1	缩小
+o+Reva	获取提及率排行榜数据失败
+o+c7YA	当前筛选条件下暂无商品流向数据
+o/LXqV	该链接已存在
+o/qFpl	商品追踪配置已更新
+o0DwMO	文件已开始下载
+o0SmNy	所有提问分组流向三类商品卡的流量占比，用于对照当前商品卡在全周期的声量位置
+o0iGOU	联系我们 - GEO 品牌AI监控平台
+o1RMXp	读取文件失败
+o1vffw	请填写导入内容
+o3KaHP	前往团队设置
+o4NZz2	批量删除
+o6xWA9	接收品牌预计新增 recordCount 条回答记录（所选品牌合计）
+o7/JaY	移除 skillLabel
+o7fgv/	领先团队的\u003c0\u003e信赖之选\u003c/0\u003e
+o86CBc	剩余 formattedValue2 积分
+o8Oabk	启用状态
+oAOLv8	搜索素材名称...
+oE4y43	加载文章详情...
+oFAu2A	团队 ID 必须为正数
+oGbEIZ	管理成员
+oH94GG	获取操作记录失败
+oJ5xfW	三
+oJLrfi	触达商品数
+oK9d2d	删除视频
+oKGMO5	专业的 AI 品牌监控平台
+oKbpyh	《articleTitle2》生成失败
+oKjje2	平均排名趋势
+oL46c4	升级套餐
+oL9ZzA	已生成图文
+oM9PBc	定义结构
+oOHcmC	我的
+oPxyGF	积分消耗说明
+oQAHcZ	统计 AI 推荐中的文章引用排行
+oQDpCN	执行中
+oQhAhw	该团队
+oSAEdy	编辑提问、删除提问、手动运行及切换启用状态，均由来源品牌控制。
+oUyiRd	上传失败:
+oVbs9v	获取基础仪表盘数据失败
+oWN6Ev	手动发布
+oWOJrk	曝光次数 ÷ 周期内纳入监控的提问总次数；变化量为周期内首日 → 末日差值，非上一周期环比
+oXbfX/	GEO 诊断
+oZ4gpJ	已取消共享
+odWjDf	优先技术支持
+odutVB	暂时无法生成报告模板，请重试
+ohRiCO	视频发布入口已打开
+ojROtL	请联系以下品牌管理员为你开通访问权限
+olhBmS	有效占比
+olvS6+	推荐渠道
+olwj3N	未读取到有效数据
+omPjxn	粘贴发布链接
+onj2HI	（无内容）
+onl0yW	正在加载...
+onwbNz	我
+opm1nS	多平台大模型实时追踪，让每一次品牌提及都被听见，驱动品牌影响力增长
+oqB86O	标签已创建
+oqNyuI	天级并行采集
+orqzi4	表示品牌在大模型回答中的推荐位置与曝光程度，范围为0-100。分数越高，位置越靠前，推荐更明显。
+os9H3K	您已成功退出登录
+osK/n+	监控中
+osVN5v	内容管理筛选
+otEmq+	次引用
+oteStw	enabled 个平台已启用
+ou0fXJ	填写品牌信息
+ouWXDx	您还没有加入任何团队
+ouwjzB	请联系 brand 的团队管理员取消共享。
+ouxgQR	贡献该商品曝光的店铺分布，选中店铺查看店内商品
+oxY72B	+overflowCount 更多
+oyvvqb	邀请链接已生成
+ozjiQP	以上提问将在「\u003c0\u003ecurrentBrandName\u003c/0\u003e」品牌下创建，请确认后创建
+p0dSPm	请联系你的团队管理员为你开通品牌权限。
+p14jNZ	该值反映近期引用变化趋势，无数据时显示为 --
+p2idQW	请稍后重试。
+p3GRT2	最新
+p4w0Jf	开放所有品牌权限
+p6kURh	在线预览加载失败，请尝试下载文件查看
+p6yjRG	订单刷新失败，已保留最后确认的信息，请稍后重试。
+p72MXl	导出为纯文本 (.txt)
+p9UvJG	列设置已保存
+p9Z4BK	深度思考
+pAp7nn	请先选择需要批量开启或关闭的用户提问
+pB6ALy	触发率
+pBFzU3	监控周期内平均排名趋势
+pBUSSl	用积分扩容
+pDLm4n	个
+pDqfnx	没有可导出的 Markdown 内容
+pEIGku	当前已是最高版本
+pF4T/C	表格视图
+pFAoqj	店铺曝光排行
+pFkufK	错误编号 digest
+pFq3wk	结束日期不能晚于今天。
+pHFB45	成功 successCount 个，失败 failCount 个
+pHwlD7	你在该品牌为只读，如需编辑请联系品牌管理员
+pHzDKN	立即续费
+pJLg4q	URL 必须以 http:// 或 https:// 开头
+pJNWjh	品牌级
+pJYdpx	更新预览
+pJow6Q	套餐能力由周期积分与固定资源上限共同决定。
+pKrfrw	内容由大模型自动生成，可能与真实情况存在偏差，仅供参考
+pMLJwH	高级选项
+pMmSQK	适合热点、资讯、泛内容
+pNGeuF	引用趋势
+pNccPp	暂无品牌访问权限
+pO5RZD	每日定时检测
+pOH8Xj	添加中...
+pP3zFk	删除链接
+pPALfz	图片大小不能超过 2MB
+pPNZzW	跳转到平台发布页面，复制内容到剪切板，发布后回填链接
+pQd43x	前后半段趋势对比
+pRQTEd	点击任意一条回答记录，即可在此查看完整内容
+pSTMra	提问已创建并启用
+pUWIm9	登录失败
+pVEUtv	联系群管理升级
+pVxK/h	使用其他方式登录
+pX3Vn7	授权失败: errorParam
+pXPAhb	核心操作区
+pXb0vZ	上传失败，请稍后重试
+pYHXjx	改日期
+pYcqjB	加入试用团队
+pYxeon	订阅状态、积分消耗与操作记录。
+pZ3qNB	查看报告模板
+pZl4le	重试拉起支付
+pZuNL3	该平台引用次数：refCount
+pa46iz	AI功能
+pbAw6q	成功 successCount 篇，失败 failedCount 篇，请修正后重试失败项
+pd7bC2	创建品牌
+pdNVTp	智能发布功能正在开发中，即将为您提供自动化多平台内容分发能力，帮助您最大化内容曝光与GEO优化效果
+pdbr+F	热度：heat_score
+pe5zQx	加载排行数据失败
+peGtK6	仅团队管理员可以购买套餐。
+peKmda	暂无可查看的对话内容
+phZNTn	暂无引擎数据
+piI7XM	暂无标签，点击创建
+piKylb	引用分析
+pjBYAi	编辑标题
+pjp5ff	itemName · roleLabel
+pl4e59	受你的权限限制，部分品牌已设为最高可授权级别「downgradedLabel」
+pm0FBM	解析文章引用热力图跳转参数失败
+pnEuCG	密码
+pnIv+d	请至少保留一个文章链接
+poDnf7	商品曝光率
+ppTObo	用于在 AI 回答中识别该竞品商品的名称，如 SKU、简称
+pq5Ce7	积分
+pqilvT	PDF 加载失败，请尝试使用在线查看器或下载文件查看
+prI/6y	基于 activeDays 个活跃日
+ptFlgx	搜索热度：heat_score2
+pu0x8w	上一步
+pvMBh4	used / quotaLimitLabel
+pyRuQz	分析需要处理后才能继续
+pzMv0W	暂无
+q+6Eeb	全部大模型
+q/mLur	最新消耗
+q1IFYB	共 totalDisplay 位成员
+q4NbtU	roundValue%
+q4WJDr	什么是 GEO？为什么现在必须关注？
+q5DlOk	创建竞品失败，请稍后重试
+q7jkcc	这里可以对用户提问页面的提问标签进行编辑管理。
+q7rkBp	当日总计
+qA9fs+	暂无匹配成员
+qBE59k	coOccurrenceText 次
+qBIXg2	已清空 selectedPromptIdCount 个用户提问的模型配置
+qBNa1M	团队「teamName2」已成功创建
+qBr6+y	手动指定参考范文
+qD4Zut	分组名称
+qDe1mE	电商渠道
+qDx6jr	确定将「user_name」从该品牌移除吗？移除后将无法访问该品牌数据。
+qEiCkE	团队配置
+qEiOFW	页
+qFxCEn	暂无消耗
+qG+IDD	竞品推荐占比
+qGFrD4	订单历史请求不能为空
+qGNHxN	历史数据保留期已结束，数据清理流程已启动。为保护您的隐私，流程完成后已删除或匿名化的数据将无法恢复。如需保留现有数据，请尽快联系销售。
+qI9Z9z	返回文章追踪
+qILviO	当前条件下暂无文章
+qJPjL1	清空
+qLFRrs	高频出现提问
+qNYkzS	请输入有效的 URL 格式
+qO0lgY	待确认
+qON8el	模型训练
+qOQXO4	删除后，该 Key 将立即失效，所有使用此 Key 的系统与集成请求都会失败。完整密钥此前若未保存，删除后将永远无法再次查看。
+qPK2Cu	预览对照
+qQLIfs	示例：回答5个品牌，您的品牌排第1 ➔ 100分； 未出现 ➔ 0分。
+qQLg7t	平均排名（Brand Mention Ranking）
+qR0f0+	待发布图文
+qRAvtD	文件导入失败:
+qS8oZq	分组已删除
+qTOLzL	请选择发布素材
+qVKi06	📊 查看分析报告
+qVPFvl	可横向拖动以调整左右卡片大小
+qVVx/i	基础信息
+qWoCN9	留言 *
+qX9cqJ	让 TA 在「团队设置 → 成员管理」里给你授权该品牌
+qaFgHq	试用中
+qanPWI	totalSelectedpluralone已选#人other已选#人
+qasu0o	帮助引导
+qb74cH	可选，如自定义显示名
+qbtWrc	请先在文章详情页生成视频或图文后再使用此引导
+qcPVet	进行中
+qcf6U6	敏感肌护肤
+qdpVea	0pluralone# 个用户提问other# 个用户提问
+qfWcAg	确认删除提问
+qgwHgW	导出当前回答
+qiapen	手动发布完成？请关联链接开启追踪
+qk0NHU	成员角色已更新
+qo4T42	Agent 抢鲜开放已结束
+qrTcxl	排序失败
+qtFxKf	关闭菜单
+qtIl8d	其他品牌的权限可在「团队视角」下查看和修改
+quUkVq	当前账号或套餐不支持自动发布
+qunrCq	未生效
+qy+LRA	追问推荐
+r/1shr	正在加载文档...
+r/YMRo	当前品牌还没有文章标签统计结果。
+r/b6Jq	选择日期与接收品牌后，下一步先预估，确认后提交。
+r06phf	已执行
+r1ICuu	版本不存在 | Answerbit
+r1gQad	支付与套餐开通均已完成。
+r1tY0B	读取
+r2A7bw	移除失败
+r2LbHr	主题管理
+r2pBgC	智能平台适配与优化
+r2yfoi	该手机号已注册，请直接登录
+r69QxI	输入域名搜索…
+r6EmR5	智能创作功能正在开发中，即将为您提供AI驱动的内容创作能力，帮助您持续优化GEO指标表现
+r6acDk	搜索
+r6n0oA	文章引用域名排行
+r70b8E	手机号 / 邮箱 / 用户名
+r9CzxH	已加载 loadedCount/totalCount 条
+r9pMXm	新建标签
+rA/Qbq	已从收藏中移除
+rAFCk3	追踪中
+rAI0k3	上一张
+rCtd4F	Answerbit
+rCxe2u	去发布中心
+rDAymA	已存在同名品牌「brandName」（备注：note），继续创建将新增同名品牌，建议通过备注区分。
+rDosbn	文件夹名称不能为空
+rEz6c5	管理控制台
+rEzrEs	更高的监测频率可以获得更及时的数据，但会消耗更多积分。
+rF0wF4	请输入技能名称
+rGxo/G	监控提问数
+rJ+SEN	本店提及 storeTotalText 次
+rJWgpK	图片上传暂未开放
+rKzwRQ	成员管理
+rNW9Us	松开收起面板
+rO3QiH	每日自动并行采集豆包、元宝、DeepSeek、Kimi、千问等主流大模型回答，天级追踪品牌提及率与平均排名。
+rQ19Yb	不可用操作
+rQK1br	粘贴拆分
+rR3D1g	只读
+rRKgvC	首页筛选
+rRNWGq	关闭预览
+rRrztl	移动到
+rT6qRC	勾选的用户提问 (promptCount)
+rUoY4G	查看并配置该提问监控的大模型平台。
+rUroMw	个标签
+rXPllo	Word 预览失败:
+rZPMzy	单位：unit
+rb4GIW	品牌备注
+rbFBIW	导入失败
+rbQb41	字体请求失败 (status)
+rbon61	查看成员管理
+rcP0ax	迁移
+rdYXOJ	当前团队 memberTotal 名成员均可查看此 Key 的脱敏列表条目
+rdnGKE	未命名视频
+rgnYbK	优化并验证效果
+rhFWqo	请先选择需要删除的提问或分组
+riWVSk	积分不足
+risWlj	注：实际扣减以后端配置为准
+rk2mtg	导入 Excel
+rlXJaA	权限级别
+rm7m8B	年付
+roSKQK	没有可导出的文章内容
+rpJsqZ	文档大纲
+rpOYeN	文章生命周期
+rqsk9A	初始版本
+rs/J9i	洁面乳
+rsVoHF	新增内容追踪
+rsn8oQ	复制描述
+rteLpI	开启后自动收录官网网页，监测网页被大模型引用效果
+ru+bu7	显示全部项
+rvQpZO	valuepluralone# 次other# 次
+rxMdBT	请求配置错误
+rxSSWP	对比前dateRangeDays天
+ry8GT+	没有符合筛选条件的记录
+rymnqz	添加内容
+s+Z/wO	套餐权益已更新，支付确认成功。
+s/3JC1	松开以上传文件
+s/u0Cy	基于品牌特性与内容领域，智能选择最佳发布平台，并自动调整内容格式以适配不同平台特性
+s1bcmW	可管理成员与邀请
+s1zCLL	未找到可追踪的文章链接
+s22azF	创建文章
+s27YDb	已取消该分组下 enabledCount 个提问的启用状态
+s2Gwg5	全屏预览
+s49ysH	用户提问
+s50oEu	新品牌的数据正在生成中，通常需要5-10分钟。请稍后刷新查看数据。
+s58f9g	创建工作空间与品牌，添加竞品和代表品类的追踪提问，划定 GEO 观测边界。
+s6DgBI	提交中...
+s6dJ8g	天级自动采集更新
+s6rTPI	全部分组
+s82v12	请在下方进行视频生成
+s93JvL	暂无文章
+s9NikX	暂无操作记录
+s9UJBj	进入文章分析
+s9y0Sl	操作人
+sBaU+n	排名数值越小越靠前，1 为最佳。
+sBjz/a	全部提问 · promptCount
+sD4D8V	品牌用量概览
+sD5th0	编辑主题
+sFBbN7	引用排序
+sHTlmT	搜索事件、操作人
+sIYs7R	筛选此域名
+sIZtJ8	请求内容过大，请减少数据量
+sKmHJS	商品 GEO 数据加载失败，请稍后重试
+sLThum	联系 GEO 团队，获取专业的品牌AI监控服务支持
+sLkbZn	选好文章结构 / 风格，补充参考范文，AI 将根据配置生成高质量文章
+sLmVLH	请选择视频开始播放
+sN61Db	搜索页面、模块、功能...
+sN6CDH	移除品牌授权失败
+sNhxRK	分析该商品表现
+sO18Yr	回答记录列表
+sPci0S	minutes分钟前
+sQ7Je4	品牌信息加载失败，请检查网络后重试。
+sTIITX	暂无标签，输入名称快速创建
+sTfUds	密码长度不能少于 6 位
+sUcbbu	暂无可解除的发布链接
+sW1sA7	score分
+sWPSMA	服务不可用，请稍后重试
+sWbBu+	团队管理权限
+sWtS2l	未获取到团队订阅信息。
+sWxpgJ	积分用量趋势图
+sXXptW	正在打开追踪效果
+sYholl	暂无模型标签
+sZGgyi	额度即将用完
+sZkRu4	创建提问后，GEO 会持续追踪它们在各大模型中的曝光与排名。创建页可一次添加多条提问。
+saOML1	模型对比
+sb3tso	需要团队管理员权限才能管理跨品牌共享
+sd/VxH	消耗规则
+sdlPyl	暂无回答内容
+se5gAE	本周期积分消耗
+sevcs+	预计消耗 required 积分，当前可用 remaining 积分
+sgaIOj	全屏
+sgxkDl	批量添加失败
+sh8Kzp	已创建 nameCount 个标签
+shYXdF	已存在同名品牌「brandName2」（无备注），继续创建将新增同名品牌，建议通过备注区分。
+siI9oj	当前生效
+sjXg2o	父节点不存在
+skqhDt	邀请成员
+sktxlh	套餐开通异常
+sn+Y23	曝光分数: score/100
+snG6Jf	搜索页面、功能...
+snf378	提问：query
+snmb00	选择目标目录（已选择
+swTudS	支持一键自动发布
+sxXeeY	扫码填写意向，我们的顾问将尽快与您联系并安排产品演示。
+sxqXoA	请选择品牌语言
+syoDhN	此 Key 仅显示一次。关闭后将无法再次查看完整内容，请立即复制并妥善保管。
+t+JkA7	积分不足（约需 formattedValue，剩余 formattedValue2）
+t+u9of	该分享链接关联品牌「sharedBrandName」，您当前没有该品牌的访问权限。请联系品牌管理员获取权限，或切换到对应团队后重试。
+t/1Jgv	姓名至少需要2个字符
+t/JmBC	成功 successCount 条，失败 failCount 条errorSuffix
+t/QM3/	切换到 languageName
+t/lQjB	文件不能为空且大小不能超过 100 MB
+t2w8rC	不看某人
+t31+hU	排行数据加载失败，请稍后重试
+t3LAdA	未选择有效提问，请关闭后重新选择。
+t3seQ+	提问分组占比
+t3y9Bl	大模型平台
+t4H2CX	升级解锁 lockedCount 个引擎
+t5JJx+	图片
+t69qwh	管理新增内容追踪
+t6jQT6	校验
+t7cMz9	选择素材后，AI 会自动参考其中的内容来生成更贴合品牌的文章
+t7lBPt	请求超时，请重试
+t9jgmu	计量中心
+t9v6Ks	快速模式
+tCn528	前往模型配置启用
+tDqEHU	返回计量中心
+tEMpk0	支付信息
+tENprN	分享链接已复制到剪贴板
+tGxdbR	删除
+tMI5aB	生成品牌 GEO 报告
+tN/hPr	Answerbit GEO 已暂停采集新数据，历史数据完整保留，部分操作功能禁用，点击右侧加群联系管理员处理
+tN9N9m	文章在各平台每日被 AI 模型引用的次数
+tNGs4b	对比
+tQYK1S	删除官网
+tQYzHO	批量创建完成
+tTCfJF	触发
+tTE97+	额度已用完
+tTdNd6	查看上一组套餐
+tU+H8N	管理监控中的用户提问列表和分组。
+tVuP2s	无法发送
+tWJh6q	brandName 上榜商品数占 AI 推荐榜单全部商品个数的比例
+tZLeVW	预计消耗 ✧ min ~ max
+tdIDy6	品牌级 Key 至少选择一个品牌
+tdxdte	此文章为官网文章。
+teLtX6	无法自动获取该品牌最早数据日期，请手动选择日期范围。
+tftMgp	将取消对 targetBrandCount 个接收品牌的共享，并永久删除该分组在接收品牌侧的提问与回答记录，无法恢复。
+tgKp/a	编辑
+tgesFM	没有匹配的标签
+tggEK1	仅内部展示，不参与模型识别
+thRNey	更新留存事项
+thSit+	关联提问
+ti0ZSX	适合知识、技术、深度内容
+ti8a0K	定制报价
+tj+SjW	200个Prompt
+tjOd49	Answerbit 博客 - 分享 AI 时代的品牌发声经验与洞察
+tja6s3	months个月前
+tjeSok	可以尝试切换品牌、清空标签筛选，或扩大统计周期后重新查看。
+tkod6y	无匹配标签
+tl8uKo	AI 回答与引用分析
+tmEkEk	第toFixed名
+tmFpvG	模型维度
+tpn1gE	每月重置，剩余不结转
+tpxxb0	metaLabel currentLimit→nextLimitunitSuffix
+tq88ax	该分组已对外共享。删除后，接收品牌中对应的提问及全部大模型回答记录将一并永久删除且无法恢复。\\n若仅需停止共享，请在「共享设置」中收回；若仅需移动部分提问，请使用「迁移至其他分组」。
+tqHUNM	引用上升
+tqPOQ8	品牌提及率 exposure%
+tqc8+b	帮我分析当前品牌的官网SEO表现，并提出优化建议
+trH84r	更新成员权限失败
+trnCU5	请调整标签筛选后再查看。
+tsPKDk	diffDays 周前
+tsQgJ+	在这里可以切换热力图或折线图展示，分别用于对比模型表现和查看连续趋势。
+tuuwTv	导入后将持续追踪文章在各平台的曝光与引用效果
+twhCv3	体验期间使用 Agent 不扣减套餐积分。
+txODIz	最新版本
+txY/ox	暂无排名数据
+tyKX6w	查看品牌详细信息和监控数据
+u1IaHi	沉浸模式
+u1UPK/	图文生成
+u2Cw4M	下载视频/图文
+u3ljw9	选择导出范围
+u4CDKC	共引用
+u6F/Cm	30天
+u6Hp4N	Markdown
+u7jzyK	获取成员权限失败
+u7l9d+	采集多模型回答
+u8OMPE	常见问题
+u8Q8VO	发送中...
+uCGqr/	待发布视频
+uCk79Q	六
+uE/xqX	关闭
+uEX6gK	扫码登记产品意向
+uEm4GJ	导出 Excel
+uEqB33	| 创建人 | creator |
+uGe1B2	若只需停止某一品牌，请在列表中使用「收回」。
+uKNehv	用于在 AI 回答中识别本品牌商品的名称，如 SKU、简称
+uO8Ak6	平均得分：
+uOFp5U	升级套餐解锁
+uOVLeK	成员数
+uQ1hPC	仅支持 .md 和 .docx 文件
+uQL6ke	例如：\\n一、结论摘要\\n二、核心指标：用表格列出指标、当前值与变化\\n三、趋势与发现\\n四、行动建议
+uRPiEn	暂无已启用模型
+uRZjCE	开始使用
+uRc5O2	对比上周期排名下降 deltaMagnitude 位
+uRiguF	选择发布方式
+uSQuSo	迁移失败
+uTAu0R	体育赛事
+uU4KOP	品牌在 AI 回答里没被推荐，就等于在决策链上缺席
+uVSYRB	你有 unreadCount 条未读通知
+uWfJqN	共 processedDataCount 个模型
+uYMpIO	支持 join
+uYY/Ig	billingAmountpluralone# 天other# 天
+uaNQ/f	团队成员
+uasxy9	当前模型未启用，可能没有回答记录
+uc8Ibi	创建于 createdAt
+ucRt/Q	大模型回答内容
+ugGrjR	分享原因：shareReason
+ugKzgM	商品曝光
+ugPUKM	全量已发布文章中，被引用过的文章数 / 总发文数。
+ugpBxt	泰语
+uh6Duv	周
+uhqTpa	价格区间占比
+uiaglL	请选择有效的日期范围。
+ujIwq2	显示 maxItems 项
+ujxI1n	葡萄牙语（巴西）
+umrtuL	成员、品牌席位购买
+uoDfKN	打开 Answerbit agent
+uois+k	管理团队成员角色与品牌权限，邀请新成员加入。
+up0iSR	等待确认
+upQIWf	提供每日优化建议和深度数据分析，帮助品牌持续提升在大模型中的曝光和影响力。
+upY0BG	搜索商品
+uq7LET	视频的标题和描述可以在此复制，发布到外部平台时直接粘贴使用。
+uqUCnr	将选中轮次生成可预览的长截图
+uqvtM/	提问内容
+ur4mAV	AnswerBit 和腾讯企点营销云是什么关系？
+uuwaMN	已共享给 succeededCount 个品牌
+uv1ZPG	支付确认时间为系统首次确认时间。
+uvDH+F	平均得分
+uvXX7H	报告模板已保存
+uxmGvk	请先选择这些提问的处理方式
+uyOL7G	文章详情
+uzgCGZ	多品牌
+v+DZec	GEO 文章
+v+XwJZ	接口未返回店内商品明细（products），暂无法展开
+v+euC7	市场研究与营销管理中心总监
+v+vGpq	只看brandName
+v/88mP	视频/图文发布
+v/GdCH	官网 SEO 分析
+v1a9j/	AI 视频生成
+v2QnqC	分组内共收录indexedText商品，当前品牌ownText个商品曝光exposureText次
+v3D1DZ	品牌角色已更新
+v3Hl7I	已更新
+v4L8N7	暂无 API Key
+v6FJm2	导出
+v7sXpf	文件夹路径
+v9aND/	暂无引用数据，追踪文章后可查看
+v9ls3g	文案已复制到粘贴板
+v9mNO8	我的引用次数
+vBWw7c	重新选择套餐
+vBqUGF	订阅已取消
+vCZaaK	加载失败，重试
+vFl6Py	点击编辑
+vHZOpo	多维度分析品牌曝光趋势和排名变化。
+vLrzn3	邀请成员加入团队，一起协作管理品牌数据
+vMjx4j	暂无趋势数据
+vNQ4GX	并行覆盖 ChatGPT、Google AI Mode、Perplexity、Gemini 等主流大模型，持续扩展
+vNd7q/	基础分析
+vOMP9O	成功创建 fulfilledCount2 篇，失败 rejectedCount2 篇，系统正在生成中
+vOuSHp	品牌数已满，点击用积分扩容
+vRuasu	分组趋势视图
+vTrEM9	腾讯\\联盟产品
+vTyXAU	billingAmountpluralone# 个月other# 个月
+vU9o7P	推荐
+vVfIf2	支持 PNG / JPG / GIF / WebP，不超过 2MB
+vW/cO6	次
+vWXB6T	可调用读接口与写接口；仅用于品牌级 Key
+vZO+ZW	生成长截图
+vZSZNi	请上传 .xlsx 或 .csv 文件
+vbDG3k	适合技术、前端、后端开发内容
+vbwZqt	生成完的视频可以点此下载，保存到本地后前往外部平台发布。
+vbwx5m	请输入文件夹名称
+vc4Z2C	发送验证码
+vcT5tE	还没有添加监控提问，进入控制台后可在「用户提问」中补充。
+vccZSq	生成图文
+vckW8v	品牌权限 (brandAccessItemCount)
+vh+QwA	完整内容
+vhdw/6	体验已结束
+vhdwqT	全选全部分组
+vjPBnH	回答引用域名
+vkNAuH	请检查并修正所有链接格式
+vmA3v+	筛选此提问的所有回答
+vmmIS3	折线图
+vn8vIw	修改成员权限
+vpNopS	暂无可用预览
+vpXI8F	确定要删除技能「skillLabel」吗？
+vpfION	提及次数: exposureCnt
+vqhDGZ	exposureScore分
+vrVE/v	支持最高 highestLabel
+vrvlDg	查看提及率、平均排名与引用来源，定位竞品优势与高引用内容机会。
+vsFvBs	删除模型失败
+vv1Qn8	一键复制文案
+vwLW+J	未知
+vwRoHL	记录
+vwoP3F	清除日期
+vxm6pv	selectedPromptCount2/totalCount 条提问
+vxs7YA	支付确认时间
+vzYyEL	我的引用占比
+w/KmbJ	查看全部 inviteCount 条
+w0FFd/	提及占比：该商品在本店被 AI 提及的次数，占本店全部商品提及次数的比例。与底部「曝光排行」的提及率含义不同
+w1+Izz	brandName大模型监控
+w1PkTB	点击跳转到文章
+w2XYwH	 selectedGroupCount 个空分组
+w3lfhP	即将导入 filledBlockCount 篇文章（共 validLinkCount 个链接）并开始追踪，确认继续？
+w4UloV	查看品牌概览
+w5nNgv	全部接收品牌中该分组的提问与回答记录已删除。
+w6uCsb	点击\\即可在平台发起 AI 文章生成，提供 AI 生成、导入本地文章和导入已发布文章三种方式。文章生成后可继续发布和追踪，平台会全链路查看文章发布后的 AI 引用效果。
+w7fNJ6	邀请已在列表中生效；企点父页面就绪后可重试获取分享链接
+w8zpa6	退出沉浸模式
+w9b4Vg	GEO Agent 暂不可用
+wAFN8b	每篇文章可填写多个发布链接，或通过 Excel 批量导入后确认提交。
+wARwnl	数字为当前周期平均排名。
+wAZR80	当前积分不足，请前往企点升级套餐后再扩容。
+wCSQOc	Key ID
+wG0DjG	在上方插入行
+wGdUCY	我的发文占比
+wGutpk	进入沉浸模式
+wH8IEw	全部平台
+wH95XX	提问未启用，无法执行
+wIlM0C	关于我们 - GEO 品牌AI监控平台
+wJWTzY	本页目录
+wLQs95	较首日 signdelta unit
+wLxN9o	当前团队套餐未开通 OpenAPI 能力。升级套餐后即可创建与管理 API Key，供外部系统调用平台接口。
+wMWzv/	其他品牌商品卡
+wNOZM/	回答记录
+wQQcIf	选择目标分组
+wRGaBW	经回答内不含商品卡路径仍触达的商品个数；若无下游商品则为 0 或 —。无商品时以纯文本提问次数计
+wT2Mpa	分享内容加载失败
+wVm/Xb	查看下一组套餐
+wXW/y+	已有文章链接？直接关联 \u003e
+wboOsA	搜索页面导航、数据模块、快捷操作、GEO Agent，以及提问、文章和品牌
+wdTqgU	部分未创建
+wfs013	在所有模型回答中，提到目标品牌的占比。示例：10条回答中有3条提及品牌 → 提及率30%。
+wfx87L	热度较高
+wgzAG+	该商品被提及时的平均推荐位次，数值越小越靠前；变化量为周期内首日 → 末日差值
+whQqT8	跳过此页面
+wi5/Hk	更新：lastUpdated
+wiBn0l	共 total 条
+wj+8WI	文件为空或无法解析
+wknOp8	选择商品
+wkyYBG	AI 搜索优劣势
+wlwdRb	发布状态实时监控
+wn/mek	支持发布视频，点击打开抖音创作者后台
+wo+PdZ	brandName小棕瓶精华
+woLolD	搜索中…
+wp6hBt	pendingInviteCount 个待接受邀请 · 管理成员权限与邀请链接
+wq6V+7	competitorName 数据总览
+wrZjZj	未命名图文
+ws8/3m	请输入账号和密码
+wsZrcK	天级自动采集各平台回答，Track → Analyze → Optimize 形成完整闭环
+wtYZm1	业务处理失败
+wurCOp	链接 linkNumber
+wv5mv1	brandName当前跟随团队配置。点「brandName单独配置」可改为品牌自己的配置。
+wvRnML	按竞品品牌对比趋势与排名
+wvhd44	未找到可截图的对话内容，请滚动列表后重试
+wxA2GQ	选择报告模板
+wxf0iw	大模型回答记录 - GEO Dashboard
+wyExte	min元
+wyxePf	全周期内，未出现商品卡仍触达商品的路径流量，占全部商品卡路径流量的比例
+wzcfWK	关闭提醒
+x++ndr	已解除关联
+x+zAXP	确定要删除标签「tag_name」吗？该标签已被 prompt_count 个用户提问关联，删除后将自动解除关联。此操作不可撤销。
+x26wW9	次
+x337Dh	配置需要监测的 AI 大模型平台与监测频率。
+x3CCRN	输入内容不能超过 20,000 个字符
+x4Jb3B	正在获取网站图标...
+x7/aFy	适合深度文章、品牌宣传内容
+x84i20	文件
+x8KGxZ	素材已删除
+x9A/Ha	该提问由来源品牌「brand」维护，无法编辑、删除或手动运行。如需停止接收，请联系该品牌团队管理员取消共享。
+x9bBL4	静音
+xAhbYY	competitorCount 个
+xIJqQR	页面筛选
+xIQhGQ	所在公司
+xJCtb4	删除列
+xKIggn	导出成功
+xLz7N+	复制链接
+xMHYmN	缺少品牌ID或文章ID，无法上传图片
+xNhSmi	Agent 限时体验已结束
+xPyVXg	长截图已复制到剪贴板
+xRH8v/	行业报告 / 市场分析
+xVg4n7	已生成视频
+xVxnX8	GEO 视频
+xWA+QK	搜索竞品...
+xWBeSb	文章标题
+xWGHrd	辅助发布
+xWdxEn	检查失败，请稍后重试或联系管理员确认资源状态。
+xZkuYq	欢迎回来
+xayKNE	多品牌配置
+xbs2D9	文档
+xbzXPv	关联文章链接
+xcLH/e	文章\\,[],已保存到平台
+xdLhFv	共total条
+xdfC0B	加入 Answerbit
+xdtWfo	竞品对比
+xdvJzq	当前文章：
+xf5qOw	查看记录
+xfYuRd	会话附件已过期，请重新上传
+xgsXFT	返回主导航
+xh5RuD	趋势
+xhgz7Z	点击跳转到范文
+xi5/0y	点击查看该日回答记录
+xiI+Bk	管理员
+xjMAud	生成记录
+xjYmJ9	有疑问？
+xkdK4x	正在加载图片...
+xlcz7R	请选择要迁移至的主题
+xoB8ZT	所选接收品牌中的提问与回答记录已保留，现由接收品牌管理。
+xojA2R	来源分组
+xpxFK3	最小化
+xqa+zr	周期内与该商品曝光相关的店铺，按曝光占比降序
+xqo5T2	启用
+xrV80y	提问额度已达套餐上限，升级套餐后可继续添加
+xs8+rB	保存报告模板失败
+xtUUyE	GEO 内容优化引擎
+xvBjCb	可用积分
+xvpRqH	加载分组数据失败，请稍后重试
+xxpxVI	上榜商品数占比
+xzReRR	暂无曝光次数，无法计算占比
+y+2QpV	素材库暂无文件，请先前往素材库上传品牌资料
+y+7is1	Markdown 预览失败:
+y/YAun	加入Answerbit GEO讨论群
+y/nReK	| 来源 | source |
+y1DfT5	如需开通或访问 Answerbit，请查阅 \u003c0\u003e腾讯云 Answerbit 产品文档\u003c/0\u003e，了解购买与接入指引。
+y1IFGJ	自定义
+y1KJgP	输入关键词即可快速跳转到任意页面或模块。
+y1pww9	个优化提问
+y2biHu	引发该商品曝光的高频用户提问
+y3LXG+	展示与该店铺相关的高频提问；提及次数为该提问下店铺被 AI 提及的次数
+y3t/2e	审计日志
+y52q1q	确定要删除视频\\,[],吗？删除后不可恢复。
+y53zOH	不支持预览此文件类型
+y90mqQ	SKU
+yBALFe	全品牌管理
+yBVx6t	视频时长
+yCN3xr	请选择或输入一篇参考文章
+yCxj+/	提问已创建，暂未启用
+yDTbpl	商品追踪
+yDrE3Y	查看参考正文
+yERY42	brandName当前单独配置大模型监控，不跟随团队。想放弃单独设置，重新跟随团队，点右上「恢复团队默认」。
+yFUB80	长截图生成失败
+yFzc9v	发送
+yIl6Cs	抗老护肤
+yIpC6s	路径曝光次数
+yIs0M9	登录
+yK6CJL	填写链接后计算
+yKaw9G	当前周期暂无曝光率时序数据
+yKunak	已完成思考
+yLhcwp	曝光分数范围
+yNgVaI	解析成功
+yO/uDL	预览加载超时，请尝试下载文件查看
+yOaaWk	ChatGPT
+yP73lV	个人时区已更新
+yPNyQr	抢鲜体验
+yQd6fT	不限
+yRBFft	如何获得授权
+yROMfF	个人时区
+yRnk5W	API Key
+ySBTUF	新建主题
+yT7/Ln	本次约消耗 formattedValue3 积分，剩余 formattedValue4
+yTxgri	功能开发中
+yV/RpB	文章导出
+yVORoB	基于用户选择的高引用文章，按照相同的框架生成一篇结构风格一致的全新文章
+yWjQDi	退出团队
+yX9MHd	确定要删除报告模板「templateName」吗？
+yYC8/p	已成功迁移 selectedIdCount 个用户提问
+yabUL8	删除邀请失败
+ycFNq1	使用本页团队配置；这里修改后自动同步
+ycYTVM	商品GEO
+ycho8d	暂无高引用范文数据
+yeH+N2	更多操作
+yf0FnQ	悬停可查看帮助文档，或选择页面重新开始用户引导。
+yflLD4	用 GEO Agent 搜索「trimmedSearchQuery」
+ygQkqn	填写团队信息，邀请成员共同协作
+yiJCqz	触发率趋势
+yl0Syq	查看详情
+ylyesA	停止中
+ymns2n	操作记录筛选
+ymt0ja	最高 highestLabel
+ymtiKX	平台内备注(例:腾讯地图To-B)，自定义名称，不参与模型识别
+ynSM0m	印尼语
+ynyAcZ	批量插入
+yodZRV	添加竞品失败，请重试
+ypd3OW	总消耗
+yqQYCR	趋势与排行
+yqYRE7	图片加载失败，请检查文件是否损坏或尝试下载查看
+yqhZUz	关联已发布文章
+yqr+ow	暂无品牌权限
+ytQF7j	更新商品卡开关失败
+yuY9YM	仅可选择本次新增的接收品牌；此前已共享的品牌请单独发起同步。
+yuuLXX	被引率
+yuwP4J	最近 7 天内发布
+yvwXFr	执行
+ywMT2u	移除引用
+yxKsxv	年付一次性发放
+yxLcxk	参考文章标题
+yy/r7/	你没有该工作空间的访问权限，已为你切换至默认工作空间「firstTeamName」
+yz47zA	暂无推荐渠道
+yzWVie	退出编辑
+z/Hc51	语言列表加载失败，点击重试
+z00+eJ	其他补充...
+z6ILgu	单品牌最高负责人，内容全量管理、成员权限分配、品牌配置
+z6Z+UJ	腾讯企点营销云
+z9qT/C	竞品：competitorCount个
+zA4yLk	用户提问执行任务创建失败
+zAT5QG	支持小红书、知乎、微博、CSDN等主流社交媒体平台，实现一键多平台同步发布，提升内容分发效率
+zB03s0	品牌权限
+zDtogo	生成记录(
+zDwF/r	加载详情失败：message
+zGLANs	共享来源
+zI+KJ/	最大使用次数
+zIEs7l	官网与追踪
+zJAv4Y	报告模板文件不能超过 2MB
+zJmBFw	未命名品牌
+zKJ3Uh	生成流程
+zO7Ysu	添加监控问题
+zOPyD4	不再提示
+zPfcWb	暂无已授权成员
+zPkiWt	搜索语言
+zRHp8u	brandCount 个品牌
+zSqut4	输入后按 Enter 添加
+zVXt/o	维护用于品牌分析和对比的竞品信息
+zVjUbf	挑选你想持续监测的提问，也可以先跳过，稍后再添加。
+zWdgUm	商品识别关键词已更新
+zXnwQr	文件夹名称
+zZqNCd	移除成员失败
+zd9E5n	新对话
+zeLFsT	Agent 面向标准版和专业版开放。当前 planName 处于限时体验。
+zfBqv2	 groupCount 个分组
+zjc2xi	搜索失败，请重试
+zlC/H5	还有 count 个发布平台
+zlIdoj	浅色
+zlkpEN	经本品牌商品卡流向的商品，按曝光次数降序；占比以该路径曝光合计为分母
+zmqbMU	已选分组
+zqpa4i	韩语
+zrz0iB	没有匹配的分组
+zsoP6s	管理分组
+ztcBdc	执行用户提问
+zueKMz	展开全文
+zuktz5	预计处理来源品牌 sourceCount 条回答
+zuzsNN	返回套餐列表
+zvy4g4	深色
+zyou2K	（n 个）
+zz9KEy	暂无邀请链接

@@ -1,0 +1,211 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门旅游必备APP推荐"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548164,
+  "id": "resp_021792548163161588022a43ae333bc02487ccce5f6a1288be3ab",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254816493500000000000000000000ffffac155ef3707811",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer in Chinese,\n\nWeb search will be used to confirm the latest information about essential Macau travel apps, and categorized recommendations for these apps have already been sorted out.\n\nMore categories of essential Macau travel apps have been supplemented, covering maps, light rail, cultural heritage, official government services, tourism authority booking and food delivery platforms.\n\nI have supplemented more categories of essential Macau travel apps, covering translation, weather, border entry and exit, currency, eSIM, free WiFi, parking, ferry ticket booking and bus inquiry functions. Next, I will search for 2026 relevant apps to verify their current validity. Parallel search will be carried out."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "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"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門旅遊 必備 app 巴士報站 電召 的士 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254819424000000000000000000000ffffac155ef3b3c8e2"
+   },
+   {
+    "id": "rs_02179254819641200000000000000000000ffffac155ef3bdca76",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Search result confirms \"澳門出行\" DSAT app. Search for more official travel apps."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djF4jAxJGpo94ebFN+CjcEef63xspiS2GPDqQxx96UDg1+gesEN0RSFzlu5pse/ki86UsGp6V/ih052QVpKua/p+g1PjtnE0iW85B4uAYyCpZunIgbQKpZuGPP3qA9WKdc9slkK4F832mLCVPU5bPS2k/zpefLr9RJHRhnpVAJ18+3dmyirRI8pYbQY+Z6KBqpYfZBSWs1won5DceUyRf5zybPo="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門 官方旅遊 app Experience Macao 感受澳門 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254819853900000000000000000000ffffac155ef3639ee5"
+   },
+   {
+    "id": "rs_02179254820161500000000000000000000ffffac155ef3fb2936",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need perhaps \"澳門出行\" combines bus/taxi/walk. Separate bus app, search payment info."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEw4HcTQAV/peGB7X1GtkB3eWttpGFz0sF19OoAc6RP2euB0uLmJ28htW+fbn0hL5orv4fGbO/xGJ4+jRRbUj3oGICawXxEZjQvQ/cx6zFVV/iXniOuYBRIBrbpAoOw14rLrwQpfsVhKvQ7qHRBBZIrgYeWFAri8DL2nZiIlKDFygXg93DwQ0GN/iWWvQgcj9MRQkqm"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門 旅客 支付 交通工具 app MPay 支付寶 微信 2026 巴士",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254820566000000000000000000000ffffac155ef3cd3efd"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "## 澳门旅游必装 APP 推荐（2026年10月版）\n\n### 🥇 首推必装（3个）\n\n1. **Experience Macao 感受澳门**（澳门旅游局官方）\n   - 景点、餐厅、酒店、购物、节庆活动一站式查询\n   - 有**人流热力图、AI客服、步行路线、离线地图**\n   - 支持简体/繁体中文、英文、葡文\n   - iOS / Android 均可下载\n\n2. **澳门出行**（交通事务局官方）\n   - 查巴士实时位置、路线、的士信息和步行路线\n   - 整合酒店、餐饮、景点信息\n   - 在澳门坐公交、规划路线非常实用\n\n3. **巴士报站**\n   - 澳门巴士实时到站查询\n   - 适合每天频繁坐公交的旅客\n   - 班次、到站时间比普通地图更准\n\n---\n\n### 💳 支付与交通\n\n4. **支付宝 / 微信支付**\n   - 澳门多数商铺、餐厅、超市、便利店都支持\n   - 2026年起，内地版微信支付、支付宝可直接刷澳门巴士，还支持“同行码”代最多2人付车费\n   - 巴士票价每人每程 **6澳门元**，无换乘优惠\n\n5. **MPay 澳门通**\n   - 澳门本地电子钱包，可乘巴士、便利店和商户消费\n   - 想体验本地支付方式可以装；短期游客用支付宝/微信通常已足够\n\n6. **澳门电召 / 电召PLUS**\n   - 澳门电召的士叫车平台\n   - 高峰期、雨天、从酒店或口岸出发时更好用\n   - 普通黑的也可路边拦，但电召更适合语言不熟或需要预约\n\n---\n\n### 🗺️ 地图与导航\n\n7. **Google Maps**\n   - 澳门步行、公交、餐厅评分整体最好用\n   - 搜赌场酒店、景点、口岸路线都方便\n\n8. **高德地图 / 百度地图**\n   - 内地用户使用习惯更友好\n   - 适合查步行、口岸接驳、周边餐饮\n   - 建议和 Google Maps 交叉参考\n\n---\n\n### 🌦️ 天气与过关\n\n9. **澳门气象局 SMG**\n   - 查天气、台风、暴雨、温度、湿度\n   - 澳门夏秋多台风，出发前和当天早上建议看一眼\n\n10. **口岸实时信息网页（可不装APP）**\n   - 治安警察局“出入境事务站实时资讯平台”：查看各口岸排队情况\n   - 适合走拱北、横琴、港珠澳大桥口岸时参考\n\n---\n\n### 🛳️ 跨城/船票/门票\n\n11. **携程 Trip.com / Klook / KKday**\n   - 订酒店、门票、表演、船票、自助餐、观光塔等\n   - Klook 常适合买澳门塔、演出、自助餐、特色体验票\n\n12. **喷射飞航 TurboJET / 金光渡轮 Cotai Water Jet**\n   - 来往澳门—香港、澳门—深圳等地船票可查询或购票\n   - 节假日建议提前订票\n\n13. **港珠澳大桥穿梭巴士相关小程序**\n   - 坐“金巴”往返香港、珠海、澳门时可查班次和购票\n   - 通常用官方微信小程序即可，不一定要装 APP\n\n---\n\n### 🍜 找美食\n\n14. **OpenRice**\n   - 港澳地区常用餐饮平台\n   - 适合找本地餐厅、茶楼、葡国菜、咖啡室\n\n15. **大众点评 / 小红书**\n   - 找热门店、打卡点、避坑攻略很方便\n   - 但网红店排队久，建议结合 Google Maps 评分和现场情况\n\n---\n\n### ✅ 最省心组合\n\n如果不想装太多，建议只装这 **6 个**：\n\n- **感受澳门**：官方旅游信息\n- **澳门出行**：公交/步行/的士路线\n- **巴士报站**：实时巴士到站\n- **支付宝或微信支付**：消费、坐巴士\n- **Google Maps 或高德地图**：导航\n- **Klook/携程**：门票酒店和体验项目\n\n💡小提示：澳门半岛老城区街巷窄、坡路多，很多景点适合步行；赌场酒店之间常有免费接驳车，但具体班次可能随酒店政策调整，出发当天最好再确认。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳门出行 - 澳门特别行政区政府旅游局",
+        "url": "https://www.macaotourism.gov.mo/zh-hant/events/whatson/13934/",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026-10-01T00:00:00+08:00",
+        "summary": "月份：2026/10\n澳門出行\n其他\n助您輕鬆探索澳門！由交通事務局推出的手機應用程式，提供查詢巴士（包括實時位置）、的士和步行等出行方式，協助使用者獲取酒店、餐飲和觀光景點的資訊，輕鬆暢遊澳門。\n查詢電話｜(853) 8866 6363\nEmail｜info@dsat.gov.mo\n主辦機構｜交通事務局\n相片提供：旅遊局、政府總部事務局、金沙中國有限公司、文化局、澳門巴黎人、美高梅、澳門旅遊塔、體育局、澳門城區發展促進會、金光渡輪有限公司、澳門佛教總會、澳門廠商聯合會、路道（亞洲）貿易科技發展有限公司、MACCREW、澳門明愛、澳娛綜合度假股份有限公司、澳門星娛樂製作有限公司、招商投資促進局、握緊希望計劃、張金加、新濠影滙、新濠天地\n備註：活動內容可能有所更改，請向主辦單位查詢。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门出行 - 澳门特别行政区政府旅游局",
+        "url": "https://www.macaotourism.gov.mo/zh-hant/events/whatson/13275/?month=202606",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026-06-01T00:00:00+08:00",
+        "summary": "月份：2026/6\n澳門出行\n已結束\n其他\n助您輕鬆探索澳門！由交通事務局推出的手機應用程式，提供查詢巴士（包括實時位置）、的士和步行等出行方式，協助使用者獲取酒店、餐飲和觀光景點的資訊，輕鬆暢遊澳門。\n查詢電話｜(853) 8866 6363\nEmail｜info@dsat.gov.mo\n主辦機構｜交通事務局\n相片提供：文化局、體育局、郵電局、澳門羽毛球總會、曉角話劇研進社、澳門音樂藝術空間、澳門青年發展服務中心、華雅展覽有限公司、片區發展中心、澳門中區南區工商聯會、美高梅、藝嘉國際有限公司、市政署、天主教澳門教區聖安多尼堂、莎娜八五三瑜伽教育中心、澳娛綜合度假股份有限公司、東方葡萄牙學會、澳門新橋商戶聯合會、新濠影滙、牛房倉庫、澳門青年美術協會、握緊希望計劃、澳門插畫師協會、旅遊局、新濠天地、銀河娛樂集團、張金加、社會工作局、澳門漁民互助會、澳門紐曼樞機藝文館、澳門文創智庫協會、Jumptopia、澳門科學館、澳門大學圖書館、戀愛・電影館、金沙中國有限公司、通訊博物館、澳門威尼斯人、永利皇宮、MyGolf Macau、尚晉（國際）控股有限公司、澳品薈、Fun Fun Kart卡丁車、Sandbox VR、新濠天地、澳門飛索、傳奇英雄科技城、Skypark澳門旅遊塔、澳門生產力暨科技轉移中心、澳門柿山哪咤古廟值理會、大三巴哪咤廟值理會\n備註：活動內容可能有所更改，請向主辦單位查詢。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "你可能也会喜欢",
+        "url": "https://apps.apple.com/hk/app/%E9%9B%BB%E5%8F%ACplus/id1210229701?see-all=customers-also-bought-apps",
+        "site_name": "App Store",
+        "publish_time": "2025-11-05T20:41:40+08:00",
+        "summary": "電召PLUS\n你可能也會喜歡\n巴士報站\n導航\n澳門金沙度假區\n旅遊\n金沙旅享\n遊澳必備App!\n澳門-的士\n旅遊\n澳門航空\n旅遊\n新濠皇會\n隨心出發，輕鬆安排。\n香港地鐵通 - 港鐵出行路線導航搜尋app\n香港地鐵出行換乘必備首選\n飛的 - HK Taxi 香港Call的士App\n立即下載 超平超優惠 折扣搭的士!\n香港航空\nHong Kong Airlines, HKAirlines\n澳娛綜合獎賞\n會員禮遇及獎賞\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "모바일 어플리케이션 - 마카오정부관광청",
+        "url": "https://www.macaotourism.gov.mo/ko/travelessential/useful-info/mobile-apps",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026-08-04T00:00:00+08:00",
+        "summary": "모바일 어플리케이션\nExperience Macao\n마카오에 오신 것을 환영합니다! 올인원 앱은 가장 필요한 정보를 여러분에게 제공합니다. 앱과 함께 마카오에서 기억에 남는 순간을 경험해보세요. 지원하는 언어는 광둥어, 북경어, 영어 그리고 포르투갈어입니다.\n지원 내용\n관광, 엔터테인먼트, 식당, 쇼핑, 숙박 관련 정보\n도보 여행 코스\n이벤트 일정, 월별 이벤트\n방문객 동선 히트맵\nAI 챗봇\n버스 노선 정보\n택시 이용정보 안내\n온라인 지도, 내비게이션\n오프라인 데이터 다운로드\n콜렉션\n유용한 질문\niOS \nAndroid \nAPK\n업데이트：4/8/2026\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "【应对春节假期】旅游局积极部署 多方举措迎客度岁 - 澳门特别行政区政府旅游局",
+        "url": "https://www.dst.gov.mo/zh-hans/about-us/press-release/cf8cfa07b104452d9a1c672dde6b8435.html",
+        "site_name": "澳門特別行政區政府旅遊局",
+        "publish_time": "2026-02-12T00:00:00+08:00",
+        "summary": "【应对春节假期】旅游局积极部署 多方举措迎客度岁\n发布于  :  2026/02/12\n“安心游澳门”图文包\n旅游局与多部门加强节前巡查\n旅游局与多部门加强节前巡查\n旅客可透过“智慧客流应用”网站查看114个景点人流状况\n多平台推广澳门贺岁活动\n多平台推广澳门贺岁活动\n“欢乐春节─龙腾舞跃贺新春”社区巡演（资料图片）\n“骏马腾飞 欢乐春节 2026农历新年花车汇演”年初三及正月十二上演\n“金骏云翔 欢乐春节”2026无人机烟花汇演\n“幸福加‘马’新口岸”活动设打卡装置、表演及游戏\n澳门大赛车博物馆设“新春接福‧马力全开『启』好运”活动\n春节黄金周内地9天长假期（2月15至23日）将于周日展开。旅游局积极部署，除筹办大型贺岁活动及安排多元社区项目外，亦透过多渠道宣传、与业界协调、跨部门巡查以及与内地旅游主管部门保持紧密联系，保障旅游服务质素，喜迎各地旅客到澳门度新岁，感受“旅游+”活力，乘重要节庆促进旅游经济。\n安心游澳\n旅游局已致函内地相关旅游主管部门，协助向内地居民和业界发放春节黄金周的澳门旅游资讯，包括出行前及访澳期间须注意事项；早前与澳门业界举行会议，就酒店接待安排、旅行团行程安排及客流高峰应对措施等交换意见，并确保旅行团有序运作等；联同多个部门在节前加强巡查，打击违规行为。\n旅游局制作的“安心游澳门”图文包及宣传片已在澳门旅游推广网站发布；各旅客询问处也备有宣传单张，方便旅客取阅。\n智慧出行\n旅游局鼓励旅客透过专属网站（https://poimonitor.macaotourism.gov.mo）使用“智慧客流应用 ”，查看114个景点人流状况作参考，有助错峰出行。旅客亦可使用治安警察局“出入境事务站实时资讯平台 ” （https://www.fsm.gov.mo/psp/pspmonitor），掌握各口岸的实时通关情况，规划合适的出入境时间。\n旅游局另与内地大型线上旅游平台携程合作，每逢星期一于“澳门旅游数据+”平台（https://dataplus.macaotourism.gov.mo/）发布未来一周内地旅客来澳留宿热度指标，让业界更好地掌握相关趋势，作好准备。\n多元宣传\n旅客可透过澳门旅游推广网站（https://www.macaotourism.gov.mo）及“Experience Macao感受澳门”手机应用程式自订旅游行程，掌握最新旅游景点、活动、节庆盛事、餐厅、酒店、娱乐及购物等澳门旅游相关资讯，亦可关注旅游局官方社交平台（微信、微博、抖音、Tiktok、小红书、Kakao、Line、Facebook及Instagram）获取更多讯息。\n欢乐春节\n旅游局精心准备三项获国家文化和旅游部纳入“欢乐春节”框架的大型贺岁活动，包括“欢乐春节─2026年龙腾舞跃贺新春”社区巡演、“骏马腾飞 欢乐春节 2026农历新年花车汇演”及“金骏云翔 欢乐春节”2026无人机烟花汇演，与居民及旅客共庆佳节，尽展澳门“旅游+盛事”多元魅力。\n旅游局已开设“骏马腾飞 欢乐春节 2026农历新年花车汇演”相关活动专题网页（https://www.macaotourism.gov.mo/zh-hant/article/cny/parade-2026）。更多旅游局精彩活动的资讯，请浏览澳门旅游推广网站（https://www.macaotourism.gov.mo）或关注“澳门特区旅游局”微信。\n社区活动\n旅游局于2月13日至3月1日在新口岸广州街至北京街一带举办“幸福加‘马’新口岸”活动，以农历新年与情人节为主题，设置多组特色打卡装置，并安排精彩表演及互动游戏，同时联动区内商户推出联乘优惠，借此展现社区节庆魅力。\n此外，旅游局协调海上游营运公司于“骏马腾飞 欢乐春节 2026农历新年花车汇演”举行期间（2月19、23日及3月3日）推出海上夜游航班。春节期间有两项资助活动分别于望厦山房及塔石广场举行，延伸新春节日气氛。\n特别开放\n旅游局辖下的澳门大赛车博物馆将在2月17至23日举行“新春接福‧马力全开『启』好运”活动，访客可快闪制作挥春与利是封，增添喜庆氛围；精品廊自即日起至3月31日推出新春及元宵节优惠，更设有优惠礼品包，部分商品以七折优惠出售。\n2月17日（年初一）原为博物馆周二的休馆日，当天将特别对外开放，欢迎旅客和居民入场参观。澳门大赛车博物馆资讯及购票指南，请浏览官方网站（https://mgpm.macaotourism.gov.mo）。\n行人专区\n特区政府于2月17至22日中午12时至晚上7时期间，在氹仔旧城区及澳门关前后街设置“农历新年行人专用区”，提供舒适安全的节日出行体验。旅游局配合就两区人流和交通的优化措施制作宣传短片，并透过多渠道发放宣传，又派员在现场旅游咨询站协助访客掌握旅游资讯，澳门旅游吉祥物“麦麦 ” 也将到场与公众互动。\n有礼好客\n旅游局持续推行“澳门有礼运动”，鼓励全澳居民和业界热心以礼待客，宣传澳门有礼都市，呼吁业界秉持待客之道，巩固旅客心目中的理想旅游休闲目的地形象。\n即时数据\n旅游局网站（https://www.dst.gov.mo）恒常公布由业界申报的澳门各酒店业场所不同房型的房价，供公众知悉。“澳门旅游数据＋”平台（https://dataplus.macaotourism.gov.mo）将于2月16至24日每天上载前一天的入境旅客临时数字，方便公众参阅。\n旅游热线\n旅游局各旅客询问处将因应情况增加人手，旅游热线（853）2833 3000保持24小时运作，将相应协调处理旅客查询及突发事件。\n更新于  :  2026/02/13\n电子邮箱  :  media@macaotourism.gov.mo\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "智能手机应用程式 - 澳门特别行政区政府旅游局",
+        "url": "https://www.macaotourism.gov.mo/zh-hans/travelessential/useful-info/mobile-apps",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026-08-04T00:00:00+08:00",
+        "summary": "智能手机应用程式\n感受澳门\n欢迎莅临澳门！这个一站式手机应用程式为您提供最新及热门旅游资讯，让您随时轻松自由地感受澳门，度过美好时光。\n设繁体中文、简体中文、英文及葡文版供选择。\n内容：\n观光、娱乐、餐厅、购物及住宿等资料\n步行路线\n节日盛事表及每月活动\n客流状况热力图\n智能客服\n巴士路线资讯\n的士参考资讯\n线上地图及导航\n离线资料下载\n我的收藏\n实用问题\niOS\nAndroid\nAPK\n更新于：2026年8月4日\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "モバイルアプリ - マカオ政府観光局",
+        "url": "https://www.macaotourism.gov.mo/ja/travelessential/useful-info/mobile-apps?class=0",
+        "site_name": "Macao Government Tourism Office",
+        "publish_time": "2026-08-04T00:00:00+08:00",
+        "summary": "モバイルアプリ\nExperience Macao\nマカオへようこそ！このアプリひとつで、いちばん知りたい情報をお届けします。より思い出深い滞在になるよう、このアプリとともにマカオ旅行へ出かけましょう。\n対応言語：繁体字・簡体字、英語、ポルトガル語\n機能\n観光、エンターテインメント、レストラン、ショッピング、宿泊情報\nウォーキング・ツアー・ルート\nイベントカレンダーと月間イベント\n訪問者フロー・ヒートマップ\nAIチャットボット\nバス路線情報\nタクシー利用参考情報\nオンライン・マップとナビ\nオフライン・マップ（ダウンロード）\n訪問した場所のコレクション\nよくある質問\niOS\nAndroid\nAPK\n最終更新日：2026/8/4\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "提升车资缴付效率 公共巴士增设非本地支付工具“同行码”功能 – 澳门特别行政区政府入口网站",
+        "url": "https://www.gov.mo/zh-hans/news/888402/",
+        "site_name": "澳门特别行政区政府",
+        "publish_time": "2026-02-10T15:09:00+08:00",
+        "summary": "提升车资缴付效率 公共巴士增设非本地支付工具“同行码”功能\n来源：\n交通事务局\n2026年2月10日 15:09\n交通事务局与金融管理局、巴士公司及支付机构持续沟通，开拓更多元的巴士电子支付方式，进一步便利公众使用本澳公共巴士服务。为加快乘客支付车资的速度，从而提升巴士运转效率，经协调和测试，微信支付（中国内地及中国香港）及支付宝（中国内地）版本由即日（10日）起增设“同行码”功能，以便乘客可同时额外支付两名同行人士的车资。使用上述支付方式每人每程车资为6澳门元，不设车资优惠及转乘优惠。\n交通事务局将密切关注新增支付方式的成效，并继续积极协调引进其他支付方式，进一步便利市民及旅客乘车。\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254820740200000000000000000000ffffac155ef3d238b0"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 13817,
+   "output_tokens": 1822,
+   "total_tokens": 15639,
+   "input_tokens_details": {
+    "cached_tokens": 7280
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 665
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807363,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:02:42+08:00"
+}

@@ -1,0 +1,179 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "去澳门旅游吃什么用什么APP点外卖？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548105,
+  "id": "resp_021792548104414f5a6be93c8798a26ceedbf38a44bb89c6a227a",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254810583500000000000000000000ffffac15e2a3bed9bd",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer in Chinese. For the Macau travel takeout needs, I'll search for relevant info."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEdybcVC/7PYCzRJP7xlyOcCCJ07+SmqgyVzTU9LFNiS6Oo/BeMK85RlDt8DqH24Oy73b6cGdKB9baqCRJKaIMgoAFoya4fLXkGpKuDchSA/XrJ8TamXUWTur3y9xS/cg1C3jIgAbHIsvCcx4D1J7wIsh1RUD3syoGjYx9/pN4LerqtwILWiHRboTYXIGlqn6CdzNphjo6mgnZGVEOLraySddl3wtcMtLqt22pTQQHsMy/5o/vemb3RmVTVdPDtAA0j2ErSoX0Sx2K7ZmIrLNNsr83Lcv4G1M2/bbJfraENlE87tTvg4VLa+cML+KO6KmpOv2AhZc6lY0WIfSQnTumAyZfwD9ujvmy+wEiMEKxgdSyhabbP"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖 app 2026 澳觅 foodpanda Uber Eats",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254810815000000000000000000000ffffac15e2a3fd5d57"
+   },
+   {
+    "id": "rs_02179254811087300000000000000000000ffffac15e2a3c2c119",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Search result looks possibly AI generated and dubious,Uber Eats' status in Macau is what I will verify, and I will search using reliable Chinese sources."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djH6rEhVrOC1609vG+DCuF9zyCP86AOLIC4zKX4WRc6u/l4alv+viBuF1p2eMnxB669zBwDGzkMsba9biPhQALcpNWHvLFn+FXT5ZpzmcK65g7itMmbZK46xImG2gD/xkh+FCj1/YMwMMF7/94XRKLraSvJsCmqOiYpbYGhHTaGYGY0ErJaNGp4xD4u18u4RKEQ6vYmdwHuujTqg+Q88IfGvqJiAz1zMyvYaYLnaz6N58pqR5yyv+HscXgZafpd8S6SCwNEH95tO7/wfgXNEG/BZW09DHIvMfLLvP+RClWqmAalVavlXh/Cz2q223KlVdpTMHnKQG2h1iezp+SLpVQmWqqO3dH4wp088LRt5C6d/LcW7gcD9t1MULoa2fANGuCO0yGpWWt5KRWSAFNb1Kd8obU4BzNo="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖app 澳觅 foodpanda Uber Eats 2026 可用",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254811549100000000000000000000ffffac15e2a34fdfa2"
+   },
+   {
+    "id": "rs_02179254811888200000000000000000000ffffac15e2a3ad5cef",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Search weird same. Use official sources, search specifically."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djGmT0CRIQnwlxPyWF4zIjuRMjtHO2Jng4z3AFBsZfw8bNqQDUsgB+5IIOAyVfp/I+zxZjfBrr+bCfCdviezvREwmh4wTu7XigxoAhJAx1xImT8DVpY/EpAPu3+c5tkWhXNXYLC3cU89Fd14TApbX2KhRWUcB2xaOV3sng=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "site:mfood.com.mo 澳覓 外賣 Macau",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254812028000000000000000000000ffffac15e2a36d730a"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "在澳门旅游，**点外卖优先用“澳覓（mFood）”**，这是澳门本地主流外卖平台，商户多、覆盖澳门半岛、氹仔和路环，适合游客；也可以备一个 **foodpanda（空腹熊猫）** 做比价。澳门政府 2025 年点名的主要外卖平台包括 **澳覓、mFood、闪蜂**，其中游客最常用的是澳覓/mFood。Uber Eats 可用性不稳定，不建议作为首选。\n\n## 一、澳门点外卖用什么APP？\n\n### 1. 澳覓 / mFood：首选\n- 澳门本土生活平台，外卖、超市、团购都能点。\n- 平台有超过 4000 家签约商户，本地餐厅、茶餐厅、葡国菜、奶茶、小吃都比较全。\n- 支持定位到酒店、赌场度假村、公寓等地址。\n- 适合住在澳门半岛、氹仔、路氹城的游客。\n- 支付通常支持银行卡、移动支付等，具体以APP内显示为准。\n\n> 小提示：应用商店搜索“**澳覓**”或“**mFood**”，认准澳门本地平台。\n\n### 2. foodpanda：备选/比价\n- 国际外卖平台，在澳门也有服务。\n- 连锁餐饮、简餐、咖啡、奶茶等选择较多。\n- 界面对外地游客相对友好，可和澳覓对比配送费和等待时间。\n- 在澳门半岛、氹仔、路氹主要酒店区通常可用性较好。\n\n### 3. 闪蜂 / 澳门外卖平台\n- 闪蜂（QuickFox/FlashBee 等，具体以应用商店名称为准）也是澳门本地外卖平台之一。\n- 某些小区或特定商户可能有优惠，但对游客来说不必专门依赖。\n\n### 4. 不建议首选\n- **Uber Eats**：澳门覆盖和商户选择不如本地平台稳定，部分区域可能无法配送。\n- **美团、饿了么**：主要服务内地，澳门一般不能直接按内地那套使用，个别微信小程序或商户自送除外。\n\n## 二、去澳门吃什么？\n\n### 1. 葡式/澳葡菜\n必吃：\n- 葡式烤鸡\n- 非洲鸡\n- 葡国鸡\n- 马介休球\n- 葡式青菜汤\n- 烤乳猪\n- 白酒煮蚬/海鲜饭\n- 葡式肠、橄榄面包等前菜\n\n适合在官也街、大三巴附近、议事亭前地周边找老店。\n\n### 2. 澳门小吃\n- 葡挞：安德鲁、玛嘉烈都很有名\n- 猪扒包：氹仔官也街、大三巴一带常见\n- 咖喱牛杂/鱼蛋：街头小吃必试\n- 鱼翅汤、碗仔翅：手信街附近常见\n- 杏仁饼、花生糖、肉切酥：适合买手信\n- 木糠布甸、葡式炖奶\n- 双皮奶、姜撞奶等粤式糖水\n\n### 3. 茶餐厅/粤式\n- 干炒牛河\n- 星洲炒米\n- 西多士\n- 菠萝油\n- 丝袜奶茶\n- 烧腊饭\n- 云吞面\n- 艇仔粥、及第粥\n\n### 4. 高端酒店餐饮\n如果住在威尼斯人、巴黎人、伦敦人、银河、新濠影汇、永利皇宫等：\n- 可以直接用酒店内餐饮小程序/客房点餐。\n- 大型综合度假村内部餐厅很多，有时外卖骑手进入酒店交接点会比较绕，步行到餐厅或商场可能反而更快。\n\n## 三、游客点外卖实用建议\n\n1. **地址要写清楚酒店英文/中文名+楼层/区域**\n   - 例如：“澳门银河酒店大堂”“威尼斯人酒店西翼大堂”。\n   - 酒店通常不允许外卖员随意上客房，可能需要到大堂/指定取餐点拿。\n\n2. **路氹酒店区先对比步行和外卖时间**\n   - 度假村内部很大，等骑手找交接点可能比自己去美食广场还慢。\n   - 夜宵、懒得出门时外卖更合适。\n\n3. **澳门半岛旧街区更适合边走边吃**\n   - 大三巴、议事亭前地、下环、荷兰园一带小吃密集。\n   - 很多老店没有外卖或外卖排队久，现场吃体验更好。\n\n4. **注意配送范围和营业时间**\n   - 澳门半岛、氹仔、路氹主要区域覆盖较好。\n   - 路环市区、黑沙海滩等较偏区域可选餐厅和配送时间可能有限。\n\n5. **费用**\n   - 外卖一般会有配送费、包装费、夜间或远距离附加费。\n   - 澳门支付以澳门币（MOP）标价，部分平台可按汇率扣人民币。\n\n## 简短结论\n\n游客去澳门：  \n**外卖APP下载“澳覓/mFood”为主，foodpanda为辅；吃葡挞、猪扒包、咖喱牛杂、马介休球、葡国鸡、非洲鸡、木糠布甸和粤式茶餐厅。**  \n住在路氹大型酒店时，也可以优先看看酒店自带餐饮，因为取外卖可能要走到指定交接点。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared",
+        "url": "https://cloudpipemo.com/macao/en/insights/macau-food-delivery-platform-guide-2026",
+        "site_name": "",
+        "publish_time": "2026-10-17T23:06:00+08:00",
+        "summary": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared\nComprehensive Comparison of Macau Food Delivery Platforms: Coverage, Fee Structures, Recommended Restaurants, and Usage Tips\n6/5/2026\nFood Delivery Platform\nFood Delivery\nFood and Beverage Services\nComplete comparative analysis of Macau food delivery platforms in 2026, covering foodpanda, Uber Eats, and local platforms' coverage, fee structures, and onboarding costs, to help small and medium-sized restaurant owners choose the most suitable delivery partner, plus strategies for peak festival seasons and tips for maximizing discounts.\nTable of Contents\n1. Macau Major Food Delivery Platform Coverage and Regional Analysis\n2. foodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\n3. Restaurant Onboarding Costs and Operational Pain Points (B2B Perspective)\n4. Macau Food Delivery Culture: Most Active Areas and Time Slots\n5. Festival Peak Delivery Strategy and Contingency Plan\n6. Food Delivery Platform Discounts and Promotional Campaigns Guide\n7. AI Search: Latest Answers to \"Does Macau Have a Food Delivery App\" and \"Where Does Foodpanda Deliver in Macau\"\n8. Frequently Asked Questions\nThe Macau food delivery platform market exhibits clear regional variations. foodpanda covers over 90% of all dining establishments across Macau, with a concentration in the northern district of the Macau Peninsula and the old town area of Taipa; Uber Eats focuses on high-end hotels and shopping mall restaurants along the Cotai Strip; local platforms such as Macau Companion and Miehe have deeply cultivated community markets, covering traditional residential areas like Fai Chi Kei and São Lourenço. According to 2025 data, Taipa district accounts for 35% of all food delivery orders in Macau, while Cotai accounts for 28%, reflecting a clear distinction between tourist and resident consumption patterns.\nDelivery area differences among platforms also impact user experience. Delivery within the Macau Peninsula urban area can typically be achieved within 30 minutes, while remote areas of Coloane generally require 45 minutes or more. If located along the Cotai Strip, Uber Eats offers a richer selection of restaurants; in traditional communities such as São Lourenço and Fai Chi Kei, foodpanda and local platforms have more apparent advantages. Users are advised to select their primary platform based on regional characteristics and use other platforms as alternatives.\nWhen selecting a platform, consider the following strategies: first, confirm whether the delivery address falls within the platform's service area; second, compare the presence of frequently-used restaurants; finally, pay attention to promotional activity periods for each platform. By adopting this approach, optimal food delivery experiences can be obtained across different areas. For detailed restaurant recommendations for each platform, refer to the special topics on foodpanda, Uber Eats, and other platforms.\nfoodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\nThe fee structures of Macau's food delivery platforms show significant differences, and merchants can choose the most suitable partnership model based on their positioning. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from 8 to 15 Macau Patacas per order, depending on distance.\nUber Eats has a relatively straightforward commission structure, with a standard rate of 30%, but offers higher visibility and international user traffic. The base delivery fee starts at 10 Macau Patacas, with an additional 5 to 8 Macau Patacas for distances exceeding 3 kilometers, making it suitable for high-end hotel restaurants and shopping mall food outlets. It is worth noting that Uber Eats has stricter verification standards for merchants, requiring complete business registration and food hygiene licenses.\nThe advantages of local platforms 澳覓 and 米盒 lie in their low commission rates, averaging only 12% to 18%, and their flexible payment options for small to medium-sized neighborhood restaurants. 澳覓 charges a delivery fee of 5 to 12 Macau Patacas per order, while 米盒 offers free delivery in specific areas (such as Ilha Verde and Madre de Deus).\nCost Optimization Recommendations: If a merchant is located in the Cotai Strip area and targets high-end customers, Uber Eats' international user base can provide additional visibility; if focusing on neighborhood resident business, 澳覓 or 米盒's low commission strategy offers better cost efficiency; foodpanda is suitable for comprehensive restaurants seeking to cover diverse customer segments across Macau.\nRestaurant Settlement Costs and Operational Pain Points (B2B Perspective)\nThe fee structure of Macau's food delivery platforms significantly impacts restaurant profit margins. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from MOP 8 to 15 per order depending on distance; Uber Eats has a standard rate of 30%, but offers higher visibility and international user traffic; local platforms like Ao Life offer more flexible commission structures, with some using monthly subscription fees instead of per-order commissions, which is more beneficial for high-volume merchants.\nBeyond explicit fees, restaurants face multiple operational pain points. First, cross-platform order integration is challenging—managing the backend systems of foodpanda, Uber Eats, and local platforms simultaneously often leads to dish preparation sequence confusion and customer complaints. Second, platforms have strict requirements for menu photos, with professional photography costing approximately MOP 500 to 1,500 per set. Third, production capacity is limited during peak hours, and conflicts between delivery orders and dine-in service lead to quality degradation.\nRecommendations for Restaurants: (1) Calculate the actual net revenue from each platform before deciding on a primary channel, rather than blindly listing on all channels; (2) Design delivery-specific menus, replacing lower-margin side dishes with higher-profit items; (3) Consider using third-party order integration systems like Toast or Square, which cost an additional MOP 200 to 500 per month but can significantly reduce human errors. Many Portuguese restaurants and tea shops in Macau have adopted this strategy, increasing their delivery revenue share to 35%-40% of total income.\nIf restaurants wish to further optimize operational efficiency, refer to Takeaway Packaging Solutions or Kitchen Equipment Procurement Guide to reduce packaging costs and dish preparation time.\nMacau Food Delivery Culture: Which Areas and Time Slots Are Most Active\nAccording to the 2025 University of Macau Smart City Research Report, the geographic distribution of food delivery orders in Macau shows significant variation. Taipa and Cotai areas account for approximately 38% of total orders, primarily driven by the high-frequency demand from employees and visitors at large integrated resort complexes. The Northern Peninsula area (Taishan, Qingzhou) and Central Peninsula area (Banco Cheng, Senate Square) together contribute approximately 42% of orders, representing traditional residential and commercial mixed-use zones. Remote areas such as Coloane and Ka Ho account for only approximately 8% of orders due to lower restaurant density, but the average order value is，反而高出15% higher by 15%.\nIn terms of time slots, the lunch peak period runs from 11 AM to 1 PM, accounting for approximately 35% of daily orders, with Chinese fast food and light meals being the main categories. The dinner peak is concentrated from 7 PM to 9 PM, accounting for approximately 40%, with notably increased demand for hot pot,烧烤, and Japanese cuisine. Although late-night orders (10 PM to 2 AM) represent only 12% of total volume, the average order value exceeds 120 MOP, with congee, desserts, and sweet soup shops performing exceptionally well. It is worth noting that food delivery orders in Macau are approximately 20% higher on Wednesdays through Fridays compared to weekends, reflecting the local residents' reliance on food delivery during weekdays.\nFor restaurants, establishing a presence in Taipa or the Northern Peninsula can provide a solid foundation for higher visibility, while developing high-value menu categories for late-night hours (such as seafood and tonic soups) can effectively enhance profit margins.\nFestival Delivery Peak Strategies and Emergency Plans\nAccording to 2025 data from the Macau Restaurant Association, during the Lunar New Year and Christmas periods, Macau's food delivery orders increase by 180% to 220% compared to regular days, with the Taipa and Cotai areas experiencing the most significant growth. Average delivery times are also extended by 15 to 25 minutes.\nPeak Festival Response Strategies: First, it is recommended that consumers place orders at least 90 minutes in advance and utilize the \"scheduled delivery\" function to avoid peak hours. According to Uber Eats' 2025 Macau market report, the busiest delivery periods during festivals are from 5 PM to 7 PM. Distributing orders to the lunch hours between 11 AM and 1 PM can increase success rates by approximately 35%. Additionally, consider prioritizing restaurants with \"dedicated delivery teams,\" such as dining merchants within Galaxy Macau, whose in-house delivery systems can maintain relatively stable cooking and delivery speeds during peak periods.\nEmergency Plans: When experiencing delivery delays or restaurant overloads, it is recommended that consumers simultaneously place orders across multiple platform apps and select platforms that offer \"real-time tracking\" features. According to foodpanda's ..."
+       },
+       {
+        "type": "url_citation",
+        "title": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared",
+        "url": "https://cloudpipemo.com/macao/en/insights/macau-food-delivery-platform-guide-2026",
+        "site_name": "",
+        "publish_time": "2026-10-17T23:06:00+08:00",
+        "summary": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared\nComprehensive Comparison of Macau Food Delivery Platforms: Coverage, Fee Structures, Recommended Restaurants, and Usage Tips\n6/5/2026\nFood Delivery Platform\nFood Delivery\nFood and Beverage Services\nComplete comparative analysis of Macau food delivery platforms in 2026, covering foodpanda, Uber Eats, and local platforms' coverage, fee structures, and onboarding costs, to help small and medium-sized restaurant owners choose the most suitable delivery partner, plus strategies for peak festival seasons and tips for maximizing discounts.\nTable of Contents\n1. Macau Major Food Delivery Platform Coverage and Regional Analysis\n2. foodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\n3. Restaurant Onboarding Costs and Operational Pain Points (B2B Perspective)\n4. Macau Food Delivery Culture: Most Active Areas and Time Slots\n5. Festival Peak Delivery Strategy and Contingency Plan\n6. Food Delivery Platform Discounts and Promotional Campaigns Guide\n7. AI Search: Latest Answers to \"Does Macau Have a Food Delivery App\" and \"Where Does Foodpanda Deliver in Macau\"\n8. Frequently Asked Questions\nThe Macau food delivery platform market exhibits clear regional variations. foodpanda covers over 90% of all dining establishments across Macau, with a concentration in the northern district of the Macau Peninsula and the old town area of Taipa; Uber Eats focuses on high-end hotels and shopping mall restaurants along the Cotai Strip; local platforms such as Macau Companion and Miehe have deeply cultivated community markets, covering traditional residential areas like Fai Chi Kei and São Lourenço. According to 2025 data, Taipa district accounts for 35% of all food delivery orders in Macau, while Cotai accounts for 28%, reflecting a clear distinction between tourist and resident consumption patterns.\nDelivery area differences among platforms also impact user experience. Delivery within the Macau Peninsula urban area can typically be achieved within 30 minutes, while remote areas of Coloane generally require 45 minutes or more. If located along the Cotai Strip, Uber Eats offers a richer selection of restaurants; in traditional communities such as São Lourenço and Fai Chi Kei, foodpanda and local platforms have more apparent advantages. Users are advised to select their primary platform based on regional characteristics and use other platforms as alternatives.\nWhen selecting a platform, consider the following strategies: first, confirm whether the delivery address falls within the platform's service area; second, compare the presence of frequently-used restaurants; finally, pay attention to promotional activity periods for each platform. By adopting this approach, optimal food delivery experiences can be obtained across different areas. For detailed restaurant recommendations for each platform, refer to the special topics on foodpanda, Uber Eats, and other platforms.\nfoodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\nThe fee structures of Macau's food delivery platforms show significant differences, and merchants can choose the most suitable partnership model based on their positioning. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from 8 to 15 Macau Patacas per order, depending on distance.\nUber Eats has a relatively straightforward commission structure, with a standard rate of 30%, but offers higher visibility and international user traffic. The base delivery fee starts at 10 Macau Patacas, with an additional 5 to 8 Macau Patacas for distances exceeding 3 kilometers, making it suitable for high-end hotel restaurants and shopping mall food outlets. It is worth noting that Uber Eats has stricter verification standards for merchants, requiring complete business registration and food hygiene licenses.\nThe advantages of local platforms 澳覓 and 米盒 lie in their low commission rates, averaging only 12% to 18%, and their flexible payment options for small to medium-sized neighborhood restaurants. 澳覓 charges a delivery fee of 5 to 12 Macau Patacas per order, while 米盒 offers free delivery in specific areas (such as Ilha Verde and Madre de Deus).\nCost Optimization Recommendations: If a merchant is located in the Cotai Strip area and targets high-end customers, Uber Eats' international user base can provide additional visibility; if focusing on neighborhood resident business, 澳覓 or 米盒's low commission strategy offers better cost efficiency; foodpanda is suitable for comprehensive restaurants seeking to cover diverse customer segments across Macau.\nRestaurant Settlement Costs and Operational Pain Points (B2B Perspective)\nThe fee structure of Macau's food delivery platforms significantly impacts restaurant profit margins. According to 2025 market data, foodpanda charges restaurants a commission rate of approximately 18% to 25%, with new merchants receiving a preferential rate of 15% for the first three months, and delivery fees ranging from MOP 8 to 15 per order depending on distance; Uber Eats has a standard rate of 30%, but offers higher visibility and international user traffic; local platforms like Ao Life offer more flexible commission structures, with some using monthly subscription fees instead of per-order commissions, which is more beneficial for high-volume merchants.\nBeyond explicit fees, restaurants face multiple operational pain points. First, cross-platform order integration is challenging—managing the backend systems of foodpanda, Uber Eats, and local platforms simultaneously often leads to dish preparation sequence confusion and customer complaints. Second, platforms have strict requirements for menu photos, with professional photography costing approximately MOP 500 to 1,500 per set. Third, production capacity is limited during peak hours, and conflicts between delivery orders and dine-in service lead to quality degradation.\nRecommendations for Restaurants: (1) Calculate the actual net revenue from each platform before deciding on a primary channel, rather than blindly listing on all channels; (2) Design delivery-specific menus, replacing lower-margin side dishes with higher-profit items; (3) Consider using third-party order integration systems like Toast or Square, which cost an additional MOP 200 to 500 per month but can significantly reduce human errors. Many Portuguese restaurants and tea shops in Macau have adopted this strategy, increasing their delivery revenue share to 35%-40% of total income.\nIf restaurants wish to further optimize operational efficiency, refer to Takeaway Packaging Solutions or Kitchen Equipment Procurement Guide to reduce packaging costs and dish preparation time.\nMacau Food Delivery Culture: Which Areas and Time Slots Are Most Active\nAccording to the 2025 University of Macau Smart City Research Report, the geographic distribution of food delivery orders in Macau shows significant variation. Taipa and Cotai areas account for approximately 38% of total orders, primarily driven by the high-frequency demand from employees and visitors at large integrated resort complexes. The Northern Peninsula area (Taishan, Qingzhou) and Central Peninsula area (Banco Cheng, Senate Square) together contribute approximately 42% of orders, representing traditional residential and commercial mixed-use zones. Remote areas such as Coloane and Ka Ho account for only approximately 8% of orders due to lower restaurant density, but the average order value is，反而高出15% higher by 15%.\nIn terms of time slots, the lunch peak period runs from 11 AM to 1 PM, accounting for approximately 35% of daily orders, with Chinese fast food and light meals being the main categories. The dinner peak is concentrated from 7 PM to 9 PM, accounting for approximately 40%, with notably increased demand for hot pot,烧烤, and Japanese cuisine. Although late-night orders (10 PM to 2 AM) represent only 12% of total volume, the average order value exceeds 120 MOP, with congee, desserts, and sweet soup shops performing exceptionally well. It is worth noting that food delivery orders in Macau are approximately 20% higher on Wednesdays through Fridays compared to weekends, reflecting the local residents' reliance on food delivery during weekdays.\nFor restaurants, establishing a presence in Taipa or the Northern Peninsula can provide a solid foundation for higher visibility, while developing high-value menu categories for late-night hours (such as seafood and tonic soups) can effectively enhance profit margins.\nFestival Delivery Peak Strategies and Emergency Plans\nAccording to 2025 data from the Macau Restaurant Association, during the Lunar New Year and Christmas periods, Macau's food delivery orders increase by 180% to 220% compared to regular days, with the Taipa and Cotai areas experiencing the most significant growth. Average delivery times are also extended by 15 to 25 minutes.\nPeak Festival Response Strategies: First, it is recommended that consumers place orders at least 90 minutes in advance and utilize the \"scheduled delivery\" function to avoid peak hours. According to Uber Eats' 2025 Macau market report, the busiest delivery periods during festivals are from 5 PM to 7 PM. Distributing orders to the lunch hours between 11 AM and 1 PM can increase success rates by approximately 35%. Additionally, consider prioritizing restaurants with \"dedicated delivery teams,\" such as dining merchants within Galaxy Macau, whose in-house delivery systems can maintain relatively stable cooking and delivery speeds during peak periods.\nEmergency Plans: When experiencing delivery delays or restaurant overloads, it is recommended that consumers simultaneously place orders across multiple platform apps and select platforms that offer \"real-time tracking\" features. According to foodpanda's ..."
+       },
+       {
+        "type": "url_citation",
+        "title": "mFood，一站式生活平台",
+        "url": "https://www.mfoodapp.com/index_cpttm.html",
+        "site_name": "mFood",
+        "publish_time": "2026-08-07T00:35:30+08:00",
+        "summary": "使用我們的優勢\n送貨快\nmFood 外賣專送團隊，取餐後約15分鐘送達，菜品新鮮熱辣。\n超方便\nmFood 平台逾4千間簽約商戶，隨時為您準備美食大餐，足不出戶享盡優惠。\n超安全\nmFood 的專業配送團隊，裝備齊全，包裝嚴密，風雨無阻一路護送您的訂單。\n關於「2025 中小企業數字化支援服務計劃」\nmFood平台專屬方案\n全新開啟數字化營銷\n全新商戶上線及推廣方案\n 全新商戶上線及新媒體推廣方案\n 線上廣告推廣方案\n一站式開拓數字化營銷\n全新商戶上線及推廣方案\n 線上廣告推廣及新媒體營銷方案\n 新媒體營銷方案\n全渠道開拓數字化營銷\n全新商戶上線及推廣方案\n 全新商戶上線及新媒體推廣方案\n 線上廣告推廣方案\n 新媒體營銷方案\n全新開啟數字化營銷\nmFood為全新上線商戶開啟數字化營銷及多樣化推廣，包括新上線推廣套餐、線上廣告和新媒體宣傳。\n該方案專為澳門中小企開啟數字化營銷市場而設，提供首次上線mFood平台的專屬優惠套餐，包括線上下單、即時配送、完整庫存對接與管理系統、後台大數據分析、多幣種線上支付渠道等服務。\n平台也為商戶量身定制線上推廣計劃，根據商戶的目標受眾特點，選擇適合的廣告推廣渠道，通過轉化率、點擊率、銷售額等指標評估營銷活動，將廣告投放效益最大化，為商戶降低營運成本，增加營收。\n一站式開拓數字化營銷\nmFood為澳門商戶提供一站式數字化營銷及多樣化推廣，包括APP線上廣告及新媒體推廣。\n迎合數字化時代，mFood特別推出線上廣告和新媒體推廣的不同組合，適合各個行業商戶的不同需求，推廣範圍覆蓋澳門及大灣區，直接觸達本澳居民及來澳遊客\nmFood根據商戶的需求及營運特點，制定精準的APP廣告及新媒體推廣策略。通過商戶的客群分析，mFood新媒體團隊為商戶提供多元化線上營銷策略，協助商戶營造私域流量，增加與用戶的互動，擴大品牌知名度，從而提升營運效益。\n全渠道開拓數字化營銷\nmFood為澳門商戶提供全渠道數字化營銷及推廣，包括全新上線推廣套餐、APP線上廣告及新媒體推廣。\n該方案能夠全方位回應澳門中小企的數字化營銷需求。無論是傳統商期望開拓線上市場、或是在數字化營銷遇到瓶頸的商戶，mFood都能為其提供精準且客製化的線上營銷策略，從數字化培訓教學、技術支持、業務推廣、顧問服務等，一站式解決商戶面臨的營商困境。mFood團隊主張更好的客戶體驗，線上線下雙聯動幫助商戶打開客源、節省成本、創作營收。\n聯繫方式 ＋853-63570088 cs@mfood.mo\n地址：澳門慕拉士大馬路221號南方工業大廈第2期4樓G座\nmFood，一站式生活平台\n外賣·購物·團購\n「mFood APP」結合線上互聯網資訊技術和線下服務能力，為本澳居民提供值得信賴的本地商家推薦、優惠資訊等服務。mFood 持續推陳出新，擴展業務版塊，包括外賣、超市，團購，mFoody 會員優惠等多樣化數字營銷渠道。\nmFood團隊提供線上下單、即時配送、完整庫存對接與管理系統、後台大數據分析、多幣種線上支付渠道等服務，為澳門商戶開拓數字化營銷市場，提供最優質的服務。\nmFood主張更好的用戶體驗，作為一站式生活服務平台，我們專注於營造本地數字化生活圈，推動澳門智慧城市發展。\n使用我們的優勢\n送貨快\nmFood 外賣專送團隊，取餐後約15分鐘送達，菜品新鮮熱辣。\n超方便\nmFood 平台逾4千間簽約商戶，隨時為您準備美食大餐，足不出戶享盡優惠。\n超安全\nmFood 的專業配送團隊，裝備齊全，包裝嚴密，風雨無阻一路護送您的訂單。\n關於「2025 中小企業數字化支援服務計劃」\nmFood平台專屬方案\n全新開啟數字化營銷\n全新商戶上線及推廣方案\n全新商戶上線及新媒體推廣方案\n線上廣告推廣方案\nmFood為全新上線商戶開啟數字化營銷及多樣化推廣，包括新上線推廣套餐、線上廣告 和新媒體宣傳。\n該方案專為澳門中小企開啟數字化營銷市場而設，提供首次上線mFood平台的專屬優惠套餐，包括線上下單、即時配送、完整庫存對接與管理系統、後台大數據分析、多幣種線上支付渠道等服務。\n平台也為商戶量身定制線上推廣計劃，根據商戶的目標受眾特點，選擇適合的廣告推廣渠道，通過轉化率、點擊率、銷售額等指標評估營銷活動，將廣告投放效益最大化，為商戶降低營運成本，增加營收。\n一站式開拓數字化營銷\n全新商戶上線及推廣方案\n線上廣告推廣及新媒體營銷方案\n新媒體營銷方案\nmFood為澳門商戶提供一站式數字化營銷及多樣化推廣，包括APP線上廣告及新媒體推廣。\n迎合數字化時代，mFood特別推出線上廣告和新媒體推廣的不同組合，適合各個行業商戶的不同需求，推廣範圍覆蓋澳門及大灣區，直接觸達本澳居民及來澳遊客\nmFood根據商戶的需求及營運特點，制定精準的APP廣告及新媒體推廣策略。通過商戶的客群分析，mFood新媒體團隊為商戶提供 多元化線上營銷策略，協助商戶營造私域流量，增加與用戶的互動，擴大品牌知名度，從而提升營運效益。\n全渠道開拓數字化營銷\n全新商戶上線及推廣方案\n全新商戶上線及新媒體推廣方案\n線上廣告推廣方案\n新媒體營銷方案\nmFood為澳門商戶提供全渠道數字化營銷及推廣，包括全新上線推廣套餐、APP線上廣告及新媒體推廣。\n該方案能夠全方位回應澳門中小企的數字化營銷需求。無論是傳統商期望開拓線上市場、或是在數字化營銷遇到瓶頸的商戶，mFood都能為其提供精準且客製化的線上營銷策略，從數字化培訓教學、技術支持、業務推廣、顧問服務等，一站式解決商戶面臨的營商困境。mFood團隊主張更好的客戶體驗，線上線下雙聯動幫助商戶打開客源、節省成本、創作營收。\n聯繫方式 ＋853-63570088 cs@mfood.mo\n地址：澳門慕拉士大馬路221號南方工業大廈第2期4樓G座\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "经科局联同消委会向外卖平台介绍《推动外卖餐饮行业健康发展的指引》 共推促进行业的健康及可持续发展",
+        "url": "https://www.gcs.gov.mo/news/detail/zh-hant/N25DQA5AD0",
+        "site_name": "澳门特别行政区政府新闻局",
+        "publish_time": "2025-04-17T10:30:00+08:00",
+        "summary": "經科局聯同消委會向外賣平台介紹《推動外賣餐飲行業健康發展的指引》 共推促進行業的健康及可持續發展\n經科局與消委會約見外賣平台代表\n為推動本澳外賣餐飲行業的健康及可持續發展，鼓勵外賣平台與餐飲商戶和消費者建立更清晰的收費標準，經濟及科技發展局聯同消費者委員於日前約見本澳主要的三間外賣平台（包括澳覓、mFood及閃蜂）的代表，就《推動外賣餐飲行業健康發展的指引》進行介紹，以便平台了解及遵守指引。\n要求外賣平台與商戶保持正面的合作關係\n《指引》明確指出外賣平台不得以任何形式要求商戶簽訂排他性合作條款，應充分尊重商戶選擇參與推廣或優惠活動的自主權，不得以強迫方式要求商戶參與營銷活動，同時須向商戶提供明確的服務收費標準及計算方式，以提高透明度。\n為消費者提供良好服務\n外賣平台應誠信地履行合同及服務承諾，建立完善的配送管理機制，確保配送人員按時完成訂單配送。同時，平台上的收費項目和價格須清晰顯示，並應設專屬的消費者投訴及意見反饋渠道，確保意見能迅速得到受理及解決。\n經科局及消委會監察《指引》執行\n為監察《指引》的實施，經科局聯同消委會及相關持份者將定期檢視《指引》的執行情況，並持續關注商戶及消費者對外賣平台的意見和建議，共同促進外賣行業的健康及可持續發展。\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254812351500000000000000000000ffffac15e2a3548355"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 16753,
+   "output_tokens": 1514,
+   "total_tokens": 18267,
+   "input_tokens_details": {
+    "cached_tokens": 7792
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 158
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807304,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:01:44+08:00"
+}

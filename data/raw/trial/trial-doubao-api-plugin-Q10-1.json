@@ -1,0 +1,254 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "内地游客在澳门用什么 App 点外卖比较方便？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548860,
+  "id": "resp_021792548859800b6ab61b028b46eec1be4b86a7f38a82bed6394",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254886051400000000000000000000ffffac191133ef0751",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. \n\nCurrent information about apps and food delivery platforms available in Macau for mainland tourists in 2026 will be searched via the web."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djH2szkoMIsiatBxhfhGHfmrOGW9904MiaFxVLlQch2BiWhj57Ghj+lfzFwLbLZlSXAePJJ0du+xP7NMUuVYnRKz0G2pn2I4SfdkDWf81W/f21d9DvECZPV8VqZvcWEW/Hk7vQJ6K8UDRZjiy8uSxsQzKwa6SANTNcfKoesBGzGvwHTFa7uKAmZphZHLjCn29J8Xuo8Jy5Gi34Wn9NDKSEp7B7Um59MTQCuh0JrjR9FFQx/AiiwGU71vvoOWGqsRmKA1OybQFbbJAQ0GtIwHwDyiB9TW6dg+wX/uywd34lySb9lARsSBMGMRQpMZviDdu/PTKJGbNz4SzesS2eUCP95Dysvl5TCC0ggcLgSXrrvpvt/V+iXN/fqH/WZBNWdFyxTZ1BTMdYnsC07FX44WtmQa"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门 外卖 app 内地游客 2025 2026;澳门 外卖平台 MFood Foodpanda OpenRice 对比;内地游客 澳门 点外卖 微信 支付宝 app",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254886451300000000000000000000ffffac19113339d561"
+   },
+   {
+    "id": "rs_02179254886787100000000000000000000ffffac191133b332ac",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We have mFood, multiple food delivery apps are under consideration, I will verify their details and search specifically."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHJa+/HFd21qtOx47M5WasIriqXItSSiPQvKRE34qTcByP/8cnLHH5FCkzXbgBwG7WVj1u4pSmaflflN9aRkP4SKSFJqfx/lNqmMo0rBJnADBlhY09AYaA0hyJFDZTFhoyKmbht+tKAq0oQWBXpwtxlSc5jxjdEp20hAMh9qOCLarV7ADJLj9KBHZTTRVz8/oloVxKdvywfcdf5fNLfFFHXcx4IX6O8L3UWJniS6RkvupxGWOUco/B4682OFtyRvJuF0euWRZMljaJ0KEYdYpvficcTLczEzQMogrnsM2wGWuJPjAR/01CwxMalYPV9gI9yrmfh7IfUs4lNtdOok7ZAdx11x9Kzad/aoqTB4VdK14LUQHUU7g=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳觅 app 澳门 外卖 官方 内地手机号 微信支付;mFood 澳门 外卖 支付宝 微信支付 内地手机号;foodpanda 澳门 内地游客 支付 手机号;闪蜂 澳门 外卖 app 支付",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254887246300000000000000000000ffffac19113389b176"
+   },
+   {
+    "id": "rs_02179254887659900000000000000000000ffffac191133e6ba28",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need perhaps distinguish foodpanda. Search App Store."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djF7jhcTHhbYPOjtbrl5BYxZfQLN+p/J70gVa9YTIkR4iJd0YUH4rLV0Uy2dUzaJcfAAezwl9Nllp/uHT4NRKIRs+RylsRJ9toneL6BBRh3q8EKXGfIzaL8/7wTKUPOK2SPvkcmZ5RKlXX1AgGmFJwzUDM2d"
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "site:apps.apple.com 澳觅 外卖 澳门 App Store;澳觅 AOMI 官方 网站 澳门 外卖;foodpanda 澳門 app 支付 支付寶 信用卡",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254887755800000000000000000000ffffac191133148704"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "内地游客在澳门点外卖，优先用这两个本地平台：\n\n## 首选推荐\n\n1. **澳觅 AOMI**\n   - 澳门本地一站式生活平台，外卖、团购、超市闪购、跑腿等都有。\n   - 内地手机号一般可选 **+86** 注册，也可用微信登录；部分功能有微信小程序。\n   - 适合住酒店、想顺便买团购券、超市便利店补给的游客。\n\n2. **mFood**\n   - 澳门主流外卖和超市配送平台，餐饮覆盖较多，类似内地的美团/饿了么。\n   - App Store 显示支持 **MPay、支付宝、微信支付、银联、VISA/MasterCard** 等方式。\n   - 适合专门点餐、买奶茶、快餐、超市用品。\n\n## 备选\n\n- **foodpanda 澳门**：国际平台，中英文界面友好，但支付和商家覆盖要以你所在酒店地址结算页为准。\n- **闪蜂**：偏本地外卖、跑腿和同城急送，可作为补充。\n\n## 实用提醒\n\n- 澳门酒店外卖通常不能送到房间，多需到**酒店大堂、礼宾部或指定外卖取餐点**自取。\n- 地址尽量写完整：酒店中英文名称、哪一栋/塔楼、大堂入口，并在备注说明取餐位置。\n- 内地手机卡在澳门要能正常接收短信，建议提前开通漫游。\n- 付款前确认配送费、起送价和预计送达时间；支付宝/微信一般会按汇率扣人民币。\n- 建议到澳门前先装好 **澳觅 + mFood**，入住后输入酒店地址，对比哪个平台附近商家更多、配送更快。",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "mFood外卖下载-mfood商家appv7.2.0 - 12365手游网",
+        "url": "https://m.12365.sd.cn/soft/66401.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/img/a4c1616abbbd36410f6eb51791702f4a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620866&x-signature=rEa9I155eLKf0p19M7CPYw7BMa4%3D",
+        "site_name": "12365手游网",
+        "publish_time": "2026年10月02日 19:11:00(CST) 星期五",
+        "summary": "mFood\n类别：生活实用  大小： 112.89M\n更新时间：2026-10-02 19:11\n软件介绍\nmFood是一款澳门当地主打餐饮外卖与超市配送的生活服务平台。和美团、饿了么在内地的角色类似，整合了澳门本地数千家餐饮商家和超市资源，覆盖了从日常简餐、葡国菜、日料到超市百货等各类生活所需，并提供专业的物流配送服务。用户可以根据自己所在的位置，即时浏览附近的美食和生活资讯。mFood平台优惠多、商家选择独特，且物流配送速度快，覆盖全澳门4000多家餐厅，最快15分钟送达。\nmfood如何申请商家入驻?\n1、首先打开mfood app\n2、在页面下方有个“我的”选择并点击\n3、在“我的”页面往下拉，有个“商家入驻”选择\n4、在弹出来的页面里填入相关信息并选择提交，等待平台回复即可\n如何购买消费金和开通月卡?\n打开mfood，首页下方有三大板块，分别是独家大牌，购买消费金以及开通月卡，点开购买消费金，在登录后的情况下，根据系统引导，购买自己所需的消费金。月卡的开通就点击开通月卡部分，依旧是在登录后的情况下，购买自己想要的月卡。\nmFood软件功能\n1.平台拥有一支专业的即时物流团队，服务范围覆盖澳门全城。对于许多热门餐厅，mFood可实现最快15分钟送达，让你足不出户也能第一时间尝到热腾腾的美食。\n2.mFood在支付方式上非常灵活，适配本地居民与游客。目前平台全面支持MPay（澳门钱包）、支付宝、微信支付、银联及VISA/MasterCard等多种主流支付渠道，无论是绑卡在线支付还是使用电子钱包，都非常便捷。\n3.除了核心的外卖功能，mFood App的功能版图也在不断扩展。它内置了团购、劲爆券、慳錢包等省钱板块，以及mFoody会员优惠等多样化营销渠道，让你在点餐的同时享受到更多折扣和玩法。\nmFood用户测评\n对于每天珠海澳门两地通勤的上班族来说，mFood这个软件对我来说真的太重要了，每天中午都不用自己上街去吃饭，手机下单就能送到，而且有时候还有红包，优惠后比门店堂食更便宜。现场点餐价格比较贵，建议可以在mfood app上面买券现场用，大概会有到半价左右的折扣。\n更新日志\n【mFood外卖 星选一口价】\n奶茶咖啡，外卖低至9.9\n1件即送 免凑单\n单单全免配送费\n软件信息\n应用厂商：珠海麦蜂科技有限公司\n版本：v 7.2.0\n系统：Android\n语言：简体中文\n年龄：年满18周岁以上\n包名：\ncom.m.mfood\nMD5: 2029331FE3EB8420D43C051058605798\n权限：查看\n隐私：点击查"
+       },
+       {
+        "type": "url_citation",
+        "title": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared",
+        "url": "https://cloudpipemo.com/macao/en/insights/macau-food-delivery-platform-guide-2026",
+        "logo_url": "",
+        "site_name": "",
+        "publish_time": "2026年10月17日 23:06:00(CST) 星期六",
+        "summary": "Complete Guide to Macau Food Delivery Platforms 2026: foodpanda, Uber Eats, and Local Platforms Compared\nComprehensive Comparison of Macau Food Delivery Platforms: Coverage, Fee Structures, Recommended Restaurants, and Usage Tips\n6/5/2026\nFood Delivery Platform\nFood Delivery\nFood and Beverage Services\nComplete comparative analysis of Macau food delivery platforms in 2026, covering foodpanda, Uber Eats, and local platforms' coverage, fee structures, and onboarding costs, to help small and medium-sized restaurant owners choose the most suitable delivery partner, plus strategies for peak festival seasons and tips for maximizing discounts.\nTable of Contents\n1. Macau Major Food Delivery Platform Coverage and Regional Analysis\n2. foodpanda vs Uber Eats vs Local Platform Fee Structure Comparison\n3. Restaurant Onboarding Costs and Operational Pain Points (B2B Perspective)\n4. Macau Food Delivery Culture: Most Active Areas and Time Slots\n5. Festival Peak Delivery Strategy and Contingency Plan\n6. Food Delivery Platform Discounts and Promotional Campaigns Guide\n7. AI Search: Latest Answers to \"Does Macau Have a Food Delivery App\" and \"Where Does Foodpanda Deliver in Macau\"\n8. Frequently Asked Questions\nThe Macau food delivery platform market exhibits clear regional variations. foodpanda covers over 90% of all dining establishments across Macau, with a concentration in the northern district of the Macau Peninsula and the old town area of Taipa; Uber Eats focuses on high-end hotels and shopping mall restaurants along the Cotai Strip; local platforms such as Macau Companion and Miehe have deeply cultivated community markets, covering traditional residential areas like Fai Chi Kei and São Lourenço. According to 2025 data, Taipa district accounts for 35% of all food delivery orders in\n7. AI Search: Latest Answers to \"Does Macau Have a Food Delivery App\" and \"Where Does Foodpanda Deliver in Macau\"8. Frequently Asked QuestionsThe Macau food delivery platform market exhibits clear regional variations. foodpanda covers over 90% of all dining establishments across Macau, with a concentration in the northern district of the Macau Peninsula and the old town area of Taipa; Uber Eats focuses on high-end hotels and shopping mall restaurants along the Cotai Strip; local platforms such as Macau Companion and Miehe have deeply cultivated community markets, covering traditional residential areas like Fai Chi Kei and São Lourenço. According to 2025 data, Taipa district accounts for 35% of all food delivery orders in Macau, while Cotai accounts for 28%, reflecting a clear distinction between tourist and resident consumption patterns."
+       },
+       {
+        "type": "url_citation",
+        "title": "去澳门旅游住酒店，怎么点外卖?内地手机号能不能用、送到哪里取_配送_App_订单",
+        "url": "https://m.sohu.com/a/1087161898_123029547/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/6b1d3a6f49304d84d8268210e144399e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855417236&x-signature=fNYCD6v89Gt5cVSLOavYqwrubpA%3D",
+        "site_name": "手机搜狐网",
+        "publish_time": "2026年10月13日 15:12:00(CST) 星期二",
+        "summary": "去澳门旅游住酒店，怎么点外卖？内地手机号能不能用、送到哪里取\n莫伊拉\n2026-10-13 15:12\n今年国庆假期，澳门7天入境旅客114.3万人次，10月4日单日达21.0万人次，酒店平均入住率91.3%（澳门旅游局 2026-10-08 公布的初步数据）。11月19日至22日还有第73届澳门格兰披治大赛车，赛事周末前后酒店同样会很满。人多的时候，旅游区餐厅排队久，不少人干脆回酒店叫外卖。\n没有澳门电话卡能不能注册、地址怎么填骑手才找得到、能不能送到房间——这几个问题最常见。按操作顺序说明如下。\n一、注册：内地手机号一般可用\n澳门本地常用的外卖平台之一是澳觅（AOMI），2016年上线，外卖、团购、超市闪购和游客服务都在同一个 App 里。按澳觅帮助中心的说明，内地旅客一般不需要另办澳门电话卡：注册时区号选 +86（中国大陆），输入内地手机号、接收短信验证码即可；香港手机号选 +852。前提是手机已开通漫游，在澳门能正常收短信。\n收不到验证码时，先核对区号和号码，再重新获取；页面支持的话也可以用\n微信账号登录。外国游客如果没有内地、香港或澳门号码，可以买一张澳门临时电话卡，或者直接在微信里搜「澳觅外卖」小程序下单。小程序能满足基本的浏览和下单，看配送进度、联系骑手等功能 App 更完整。\n验证码只用于登录，不要告诉任何人，包括自称骑手、商户或客服的人。\n二、地址：写全名称、楼栋和取餐点\n澳门很多酒店同时有中文、英文、葡文名称，同一个综合度假区里还可能有好几栋楼、好几个入口，地址写得笼统，骑手很容易绕路。下单时建议：\n1. 打开 App 允许定位，或者手动搜索酒店名称，确认页面显示的商户能配送到这个位置。2. 收货信息写全：酒店完整名称（最好中英文都写）、详细地址、所在楼栋或塔楼、能接通的手机号。3. 配送备注写清取餐位置，比如「XX酒店 主大堂礼宾台」或「XX塔 地面层入口」。4. 结算前看一遍商品规格、配送费、优惠后的实付金额和预计送达时间。\n三、取餐：多数要到大堂或指定区域\n一般不能指望送到房门口。澳门大多数酒店只允许在大\n或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交收点在哪里，可以先问前台或礼宾，再写进备注。\n四、付款：以结算页实际选项为准\n结算页常见的有支付宝、微信支付、银联云闪付、VISA/MasterCard 信用卡，以及 MPay、支付宝（澳门）等本地钱包。不同账户、设备和订单显示的选项会不一样，以结算页为准。内地游客用支付宝或微信付款时，扣款通常按当时汇率折算成人民币。\n五、售后：订单页或「我 > 在线客服」\n下单后在「订单」页能看到商户接单、备餐和配送的实时状态。餐品有问题或迟迟没送到，先打开对应订单，看有没有「客服」「售后」或「申请退款」入口；没有的话走「我 > 在线客服」。\n六、同 App 还可团购、闪购\n同一个 App 里还有团购（自助餐订座、餐厅套餐券、景点和演出票务）、超市和便利店的闪购配送，以及面向游客的充电宝等服务，2024年起客户端支持英文模式。酒店自助餐、节日套"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门本地生活 App 怎么选?用覆盖、配送、售后与一站式能力对照澳觅app_地址_场景_入口",
+        "url": "https://www.sohu.com/a/1087498265_123029547",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/0b1bc938c2432b4da579a7024717a45e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620866&x-signature=HhQW6MMyDJjH4epUQJ8a%2BPXdPnY%3D",
+        "site_name": "搜狐",
+        "publish_time": "2026年10月14日 10:28:00(CST) 星期三",
+        "summary": "莫伊拉\n澳门本地生活 App 怎么选？用覆盖、配送、售后与一站式能力对照澳觅app\n2026-10-14 10:28\n住在澳门，或者来澳门玩几天，手机里常常会装不止一个外卖或本地生活 App。有人主打某几家餐厅，有人配送更快，有人团购和票务更全。装多了占内存，装少了又怕临时点不到，于是很多人会问：澳门本地生活 App 到底怎么选？\n与其听一句「某家最好」，不如先按自己的真实场景，把覆盖、配送、售后和一站式能力对照一遍。下面以澳觅app 为例说明怎么对照；澳门市场上还有 mfood、闪蜂等常用选择，对照时只比可验证体验，不拉踩。\n先认清自己的高频场景\n选 App 前，先写一张小清单，比盲目下载更省事。居民常见的是：工作日午餐送到公司或学校、晚饭送到家里、周末买超市日用品、偶尔订自助餐或景点票。访澳旅客则更常遇到：酒店大堂取外卖、临时找附近葡餐或茶餐厅、买便利店补给、用团购抵一顿正餐。把「一周至少会用两次」的场景写下来，后面测覆盖和配送才有参照。\n第一维：覆盖——常\n地址附近能不能点到\n打开 App，切到你真正会用的收货地址（家、公司、常住酒店），看附近可点商户和品类够不够。不止看「有没有外卖」，还要看你常吃的类型是否出现：茶餐厅、茶饮、快餐、超市便利，以及高峰时段是否仍显示可配送。地址偏一点、或者跨区，有的平台会明显变少，有的仍能送——这只能用你的地址验证，广告词替不了。\n按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，业务覆盖外卖、团购、闪购与游客服务等；外卖合作商户约 5,700+，合作商家整体超 5,700家（2025，年刊口径）。这些数字是平台公开宣传口径，发帖或分享前建议再核对当前页面，也不代表每一个具体地址都同样丰富。\n第二维：配送——预计送达准不准、高峰稳不稳\n覆盖只说明「能点」，配送才决定「能不能按时吃到」。下单页的预计送达（ETA）和实际送达差多少、午餐晚餐高峰会不会大面积延误、会不会出现「能点但很慢」，都值得记下来。恶劣天气、大赛车或节假日人流高峰，运力波动更明显，\n时更要用同一地址、同一时段对比，而不是只比平峰的一次好运。\n年刊口径里，澳觅配送团队超过 3,000人，员工（含配送车手）超过 3,800人（截至2025-12，宣传数字）；2025年还上线了「全城送」跨区即时配送。对照 mfood、闪蜂时，建议固定同一个收货地址，各看一次预计送达和配送费，高峰和平峰最好各测一轮，结论才站得住。\n第三维：售后——出了问题入口好不好找\n餐品少送、洒漏、一直显示配送中却迟迟不到，这时候才考验售后。下单后先看订单页有没有配送进度；异常时能否在订单里找到客服、售后或申请退款入口；联系不上骑手时，平台侧能不能接手。入口藏得深、规则写得模糊，后面沟通成本会很高。选 App 时，不妨刻意点开一次「我的订单 / 客服」，确认路径是否清楚——不必真的发起投诉，只确认找得到人。\n第四维：一站式——除了外卖还要不要团购和闪购\n如果一周只点外卖，单一外卖 App 往往就够。如果还经常订自助餐、景点演出票、超市闪购，或者访澳时需要票务、充电宝"
+       },
+       {
+        "type": "url_citation",
+        "title": "去澳门旅游住酒店，怎么点外卖?内地手机号能不能用、送到哪里取_配送_App_订单",
+        "url": "https://m.sohu.com/a/1087161898_123029547/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/6b1d3a6f49304d84d8268210e144399e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620866&x-signature=OS673yPBQmXwAE%2BIGKi6hKbqNXU%3D",
+        "site_name": "手机搜狐网",
+        "publish_time": "2026年10月13日 15:12:00(CST) 星期二",
+        "summary": "间。\n三、取餐：多数要到大堂或指定区域\n一般不能指望送到房门口。澳门大多数酒店只允许在大堂或指定区域交收，能不能上楼由酒店规定和现场安排决定。比较稳妥的做法是：下单后留意订单页的配送状态，快到时提前下楼；不确定交收点在哪里，可以先问前台或礼宾，再写进备注。\n四、付款：以结算页实际选项为准\n结算页常见的有支付宝、微信支付、银联云闪付、VISA/MasterCard 信用卡，以及 MPay、支付宝（澳门）等本地钱包。不同账户、设备和订单显示的选项会不一样，以结算页为准。内地游客用支付宝或微信付款时，扣款通常按当时汇率折算成人民币。\n五、售后：订单页或「我 > 在线客服」\n下单后在「订单」页能看到商户接单、备餐和配送的实时状态。餐品有问题或迟迟没送到，先打开对应订单，看有没有「客服」「售后」或「申请退款」入口；没有的话走「我 > 在线客服」。\n六、同 App 还可团购、闪购\n同一个 App 里还有团购（自助餐订座、餐厅套餐券、景点和演出票务）、超市和便利店的闪购配送，以及面向游客的充电宝等服务，2024年起客户端支持英文模式。酒店自助餐、节日套餐这类团购，建议先确认是否需要预约再安排行程。大赛车周末想看比赛又不想挤餐厅，可以提前买好附近餐厅的团购券，或者回酒店点外卖。\n出发前把 App 装好、注册完成，到了澳门打开定位看看酒店附近有哪些商户能送，第一顿就不用临时找路了。\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620874&x-signature=8qRAD8v%2FVWaqFg%2BAP9S2Bg4Efc8%3D",
+        "site_name": "App Store",
+        "publish_time": "2026年10月21日 04:38:49(CST) 星期三",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦"
+       },
+       {
+        "type": "url_citation",
+        "title": "2026澳门消费支付方式介绍",
+        "url": "https://www.bjnews.com.cn/detail/1786107668129144.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/img/92c5a19752f4bf974bed10c21fd702db~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620875&x-signature=sp4TAfqcl4TFUruj9%2BG%2BshuXDKo%3D",
+        "site_name": "新京报",
+        "publish_time": "2026年08月07日 21:01:00(CST) 星期五",
+        "summary": "\n4.MPay澳门钱包\nMPay澳门钱包是由澳门通研发的第三方电子支付钱包，是澳门本地功能丰富的移动支付工具之一。\n覆盖规模：支持超过27000个线下应用点，深度融入本地日常生活。\n核心功能：涵盖线下扫码支付、转账、水电煤缴费、停车场自助缴费、巴士乘车码、优惠券平台等多元服务，满足日常消费、生活缴费等各类需求。\n使用规则：以手机号码注册即可使用基础服务，升级账户级别后可提高余额上限与交易限额，最高等级账户需提交身份证明文件开通。目前支持澳门、内地及香港电话号码注册，游客可按需开通基础功能使用。\n二、实打实省心省钱！银联这些优势帮你压低本地消费成本\n1.刷卡消费零附加费，多类卡种可享ATM取现减免\n通过银联网络在澳门商户刷卡消费，持卡人无需支付手续费（部分地区当地监管规定的例外情况除外），消费金额仅按市场汇率折算为人民币入账，没有额外刷卡附加成本，日常消费没有隐性加价。\n除了刷卡消费，经常需要取现金的小伙伴也有相应的减免方案。整理了部分可享受境外取现手续费减免的银联卡卡种，大家可以结合自身情况参考：\n相关提示\n关于取现减免，有几点细节需要特意和大家说明，避免忽略规则产生额外支出：\n可实现手续费减免的主要是高端借记卡和特定主题信用卡，且多数存在“每月限笔数”或“客户等级限制”。\n多数信用卡虽减免手续费，但取现行为本身仍可能计收利息，尤其是使用信用额度进行预借现金时，使用溢缴款（预先存入超出欠款的金额）可规避利息。\n使用时应确保选择银联通道以享受免手续费待遇。\n以上减免仅针对发卡银行收取的取现手续费；澳门部分ATM会由当地受理机构收取额外服务费，该费用与银联、发卡行无关，具体收费以ATM屏幕提示为准。\n2.银联手机Pay一拍即付，出行消费更高效\n便捷高效：支持苹果、华为、荣耀、小米等主流品牌手机及可穿戴设备，线下消费时靠近支持非接支付的POS机即可完成付款，部分机型双击电源键就能快速调起支付界面，便利店、奶茶店、商超等高频小额场景不用解锁手机，支付一气呵成。\n安全可靠：每笔交易都有安全加密保护，不用出示实体卡片，也能降低卡片信息泄露的风险，日常使用更安心。\n优惠丰厚：银联联合澳门本地热门商户推出专属优惠，涵盖购物、餐饮、交通等多个场景，使用手机Pay支付即可参与，进一步降低出行开支。\n3.双标卡换芯升级，境内外畅行无忧\n如果手里持有银联-Visa双标卡也不用担心，目前银联联合十多家主流银行推出了双标磁条卡芯片升级（换芯）服务，升级后的卡片体验全面升级，可以满足澳门出行的支付需求。\n免费换芯升级过的双标卡拥有所有单标卡的权益，支持接触和非接触两种支付方式，支持境内银联网络、境外银联网络及境外Visa网络支付功能，核心升级亮点有三方面：\n用卡更安全：芯片卡每笔线下交易都会生成一次性动态代码，不会传输真实卡号信息，能有效降低卡片信息泄露与盗刷风险，境内日常使用、出境旅行携带都更安心。\n支付更省心：升级后保留原卡号不变，不用重新绑定各类支付账户、代扣服务，和之前用"
+       },
+       {
+        "type": "url_citation",
+        "title": "闪蜂官方app下载安装最新版本-闪蜂app下载v3.4.3-k73游戏之家",
+        "url": "http://m.k73.com/down/android/689028.html",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/607708e2ee66a2a70067f79362922a7b~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620874&x-signature=2ybIM6jOaj%2BLKJONuQmiyvI9W78%3D",
+        "site_name": "k73游戏之家",
+        "publish_time": "2026年09月08日 16:02:00(CST) 星期二",
+        "summary": "闪蜂 官方app下载安装最新版本v3.4.3\n类型：其他\n大小：97.94 MB\n日期：2026-09-06\n版本：v3.4.3\n澳门外卖跑腿新选择\n介绍\n《闪蜂》是一款专为澳门本地生活打造的即时配送与外卖点餐服务平台，致力于为用户提供“点餐+跑腿+同城急送”的一体化便捷体验。它聚合了澳门众多餐饮商户与本地骑手资源，通过智能调度系统实现快速响应，无论是日常三餐、下午茶还是急需的药品文件，都能在短时间内配送到手。应用界面设计清爽直观，下单流程简洁明了，实时订单追踪功能让用户随时掌握配送动态，沟通更安心。对于生活在澳门或前往澳门旅游的用户来说，闪蜂app澳门下载使用，确实能带来不少便利，让本地生活服务触手可及。\n闪蜂点评\n- 聚焦澳门本地生活服务市场，\n- 整合外卖配\n送与同城跑腿功能，\n- 界面设计简洁直观易上手，\n- 实时订单追踪让配送更安心，\n- 智能调度系统提升配送效率。\n闪蜂外卖怎么点餐\n点餐是外卖平台最核心的功能，闪蜂外卖的整个下单流程设计得相当流畅，即便是初次使用的用户也能快速上手。在开始点餐前，请确保手机网络顺畅，并且已经完成了闪蜂APP的安装。整个流程可以概括为“选商家、加购物车、提交订单、等待送达”四个步骤，下面拆解开来看具体操作。\n打开闪蜂APP后，系统会自动定位到您当前的位置，首页会按照距离和评分推荐附近的入驻商家。如果心里已有想吃的美食，可以直接在顶部搜索框输入商户名或菜品名，比如“葡国鸡”、“猪扒包”等，点击搜索后即可看到相关结果。选定商家后，建议先看一\n店铺评分、月售量和起送价，这些信息能帮助您判断出餐质量与配送门槛。\n进入商家店铺页面后，可以看到分类清晰的菜单列表。点击菜品右侧的“+”号即可将商品加入购物车。这时，您可以根据个人口味选择规格，例如“加辣”、“少冰”或“多加一份米饭”等备注信息，方便商家和后厨准备。挑选完毕后，点击屏幕下方的“去结算”按钮，进入订单确认页。\n在订单确认页面，需要仔细核对配送地址、联系电话以及期望送达时间。闪蜂外卖提供“立即送出”和“预约送达”两种选项，日常点餐选立即送出即可。确认无误后点击“提交订单”，系统会自动匹配附近的骑手接单。之后便可在订单详情页查看骑手的实时位置与预计到达时间，全程透明可视化。收到餐品后别忘\n检查包装是否完好、餐品是否齐全，确认无误后再在平台上点击“确认收货”并完成支付。\n这里需要特别提示的是，支付方式上闪蜂支持多种澳门本地常用的电子支付工具，当然也支持现金支付给骑手，具体以页面显示为准。如果在点餐过程中遇到商家长时间不接单或者骑手配送超时的情况，可以直接在订单页面联系在线客服，平台会依据规则给出相应处理方案。对于第一次尝试闪蜂外卖的用户，不妨先从一份简单的下午茶或小吃开始体验，整个流程走一遍后就会完全熟悉了。\n操作步骤 具体动作 注意事项\n第一步 打开APP选商家 确认定位准确\n第二步 加购菜品 备注口味偏好\n第三步 提交订单 核对地址电话\n第四步 跟踪骑手 异常时联系客服\n闪蜂是美团的吗\n很多澳门用户在初"
+       },
+       {
+        "type": "url_citation",
+        "title": "App StorePreview",
+        "url": "https://apps.apple.com/cn/app/%E6%BE%B3%E8%A6%93/id1104177940?l=nl",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/ee87bdec0332fdee4a18ea1d864915b9~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620880&x-signature=oNYI3x76Y0kze7uv1x%2FsvFipm9I%3D",
+        "site_name": "App Store",
+        "publish_time": "2016年06月01日 00:00:00(CST) 星期三",
+        "summary": "App Store Preview\n澳觅-澳门一站式生活服务平‪台‬ 4+\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\nOntworpen voor iPhone\n#24 in 美食佳饮\n4,5 • 235 beoordelingen\nGratis\niPhone-schermafbeeldingen\nBeschrijving\n【特色服务】\n1.吃喝玩乐一应俱全\n◇外卖订餐水果宵夜，酒店旅游周边推荐;\n◇团购优惠折扣秒杀，吃喝玩乐购全覆盖;\n◇超市便利极速送达，生鲜蔬果生活百货;\n◇澳觅直播全澳钜惠，直播电商购物体验;\n◇澳觅拼团全球好货，品质好货省钱省心;\n◇澳觅跑腿同城取送，极速帮买帮取帮送。\n2.旅游出行一站搞定\n◇电召打车，方便快捷;\n◇美食优惠，全面覆盖;\n◇酒店住宿，优惠预订;\n◇洗衣服务，游玩无忧;\n◇澳觅地图全面升级，点击店铺地址栏，提供检索、路线指引等特色功能，更多惊喜功能期待您去发现。\n【产品特点】\n吃喝玩乐购，澳觅全都有:美食精选、外卖订餐、酒店预订、旅游出行、品牌秒杀、洗衣服务，澳门一站式生活服务全覆盖。\n◇情侣约会:吃美食、看电影、住酒店、去旅游;\n◇懒宅点餐:美食、水果、鲜花、下午茶、超市百货;\n◇朋友轰趴:按摩足疗、KTV、桌游电玩;\n◇旅游周边:合作商家覆盖澳门湾区;\n◇打车出行:电召的士，方便快捷;\n◇品牌秒杀:产地果蔬、品牌食品、家居百货、一站购齐。\n【产品简介】\n澳觅为您提供美食、外卖、团购、超市便利、电商、直播购物、酒店、旅游、KTV、洗衣、跑腿等全面服务。除各种优惠，澳觅提供用户消费评价、商家评分、商家资讯查询等功能，旨在为用户提供好的服务!\n【关于澳觅】\n『澳觅APP』于2016年6月1日正式上线，现已成\n汇聚美食外卖、团购优惠、直播电商、超市便利，跑腿服务、酒店住宿、洗衣服务及各项本地生活服务于一体的城市一站式生活服务平台，是澳门最大的生活电商平台。澳觅秉承客户第一的价值观，与全澳5000+商家紧密合作，持续为用户带来更好的服务。\n【用户帮助】\n感谢您使用澳觅APP手机客户端，使用中有任何问题可通过以下方式查询解决:\n1. 客户端查询入口:『我』—『在线客服』;\n2. 官方公众号:澳觅APP;\n3. 官方Facebook:澳觅-让城市生活更美好。\nNieuw\n6 jun. 2023\nVersie 6.17.3\n已知问题修复，\n用户体验优化。\nBeoordelingen en recensies\n4,5\nvan 5\n235 beoordelingen\n235 beoordelingen\n水江钱.8 , 14-05-2023\n正在使用中，感觉还不错​   ‍\n真心很实用。  没有花里胡哨的界面.一如既往的好    ‍\nGxDaisy , 15-12-2022\n手机接收不到验证码\n登录不了\nssMi啧啧6 , 16-05-2023\n很不错，很不错，你值得拥有\n挺不错的手机哦- 不错不错不错赞赞赞‍  ​\nApp-privacy\nDe ontwikkelaar, FRESH LIFE TECHNOLOGY COMPANY LIMITED\n, heeft aangegeven dat volgens de toepassing van het privacybeleid van de app gegevens kunnen worden beheerd zoals hieronder staat beschreven. Ga voor meer informatie naar het\nprivacybeleid van de ontwikkelaar\n.\n用于追踪你的数据\n以下数据可能会用于在其他公司的 App 和网站中追踪你:\n购买项目\n与你关联的数据\n开发者可能会收集以下数据，且数据与你的身份关联:\n购买项目\n未与你关联的数据\n开发者可能会收集以下数据，但数据不会关联你的身份:\n标识符 诊断\nToepassing van het privacybeleid kan variëren op basis van bijvoorbeeld de functies die je"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅官网",
+        "url": "https://120.79.38.16/",
+        "logo_url": "",
+        "site_name": "",
+        "publish_time": "2025年07月03日 18:54:46(CST) 星期四",
+        "summary": "關於澳覓\nAbout Aomi\n澳門網絡傳媒發展有限公司是澳門一家領先的創新型科技公司，其獨立開發及運營的「澳覓APP」於2016年6月份上線，是澳門首家吃喝玩樂、優惠搜索、並支持雙幣支付（澳門幣和人民幣）的生活電商平臺。\n澳覓業務範圍較廣，借助移動互聯網信息技術和線下服務能力，開展外賣、團購、房產、休閒娛樂、美容美髮等業務，為消費者提供值得信賴的本地商家推薦、優惠資訊、消費指南、O2O閉環交易等服務。未來我們也會持續不斷為用戶提供更多服務，為人們的美好生活不斷努力。\n發展歷史\nDEVELOPMENT HISTORY\n2020\n·\n累計用戶突破280萬，日活躍用戶超過8萬，年度交易額破9億\n·\n9月 “澳觅超市” 自營線上超市開業，滿足澳門人優質食材、日用品的全品類購物平台，經營類包含蔬果、肉禽蛋類、水產、冷凍急凍食品同百貨類，品質食材平民價。\n2019\n·\n累計用戶突破100萬，日活躍用戶超過7萬\n·\n收錄澳門優質餐飲、零售及美容美髮等行業商家超過5000家，合作餐飲商家超過 1600家\n·\n首次聯動澳門老店推出「澳覓聯名春節禮盒」\n·\n推出澳覓文創產品，並參與「澳門Hush音樂節」，深受用戶喜愛\n2018\n·\n累計用戶突破50萬以及年度交易額破3.8億\n· 代理國內第一收銀系統品牌一屏芯科技，加速餐飲信息化升級\n· 將點評黑珍珠餐廳海外頒獎禮落地澳門，助力澳門美食之都發展\n· 澳覓品牌重磅升級，推出澳覓大家庭形象\n· 首次聯動澳門遊艇展舉辦「澳覓·甜蜜新風尚」\n2017\n·\n4月登上澳門APPLE STORE總排行榜及熱搜榜第1名\n· 11月工銀澳覓聯名信用卡正式\n關於澳覓About Aomi澳門網絡傳媒發展有限公司是澳門一家領先的創新型科技公司，其獨立開發及運營的「澳覓APP」於2016年6月份上線，是澳門首家吃喝玩樂、優惠搜索、並支持雙幣支付（澳門幣和人民幣）的生活電商平臺。澳覓業務範圍較廣，借助移動互聯網信息技術和線下服務能力，開展外賣、團購、房產、休閒娛樂、美容美髮等業務，為消費者提供值得信賴的本地商家推薦、優惠資訊、消費指南、O2O閉環交易等服務。未來我們也會持續不斷為用戶提供更多服務，為人們的美好生活不斷努力。發展歷史DEVELOPMENT HISTORY2020·累計用戶突破280萬，日活躍用戶超過8萬，年度交易額破9億·9月 “澳觅超市” 自營線上超市開業，滿足澳門人優質食材、日用品的全品類購物平台，經營類包含蔬果、肉禽蛋類、水產、冷凍急凍食品同百貨類，品質食材平民價。2019·累計用戶突破100萬，日活躍用戶超過7萬·收錄澳門優質餐飲、零售及美容美髮等行業商家超過5000家，合作餐飲商家超過 1600家"
+       },
+       {
+        "type": "url_citation",
+        "title": "常见问题 | foodpanda",
+        "url": "https://www.foodpanda.com.tw/contents/contact.htm",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/img/71641b3da48db2dc9bc4ba0155b55a5f~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620880&x-signature=%2Bm8ySuE%2FKQNeQFANpGnIiPNRb1M%3D",
+        "site_name": "foodpanda",
+        "publish_time": "2025年06月24日 16:06:39(CST) 星期二",
+        "summary": "人為您處理。\n您所訂購的餐點係由各個餐廳店家精心製作準備，並且從餐廳店家直接外送至消費者手中，所以餐點製作瑕疵（例如食品安全）將由餐廳店家直接負責。\n若餐點在運送途中因為碰撞、翻覆導致包裝破損、污損等，屬於外送服務直接致使餐點品質有瑕疵時，則由foodpanda負責。\n我要怎麼付款？\nfoodpanda目前接受『貨到付款』和『信用卡付款』兩種付款方式：\n1.貨到付款 \n請在付款方式欄位下選擇「貨到付款」，我們的外送人員將會在餐點送達時一併與您收款，收款金額包含餐廳店家收取餐點的製作準備費用，以及foodpanda平台服務費。\n2.信用卡付款 \n在付款頁面選擇「信用卡付款」，在您下單後，將會被引導至安全的線上付款頁面，您可按照網站的指示完成付款，付款金額包含餐廳店家收取餐點的製作準備費用，以及foodpanda平台服務費。在付款成功後，foodpanda將會立即開始處理您的訂單\n關於foodpanda網站\n什麼是foodpanda\nfoodpanda是一個方便的線上訂餐平台，您可以在foodpanda網站上訂購上百間餐廳的餐點外送。我們堅信訂購外送應該要簡單快速並充滿樂趣。只要透過簡單的幾個步驟您就能在網路上訂購到各式料理。foodpanda不僅提供您上百間的餐廳的菜單，更貼心地設置顧客評價系統，您可以參考上千客戶使用心得，讓您輕易選擇最適合您的餐點。\n使用foodpanda線上訂餐的優點\n1.多樣化的選擇：在我們的網站上，各式各樣的餐廳供您選擇，您可以直接在我們 的網站上瀏覽餐廳的菜單，使用我們的網站您就不需要自己去蒐集菜單，動動手指 就能品味數百間餐廳的美味佳餚!\n2.節省時間：您不用再花時間煩惱有什麼可以吃，更不用花時間打電話去餐廳問菜單、訂餐，浪費時間核對餐點，訂餐成功後，系統還會自動將您的餐點明細寄給您，再也不用費心抄寫訂餐內容了!\n3.清楚透明的訂餐資訊及評價制度: 在我們的網站上您可以看到確切的資訊，清楚 標明預估送達時間、低消、餐點價格，更貼心的是foodpanda網站架立了顧客評論 系統，您可以參考其他顧客的消費經驗，來幫助您做決定。\n4.若您想重複您之前的訂單，登入您的email後，您可以在您的帳戶內查詢您過往的 訂餐記錄，並且一個按鍵就可以重複您之前的訂單。\n你們有提供中文或英文服務嗎?\n有的,不論是網站或是App裝置,我們都提供了中/英文服務。任何菜單或餐廳資訊 都有雙語顯示;我們的客服人員也都能以英文溝通。\nfoodpanda的營業時間是?\nfoodpanda目前於雙北、新竹、桃園、台中、高雄地區提供美食外送服務。在台北市大安區、中正區、中山區、大同區提供24小時服務 ， 其餘地區的營業時間為每天上午9點到凌晨12點 。在非營業時間您仍可瀏覽您想訂的餐廳並預訂餐點，在下一個營業日開始時我們會立即處理您的訂單並回覆您，若您隔日未收到確認簡訊請您聯繫我們客服確認訂單是否成功\n如何看到所有的餐廳?\n如果您想看到所有跟我們合作的餐廳，只要上我們的餐廳列表頁面http://www.foodpanda.com.tw/restaurants 就可以看到完整的名單。你也可以在首頁輸入您的地址，搜尋哪些餐廳可以外送到你府上。\n是由誰來負責foodpanda美味外送的服務"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254888173600000000000000000000ffffac191133f1d96d"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 24474,
+   "output_tokens": 826,
+   "total_tokens": 25300,
+   "input_tokens_details": {
+    "cached_tokens": 11888
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 151
+   },
+   "tool_usage": {
+    "web_search": 10
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 10
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792808059,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:14:19+08:00"
+}

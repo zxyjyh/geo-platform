@@ -1,0 +1,227 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门景点门票哪里订便宜？"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "country": "中国",
+     "region": "广东",
+     "city": "深圳"
+    }
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792548798,
+  "id": "resp_021792548797421e9cb5252029dbbd5be23154381b1012b7cad92",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254879807800000000000000000000ffffac15c2278579f1",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "用户问的是澳门景点门票哪里订便宜，我将通过搜索多维度信息，获取澳门优惠购票的相关参考。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHDju7QuRAzTyZR2RmTWBLme9kvLe2UCLmrAN1lpYXqX958p1MqV/hmu8GHStPlnXRAIknfnJxXVwnh2qcQdLOhFZfAu2w5i6MxCMHWwgoHLeB+063QBOcOyBJbvUr4c/0VwfXxv3dq+dyRiJA16Z9MRQm9Ra+seKopYhs01fgylC0J8wK/q8Z/tmAMxOQgK3nbZaAEgwVI0QF6ZBZy4wnz62RYDV0rhpu8fIR+75o6supdPDxdgUo3/vHxKaQnZjP+NKYpkuY1OewKFgY+tUkb9jgF0IXTLpYSfZWZ6qNk9IatbbPFTLQ3cM+xL6JuOaFqNMFdFf9LcFgU2ptEhWVV5A7qg+RAhYofAqSDYGv5G+KMHUqx7d+6X6e8HUPKitvYH6he0J8bS5sQjNk471m5W4JYAGWtluCBs+7POX/DXSVD2JwnejFGurTogadAv2FN+MgAgVCsTWdNkPi84UB4GIZLsg=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门景点门票哪里订便宜 2026;澳门门票 Klook KKday 携程 美团 优惠对比;澳门大三巴 澳门塔 威尼斯人 门票 预订攻略;澳门景点套票 优惠 购买渠道",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254880250200000000000000000000ffffac15c2275afec0"
+   },
+   {
+    "id": "rs_02179254880603500000000000000000000ffffac15c2276c9e36",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "我已经获取了一些信息。针对各主流购票平台的优惠信息与购票技巧，我将开展进一步搜索。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djFCfJEMA+j98qRpowOLgPK+h9d0T5qmdUWuZiX1fnKmASlQjd1SQIJ5VOBgBB+Xk7+D72FDo0Lf4ZqfeivGZ9oE+nKVhipY3FfLMhqU4GotAo0YbFRCUwH3hPTHanir7542lkasSTeckCbWBd5FMKHLOpOFIuElf6+5yTCETUZNnlVBpz9aWi6NBHahLfBJaW2niElRNtTzQnQyyTT+pTo8iLAP0gGl9LG2eB7iXUbnFaoCcnqhyH5szkEG4i+MeEjCsMoH1vK2uk8ZoMKxUJsD/jw5sl5uY0frMbMSV+EZ2p3//ITsv3HS2/gzBJrXG7fTXseEvDfmehd2M8/4eNzaVcLDyWexVyat7/RngY9zaAh8PVZirIQK0RJGj4JiAsF52R+K7ufBoPMF+ymKBThLd0XgS/VMOxqEIr5grKS6fYbxAaiZT1DSschFprHbwNSlBGD/ttJ6j7iahfRoRZC7E/YzkqX1X1szrF+4dN4MgkZvXRELwSWSJgwst/4G7Fn6NuhjADIITDecf29qpzv+lWBkopmoRLrPrYR8eDQPZ8xjnA5NskdQalKUh8P1j2d+nvAgzo6fDeLlGdArbfvXnhLbjlOISImJZwRXYDB56zpD9TYBnrvnEsBUyvZdDUvH3bWSkAlPRw=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳门旅游塔 门票 Klook 携程 价格对比 2026;澳门 teamLab 门票 优惠 预订;澳门新濠影汇 水上乐园 八字摩天轮 套票 便宜;澳门旅游 优惠券 领取 微信支付 支付宝",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254881043600000000000000000000ffffac15c227ba7c9b"
+   },
+   {
+    "id": "rs_02179254881483000000000000000000000ffffac15c22749f2f2",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "我已经收集了比较丰富的信息。\n\n我已梳理出澳门景点门票及相关玩乐产品的全渠道优惠信息，涵盖Klook、新濠影汇官网、OTA平台、本地生活App、政府优惠等多个渠道的折扣政策，也整理了大三巴、威尼斯人购物中心等免费景点，同时明确了购票比价的核心注意事项。目前暂未查询到KKday的相关信息，后续我会判断是否需要补充搜索携程、美团的具体优惠情况。\n\n经确认现有信息已足够支撑输出内容，我已梳理好内容框架，将按实用导向整理成清晰的回答，无需再补充搜索工具，直接输出即可。"
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "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"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "# 澳门景点门票，哪里订便宜？\n\n结合目前（2026年10月）各平台的价格和活动，核心结论是：**单票比价上 Klook，多景点买通票，度假村项目先看官网套票，同时领 OTA 平台的政府消费券**。下面按渠道拆解。\n\n## 一、主流购票渠道对比\n\n| 渠道 | 适合场景 | 优惠力度/特点 |\n|---|---|---|\n| **Klook 客路** | 单个景点、比价党 | 澳门旅游塔成人票约 ¥120–140（现场约 MOP158），还能领券再打约9折；景点多为\"即时确认\" |\n| **Klook 澳门景点通票** | 一次玩2–4个付费景点 | 14+个景点任选（teamLab、新濠影汇水上乐园、旅游塔、8字摩天轮、贡多拉、观光巴士等），**最高约7折**；购买后30天内激活，再享30天预约期 |\n| **携程/美团/飞猪/同程/去哪儿** | 和酒店、机票一起订 | 澳门旅游局常年合作平台，会发酒店券、景点门票券和美食券，订机酒套餐时叠加最划算 |\n| **景点/度假村官网**（新濠影汇、威尼斯人、澳门旅游塔） | 买套票、住店客人 | 官网常有独家套票，住客另有特权；旅游塔官网提前订套票号称省约20% |\n| **澳觅 AOMI（澳门本地App）** | 人在澳门、想顺便点外卖团购 | 本地生活平台，景点/乐园/演出票入口在App内，支持支付宝、微信、MPay，建议作为比价渠道，不保证全澳最低 |\n| **澳门通/MPay** | 长期或多次赴澳 | 澳门通App有联票产品（宣传可省约30%），MPay会员（如濠友荟）可买专属玩乐套票 |\n\n## 二、几个热门项目的具体买法\n\n- **澳门旅游塔**：优先 Klook 等平台电子票，比现场便宜，且常见\"门票+游戏点/纪念品\"组合；想玩蹦极、空中漫步等高空项目，买官网/平台的**项目套票**比单买划算。建议17:00–19:00登塔，日落+夜景一次看。\n- **新濠影汇（8字摩天轮、水上乐园、满纷乐园）**：\n  - 官网套票很能打：摩天轮+飞行影院套票 MOP190；\n  - \"玩乐纷FUN通\"MOP668 含水上乐园+摩天轮+满纷乐园+电影票（号称价值MOP1010，需濠友荟会员）；\n  - 满纷乐园**每天16:00后入场半价**（节假日及暑期除外）。\n- **teamLab超自然空间（威尼斯人）**：票价较高（约MOP280），Klook通票里含这一项时，用通票兑换往往比单买便宜很多；3岁以下免票。\n- **威尼斯人贡多拉**：单票约MOP158，**威尼斯人/金沙系酒店住客常有买一送一**，住店先问前台。\n- **水舞间等演出**：看重指定座位选官方票房；和酒店打包订\"演出+住宿套票\"通常更省钱。\n\n## 三、额外省钱思路\n\n1. **先领券再下单**：关注\"澳门特区旅游局\"官网及微信/小红书/抖音，\"感受澳门\"系列优惠会通过携程、美团、飞猪等发放门票和消费券。\n2. **本地消费券**：2026年四季度澳门有\"社区赏乐\"活动，乘\"休\"游巴士或参加官方导赏可领兑换码，通过微信/支付宝/MPay领满减券（能用于部分合作商户）。\n3. **免费景点其实很多**：大三巴牌坊、议事亭前地、玫瑰堂、各大度假村（威尼斯人、巴黎人、伦敦人、永利皇宫的大堂和表演）、龙环葡韵、黑沙海滩等都免费，付费项目集中在塔、乐园、展馆和演出。\n4. **善用酒店免费穿梭巴士**串联景点，省下交通费。\n\n## 四、下单注意事项\n\n- 比价时**固定同一日期、同一场次/票种**，并注意标价是澳门元还是人民币（MOP1 ≈ RMB0.89）。\n- Klook 等平台不少优惠票**不可取消、不可改期**，行程确定再买；通票注意激活和预约时限，热门项目（如水上乐园、水舞间）需提前在App内预约时段。\n- 证件随身带：儿童/长者票、换票入场时常需查验。\n- 不要买来路不明的转售票，存在无法入场风险。\n\n**一句话建议**：行程确定后，先在 Klook 看单票和\"澳门景点通票\"哪个折后更便宜，再去对应度假村官网比一下套票和住客优惠，最后到携程/美团领券叠加——三重比完基本就是低价了。祝你澳门之行玩得尽兴！",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "去澳门玩:景点门票和演出票怎么买更划算",
+        "url": "https://www.sohu.com/a/1088071943_123029547",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/0b1bc938c2432b4da579a7024717a45e~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620804&x-signature=1r%2F0ojetm1sI%2FBicBUrDV2dcdDE%3D",
+        "site_name": "搜狐",
+        "publish_time": "2026年10月15日 14:09:00(CST) 星期四",
+        "summary": "莫伊拉\n去澳门玩：景点门票和演出票怎么买更划算\n2026-10-15 14:09\n访澳行程里，景点门票和演唱会、秀场演出票经常临时卡住：不知道去官方订还是用平台订，也不清楚本地 App 能不能买。下面用攻略口吻说清渠道怎么选、澳觅里怎么找，以及内地游客要注意的点。\n先选渠道类型。官方/场馆票房适合要指定场次、座位或官方凭证的情况；旅行社和综合旅游平台适合和酒店交通一起订，但要额外确认入场与换票方式；澳门本地生活 App 适合希望少装软件、把票务和外卖团购放一起的人。无论哪一类，都先确认场次票种，再比价。\n澳觅（AOMI）定位澳门一站式本地生活，2016 年起覆盖吃喝玩乐等场景。官网「遊玩出行」写明演唱会、游乐园、澳门景点门票即订即玩；应用商店描述也提到演出票务。可引用口径是：演出票务在澳觅 App 内有入口；景点与乐园门票请在 App 内查看当前可购品类，并建议与官方等正规渠道多方比价，不要理解为「全澳一定最便宜」。\n使用路径：打开澳觅 App，从相关出行/团购/票务入口进入，或搜索演出、景点名称；核对日期场次与票种后下单。结算页常见支付宝、微信、银联、MPay 等，以实际可选为准。注册支持 +86/+852/+853。微信「澳觅外卖」小程序可用于部分既有服务，票务以 App 为准。问题优先「我」＞在线客服，邮箱 info@aomiapp.com 补充。\n比价时固定同一场次、同一票种，保存订单凭证，警惕无法核验来源的转售。具体可购场次与价格以澳觅 App 当前页面为准。 返回搜狐，查看更多\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "旅游局以全新主题优惠引客留澳 - 澳门特别行政区政府旅游局",
+        "url": "https://www.dst.gov.mo/zh-hans/about-us/press-release/6f189a4724a344c082ee5182a74b4a53.html",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/img/6abfa3625af27a57c09d9f62a68ef7ed~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620804&x-signature=rg5FVj8fQocs2HzTE8MkWFgLPQI%3D",
+        "site_name": "澳門特別行政區政府旅遊局",
+        "publish_time": "2022年02月22日 00:00:00(CST) 星期二",
+        "summary": "旅游局以全新主题优惠引客留澳\n发布于  :  2022/02/22\n旅游局逐步宣传“感受澳门‧想你享福利”\n【旅游局】旅游局最新宣传片“感受澳门‧乐无限”\n为配合及持续推行澳门特别行政区政府扩客源的工作，旅游局以全新主题“感受澳门‧想你享福利”，今年继续与航空公司、电商平台及线上旅行社（OTA）合作，全年分阶段向内地旅客发放机票及酒店住宿等优惠。旅游局冀透过此主题的相关优惠项目，吸引更多旅客来澳门旅游，延长旅客留澳时间，带动消费，推动旅游经济复苏。\n留澳越长 优惠越多  是次优惠项目中的机票优惠已于本年初推出，旅客可于澳门航空公司官网、携程、同程、去哪儿及飞猪平台预订享受优惠，而酒店优惠券将于明（23日）零时零分上线，随后陆续透过携程、美团、去哪儿、同程、智行及飞猪平台向旅客发放。旅客留宿时间越长，可享优惠越多，鼓励旅客延长留澳时间，到各区游历，带动旅游及社区消费。\n此外，针对不同客群和主题，并配合全年不同节庆假期及盛事，各合作平台亦将提供多元化的游澳消费优惠，除机票买一送一及酒店五折券外，将加推购物、景点门票及美食等其他优惠。\n旅游局亦逐步加强透过官方社交平台帐号及联合网络旅游达人，向旅客宣传“感受澳门‧想你享福利”优惠活动。旅客可透过澳门特区政府旅游局网站（www.macaotourism.gov.mo）、微信、微博、小红书和抖音帐号以及各合作平台了解相关资讯及最新优惠详情，并请持续关注陆续发送的领取优惠攻略。\n最新宣传片“感受澳门‧乐无限”今（22日）发布  旅游局推出最新宣传片 ─ “感受澳门‧乐无限”并于今（22日）发布。旅游局将围绕“感受澳门‧乐无限”概念，全方位向旅客推介澳门作为旅游目的地的魅力，邀约旅客深入“感受澳门”，享受无限欢乐体验。\n旅游局将继"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门旅游景点门票 | 一站式攻略与省钱秘籍 | 旅游之家",
+        "url": "https://www.duoshouma.com/archives/16611",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/img/dbb9176a65b6f8f8274248d5dde1b6e2~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620804&x-signature=i0d5EPCxLhSdvpC2g03CdXiGkpQ%3D",
+        "site_name": "旅游之家",
+        "publish_time": "2025年03月26日 08:02:00(CST) 星期三",
+        "summary": "澳门旅游景点门票 | 一站式攻略与省钱秘籍\n2025-03-26 08:02\n澳门旅游\n澳门旅游景点门票全解析与深度玩法指南\n澳门旅游塔\n门票价格：成人票158澳门元起（观景台）｜高空项目套票588澳门元起\n特色亮点：全球第10高独立式观景塔，提供233米高空漫步、蹦极跳等极限体验，360°旋转餐厅可俯瞰珠澳全景。\n深度建议：17:00-19:00时段登塔可同时欣赏日落与夜景，提前官网预订套票节省20%费用。\n大三巴牌坊\n门票政策：免费开放｜遗址博物馆门票15澳门元\n文化密码：世界文化遗产核心地标，隐藏着圣母踏龙头雕像、汉日殉难浮雕等珍贵历史符号。\n探索路线：清晨7:30避开人潮拍摄全景，结合周边玫瑰堂、哪吒庙串联游览，夜间灯光秀每周五20:00上演。\n威尼斯人度假村\n特色体验：免费入场｜贡多拉船票158澳门元/人（15分钟）｜teamLab超自然空间展馆280澳门元\n秘境玩法：大运河购物中心隐藏拍照点位于3楼运河中段，每周三下午有即兴歌剧表演。\n省时贴士：购物中心10:00开门前拍摄空镜，酒店住客可享贡多拉船票买一送一特权。\n品质出行方案\n针对追求舒适体验的游客，推荐选择高端定制游服务。专业旅游管家阿龙团队提供全程VIP服务：\n5天4晚行程含丽思卡尔顿/摩珀斯等奢华酒店\n独家包场大三巴晨拍、米其林餐厅订位服务\n人均预算1000+即享全程专车接送与景点快速通道\n现通过微信lvyou168288咨询可获赠：\n① 限量版澳门文创礼包\n② 新濠影汇水上乐园免票名额\n③ 本地人私藏美食地图\n智慧出行锦囊\n购票策略：澳门通APP购买联票可节省30%费用\n时间管理：周三至周五景点人流较少，周末提前1小时到达热门场所\n交通诀窍：利用酒店免费穿梭巴士串联主要景点\n特别提醒：持有航空/酒店预订凭证可享部分景点折扣\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Klook 澳门景点通票 - Klook",
+        "url": "https://www.klook.cn/zh-CN/activity/216131-klook-pass-macau/",
+        "logo_url": "https://p3-volcsearch-sign.byteimg.com/isp-i18n-media/image/813540d6e23b7e5e55056e16b462abf2~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620804&x-signature=gBFNgAJBUrNDD7Z3s3mZgqEkwCA%3D",
+        "site_name": "Klook 客路",
+        "publish_time": "2026年10月08日 00:00:00(CST) 星期四",
+        "summary": "Klook 澳门景点通票\n4.4/5\n澳门\n城市旅游必备 Klook 景点通票，超过14个景点／活动任选2 - 4个 ，享超值优惠！\n想知道每个套餐包含哪些活动吗？选择您想要的套餐，并参考「套餐详情」中的「包含活动」！\n标准通票让您可进入澳门顶级景点，包括teamLab 超自然空间澳门、新濠影汇水上乐园、水舞间等。\n透过加购澳门新濠影汇水上乐园的尊享选项，让您的体验更加精彩！\n购买后30天内激活通票并完成首次预订，即可解锁额外30天预订其余活动。别忘了提前预订！\n活动介绍\n使用 Klook 澳门景点通票，探索澳门顶级景点，并享有门票价格最高7折 优惠。\n从2至4个活动中选择，即可畅游超过14个景点 。此通票包含澳门多个热门景点的入场资格，包括teamLab 超自然空间澳门、新濠影汇水上乐园、水舞间等！\n想寻找额外体验或升级至尊荣享受？透过豪华加购项目 - 澳门新濠影汇水上乐园，让您的冒险更精彩！\n重要注意事项： 插图中提及的活动可能不适用于 Klook 景点通票。请参阅套餐详情以获取最新活动列表。\n金光飞航港澳船票\n水舞间\n澳门新濠影汇满纷乐园\n澳门 teamLab 超自然空间\n澳门旅游塔\n澳门新濠影汇之星8字摩天轮门票\n澳门新濠影汇水上乐园\n澳门巴黎人酒店艾菲尔铁塔观景台\n澳门威尼斯人贡多拉之旅\n方块王国\n澳门新濠影汇自助餐\n澳门开篷观光巴士夜游\n澳门随上随下观光巴士\n澳门新濠影汇传奇英雄科技园\n地点\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "Klook 澳门景点通票 - Klook",
+        "url": "https://www.klook.cn/zh-CN/activity/216131-klook-pass-macau/",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/image/813540d6e23b7e5e55056e16b462abf2~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620804&x-signature=lL%2BMxfP8IpSu64wHBxP9hD2ftMM%3D",
+        "site_name": "Klook 客路",
+        "publish_time": "2026年10月08日 00:00:00(CST) 星期四",
+        "summary": "Klook 澳门景点通票\n4.4/5\n澳门\n城市旅游必备 Klook 景点通票，超过14个景点／活动任选2 - 4个 ，享超值优惠！\n想知道每个套餐包含哪些活动吗？选择您想要的套餐，并参考「套餐详情」中的「包含活动」！\n标准通票让您可进入澳门顶级景点，包括teamLab 超自然空间澳门、新濠影汇水上乐园、水舞间等。\n透过加购澳门新濠影汇水上乐园的尊享选项，让您的体验更加精彩！\n购买后30天内激活通票并完成首次预订，即可解锁额外30天预订其余活动。别忘了提前预订！\n活动介绍\n使用 Klook 澳门景点通票，探索澳门顶级景点，并享有门票价格最高7折 优惠。\n从2至4个活动中选择，即可畅游超过14个景点 。此通票包含澳门多个热门景点的入场资格，包括teamLab 超自然空间澳门、新濠影汇水上乐园、水舞间等！\n想寻找额外体验或升级至尊荣享受？透过豪华加购项目 - 澳门新濠影汇水上乐园，让您的冒险更精彩！\n重要注意事项： 插图中提及的活动可能不适用于 Klook 景点通票。请参阅套餐详情以获取最新活动列表。\n金光飞航港澳船票\n水舞间\n澳门新濠影汇满纷乐园\n澳门 teamLab 超自然空间\n澳门旅游塔\n澳门新濠影汇之星8字摩天轮门票\n澳门新濠影汇水上乐园\n澳门巴黎人酒店艾菲尔铁塔观景台\n澳门威尼斯人贡多拉之旅\n方块王国\n澳门新濠影汇自助餐\n澳门开篷观光巴士夜游\n澳门随上随下观光巴士\n澳门新濠影汇传奇英雄科技园\n地点\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "【澳门地标】澳门旅游塔观景门票 - Klook",
+        "url": "https://www.klook.cn/zh-CN/activity/506-macau-tower-macau/?is_from_site_redirect=2&krt=r11",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/813540d6e23b7e5e55056e16b462abf2~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620812&x-signature=C%2BwD74I0POXx0Yw7dm4hZqxmmpQ%3D",
+        "site_name": "Klook 客路",
+        "publish_time": "2026年10月20日 00:00:00(CST) 星期二",
+        "summary": "【澳门地标】澳门旅游塔观景门票\n4.6/ 5\n今日开放时间：10:00-20:00\n建议时长\n1 - 2小时\n澳门旅游塔, 澳门, 澳门特别行政区\n套餐选择\n全部\nJOGUMAN 聯名組合方案\n觀光塔入場票（成人） + JOGUMAN 聯名套票\n1張澳門旅遊塔票\n所選日期當天有效\n不可取消\n立即確認\n領券即享10 折扣\n套餐详情\n零售價：¥ 157\n¥ 140\n已減10%\n入場門票\n觀光塔入場票 - 成人 (有效期至2026年12月31日)｜送傳奇英雄科技城5遊戲點\n1張澳門旅遊塔票\n有效期至2026年12月31日\n不可取消\n立即確認\n領券即享10 折扣\n套餐详情\n零售價：¥ 172\n¥ 120\n觀光塔入場票 - 兒童/長者 (指定日期有效)｜送傳奇英雄科技城5遊戲點\n1張澳門旅遊塔票\n所選日期當天有效\n不可取消\n立即確認\n領券即享10 折扣\n套餐详情\n零售價：¥ 114\n¥ 78\n入場券 + 紀念品\n觀光層門票 + 旅遊塔造型雪條\n1張澳門旅遊塔票\n所選日期當天有效\n不可取消\n立即確認\n領券即享10 折扣\n套餐详情\n零售價：¥ 111\n¥ 107\n已減10%\n方案詳情\n費用包含\n1張澳門旅遊塔票\n入場觀光廊（58層）\n入場戶外冒險活動觀景區（61層）\n1個 旅遊塔造型雪條\n行前提醒\n預訂資格\n兒童票適用於：3 - 11歲\n任何11歲以下的兒童入場時必須由成人（18歲或以上）陪同，並需持有效門票\n注意事項\n購買門票後，不能兌換、轉讓、退款、退還現金或兌換其他產品或服務\n澳門旅遊塔保留隨時拒絕和/或終止參觀澳門旅遊塔的權利，恕不退款或賠償\n如訪客違反或不遵守《澳門旅遊塔規章》；或\n如訪客進行不安全，違法或令人反感的行為而影響到他人或他/她"
+       },
+       {
+        "type": "url_citation",
+        "title": "TeamLab SuperNature 澳门沉浸式艺术门票 2026 - 中国澳门 - BOOK NOW",
+        "url": "https://www.viator.com/zh-CN/tours/Macau-SAR/teamLab-SuperNature-Macau-Immersive-Art-Ticket/d4460-266847P520",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/38a1f10f448bb7b1d585053bb5ca111b~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620812&x-signature=imWAVCkZts%2B%2BJDSdFYOd%2FKmkgDM%3D",
+        "site_name": "Viator",
+        "publish_time": "2026年08月02日 00:00:00(CST) 星期日",
+        "summary": "TeamLab SuperNature 澳门沉浸式艺术门票\n中国澳门, 中国\nBook online or call: +1 (702) 648-5873\nFrom US$48.00\nper person\nDiscounted rates for kids\nDate\n10月20日周二\nTravelers\nNumber of travelers\n2\nFree cancellation up to 24 hours before the experience starts (local time)\nBook ahead!\nOn average, this is booked 39 days in advance.\n11 to 12 hours （大约值）\n支持语言： 英语 and 1 more\nUpcoming availability\n10月20日周二\n2\n入场券 &5 游戏点\nfrom US$48.00  /person\nOverview\nWhat's Included\nteamLab SuperNature澳门入场券(如选择选项)\n附加付费体验票 : \" EN TEA HOUSE \" ( 茶馆)+景点门票(如选择)\n2026年7月至8月期间，浮花花园将开放且免费。\n其他个人开支\nMeeting and Pickup\nOperating hours\n2026-08-216 - 2027-10-299\n周一 - 周日 : 09:00 - 21:00\nDeparture Point\n澳门teamLab超自然空间, 威尼斯人 3層, Estrada da Baia de Nossa Senhora da Esperanca, 澳门\nWhat To Expect\n1\nteamLab SuperNature Macao\nAdmission Ticket Included\nAdditional Info\nConfirmation will be received at time of booking\nWheelchair accessible\nStroller accessible\nNear public transportation\nInfants must sit on laps\nTransportation is wheelchair accessible\nMost travelers can participate\n对于2026年7月至8月期间的入场，浮花花园将免费向所有客人开放。\n3岁以下儿童可免票入场，所有13岁以下儿童必须始终由一名成人陪同 – 最多4名儿童至1名成人\n每位客人均可享受5个免费游戏积分\n不同的游戏需要不同的游戏点数。 您可以根据自己的喜好进行混合和匹配；详情请参阅 https : / /res.klook.com/image/upload/Legend_Heros_Park_5_Points_Games_Info.xlsx_ -_Game_List_lb3gfy.pdf\nteamLab SuperNature Macao ( “ 展览 ” ) 特别条款：\n13岁以下的儿\n必须始终由一名成人陪同。 家长、监护人和/或监管成人对其子女的行为负有责任，如果子女成为滋扰他人或干扰他人，可能会被要求将其从展览中移除\n在进入展览会之前，参观者必须完整观看演示视频\n禁止吸烟\n户外食品和饮料，包括糖果和口香糖，是禁止的。 只能在指定区域内购买和消费食品和饮料\n允许拍照，但禁止闪光。 三脚架、灯光、自拍杆或其他外部设备不得进入展览场地\n展览内禁止穿高跟鞋、拖鞋、凉鞋或其他不安全的鞋类，也禁止携带任何大包\n部分美术作品区域可能临时关闭，恕不另行通知\n部分艺术品可能引起严重过敏反应，请咨询展览工作人员\n一些艺术品包含强光和响亮的音频效果，可能会在瞬间造成感官不适\n访客不应触摸设备，包括LED屏幕、透明屏幕、镜子、传感器、投影仪\n部分区域铺有镜面地板。 可应要求提供包装裙\n游客可能会在某些地区淋湿。 可根据要求提供防护装备\n未经事先同意，不得为商业目的拍摄照片或视频\n根据场馆的最大容量和安全考虑，游客可能会被要求排队等候\n所有访客，包括3岁以上的儿童，如发烧、肌肉疼痛、咽痛、咳嗽或流鼻涕等流感样症状，必须全程佩戴口罩\nteamLab SuperNature票房当日售票截止时间及展览最后入场时间均为闭馆前45分钟\n营业时间：营业时间(7月1日开始 ) : 9:00 - 21:00\n博物馆闭馆时间前45分钟最后入场\n有关黑暗日期，请参阅 https : / /assets.sandsresortsmacao.cn/cotaiticketing/teamLab/teamLab_schedule_public.pdf\n地址 : teamLab SuperNature Macao\nCotai Expo, The Venicetian Macao, Estrada da Baía de N. Senhora da Esperan"
+       },
+       {
+        "type": "url_citation",
+        "title": "优惠 | 新濠影汇",
+        "url": "https://www.studiocity-macau.cn/sc/offers?offer-category=%E5%A8%B1%E4%B9%90",
+        "logo_url": "https://p26-volcsearch-sign.byteimg.com/isp-i18n-media/img/090945a87ac21c04987113e47a9d011f~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620812&x-signature=nVGscG0dQGYaEpWrAelpzImJ7os%3D",
+        "site_name": "Studio City Macau",
+        "publish_time": "2026年05月23日 00:00:00(CST) 星期六",
+        "summary": "优惠 | 新濠影汇\n优惠\n尊享新濠影汇巨星级尊宠礼遇，濠享璀璨演艺盛会、独家娱乐项目、专属惊喜，以及限时优惠套票。\n娱乐\n摩天轮 x 飞行影院套票\n臻选尊享套票，登上全球最高的“8”字形摩天轮，尽览路氹迷人景致；走进影汇飞行影院，体验穿梭时空的沉浸式震撼。每位只需澳门币 190！\n娱乐\n满纷酷玩双园票\n以超值优惠价、一票畅玩全澳最独特室内游乐场满纷乐园，以及澳门首个尼克经典卡通角色主题游乐场尼克酷玩小镇！\n持两天有效的\"满纷酷玩双园票\"套票，大人与小朋友均可无限次进出双园区。尽情奔跑、跳跃、攀爬与探索，与最爱的角色一起畅玩，与忍者神龟并肩作战。即刻订购，与孩子共创专属的欢乐冒险回忆。\n套票包括：\n满纷乐园全日无限时畅玩门票（1\n童及1成人）\n尼克酷玩小镇全日无限时畅玩门票（1小童及1成人）\n价格：澳门币 498（1小童及1成人）\n即日起至12月31日\n娱乐\n酒店\n《水舞间》汇演住宿套票\n套票包含演出門票及酒店住宿\n娱乐\n享秀礼赏\n尽享新濠瞩目娱乐、体坛盛事，凭即日新濠影汇综艺馆演艺或体育活动实体门票或团队工作凭证，惠顾新濠天地及新濠影汇精选商户可享85折优惠，娱乐不止，优惠乐购、飨馔无限。\n活动日期：由即日起至2027年8月31日\n娱乐\n课余满纷半价优惠\n即日起每日下午4时后入场即享门票半价优惠。以最优惠价于\"满纷乐园\"中的山岩、丛林、海底、外层空间和太空站五大区内尽情跳跃、攀爬及探索，课余时尽享多元玩乐体验。\n适用日期：星期一至星期日 (节假日除外*)\n适用时间：16:00 - 19:00\n*\n优惠不适用于2026年5月23 - 25日，6月19 - 21日，7月1 - 31日，8月1 - 31日，9月26 - 28日。\n娱乐\n玩乐纷FUN通\n濠友荟会员专享优惠#，只需澳门币 668 *（价值高达澳门币 1,010），即可于购买日起计5天内自由选择畅玩水上乐园、影汇之星及满纷乐园，更可获赠影汇戏院2D影院戏票换领券1张，一次尽享全面玩乐激FUN体验。\n玩乐纷FUN通包含：\n新濠影汇水上乐园标准门票1张\n影汇之星标准门票1张\n满纷乐园门票1张\n2D影院戏票换领券1张\n#濠友荟会员专享优惠必须于入场时出示濠友荟微信会员卡\n*成人与小童同价\n娱乐\n“满纷乐园”派对套餐\n勇往直前大冒险，畅享多元玩乐体验，于城中最新登场的儿童玩乐空间”满纷乐园“挑战身手、举办最惊喜满FUN的生日派对。\n我们的派对大使将在缤纷派对间\n各位小主角及星级客人提供独特的庆典体验，FUN享美食、娱乐活动，一齐制造最欢乐的精彩回忆。\n娱乐\n酒店\n全日畅玩住宿套票\n全方位体验新濠影汇酒店巨星级休闲娱乐设施！\n只需一个优惠价格，畅玩精彩娱乐项目，满FUN度假时光由此展开。\n预订日期：即日起至2026年9月30日\n入住日期：即日起至2026年9月30日\n娱乐\n影汇戏院电影门票优惠\n影汇戏院呈献极致震撼沉浸式观影新体验，马上体验电影门票优惠。\n任何日子及时段均享优惠价观赏指定电影：\n2D版本：澳门币 75起 / 单座 ；澳门币 150起 / 双座（原价澳门币 90 / 单座；澳门币 180 / 双座）\n杜比视界版本：澳门币 75起（原价澳门币 90）\nMX4D版本：澳门币 75起（原价澳门币 90）\n濠友荟会员尊享：正价购买指定电影门票享8折优惠"
+       },
+       {
+        "type": "url_citation",
+        "title": "活动细则",
+        "url": "https://www.dsedt.gov.mo/ticket/informations.htm",
+        "logo_url": "https://p11-volcsearch-sign.byteimg.com/isp-i18n-media/image/118492b32faff8b4d950b076c58dc35a~tplv-obj.jpeg?lk3s=7acb411c&scene=volc_search&x-expires=1855620812&x-signature=LjZATPPmpdgE1%2BFYW0R%2BzimyFsY%3D",
+        "site_name": "澳門特別行政區政府經濟及科技發展局",
+        "publish_time": "2026年10月01日 00:00:00(CST) 星期四",
+        "summary": "活动细则\n一、活动期间\n活动由2026年10月1日00:00开始，至2026年12月31日23:59结束（以下简称“活动期间”）。\n二、参加资格\n参加者须为MPass会员；\n乘坐“休”游巴士并于社区站点下车，或完成“澳门历史探游记”导赏行程；\n获站点工作人员派发“社区赏乐”优惠兑换码；\n经扫码“社区赏乐”宣传单张二维码进入活动平台，再扫瞄“社区赏乐”优惠兑换码，经系统核实资格后获取优惠。\n参加者须同意其个人资料及交易资料将因参与本活动而被披露，并向第三方机构传输及使用。\n三、优惠获取方法*：\n获取资格：参加者同时满足上条所指的条件并于指定渠道（“休”游巴士社区站点或完成“澳门历史探游记”导赏行程）获取一次性优惠兑换码。\n获取方式：透过微信／支付宝／AlipayHK／MPay扫码“社区赏乐”宣传单张二维码进入活动平台，再扫瞄“社区赏乐”优惠兑换码，经系统核实资格后，自行点击获取优惠礼包。\n领取限制：每个帐号每周限获取礼包2次（每周由星期一00:00至紧接星期日24:00）。\n礼包内容：参加者每次可随机获得以下其中一款礼包，每款礼包包含多张消费满额立减优惠券（币别：澳门元）：\n150元礼包：4张立减优惠券（满20减5、满60减15、满118减30、满368减100）\n100元礼包：4张立减优惠券（满20减5、满60减15、满118减30、满198减50）\n50元礼包：3张立减优惠券（满20减5、满60减15、满118减30）\n*注：优惠礼包数量有限，派完即止，获取后可于载于“休”游巴士专题网站指定商户使用，优惠受条款及细则约束。\n四、使用方法**：\n使用方式：参加者进入本活动页面，于“休”游巴士专题网站指定商户进行线下消费时，可出示立减优惠券抵扣相应面额。\n使用期限：立减优惠券于自获取后3天内有效，逾期无效。\n适用范围：仅适用于已上架“休”游巴士专页并"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254883218100000000000000000000ffffac15c227fdb9b5"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "limit": 10,
+    "user_location": {
+     "type": "approximate",
+     "city": "深圳",
+     "country": "中国",
+     "region": "广东"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 12140,
+   "output_tokens": 2328,
+   "total_tokens": 14468,
+   "input_tokens_details": {
+    "cached_tokens": 3384
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 910
+   },
+   "tool_usage": {
+    "web_search": 8
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "search_engine": 8
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807997,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T10:13:17+08:00"
+}

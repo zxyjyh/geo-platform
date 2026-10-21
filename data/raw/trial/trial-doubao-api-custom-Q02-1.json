@@ -1,0 +1,187 @@
+{
+ "request": {
+  "model": "doubao-seed-2-1-pro-260915",
+  "input": [
+   {
+    "role": "user",
+    "content": [
+     {
+      "type": "input_text",
+      "text": "澳门本地生活服务平台推荐"
+     }
+    ]
+   }
+  ],
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "max_tool_calls": 3
+ },
+ "response": {
+  "created_at": 1792547910,
+  "id": "resp_021792547908917e2e425e7482a92db97bab17cb602abe891bc1a",
+  "max_output_tokens": 32768,
+  "model": "doubao-seed-2-1-pro-260915",
+  "object": "response",
+  "output": [
+   {
+    "id": "rs_02179254791015600000000000000000000ffffac15e2ee81b523",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "We need answer Chinese. \n\nUser asks for Macau local life service platform recommendations. I will conduct a web search to get relevant current information."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djHqWbLUt08Px9ovo3i2/jTffcmGcWXpBURlcUBt0r+x86hpjsEuE2dwhe0riHB1YZe+fkhnmM9BDtfXbLKhlX0k+OLdkUDIBfyH/7eQw0llab9RxVewup5urw6lznWyQvHYlieG5eyWPdCTetHXO7zXIKZLS+0mGkSxy0oG75MGaelTgAolh5olOyUVgUeHqwJ+ygP9rKnQ1kzUwMCVH66fwzpwrk2GIJEo5CTQqPBHKy6+NrYg0h569DZ9w1UFyFfLfXXZWzPaMkZYuF2cixCFuolO2LLVp4HMsxiNJC+tSFlB9vP1zUAvivG7CMraqD5ZYx8BNR/T3mwKDP0sTT/E7bR/36fZwAEy/7KHDiyFNQgL0tXSSYLT0WiS12TwBFfdGKOl/sWC3Ek/yfS1l5nuQCfYVrp9wCtdd+el6E+f6+FyFHAzOnCiFl0yvLg8lGWxYw5rCAQ8ig2jyndfOFarkrojWBM+Y0bJAvmWZJ42WvkCKxvnx/1c8ijdOOC7i8mEiA+c7HbSk8YWp/qWV9HwwNeOnQ=="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門 本地生活服務平台 外賣 跑腿 推薦 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254791682100000000000000000000ffffac15e2eeb18a04"
+   },
+   {
+    "id": "rs_02179254792007300000000000000000000ffffac15e2ee12eb52",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Need more platforms. Search relevant information."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djH7b4XkCkf67fhplqxaw0IrgcksdLwT/bDZSrHwMjNOph/YIpepFe5CQ/TOMN1GvXsYVX8OwW8D65zlXuktJF375c16di+RLFPd+LAi5rU45z2SBCIaZaQS4LUYG9Yj9uIjlYFXDTN3TVYcxNDLitL1eBws6CoUqZI6PGuPTbvIg6gAJYzv1Sf26JK9xAw="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "澳門 外賣 app 澳覓 閃蜂 閃騎 2026",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254792132200000000000000000000ffffac15e2eeaceaa6"
+   },
+   {
+    "id": "rs_02179254792434700000000000000000000ffffac15e2eef3122a",
+    "type": "reasoning",
+    "summary": [
+     {
+      "type": "summary_text",
+      "text": "Let's search mfood."
+     }
+    ],
+    "status": "completed",
+    "encrypted_content": "djEByDRLTp3Zfc05Xrx1/rsPL76XdKALPiYL4WxSfxppGCp5JTadYGOlf0VloDYrTVJlEnCVelV9RyAUEb44JKZkkMY="
+   },
+   {
+    "type": "web_search_call",
+    "action": {
+     "query": "mFood 澳門 外賣 超市 生活服務 app",
+     "type": "search"
+    },
+    "status": "completed",
+    "id": "ws_02179254792475300000000000000000000ffffac15e2ee98e5a0"
+   },
+   {
+    "type": "message",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "如果你想在澳門用一個 App 搞定吃飯、超市、跑腿和本地生活，首選 **澳覓（Aomi）**；想對比外賣和超市配送，可同時裝 **mFood**、**閃蜂**。以下按使用場景整理：\n\n## 1. 一站式本地生活：優先推薦\n\n### 澳覓 Aomi\n澳門目前最綜合的本地生活平台，適合居民和旅客。\n\n- **外賣訂餐**：覆蓋茶餐廳、奶茶、宵夜、水果、鮮花、蛋糕等\n- **超市百貨**：支援來來、百佳、新苗、7-Eleven、屈臣氏等\n- **跑腿代買**：幫買、幫取、幫送，也可買手信、藥房雜貨等\n- **團購優惠**：餐飲、自助餐、家居百貨、限時秒殺\n- **其他服務**：酒店、旅遊、演出票務、洗衣、按摩、KTV、充電寶租借\n- **出行**：App 內可叫電召的士\n- **支付**：支援澳門幣信用卡、MPay、支付寶、微信、銀聯等常見方式，具體以 App 收銀台為準\n\n適合：想只裝一個 App、日常外賣超市、旅客臨時用、跑腿代買。\n\n---\n\n## 2. 外賣 / 生鮮超市：可對比使用\n\n### mFood\n澳門主流外賣與超市平台之一，餐飲覆蓋率高，特點是外賣、團購、超市都做得比較完整。\n\n- 覆蓋全澳大量餐廳，常見快餐、奶茶、茶餐廳選擇多\n- 有超市、生活用品、飲料、零食、3C 等配送\n- 經常有外賣紅包、團購低價、免配送費活動\n- 支援 MPay、支付寶、微信、銀聯、Visa 等\n\n適合：午餐、晚餐、奶茶咖啡，以及想比較配送費和優惠券的人。\n\n### 閃蜂 TikBee\n由澳門新花城集團相關科技公司打造，偏向「超市到家 + 美食外送 + 百貨拼團」。\n\n- 超市生鮮、日用品是強項之一\n- 支援美食外送、百貨拼團、團購優惠\n- 本地化程度高，適合居民日常採買\n\n適合：經常買菜、買超市日用品，或想對比新花城等本地供應鏈服務的人。\n\n---\n\n## 3. 出行與支付配套\n\n### 澳門電召\n澳門官方/主流電召的士平台，適合不想揮手截車時使用。  \n澳覓內也有電召打車入口，但獨立使用可直接下載「澳門電召」。\n\n- 可預約、即時叫車\n- 適合長者、行李較多、尖峰時段或雨天\n- 司機與車輛受本地的士規範管理\n\n### MPay 澳門通錢包\n澳門常用本地移動支付工具，很多外賣、超市、街鋪、停車場等場景都支援。\n\n- 可用於線下掃碼、線上 App 支付\n- 可綁定本地銀行賬戶或卡，具體以實名和銀行支援為準\n- 遊客是否適合使用，需以當前註冊及實名要求為準；旅客也可直接用支付寶、微信、銀行卡\n\n支付寶、微信支付在澳門旅遊區、連鎖店、餐飲店的接受度也很高，但小店、街市、老攤位可能仍偏好現金或 MPay。\n\n---\n\n## 4. 租房、求職、二手交易\n\n這類需求沒有必要只用外賣平台，可看澳門本地資訊渠道：\n\n- **澳門生活區、Facebook 群組**：常有租屋、二手家具、寵物用品、本地服務資訊，但要注意核實房東/賣家身份\n- **澳門日報、澳廣視、濠江日報等分類廣告**：找租盤、招聘、家政、搬運等傳統服務\n- **勞工事務局官方求職平台**：找工作比民間招聘帖更穩妥\n- **房屋局相關資訊**：了解租務、法律、住房政策\n- **小紅書 / Instagram**：適合找餐廳、咖啡店、打卡店和展覽資訊，但消費前最好再查 Google Map 評價和營業時間\n\n---\n\n## 5. 餐飲探店、景點和地圖\n\n- **Google Maps**：澳門找路、查巴士、餐廳評分、營業時間最好用\n- **大眾點評 / 小紅書**：適合找遊客熱門店、奶茶、葡撻、土生菜、酒店自助餐優惠\n- **澳門特區旅遊局官方平台「體驗澳門」**：查景點、演出、展覽、節慶、旅遊資訊更可靠\n- **巴士報站 App / 澳馬出行**：查巴士實時到站、路線規劃；跨賭場酒店也可利用各家發財巴，但時間和站點要以酒店公告為準\n\n---\n\n## 6. 最推薦的安裝組合\n\n### 澳門居民日常\n1. **澳覓**：外賣、跑腿、團購、本地服務主力\n2. **mFood 或閃蜂**：對比餐飲、超市價格和配送費\n3. **MPay**：本地支付\n4. **澳門電召**：出行\n5. **Google Maps + 巴士報站**：日常通勤\n\n### 遊客短期來澳\n1. **澳覓**：酒店點外賣、買零食、跑腿、查吃喝玩樂\n2. **mFood**：對比餐廳和配送費\n3. **澳門電召**：打車\n4. **Google Maps**：步行、巴士和景點\n5. **支付寶 / 微信 / 信用卡**：多數遊客區可直接用，保留少量澳門幣現金給小店和的士更穩\n\n---\n\n## 實用小提示\n\n- 澳門半島、氹仔、路環的配送覆蓋和運費差異較大，酒店、賭場、學校、住宅區要以實際定位為準。\n- 大賽車、黃金周、周末晚市、暴雨時，外賣和的士等待時間會明顯變長。\n- 訂外賣前可同時打開 **澳覓、mFood、閃蜂**，對比同一間餐廳的配送費、起送價和預計送達時間。\n- 找非標準服務，如搬屋、維修、家政、寵物託管，優先選擇有實體店、平台認證或本地人推薦的師傅，避免私下大額轉賬。\n\n一句話總結：**日常本地生活用「澳覓」最省心；外賣和超市對比用「mFood」「閃蜂」；出行配「澳門電召」，支付配「MPay」。**",
+      "annotations": [
+       {
+        "type": "url_citation",
+        "title": "澳觅外卖app下载安装,澳觅外卖安卓下载入口-多特软件站安卓网",
+        "url": "https://m.duote.com/android/1173314.html",
+        "site_name": "多特软件站",
+        "publish_time": "2026-10-18T00:00:00+08:00",
+        "summary": "澳觅外卖\n大小：190.55MB\n类别：生活休闲\n简介\n简介\n澳觅外卖App是澳门本地的一站式生活服务平台，由Fresh Life Technology Company Limited开发。它主要面向澳门居民和游客，整合了外卖订餐、团购 优惠、超市购物、跑腿代买、酒店旅游、充电宝租借等多种服务。核心目标是让用户用一个App搞定在澳门的吃喝玩乐和日常所需。\n软件功能\n1. 外卖订餐：覆盖全澳2000+餐厅，支持美食、水果、鲜花、下午茶等即时配送。\n2. 团购秒杀：提供自助餐、品牌食品、家居百货等商品的折扣团购，部分低至1折。\n3. 澳觅商城：支持超市便利（如来来、百佳、7-Eleven）极速闪送，生鲜日用品送货到家。\n4. 跑腿服务：可代买、代取、代送，比如帮忙买安德鲁蛋挞或茅台酒。\n5. 本地生活服务：包括KTV、按摩足疗、桌游电玩、洗衣、演出票务、酒店预订等。\n6. 电召打车与地图导航：内置打车功能，并升级店铺地图，提供路线指引。\n7. 直播购物：通过“澳觅直播”观看商品实时推荐，支持可视化电商下单。\n软件特色\n1. 支持澳门币支付：绑定Visa或MasterCard信用卡 后，5秒内完成本地货币结算。\n2. 支付安全可靠：由中国银行澳门分行和CyberSource提供支付保障，是澳门首批支持澳门币 移动支付的App之一。\n3. 商户认证严格：所有上线商家均经官方审核，附带用户真实点评和最新优惠信息。\n4. 界面简洁高颜值：上线2小时内就在澳门年轻人和大学生中走红，操作流畅体验好。\n5. 本地化深度强：专为澳门场景设计，比如跨境代收点自提、旅游手信代购、免单抽奖活动等。\n6. 商户赋能工具：帮助本地商家低成本线上运营，提升曝光和销量。\n软件亮点\n1、本地生活服务\n澳觅满足澳门居民手机线上团购美食，寻找自助餐优惠，澳门币手机支付多多种需求，收到本澳居民关注和下载使用。\n2、体验澳门币5秒支付\n下载澳觅app之后，只需绑定自己的VISA或MasterCard信用卡，填写信用卡好及有效日期就可以直接购买。\n3、在线支付安全有保障\n支持澳门币手机支付的消费应用app。澳觅的澳门币移动支付服务是由中国银行澳门分行及Cyber Source提供，让支付快捷又安全。\n4、澳门人觅食利器\n澳觅覆盖了全澳的吃喝玩乐，目前已有新濠旗下餐厅，名门，贡茶，Gathering等近200家餐饮名店，并不断有新的合作伙伴加入。\n5、高颜值APP\n简洁的页面设计以及良好的用户体验让这款app在上线2个小时内即受到澳门年轻人及大学生的热捧。\n6、商家推荐彪悍工具\n澳觅能帮助商户在手机端展现品牌，推广商品，增加曝光率，为商户带来客流量，力促销售，且低成本线上运作，是企业的推广神器。\n更新日志\n1. 新增“澳觅直播”频道，支持边看边买本地好物。\n2. 优化地图导航功能，点击店铺地址可直接调起路线规划。\n3. 修复部分用户在使用澳门币支付时偶发的卡顿问题。\n4. 增加每周五上午10点“限时秒杀”专区入口。\n5. 根据用户反馈，改进跑腿订单的进度追踪界面，状态更清晰。\n软件信息\n软件标签：\n外卖 支付 团购\n软件版本：v9.8.3\n更新时间：2026-10-18\n软件大小：190.55MB\n备案号：暂无\n厂商：珠海城觅科技有限公司\n包名：com.mem.MacaoLife\n应用权限：\n程序写入外部存储\n-- 允许程序写入外部存储\n读取设备外部存储空间的文件\n-- 程序可以读取设备外部存储空间的文件\n-- 允许程序请求安装文件包\n获取额外的位置信息提供程序命令\n-- 允许程序访问额外的定位提供者指令\n访问SD卡文件系统\n-- 挂载、反挂载外部文件系统\n访问SD卡文件系统\n-- 挂载、反挂载外部文件系统\n查看WLAN连接\n-- 获取当前WiFi接入的状态以及WLAN热点的信息\n完全的网络访问权限\n-- 访问网络连接,可能产生GPRS流量\n连接WLAN网络和断开连接\n-- 改变WiFi状态\n修改系统设置\n-- 允许读写系统设置项\n查看网络连接\n-- 获取网络信息状态,如当前的网络连接是否有效\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳觅-澳门一站式生活服务平台",
+        "url": "https://apps.apple.com/hk/app/%E6%BE%B3%E8%A6%93-%E6%BE%B3%E9%96%80%E4%B8%80%E7%AB%99%E5%BC%8F%E7%94%9F%E6%B4%BB%E6%9C%8D%E5%8B%99%E5%B9%B3%E5%8F%B0/id1104177940?platform=ipad",
+        "site_name": "App Store",
+        "publish_time": "2026-01-31T14:37:00+08:00",
+        "summary": "澳覓-澳門一站式生活服務平台\n澳門美食外賣團購超市跑腿酒店打車洗衣平台全方位服務本地和旅客\n僅適用於 iPhone\n免費 · 專為 iPhone 設計\n174 個評分\n3.9\n年齡\n18+\n歲\n類別\n美食佳飲\n開發者\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\n語言\nZH\n+ 2種\n大小\n400.5\nMB\niPhone\n【特色服務】 1.澳門吃喝玩樂一應俱全 ◇外賣訂餐水果宵夜，酒店旅遊周邊推薦； ◇團購優惠折扣秒殺，吃喝玩樂購全覆蓋； ◇超市便利極速閃送，生鮮蔬果鮮花蛋糕； ◇澳覓拼團全球好貨，品質好貨省錢省心； ◇澳覓跑腿同城取送，極速幫買幫取幫送。 2.來澳門旅行必備APP，所有事項一站搞定 ◇電召打車，方便快捷； ◇美食優惠，全澳覆蓋； ◇酒店住宿，優惠預訂； ◇洗衣服務，遊玩無憂； ◇觀看演出，鉅惠購票； ◇手機充電，即租即充； ◇澳覓地圖全面升級，點擊店鋪地址欄，提供檢索、路線指引等特色功能，更多驚喜功能期待您去發現。 【產品特點】 澳門吃喝玩樂購，澳覓全都有：美食精選、外賣訂餐、團購秒殺、旅遊出行、電召打車、演出票務、充電寶租借、洗衣服務，澳門一站式生活服務全覆蓋。 ◇情侶約會：吃美食、看電影、住酒店、去旅遊； ◇懶宅點餐：美食、水果、鮮花、下午茶、超市百貨； ◇朋友轟趴：按摩足療、KTV、桌遊電玩； ◇旅遊手信：充電寶租借，安德魯蛋撻、茅台代買； ◇打車出行：電召的士，方便快捷； ◇團購秒殺：產地果蔬、品牌食品、家居百貨、一站購齊； ◇買贈優惠：來來超市、百佳超市、新苗超市、7-ELEVEN、屈臣氏等大牌商家優惠齊集。 【產品簡介】 澳覓為您提供美食、外賣、團購、超市便利、電商、美容美髮、電召打車、酒店、旅遊、充電寶租借、洗衣、跑腿等全面服務。除各種優惠，澳覓還提供用戶消費評價、商家評分、商家資訊查詢等功能，旨在為用戶提供好的服務！ 【關於澳覓】 『澳覓APP』於2016年6月1日正式上線，現已成為匯聚美食外賣、團購優惠、超市便利，電召打車、演出票務、充電寶租借、跑腿服務、酒店住宿、洗衣服務及各項本地生活服務於一體的城市一站式生活服務平台，是澳門最大的一站式生活服務平台。澳覓APP秉承客戶第一的價值觀，與全澳5500+商家緊密合作，持續為用戶帶來更好的生活服務。 【用戶幫助】 感謝您使用澳覓APP手機客戶端，使用中有任何問題可通過以下方式查詢解決： 1.澳覓APP查詢入口：『我』—『在線客服』； 2.官方微信公眾號：澳覓APP； 3.官方Facebook：澳覓-讓城市生活更美好； 4.官方Instagram：aomi_macau 5.官方小紅書：澳觅APP\n輔助使用\n資料\n供應商\nFRESH LIFE TECHNOLOGY COMPANY LIMITED\n大小\n400.5 MB\n類別\n美食佳飲\n相容性\n須使用 iOS 12.0 或以上版本。\niPhone\n須使用 iOS 12.0 或以上版本。\niPod touch\n須使用 iOS 12.0 或以上版本。\nMac\n須使用 macOS 12.0 或以上版本及配備 Apple M1 或以上版本晶片的 Mac。\nApple Vision\n須使用 visionOS 1.0 或以上版本。\n語言\n簡體中文及另外2種\n簡體中文、繁體中文、英文\n年齡分級\n18+\n18+\n偶爾\n性愛內容或裸露\n包含\n戰利品箱\n訊息及聊天\n用户產生內容\n版權\n© 2022 Macao FreshLife Inc\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "閃蜂-吃喝玩樂玩轉澳門",
+        "url": "https://apps.apple.com/my/app/%E9%96%83%E8%9C%82-%E5%90%83%E5%96%9D%E7%8E%A9%E6%A8%82%E7%8E%A9%E8%BD%89%E6%BE%B3%E9%96%80/id1544594511",
+        "site_name": "App Store",
+        "publish_time": "2026-04-28T05:34:00+08:00",
+        "summary": "閃蜂-吃喝玩樂玩轉澳門\nFood & Drink\nOnly for iPhone\nFree · Designed for iPhone. Not verified for macOS.\n4.8\nAge Rating\n16+\nYears\nCategory\nFood & Drink\nDeveloper\nTIKBEE TECHNOLOGY CO., LTD.\nLanguage\nEN\nSize\n191.1\nMB\niPhone\n「閃蜂App」是新花城集團，全力打造的澳門本地科技企業，以「科技及互聯網」為核心，及「讓生活更簡單」為使命，務求打造澳門最具代表性的「新零售模式+本地生活服務平台」，業務版塊包括「超市到家，美食外送，百貨拼團，團購優惠」，為本澳居民提供更多元化及值得信賴的服務。\nFood\nWhat’s New\nVersion History\n修復了已知問題\n3.8.9 3 days ago\n修復了已知問題\n3.8.8 6 days ago\n修復了已知問題\n3.8.7 9 Jun\n修復了已知問題\n3.8.6 29 May\n修復了已知問題\n3.8.5 14 May\n修復了已知問題\n3.8.4 13 May\n修復了已知問題\n3.8.3 20 Mar\n修復了已知問題\n3.8.2 26 Feb\n修復了已知問題\n3.8.1 4 Feb\n修復了已知問題 优化了性能\n3.8.0 17 Jan\n修復了已知問題\n3.7.26 8 Jan\n修復了已知問題\n3.7.25 18/12/2025\n修復了已知問題\n3.7.24 14/12/2025\n修復了已知問題\n3.7.23 12/12/2025\n修復了已知問題\n3.7.22 20/11/2025\n優化了功能，修復了已知問題\n3.7.20 03/11/2025\n修復了已知問題\n3.7.19 17/10/2025\n修復了已知問題，如遇使用問題，可在APP中聯繫客服\n3.7.18 30/09/2025\n修復了已知問題\n3.7.17 19/09/2025\n修復了已知問題\n3.7.16 09/09/2025\n修復了已知問題\n3.7.15 03/09/2025\n修復了已知問題\n3.7.13 22/08/2025\n修復了已知問題\n3.7.12 19/08/2025\n修復了已知問題\n3.7.10 31/07/2025\n新增騎手聊天功能\n3.7.9 18/07/2025\n修復了已知問題\nVersion 3.8.9\n3 days ago\nApp Privacy\nThe developer, TIKBEE TECHNOLOGY CO., LTD., indicated that the app’s privacy practices may include handling of data as described below. This information has not been verified by Apple. For more information, see the developer’s privacy policy.\nTo help you better understand the developer’s responses, see Privacy Definitions and Examples.\nPrivacy practices may vary based, for example, on the features you use or your age. Learn More\nData Linked to You\nThe following data, which may be collected and linked to your identity, may be used for the following purposes:\nProduct Personalisation\nSearch History\nSearch History\nData Not Linked to You\nThe following data, which may be collected but is not linked to your identity, may be used for the following purposes:\nProduct Personalisation\nUsage Data\nProduct Interaction\nApp Functionality\nLocation\nPrecise Location\nCoarse Location\nUsage Data\nProduct Interaction\nThe developer, TIKBEE TECHNOLOGY CO., LTD., indicated that the app’s privacy practices may include handling of data as described below. For more information, see the developer’s privacy policy .\nData Linked to You\nThe following data may be collected and linked to your identity:\nSearch History\nData Not Linked to You\nThe following data may be collected but it is not linked to your identity:\nLocation\nUsage Data\nPrivacy practices may vary based, for example, on the features you use or your age. Learn More\nAccessibility\nThe developer has not yet indicated which accessibility features this app supports. Learn More\nInformation\nProvider\nTIKBEE TECHNOLOGY CO., LTD.\nSize\n191.1 MB\nCategory\nFood & Drink\nCompatibility\nRequires iOS 12.0 or later.\niPhone\nRequires iOS 12.0 or later.\niPod touch\nRequires iOS 12.0 or later.\nMac\nRequires macOS 11.0 or later and a Mac with Apple M1 chip or later.\nApple Vision\nRequires visionOS 1.0 or later.\nLanguages\nEnglish and 2 more\nEnglish, Simplified Chinese, Traditional Chinese\nAge Rating\n16+\n16+\nInfrequent\nAlcohol, Tobacco, Drug Use or References\nContests\nContains\nUnrestricted Web Access\nAdvertising\nCopyright\n© Tikbee2020\n"
+       },
+       {
+        "type": "url_citation",
+        "title": "澳门外卖能不能送到、稳不稳?覆盖与履约怎么看(澳觅app)",
+        "url": "https://www.sohu.com/a/1087970825_123029547",
+        "site_name": "搜狐",
+        "publish_time": "2026-10-15T10:48:00+08:00",
+        "summary": "莫伊拉\n澳门外卖能不能送到、稳不稳？覆盖与履约怎么看（澳觅app）\n2026-10-15 10:48\n午休只剩四十分钟，公司楼下茶餐厅排到门口；或者人在酒店，窗外忽然下起大雨——这时候最想知道的，往往不是哪家广告喊得响，而是：我这个地址，外卖到底能不能送到？高峰会不会下得了单却等很久？\n广告词听得多，不如拿自己真实会用的地址和时段试一遍。下面以澳觅app 为例，说说怎么把「能不能送到」和「稳不稳」看清楚。澳门市场上还有 mfood、闪蜂等常用选择，只比可验证体验，不拉踩。\n先选一个你会反复用的地址\n居民用家里或公司，旅客用常住酒店大堂附近，关键是「下周至少还会再用两次」的那个点。打开 App 允许定位，或手动搜到这个地址，确认页面上的可配送商户是按当前位置算出来的。换一条偏一点的街、换度假区里另一座塔楼，列表往往会变——能送到哪里，跟你的落点绑在一起，并不是全城一张图。\n能送到，不等于想吃的都有\n同一地址下，不妨扫一眼茶餐厅、茶饮、快餐、超市便利是否都有可点商户；高峰时段是否仍显示可配送；跨区，或半岛与氹仔来回时，可选的会不会突然变少。按澳觅十周年年刊的宣传口径，澳觅app 2016年6月上线，外卖合作商户约5,700+（年刊口径）；2025年7月还上线了「全城送」。这些数字说明平台侧的商户与运力规模，具体到你的地址，仍以当前页面为准，不必把年刊读成「你家门口一定有」。\n到点了，才算稳\n「有店可点」只是第一步；真正吃到嘴里的时间，才决定稳不稳。下单页会给出预计送达时间（ETA）。更有参考价值的，是平峰时 ETA 和实际差多少；午高峰、晚高峰再各看一次，会不会明显拉长；碰上恶劣天气，或大赛车、节假日人流高峰，会不会变成「能点但很慢」。年刊口径里，澳觅配送团队超3,000人，员工含车手超3,800人（截至2025-12，宣传数字）。规模能支撑日常运力，却替代不了你在同一地址、同一品类上的两次对照——一次平峰、一次高峰，记下来，比听一句「配送很快」更踏实。\n想和别的 App 对照时\n手机里如果还有 mfood、闪蜂等，不妨固定同一个常用地址，各看一轮可点商户数量与品类，再各看一轮 ETA 和配送费。不要今天在 A 平台点平峰、明天在 B 平台撞上暴雨高峰，那样比的是运气。也不必追求「处处最优」：有人更在意公司午餐能不能准时到，有人更在意酒店附近深夜还能不能点到，场景不同，结论可以不同。\n下次点单前，不妨打开澳觅app，用常用地址看一眼附近能送什么，再在高峰时瞄一下预计送达。测过一轮，心里就有数了；也欢迎在评论里聊聊，你那边高峰到底稳不稳。 返回搜狐，查看更多\n \n本文作者：莫伊拉"
+       },
+       {
+        "type": "url_citation",
+        "title": "‎mFood-澳门美食外卖超市团购 App - App Store",
+        "url": "https://apps.apple.com/cn/app/mfood-%E6%BE%B3%E9%96%80%E7%BE%8E%E9%A3%9F%E5%A4%96%E8%B3%A3%E8%B6%85%E5%B8%82%E5%9C%98%E8%B3%BC/id1532413955",
+        "site_name": "App Store",
+        "publish_time": "2026-10-21T04:38:49+08:00",
+        "summary": "mFood-澳門美食外賣超市團購\n澳門美食外賣平台\n仅适用于 iPhone\n免费 · 专为 iPhone 设计。未针对 macOS 验证。\n4.7\n年龄分级\n4+\n岁\n排行榜\n#54\n美食佳饮\n开发者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n语言\nZH\n+ 2 种语言\n大小\n231.4\nMB\niPhone\nmFood 外賣與超市 企業理念 mFood 外賣與超市致力於為澳門提供優質的外賣和生活用品服務。我們以迅捷、便利和高效的配送服務，讓您輕鬆享受美食和購物樂趣。 產品與服務 外賣服務：覆蓋全澳門 4,000 餐廳，提供多樣美食選擇，最快 15 分鐘送達。 超市服務：提供千萬種生活用品，包括雜貨、飲料、保健食品和 3C 電子產品等，無需等待，手指點選即可購買。 價值主張 作為本地生活服務平台，我們致力於改善城市居民的生活品質，提高生活便利性和舒適度，推動智能數字化升級，為您打造更美好的生活環境。 會員福利 新人福利：註冊即贈送價值 50 元大禮包，讓您享受美食盛宴。 持續優惠：定期舉辦各類促銷活動、特價套餐和折扣優惠，提供更多驚喜和福利。 服務特色 品質保證：精心挑選具備完整資質、衛生可靠的商家，確保高品質服務。 商品齊全：匯集全澳各類餐飲外賣，讓您輕鬆滿足各種口味需求。 快速配送：專業即時物流團隊全面覆蓋澳門，保證即時送達。 線上支付：支援 MPAY、支付寶、微信、銀聯、VISA 等安全便捷支付方式。 特色功能 智能搜索附近外賣美食和預訂服務。 即時訂單狀態通知，確保快速送達，正所謂mFood 速度，快人一步。 智能展示餐廳排序和個性化推薦功能。 提供各種優惠折扣信息，品質有保障。 mFood 外賣與超市，您身邊的幸福生活圈。感謝您選擇 mFood，讓我們共同創造更便利、更美好的生活！\n新功能\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n【mFood外賣】 1.世界盃免費拎68減30大額紅包 2.投票冠軍，瓜分2萬 3.下單有禮，兌換機會贏20g黃金 【mFood團購】 1.麥當勞最新秒殺又來啦 2.低至9.9買單人套餐 【mFood超市】 1.世界盃狂歡購！週週可領滿$238減$38紅包 2.品牌超市著數！滿198減$25\n【mFood外賣 星選一口價】 奶茶咖啡，外賣低至9.9 1件即送 免湊單 單單全免配送費\n【mFood星選一口價】氹仔區正式上線啦！ 真0元起送，告別40元湊單! 一口價低至19.9咖啡奶茶送到手! 單單無門檻，全免配送費！\n即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\n\"即日起上mFood買團購、外賣、超市 不止可以參與消費大獎賞 mFood更補貼！ 消費加碼3重賞！\"\n【離島區復活歡樂季】 天天領$20外賣＆團購紅包！ 助力領$100實體現金券包！ 【mFood外賣】 每週完成3單，返$60減30外賣半價券！\n【mFood外賣】 逢星期一領「麥當勞」$30無門檻紅包！ 【mFood團購】 嘗新優惠新客價，品質大牌低至$1！\n【mFood外賣】 天天領馬到成功紅包，嗌外賣滿68減20、滿150減50！ 【mFood團購】 疊加紅包最高減$60，團購下單即抽「惠聚新口岸」消費金\n【mFood外賣】 1.夏日Chill勁賞，下單領$68減25大額券 【mFood團購】 1.夏日飲冰，爆款飲品低至$8.8 2.中秋送禮，甄選月餅，早鳥5折起 【mFood超市】 1.冰飲燒烤季！週週領滿$198減$20紅包 2.品牌超市著數！滿198減$25\n版本 7.3.5\n9月12日\n开发者“MACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED”已表明该 App 的隐私规范可能包括下述数据处理方式。更多相关信息，请参阅开发者隐私政策 。\n用于追踪你的数据\n标识符\n与你关联的数据\n开发者可能会收集以下数据，且数据与你的身份关联：\n联系信息\n用户内容\n标识符\n使用数据\n未与你关联的数据\n位置\n搜索历史记录\n使用数据\n诊断\n隐私规范可能因你使用的功能或你的年龄等因素而异。进一步了解\n辅助功能\n开发者尚未表明此 App 支持哪些辅助功能。进一步了解\n信息\n提供者\nMACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n大小\n231.4 MB\n类别\n美食佳饮\n兼容性\n设备需装有 iOS 12.0 或更高版本。\niPhone\n设备需装有 iOS 12.0 或更高版本。\niPod touch\n设备需装有 iOS 12.0 或更高版本。\nMac\n需要 macOS 11.0 或更高版本以及装有 Apple M1 或更高版本芯片的 Mac。\nApple Vision\n设备需装有 visionOS 1.0 或更高版本。\n语言\n简体中文和另外2种\n简体中文、繁体中文、英语\n年龄分级\n4+\n4+\n包含\n广告\n版权\n© MACAO CLEVER CATERING MANAGEMENT COMPANY LIMITED\n"
+       }
+      ]
+     }
+    ],
+    "status": "completed",
+    "id": "msg_02179254792760500000000000000000000ffffac15e2eeb1b28b"
+   }
+  ],
+  "service_tier": "auto",
+  "status": "completed",
+  "tools": [
+   {
+    "type": "web_search",
+    "sources": [
+     "doubao"
+    ]
+   }
+  ],
+  "usage": {
+   "input_tokens": 16552,
+   "output_tokens": 1953,
+   "total_tokens": 18505,
+   "input_tokens_details": {
+    "cached_tokens": 7792
+   },
+   "output_tokens_details": {
+    "reasoning_tokens": 134
+   },
+   "tool_usage": {
+    "web_search": 3
+   },
+   "tool_usage_details": {
+    "web_search": {
+     "doubao": 3
+    }
+   }
+  },
+  "caching": {
+   "type": "disabled"
+  },
+  "store": true,
+  "expire_at": 1792807109,
+  "max_tool_calls": 3
+ },
+ "collected_at": "2026-10-21T09:58:28+08:00"
+}
