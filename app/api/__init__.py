@@ -22,9 +22,12 @@ def create_app(session_factory: sessionmaker | None = None) -> FastAPI:
                 yield s
         app.dependency_overrides[get_session] = _session
 
-    from app.api import routes_auth
+    from app.api import (routes_auth, routes_dashboard, routes_questions, routes_runs, routes_settings,
+                         routes_sources, routes_suggestions)
 
-    app.include_router(routes_auth.router, prefix="/api")
+    for r in (routes_auth, routes_dashboard, routes_runs, routes_questions, routes_sources, routes_suggestions,
+              routes_settings):
+        app.include_router(r.router, prefix="/api")
 
     @app.get("/api/health")
     def health():

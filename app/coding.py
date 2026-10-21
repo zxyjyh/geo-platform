@@ -32,3 +32,21 @@ def load_aliases(session: Session, version: int) -> dict[str, list[str]]:
     for a in session.scalars(select(Alias).where(Alias.version == version).order_by(Alias.id)):
         out.setdefault(a.entity, []).append(a.alias)
     return out
+
+
+def recode_all(session: Session, alias_version: int) -> int:
+    """用指定版本的别名表给所有 valid 的 run 重新编码，写入该版本的 Coding（旧版本保留）。返回编码条数。"""
+    from app.models import Coding, Run
+
+    aliases = load_aliases(session, alias_version)
+    session.query(Coding).filter(Coding.alias_version == alias_version).delete()
+    n = 0
+    for run in session.scalars(select(Run).where(Run.status == "valid")):
+        r = code_answer(run.answer_text, aliases)
+        session.add(Coding(run_id=run.run_id, alias_version=alias_version,
+                           mention_aomi=r.mention["aomi"], mention_mfood=r.mention["mfood"],
+                           mention_shanfeng=r.mention["shanfeng"], order_aomi=r.order["aomi"],
+                           order_mfood=r.order["mfood"], order_shanfeng=r.order["shanfeng"]))
+        n += 1
+    session.commit()
+    return n

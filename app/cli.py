@@ -2,6 +2,7 @@
   import-trial                                  导入 data/raw/trial 的试跑数据（round=trial，不进看板）
   run-daily [--date YYYY-MM-DD] [--channel …]   立即跑一次每日采集（默认北京时间今天、设置里的渠道）
   create-user <username>                        新建登录账号（交互输入两次密码）
+  recode                                        用设置里当前的别名表版本给全部 valid run 重新编码
 """
 import argparse
 import getpass
@@ -64,6 +65,16 @@ def cmd_create_user(args) -> None:
         print(f"已创建用户 {args.username}")
 
 
+def cmd_recode(args) -> None:
+    from app.coding import recode_all
+    from app.collector import setting
+
+    with _session() as s:
+        seed_all(s)
+        v = int(setting(s, "alias_version", "1"))
+        print(f"别名表 v{v}：重新编码 {recode_all(s, v)} 条 run")
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="python -m app.cli")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -75,6 +86,7 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("create-user")
     p.add_argument("username")
     p.set_defaults(func=cmd_create_user)
+    sub.add_parser("recode").set_defaults(func=cmd_recode)
     args = ap.parse_args(argv)
     args.func(args)
 
