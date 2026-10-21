@@ -45,3 +45,42 @@ def test_parse_publish_time_both_formats():
 def test_parse_message_missing_gives_empty_text():
     r = parse({"output": [{"type": "web_search_call", "action": {"query": "x"}}], "usage": {}})
     assert r.text == "" and r.citations == [] and r.search_queries == ["x"] and r.billed_searches is None
+
+
+import http.client  # noqa: E402
+import io  # noqa: E402
+import urllib.error  # noqa: E402
+
+import pytest  # noqa: E402
+
+from app.ark import ArkError, HttpArkClient  # noqa: E402
+
+
+class _Resp:
+    def __init__(self, read):
+        self.read = read
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+
+def _boom(exc):
+    def f(*a, **k):
+        raise exc
+    return f
+
+
+@pytest.mark.parametrize("urlopen", [
+    _boom(urllib.error.HTTPError("u", 500, "x", {}, io.BytesIO(b"server error"))),
+    _boom(http.client.RemoteDisconnected("closed")),                      # getresponse 阶段，urllib 不会包成 URLError
+    lambda *a, **k: _Resp(_boom(ConnectionResetError("reset"))),          # 读响应体时连接被重置
+    lambda *a, **k: _Resp(lambda: b"\xff\xfe not json"),                  # 响应不是 UTF-8 JSON
+    lambda *a, **k: _Resp(lambda: b"[1, 2]"),                             # JSON 但不是对象
+])
+def test_http_client_wraps_transport_errors_as_ark_error(monkeypatch, urlopen):
+    monkeypatch.setattr("urllib.request.urlopen", urlopen)
+    with pytest.raises(ArkError):
+        HttpArkClient("k").create({})

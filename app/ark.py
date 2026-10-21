@@ -4,6 +4,7 @@
   api-plugin  联网内容插件：默认全网，user_location 生效
   api-custom  豆包搜索 Custom 版：sources 只能是 ["doubao"]，user_location 会被忽略
 """
+import http.client
 import json
 import re
 import urllib.error
@@ -70,7 +71,7 @@ def parse(resp: dict) -> ArkResult:
                 seen.add(ann.get("url"))
                 citations.append(ann)
     # 模型实际发出的搜索词（web_search_call.action.query，文档未写，2026-10-21 实测发现）
-    queries = [item.get("action", {}).get("query", "") for item in resp.get("output", [])
+    queries = [(item.get("action") or {}).get("query", "") for item in resp.get("output", [])
                if item.get("type") == "web_search_call"]
     usage = resp.get("usage") or {}
     return ArkResult(text="".join(texts), citations=citations, search_queries=queries,
@@ -110,8 +111,17 @@ class HttpArkClient:
                                               "Content-Type": "application/json"})
         try:
             with urllib.request.urlopen(req, timeout=self.timeout) as r:
-                return json.loads(r.read().decode("utf-8"))
+                data = json.loads(r.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
-            raise ArkError(f"HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:500]}") from e
-        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
-            raise ArkError(str(e)) from e
+            try:
+                detail = e.read().decode("utf-8", "replace")[:500]
+            except OSError:
+                detail = ""
+            raise ArkError(f"HTTP {e.code}: {detail}") from e
+        # urllib 只把建连阶段的 OSError 包成 URLError；getresponse / read 阶段的断连、
+        # 不完整响应会原样抛出。ValueError 覆盖 JSON 和 UTF-8 解码错误。
+        except (OSError, http.client.HTTPException, ValueError) as e:
+            raise ArkError(f"{type(e).__name__}: {e}") from e
+        if not isinstance(data, dict):
+            raise ArkError(f"响应不是 JSON 对象：{type(data).__name__}")
+        return data
