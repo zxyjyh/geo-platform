@@ -33,6 +33,33 @@ export interface DashboardData {
   usage: { billed_searches: number; input_tokens: number; output_tokens: number; est_cost_yuan: number | null };
 }
 
+export interface AttributionHit {
+  run_id: string;
+  qid: string;
+  marks: string[];
+  owned_source: boolean;
+}
+
+/** 品牌归因：分母是全部题（含带品牌名的）中提到澳觅的回答。configured=false 时不出数。 */
+export interface AttributionDay {
+  date: string;
+  channel: string;
+  version: number;
+  configured: boolean;
+  text: Ratio;
+  source: Ratio;
+  hits: AttributionHit[];
+}
+
+export interface BrandMark {
+  kind: string;
+  value: string;
+}
+
+export const MARK_KIND_LABEL: Record<string, string> = {
+  website: "官网", phone: "客服电话", app_store: "应用商店名", mini_program: "小程序名", official_account: "公众号名", other: "其他",
+};
+
 export interface PlatformCount {
   key: string;
   name: string;

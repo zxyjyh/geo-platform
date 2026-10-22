@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import {
   Button, Card, Form, Input, InputNumber, Modal, Popconfirm, Select, Space, Switch, Table, Tabs, Tag, Typography, message,
 } from "antd";
+import { useSearchParams } from "react-router-dom";
 import { get, send } from "../api";
 import { cstToday } from "../format";
-import { ENTITIES, ENTITY_NAME, type Entity } from "../types";
+import { ENTITIES, ENTITY_NAME, MARK_KIND_LABEL, type BrandMark, type Entity } from "../types";
 
 const fail = (e: unknown) => message.error(String((e as Error).message || e));
 
@@ -84,6 +85,39 @@ function OwnedPrefixes() {
         <Form.Item name="url_prefix" rules={[{ required: true }]}><Input placeholder="如：aomi.mo 或 https://www.toutiao.com/c/user/…" style={{ width: 360 }} /></Form.Item>
         <Button htmlType="submit">添加</Button>
       </Form>
+    </Space>
+  );
+}
+
+function BrandMarks() {
+  const [rows, setRows] = useState<(BrandMark & { id: number })[]>([]);
+  const [version, setVersion] = useState(0);
+  const load = () => get<{ version: number; marks: BrandMark[] }>("/settings/brand-marks").then((r) => {
+    setVersion(r.version);
+    setRows(r.marks.map((m, i) => ({ ...m, id: i })));
+  });
+  useEffect(() => { load(); }, []);
+  const update = (id: number, patch: Partial<BrandMark>) => setRows(rows.map((r) => (r.id === id ? { ...r, ...patch } : r)));
+  const save = () => send<{ version: number }>("PUT", "/settings/brand-marks", rows.map(({ kind, value }) => ({ kind, value })))
+    .then((r) => { message.success(`已保存为第 ${r.version} 版`); load(); }).catch(fail);
+  return (
+    <Space direction="vertical" style={{ width: "100%" }}>
+      <Typography.Text type="secondary">
+        当前第 {version} 版。看板「品牌归因」按这份清单在回答正文里找官方入口：网址等不区分大小写，电话只比数字。每次保存生成新版本。
+      </Typography.Text>
+      <Table size="small" pagination={false} rowKey="id" dataSource={rows} columns={[
+        { title: "类型", dataIndex: "kind", width: 160, render: (v, r) => (
+          <Select value={v} style={{ width: 140 }} onChange={(k) => update(r.id, { kind: k })}
+            options={Object.entries(MARK_KIND_LABEL).map(([value, label]) => ({ value, label }))} />) },
+        { title: "内容", dataIndex: "value", render: (v, r) => (
+          <Input value={v} maxLength={128} onChange={(e) => update(r.id, { value: e.target.value })}
+            placeholder={r.kind === "phone" ? "不带区号，例如 2888 8888" : "例如 aomiapp.com"} />) },
+        { title: "", width: 70, render: (_, r) => <a onClick={() => setRows(rows.filter((x) => x.id !== r.id))}>删除</a> },
+      ]} />
+      <Space>
+        <Button onClick={() => setRows([...rows, { id: Math.max(-1, ...rows.map((r) => r.id)) + 1, kind: "website", value: "" }])}>添加</Button>
+        <Button type="primary" onClick={save}>保存</Button>
+      </Space>
     </Space>
   );
 }
@@ -174,12 +208,14 @@ function Users() {
 }
 
 export default function Settings() {
+  const [params] = useSearchParams();
   return (
     <Card className="ab-card" size="small">
-      <Tabs items={[
+      <Tabs defaultActiveKey={params.get("tab") ?? undefined} items={[
         { key: "aliases", label: "竞品别名表", children: <Aliases /> },
         { key: "platforms", label: "平台映射", children: <Platforms /> },
         { key: "owned", label: "自有渠道", children: <OwnedPrefixes /> },
+        { key: "marks", label: "官方标识", children: <BrandMarks /> },
         { key: "params", label: "阈值与单价", children: <Params /> },
         { key: "jobs", label: "采集任务", children: <Jobs /> },
         { key: "users", label: "账号", children: <Users /> },

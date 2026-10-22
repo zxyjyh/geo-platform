@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
-import { Alert, Card, Col, DatePicker, Descriptions, Row, Segmented, Select, Space, Switch, Table, Tag, Tooltip, Typography } from "antd";
+import { Alert, Card, Col, Collapse, DatePicker, Descriptions, Row, Segmented, Select, Space, Switch, Table, Tag, Tooltip, Typography } from "antd";
 import { AimOutlined, PercentageOutlined, QuestionCircleOutlined, TrophyOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
+import { useNavigate } from "react-router-dom";
 import { get } from "../api";
 import { usePlatform } from "../platform";
 import EChart from "../EChart";
 import { coveredQs, formatRatio, missingNotice, pct, repsChanges, prevText, selfcheckReason, trendValue, type Metric } from "../format";
-import { ENTITIES, ENTITY_NAME, type DailyMetrics, type DashboardData, type Entity } from "../types";
+import { ENTITIES, ENTITY_NAME, type AttributionDay, type DailyMetrics, type DashboardData, type Entity } from "../types";
 
 const METRICS: Record<Metric, { label: string; hint: string; icon: JSX.Element }> = {
   mention: { label: "提及率", icon: <AimOutlined />, hint: "提到该平台的回答数 / 当天有效回答数（只算不带品牌名的题）" },
@@ -31,11 +32,42 @@ function cell(m: DailyMetrics | undefined, metric: Metric, e: Entity) {
     : <span className="num">{formatRatio(m[metric][e])}</span>;
 }
 
+function Attribution({ a }: { a: AttributionDay | null }) {
+  const nav = useNavigate();
+  if (!a) return <Typography.Text type="secondary">加载中…</Typography.Text>;
+  return (
+    <Space direction="vertical" style={{ width: "100%" }}>
+      <Descriptions column={1} size="small">
+        <Descriptions.Item label="正文给出官方入口">
+          {a.configured ? <span className="num">{formatRatio(a.text)}</span>
+            : <span><Typography.Text type="secondary">未配置官方标识</Typography.Text>，<a onClick={() => nav("/settings?tab=marks")}>去设置</a></span>}
+        </Descriptions.Item>
+        <Descriptions.Item label="信源含自有内容"><span className="num">{formatRatio(a.source)}</span></Descriptions.Item>
+      </Descriptions>
+      {a.hits.length > 0 && (
+        <Collapse size="small" ghost items={[{
+          key: "hits", label: `明细（${a.hits.length} 条回答）`,
+          children: (
+            <Table size="small" pagination={false} rowKey="run_id" dataSource={a.hits}
+              rowClassName={() => "ab-clickable-row"} onRow={(h) => ({ onClick: () => nav(`/runs?run=${encodeURIComponent(h.run_id)}`) })}
+              columns={[
+                { title: "题", dataIndex: "qid", width: 60 },
+                { title: "命中的标识", dataIndex: "marks", render: (ms: string[]) => ms.length ? ms.map((m) => <Tag key={m}>{m}</Tag>) : "—" },
+                { title: "自有信源", dataIndex: "owned_source", width: 80, render: (v: boolean) => v ? <Tag color="green">有</Tag> : "—" },
+              ]} />
+          ),
+        }]} />
+      )}
+    </Space>
+  );
+}
+
 export default function Dashboard() {
   const platform = usePlatform();
   const [query, setQuery] = useState<{ date?: string; channel?: string }>({});
   const [data, setData] = useState<DashboardData | null>(null);
   const [trend, setTrend] = useState<DailyMetrics[]>([]);
+  const [attribution, setAttribution] = useState<AttributionDay | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [metric, setMetric] = useState<Metric>("mention");
   const [showCompetitors, setShowCompetitors] = useState(true);
@@ -44,6 +76,7 @@ export default function Dashboard() {
     let stale = false; // 快速切换日期时，旧请求晚到不能覆盖新数据
     setError(null);
     setTrend([]); // 换日期/渠道时先清空，免得"前一天"短暂显示旧渠道的数
+    setAttribution(null);
     get<DashboardData>("/dashboard", { ...query, platform })
       .then((d) => {
         if (stale) return;
@@ -52,6 +85,9 @@ export default function Dashboard() {
         get<DailyMetrics[]>("/dashboard/trend", { start: end.subtract(29, "day").format("YYYY-MM-DD"), end: d.date, channel: d.channel, platform })
           .then((t) => !stale && setTrend(t))
           .catch((e) => !stale && setError(`趋势加载失败：${e.message}`));
+        get<AttributionDay>("/dashboard/attribution", { date: d.date, channel: d.channel, platform })
+          .then((a) => !stale && setAttribution(a))
+          .catch((e) => !stale && setError(`品牌归因加载失败：${e.message}`));
       })
       .catch((e) => !stale && setError(String(e.message || e)));
     return () => { stale = true; };
@@ -215,6 +251,11 @@ export default function Dashboard() {
           </Card>
         </Col>
         <Col xs={24} xl={9}>
+          <Card className="ab-card" size="small" title={`品牌归因（${dayWord}）`} style={{ marginBottom: 16 }}
+            extra={<Tooltip title="全部题（含带品牌名的）中提到澳觅的回答里：正文有没有给出官网、客服电话等官方入口；信源里有没有澳觅自有内容">
+              <QuestionCircleOutlined /></Tooltip>}>
+            <Attribution a={attribution} />
+          </Card>
           <Card className="ab-card" size="small" title={`采集与消耗（${dayWord}）`}>
             <Descriptions column={1} size="small">
               <Descriptions.Item label="采集任务">
