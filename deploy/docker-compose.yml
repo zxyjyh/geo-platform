@@ -3,8 +3,9 @@ name: doubao-geo
 
 x-app-env: &app-env
   TZ: Asia/Shanghai
-  # 由 MYSQL_PASSWORD 拼出来；密码请只用字母数字，否则要做 URL 编码
-  DATABASE_URL: mysql+pymysql://geo:${MYSQL_PASSWORD}@mysql:3306/geo?charset=utf8mb4
+  # .env 里设了 DATABASE_URL（如连阿里云 RDS）就用它；否则由 MYSQL_PASSWORD 拼出 compose 内置 mysql 的地址
+  # MYSQL_PASSWORD 请只用字母数字，否则要做 URL 编码
+  DATABASE_URL: ${DATABASE_URL:-mysql+pymysql://geo:${MYSQL_PASSWORD}@mysql:3306/geo?charset=utf8mb4}
   ARK_API_KEY: ${ARK_API_KEY}
   SECRET_KEY: ${SECRET_KEY}
   COOKIE_SECURE: ${COOKIE_SECURE:-true}
@@ -71,8 +72,8 @@ services:
       TZ: Asia/Shanghai
       SITE_DOMAIN: ${SITE_DOMAIN}
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
+      - "8443:443"
     volumes:
       - caddy_data:/data
       - caddy_config:/config
