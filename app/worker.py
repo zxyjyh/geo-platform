@@ -1,7 +1,7 @@
-"""定时采集 worker：每天 06:00（北京时间）跑 daily_collect，每 60 秒处理一次页面上的"补跑"请求。
+"""定时采集 worker：每天 10:00（北京时间）跑 daily_collect，每 60 秒处理一次页面上的"补跑"请求。
 
 两类任务放在同一个单线程执行器里串行执行，定时采集和手动补跑不会同时跑同一天（否则会重复调用、主键冲突）。
-启动时如果已经过了今天 06:00 且今天还没有 done 的 daily_collect，立即补跑一次（不补数指的是不伪造数据，不是不重跑）。
+启动时如果已经过了今天 10:00 且今天还没有 done 的 daily_collect，立即补跑一次（不补数指的是不伪造数据，不是不重跑）。
 """
 import logging
 import sys
@@ -20,7 +20,7 @@ from app.models import JobRun
 
 log = logging.getLogger("geo.worker")
 JOB = "daily_collect"
-DAILY_AT = time(6, 0)
+DAILY_AT = time(10, 0)
 _lock = threading.Lock()  # 单线程执行器之外再加一道（只在本进程内有效：worker 只能起一个副本）
 
 
@@ -117,7 +117,7 @@ def main() -> None:
     client = HttpArkClient(cfg.ark_api_key)
     sched = build_scheduler(session_factory, client, cfg.raw_dir)
     if needs_catchup(session_factory):
-        log.info("已过 06:00 且今天还没有成功的采集，立即补跑")
+        log.info("已过 10:00 且今天还没有成功的采集，立即补跑")
         sched.add_job(daily_job, id="catchup", args=[session_factory, client, cfg.raw_dir])
     sched.start()
 

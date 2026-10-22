@@ -57,21 +57,21 @@ def test_unexpected_exception_marks_job_failed(session_factory, tmp_path):
 
 
 def test_needs_catchup(session_factory, session, tmp_path):
-    before_6 = datetime(2026, 10, 22, 5, 59, tzinfo=CST)
-    after_6 = datetime(2026, 10, 21, 22, 30, tzinfo=timezone.utc)      # 北京时间 10-22 06:30
-    assert not needs_catchup(session_factory, before_6)
-    assert needs_catchup(session_factory, after_6)
-    daily_job(session_factory, FakeClient.from_trial("custom"), tmp_path, at=after_6)
-    assert not needs_catchup(session_factory, after_6)
+    before_10 = datetime(2026, 10, 22, 9, 59, tzinfo=CST)
+    after_10 = datetime(2026, 10, 22, 2, 30, tzinfo=timezone.utc)      # 北京时间 10-22 10:30
+    assert not needs_catchup(session_factory, before_10)
+    assert needs_catchup(session_factory, after_10)
+    daily_job(session_factory, FakeClient.from_trial("custom"), tmp_path, at=after_10)
+    assert not needs_catchup(session_factory, after_10)
 
 
-def test_scheduler_is_serial_and_scheduled_at_6_cst(session_factory, tmp_path):
+def test_scheduler_is_serial_and_scheduled_at_10_cst(session_factory, tmp_path):
     # 定时采集和手动补跑必须串行（Task 4 的并发问题由这里保证）
     sched = build_scheduler(session_factory, FakeClient.from_trial("custom"), tmp_path)
     assert sched._executors["default"]._pool._max_workers == 1
     jobs = {j.id: j for j in sched.get_jobs()}
     daily = jobs["daily_collect"]
-    assert str(daily.trigger.timezone) == "Asia/Shanghai" and "hour='6'" in str(daily.trigger)
+    assert str(daily.trigger.timezone) == "Asia/Shanghai" and "hour='10'" in str(daily.trigger)
     assert sched._job_defaults == {"coalesce": True, "max_instances": 1, "misfire_grace_time": 3600}
     assert "process_requested" in jobs
 

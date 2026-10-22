@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  Alert, Button, Card, Form, Input, InputNumber, Modal, Popconfirm, Select, Space, Switch, Table, Tabs, Tag, Typography, message,
+  Button, Card, Form, Input, InputNumber, Modal, Popconfirm, Select, Space, Switch, Table, Tabs, Tag, Typography, message,
 } from "antd";
 import { get, send } from "../api";
 import { cstToday } from "../format";
@@ -128,7 +128,7 @@ function Jobs() {
           onConfirm={() => send("POST", "/settings/jobs/rerun", { date: today }).then(() => { message.success("已加入队列"); load(); }).catch(fail)}>
           <Button type="primary">补跑今天</Button>
         </Popconfirm>
-        <Typography.Text type="secondary">只能补跑北京时间当天：补跑往日会把今天采到的回答记到那一天。每天 06:00 自动采集。</Typography.Text>
+        <Typography.Text type="secondary">只能补跑北京时间当天。每天 10:00 自动采集。</Typography.Text>
       </Space>
       <Table<Job> size="small" rowKey="id" dataSource={rows} pagination={false}
         columns={[
@@ -172,7 +172,6 @@ function Users() {
 export default function Settings() {
   return (
     <Card className="ab-card" size="small">
-      <Alert type="info" showIcon style={{ marginBottom: 12 }} message="ARK_API_KEY 等密钥只在服务器的环境变量里，页面上不显示也不能修改。" />
       <Tabs items={[
         { key: "aliases", label: "竞品别名表", children: <Aliases /> },
         { key: "platforms", label: "平台映射", children: <Platforms /> },

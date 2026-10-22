@@ -6,7 +6,7 @@
 |---|---|---|
 | `mysql` | MySQL 8.4，utf8mb4 | 只绑 `127.0.0.1:3307`（排查用） |
 | `api` | 启动时先 `alembic upgrade head`，再起 uvicorn | 不对外，只有 caddy 能连 |
-| `worker` | 每天 06:00（北京时间）采集，每 60 秒处理页面上的"补跑今天" | 无 |
+| `worker` | 每天 10:00（北京时间）采集，每 60 秒处理页面上的"补跑今天" | 无 |
 | `caddy` | HTTPS、前端静态文件、`/api/*` 反向代理 | 80 / 443 |
 
 所有容器 `TZ=Asia/Shanghai`。代码里"哪一天"一律按北京时间算，不依赖容器时区。
@@ -67,7 +67,7 @@ docker compose -f deploy/docker-compose.yml exec api python scripts/compare_roun
 - 参照值：本机 trial 里 api-custom 和 api-plugin 两个渠道的逐题 Jaccard 均值是 0.23（两套搜索）。同一渠道、同一模型隔一天的自然波动有多大还没测过，所以**不要拿一次的数字下结论**。
 - 如果服务器这一轮的 Jaccard 均值明显低、或"澳觅是否被提及"有好几题不一致，就在看板渠道标签旁注明"api-custom 的地区取决于服务器所在地"（由你判断要不要加）。
 
-注意：`run-daily` 和 worker 是两个进程，**不要在 06:00 前后手动跑**，否则会和定时采集重叠，导致同一题重复调用。页面上的"补跑今天"由 worker 排队执行，没有这个问题。
+注意：`run-daily` 和 worker 是两个进程，**不要在 10:00 前后手动跑**，否则会和定时采集重叠，导致同一题重复调用。页面上的"补跑今天"由 worker 排队执行，没有这个问题。
 
 ## 四、日常运维
 
