@@ -58,7 +58,9 @@ class WeakQuestion:
 
 def weak_questions(session: Session, channel: str, today: date, recent_n: int = 7, mention_ratio: float = 0.5,
                    alias_version: int = 1, platform: str = "doubao") -> list[WeakQuestion]:
-    """每道不带品牌名的题取最近 recent_n 条 valid 的 daily run，只返回至少命中一条短板原因的题。"""
+    """每道不带品牌名的题取最近 recent_n 条 valid 的 daily run，只返回至少命中一条短板原因的题。
+
+    按条数取，不按天数：每题每天问 2 次时，最近 recent_n 条只覆盖一半的天数。"""
     out = []
     for qid in unbranded_qids(session):
         cs = list(session.scalars(

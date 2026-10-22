@@ -1,7 +1,8 @@
 """当日指标、趋势和自检。口径见 spec §4.5：
 
 - 题目范围：当前题库里不带品牌名的题；只取 round=daily、指定 channel 的 run；
-- 分母：当天 status=valid 且有指定 alias_version 编码的 run 数。void、failed、缺失都进 missing_qids；
+- 分母：当天 valid 的回答数（每题可能有多次，见 repeats_per_question_api），且有指定 alias_version 编码；
+  一条 valid 都没有的题（void、failed、缺失）进 missing_qids；
 - 提及率 = 提到 e 的 run 数 / 分母；三家中首位率 = e 排第 1 的 run 数 / 分母；
 - 提及份额 = 提到 e 的 run 数 / 三家提及次数之和。
 """
@@ -31,6 +32,7 @@ class DailyMetrics:
     channel: str
     n_expected: int
     n_valid: int
+    n_reps: int          # 当天 valid run 里 rep 的最大值，没有 valid 时为 0。自检按它算，不看当前设置
     missing_qids: list[str]
     mention: dict[str, Ratio]
     first: dict[str, Ratio]
@@ -56,6 +58,7 @@ def daily_metrics(session: Session, d: date, channel: str, alias_version: int,
     failures: list[str] = []
     cs: list[Coding] = []
     valid_qids: list[str] = []
+    valid_keys: list[tuple[str, int]] = []
     for run, coding in rows:
         if run.status != "valid":
             continue
@@ -64,7 +67,9 @@ def daily_metrics(session: Session, d: date, channel: str, alias_version: int,
             continue
         cs.append(coding)
         valid_qids.append(run.qid)
+        valid_keys.append((run.qid, run.rep))
     n_valid = len(cs)
+    n_reps = max((rep for _, rep in valid_keys), default=0)
     mention = {e: Ratio(sum(getattr(c, f"mention_{e}") for c in cs), n_valid) for e in ENTITIES}
     first = {e: Ratio(sum(getattr(c, f"order_{e}") == 1 for c in cs), n_valid) for e in ENTITIES}
     total = sum(r.num for r in mention.values())
@@ -74,13 +79,13 @@ def daily_metrics(session: Session, d: date, channel: str, alias_version: int,
     for e in ENTITIES:
         if first[e].num > mention[e].num:
             failures.append(f"first_{e}")
-    if len(valid_qids) != len(set(valid_qids)):
-        failures.append("duplicate_qid")            # 同一天同一题多条 valid：分母会被多算
-    if n_valid > len(qids):
+    if len(valid_keys) != len(set(valid_keys)):
+        failures.append("duplicate_qid")            # 同一天同一题同一次多条 valid：分母会被多算
+    if n_valid > len(qids) * max(n_reps, 1):
         failures.append("n_valid")
 
     return DailyMetrics(date=d, channel=channel, n_expected=len(qids), n_valid=n_valid,
-                        missing_qids=[q for q in qids if q not in set(valid_qids)], mention=mention, first=first,
+                        n_reps=n_reps, missing_qids=[q for q in qids if q not in set(valid_qids)], mention=mention, first=first,
                         share=share, selfcheck_failures=sorted(set(failures)))
 
 

@@ -58,6 +58,7 @@ class Run(Base):
     mode: Mapped[str] = mapped_column(String(32), default="")
     collected_at: Mapped[datetime] = mapped_column(CSTDateTime())
     collect_date: Mapped[date] = mapped_column(Date, index=True)
+    rep: Mapped[int] = mapped_column(Integer, default=1, server_default="1")  # 当天这题的第几次（spec §4.3）
     collector: Mapped[str] = mapped_column(String(64), default="")
     account_ref: Mapped[str] = mapped_column(String(64), default="")
     location: Mapped[str] = mapped_column(String(64), default="")

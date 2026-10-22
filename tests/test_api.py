@@ -154,6 +154,12 @@ def test_rerun_rejects_future_date(authed):
     assert authed.post("/api/settings/jobs/rerun", json={"date": "2999-01-01"}).status_code == 422  # 未来同样拒绝
 
 
+def test_settings_repeats_validation(authed):
+    for bad in ("0", "6", "x"):
+        assert authed.put("/api/settings", json={"repeats_per_question_api": bad}).status_code == 422
+    assert authed.put("/api/settings", json={"repeats_per_question_api": "2"}).json()["repeats_per_question_api"] == "2"
+
+
 def test_settings_rejects_unknown_key(authed):           # PUT {"ARK_API_KEY": "x"} → 422
     assert authed.put("/api/settings", json={"ARK_API_KEY": "x"}).status_code == 422
     assert authed.put("/api/settings", json={"alias_version": "9"}).status_code == 422

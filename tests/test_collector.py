@@ -4,8 +4,8 @@ from datetime import date, datetime, timezone
 import pytest
 
 from app import timeutil
-from app.collector import run_daily
-from app.models import Coding, Run, Source
+from app.collector import daily_run_id, run_daily
+from app.models import Coding, Run, Setting, Source
 from app.seed import seed_all
 from app.timeutil import today_cst
 from tests.fakes import FakeClient
@@ -105,3 +105,33 @@ def test_run_daily_backfills_runs_missing_current_alias_version(session, tmp_pat
     session.commit()
     run_daily(session, FakeClient.from_trial("custom"), D, "api-custom", tmp_path, sleep_s=0)
     assert session.get(Coding, (old.run_id, 2)) is not None
+
+
+def test_run_id_rep_suffix():
+    d = date(2026, 10, 22)
+    assert daily_run_id("api-custom", "Q01", d) == "daily-doubao-api-custom-Q01-20261022"
+    assert daily_run_id("api-custom", "Q01", d, 2) == "daily-doubao-api-custom-Q01-20261022-r2"
+
+
+def test_run_daily_repeats_two(session, tmp_path):
+    c = FakeClient.from_trial("custom")
+    s = run_daily(session, c, D, "api-custom", tmp_path, sleep_s=0, repeats=2)
+    assert (s.n_ok, c.total_calls, c.calls_for("Q01")) == (30, 30, 2)
+    r2 = session.get(Run, "daily-doubao-api-custom-Q01-20261022-r2")
+    assert r2.rep == 2 and r2.status == "valid"
+
+
+def test_run_daily_failed_rep_reported_with_suffix(session, tmp_path):
+    run_daily(session, FakeClient.from_trial("custom"), D, "api-custom", tmp_path, sleep_s=0, repeats=1)
+    c = FakeClient.failing_for(["Q01"], 3)        # 第 1 次已 valid 跳过；第 2 次用完重试仍失败
+    s = run_daily(session, c, D, "api-custom", tmp_path, sleep_s=0, repeats=2)
+    assert s.failed_qids == ["Q01-r2"] and session.get(Run, "daily-doubao-api-custom-Q01-20261022-r2").status == "failed"
+
+
+def test_run_daily_reads_setting_and_keeps_existing_r2(session, tmp_path):
+    session.get(Setting, "repeats_per_question_api").value = "2"; session.commit()
+    run_daily(session, FakeClient.from_trial("custom"), D, "api-custom", tmp_path, sleep_s=0)
+    session.get(Setting, "repeats_per_question_api").value = "1"; session.commit()
+    c = FakeClient.from_trial("custom")
+    run_daily(session, c, D, "api-custom", tmp_path, sleep_s=0)
+    assert c.total_calls == 0 and session.query(Run).count() == 30   # 改回 1 不删已采到的 r2

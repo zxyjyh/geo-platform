@@ -13,6 +13,7 @@ def test_alembic_upgrade_head_creates_all_tables(tmp_path):
     tables = set(inspect(create_engine(url)).get_table_names())
     assert {"questions", "runs", "sources", "codings", "aliases", "platforms", "owned_prefixes",
             "source_tags", "job_runs", "users", "settings"} <= tables
+    assert "rep" in {c["name"] for c in inspect(create_engine(url)).get_columns("runs")}
 
 
 def test_mysql_ddl_case_sensitive_columns_use_bin_collation(capsys):

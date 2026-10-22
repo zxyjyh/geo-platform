@@ -1,7 +1,9 @@
 """每日采集：v3 的题逐题调用方舟，原始响应落盘，run / sources / codings 入库。
 
 失败重试 retries 次，仍失败就写 status=failed 的 run，绝不补数。
-同一天重复执行时，已经 valid / void 的题跳过，failed 的题删掉重跑。每题单独提交。
+每题每天问 repeats 次（设置 repeats_per_question_api，默认 1），第 2 次起 run_id 加 -r2、-r3。
+同一天重复执行时，已经 valid / void 的跳过，failed 的删掉重跑。每次单独提交。
+把设置从 2 改回 1 不会删掉当天已经采到的 -r2。
 """
 import json
 import time
@@ -37,8 +39,9 @@ def setting(session: Session, key: str, default: str = "") -> str:
     return row.value if row is not None and row.value != "" else default
 
 
-def daily_run_id(channel: str, qid: str, d: date) -> str:
-    return f"daily-doubao-{channel}-{qid}-{d:%Y%m%d}"
+def daily_run_id(channel: str, qid: str, d: date, rep: int = 1) -> str:
+    base = f"daily-doubao-{channel}-{qid}-{d:%Y%m%d}"
+    return base if rep == 1 else f"{base}-r{rep}"
 
 
 def store_run(session: Session, run: Run, result: ArkResult) -> None:
@@ -75,8 +78,8 @@ def store_run(session: Session, run: Run, result: ArkResult) -> None:
 
 
 def new_run(run_id: str, qid: str, question_version: str, channel: str, run_date: date, collected_at,
-            round_: str = ROUND, collector: str = "app.collector") -> Run:
-    return Run(run_id=run_id, round=round_, qid=qid, question_version=question_version, platform="doubao",
+            round_: str = ROUND, collector: str = "app.collector", rep: int = 1) -> Run:
+    return Run(run_id=run_id, round=round_, qid=qid, question_version=question_version, platform="doubao", rep=rep,
                channel=channel, channel_detail=f"{DEFAULT_MODEL} / web_search {channel}", mode="联网",
                collected_at=collected_at, collect_date=run_date, collector=collector,
                account_ref="ark-default", location="中国/广东/深圳" if channel == "api-plugin" else "未设置",
@@ -92,59 +95,62 @@ def _delete_run(session: Session, run: Run) -> None:
 
 
 def run_daily(session: Session, client: ArkClient, run_date: date, channel: str, raw_dir: Path,
-              sleep_s: float = 1.0, retries: int = 2) -> JobSummary:
+              sleep_s: float = 1.0, retries: int = 2, repeats: int | None = None) -> JobSummary:
     version = setting(session, "question_version", "v3")
+    if repeats is None:
+        repeats = int(setting(session, "repeats_per_question_api", "1"))
     questions = list(session.scalars(select(Question).where(Question.version == version).order_by(Question.qid)))
     summary = JobSummary(run_date=run_date, channel=channel)
     raw_dir.mkdir(parents=True, exist_ok=True)
     called = False
 
     for q in questions:
-        run_id = daily_run_id(channel, q.qid, run_date)
-        existing = session.get(Run, run_id)
-        if existing is not None and existing.status in ("valid", "void"):
-            summary.n_skipped += 1
-            continue
-        if existing is not None:
-            _delete_run(session, existing)
-
-        if called and sleep_s:
-            time.sleep(sleep_s)
-        called = True
-        body = build_body(q.text, channel)
-        resp, error = None, None
-        for attempt in range(retries + 1):
-            if attempt and sleep_s:
-                time.sleep(sleep_s)
-            try:
-                resp = client.create(body)
-                break
-            except ArkError as e:
-                error = f"第 {attempt + 1} 次：{e}"
-        collected_at = timeutil.now_cst()
-
-        if resp is not None:
-            raw_path = raw_dir / f"{run_id}.json"
-            try:
-                raw_path.write_text(json.dumps({"request": body, "response": resp,
-                                                "collected_at": collected_at.isoformat(timespec="seconds")},
-                                               ensure_ascii=False, indent=1), encoding="utf-8")
-                run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at)
-                run.raw_path = str(raw_path.resolve())
-                store_run(session, run, parse(resp))
-                session.commit()
-                summary.n_ok += 1
+        for rep in range(1, repeats + 1):
+            run_id = daily_run_id(channel, q.qid, run_date, rep)
+            existing = session.get(Run, run_id)
+            if existing is not None and existing.status in ("valid", "void"):
+                summary.n_skipped += 1
                 continue
-            except Exception as e:  # noqa: BLE001  一题的响应异常 / 字段超长不能打断其余的题
-                session.rollback()
-                error = f"入库失败 {type(e).__name__}: {e}"
+            if existing is not None:
+                _delete_run(session, existing)
 
-        run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at)
-        run.status, run.error = "failed", error
-        session.add(run)
-        session.commit()
-        summary.n_failed += 1
-        summary.failed_qids.append(q.qid)
+            if called and sleep_s:
+                time.sleep(sleep_s)
+            called = True
+            body = build_body(q.text, channel)
+            resp, error = None, None
+            for attempt in range(retries + 1):
+                if attempt and sleep_s:
+                    time.sleep(sleep_s)
+                try:
+                    resp = client.create(body)
+                    break
+                except ArkError as e:
+                    error = f"第 {attempt + 1} 次：{e}"
+            collected_at = timeutil.now_cst()
+
+            if resp is not None:
+                raw_path = raw_dir / f"{run_id}.json"
+                try:
+                    raw_path.write_text(json.dumps({"request": body, "response": resp,
+                                                    "collected_at": collected_at.isoformat(timespec="seconds")},
+                                                   ensure_ascii=False, indent=1), encoding="utf-8")
+                    run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at, rep=rep)
+                    run.raw_path = str(raw_path.resolve())
+                    store_run(session, run, parse(resp))
+                    session.commit()
+                    summary.n_ok += 1
+                    continue
+                except Exception as e:  # noqa: BLE001  一题的响应异常 / 字段超长不能打断其余的题
+                    session.rollback()
+                    error = f"入库失败 {type(e).__name__}: {e}"
+
+            run = new_run(run_id, q.qid, q.version, channel, run_date, collected_at, rep=rep)
+            run.status, run.error = "failed", error
+            session.add(run)
+            session.commit()
+            summary.n_failed += 1
+            summary.failed_qids.append(q.qid if rep == 1 else f"{q.qid}-r{rep}")
     # 采集期间别名表可能升了版本：先前按旧版本编码入库的 run 补上当前版本的编码
     backfill_missing(session, int(setting(session, "alias_version", "1")))
     return summary

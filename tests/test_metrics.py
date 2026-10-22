@@ -3,6 +3,7 @@ from datetime import date
 import pytest
 
 from app.metrics import Ratio, daily_metrics, trend
+from app.models import Setting
 from app.seed import seed_all
 from tests.builders import UNBRANDED, add_run
 
@@ -94,3 +95,29 @@ def test_duplicate_valid_runs_for_one_question_flagged(session):
     add_run(session, "Q01", D, run_id="daily-other-Q01", mention={"aomi": False})
     m = daily_metrics(session, D, "api-custom", 1)
     assert "duplicate_qid" in m.selfcheck_failures
+
+
+def test_metrics_two_reps_denominator(session):
+    for i, qid in enumerate(UNBRANDED):
+        add_run(session, qid, D, mention={"aomi": True}, order={"aomi": 1})
+        add_run(session, qid, D, rep=2, mention={"aomi": i < 5}, order={"aomi": 1 if i < 5 else None})
+    m = daily_metrics(session, D, "api-custom", 1)
+    assert m.mention["aomi"] == Ratio(15, 20) and m.n_reps == 2 and m.selfcheck_failures == []
+
+
+def test_metrics_partial_rep(session):
+    add_run(session, "Q01", D)
+    add_run(session, "Q01", D, rep=2, status="failed")
+    m = daily_metrics(session, D, "api-custom", 1)
+    assert m.n_valid == 1 and "Q01" not in m.missing_qids
+
+
+def test_metrics_reps_check_ignores_current_setting(session):
+    add_run(session, "Q01", D); add_run(session, "Q01", D, rep=2)
+    session.get(Setting, "repeats_per_question_api").value = "1"; session.commit()
+    assert daily_metrics(session, D, "api-custom", 1).selfcheck_failures == []
+
+
+def test_metrics_no_valid_n_reps_zero(session):
+    add_run(session, "Q01", D, status="failed")
+    assert daily_metrics(session, D, "api-custom", 1).n_reps == 0

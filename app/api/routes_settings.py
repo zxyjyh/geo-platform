@@ -40,6 +40,7 @@ def _price(v: str) -> bool:
 # 页面上能改的设置和校验规则。alias_version / question_version 不在这里：前者只能通过改别名表升版本
 EDITABLE = {
     "api_channel": lambda v: v in CHANNELS,
+    "repeats_per_question_api": lambda v: v.isdigit() and 1 <= int(v) <= 5,
     "weak_recent_n": _int,
     "weak_mention_ratio": _ratio,
     "platform_window_days": _int,
