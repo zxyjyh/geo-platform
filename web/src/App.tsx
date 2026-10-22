@@ -51,7 +51,7 @@ function Shell() {
     <Layout style={{ minHeight: "100%" }}>
       <Layout.Sider width={220} style={{ borderRight: "1px solid #eef0f4" }}>
         <div style={{ padding: "18px 20px 10px", fontWeight: 700, fontSize: 18, color: "#1f2937" }}>
-          <span style={{ color: "#5B5CF6" }}>◆</span> 豆包 GEO
+          <span style={{ color: "#5B5CF6" }}>◆</span> 澳觅GEO
         </div>
         <Space style={{ padding: "4px 20px 12px" }}>
           <Avatar size={32} style={{ background: "#EEF0FF", color: "#5B5CF6", fontSize: 12 }}>澳觅</Avatar>

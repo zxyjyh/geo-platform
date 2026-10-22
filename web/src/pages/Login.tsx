@@ -20,7 +20,7 @@ export default function Login() {
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
       <Card style={{ width: 360 }}>
-        <Typography.Title level={4} style={{ marginTop: 0 }}>豆包 GEO · 内部</Typography.Title>
+        <Typography.Title level={4} style={{ marginTop: 0 }}>澳觅GEO · 内部</Typography.Title>
         {error && <Alert type="error" message={error} showIcon style={{ marginBottom: 16 }} />}
         <Form layout="vertical" onFinish={onFinish}>
           <Form.Item name="username" label="用户名" rules={[{ required: true }]}>

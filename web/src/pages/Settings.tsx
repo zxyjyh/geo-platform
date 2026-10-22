@@ -98,7 +98,7 @@ function Params() {
   return (
     <Form form={form} layout="vertical" style={{ maxWidth: 520 }} onFinish={save}>
       <Form.Item name="api_channel" label="API 渠道" extra="换渠道后看板按渠道分开显示，不和之前的数据接成一条线">
-        <Select options={[{ value: "api-custom", label: "api-custom（豆包搜索 Custom 版）" }, { value: "api-plugin", label: "api-plugin（联网内容插件）" }]} />
+        <Select options={[{ value: "api-custom", label: "api-custom（联网搜索 Custom 版）" }, { value: "api-plugin", label: "api-plugin（联网内容插件）" }]} />
       </Form.Item>
       <Form.Item name="weak_recent_n" label="短板题：看最近几次采集"><InputNumber min={1} max={60} /></Form.Item>
       <Form.Item name="weak_mention_ratio" label="短板题：澳觅提及比例低于"><InputNumber min={0.05} max={1} step={0.05} /></Form.Item>

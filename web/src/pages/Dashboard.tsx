@@ -132,7 +132,7 @@ export default function Dashboard() {
             <Typography.Text type="secondary">{tracked ? `已追踪 ${tracked} 天` : "尚无数据"}</Typography.Text>
           </Space>
           <div><Typography.Text type="secondary">
-            一览澳觅在豆包回答里的提及、三家先后与趋势。数据来自 {data.channel}（方舟模型 + 字节搜索），不是豆包 App 的表现。
+            一览澳觅在大模型回答里的提及、三家先后与趋势。数据来自 {data.channel}，不是 App 端的表现。
           </Typography.Text></div>
         </Col>
         <Col>
