@@ -5,7 +5,7 @@ import {
 import { useSearchParams } from "react-router-dom";
 import { get, send } from "../api";
 import { cstToday } from "../format";
-import { ENTITIES, ENTITY_NAME, MARK_KIND_LABEL, type BrandMark, type Entity } from "../types";
+import { ENTITIES, ENTITY_NAME, LINKS_LABEL, MARK_KIND_LABEL, STRICTNESS_LABEL, type BrandMark, type Entity } from "../types";
 
 const fail = (e: unknown) => message.error(String((e as Error).message || e));
 
@@ -37,7 +37,11 @@ function Aliases() {
   );
 }
 
-interface Platform { key: string; name: string; domain_suffix: string; publishable: boolean }
+interface Platform {
+  key: string; name: string; domain_suffix: string; publishable: boolean;
+  review_strictness: string; allows_links: string; notes: string;
+}
+const options = (labels: Record<string, string>) => Object.entries(labels).map(([value, label]) => ({ value, label }));
 
 function Platforms() {
   const [rows, setRows] = useState<Platform[]>([]);
@@ -46,17 +50,24 @@ function Platforms() {
   const set = (i: number, patch: Partial<Platform>) => setRows(rows.map((r, j) => (j === i ? { ...r, ...patch } : r)));
   return (
     <Space direction="vertical" style={{ width: "100%" }}>
-      <Typography.Text type="secondary">域名等于后缀、或以“.后缀”结尾就算这个平台；多个都能匹配时取最长的后缀。保存后重算全部信源。</Typography.Text>
+      <Typography.Text type="secondary">域名等于后缀、或以“.后缀”结尾就算这个平台；多个都能匹配时取最长的后缀。保存后重算全部信源。审核宽严、外链、注意事项只在优化建议里展示，不影响平台推荐排序。</Typography.Text>
       <Table<Platform> size="small" rowKey={(_, i) => String(i)} dataSource={rows} pagination={false}
         columns={[
           { title: "key", render: (_, r, i) => <Input value={r.key} onChange={(e) => set(i, { key: e.target.value })} /> },
           { title: "名称", render: (_, r, i) => <Input value={r.name} onChange={(e) => set(i, { name: e.target.value })} /> },
           { title: "域名后缀", render: (_, r, i) => <Input value={r.domain_suffix} onChange={(e) => set(i, { domain_suffix: e.target.value })} /> },
           { title: "可发布", width: 80, render: (_, r, i) => <Switch checked={r.publishable} onChange={(v) => set(i, { publishable: v })} /> },
+          { title: "审核宽严", width: 100, render: (_, r, i) => (
+            <Select value={r.review_strictness} style={{ width: 90 }} options={options(STRICTNESS_LABEL)}
+              onChange={(v) => set(i, { review_strictness: v })} />) },
+          { title: "能否带外链", width: 130, render: (_, r, i) => (
+            <Select value={r.allows_links} style={{ width: 120 }} options={options(LINKS_LABEL)}
+              onChange={(v) => set(i, { allows_links: v })} />) },
+          { title: "发布注意事项", render: (_, r, i) => <Input value={r.notes} maxLength={500} onChange={(e) => set(i, { notes: e.target.value })} /> },
           { title: "", width: 60, render: (_, __, i) => <Button size="small" danger onClick={() => setRows(rows.filter((_, j) => j !== i))}>删</Button> },
         ]} />
       <Space>
-        <Button onClick={() => setRows([...rows, { key: "", name: "", domain_suffix: "", publishable: true }])}>新增一行</Button>
+        <Button onClick={() => setRows([...rows, { key: "", name: "", domain_suffix: "", publishable: true, review_strictness: "unknown", allows_links: "unknown", notes: "" }])}>新增一行</Button>
         <Button type="primary" onClick={() => send("PUT", "/settings/platforms", rows).then(() => { message.success("已保存并重算"); load(); }).catch(fail)}>保存</Button>
       </Space>
     </Space>

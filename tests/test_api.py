@@ -185,6 +185,20 @@ def test_sources_lifecycle_default_start_is_channel_first_day(authed, seeded_dai
     assert r.status_code == 200 and r.json() == []
 
 
+def test_platform_attrs_roundtrip_and_default(authed):
+    body = authed.get("/api/settings/platforms").json()
+    assert body[0]["review_strictness"] == "unknown" and body[0]["allows_links"] == "unknown" and body[0]["notes"] == ""
+    body[0].update(review_strictness="strict", allows_links="no", notes="需白名单")
+    r = authed.put("/api/settings/platforms", json=body).json()[0]
+    assert (r["review_strictness"], r["allows_links"], r["notes"]) == ("strict", "no", "需白名单")
+    body[0]["review_strictness"] = "harsh"
+    assert authed.put("/api/settings/platforms", json=body).status_code == 422
+    body[0]["review_strictness"] = "strict"
+    new = {"key": "douyin", "name": "抖音", "domain_suffix": "douyin.com"}     # 新增行不带属性 → 默认 unknown
+    out = {p["key"]: p for p in authed.put("/api/settings/platforms", json=body[:1] + [new]).json()}
+    assert out["douyin"]["review_strictness"] == "unknown" and out["douyin"]["notes"] == ""
+
+
 def test_settings_rejects_unknown_key(authed):           # PUT {"ARK_API_KEY": "x"} → 422
     assert authed.put("/api/settings", json={"ARK_API_KEY": "x"}).status_code == 422
     assert authed.put("/api/settings", json={"alias_version": "9"}).status_code == 422

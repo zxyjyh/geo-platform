@@ -30,7 +30,7 @@ export function selfcheckReason(failures: string[], metric: Metric, entity: Enti
 }
 
 /** 平台推荐：0 次的平台照样列出，标"未验证"。 */
-export function platformLabel(p: PlatformCount): string {
+export function platformLabel(p: Pick<PlatformCount, "key" | "name" | "count" | "verified">): string {
   return p.count === 0 ? `${p.name} 0（未验证）` : `${p.name} ${p.count}`;
 }
 

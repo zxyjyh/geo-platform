@@ -3,7 +3,7 @@ import { Alert, Button, Card, Col, Empty, List, Row, Space, Spin, Tag, Tooltip, 
 import { get } from "../api";
 import { usePlatform } from "../platform";
 import { platformLabel, weakReasons } from "../format";
-import type { PlatformCount, RefArticle, WeakQuestion } from "../types";
+import { LINKS_LABEL, STRICTNESS_LABEL, type PlatformCount, type RefArticle, type WeakQuestion } from "../types";
 
 interface Item { weak: WeakQuestion; platforms: PlatformCount[]; references: RefArticle[] }
 interface Resp { channel: string; date: string; notice: string; items: Item[] }
@@ -37,7 +37,14 @@ export default function Suggestions() {
             <Col xs={24} lg={10}>
               <Typography.Text strong>平台推荐（按这道题的信源被引用次数）</Typography.Text>
               <List size="small" dataSource={platforms} renderItem={(p, i) => (
-                <List.Item><Space><Tag color={p.verified ? "purple" : "default"}>{i + 1}</Tag>{platformLabel(p)}</Space></List.Item>
+                <List.Item>
+                  <Space wrap>
+                    <Tag color={p.verified ? "purple" : "default"}>{i + 1}</Tag>{platformLabel(p)}
+                    <Tag bordered={false}>审核：{STRICTNESS_LABEL[p.review_strictness] ?? p.review_strictness}</Tag>
+                    <Tag bordered={false}>{LINKS_LABEL[p.allows_links] ?? p.allows_links}</Tag>
+                    {p.notes && <Tooltip title={p.notes}><Typography.Text type="secondary" style={{ cursor: "help" }}>注意事项</Typography.Text></Tooltip>}
+                  </Space>
+                </List.Item>
               )} />
             </Col>
             <Col xs={24} lg={14}>

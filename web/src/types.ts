@@ -87,7 +87,14 @@ export interface PlatformCount {
   name: string;
   count: number;
   verified: boolean;
+  review_strictness: string;
+  allows_links: string;
+  notes: string;
 }
+
+/** 平台属性（人工维护，只展示，不参与平台推荐排序）。 */
+export const STRICTNESS_LABEL: Record<string, string> = { loose: "宽", medium: "中", strict: "严", unknown: "未知" };
+export const LINKS_LABEL: Record<string, string> = { yes: "可带链接", no: "不可带链接", unknown: "外链：未知" };
 
 export interface WeakQuestion {
   qid: string;

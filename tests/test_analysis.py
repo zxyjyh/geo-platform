@@ -198,3 +198,18 @@ def test_lifecycle_order_flags_and_latest_title(session):
     rows = citation_lifecycle(session, "api-custom", L0, L3)
     assert [r.url_norm for r in rows] == [normalize_url("https://zhihu.com/n"), normalize_url("https://zhihu.com/m")]
     assert rows[0].title == "新标题" and rows[0].is_owned and not rows[0].external_geo and rows[1].external_geo
+
+
+def test_platform_counts_attrs_do_not_affect_order(session):
+    from app.models import Platform
+    session.get(Platform, "sohu").review_strictness = "strict"
+    zhihu = session.get(Platform, "zhihu")
+    zhihu.review_strictness, zhihu.allows_links, zhihu.notes = "loose", "yes", "可带链接"
+    session.commit()
+    _cite(session, "Q01", D0, "https://www.sohu.com/a/1")
+    _cite(session, "Q02", D0, "https://www.sohu.com/a/2")
+    _cite(session, "Q04", D0, "https://www.zhihu.com/p/1")
+    pc = platform_counts(session, "api-custom", D0, D0)
+    assert [p.key for p in pc[:2]] == ["sohu", "zhihu"]
+    assert (pc[0].review_strictness, pc[1].review_strictness, pc[1].allows_links, pc[1].notes) == \
+        ("strict", "loose", "yes", "可带链接")

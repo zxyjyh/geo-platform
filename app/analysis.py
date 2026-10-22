@@ -31,17 +31,24 @@ class PlatformCount:
     name: str
     count: int
     verified: bool
+    review_strictness: str
+    allows_links: str
+    notes: str
 
 
 def platform_counts(session: Session, channel: str, start: date, end: date,
                     qids: list[str] | None = None, platform: str = "doubao") -> list[PlatformCount]:
-    """固定返回全部可发布平台，count 为 0 的也列出（verified=False，前端显示"未验证"）。"""
+    """固定返回全部可发布平台，count 为 0 的也列出（verified=False，前端显示"未验证"）。
+
+    只按被引用次数排序；平台属性（审核宽严等）只随结果带出去展示，不参与排序（spec §4.6.2）。"""
     q = _daily_sources(channel, start, end, platform).where(Source.platform_key.is_not(None))
     if qids is not None:
         q = q.where(Run.qid.in_(qids))
     c = Counter(s.platform_key for s in session.scalars(q))
     platforms = session.scalars(select(Platform).where(Platform.publishable.is_(True)).order_by(Platform.key))
-    out = [PlatformCount(key=p.key, name=p.name, count=c[p.key], verified=c[p.key] > 0) for p in platforms]
+    out = [PlatformCount(key=p.key, name=p.name, count=c[p.key], verified=c[p.key] > 0,
+                         review_strictness=p.review_strictness, allows_links=p.allows_links, notes=p.notes)
+           for p in platforms]
     return sorted(out, key=lambda p: -p.count)
 
 

@@ -1,5 +1,6 @@
 import re
 from datetime import date
+from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
@@ -154,6 +155,9 @@ class PlatformBody(BaseModel):
     name: str = Field(min_length=1, max_length=64)
     domain_suffix: str = Field(min_length=1, max_length=255)
     publishable: bool = True
+    review_strictness: Literal["loose", "medium", "strict", "unknown"] = "unknown"
+    allows_links: Literal["yes", "no", "unknown"] = "unknown"
+    notes: str = Field(default="", max_length=500)
 
 
 def _recompute_sources(session: Session, platforms: bool = False, owned: bool = False) -> None:
@@ -167,7 +171,8 @@ def _recompute_sources(session: Session, platforms: bool = False, owned: bool = 
 
 
 def _platform_json(p: Platform):
-    return {"key": p.key, "name": p.name, "domain_suffix": p.domain_suffix, "publishable": p.publishable}
+    return {"key": p.key, "name": p.name, "domain_suffix": p.domain_suffix, "publishable": p.publishable,
+            "review_strictness": p.review_strictness, "allows_links": p.allows_links, "notes": p.notes}
 
 
 @router.get("/platforms")
@@ -190,6 +195,7 @@ def put_platforms(body: list[PlatformBody], session: Session = Depends(get_sessi
             session.add(Platform(**b.model_dump()))
         else:
             row.name, row.domain_suffix, row.publishable = b.name, b.domain_suffix.strip().lower(), b.publishable
+            row.review_strictness, row.allows_links, row.notes = b.review_strictness, b.allows_links, b.notes
     session.flush()
     _recompute_sources(session, platforms=True)
     session.commit()

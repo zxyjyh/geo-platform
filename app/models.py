@@ -132,6 +132,10 @@ class Platform(Base):
     name: Mapped[str] = mapped_column(String(64))
     domain_suffix: Mapped[str] = mapped_column(String(255))
     publishable: Mapped[bool] = mapped_column(Boolean, default=True)
+    # 人工维护的平台属性（spec §4.6.2），只展示，不参与平台推荐排序
+    review_strictness: Mapped[str] = mapped_column(String(16), default="unknown", server_default="unknown")  # loose / medium / strict / unknown
+    allows_links: Mapped[str] = mapped_column(String(16), default="unknown", server_default="unknown")       # yes / no / unknown
+    notes: Mapped[str] = mapped_column(String(500), default="", server_default="")
 
 
 class OwnedPrefix(Base):
