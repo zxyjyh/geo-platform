@@ -1,5 +1,6 @@
 # SITE_DOMAIN=geo.<公司域名> 时自动申请 Let's Encrypt 证书；SITE_DOMAIN=localhost 时用 Caddy 内部证书（本机验收）
-{$SITE_DOMAIN} {
+# http:// 前缀禁用 HTTPS（本地开发）；上线时去掉前缀让 Caddy 自动申请证书
+http://{$SITE_DOMAIN} {
 	encode gzip
 
 	# Caddy 2.5+ 默认不信任客户端自带的 X-Forwarded-For，转发给 api 的是真实来源 IP（登录限流按它计数）
