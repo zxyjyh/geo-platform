@@ -1,3 +1,4 @@
+import re
 from datetime import date
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -6,11 +7,12 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.ark import CHANNELS
+from app.attribution import MARK_KINDS, current_marks
 from app.auth import current_user, hash_password
 from app.coding import ENTITIES, backfill_missing, recode_all
 from app.collector import setting
 from app.db import get_session
-from app.models import Alias, JobRun, OwnedPrefix, Platform, Setting, Source, User
+from app.models import Alias, BrandMark, JobRun, OwnedPrefix, Platform, Setting, Source, User
 from app.timeutil import now_cst, today_cst
 from app.urls import is_owned, platform_for
 
@@ -105,6 +107,46 @@ def put_aliases(body: dict[str, list[str]], session: Session = Depends(get_sessi
     # 重算开始之后、切换版本之前，采集器可能又写入了只带旧版本编码的 run
     n += backfill_missing(session, new_version)
     return {"version": new_version, "recoded": n, "aliases": cleaned}
+
+
+class MarkBody(BaseModel):
+    kind: str
+    value: str
+
+
+def _marks_json(session: Session):
+    version, marks = current_marks(session)
+    return {"version": version, "marks": [{"kind": m.kind, "value": m.value} for m in marks]}
+
+
+@router.get("/brand-marks")
+def get_brand_marks(session: Session = Depends(get_session)):
+    return _marks_json(session)
+
+
+@router.put("/brand-marks")
+def put_brand_marks(body: list[MarkBody], session: Session = Depends(get_session)):
+    """生成新版本的完整官方标识清单，旧版本保留；允许空清单（归因显示"未配置官方标识"）。"""
+    cleaned: list[tuple[str, str]] = []
+    for m in body:
+        value = m.value.strip()
+        if m.kind not in MARK_KINDS:
+            raise HTTPException(422, f"类型不合法：{m.kind}")
+        if not 1 <= len(value) <= 128:
+            raise HTTPException(422, "内容不能为空、不超过 128 字")
+        if m.kind == "phone" and not 6 <= len(re.sub(r"\D", "", value)) <= 15:
+            raise HTTPException(422, f"电话要有 6–15 位数字：{value}")
+        cleaned.append((m.kind, value))
+    cleaned = list(dict.fromkeys(cleaned))
+    new_version = (session.scalar(select(func.max(BrandMark.version))) or 0) + 1
+    session.add_all(BrandMark(version=new_version, kind=k, value=v) for k, v in cleaned)
+    row = session.get(Setting, "brand_mark_version")
+    if row is None:
+        session.add(Setting(key="brand_mark_version", value=str(new_version)))
+    else:
+        row.value = str(new_version)
+    session.commit()
+    return _marks_json(session)
 
 
 class PlatformBody(BaseModel):

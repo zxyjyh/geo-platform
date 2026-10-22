@@ -36,7 +36,7 @@ def seeded_daily_two_days(session, tmp_path):
 def test_all_business_routes_require_auth(client):
     for p in ["/api/dashboard", "/api/dashboard/trend", "/api/runs", "/api/runs/x", "/api/questions",
               "/api/sources/domains", "/api/sources/platforms", "/api/sources/owned", "/api/suggestions",
-              "/api/settings", "/api/settings/aliases", "/api/settings/platforms", "/api/settings/owned-prefixes",
+              "/api/settings", "/api/settings/aliases", "/api/settings/brand-marks", "/api/dashboard/attribution", "/api/settings/platforms", "/api/settings/owned-prefixes",
               "/api/settings/jobs", "/api/settings/users"]:
         assert client.get(p).status_code == 401, p
     assert client.put("/api/settings", json={"weak_recent_n": "3"}).status_code == 401
@@ -160,6 +160,22 @@ def test_settings_repeats_validation(authed):
     assert authed.put("/api/settings", json={"repeats_per_question_api": "2"}).json()["repeats_per_question_api"] == "2"
 
 
+def test_brand_marks_put_creates_version(authed):
+    assert authed.get("/api/settings/brand-marks").json() == {"version": 0, "marks": []}
+    r = authed.put("/api/settings/brand-marks", json=[{"kind": "website", "value": " aomiapp.com "},
+                                                     {"kind": "website", "value": "aomiapp.com"}]).json()
+    assert r["version"] == 1 and r["marks"] == [{"kind": "website", "value": "aomiapp.com"}]   # 去空格、去重
+    assert authed.get("/api/settings/brand-marks").json() == r
+    assert authed.put("/api/settings/brand-marks", json=[{"kind": "fax", "value": "x"}]).status_code == 422
+    assert authed.put("/api/settings/brand-marks", json=[{"kind": "phone", "value": "12"}]).status_code == 422
+    assert authed.put("/api/settings/brand-marks", json=[]).json() == {"version": 2, "marks": []}
+
+
+def test_dashboard_attribution_defaults_to_latest_date(authed, seeded_daily_two_days):
+    j = authed.get("/api/dashboard/attribution").json()
+    assert j["date"] == "2026-10-23" and j["configured"] is False and j["text"]["den"] == j["source"]["den"] > 0
+
+
 def test_settings_rejects_unknown_key(authed):           # PUT {"ARK_API_KEY": "x"} → 422
     assert authed.put("/api/settings", json={"ARK_API_KEY": "x"}).status_code == 422
     assert authed.put("/api/settings", json={"alias_version": "9"}).status_code == 422
@@ -252,7 +268,7 @@ def test_runs_list_has_aomi_snippet(authed, seeded_one_day):
     assert "澳觅" in it["aomi_snippet"] and it["scene"]
 
 
-DATA_ROUTES = ["/api/dashboard", "/api/dashboard/trend", "/api/runs", "/api/sources/domains", "/api/sources/platforms",
+DATA_ROUTES = ["/api/dashboard", "/api/dashboard/trend", "/api/dashboard/attribution", "/api/runs", "/api/sources/domains", "/api/sources/platforms",
                "/api/sources/owned", "/api/suggestions"]
 
 

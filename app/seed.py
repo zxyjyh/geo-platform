@@ -31,6 +31,7 @@ DEFAULT_SETTINGS = {
     "question_version": QUESTION_VERSION,
     "alias_version": "1",
     "repeats_per_question_api": "1",
+    "brand_mark_version": "0",
     "weak_recent_n": "7",
     "weak_mention_ratio": "0.5",
     "platform_window_days": "30",

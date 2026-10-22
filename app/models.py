@@ -115,6 +115,16 @@ class Alias(Base):
     alias: Mapped[str] = mapped_column(BinString(64))
 
 
+class BrandMark(Base):
+    """官方标识清单（官网、客服电话等），按版本整表保存，改一次升一版（spec §4.4.1）。"""
+    __tablename__ = "brand_marks"
+    __table_args__ = (UniqueConstraint("version", "kind", "value"), UTF8MB4)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    version: Mapped[int] = mapped_column(Integer, index=True)
+    kind: Mapped[str] = mapped_column(String(16))
+    value: Mapped[str] = mapped_column(BinString(128))
+
+
 class Platform(Base):
     __tablename__ = "platforms"
     __table_args__ = UTF8MB4

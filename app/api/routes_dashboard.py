@@ -5,6 +5,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.api.common import ModelPlatform, alias_version, api_channel, date_range, first_date, latest_date, to_json
+from app.attribution import attribution_daily
 from app.auth import current_user
 from app.collector import ROUND, setting
 from app.db import get_session
@@ -65,3 +66,11 @@ def dashboard_trend(start: date | None = None, end: date | None = None, channel:
     channel = api_channel(session, channel)
     start, end = date_range(start, end or latest_date(session, channel, platform))
     return [to_json(m) for m in trend(session, start, end, channel, alias_version(session), platform)]
+
+
+@router.get("/attribution")
+def dashboard_attribution(date: date | None = None, channel: str | None = None, platform: ModelPlatform = "doubao",
+                          session: Session = Depends(get_session)):
+    channel = api_channel(session, channel)
+    d = date or latest_date(session, channel, platform) or today_cst()
+    return to_json(attribution_daily(session, d, channel, alias_version(session), platform))
