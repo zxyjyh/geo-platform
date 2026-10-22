@@ -1,0 +1,27 @@
+# SITE_DOMAIN=geo.<公司域名> 时自动申请 Let's Encrypt 证书；SITE_DOMAIN=localhost 时用 Caddy 内部证书（本机验收）
+{$SITE_DOMAIN} {
+	encode gzip
+
+	# Caddy 2.5+ 默认不信任客户端自带的 X-Forwarded-For，转发给 api 的是真实来源 IP（登录限流按它计数）
+	handle /api/* {
+		reverse_proxy api:8000 {
+			# Caddy 默认追加到已有的 X-Forwarded-For，攻击者可伪造头部绕过登录限流的 IP 计数。
+			# 用直连 IP 覆盖，保证 uvicorn --proxy-headers 读到的是真实来源。
+			header_up X-Forwarded-For {remote_host}
+		}
+	}
+
+	handle {
+		root * /srv/web
+		try_files {path} /index.html
+		file_server
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy same-origin
+		-Server
+	}
+}

@@ -1,0 +1,14 @@
+.git
+.venv
+.venv-app
+.superpowers
+.pytest_cache
+**/__pycache__
+web/node_modules
+web/dist
+data/raw/daily
+data/geo.db
+graphify-out
+collect/.doubao-profile
+evidence
+.env

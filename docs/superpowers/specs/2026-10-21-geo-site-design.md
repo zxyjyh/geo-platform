@@ -156,7 +156,7 @@
 - 切块：按标题和段落切，保留页码，切块大小和重叠由 builder 定。切块原文和元数据存 MySQL，向量存 Qdrant，两边用 chunk_id 关联。
 - **向量库用自建 Qdrant**【用户定，2026-10-21】。备选方案（火山知识库标准版、Milvus）的对比见下面「知识库选型记录」。
 - **检索 = 语义 + 关键词混合**【我定】：
-  - 语义向量：用方舟的 embedding 模型生成。
+  - 语义向量：用方舟的 embedding 模型生成，**模型 ID = `doubao-embedding-vision-251215`**【用户定，2026-10-21】。注意：这是 vision 模型，支持图文混合，但我们只用文字部分（PDF 是文字版，不做 OCR），成本比纯文本模型高。
   - 关键词：**在应用里用 jieba 分词后自己算 BM25 稀疏向量**，写入 Qdrant 的 sparse vector，查询时用 Qdrant 的 hybrid query（`prefetch` + RRF 融合）。
   - 为什么不用 Qdrant 内置的 BM25：它的官方示例走的是 Qdrant Cloud 推理，开源 Docker 版能不能用，文档没写清楚；`multilingual` 分词器也没有点名中文。这一点没有核实，所以不依赖它。
   - jieba 要加自定义词典：澳觅、mFood、闪蜂、+86、支付宝、微信支付、澳门通等，不能把它们切碎或过滤掉。
