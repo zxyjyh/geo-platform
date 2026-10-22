@@ -147,3 +147,13 @@ describe("每题多次时按题数提示", () => {
     expect(missingNotice(m, "今天")).toBe("今天只采到 6/10 题，缺：Q05、Q09、Q10、Q11");
   });
 });
+
+import { lagLabel } from "./format";
+
+describe("lagLabel", () => {
+  const base = { lag_days: 5, left_censored: false, publish_suspect: false, publish_time: "2026-09-01T09:00:00+08:00" };
+  it("左删失优先，不出天数", () => expect(lagLabel({ ...base, lag_days: null, left_censored: true })).toEqual({ tag: "监测开始前可能已被引用" }));
+  it("发布时间晚于首次被引", () => expect(lagLabel({ ...base, lag_days: null, publish_suspect: true })).toEqual({ tag: "发布时间晚于首次被引" }));
+  it("没有发布时间显示 —", () => expect(lagLabel({ ...base, lag_days: null, publish_time: null })).toEqual({ text: "—" }));
+  it("正常给天数", () => expect(lagLabel(base)).toEqual({ text: "5 天" }));
+});

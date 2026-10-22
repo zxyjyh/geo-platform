@@ -1,4 +1,4 @@
-import type { DailyMetrics, Entity, PlatformCount, Ratio, WeakQuestion } from "./types";
+import type { CitationLife, DailyMetrics, Entity, PlatformCount, Ratio, WeakQuestion } from "./types";
 
 export type Metric = "mention" | "first" | "share";
 
@@ -115,4 +115,13 @@ export function plainSnippet(s: string): string {
 export function prevText(prev: DailyMetrics | undefined, metric: Metric, entity: Entity): string {
   if (!prev) return "无数据";
   return selfcheckReason(prev.selfcheck_failures, metric, entity) ? "自检未通过" : formatRatio(prev[metric][entity]);
+}
+
+/** 首次被引耗时一栏：左删失和发布时间可疑时显示标签不出天数，没有发布时间显示 —。 */
+export function lagLabel(c: Pick<CitationLife, "lag_days" | "left_censored" | "publish_suspect" | "publish_time">):
+  { tag: string } | { text: string } {
+  if (c.left_censored) return { tag: "监测开始前可能已被引用" };
+  if (c.publish_suspect) return { tag: "发布时间晚于首次被引" };
+  if (c.lag_days === null || c.publish_time === null) return { text: "—" };
+  return { text: `${c.lag_days} 天` };
 }

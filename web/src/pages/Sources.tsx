@@ -4,8 +4,8 @@ import dayjs, { type Dayjs } from "dayjs";
 import { get } from "../api";
 import { usePlatform } from "../platform";
 import EChart from "../EChart";
-import { cstToday, platformLabel } from "../format";
-import type { PlatformCount } from "../types";
+import { cstToday, lagLabel, platformLabel } from "../format";
+import type { CitationLife, PlatformCount } from "../types";
 
 interface Owned { run_id: string; rank: number; title: string; url: string; domain: string; platform_key: string | null }
 
@@ -16,6 +16,7 @@ export default function Sources() {
   const [domains, setDomains] = useState<[string, number][]>([]);
   const [platforms, setPlatforms] = useState<PlatformCount[]>([]);
   const [owned, setOwned] = useState<Owned[]>([]);
+  const [life, setLife] = useState<CitationLife[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -23,9 +24,10 @@ export default function Sources() {
     const p = { start: range[0].format("YYYY-MM-DD"), end: range[1].format("YYYY-MM-DD"), channel, platform };
     Promise.all([
       get<[string, number][]>("/sources/domains", p), get<PlatformCount[]>("/sources/platforms", p), get<Owned[]>("/sources/owned", p),
-    ]).then(([d, pl, o]) => {
+      get<CitationLife[]>("/sources/lifecycle", p),
+    ]).then(([d, pl, o, l]) => {
       if (stale) return;
-      setDomains(d); setPlatforms(pl); setOwned(o); setError(null);
+      setDomains(d); setPlatforms(pl); setOwned(o); setLife(l); setError(null);
     }).catch((e) => !stale && setError(String(e.message || e)));
     return () => { stale = true; };
   }, [range, channel, platform]);
@@ -65,6 +67,32 @@ export default function Sources() {
           </Card>
         </Col>
       </Row>
+      <Card className="ab-card" size="small" title={`引用周期（${life.length} 篇）`}>
+        <Table<CitationLife> size="small" rowKey="url_norm" dataSource={life} scroll={{ x: 1100 }}
+          pagination={{ pageSize: 10, showSizeChanger: false }}
+          columns={[
+            { title: "标题", render: (_, r) => (
+              <Space size={4} wrap>
+                <a href={r.url} target="_blank" rel="noreferrer">{r.title || r.url}</a>
+                {r.external_geo && <Tag color="orange">外部 GEO 文章</Tag>}
+                {r.is_owned && <Tag color="green">自有</Tag>}
+              </Space>) },
+            { title: "平台 / 域名", width: 180, render: (_, r) => <>{r.platform_key && <Tag>{r.platform_key}</Tag>}{r.domain}</> },
+            { title: "被引次数", dataIndex: "n_citations", width: 100, sorter: (a, b) => a.n_citations - b.n_citations },
+            { title: "首次 → 末次", width: 130, render: (_, r) => `${r.first_date.slice(5)} → ${r.last_date.slice(5)}` },
+            { title: "活跃天数 / 跨度", width: 120, render: (_, r) => `${r.active_days} / ${r.span_days}` },
+            { title: "持续度", dataIndex: "persistence", width: 90, sorter: (a, b) => a.persistence - b.persistence,
+              render: (v: number) => `${Math.round(v * 100)}%` },
+            { title: "日均被引", dataIndex: "energy", width: 90, render: (v: number) => v.toFixed(1) },
+            { title: "首次被引耗时", width: 190, sorter: (a, b) => (a.lag_days ?? -1) - (b.lag_days ?? -1), render: (_, r) => {
+              const l = lagLabel(r);
+              return "tag" in l ? <Tag>{l.tag}</Tag> : l.text;
+            } },
+          ]} />
+        <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+          发布时间来自接口返回，未核实；被引次数 = 引用过它的回答数。
+        </Typography.Text>
+      </Card>
       <Card className="ab-card" size="small" title={`自有内容被引用（${owned.length}）`}
         extra={<Typography.Text type="secondary">自有渠道前缀在"设置"里维护</Typography.Text>}>
         {owned.length === 0 ? <Empty description="这段时间没有自有内容被引用（或还没配置自有渠道前缀）" /> : (

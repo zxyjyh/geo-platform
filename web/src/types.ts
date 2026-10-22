@@ -60,6 +60,28 @@ export const MARK_KIND_LABEL: Record<string, string> = {
   website: "官网", phone: "客服电话", app_store: "应用商店名", mini_program: "小程序名", official_account: "公众号名", other: "其他",
 };
 
+/** 一篇文章在所选时间段内的引用周期（spec §4.6.1）。 */
+export interface CitationLife {
+  url_norm: string;
+  url: string;
+  title: string;
+  domain: string;
+  platform_key: string | null;
+  n_citations: number;
+  first_date: string;
+  last_date: string;
+  active_days: number;
+  span_days: number;
+  persistence: number;
+  energy: number;
+  publish_time: string | null;
+  lag_days: number | null;
+  left_censored: boolean;
+  publish_suspect: boolean;
+  external_geo: boolean;
+  is_owned: boolean;
+}
+
 export interface PlatformCount {
   key: string;
   name: string;
