@@ -100,6 +100,10 @@ function Params() {
       <Form.Item name="api_channel" label="API 渠道" extra="换渠道后看板按渠道分开显示，不和之前的数据接成一条线">
         <Select options={[{ value: "api-custom", label: "api-custom（联网搜索 Custom 版）" }, { value: "api-plugin", label: "api-plugin（联网内容插件）" }]} />
       </Form.Item>
+      <Form.Item name="repeats_per_question_api" label="每题次数（API，每天每题问几次；改动即改口径）"
+        extra="改了以后趋势图在那一天画竖线；改回 1 不删当天已采到的第 2 次">
+        <InputNumber min={1} max={5} precision={0} />
+      </Form.Item>
       <Form.Item name="weak_recent_n" label="短板题：看最近几次采集"><InputNumber min={1} max={60} /></Form.Item>
       <Form.Item name="weak_mention_ratio" label="短板题：澳觅提及比例低于"><InputNumber min={0.05} max={1} step={0.05} /></Form.Item>
       <Form.Item name="platform_window_days" label="平台推荐与参照文章：统计近几天"><InputNumber min={1} max={366} /></Form.Item>

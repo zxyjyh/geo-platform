@@ -71,7 +71,7 @@ describe("highlightSegments", () => {
 import { missingNotice, trendValue } from "./format";
 
 const day = (over: Partial<import("./types").DailyMetrics> = {}) => ({
-  date: "2026-10-21", channel: "api-custom", n_expected: 10, n_valid: 6,
+  date: "2026-10-21", channel: "api-custom", n_expected: 10, n_valid: 6, n_reps: 1,
   missing_qids: ["Q05", "Q09", "Q10", "Q11"],
   mention: { aomi: { num: 5, den: 6 }, mfood: { num: 4, den: 6 }, shanfeng: { num: 0, den: 6 } },
   first: { aomi: { num: 3, den: 6 }, mfood: { num: 1, den: 6 }, shanfeng: { num: 0, den: 6 } },
@@ -126,5 +126,24 @@ describe("prevText", () => {
     expect(prevText(day({ selfcheck_failures: ["coding_missing"] }), "mention", "aomi")).toBe("自检未通过");
     expect(prevText(day({ selfcheck_failures: ["first_aomi"] }), "first", "aomi")).toBe("自检未通过");
     expect(prevText(day({ selfcheck_failures: ["first_aomi"] }), "mention", "aomi")).toBe("5/6（83%）");
+  });
+});
+
+import { coveredQs, repsChanges } from "./format";
+
+describe("repsChanges", () => {
+  it("只在有数据的相邻两天 n_reps 不同时返回，空数据日跳过", () => {
+    const t = [day({ date: "2026-10-20", n_reps: 1 }), day({ date: "2026-10-21", n_reps: 0 }),
+               day({ date: "2026-10-22", n_reps: 2 }), day({ date: "2026-10-23", n_reps: 2 })];
+    expect(repsChanges(t)).toEqual([{ date: "2026-10-22", reps: 2 }]);
+  });
+  it("第一天不算变化", () => expect(repsChanges([day({ n_reps: 2 })])).toEqual([]));
+});
+
+describe("每题多次时按题数提示", () => {
+  it("n_valid 是回答数，缺题提示和覆盖题数按题算", () => {
+    const m = day({ n_valid: 12, n_reps: 2 });     // 6 题各 2 次
+    expect(coveredQs(m)).toBe(6);
+    expect(missingNotice(m, "今天")).toBe("今天只采到 6/10 题，缺：Q05、Q09、Q10、Q11");
   });
 });

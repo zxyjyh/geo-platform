@@ -72,11 +72,28 @@ export function trendValue(d: DailyMetrics, metric: Metric, entity: Entity): num
   return selfcheckReason(d.selfcheck_failures, metric, entity) ? null : pct(d[metric][entity]);
 }
 
+/** 至少有一条有效回答的题数。n_valid 是回答数（每题可能问多次），不能当题数用。 */
+export function coveredQs(m: DailyMetrics): number {
+  return m.n_expected - m.missing_qids.length;
+}
+
 /** 缺题提示：分母写实际有效题数并列出缺的题；不缺返回 null。 */
 export function missingNotice(m: DailyMetrics, dayWord: string): string | null {
   if (m.missing_qids.length === 0) return null;
   if (m.n_valid === 0) return `${dayWord}没有有效数据（应采 ${m.n_expected} 题）`;
-  return `${dayWord}只采到 ${m.n_valid}/${m.n_expected} 题，缺：${m.missing_qids.join("、")}`;
+  return `${dayWord}只采到 ${coveredQs(m)}/${m.n_expected} 题，缺：${m.missing_qids.join("、")}`;
+}
+
+/** 每题次数变了的日期（口径变化点），趋势图上画竖线。没有数据的日子跳过，和前一个有数据的日子比。 */
+export function repsChanges(trend: DailyMetrics[]): { date: string; reps: number }[] {
+  const out: { date: string; reps: number }[] = [];
+  let last = 0;
+  for (const t of trend) {
+    if (t.n_reps === 0) continue;
+    if (last !== 0 && t.n_reps !== last) out.push({ date: t.date, reps: t.n_reps });
+    last = t.n_reps;
+  }
+  return out;
 }
 
 /** 北京时间的今天（YYYY-MM-DD）。补跑只允许当天，日期必须按 Asia/Shanghai 算。 */

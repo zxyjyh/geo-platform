@@ -12,7 +12,8 @@ export interface DailyMetrics {
   date: string;
   channel: string;
   n_expected: number;
-  n_valid: number;
+  n_valid: number;   // 有效回答数，每题问多次时大于题数
+  n_reps: number;    // 当天每题最多问了几次，没有有效数据时为 0
   missing_qids: string[];
   mention: Record<Entity, Ratio>;
   first: Record<Entity, Ratio>;

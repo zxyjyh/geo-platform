@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import { get } from "../api";
 import { usePlatform } from "../platform";
 import EChart from "../EChart";
-import { formatRatio, missingNotice, pct, prevText, selfcheckReason, trendValue, type Metric } from "../format";
+import { coveredQs, formatRatio, missingNotice, pct, repsChanges, prevText, selfcheckReason, trendValue, type Metric } from "../format";
 import { ENTITIES, ENTITY_NAME, type DailyMetrics, type DashboardData, type Entity } from "../types";
 
 const METRICS: Record<Metric, { label: string; hint: string; icon: JSX.Element }> = {
@@ -81,10 +81,17 @@ export default function Dashboard() {
     xAxis: { type: "category" as const, data: trend.map((t) => t.date.slice(5)) },
     yAxis: { type: "value" as const, min: 0, max: 100, axisLabel: { formatter: "{value}%" }, splitLine: { lineStyle: { type: "dashed" as const } } },
     // 缺数据或自检未通过的日期值为 null，折线断开；孤立点强制画出
-    series: ENTITIES.filter((e) => e === "aomi" || showCompetitors).map((e) => ({
+    // 每题次数变了 = 口径变了，在那一天画竖线提示
+    series: ENTITIES.filter((e) => e === "aomi" || showCompetitors).map((e, i) => ({
       name: ENTITY_NAME[e], type: "line" as const, smooth: true, connectNulls: false, showAllSymbol: true, symbolSize: 6,
       itemStyle: { color: COLORS[e] }, lineStyle: { width: e === "aomi" ? 2.5 : 1.5, type: e === "aomi" ? "solid" as const : "dashed" as const },
       data: trend.map((t) => trendValue(t, metric, e)),
+      ...(i === 0 && {
+        markLine: {
+          symbol: "none", silent: true, lineStyle: { type: "dashed" as const, color: "#999" },
+          data: repsChanges(trend).map((c) => ({ xAxis: c.date.slice(5), label: { formatter: `每题次数改为 ${c.reps}` } })),
+        },
+      }),
     })),
   }), [trend, metric, showCompetitors]);
 
@@ -167,7 +174,7 @@ export default function Dashboard() {
               {m.n_expected ?? "—"}<span style={{ fontSize: 18, color: "#8c8c8c", fontWeight: 400 }}> 题</span>
             </div>
             <div className="ab-kpi-sub" style={{ fontSize: 13, color: "#8c8c8c" }}>
-              计入指标 {m.n_valid}（带品牌名不计入）
+              计入指标 {m.n_valid}{m.n_reps > 1 ? ` 条回答（每题 ${m.n_reps} 次）` : ""}（带品牌名不计入）
             </div>
           </Card>
         </Col>
@@ -202,7 +209,7 @@ export default function Dashboard() {
             <Table size="small" pagination={false} rowKey="scene" dataSource={data.by_scene} scroll={{ x: 560 }}
               columns={[
                 { title: "场景", dataIndex: "scene" },
-                { title: "有效/应采", width: 90, render: (_, s) => `${s.metrics.n_valid}/${s.metrics.n_expected}` },
+                { title: "有效/应采", width: 90, render: (_, s) => `${coveredQs(s.metrics)}/${s.metrics.n_expected}` },
                 ...ENTITIES.map((e) => ({ title: ENTITY_NAME[e], key: e, render: (_: unknown, s: { metrics: DailyMetrics }) => cell(s.metrics, metric, e) })),
               ]} />
           </Card>
