@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Alert, Card, Col, DatePicker, Empty, Row, Select, Space, Table, Tag, Typography } from "antd";
 import dayjs, { type Dayjs } from "dayjs";
 import { get } from "../api";
+import { usePlatform } from "../platform";
 import EChart from "../EChart";
 import { cstToday, platformLabel } from "../format";
 import type { PlatformCount } from "../types";
@@ -9,6 +10,7 @@ import type { PlatformCount } from "../types";
 interface Owned { run_id: string; rank: number; title: string; url: string; domain: string; platform_key: string | null }
 
 export default function Sources() {
+  const platform = usePlatform();
   const [range, setRange] = useState<[Dayjs, Dayjs]>(() => [dayjs(cstToday()).subtract(29, "day"), dayjs(cstToday())]);
   const [channel, setChannel] = useState<string | undefined>();
   const [domains, setDomains] = useState<[string, number][]>([]);
@@ -18,7 +20,7 @@ export default function Sources() {
 
   useEffect(() => {
     let stale = false;
-    const p = { start: range[0].format("YYYY-MM-DD"), end: range[1].format("YYYY-MM-DD"), channel };
+    const p = { start: range[0].format("YYYY-MM-DD"), end: range[1].format("YYYY-MM-DD"), channel, platform };
     Promise.all([
       get<[string, number][]>("/sources/domains", p), get<PlatformCount[]>("/sources/platforms", p), get<Owned[]>("/sources/owned", p),
     ]).then(([d, pl, o]) => {
@@ -26,7 +28,7 @@ export default function Sources() {
       setDomains(d); setPlatforms(pl); setOwned(o); setError(null);
     }).catch((e) => !stale && setError(String(e.message || e)));
     return () => { stale = true; };
-  }, [range, channel]);
+  }, [range, channel, platform]);
 
   const option = {
     grid: { left: 110, right: 40, top: 10, bottom: 24 },

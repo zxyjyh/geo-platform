@@ -1,6 +1,7 @@
 """路由共用：设置读取、日期参数、序列化。"""
 from dataclasses import asdict
 from datetime import date, timedelta
+from typing import Literal
 
 from fastapi import HTTPException
 from sqlalchemy import func, select
@@ -11,6 +12,8 @@ from app.models import Run
 from app.timeutil import today_cst
 
 MAX_SPAN_DAYS = 366
+# 被测的大模型（runs.platform）。接入千问后在这里加 "qianwen"，前端下拉框同时放开
+ModelPlatform = Literal["doubao"]
 
 
 def alias_version(session: Session) -> int:
@@ -21,14 +24,16 @@ def api_channel(session: Session, channel: str | None = None) -> str:
     return channel or setting(session, "api_channel", "api-custom")
 
 
-def latest_date(session: Session, channel: str) -> date | None:
+def latest_date(session: Session, channel: str, platform: str = "doubao") -> date | None:
     return session.scalar(select(func.max(Run.collect_date))
-                          .where(Run.round == ROUND, Run.channel == channel, Run.status == "valid"))
+                          .where(Run.round == ROUND, Run.platform == platform, Run.channel == channel,
+                                 Run.status == "valid"))
 
 
-def first_date(session: Session, channel: str) -> date | None:
+def first_date(session: Session, channel: str, platform: str = "doubao") -> date | None:
     return session.scalar(select(func.min(Run.collect_date))
-                          .where(Run.round == ROUND, Run.channel == channel, Run.status == "valid"))
+                          .where(Run.round == ROUND, Run.platform == platform, Run.channel == channel,
+                                 Run.status == "valid"))
 
 
 def date_range(start: date | None, end: date | None, default_days: int = 30) -> tuple[date, date]:

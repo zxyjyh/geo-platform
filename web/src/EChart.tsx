@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 
 /** 最小的 ECharts 包装：option 变了就重画，容器大小变了就 resize。 */
-export default function EChart({ option, height = 300 }: { option: echarts.EChartsOption; height?: number }) {
+export default function EChart({ option, height = 300 }: { option: echarts.EChartsOption; height?: number | string }) {
   const ref = useRef<HTMLDivElement>(null);
   const chart = useRef<echarts.ECharts | null>(null);
   useEffect(() => {

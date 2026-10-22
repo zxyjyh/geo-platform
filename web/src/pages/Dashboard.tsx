@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Alert, Card, Col, DatePicker, Descriptions, Row, Segmented, Select, Space, Switch, Table, Tag, Tooltip, Typography } from "antd";
 import { AimOutlined, PercentageOutlined, QuestionCircleOutlined, TrophyOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
 import { get } from "../api";
+import { usePlatform } from "../platform";
 import EChart from "../EChart";
-import { formatRatio, missingNotice, pct, plainSnippet, prevText, selfcheckReason, trendValue, type Metric } from "../format";
-import { ENTITIES, ENTITY_NAME, orderText, type DailyMetrics, type DashboardData, type Entity, type RunItem } from "../types";
+import { formatRatio, missingNotice, pct, prevText, selfcheckReason, trendValue, type Metric } from "../format";
+import { ENTITIES, ENTITY_NAME, type DailyMetrics, type DashboardData, type Entity } from "../types";
 
 const METRICS: Record<Metric, { label: string; hint: string; icon: JSX.Element }> = {
   mention: { label: "提及率", icon: <AimOutlined />, hint: "提到该平台的回答数 / 当天有效回答数（只算不带品牌名的题）" },
@@ -20,6 +20,10 @@ const JOB_TAG: Record<string, { color: string; text: string }> = {
   running: { color: "blue", text: "运行中" }, requested: { color: "gold", text: "排队中" },
 };
 
+// 品牌趋势与竞品对比并排时等高：卡片撑满列高，柱状图吃掉剩余高度
+const FILL_CARD = { width: "100%", display: "flex", flexDirection: "column" } as const;
+const FILL_BODY = { flex: 1, display: "flex", flexDirection: "column" } as const;
+
 function cell(m: DailyMetrics | undefined, metric: Metric, e: Entity) {
   if (!m) return <Typography.Text type="secondary">无数据</Typography.Text>;
   const reason = selfcheckReason(m.selfcheck_failures, metric, e);
@@ -28,11 +32,10 @@ function cell(m: DailyMetrics | undefined, metric: Metric, e: Entity) {
 }
 
 export default function Dashboard() {
-  const nav = useNavigate();
+  const platform = usePlatform();
   const [query, setQuery] = useState<{ date?: string; channel?: string }>({});
   const [data, setData] = useState<DashboardData | null>(null);
   const [trend, setTrend] = useState<DailyMetrics[]>([]);
-  const [runs, setRuns] = useState<RunItem[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [metric, setMetric] = useState<Metric>("mention");
   const [showCompetitors, setShowCompetitors] = useState(true);
@@ -40,23 +43,19 @@ export default function Dashboard() {
   useEffect(() => {
     let stale = false; // 快速切换日期时，旧请求晚到不能覆盖新数据
     setError(null);
-    setTrend([]); // 换日期/渠道时先清空，免得"前一天"和逐题表短暂显示旧渠道的数
-    setRuns([]);
-    get<DashboardData>("/dashboard", query)
+    setTrend([]); // 换日期/渠道时先清空，免得"前一天"短暂显示旧渠道的数
+    get<DashboardData>("/dashboard", { ...query, platform })
       .then((d) => {
         if (stale) return;
         setData(d);
         const end = dayjs(d.date);
-        get<DailyMetrics[]>("/dashboard/trend", { start: end.subtract(29, "day").format("YYYY-MM-DD"), end: d.date, channel: d.channel })
+        get<DailyMetrics[]>("/dashboard/trend", { start: end.subtract(29, "day").format("YYYY-MM-DD"), end: d.date, channel: d.channel, platform })
           .then((t) => !stale && setTrend(t))
           .catch((e) => !stale && setError(`趋势加载失败：${e.message}`));
-        get<{ items: RunItem[] }>("/runs", { date_from: d.date, date_to: d.date, round: "daily", channel: d.channel, size: 100 })
-          .then((r) => !stale && setRuns([...r.items].sort((a, b) => a.qid.localeCompare(b.qid))))
-          .catch((e) => !stale && setError(`逐题结果加载失败：${e.message}`));
       })
       .catch((e) => !stale && setError(String(e.message || e)));
     return () => { stale = true; };
-  }, [query]);
+  }, [query, platform]);
 
   const prev = useMemo(() => {
     if (!data) return undefined;
@@ -115,10 +114,16 @@ export default function Dashboard() {
 
   const kpis = (Object.keys(METRICS) as Metric[]).map((k) => (
     <Col xs={24} sm={12} xl={6} key={k}>
-      <Card className="ab-card" size="small">
-        <Tooltip title={METRICS[k].hint}><div className="ab-kpi-title">{METRICS[k].icon}澳觅{METRICS[k].label}</div></Tooltip>
-        <div className="ab-kpi-value">{cell(m, k, "aomi")}</div>
-        <div className="ab-kpi-sub">前一天 {prevText(prev, k, "aomi")}</div>
+      <Card className="ab-card ab-kpi-card" size="small">
+        <Tooltip title={METRICS[k].hint}>
+          <div className="ab-kpi-title">{METRICS[k].icon} {METRICS[k].label}</div>
+        </Tooltip>
+        <div className="ab-kpi-value" style={{ fontSize: 36, fontWeight: 700, margin: "12px 0" }}>
+          {cell(m, k, "aomi")}
+        </div>
+        <div className="ab-kpi-sub" style={{ fontSize: 13, color: "#8c8c8c" }}>
+          前一天 {prevText(prev, k, "aomi")}
+        </div>
       </Card>
     </Col>
   ));
@@ -141,7 +146,7 @@ export default function Dashboard() {
             <DatePicker allowClear={false} value={dayjs(data.date)}
               onChange={(d) => d && setQuery((q) => ({ ...q, date: d.format("YYYY-MM-DD") }))}
               disabledDate={(d) => d.format("YYYY-MM-DD") > data.today} />
-            <Select value={data.channel} style={{ width: 130 }} onChange={(c) => setQuery({ channel: c })}
+            <Select value={data.channel} style={{ width: 130 }} onChange={(c) => setQuery({ ...query, channel: c })}
               options={[{ value: "api-custom" }, { value: "api-plugin" }]} />
             {data.latest_date && data.latest_date !== data.date && (
               <Typography.Link onClick={() => setQuery((q) => ({ ...q, date: data.latest_date! }))}>回到最近一天</Typography.Link>
@@ -156,17 +161,21 @@ export default function Dashboard() {
       <Row gutter={[16, 16]}>
         {kpis.slice(0, 3)}
         <Col xs={24} sm={12} xl={6}>
-          <Card className="ab-card" size="small">
-            <div className="ab-kpi-title"><QuestionCircleOutlined />监控用户提问</div>
-            <div className="ab-kpi-value">{runs.length || "—"}<span style={{ fontSize: 14, color: "#9aa0ac" }}> 题</span></div>
-            <div className="ab-kpi-sub">计入指标 {m.n_valid}/{m.n_expected}（带品牌名的题不计入）</div>
+          <Card className="ab-card ab-kpi-card" size="small">
+            <div className="ab-kpi-title"><QuestionCircleOutlined /> 监控提问</div>
+            <div className="ab-kpi-value" style={{ fontSize: 36, fontWeight: 700, margin: "12px 0" }}>
+              {m.n_expected ?? "—"}<span style={{ fontSize: 18, color: "#8c8c8c", fontWeight: 400 }}> 题</span>
+            </div>
+            <div className="ab-kpi-sub" style={{ fontSize: 13, color: "#8c8c8c" }}>
+              计入指标 {m.n_valid}（带品牌名不计入）
+            </div>
           </Card>
         </Col>
       </Row>
 
-      <Row gutter={[16, 16]}>
-        <Col xs={24} xl={15}>
-          <Card className="ab-card" size="small"
+      <Row gutter={[16, 16]} style={{ display: "flex", flexWrap: "wrap" }}>
+        <Col xs={24} xl={15} style={{ display: "flex" }}>
+          <Card className="ab-card" size="small" style={FILL_CARD} styles={{ body: FILL_BODY }}
             title={<Space>品牌趋势<Switch size="small" checked={showCompetitors} onChange={setShowCompetitors} />
               <Typography.Text type="secondary" style={{ fontWeight: 400 }}>竞品对比</Typography.Text></Space>}
             extra={<Segmented size="small" value={metric} onChange={(v) => setMetric(v as Metric)}
@@ -175,14 +184,14 @@ export default function Dashboard() {
             <Typography.Text type="secondary" style={{ fontSize: 12 }}>近 30 天每日值；断开处为缺数据或自检未通过</Typography.Text>
           </Card>
         </Col>
-        <Col xs={24} xl={9}>
-          <Card className="ab-card" size="small" title="竞品对比" extra={<Tag color="purple">{METRICS[metric].label}</Tag>}>
+        <Col xs={24} xl={9} style={{ display: "flex" }}>
+          <Card className="ab-card" size="small" style={FILL_CARD} styles={{ body: FILL_BODY }} title="竞品对比" extra={<Tag color="purple">{METRICS[metric].label}</Tag>}>
             <div style={{ background: "#F7F8FB", borderRadius: 8, padding: "8px 12px", marginBottom: 8, fontSize: 13 }}>
               澳觅：<b style={{ color: "#5B5CF6" }}>{barBlocked || m.n_valid === 0 ? "—" : `三家中${aomiTied ? "并列" : ""}第 ${aomiRank}`}</b>
               <span style={{ margin: "0 10px", color: "#ddd" }}>|</span>最新 {cell(m, metric, "aomi")}
               <span style={{ margin: "0 10px", color: "#ddd" }}>|</span>前一天 {prevText(prev, metric, "aomi")}
             </div>
-            {barBlocked ? <Alert type="error" message="自检未通过，不出数" /> : <EChart option={barOption} height={200} />}
+            {barBlocked ? <Alert type="error" message="自检未通过，不出数" /> : <div style={{ flex: 1, minHeight: 200 }}><EChart option={barOption} height="100%" /></div>}
           </Card>
         </Col>
       </Row>
@@ -216,19 +225,6 @@ export default function Dashboard() {
         </Col>
       </Row>
 
-      <Card className="ab-card" size="small" title="逐题结果" extra={<Typography.Text type="secondary">点一行查看回答原文和信源</Typography.Text>}>
-        <Table<RunItem> size="small" rowKey="run_id" pagination={false} dataSource={runs} scroll={{ x: 900 }}
-          rowClassName={() => "ab-clickable-row"} onRow={(r) => ({ onClick: () => nav(`/runs?run=${encodeURIComponent(r.run_id)}`) })}
-          columns={[
-            { title: "题目", width: 300, render: (_, r) => <span><b>{r.qid}</b> {r.question}</span> },
-            { title: "场景", dataIndex: "scene", width: 150, render: (s, r) => (
-              <Space size={4} wrap>{s}{data.by_scene.some((sc) => sc.qids.includes(r.qid)) ? null : <Tag>带品牌名·不计入</Tag>}</Space>) },
-            { title: "状态", dataIndex: "status", width: 70, render: (s) => <Tag color={s === "valid" ? "green" : s === "failed" ? "red" : "default"}>{s}</Tag> },
-            { title: "三家先后", width: 170, render: (_, r) => orderText(r.order) },
-            { title: "澳觅提及摘要", dataIndex: "aomi_snippet", render: (s) => (s ? plainSnippet(s) : <Typography.Text type="secondary">未提及</Typography.Text>) },
-            { title: "信源", dataIndex: "sources_count", width: 56 },
-          ]} />
-      </Card>
     </Space>
   );
 }

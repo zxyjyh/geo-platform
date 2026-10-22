@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from app.analysis import domain_ranking, owned_citations, platform_counts
-from app.api.common import api_channel, date_range, to_json
+from app.api.common import ModelPlatform, api_channel, date_range, to_json
 from app.auth import current_user
 from app.db import get_session
 from app.models import SourceTag
@@ -17,25 +17,26 @@ router = APIRouter(prefix="/sources", dependencies=[Depends(current_user)])
 
 @router.get("/domains")
 def domains(start: date | None = None, end: date | None = None, channel: str | None = None,
-            session: Session = Depends(get_session)):
+            platform: ModelPlatform = "doubao", session: Session = Depends(get_session)):
     start, end = date_range(start, end)
-    return domain_ranking(session, api_channel(session, channel), start, end)
+    return domain_ranking(session, api_channel(session, channel), start, end, platform=platform)
 
 
 @router.get("/platforms")
 def platforms(start: date | None = None, end: date | None = None, channel: str | None = None,
-              session: Session = Depends(get_session)):
+              platform: ModelPlatform = "doubao", session: Session = Depends(get_session)):
     start, end = date_range(start, end)
-    return [to_json(p) for p in platform_counts(session, api_channel(session, channel), start, end)]
+    return [to_json(p) for p in platform_counts(session, api_channel(session, channel), start, end,
+                                                platform=platform)]
 
 
 @router.get("/owned")
 def owned(start: date | None = None, end: date | None = None, channel: str | None = None,
-          session: Session = Depends(get_session)):
+          platform: ModelPlatform = "doubao", session: Session = Depends(get_session)):
     start, end = date_range(start, end)
     return [{"run_id": s.run_id, "rank": s.rank, "title": s.title, "url": s.url, "domain": s.domain,
              "platform_key": s.platform_key}
-            for s in owned_citations(session, api_channel(session, channel), start, end)]
+            for s in owned_citations(session, api_channel(session, channel), start, end, platform)]
 
 
 class TagBody(BaseModel):

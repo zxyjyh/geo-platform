@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Alert, Button, Card, Col, Empty, List, Row, Space, Spin, Tag, Tooltip, Typography } from "antd";
 import { get } from "../api";
+import { usePlatform } from "../platform";
 import { platformLabel, weakReasons } from "../format";
 import type { PlatformCount, RefArticle, WeakQuestion } from "../types";
 
@@ -10,7 +11,13 @@ interface Resp { channel: string; date: string; notice: string; items: Item[] }
 export default function Suggestions() {
   const [data, setData] = useState<Resp | null>(null);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => { get<Resp>("/suggestions").then(setData).catch((e) => setError(String(e.message || e))); }, []);
+  const platform = usePlatform();
+  useEffect(() => {
+    let stale = false;
+    get<Resp>("/suggestions", { platform }).then((d) => !stale && setData(d))
+      .catch((e) => !stale && setError(String(e.message || e)));
+    return () => { stale = true; };
+  }, [platform]);
   if (error) return <Alert type="error" showIcon message={error} />;
   if (!data) return <Spin />;
   return (

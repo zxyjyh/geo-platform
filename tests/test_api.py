@@ -244,3 +244,28 @@ def test_dashboard_by_scene(authed, seeded_one_day):
 def test_runs_list_has_aomi_snippet(authed, seeded_one_day):
     it = authed.get("/api/runs", params={"qid": "Q01"}).json()["items"][0]
     assert "澳觅" in it["aomi_snippet"] and it["scene"]
+
+
+DATA_ROUTES = ["/api/dashboard", "/api/dashboard/trend", "/api/runs", "/api/sources/domains", "/api/sources/platforms",
+               "/api/sources/owned", "/api/suggestions"]
+
+
+def test_data_routes_only_count_selected_platform(authed, seeded_daily_two_days, session):
+    # 把所有 run 改成另一个模型：默认（豆包）口径下应当一条都看不到，不能把别的模型的数据算进来
+    for r in session.query(Run):
+        r.platform = "qianwen"
+    session.commit()
+    j = authed.get("/api/dashboard").json()
+    assert j["latest_date"] is None and j["metrics"]["n_valid"] == 0 and j["usage"]["billed_searches"] == 0
+    assert all(m["n_valid"] == 0 for m in authed.get("/api/dashboard/trend", params={"end": "2026-10-23"}).json())
+    assert authed.get("/api/runs").json()["total"] == 0
+    rng = {"start": "2026-10-22", "end": "2026-10-23"}
+    assert authed.get("/api/sources/domains", params=rng).json() == []
+    assert all(p["count"] == 0 for p in authed.get("/api/sources/platforms", params=rng).json())
+    assert authed.get("/api/suggestions").json()["items"] == []
+
+
+def test_data_routes_reject_unsupported_platform(authed):
+    for p in DATA_ROUTES:
+        assert authed.get(p, params={"platform": "qianwen"}).status_code == 422, p
+        assert authed.get(p, params={"platform": "doubao"}).status_code == 200, p

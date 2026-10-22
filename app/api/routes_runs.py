@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.api.common import alias_version
+from app.api.common import ModelPlatform, alias_version
 from app.auth import current_user
 from app.coding import ENTITIES, load_aliases, mention_snippet
 from app.db import get_session
@@ -24,12 +24,13 @@ def _coding_json(c: Coding | None):
 @router.get("")
 def list_runs(date_from: date | None = None, date_to: date | None = None, qid: str | None = None,
               channel: str | None = None, round: str | None = None, aomi_mentioned: bool | None = None,
-              status: str | None = None, page: int = Query(1, ge=1), size: int = Query(20, ge=1, le=100),
-              session: Session = Depends(get_session)):
+              status: str | None = None, platform: ModelPlatform = "doubao", page: int = Query(1, ge=1),
+              size: int = Query(20, ge=1, le=100), session: Session = Depends(get_session)):
     v = alias_version(session)
     q = (select(Run, Coding, Question.text, Question.scene)
          .outerjoin(Coding, (Coding.run_id == Run.run_id) & (Coding.alias_version == v))
-         .outerjoin(Question, (Question.qid == Run.qid) & (Question.version == Run.question_version)))
+         .outerjoin(Question, (Question.qid == Run.qid) & (Question.version == Run.question_version))
+         .where(Run.platform == platform))
     if date_from:
         q = q.where(Run.collect_date >= date_from)
     if date_to:

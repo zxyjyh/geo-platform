@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { Alert, Card, Col, DatePicker, Descriptions, Empty, Row, Select, Space, Spin, Switch, Table, Tag, Typography, message } from "antd";
 import type { Dayjs } from "dayjs";
 import { get, send } from "../api";
+import { usePlatform } from "../platform";
 import { highlightSegments, plainSnippet } from "../format";
 import { orderText, type Entity, type RunItem } from "../types";
 
@@ -87,6 +88,7 @@ function Detail({ runId, aliases }: { runId: string; aliases: Record<Entity, str
 }
 
 export default function Runs() {
+  const platform = usePlatform();
   const [range, setRange] = useState<[Dayjs | null, Dayjs | null] | null>(null);
   const [filters, setFilters] = useState<Record<string, string | undefined>>({ round: "daily" });
   const [page, setPage] = useState(1);
@@ -110,14 +112,14 @@ export default function Runs() {
     setLoading(true);
     setError(null);
     get<{ total: number; items: RunItem[] }>("/runs", {
-      ...filters, page, size: 20,
+      ...filters, platform, page, size: 20,
       date_from: range?.[0]?.format("YYYY-MM-DD"), date_to: range?.[1]?.format("YYYY-MM-DD"),
     })
       .then((r) => !stale && setData(r))
       .catch((e) => !stale && (setData(null), setError(String(e.message || e))))
       .finally(() => !stale && setLoading(false));
     return () => { stale = true; };
-  }, [filters, page, range]);
+  }, [filters, page, range, platform]);
 
   const setF = (k: string) => (v: string | undefined) => {
     setPage(1);

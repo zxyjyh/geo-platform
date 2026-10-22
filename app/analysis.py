@@ -12,15 +12,16 @@ from app.models import Coding, Platform, Question, Run, Source, SourceTag
 from app.urls import host_key
 
 
-def _daily_sources(channel: str, start: date, end: date):
+def _daily_sources(channel: str, start: date, end: date, platform: str = "doubao"):
     return (select(Source).join(Run, Run.run_id == Source.run_id)
-            .where(Run.round == ROUND, Run.status == "valid", Run.channel == channel,
+            .where(Run.round == ROUND, Run.status == "valid", Run.platform == platform, Run.channel == channel,
                    Run.collect_date >= start, Run.collect_date <= end))
 
 
-def domain_ranking(session: Session, channel: str, start: date, end: date, limit: int = 50) -> list[tuple[str, int]]:
+def domain_ranking(session: Session, channel: str, start: date, end: date, limit: int = 50,
+                   platform: str = "doubao") -> list[tuple[str, int]]:
     """域名去掉 www. / m. 再计数，m.sohu.com 和 www.sohu.com 算同一个站。"""
-    c = Counter(host_key(s.domain) for s in session.scalars(_daily_sources(channel, start, end)))
+    c = Counter(host_key(s.domain) for s in session.scalars(_daily_sources(channel, start, end, platform)))
     return sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))[:limit]
 
 
@@ -33,9 +34,9 @@ class PlatformCount:
 
 
 def platform_counts(session: Session, channel: str, start: date, end: date,
-                    qids: list[str] | None = None) -> list[PlatformCount]:
+                    qids: list[str] | None = None, platform: str = "doubao") -> list[PlatformCount]:
     """固定返回全部可发布平台，count 为 0 的也列出（verified=False，前端显示"未验证"）。"""
-    q = _daily_sources(channel, start, end).where(Source.platform_key.is_not(None))
+    q = _daily_sources(channel, start, end, platform).where(Source.platform_key.is_not(None))
     if qids is not None:
         q = q.where(Run.qid.in_(qids))
     c = Counter(s.platform_key for s in session.scalars(q))
@@ -56,13 +57,14 @@ class WeakQuestion:
 
 
 def weak_questions(session: Session, channel: str, today: date, recent_n: int = 7, mention_ratio: float = 0.5,
-                   alias_version: int = 1) -> list[WeakQuestion]:
+                   alias_version: int = 1, platform: str = "doubao") -> list[WeakQuestion]:
     """每道不带品牌名的题取最近 recent_n 条 valid 的 daily run，只返回至少命中一条短板原因的题。"""
     out = []
     for qid in unbranded_qids(session):
         cs = list(session.scalars(
             select(Coding).join(Run, Run.run_id == Coding.run_id)
-            .where(Run.round == ROUND, Run.status == "valid", Run.channel == channel, Run.qid == qid,
+            .where(Run.round == ROUND, Run.status == "valid", Run.platform == platform, Run.channel == channel,
+                   Run.qid == qid,
                    Run.collect_date <= today, Coding.alias_version == alias_version)
             .order_by(Run.collect_date.desc()).limit(recent_n)))
         if not cs:
@@ -95,10 +97,10 @@ class RefArticle:
 
 
 def reference_articles(session: Session, qid: str, channel: str, end: date, days: int = 30,
-                       limit: int = 5) -> list[RefArticle]:
+                       limit: int = 5, platform: str = "doubao") -> list[RefArticle]:
     """按 url_norm 分组，count = 引用过它的 run 数；url / title 取最近一次出现时的值。"""
     rows = session.execute(
-        _daily_sources(channel, end - timedelta(days=days - 1), end).add_columns(Run.collect_date, Run.collected_at)
+        _daily_sources(channel, end - timedelta(days=days - 1), end, platform).add_columns(Run.collect_date, Run.collected_at)
         .where(Run.qid == qid)).all()
     groups: dict[str, dict] = {}
     for s, collect_date, collected_at in rows:
@@ -117,6 +119,6 @@ def reference_articles(session: Session, qid: str, channel: str, end: date, days
     return out[:limit]
 
 
-def owned_citations(session: Session, channel: str, start: date, end: date) -> list[Source]:
-    return list(session.scalars(_daily_sources(channel, start, end).where(Source.is_owned.is_(True))
+def owned_citations(session: Session, channel: str, start: date, end: date, platform: str = "doubao") -> list[Source]:
+    return list(session.scalars(_daily_sources(channel, start, end, platform).where(Source.is_owned.is_(True))
                                 .order_by(Run.collect_date.desc(), Source.rank)))

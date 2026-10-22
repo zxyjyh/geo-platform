@@ -45,12 +45,13 @@ def unbranded_qids(session: Session) -> list[str]:
 
 
 def daily_metrics(session: Session, d: date, channel: str, alias_version: int,
-                  qids: list[str] | None = None) -> DailyMetrics:
+                  qids: list[str] | None = None, platform: str = "doubao") -> DailyMetrics:
     qids = unbranded_qids(session) if qids is None else qids
     rows = session.execute(
         select(Run, Coding)
         .outerjoin(Coding, (Coding.run_id == Run.run_id) & (Coding.alias_version == alias_version))
-        .where(Run.round == ROUND, Run.collect_date == d, Run.channel == channel, Run.qid.in_(qids))
+        .where(Run.round == ROUND, Run.collect_date == d, Run.platform == platform, Run.channel == channel,
+               Run.qid.in_(qids))
     ).all()
     failures: list[str] = []
     cs: list[Coding] = []
@@ -83,11 +84,12 @@ def daily_metrics(session: Session, d: date, channel: str, alias_version: int,
                         share=share, selfcheck_failures=sorted(set(failures)))
 
 
-def trend(session: Session, start: date, end: date, channel: str, alias_version: int) -> list[DailyMetrics]:
+def trend(session: Session, start: date, end: date, channel: str, alias_version: int,
+          platform: str = "doubao") -> list[DailyMetrics]:
     """每天一条，没有数据的日期也输出（n_valid=0），前端据此显示"缺数据"。"""
     qids = unbranded_qids(session)
     out, d = [], start
     while d <= end:
-        out.append(daily_metrics(session, d, channel, alias_version, qids))
+        out.append(daily_metrics(session, d, channel, alias_version, qids, platform))
         d += timedelta(days=1)
     return out
