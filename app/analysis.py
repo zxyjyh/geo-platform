@@ -1,9 +1,9 @@
 """信源分析和优化建议。只看 round=daily、status=valid 的 run，按渠道分开统计（spec §4.6、§4.7）。"""
 from collections import Counter
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.collector import ROUND
@@ -124,3 +124,71 @@ def reference_articles(session: Session, qid: str, channel: str, end: date, days
 def owned_citations(session: Session, channel: str, start: date, end: date, platform: str = "doubao") -> list[Source]:
     return list(session.scalars(_daily_sources(channel, start, end, platform).where(Source.is_owned.is_(True))
                                 .order_by(Run.collect_date.desc(), Source.rank)))
+
+
+@dataclass
+class CitationLife:
+    url_norm: str
+    url: str
+    title: str
+    domain: str
+    platform_key: str | None
+    n_citations: int             # 引用过它的回答数（同一条回答里出现多次算一次）
+    first_date: date
+    last_date: date
+    active_days: int             # 有被引用的天数
+    span_days: int               # 首次到末次的天数（含两端）
+    persistence: float           # 持续度 = active_days / span_days
+    energy: float                # 日均被引 = n_citations / active_days
+    publish_time: datetime | None
+    lag_days: int | None         # 首次被引耗时 = first_date − 发布日期；左删失或发布时间可疑时为 None
+    left_censored: bool          # 首次被引日 = 窗口内第一个可观测日：监测开始前可能已被引用
+    publish_suspect: bool        # 发布时间晚于首次被引
+    external_geo: bool
+    is_owned: bool
+
+
+def citation_lifecycle(session: Session, channel: str, start: date, end: date,
+                       platform: str = "doubao") -> list[CitationLife]:
+    """每篇文章（url_norm）在窗口内的引用周期（spec §4.6.1）。
+
+    窗口第一个可观测日 = max(start, 该渠道历史上第一个有 valid daily run 的日子)；首次被引日等于它时
+    标左删失，不算首次被引耗时。url / title / domain / platform_key 取最近一次出现时的值。
+    """
+    channel_first = session.scalar(select(func.min(Run.collect_date)).where(
+        Run.round == ROUND, Run.status == "valid", Run.platform == platform, Run.channel == channel))
+    if channel_first is None:
+        return []
+    observable_from = max(start, channel_first)
+    rows = session.execute(_daily_sources(channel, start, end, platform)
+                           .add_columns(Run.collect_date, Run.collected_at)).all()
+    groups: dict[str, dict] = {}
+    for s, collect_date, collected_at in rows:
+        g = groups.setdefault(s.url_norm, {"runs": set(), "days": set(), "latest": None, "at": None,
+                                           "publish": None, "owned": False})
+        g["runs"].add(s.run_id)
+        g["days"].add(collect_date)
+        g["owned"] = g["owned"] or s.is_owned
+        if s.publish_time is not None and (g["publish"] is None or s.publish_time < g["publish"]):
+            g["publish"] = s.publish_time
+        at = (collect_date, collected_at, -s.rank)
+        if g["at"] is None or at > g["at"]:
+            g["latest"], g["at"] = s, at
+    tagged = set(session.scalars(select(SourceTag.url_norm).where(SourceTag.tag == "external_geo",
+                                                                  SourceTag.url_norm.in_(list(groups)))))
+    out = []
+    for k, g in groups.items():
+        first, last = min(g["days"]), max(g["days"])
+        span = (last - first).days + 1
+        censored = first == observable_from
+        lag = None if g["publish"] is None else (first - g["publish"].date()).days
+        suspect = lag is not None and lag < 0
+        latest = g["latest"]
+        out.append(CitationLife(
+            url_norm=k, url=latest.url, title=latest.title, domain=latest.domain, platform_key=latest.platform_key,
+            n_citations=len(g["runs"]), first_date=first, last_date=last, active_days=len(g["days"]),
+            span_days=span, persistence=len(g["days"]) / span, energy=len(g["runs"]) / len(g["days"]),
+            publish_time=g["publish"], lag_days=None if censored or suspect else lag, left_censored=censored,
+            publish_suspect=suspect, external_geo=k in tagged, is_owned=g["owned"]))
+    out.sort(key=lambda c: (-c.n_citations, c.first_date, c.url_norm))
+    return out

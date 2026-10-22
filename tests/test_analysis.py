@@ -1,12 +1,14 @@
-from datetime import date, timedelta
+from datetime import date, datetime, time, timedelta
 
 import pytest
 
-from app.analysis import domain_ranking, owned_citations, platform_counts, reference_articles, weak_questions
+from app.analysis import (citation_lifecycle, domain_ranking, owned_citations, platform_counts, reference_articles,
+                          weak_questions)
 from app.collector import run_daily
 from app.models import SourceTag
 from app.seed import seed_all
 from app.urls import normalize_url
+from app.timeutil import CST
 from tests.builders import add_run, add_source
 from tests.fakes import FakeClient
 
@@ -126,3 +128,73 @@ def test_weak_window_really_limits_to_recent_n(session):
         d = D1 - timedelta(days=k)
         add_run(session, "Q05", d, mention={"aomi": k < 7}, order={"aomi": 1 if k < 7 else None})
     assert [w.qid for w in weak_questions(session, "api-custom", D1)] == []
+
+
+# 引用周期：L0 是渠道第一天，L1 = L0+1 …
+L0 = date(2026, 9, 1)
+L1, L2, L3 = (L0 + timedelta(days=k) for k in (1, 2, 3))
+A = "https://www.sohu.com/a/1"
+
+
+def _cite(session, qid, d, url, channel="api-custom", round_="daily", publish_time=None, rank=1):
+    add_source(session, add_run(session, qid, d, channel=channel, round_=round_), url, rank=rank,
+               publish_time=publish_time)
+
+
+def test_lifecycle_basic(session):
+    add_run(session, "Q09", L0)                              # 渠道 L0 就有数据
+    pt = datetime.combine(L1 - timedelta(days=5), time(9), tzinfo=CST)
+    _cite(session, "Q01", L1, "https://m.sohu.com/a/1", publish_time=pt)
+    _cite(session, "Q02", L1, A)
+    run = add_run(session, "Q04", L3)                        # 这条 run 里 A 出现两次，只算一次被引
+    add_source(session, run, A, rank=1)
+    add_source(session, run, A + "?utm_source=x", rank=2)
+    rows = {l.url_norm: l for l in citation_lifecycle(session, "api-custom", L0, L3)}
+    a = rows[normalize_url(A)]
+    assert (a.n_citations, a.first_date, a.last_date, a.active_days, a.span_days) == (3, L1, L3, 2, 3)
+    assert a.persistence == pytest.approx(2 / 3) and a.energy == pytest.approx(1.5)
+    assert (a.lag_days, a.left_censored, a.publish_suspect) == (5, False, False)
+    assert a.publish_time == pt
+
+
+def test_lifecycle_first_day_is_censored(session):        # B 在渠道第一天 L0 就被引用
+    pt = datetime.combine(L0 - timedelta(days=3), time(9), tzinfo=CST)
+    _cite(session, "Q01", L0, "https://zhihu.com/b", publish_time=pt)
+    _cite(session, "Q02", L2, "https://zhihu.com/b")
+    b = citation_lifecycle(session, "api-custom", L0, L3)[0]
+    assert b.left_censored and b.lag_days is None and b.first_date == L0
+
+
+def test_lifecycle_window_start_censors(session):         # C 在 L1、L3 被引；窗口从 L1 开始 → L1 是窗口第一个可观测日
+    add_run(session, "Q09", L0)
+    _cite(session, "Q01", L1, "https://zhihu.com/c")
+    _cite(session, "Q02", L3, "https://zhihu.com/c")
+    c = citation_lifecycle(session, "api-custom", L1, L3)[0]
+    assert c.left_censored and c.first_date == L1
+    assert citation_lifecycle(session, "api-custom", L0, L3)[0].left_censored is False
+
+
+def test_lifecycle_publish_after_first_citation(session):
+    add_run(session, "Q09", L0)
+    _cite(session, "Q01", L1, "https://zhihu.com/x", publish_time=datetime.combine(L2, time(9), tzinfo=CST))
+    x = citation_lifecycle(session, "api-custom", L0, L3)[0]
+    assert x.lag_days is None and x.publish_suspect
+
+
+def test_lifecycle_excludes_other_channel_and_trial(session):
+    add_run(session, "Q09", L0)
+    _cite(session, "Q01", L1, "https://zhihu.com/y", channel="api-plugin")
+    _cite(session, "Q02", L1, "https://zhihu.com/y", round_="trial")
+    assert citation_lifecycle(session, "api-custom", L0, L3) == []
+
+
+def test_lifecycle_order_flags_and_latest_title(session):
+    add_run(session, "Q09", L0)
+    session.add(SourceTag(url_norm=normalize_url("https://zhihu.com/m"), tag="external_geo")); session.commit()
+    _cite(session, "Q01", L2, "https://zhihu.com/n")
+    _cite(session, "Q01", L1, "https://zhihu.com/m")
+    add_source(session, add_run(session, "Q02", L1), "https://zhihu.com/n", title="旧标题")
+    add_source(session, add_run(session, "Q04", L3), "https://zhihu.com/n", title="新标题", is_owned=True)
+    rows = citation_lifecycle(session, "api-custom", L0, L3)
+    assert [r.url_norm for r in rows] == [normalize_url("https://zhihu.com/n"), normalize_url("https://zhihu.com/m")]
+    assert rows[0].title == "新标题" and rows[0].is_owned and not rows[0].external_geo and rows[1].external_geo

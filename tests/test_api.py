@@ -36,7 +36,7 @@ def seeded_daily_two_days(session, tmp_path):
 def test_all_business_routes_require_auth(client):
     for p in ["/api/dashboard", "/api/dashboard/trend", "/api/runs", "/api/runs/x", "/api/questions",
               "/api/sources/domains", "/api/sources/platforms", "/api/sources/owned", "/api/suggestions",
-              "/api/settings", "/api/settings/aliases", "/api/settings/brand-marks", "/api/dashboard/attribution", "/api/settings/platforms", "/api/settings/owned-prefixes",
+              "/api/settings", "/api/settings/aliases", "/api/settings/brand-marks", "/api/dashboard/attribution", "/api/sources/lifecycle", "/api/settings/platforms", "/api/settings/owned-prefixes",
               "/api/settings/jobs", "/api/settings/users"]:
         assert client.get(p).status_code == 401, p
     assert client.put("/api/settings", json={"weak_recent_n": "3"}).status_code == 401
@@ -176,6 +176,15 @@ def test_dashboard_attribution_defaults_to_latest_date(authed, seeded_daily_two_
     assert j["date"] == "2026-10-23" and j["configured"] is False and j["text"]["den"] == j["source"]["den"] > 0
 
 
+def test_sources_lifecycle_default_start_is_channel_first_day(authed, seeded_daily_two_days):
+    rows = authed.get("/api/sources/lifecycle", params={"end": "2026-10-23"}).json()
+    assert rows and {r["first_date"] for r in rows} <= {"2026-10-22", "2026-10-23"}
+    assert all(r["left_censored"] == (r["first_date"] == "2026-10-22") for r in rows)
+    assert authed.get("/api/sources/lifecycle", params={"end": "2026-10-23", "channel": "api-plugin"}).json() == []
+    r = authed.get("/api/sources/lifecycle", params={"end": "2026-10-01"})   # end 早于渠道第一天
+    assert r.status_code == 200 and r.json() == []
+
+
 def test_settings_rejects_unknown_key(authed):           # PUT {"ARK_API_KEY": "x"} → 422
     assert authed.put("/api/settings", json={"ARK_API_KEY": "x"}).status_code == 422
     assert authed.put("/api/settings", json={"alias_version": "9"}).status_code == 422
@@ -268,7 +277,7 @@ def test_runs_list_has_aomi_snippet(authed, seeded_one_day):
     assert "澳觅" in it["aomi_snippet"] and it["scene"]
 
 
-DATA_ROUTES = ["/api/dashboard", "/api/dashboard/trend", "/api/dashboard/attribution", "/api/runs", "/api/sources/domains", "/api/sources/platforms",
+DATA_ROUTES = ["/api/dashboard", "/api/dashboard/trend", "/api/dashboard/attribution", "/api/sources/lifecycle", "/api/runs", "/api/sources/domains", "/api/sources/platforms",
                "/api/sources/owned", "/api/suggestions"]
 
 
