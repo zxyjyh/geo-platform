@@ -11,7 +11,9 @@ from app.auth import current_user
 from app.collector import ROUND, setting
 from app.db import get_session
 from app.metrics import daily_metrics, trend, unbranded_qids
-from app.models import JobRun, Question, Run
+import numpy as np
+
+from app.models import Coding, JobRun, Question, Run
 from app.timeutil import today_cst
 
 router = APIRouter(prefix="/dashboard", dependencies=[Depends(current_user)])
@@ -63,6 +65,23 @@ def dashboard(date: date | None = None, channel: str | None = None, platform: Mo
         "first": growth_index(_ratio_series("first")),
         "share": growth_index(_ratio_series("share")),
     }
+    # InsGEO 风格指标：首位推荐率、首屏提及率、共识波动值
+    # 基于当天所有有效 run 的 Coding 数据（与 daily_metrics 同口径）
+    insgeo_codings = list(session.scalars(
+        select(Coding)
+        .join(Run, Coding.run_id == Run.run_id)
+        .where(Run.round == ROUND, Run.collect_date == d, Run.platform == platform,
+               Run.channel == channel, Run.status == "valid", Run.qid.in_(qids),
+               Coding.alias_version == v)
+    ))
+    mention_aomi_codings = [c for c in insgeo_codings if c.mention_aomi]
+    mention_count = len(mention_aomi_codings)
+    first_rec_count = sum(1 for c in mention_aomi_codings if c.order_aomi == 1)
+    first_screen_count = sum(1 for c in mention_aomi_codings if c.order_aomi is not None and c.order_aomi <= 3)
+    first_rec_rate = first_rec_count / mention_count if mention_count > 0 else 0.0
+    first_screen_rate = first_screen_count / mention_count if mention_count > 0 else 0.0
+    aomi_orders = [c.order_aomi for c in mention_aomi_codings if c.order_aomi is not None]
+    consistency_std = float(np.std(aomi_orders)) if len(aomi_orders) >= 2 else 0.0
     return {
         "date": d, "platform": platform, "channel": channel, "latest_date": latest,
         "first_date": first_date(session, channel, platform),
@@ -73,6 +92,9 @@ def dashboard(date: date | None = None, channel: str | None = None, platform: Mo
                                         "message": jr.message},
         "usage": {"billed_searches": billed, "input_tokens": tin, "output_tokens": tout, "est_cost_yuan": cost},
         "growth": growth,
+        "first_rec_rate": round(first_rec_rate, 4),
+        "first_screen_rate": round(first_screen_rate, 4),
+        "consistency_std": round(consistency_std, 2),
     }
 
 

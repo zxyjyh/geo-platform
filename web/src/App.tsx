@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { Button, Layout, Menu, Result, Select, Space, Spin, Typography } from "antd";
 import {
-  AppstoreOutlined, BookOutlined, BulbOutlined, FileSearchOutlined, LinkOutlined, LogoutOutlined, QuestionCircleOutlined,
-  SettingOutlined, TableOutlined, WarningOutlined,
+  AppstoreOutlined, BookOutlined, BulbOutlined, FileSearchOutlined, FireOutlined, LinkOutlined, LogoutOutlined,
+  QuestionCircleOutlined, SettingOutlined, TableOutlined, WarningOutlined,
 } from "@ant-design/icons";
 import { api, ApiError, send } from "./api";
 import { PLATFORMS, PlatformContext, type ModelPlatform } from "./platform";
@@ -17,12 +17,14 @@ import Settings from "./pages/Settings";
 import Knowledge from "./pages/Knowledge";
 import FactCheck from "./pages/FactCheck";
 import Positioning from "./pages/Positioning";
+import TopArticles from "./pages/TopArticles";
 
 // 菜单分组参考 Answerbit：品牌 / 数据 / 优化 / 工作空间
 const PAGES = [
   { key: "/", icon: <AppstoreOutlined />, label: "概览", group: "品牌" },
   { key: "/questions", icon: <QuestionCircleOutlined />, label: "用户提问", group: "品牌" },
   { key: "/sources", icon: <LinkOutlined />, label: "信源分析", group: "数据" },
+  { key: "/top-articles", icon: <FireOutlined />, label: "热门文章", group: "数据" },
   { key: "/positioning", icon: <TableOutlined />, label: "竞品占位", group: "数据" },
   { key: "/factcheck", icon: <WarningOutlined />, label: "事实问题", group: "数据" },
   { key: "/runs", icon: <FileSearchOutlined />, label: "大模型回答记录", group: "数据" },
@@ -99,6 +101,7 @@ export default function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/questions" element={<Questions />} />
           <Route path="/sources" element={<Sources />} />
+          <Route path="/top-articles" element={<TopArticles />} />
           <Route path="/positioning" element={<Positioning />} />
           <Route path="/factcheck" element={<FactCheck />} />
           <Route path="/runs" element={<Runs />} />

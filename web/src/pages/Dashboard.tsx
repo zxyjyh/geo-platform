@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Alert, Card, Col, Collapse, DatePicker, Descriptions, Row, Segmented, Select, Space, Switch, Table, Tag, Tooltip, Typography } from "antd";
-import { AimOutlined, PercentageOutlined, QuestionCircleOutlined, RiseOutlined, TrophyOutlined } from "@ant-design/icons";
+import { AimOutlined, EyeOutlined, PercentageOutlined, QuestionCircleOutlined, RiseOutlined, ThunderboltOutlined, TrophyOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 import { get } from "../api";
@@ -247,6 +247,47 @@ export default function Dashboard() {
         </Col>
         <Col xs={24} sm={8}>
           <GrowthCard label="份额增长" value={data.growth?.share} />
+        </Col>
+      </Row>
+
+      <Row gutter={[16, 16]}>
+        <Col xs={24} sm={8}>
+          <Card className="ab-card ab-kpi-card" size="small">
+            <Tooltip title="aomi 被 AI 第一个提到的比例（order_aomi == 1 的回答数 / 提到 aomi 的回答数）">
+              <div className="ab-kpi-title"><TrophyOutlined /> 首位推荐率</div>
+            </Tooltip>
+            <div className="ab-kpi-value" style={{ fontSize: 28, fontWeight: 700, margin: "8px 0" }}>
+              {data.first_rec_rate != null ? `${(data.first_rec_rate * 100).toFixed(1)}%` : "—"}
+            </div>
+          </Card>
+        </Col>
+        <Col xs={24} sm={8}>
+          <Card className="ab-card ab-kpi-card" size="small">
+            <Tooltip title="aomi 在回答的前 3 个品牌中被提到的比例（order_aomi ≤ 3 的回答数 / 提到 aomi 的回答数）">
+              <div className="ab-kpi-title"><EyeOutlined /> 首屏提及率</div>
+            </Tooltip>
+            <div className="ab-kpi-value" style={{ fontSize: 28, fontWeight: 700, margin: "8px 0" }}>
+              {data.first_screen_rate != null ? `${(data.first_screen_rate * 100).toFixed(1)}%` : "—"}
+            </div>
+          </Card>
+        </Col>
+        <Col xs={24} sm={8}>
+          <Card className="ab-card ab-kpi-card" size="small">
+            <Tooltip title="当天 order_aomi 的标准差。低波动 = AI 对各场景的回答一致性高">
+              <div className="ab-kpi-title"><ThunderboltOutlined /> 共识波动值</div>
+            </Tooltip>
+            {(() => {
+              const v = data.consistency_std;
+              const color = v < 1 ? "#52c41a" : v < 2 ? "#faad14" : "#ff4d4f";
+              const label = v < 1 ? "稳定" : v < 2 ? "波动" : "震荡";
+              return (
+                <div className="ab-kpi-value" style={{ fontSize: 28, fontWeight: 700, margin: "8px 0" }}>
+                  {v != null ? v.toFixed(2) : "—"}
+                  {v != null && <Tag color={color} style={{ marginLeft: 8, fontSize: 13 }}>{label}</Tag>}
+                </div>
+              );
+            })()}
+          </Card>
         </Col>
       </Row>
 
