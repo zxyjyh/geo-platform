@@ -29,4 +29,4 @@ testpaths = ["tests"]
 pythonpath = ["."]
 markers = ["mysql: 需要 MYSQL_TEST_URL 指向的真实 MySQL"]
 addopts = "-m 'not mysql'"
-filterwarnings = ["ignore:builtin type .* has no __module__ attribute:DeprecationWarning"]
+filterwarnings = ["ignore:builtin type .* has no __module__ attribute:DeprecationWarning", "ignore::SyntaxWarning"]
