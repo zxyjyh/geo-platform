@@ -174,3 +174,39 @@ def test_search_embedder_failure_returns_502(session_factory, session, kb_dir, u
         login(c, "alice", "correct")
         r = c.post("/api/kb/search", json={"query": "澳觅"})
     assert r.status_code == 502 and "fake embedder" in r.json()["detail"]
+
+
+def test_put_overwrites_uncommitted_tail_after_crash(authed, kb_dir):
+    data = b"%PDF-" + bytes(range(95))
+    doc_id = init(authed, size=len(data))
+    assert put(authed, doc_id, 0, data[:40]).status_code == 200
+    with open(kb_dir / f"{doc_id}.pdf.part", "ab") as f:   # 模拟写盘后、提交前崩溃留下的尾巴
+        f.write(b"JUNK" * 5)
+    assert put(authed, doc_id, 40, data[40:]).json() == {"received_bytes": len(data)}
+    assert (kb_dir / f"{doc_id}.pdf.part").read_bytes() == data
+
+
+def test_put_resets_when_part_file_lost_or_short(authed, kb_dir):
+    doc_id = init(authed, size=300)
+    put(authed, doc_id, 0, b"%PDF-" + b"x" * 95)
+    part = kb_dir / f"{doc_id}.pdf.part"
+    part.write_bytes(b"%PDF-")                              # 文件被截短到 5 字节
+    r = put(authed, doc_id, 100, b"y" * 10)
+    assert r.status_code == 409 and r.json()["detail"]["received_bytes"] == 0
+    assert not part.exists()
+    assert authed.get(f"/api/kb/docs/{doc_id}").json()["received_bytes"] == 0
+    assert put(authed, doc_id, 0, b"%PDF-" + b"z" * 95).json() == {"received_bytes": 100}
+    part.unlink()                                           # 文件整个丢了
+    assert put(authed, doc_id, 100, b"y").status_code == 409
+
+
+def test_declared_oversize_part_rejected_without_writing(authed, kb_dir, monkeypatch):
+    import app.api.routes_kb as m
+    monkeypatch.setattr(m, "MAX_PART", 10)
+    doc_id = init(authed, size=100)
+    assert put(authed, doc_id, 0, b"x" * 11).status_code == 413                  # 带 Content-Length
+    r = authed.put(f"/api/kb/docs/{doc_id}/content", params={"offset": 0},
+                   content=iter([b"x" * 6, b"x" * 6]))                           # 分块、无 Content-Length
+    assert r.status_code == 413
+    assert not (kb_dir / f"{doc_id}.pdf.part").exists()
+    assert authed.get(f"/api/kb/docs/{doc_id}").json()["received_bytes"] == 0

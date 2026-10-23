@@ -83,13 +83,27 @@ async def upload_part(doc_id: int, request: Request, offset: int = Query(ge=0),
         raise HTTPException(409, "文档不在上传状态")
     if offset != doc.received_bytes:
         raise HTTPException(409, {"message": "偏移量不对", "received_bytes": doc.received_bytes})
-    body = await request.body()
-    if len(body) > MAX_PART:
+    declared = request.headers.get("content-length")
+    if declared and declared.isdigit() and int(declared) > MAX_PART:
         raise HTTPException(413, "单次上传不能超过 16MB")
+    chunks, total = [], 0
+    async for chunk in request.stream():  # 不信任 Content-Length，边读边数，超限立刻拒绝
+        total += len(chunk)
+        if total > MAX_PART:
+            raise HTTPException(413, "单次上传不能超过 16MB")
+        chunks.append(chunk)
+    body = b"".join(chunks)
     if offset + len(body) > doc.size_bytes:
         raise HTTPException(422, "上传的字节数超过了声明的文件大小")
     part = _kb_dir(request) / f"{doc.id}.pdf.part"
     part.parent.mkdir(parents=True, exist_ok=True)
+    on_disk = part.stat().st_size if part.exists() else 0
+    if on_disk < offset:
+        # 临时文件丢了或被截短：记账的字节已不在磁盘上，清零让客户端从头重传
+        part.unlink(missing_ok=True)
+        doc.received_bytes = 0
+        session.commit()
+        raise HTTPException(409, {"message": "服务器上的临时文件已丢失，请从头重传", "received_bytes": 0})
     with open(part, "ab") as f:
         f.truncate(offset)  # 上次写完文件但没提交时，丢掉没记账的尾巴，保证同一段字节不会写两遍
         f.write(body)
