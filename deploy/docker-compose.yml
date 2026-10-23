@@ -9,6 +9,7 @@ x-app-env: &app-env
   ARK_API_KEY: ${ARK_API_KEY}
   SECRET_KEY: ${SECRET_KEY}
   COOKIE_SECURE: ${COOKIE_SECURE:-true}
+  KB_DIR: /app/data/kb
 
 services:
   mysql:
@@ -43,6 +44,7 @@ services:
              --proxy-headers --forwarded-allow-ips='*'"
     volumes:
       - raw_data:/app/data/raw/daily
+      - kb_data:/app/data/kb
     depends_on:
       mysql: { condition: service_healthy }
     healthcheck:
@@ -58,6 +60,7 @@ services:
     command: ["python", "-m", "app.worker"]
     volumes:
       - raw_data:/app/data/raw/daily
+      - kb_data:/app/data/kb
     depends_on:
       api: { condition: service_healthy }   # 等 api 跑完 alembic 迁移
     # 只能有一个副本：采集的串行保护只在进程内有效，两个 worker 会重复调用 API
@@ -84,5 +87,6 @@ services:
 volumes:
   mysql_data:
   raw_data:
+  kb_data:
   caddy_data:
   caddy_config:

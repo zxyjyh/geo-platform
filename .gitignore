@@ -6,6 +6,7 @@ __pycache__/
 web/node_modules/
 web/dist/
 data/raw/daily/
+data/kb/
 graphify-out/
 collect/.doubao-profile/
 .superpowers/

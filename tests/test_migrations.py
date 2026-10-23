@@ -12,7 +12,7 @@ def test_alembic_upgrade_head_creates_all_tables(tmp_path):
     command.upgrade(cfg, "head")
     tables = set(inspect(create_engine(url)).get_table_names())
     assert {"questions", "runs", "sources", "codings", "aliases", "platforms", "owned_prefixes",
-            "source_tags", "job_runs", "users", "settings", "brand_marks"} <= tables
+            "source_tags", "job_runs", "users", "settings", "brand_marks", "kb_docs", "kb_pages", "kb_chunks"} <= tables
     assert "rep" in {c["name"] for c in inspect(create_engine(url)).get_columns("runs")}
     assert {"review_strictness", "allows_links", "notes"} <= {c["name"] for c in inspect(create_engine(url)).get_columns("platforms")}
 

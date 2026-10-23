@@ -13,6 +13,7 @@ class Settings:
     secret_key: str | None
     cookie_secure: bool
     raw_dir: Path
+    kb_dir: Path
 
 
 def get_settings() -> Settings:
@@ -22,4 +23,5 @@ def get_settings() -> Settings:
         secret_key=os.environ.get("SECRET_KEY") or None,
         cookie_secure=os.environ.get("COOKIE_SECURE", "false").lower() in ("1", "true", "yes"),
         raw_dir=Path(os.environ.get("RAW_DIR", str(ROOT / "data" / "raw" / "daily"))),
+        kb_dir=Path(os.environ.get("KB_DIR", str(ROOT / "data" / "kb"))),
     )

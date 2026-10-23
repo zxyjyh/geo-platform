@@ -1,15 +1,17 @@
 from datetime import date, datetime
 
-from sqlalchemy import (Boolean, Date, DateTime, ForeignKey, Index, Integer, String, Text,
-                        TypeDecorator, UniqueConstraint)
+from sqlalchemy import (BigInteger, Boolean, Date, DateTime, ForeignKey, Index, Integer, LargeBinary, String,
+                        Text, TypeDecorator, UniqueConstraint)
 from sqlalchemy.dialects import mysql
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db import Base
 from app.timeutil import CST
 
 UTF8MB4 = {"mysql_charset": "utf8mb4", "mysql_collate": "utf8mb4_unicode_ci"}
 LongText = Text().with_variant(mysql.MEDIUMTEXT(), "mysql")
+# 向量按 float32 小端字节存：2048 维 = 8KB，MySQL 的 BLOB 上限 64KB 也够，用 MEDIUMBLOB 只是留余量
+VectorBlob = LargeBinary().with_variant(mysql.MEDIUMBLOB(), "mysql")
 
 
 def BinString(n: int):
@@ -185,3 +187,52 @@ class Setting(Base):
     __table_args__ = UTF8MB4
     key: Mapped[str] = mapped_column(String(64), primary_key=True)
     value: Mapped[str] = mapped_column(Text, default="")
+
+
+class KbDoc(Base):
+    """知识库文档（一份 PDF）。文件落在 kb_dir / f"{id}.pdf"。"""
+    __tablename__ = "kb_docs"
+    __table_args__ = UTF8MB4
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    title: Mapped[str] = mapped_column(String(256))
+    filename: Mapped[str] = mapped_column(String(256))
+    size_bytes: Mapped[int] = mapped_column(BigInteger)
+    received_bytes: Mapped[int] = mapped_column(BigInteger, default=0, server_default="0")
+    sha256: Mapped[str] = mapped_column(String(64), default="", server_default="")  # 上传完成时写入
+    effective_date: Mapped[date] = mapped_column(Date)
+    status: Mapped[str] = mapped_column(String(16))  # active 现行 / inactive 失效
+    process_status: Mapped[str] = mapped_column(String(16))  # uploading / queued / processing / ready / failed
+    n_pages: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    n_chunks: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    n_embedded: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    embed_model: Mapped[str] = mapped_column(String(64), default="", server_default="")
+    message: Mapped[str] = mapped_column(Text, default="")
+    uploaded_by: Mapped[str] = mapped_column(String(64))
+    created_at: Mapped[datetime] = mapped_column(CSTDateTime())
+    processed_at: Mapped[datetime | None] = mapped_column(CSTDateTime(), nullable=True)
+    pages: Mapped[list["KbPage"]] = relationship(cascade="all, delete-orphan")
+    chunks: Mapped[list["KbChunk"]] = relationship(cascade="all, delete-orphan")
+
+
+class KbPage(Base):
+    """PDF 每页的提取情况；n_chars 为 0 的页没有文字层，未入库。"""
+    __tablename__ = "kb_pages"
+    __table_args__ = UTF8MB4
+    doc_id: Mapped[int] = mapped_column(ForeignKey("kb_docs.id", ondelete="CASCADE"), primary_key=True)
+    page_no: Mapped[int] = mapped_column(Integer, primary_key=True)  # 从 1 开始
+    n_chars: Mapped[int] = mapped_column(Integer)
+    n_images: Mapped[int] = mapped_column(Integer)
+
+
+class KbChunk(Base):
+    __tablename__ = "kb_chunks"
+    __table_args__ = UTF8MB4
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    doc_id: Mapped[int] = mapped_column(ForeignKey("kb_docs.id", ondelete="CASCADE"), index=True)
+    seq: Mapped[int] = mapped_column(Integer)  # 文档内顺序
+    page_no: Mapped[int] = mapped_column(Integer)
+    half: Mapped[str] = mapped_column(String(1), default="")  # 对开页的 L / R 半页，其余为空
+    text: Mapped[str] = mapped_column(LongText)
+    tokens: Mapped[str] = mapped_column(LongText)  # 转简体后的分词，空格分隔，供关键词检索
+    embedding: Mapped[bytes] = mapped_column(VectorBlob)  # float32 小端字节
+    dim: Mapped[int] = mapped_column(Integer)
