@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Alert, Card, Col, Collapse, DatePicker, Descriptions, Row, Segmented, Select, Space, Switch, Table, Tag, Tooltip, Typography } from "antd";
-import { AimOutlined, PercentageOutlined, QuestionCircleOutlined, TrophyOutlined } from "@ant-design/icons";
+import { AimOutlined, PercentageOutlined, QuestionCircleOutlined, RiseOutlined, TrophyOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 import { get } from "../api";
@@ -59,6 +59,28 @@ function Attribution({ a }: { a: AttributionDay | null }) {
         }]} />
       )}
     </Space>
+  );
+}
+
+function GrowthCard({ label, value }: { label: string; value: number | null | undefined }) {
+  if (value === null || value === undefined) {
+    return (
+      <Card className="ab-card ab-kpi-card" size="small">
+        <div className="ab-kpi-title"><RiseOutlined /> {label}</div>
+        <div className="ab-kpi-value" style={{ fontSize: 28, fontWeight: 700, margin: "8px 0", color: "#8c8c8c" }}>—</div>
+      </Card>
+    );
+  }
+  const color = value > 0 ? "#52c41a" : value < 0 ? "#ff4d4f" : "#8c8c8c";
+  const arrow = value > 0 ? "↑" : value < 0 ? "↓" : "—";
+  const sign = value > 0 ? "+" : "";
+  return (
+    <Card className="ab-card ab-kpi-card" size="small">
+      <div className="ab-kpi-title"><RiseOutlined /> {label}</div>
+      <div className="ab-kpi-value" style={{ fontSize: 28, fontWeight: 700, margin: "8px 0", color }}>
+        {sign}{value.toFixed(2)} {arrow}
+      </div>
+    </Card>
   );
 }
 
@@ -213,6 +235,18 @@ export default function Dashboard() {
               计入指标 {m.n_valid}{m.n_reps > 1 ? ` 条回答（每题 ${m.n_reps} 次）` : ""}（带品牌名不计入）
             </div>
           </Card>
+        </Col>
+      </Row>
+
+      <Row gutter={[16, 16]}>
+        <Col xs={24} sm={8}>
+          <GrowthCard label="提及率增长" value={data.growth?.mention} />
+        </Col>
+        <Col xs={24} sm={8}>
+          <GrowthCard label="首位率增长" value={data.growth?.first} />
+        </Col>
+        <Col xs={24} sm={8}>
+          <GrowthCard label="份额增长" value={data.growth?.share} />
         </Col>
       </Row>
 

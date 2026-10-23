@@ -31,6 +31,7 @@ export interface DashboardData {
   by_scene: { scene: string; qids: string[]; metrics: DailyMetrics }[];
   job: { status: string; n_ok: number; n_failed: number; message: string } | null;
   usage: { billed_searches: number; input_tokens: number; output_tokens: number; est_cost_yuan: number | null };
+  growth: { mention: number; first: number; share: number };
 }
 
 export interface AttributionHit {
@@ -211,3 +212,11 @@ export interface FactStats {
 export const FACT_CATEGORY_LABEL: Record<string, string> = {
   identity: "身份", registration: "注册支付", service: "服务配送", other: "其他",
 };
+
+export interface PositioningData {
+  date: string;
+  channel: string;
+  questions: { qid: string; text: string; scene: string }[];
+  brands: string[];
+  matrix: Record<string, Record<string, number | null>>;
+}

@@ -3,6 +3,7 @@ from collections import Counter
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 
+import numpy as np
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -10,6 +11,22 @@ from app.collector import ROUND
 from app.metrics import unbranded_qids
 from app.models import Coding, Platform, Question, Run, Source, SourceTag
 from app.urls import host_key
+
+
+def growth_index(values: list[float]) -> float:
+    """对时间序列做线性回归，返回斜率。
+
+    values 是按时间顺序排列的数值（如每天的可见度）。
+    用 numpy polyfit(1) 拟合一次多项式，返回斜率。
+    不足 2 个数据点返回 0.0。
+    """
+    if len(values) < 2:
+        return 0.0
+    x = np.arange(len(values))
+    slope, _ = np.polyfit(x, values, 1)
+    result = round(float(slope), 4)
+    # Normalize -0.0 to 0.0 to avoid displaying "-0.00"
+    return 0.0 if result == 0.0 else result
 
 
 def _daily_sources(channel: str, start: date, end: date, platform: str = "doubao"):

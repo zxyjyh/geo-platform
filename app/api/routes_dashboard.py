@@ -1,9 +1,10 @@
-from datetime import date
+from datetime import date, timedelta
 
 from fastapi import APIRouter, Depends
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from app.analysis import growth_index
 from app.api.common import ModelPlatform, alias_version, api_channel, date_range, first_date, latest_date, to_json
 from app.attribution import attribution_daily
 from app.auth import current_user
@@ -48,6 +49,20 @@ def dashboard(date: date | None = None, channel: str | None = None, platform: Mo
                                            "price_output_per_1k_yuan")]
     # 三项单价都配置了才估算，缺一项就显示"未配置单价"，不拿 0 顶替
     cost = None if None in prices else billed * prices[0] + tin / 1000 * prices[1] + tout / 1000 * prices[2]
+    # 增长指数：最近 7 天各项指标的线性回归斜率
+    growth_start = d - timedelta(days=6)
+    recent = trend(session, growth_start, d, channel, v, platform)
+    def _ratio_series(metric_key: str) -> list[float]:
+        out: list[float] = []
+        for dm in recent:
+            r = getattr(dm, metric_key)["aomi"]
+            out.append(r.num / r.den if r.den > 0 else 0.0)
+        return out
+    growth = {
+        "mention": growth_index(_ratio_series("mention")),
+        "first": growth_index(_ratio_series("first")),
+        "share": growth_index(_ratio_series("share")),
+    }
     return {
         "date": d, "platform": platform, "channel": channel, "latest_date": latest,
         "first_date": first_date(session, channel, platform),
@@ -57,6 +72,7 @@ def dashboard(date: date | None = None, channel: str | None = None, platform: Mo
         "job": None if jr is None else {"status": jr.status, "n_ok": jr.n_ok, "n_failed": jr.n_failed,
                                         "message": jr.message},
         "usage": {"billed_searches": billed, "input_tokens": tin, "output_tokens": tout, "est_cost_yuan": cost},
+        "growth": growth,
     }
 
 
@@ -74,3 +90,70 @@ def dashboard_attribution(date: date | None = None, channel: str | None = None, 
     channel = api_channel(session, channel)
     d = date or latest_date(session, channel, platform) or today_cst()
     return to_json(attribution_daily(session, d, channel, alias_version(session), platform))
+
+
+@router.get("/positioning")
+def positioning(date: date | None = None, channel: str | None = None, platform: ModelPlatform = "doubao",
+                session: Session = Depends(get_session)):
+    """竞品横向占位表：每道题每个品牌的名次。
+
+    返回：
+    {
+        "date": "2026-10-23",
+        "channel": "api-custom",
+        "questions": [
+            {"qid": "Q01", "text": "澳门外卖平台推荐", "scene": "外卖"},
+            ...
+        ],
+        "brands": ["aomi", "mfood", "shanfeng"],
+        "matrix": {
+            "Q01": {"aomi": 1, "mfood": 2, "shanfeng": null},
+            "Q02": {"aomi": null, "mfood": 1, "shanfeng": 3},
+            ...
+        }
+    }
+
+    null 表示该题没提到该品牌。
+    """
+    from app.models import Coding
+
+    channel = api_channel(session, channel)
+    latest = latest_date(session, channel, platform)
+    d = date or latest or today_cst()
+    v = alias_version(session)
+    q_version = setting(session, "question_version", "v3")
+
+    # Get all questions for this version
+    questions = list(session.scalars(
+        select(Question).where(Question.version == q_version).order_by(Question.qid)
+    ))
+
+    # Get codings for this date: join runs with codings
+    rows = list(session.execute(
+        select(Run.qid, Coding)
+        .join(Coding, (Coding.run_id == Run.run_id) & (Coding.alias_version == v))
+        .where(Run.round == ROUND, Run.platform == platform, Run.channel == channel,
+               Run.collect_date == d, Run.status == "valid")
+    ))
+
+    # Build matrix: for each qid, get the order for each entity
+    # If multiple runs per qid, take the first one encountered
+    matrix: dict[str, dict[str, int | None]] = {}
+    for qid, coding in rows:
+        if qid not in matrix:
+            matrix[qid] = {
+                "aomi": coding.order_aomi,
+                "mfood": coding.order_mfood,
+                "shanfeng": coding.order_shanfeng
+            }
+
+    return {
+        "date": d,
+        "channel": channel,
+        "questions": [
+            {"qid": q.qid, "text": q.text, "scene": q.scene}
+            for q in questions
+        ],
+        "brands": ["aomi", "mfood", "shanfeng"],
+        "matrix": matrix
+    }
