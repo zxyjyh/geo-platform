@@ -91,3 +91,13 @@ def test_recover_stale_running_jobs_on_startup(session_factory, session):
     manual, scheduled = session.query(JobRun).order_by(JobRun.id).all()
     assert manual.status == "requested"                       # 手动补跑请求重新排队，不静默丢失
     assert scheduled.status == "failed" and "重启" in scheduled.message
+
+
+def test_scheduler_adds_kb_job_only_with_embedder_and_kb_dir(session_factory, tmp_path):
+    from tests.fakes import FakeEmbedder
+
+    client = FakeClient.from_trial("custom")
+    with_kb = build_scheduler(session_factory, client, tmp_path, FakeEmbedder(), tmp_path)
+    assert "kb_process" in {j.id for j in with_kb.get_jobs()}
+    without = build_scheduler(session_factory, client, tmp_path)
+    assert "kb_process" not in {j.id for j in without.get_jobs()}

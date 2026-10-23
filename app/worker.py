@@ -16,6 +16,7 @@ from sqlalchemy.orm import Session, sessionmaker
 from app import timeutil
 from app.ark import ArkClient
 from app.collector import run_daily, setting
+from app.kb.ingest import process_queued, recover_stale_docs
 from app.models import JobRun
 
 log = logging.getLogger("geo.worker")
@@ -89,13 +90,16 @@ def needs_catchup(session_factory: sessionmaker, at: datetime | None = None) -> 
     return done is None
 
 
-def build_scheduler(session_factory: sessionmaker, client: ArkClient, raw_dir) -> BlockingScheduler:
+def build_scheduler(session_factory: sessionmaker, client: ArkClient, raw_dir, embedder=None, kb_dir=None) -> BlockingScheduler:
     sched = BlockingScheduler(timezone="Asia/Shanghai", executors={"default": ThreadPoolExecutor(1)},
                               job_defaults={"coalesce": True, "max_instances": 1, "misfire_grace_time": 3600})
     sched.add_job(daily_job, "cron", hour=DAILY_AT.hour, minute=DAILY_AT.minute, id=JOB,
                   args=[session_factory, client, raw_dir])
     sched.add_job(process_requested, "interval", seconds=60, id="process_requested",
                   args=[session_factory, client, raw_dir])
+    if embedder is not None and kb_dir is not None:  # 知识库入库和采集共用单线程执行器，不并发
+        sched.add_job(process_queued, "interval", seconds=60, id="kb_process",
+                      args=[session_factory, embedder, kb_dir])
     return sched
 
 
@@ -103,6 +107,7 @@ def main() -> None:
     from app.ark import HttpArkClient
     from app.config import get_settings
     from app.db import make_engine
+    from app.kb.embed import HttpArkEmbedder
     from app.seed import seed_all
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
@@ -114,8 +119,12 @@ def main() -> None:
         seed_all(s)
     if n := recover_stale(session_factory):
         log.warning("收回 %d 条上次中断的任务", n)
+    if n := recover_stale_docs(session_factory):
+        log.warning("收回 %d 份上次中断的知识库文档", n)
     client = HttpArkClient(cfg.ark_api_key)
-    sched = build_scheduler(session_factory, client, cfg.raw_dir)
+    embedder = HttpArkEmbedder(cfg.ark_api_key)
+    cfg.kb_dir.mkdir(parents=True, exist_ok=True)
+    sched = build_scheduler(session_factory, client, cfg.raw_dir, embedder, cfg.kb_dir)
     if needs_catchup(session_factory):
         log.info("已过 10:00 且今天还没有成功的采集，立即补跑")
         sched.add_job(daily_job, id="catchup", args=[session_factory, client, cfg.raw_dir])

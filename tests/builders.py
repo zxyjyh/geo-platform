@@ -75,3 +75,34 @@ def make_pdf(directory: Path, pages: list[str | None], landscape: bool = False, 
     path = directory / name
     path.write_bytes(make_pdf_bytes(pages, landscape))
     return path
+
+
+def add_doc(session, kb_dir: Path, pages: list[str | None], *, title: str = "doc", status: str = "active",
+            process_status: str = "queued", landscape: bool = False, effective_date: date = date(2026, 1, 1),
+            uploaded_by: str = "alice"):
+    """建一份知识库文档并把 PDF 写到 kb_dir / f"{id}.pdf"；会提交（别的 session 要能读到）。"""
+    from app.models import KbDoc
+    from app.timeutil import now_cst
+
+    doc = KbDoc(title=title, filename=f"{title}.pdf", size_bytes=0, effective_date=effective_date, status=status,
+                process_status=process_status, message="", uploaded_by=uploaded_by, created_at=now_cst())
+    session.add(doc)
+    session.flush()
+    path = make_pdf(kb_dir, pages, landscape=landscape, name=f"{doc.id}.pdf")
+    doc.size_bytes = path.stat().st_size
+    session.commit()
+    return doc
+
+
+def ready_doc(session, kb_dir: Path, title: str, pages: list[str | None], status: str = "active",
+              process_status: str | None = None, embedder=None):
+    """建好并入库一份文档；process_status 若给出则事后覆盖（切片保留，用来证明检索按状态排除）。"""
+    from app.kb.ingest import process_doc
+    from tests.fakes import FakeEmbedder
+
+    doc = add_doc(session, kb_dir, pages, title=title, status=status)
+    process_doc(session, doc, embedder or FakeEmbedder(), kb_dir)
+    if process_status is not None:
+        doc.process_status = process_status
+        session.commit()
+    return doc
