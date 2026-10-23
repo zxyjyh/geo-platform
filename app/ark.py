@@ -100,28 +100,32 @@ class ArkClient(Protocol):
     def create(self, body: dict) -> dict: ...
 
 
+def post_json(url: str, api_key: str, body: dict, timeout: int) -> dict:
+    req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"), method="POST",
+                                 headers={"Authorization": f"Bearer {api_key}",
+                                          "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            data = json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        try:
+            detail = e.read().decode("utf-8", "replace")[:500]
+        except OSError:
+            detail = ""
+        raise ArkError(f"HTTP {e.code}: {detail}") from e
+    # urllib 只把建连阶段的 OSError 包成 URLError；getresponse / read 阶段的断连、
+    # 不完整响应会原样抛出。ValueError 覆盖 JSON 和 UTF-8 解码错误。
+    except (OSError, http.client.HTTPException, ValueError) as e:
+        raise ArkError(f"{type(e).__name__}: {e}") from e
+    if not isinstance(data, dict):
+        raise ArkError(f"响应不是 JSON 对象：{type(data).__name__}")
+    return data
+
+
 class HttpArkClient:
     def __init__(self, api_key: str, timeout: int = 180):
         self.api_key = api_key
         self.timeout = timeout
 
     def create(self, body: dict) -> dict:
-        req = urllib.request.Request(ENDPOINT, data=json.dumps(body).encode("utf-8"), method="POST",
-                                     headers={"Authorization": f"Bearer {self.api_key}",
-                                              "Content-Type": "application/json"})
-        try:
-            with urllib.request.urlopen(req, timeout=self.timeout) as r:
-                data = json.loads(r.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            try:
-                detail = e.read().decode("utf-8", "replace")[:500]
-            except OSError:
-                detail = ""
-            raise ArkError(f"HTTP {e.code}: {detail}") from e
-        # urllib 只把建连阶段的 OSError 包成 URLError；getresponse / read 阶段的断连、
-        # 不完整响应会原样抛出。ValueError 覆盖 JSON 和 UTF-8 解码错误。
-        except (OSError, http.client.HTTPException, ValueError) as e:
-            raise ArkError(f"{type(e).__name__}: {e}") from e
-        if not isinstance(data, dict):
-            raise ArkError(f"响应不是 JSON 对象：{type(data).__name__}")
-        return data
+        return post_json(ENDPOINT, self.api_key, body, self.timeout)

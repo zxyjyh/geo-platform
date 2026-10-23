@@ -1,9 +1,12 @@
 """测试用的方舟客户端：按题目回放 trial 的原始响应，或者让指定题先失败若干次。"""
 import json
+import math
+import zlib
 from collections import Counter
 
 from app.ark import ArkError
 from app.config import ROOT
+from app.kb.text import tokenize
 
 TRIAL = ROOT / "data" / "raw" / "trial"
 
@@ -52,3 +55,23 @@ class FakeClient:
     @property
     def total_calls(self) -> int:
         return sum(self.calls.values())
+
+
+class FakeEmbedder:
+    """词袋哈希向量：同词越多越相似。用 crc32 而不是内置 hash（后者每个进程随机）。"""
+    model = "fake"
+
+    def __init__(self, dim: int = 64, fail_after: int | None = None):
+        self.dim = dim
+        self.fail_after = fail_after
+        self.calls = 0
+
+    def embed(self, text: str) -> list[float]:
+        self.calls += 1
+        if self.fail_after is not None and self.calls > self.fail_after:
+            raise ArkError("fake embedder 按设定失败")
+        vec = [0.0] * self.dim
+        for w in tokenize(text):
+            vec[zlib.crc32(w.encode()) % self.dim] += 1.0
+        norm = math.sqrt(sum(x * x for x in vec)) or 1.0
+        return [x / norm for x in vec]
