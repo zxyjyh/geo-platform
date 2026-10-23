@@ -29,6 +29,14 @@ def parse_embedding(resp: dict) -> list[float]:
     return [float(x) for x in vec]
 
 
+def _is_retryable(err: ArkError) -> bool:
+    """429（限流）、5xx（服务端错误）、网络/超时可重试；400/401/403 等 4xx 不可重试。"""
+    code = err.status_code
+    if code is None:
+        return True  # 网络错误、超时、JSON 解析错误等非 HTTP 错误
+    return code == 429 or code >= 500
+
+
 class HttpArkEmbedder:
     def __init__(self, api_key: str, model: str = EMBED_MODEL, timeout: int = 60):
         self.api_key = api_key
@@ -39,8 +47,10 @@ class HttpArkEmbedder:
         body = build_embed_body(text, self.model)
         for delay in (*RETRY_DELAYS, None):
             try:
-                return parse_embedding(post_json(EMBED_ENDPOINT, self.api_key, body, self.timeout))
-            except ArkError:
-                if delay is None:
+                resp = post_json(EMBED_ENDPOINT, self.api_key, body, self.timeout)
+            except ArkError as e:
+                if delay is None or not _is_retryable(e):
                     raise
                 time.sleep(delay)
+                continue
+            return parse_embedding(resp)

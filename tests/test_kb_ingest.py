@@ -81,7 +81,9 @@ def test_process_queued_continues_when_doc_deleted_midway(session_factory, tmp_p
     with session_factory() as s:
         first = add_doc(s, tmp_path, pages=["澳觅"], title="first", process_status="queued").id
         add_doc(s, tmp_path, pages=["闪蜂"], title="second", process_status="queued")
+    # 每轮只处理一份；第一轮处理 first（中途被删），第二轮处理 second
     process_queued(session_factory, DeletingEmbedder(session_factory, first), tmp_path)
+    process_queued(session_factory, FakeEmbedder(), tmp_path)
     with session_factory() as s:
         assert {d.title: d.process_status for d in s.scalars(select(KbDoc))} == {"second": "ready"}
 

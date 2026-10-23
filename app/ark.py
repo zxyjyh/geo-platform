@@ -21,7 +21,9 @@ CHANNELS = ("api-custom", "api-plugin")
 
 
 class ArkError(Exception):
-    pass
+    def __init__(self, message: str, status_code: int | None = None):
+        super().__init__(message)
+        self.status_code = status_code
 
 
 def build_body(question: str, channel: str, model: str = DEFAULT_MODEL,
@@ -112,7 +114,7 @@ def post_json(url: str, api_key: str, body: dict, timeout: int) -> dict:
             detail = e.read().decode("utf-8", "replace")[:500]
         except OSError:
             detail = ""
-        raise ArkError(f"HTTP {e.code}: {detail}") from e
+        raise ArkError(f"HTTP {e.code}: {detail}", status_code=e.code) from e
     # urllib 只把建连阶段的 OSError 包成 URLError；getresponse / read 阶段的断连、
     # 不完整响应会原样抛出。ValueError 覆盖 JSON 和 UTF-8 解码错误。
     except (OSError, http.client.HTTPException, ValueError) as e:

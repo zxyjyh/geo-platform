@@ -222,4 +222,5 @@ def search_kb(body: SearchIn, request: Request, session: Session = Depends(get_s
         raise HTTPException(502, f"向量化失败：{e}")
     return [{"chunk_id": h.chunk_id, "doc_id": h.doc_id, "doc_title": h.doc_title,
              "effective_date": h.effective_date.isoformat(), "page_no": h.page_no, "half": h.half, "text": h.text,
-             "score": h.score, "semantic_rank": h.semantic_rank, "keyword_rank": h.keyword_rank} for h in hits]
+             "score": h.score, "semantic_rank": h.semantic_rank, "keyword_rank": h.keyword_rank,
+             "similarity": h.similarity} for h in hits]

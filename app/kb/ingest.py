@@ -56,16 +56,18 @@ def process_doc(session: Session, doc: KbDoc, embedder: Embedder, kb_dir: Path) 
 
 
 def process_queued(session_factory: sessionmaker, embedder: Embedder, kb_dir: Path) -> int:
-    n = 0
+    """每轮只处理一份排队文档，避免长时间占用调度器导致其他定时任务被跳过。"""
     with session_factory() as session:
-        ids = list(session.scalars(select(KbDoc.id).where(KbDoc.process_status == "queued").order_by(KbDoc.id)))
-        for doc_id in ids:
-            doc = session.get(KbDoc, doc_id)
-            if doc is None:  # 排队后被删了，跳过
-                continue
-            process_doc(session, doc, embedder, kb_dir)
-            n += 1
-    return n
+        doc_id = session.scalars(
+            select(KbDoc.id).where(KbDoc.process_status == "queued").order_by(KbDoc.id)
+        ).first()
+        if doc_id is None:
+            return 0
+        doc = session.get(KbDoc, doc_id)
+        if doc is None:  # 排队后被删了
+            return 0
+        process_doc(session, doc, embedder, kb_dir)
+    return 1
 
 
 def recover_stale_docs(session_factory: sessionmaker) -> int:
