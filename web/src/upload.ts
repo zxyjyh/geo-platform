@@ -3,6 +3,8 @@ import { ApiError } from "./api";
 export interface UploadOpts {
   partSize?: number;
   onProgress?: (received: number) => void;
+  /** 续传时从服务器已收到的字节数开始，避免白发一段服务器已有的数据 */
+  startOffset?: number;
   fetchImpl?: typeof fetch;
   /** 重试前的等待，测试里注入假的以免真等 */
   sleep?: (ms: number) => Promise<void>;
@@ -35,7 +37,7 @@ export async function uploadInParts(file: Blob, docId: number, opts: UploadOpts 
   const sleep = opts.sleep ?? realSleep;
   const backoff = () => sleep(1000 * 2 ** (failures - 1)); // 第 n 次重试前等 1s、2s、4s
   const base = `/api/kb/docs/${docId}`;
-  let offset = 0;
+  let offset = opts.startOffset ?? 0;
   let failures = 0; // 当前这段连续失败（网络错误 / 5xx / 没推进的 409）次数
   while (offset < file.size) {
     const body = file.slice(offset, offset + partSize);

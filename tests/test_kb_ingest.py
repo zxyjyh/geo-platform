@@ -1,5 +1,5 @@
 import numpy as np
-from sqlalchemy import func, select
+from sqlalchemy import delete, func, select
 
 from app.kb.ingest import process_doc, process_queued, recover_stale_docs
 from app.models import KbChunk, KbDoc, KbPage
@@ -58,3 +58,30 @@ def test_process_queued_skips_other_states(session_factory, tmp_path):
         states = {d.title: d.process_status for d in s.scalars(select(KbDoc))}
         assert states == {"uploading": "uploading", "ready": "ready", "failed": "failed", "queued": "ready"}
         assert s.scalar(select(func.count()).select_from(KbChunk)) == 1
+
+
+class DeletingEmbedder(FakeEmbedder):
+    """第一次向量化时，用另一个会话把正在处理的文档行删掉，模拟处理中途被用户删除。"""
+
+    def __init__(self, session_factory, doc_id):
+        super().__init__()
+        self.session_factory, self.doc_id = session_factory, doc_id
+
+    def embed(self, text):
+        if self.calls == 0:
+            with self.session_factory() as other:
+                other.execute(delete(KbChunk).where(KbChunk.doc_id == self.doc_id))
+                other.execute(delete(KbPage).where(KbPage.doc_id == self.doc_id))
+                other.execute(delete(KbDoc).where(KbDoc.id == self.doc_id))
+                other.commit()
+        return super().embed(text)
+
+
+def test_process_queued_continues_when_doc_deleted_midway(session_factory, tmp_path):
+    with session_factory() as s:
+        first = add_doc(s, tmp_path, pages=["澳觅"], title="first", process_status="queued").id
+        add_doc(s, tmp_path, pages=["闪蜂"], title="second", process_status="queued")
+    process_queued(session_factory, DeletingEmbedder(session_factory, first), tmp_path)
+    with session_factory() as s:
+        assert {d.title: d.process_status for d in s.scalars(select(KbDoc))} == {"second": "ready"}
+

@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
+from starlette.concurrency import run_in_threadpool
 
 from app.ark import ArkError
 from app.auth import current_user
@@ -75,27 +76,16 @@ def init_upload(body: DocInit, user: User = Depends(current_user), session: Sess
     return {"id": doc.id, "received_bytes": 0}
 
 
-@router.put("/docs/{doc_id}/content")
-async def upload_part(doc_id: int, request: Request, offset: int = Query(ge=0),
-                      session: Session = Depends(get_session)):
+def _write_part(session: Session, kb_dir, doc_id: int, offset: int, body: bytes) -> dict:
+    """加行锁、复核状态和偏移量、落盘并记账。同步函数，放进线程池跑：MySQL 上等行锁不能卡住事件循环。"""
     doc = _doc(session, doc_id, lock=True)
     if doc.process_status != "uploading":
         raise HTTPException(409, "文档不在上传状态")
     if offset != doc.received_bytes:
         raise HTTPException(409, {"message": "偏移量不对", "received_bytes": doc.received_bytes})
-    declared = request.headers.get("content-length")
-    if declared and declared.isdigit() and int(declared) > MAX_PART:
-        raise HTTPException(413, "单次上传不能超过 16MB")
-    chunks, total = [], 0
-    async for chunk in request.stream():  # 不信任 Content-Length，边读边数，超限立刻拒绝
-        total += len(chunk)
-        if total > MAX_PART:
-            raise HTTPException(413, "单次上传不能超过 16MB")
-        chunks.append(chunk)
-    body = b"".join(chunks)
     if offset + len(body) > doc.size_bytes:
         raise HTTPException(422, "上传的字节数超过了声明的文件大小")
-    part = _kb_dir(request) / f"{doc.id}.pdf.part"
+    part = kb_dir / f"{doc.id}.pdf.part"
     part.parent.mkdir(parents=True, exist_ok=True)
     on_disk = part.stat().st_size if part.exists() else 0
     if on_disk < offset:
@@ -110,6 +100,22 @@ async def upload_part(doc_id: int, request: Request, offset: int = Query(ge=0),
     doc.received_bytes = offset + len(body)  # 与追加写在同一个请求里记账
     session.commit()
     return {"received_bytes": doc.received_bytes}
+
+
+@router.put("/docs/{doc_id}/content")
+async def upload_part(doc_id: int, request: Request, offset: int = Query(ge=0),
+                      session: Session = Depends(get_session)):
+    declared = request.headers.get("content-length")
+    if declared and declared.isdigit() and int(declared) > MAX_PART:
+        raise HTTPException(413, "单次上传不能超过 16MB")
+    chunks, total = [], 0
+    async for chunk in request.stream():  # 不信任 Content-Length，边读边数，超限立刻拒绝
+        total += len(chunk)
+        if total > MAX_PART:
+            raise HTTPException(413, "单次上传不能超过 16MB")
+        chunks.append(chunk)
+    # 先读完请求体再加锁：持锁期间不再等网络；锁和文件操作都在线程池里做
+    return await run_in_threadpool(_write_part, session, _kb_dir(request), doc_id, offset, b"".join(chunks))
 
 
 def _fail(session: Session, doc: KbDoc, part, message: str, code: int):

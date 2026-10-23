@@ -29,32 +29,48 @@ function Upload({ onDone }: { onDone: () => void }) {
   const [date, setDate] = useState<Dayjs>(dayjs(cstToday()));
   const [status, setStatus] = useState<"active" | "inactive">("active");
   const [sent, setSent] = useState<number | null>(null); // null = 没在上传
+  const [stuck, setStuck] = useState<{ docId: number; file: File } | null>(null); // 重试用尽后留下，可继续上传
   const picker = useRef<HTMLInputElement>(null);
 
   const pick = (f: File | undefined) => {
     if (!f) return;
+    setStuck(null);
     setFile(f);
     setTitle(f.name.replace(/\.pdf$/i, ""));
+  };
+  const run = async (f: File, docId: number, resume: boolean) => {
+    setSent(0);
+    try {
+      let startOffset = 0;
+      if (resume) { // 以服务器已收到的字节数为起点，不白发数据
+        const d = await get<KbDocDetail>(`/kb/docs/${docId}`);
+        if (d.process_status !== "uploading") throw new Error("这份文档已不在上传状态，请重新上传");
+        startOffset = d.received_bytes;
+        setSent(startOffset);
+      }
+      await uploadInParts(f, docId, { onProgress: setSent, startOffset });
+      message.success("上传完成，已排队处理");
+      setStuck(null); setFile(null); setTitle("");
+      if (picker.current) picker.current.value = "";
+    } catch (e) {
+      setStuck({ docId, file: f }); // 文档还停在「上传中」，保留下来让用户继续
+      fail(e);
+    } finally {
+      setSent(null);
+      onDone(); // 失败时列表里会留下未完成的记录，也要刷新
+    }
   };
   const start = async () => {
     if (!file) return;
     if (!title.trim()) { message.warning("请填写标题"); return; }
-    setSent(0);
+    let id: number;
     try {
-      const { id } = await send<{ id: number }>("POST", "/kb/docs", {
+      ({ id } = await send<{ id: number }>("POST", "/kb/docs", {
         title: title.trim(), filename: file.name, size_bytes: file.size,
         effective_date: date.format("YYYY-MM-DD"), status,
-      });
-      await uploadInParts(file, id, { onProgress: setSent });
-      message.success("上传完成，已排队处理");
-      setFile(null); setTitle("");
-      if (picker.current) picker.current.value = "";
-    } catch (e) {
-      fail(e);
-    } finally {
-      setSent(null);
-      onDone(); // 失败时列表里会留下“失败”的记录，也要刷新
-    }
+      }));
+    } catch (e) { fail(e); return; }
+    await run(file, id, false);
   };
   const uploading = sent !== null;
   return (
@@ -68,7 +84,12 @@ function Upload({ onDone }: { onDone: () => void }) {
           <DatePicker value={date} onChange={(d) => d && setDate(d)} allowClear={false} disabled={uploading} />
           <Radio.Group value={status} onChange={(e) => setStatus(e.target.value)} disabled={uploading}
             options={[{ value: "active", label: "现行" }, { value: "inactive", label: "失效" }]} />
-          <Button type="primary" disabled={!file || uploading} loading={uploading} onClick={start}>上传</Button>
+          {stuck ? (
+            <Button type="primary" disabled={uploading} loading={uploading}
+              onClick={() => run(stuck.file, stuck.docId, true)}>继续上传</Button>
+          ) : (
+            <Button type="primary" disabled={!file || uploading} loading={uploading} onClick={start}>上传</Button>
+          )}
         </Space>
         {uploading && file && (
           <div>
@@ -91,8 +112,8 @@ function DocDrawer({ id, onClose }: { id: number | null; onClose: () => void }) 
     <Drawer open={id !== null} onClose={onClose} width={520} title={doc?.title ?? "文档详情"}>
       {doc && (
         <Space direction="vertical" style={{ width: "100%" }}>
-          <Alert type="warning" showIcon
-            message={`这些页面的内容不会被检索到：${doc.empty_pages.length ? `共 ${doc.empty_pages.length} 页无文字层（红色行）` : "本文档没有无文字层的页面"}`}
+          <Alert type={doc.empty_pages.length ? "warning" : "success"} showIcon
+            message={doc.empty_pages.length ? `这些页面的内容不会被检索到：共 ${doc.empty_pages.length} 页无文字层（红色行）` : "所有页面都有文字层"}
             description="不做 OCR，整页没有文字的页面不入库。" />
           <Table size="small" rowKey="page_no" dataSource={doc.pages} pagination={{ pageSize: 50, showSizeChanger: false }}
             onRow={(p) => (p.n_chars === 0 ? { style: { background: "#fff1f0" } } : {})}
@@ -130,8 +151,10 @@ function Docs({ docs, reload }: { docs: KbDoc[]; reload: () => void }) {
           { title: "操作", width: 200, render: (_, d) => (
             <Space size={4}>
               <Button size="small" type="link" onClick={() => setDetailId(d.id)}>查看</Button>
-              <Button size="small" type="link" disabled={!["ready", "failed"].includes(d.process_status)}
-                onClick={() => reprocess(d)}>重新处理</Button>
+              <Popconfirm title="重新处理这份文档？" description="重新处理期间这份文档检索不到，确定？" okText="重新处理"
+                onConfirm={() => reprocess(d)}>
+                <Button size="small" type="link" disabled={!["ready", "failed"].includes(d.process_status)}>重新处理</Button>
+              </Popconfirm>
               <Popconfirm title="删除这份文档？" description="文档、切片和 PDF 文件都会删除。" okText="删除" okButtonProps={{ danger: true }}
                 onConfirm={() => remove(d)}>
                 <Button size="small" type="link" danger>删除</Button>

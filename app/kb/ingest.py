@@ -47,6 +47,9 @@ def process_doc(session: Session, doc: KbDoc, embedder: Embedder, kb_dir: Path) 
         # pages 保留（方便看每页字数），chunks 全删（半成品不参与检索）
         session.execute(delete(KbChunk).where(KbChunk.doc_id == doc_id))
         doc = session.get(KbDoc, doc_id)  # rollback 后重新加载
+        if doc is None:  # 处理期间文档被删了，没有可记录失败的行
+            session.commit()
+            return
         doc.process_status, doc.message = "failed", f"{type(e).__name__}: {e}"
         doc.n_embedded = 0
         session.commit()
@@ -57,7 +60,10 @@ def process_queued(session_factory: sessionmaker, embedder: Embedder, kb_dir: Pa
     with session_factory() as session:
         ids = list(session.scalars(select(KbDoc.id).where(KbDoc.process_status == "queued").order_by(KbDoc.id)))
         for doc_id in ids:
-            process_doc(session, session.get(KbDoc, doc_id), embedder, kb_dir)
+            doc = session.get(KbDoc, doc_id)
+            if doc is None:  # 排队后被删了，跳过
+                continue
+            process_doc(session, doc, embedder, kb_dir)
             n += 1
     return n
 

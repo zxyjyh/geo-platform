@@ -30,6 +30,13 @@ describe("uploadInParts", () => {
     expect(calls[3].url).toBe("/api/kb/docs/7/complete");
   });
 
+  it("startOffset resumes an existing doc without resending data the server has", async () => {
+    const { impl, calls } = fakeFetch((c) => (c.method === "PUT" ? json(200, { received_bytes: offsetOf(c.url) + c.size }) : json(200, {})));
+    await uploadInParts(file(), 7, { partSize: 10, startOffset: 10, fetchImpl: impl, sleep: noSleep });
+    expect(calls.map((c) => c.method)).toEqual(["PUT", "PUT", "POST"]);
+    expect(calls.slice(0, 2).map((c) => offsetOf(c.url))).toEqual([10, 20]);
+  });
+
   it("upload resumes from server offset on 409", async () => {
     const { impl, calls } = fakeFetch((c, n) => {
       if (c.method === "POST") return json(200, {});
