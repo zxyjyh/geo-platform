@@ -151,6 +151,7 @@ export interface KbDoc {
   process_status: KbProcessStatus;
   n_pages: number;
   n_chunks: number;
+  n_empty_pages?: number;  // 仅列表接口返回
   n_embedded: number;
   embed_model: string | null;
   message: string;

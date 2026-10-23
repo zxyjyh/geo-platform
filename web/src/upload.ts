@@ -4,9 +4,12 @@ export interface UploadOpts {
   partSize?: number;
   onProgress?: (received: number) => void;
   fetchImpl?: typeof fetch;
+  /** 重试前的等待，测试里注入假的以免真等 */
+  sleep?: (ms: number) => Promise<void>;
 }
 
 const MAX_RETRY = 3;
+const realSleep = (ms: number) => new Promise<void>((res) => setTimeout(res, ms));
 
 /** 从错误响应里取出给人看的话：detail 是字符串或 {message, ...}。 */
 async function errorText(r: Response): Promise<string> {
@@ -29,6 +32,8 @@ async function errorText(r: Response): Promise<string> {
 export async function uploadInParts(file: Blob, docId: number, opts: UploadOpts = {}): Promise<void> {
   const partSize = opts.partSize ?? 8 * 1024 * 1024;
   const doFetch = opts.fetchImpl ?? fetch;
+  const sleep = opts.sleep ?? realSleep;
+  const backoff = () => sleep(1000 * 2 ** (failures - 1)); // 第 n 次重试前等 1s、2s、4s
   const base = `/api/kb/docs/${docId}`;
   let offset = 0;
   let failures = 0; // 当前这段连续失败（网络错误 / 5xx / 没推进的 409）次数
@@ -41,6 +46,7 @@ export async function uploadInParts(file: Blob, docId: number, opts: UploadOpts 
       });
     } catch (e) {
       if (++failures > MAX_RETRY) throw new ApiError(0, `网络错误：${(e as Error).message || e}`);
+      await backoff();
       continue;
     }
     if (r.status === 401) {
@@ -63,7 +69,10 @@ export async function uploadInParts(file: Blob, docId: number, opts: UploadOpts 
         msg = typeof j.detail === "string" ? j.detail : j.detail?.message ?? "";
       } catch { /* 非 JSON */ }
       if (typeof received !== "number") throw new ApiError(409, msg || "上传状态冲突");
-      if (received === offset && ++failures > MAX_RETRY) throw new ApiError(409, msg || "服务器偏移量一直对不上");
+      if (received === offset) {
+        if (++failures > MAX_RETRY) throw new ApiError(409, msg || "服务器偏移量一直对不上");
+        await backoff();
+      }
       offset = received;
       opts.onProgress?.(offset);
       continue;
@@ -71,6 +80,7 @@ export async function uploadInParts(file: Blob, docId: number, opts: UploadOpts 
     if (r.status >= 500) {
       const msg = await errorText(r);
       if (++failures > MAX_RETRY) throw new ApiError(r.status, msg);
+      await backoff();
       continue;
     }
     throw new ApiError(r.status, await errorText(r)); // 其他 4xx 重试没有意义

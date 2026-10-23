@@ -144,6 +144,13 @@ def test_doc_detail_lists_empty_pages(authed, session, kb_dir):
     assert [p["page_no"] for p in j["pages"]] == [1, 2] and j["pages"][0]["n_chars"] > 0
 
 
+def test_list_docs_counts_empty_pages(authed, session, kb_dir):
+    a = ready_doc(session, kb_dir, "a", ["澳觅商家", None])
+    b = ready_doc(session, kb_dir, "b", ["澳觅"])
+    rows = {r["id"]: r for r in authed.get("/api/kb/docs").json()}
+    assert rows[a.id]["n_empty_pages"] == 1 and rows[b.id]["n_empty_pages"] == 0
+
+
 def test_file_download_inline(authed, session, kb_dir):
     doc = ready_doc(session, kb_dir, "x", ["澳觅"])
     r = authed.get(f"/api/kb/docs/{doc.id}/file")

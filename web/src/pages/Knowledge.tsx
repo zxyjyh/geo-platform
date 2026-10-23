@@ -110,22 +110,9 @@ function DocDrawer({ id, onClose }: { id: number | null; onClose: () => void }) 
 
 function Docs({ docs, reload }: { docs: KbDoc[]; reload: () => void }) {
   const [detailId, setDetailId] = useState<number | null>(null);
-  // 列表接口不带无文字页数，已完成的文档取一次详情后缓存（完成后不会变，重新处理时清掉）
-  const [empty, setEmpty] = useState<Record<number, number>>({});
-  useEffect(() => {
-    docs.forEach((d) => {
-      if (d.process_status === "ready" && empty[d.id] === undefined) {
-        get<KbDocDetail>(`/kb/docs/${d.id}`)
-          .then((x) => setEmpty((m) => ({ ...m, [d.id]: x.empty_pages.length }))).catch(() => undefined);
-      }
-    });
-  }, [docs, empty]);
   const toggle = (d: KbDoc, on: boolean) =>
     send("PATCH", `/kb/docs/${d.id}`, { status: on ? "active" : "inactive" }).then(reload).catch(fail);
-  const reprocess = (d: KbDoc) => send("POST", `/kb/docs/${d.id}/reprocess`).then(() => {
-    setEmpty((m) => Object.fromEntries(Object.entries(m).filter(([k]) => Number(k) !== d.id)));
-    reload();
-  }).catch(fail);
+  const reprocess = (d: KbDoc) => send("POST", `/kb/docs/${d.id}/reprocess`).then(reload).catch(fail);
   const remove = (d: KbDoc) => send("DELETE", `/kb/docs/${d.id}`).then(reload).catch(fail);
   return (
     <Card title="文档列表" size="small">
@@ -138,7 +125,7 @@ function Docs({ docs, reload }: { docs: KbDoc[]; reload: () => void }) {
           { title: "处理状态", width: 130, render: (_, d) => processTag(d) },
           { title: "页数", dataIndex: "n_pages", width: 70 },
           { title: "切片数", dataIndex: "n_chunks", width: 80 },
-          { title: "无文字页数", width: 100, render: (_, d) => empty[d.id] ?? "—" },
+          { title: "无文字页数", width: 100, render: (_, d) => (d.process_status === "ready" ? d.n_empty_pages ?? 0 : "—") },
           { title: "上传时间", width: 160, render: (_, d) => d.created_at.slice(0, 16).replace("T", " ") },
           { title: "操作", width: 200, render: (_, d) => (
             <Space size={4}>

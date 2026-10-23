@@ -6,7 +6,7 @@ from typing import Literal
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.ark import ArkError
@@ -150,7 +150,11 @@ def complete_upload(doc_id: int, request: Request, session: Session = Depends(ge
 
 @router.get("/docs")
 def list_docs(session: Session = Depends(get_session)):
-    return [_brief(d) for d in session.scalars(select(KbDoc).order_by(KbDoc.id.desc()))]
+    # 一次聚合查出每份文档无文字页数，列表页不必逐份取详情
+    empty = dict(session.execute(select(KbPage.doc_id, func.count()).where(KbPage.n_chars == 0)
+                                 .group_by(KbPage.doc_id)).all())
+    return [{**_brief(d), "n_empty_pages": empty.get(d.id, 0)}
+            for d in session.scalars(select(KbDoc).order_by(KbDoc.id.desc()))]
 
 
 @router.get("/docs/{doc_id}")
