@@ -75,9 +75,7 @@ def upgrade() -> None:
 
 def downgrade() -> None:
     """Downgrade schema."""
-    with op.batch_alter_table('kb_chunks', schema=None) as batch_op:
-        batch_op.drop_index(batch_op.f('ix_kb_chunks_doc_id'))
-
+    # 不单独 drop_index：MySQL 里该索引被外键依赖，先删会报 1553；drop_table 会连索引一起删
     op.drop_table('kb_chunks')
     op.drop_table('kb_pages')
     op.drop_table('kb_docs')
