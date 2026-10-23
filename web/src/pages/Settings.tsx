@@ -5,7 +5,7 @@ import {
 import { useSearchParams } from "react-router-dom";
 import { get, send } from "../api";
 import { cstToday } from "../format";
-import { ENTITIES, ENTITY_NAME, LINKS_LABEL, MARK_KIND_LABEL, STRICTNESS_LABEL, type BrandMark, type Entity } from "../types";
+import { ENTITIES, ENTITY_NAME, FACT_CATEGORY_LABEL, LINKS_LABEL, MARK_KIND_LABEL, STRICTNESS_LABEL, type BrandMark, type Entity, type FactItem } from "../types";
 
 const fail = (e: unknown) => message.error(String((e as Error).message || e));
 
@@ -218,6 +218,47 @@ function Users() {
   );
 }
 
+function FactItems() {
+  const [rows, setRows] = useState<(FactItem & { _key: number })[]>([]);
+  const [version, setVersion] = useState(0);
+  const load = () => get<{ version: number; items: FactItem[] }>("/settings/fact-items").then((r) => {
+    setVersion(r.version);
+    setRows(r.items.map((m, i) => ({ ...m, _key: i })));
+  });
+  useEffect(() => { load(); }, []);
+  const update = (key: number, patch: Partial<FactItem>) => setRows(rows.map((r) => (r._key === key ? { ...r, ...patch } : r)));
+  const save = () => send<{ version: number }>("PUT", "/settings/fact-items", rows.map(({ code, category, subject, correct_claim, source_ref, status }) => ({ code, category, subject, correct_claim, source_ref, status })))
+    .then((r) => { message.success(`已保存为第 ${r.version} 版`); load(); }).catch(fail);
+  return (
+    <Space direction="vertical" style={{ width: "100%" }}>
+      <Typography.Text type="secondary">
+        当前第 {version} 版。清单用于事实一致性检测。每次保存生成新版本，已抽取的结果不会自动重判。
+      </Typography.Text>
+      <Table size="small" pagination={false} rowKey="_key" dataSource={rows} scroll={{ x: 900 }} columns={[
+        { title: "编号", dataIndex: "code", width: 80, render: (v, r) => (
+          <Input value={v} maxLength={16} onChange={(e) => update(r._key, { code: e.target.value })} placeholder="A1" />) },
+        { title: "分类", dataIndex: "category", width: 120, render: (v, r) => (
+          <Select value={v} style={{ width: 110 }} onChange={(c) => update(r._key, { category: c })}
+            options={Object.entries(FACT_CATEGORY_LABEL).map(([value, label]) => ({ value, label }))} />) },
+        { title: "主题", dataIndex: "subject", width: 160, render: (v, r) => (
+          <Input value={v} maxLength={64} onChange={(e) => update(r._key, { subject: e.target.value })} />) },
+        { title: "正确说法", dataIndex: "correct_claim", render: (v, r) => (
+          <Input.TextArea value={v} autoSize={{ minRows: 1, maxRows: 4 }} onChange={(e) => update(r._key, { correct_claim: e.target.value })} />) },
+        { title: "出处", dataIndex: "source_ref", width: 140, render: (v, r) => (
+          <Input value={v} maxLength={128} onChange={(e) => update(r._key, { source_ref: e.target.value })} />) },
+        { title: "状态", dataIndex: "status", width: 100, render: (v, r) => (
+          <Select value={v} style={{ width: 90 }} onChange={(s) => update(r._key, { status: s })}
+            options={[{ value: "active", label: "启用" }, { value: "retired", label: "停用" }]} />) },
+        { title: "", width: 60, render: (_, r) => <a onClick={() => setRows(rows.filter((x) => x._key !== r._key))}>删除</a> },
+      ]} />
+      <Space>
+        <Button onClick={() => setRows([...rows, { _key: Math.max(-1, ...rows.map((r) => r._key)) + 1, code: "", category: "other", subject: "", correct_claim: "", source_ref: "", status: "active" }])}>添加</Button>
+        <Button type="primary" onClick={save}>保存</Button>
+      </Space>
+    </Space>
+  );
+}
+
 export default function Settings() {
   const [params] = useSearchParams();
   return (
@@ -227,6 +268,7 @@ export default function Settings() {
         { key: "platforms", label: "平台映射", children: <Platforms /> },
         { key: "owned", label: "自有渠道", children: <OwnedPrefixes /> },
         { key: "marks", label: "官方标识", children: <BrandMarks /> },
+        { key: "facts", label: "事实清单", children: <FactItems /> },
         { key: "params", label: "阈值与单价", children: <Params /> },
         { key: "jobs", label: "采集任务", children: <Jobs /> },
         { key: "users", label: "账号", children: <Users /> },

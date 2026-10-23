@@ -236,3 +236,34 @@ class KbChunk(Base):
     tokens: Mapped[str] = mapped_column(LongText)  # 转简体后的分词，空格分隔，供关键词检索
     embedding: Mapped[bytes] = mapped_column(VectorBlob)  # float32 小端字节
     dim: Mapped[int] = mapped_column(Integer)
+
+
+class FactItem(Base):
+    """事实清单（spec §4.11），整表按版本保存，和 BrandMark 同模式。"""
+    __tablename__ = "fact_items"
+    __table_args__ = (UniqueConstraint("version", "code"), UTF8MB4)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    version: Mapped[int] = mapped_column(Integer, index=True)
+    code: Mapped[str] = mapped_column(String(32))       # A1, A2, B1...
+    category: Mapped[str] = mapped_column(String(32))   # identity / registration / service / other
+    subject: Mapped[str] = mapped_column(String(128))   # "与 mFood 的关系"
+    correct_claim: Mapped[str] = mapped_column(String(1000))
+    source_ref: Mapped[str] = mapped_column(String(500), default="")
+    status: Mapped[str] = mapped_column(String(16), default="active")  # active / retired
+
+
+class FactClaim(Base):
+    """从回答里抽出的事实断言。"""
+    __tablename__ = "fact_claims"
+    __table_args__ = UTF8MB4
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    run_id: Mapped[str] = mapped_column(ForeignKey("runs.run_id", ondelete="CASCADE"), index=True)
+    extract_version: Mapped[int] = mapped_column(Integer)
+    seq: Mapped[int] = mapped_column(Integer)
+    sentence: Mapped[str] = mapped_column(String(2000))
+    fact_code: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    raw_label: Mapped[str] = mapped_column(String(32))  # known / unknown / unrelated
+    reviewer_decision: Mapped[str] = mapped_column(String(16), default="pending", server_default="pending")
+    reviewed_at: Mapped[datetime | None] = mapped_column(CSTDateTime(), nullable=True)
+    reviewed_by: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    note: Mapped[str] = mapped_column(String(500), default="")

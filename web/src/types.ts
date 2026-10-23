@@ -177,3 +177,37 @@ export interface KbHit {
   semantic_rank: number | null;
   keyword_rank: number | null;
 }
+
+export interface FactItem {
+  code: string;        // A1, A2, B1...
+  category: string;    // identity / registration / service / other
+  subject: string;     // "与 mFood 的关系"
+  correct_claim: string;
+  source_ref: string;
+  status: string;      // active / retired
+}
+
+export interface FactClaim {
+  id: number;
+  run_id: string;
+  qid: string;
+  sentence: string;
+  fact_code: string | null;
+  raw_label: string;       // known / unknown
+  reviewer_decision: string;  // pending / confirmed / rejected / new_item
+  reviewed_at: string | null;
+  note: string;
+}
+
+export interface FactStats {
+  total: number;
+  known: number;
+  unknown: number;
+  pending: number;
+  confirmed: number;
+  rejected: number;
+}
+
+export const FACT_CATEGORY_LABEL: Record<string, string> = {
+  identity: "身份", registration: "注册支付", service: "服务配送", other: "其他",
+};

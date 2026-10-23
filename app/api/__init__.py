@@ -27,11 +27,11 @@ def create_app(session_factory: sessionmaker | None = None, embedder=None) -> Fa
                 yield s
         app.dependency_overrides[get_session] = _session
 
-    from app.api import (routes_auth, routes_dashboard, routes_kb, routes_questions, routes_runs, routes_settings,
-                         routes_sources, routes_suggestions)
+    from app.api import (routes_auth, routes_dashboard, routes_factcheck, routes_kb, routes_questions, routes_runs,
+                         routes_settings, routes_sources, routes_suggestions)
 
-    for r in (routes_auth, routes_dashboard, routes_kb, routes_runs, routes_questions, routes_sources, routes_suggestions,
-              routes_settings):
+    for r in (routes_auth, routes_dashboard, routes_factcheck, routes_kb, routes_runs, routes_questions, routes_sources,
+              routes_suggestions, routes_settings):
         app.include_router(r.router, prefix="/api")
 
     @app.get("/api/health")

@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation, useNavigat
 import { Button, Layout, Menu, Result, Select, Space, Spin, Typography } from "antd";
 import {
   AppstoreOutlined, BookOutlined, BulbOutlined, FileSearchOutlined, LinkOutlined, LogoutOutlined, QuestionCircleOutlined,
-  SettingOutlined,
+  SettingOutlined, WarningOutlined,
 } from "@ant-design/icons";
 import { api, ApiError, send } from "./api";
 import { PLATFORMS, PlatformContext, type ModelPlatform } from "./platform";
@@ -15,12 +15,14 @@ import Sources from "./pages/Sources";
 import Suggestions from "./pages/Suggestions";
 import Settings from "./pages/Settings";
 import Knowledge from "./pages/Knowledge";
+import FactCheck from "./pages/FactCheck";
 
 // 菜单分组参考 Answerbit：品牌 / 数据 / 优化 / 工作空间
 const PAGES = [
   { key: "/", icon: <AppstoreOutlined />, label: "概览", group: "品牌" },
   { key: "/questions", icon: <QuestionCircleOutlined />, label: "用户提问", group: "品牌" },
   { key: "/sources", icon: <LinkOutlined />, label: "信源分析", group: "数据" },
+  { key: "/factcheck", icon: <WarningOutlined />, label: "事实问题", group: "数据" },
   { key: "/runs", icon: <FileSearchOutlined />, label: "大模型回答记录", group: "数据" },
   { key: "/suggestions", icon: <BulbOutlined />, label: "优化建议", group: "优化" },
   { key: "/knowledge", icon: <BookOutlined />, label: "知识库", group: "工作空间" },
@@ -95,6 +97,7 @@ export default function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/questions" element={<Questions />} />
           <Route path="/sources" element={<Sources />} />
+          <Route path="/factcheck" element={<FactCheck />} />
           <Route path="/runs" element={<Runs />} />
           <Route path="/suggestions" element={<Suggestions />} />
           <Route path="/knowledge" element={<Knowledge />} />
