@@ -37,9 +37,10 @@ def test_all_business_routes_require_auth(client):
     for p in ["/api/dashboard", "/api/dashboard/trend", "/api/runs", "/api/runs/x", "/api/questions",
               "/api/sources/domains", "/api/sources/platforms", "/api/sources/owned", "/api/suggestions",
               "/api/settings", "/api/settings/aliases", "/api/settings/brand-marks", "/api/dashboard/attribution", "/api/sources/lifecycle", "/api/settings/platforms", "/api/settings/owned-prefixes",
-              "/api/settings/jobs", "/api/settings/users"]:
+              "/api/settings/jobs", "/api/settings/users", "/api/kb/docs", "/api/kb/docs/1", "/api/kb/docs/1/file"]:
         assert client.get(p).status_code == 401, p
     assert client.put("/api/settings", json={"weak_recent_n": "3"}).status_code == 401
+    assert client.post("/api/kb/search", json={"query": "x"}).status_code == 401
     assert client.post("/api/settings/jobs/rerun", json={"date": "2026-10-22"}).status_code == 401
 
 
