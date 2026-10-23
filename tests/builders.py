@@ -1,5 +1,8 @@
 """构造 Run / Coding 测试数据。"""
 from datetime import date, datetime, time
+from pathlib import Path
+
+import pymupdf
 
 from app.collector import daily_run_id, new_run
 from app.models import Coding
@@ -45,3 +48,30 @@ def add_source(session, run, url: str, title: str = "t", rank: int = 1, is_owned
     session.add(s)
     session.commit()
     return s
+
+
+def _build_pdf(pages: list[str | None], landscape: bool = False) -> pymupdf.Document:
+    """每个字符串一页；None 表示只画一个矩形、没有文字层。"""
+    w, h = (842, 595) if landscape else (595, 842)
+    doc = pymupdf.open()
+    for text in pages:
+        page = doc.new_page(width=w, height=h)
+        if text is None:
+            page.draw_rect(pymupdf.Rect(100, 100, 300, 200))
+        else:
+            page.insert_textbox(pymupdf.Rect(50, 50, w - 50, h - 50), text, fontname="china-s", fontsize=14)
+    return doc
+
+
+def make_pdf_bytes(pages: list[str | None], landscape: bool = False) -> bytes:
+    doc = _build_pdf(pages, landscape)
+    try:
+        return doc.tobytes()
+    finally:
+        doc.close()
+
+
+def make_pdf(directory: Path, pages: list[str | None], landscape: bool = False, name: str = "doc.pdf") -> Path:
+    path = directory / name
+    path.write_bytes(make_pdf_bytes(pages, landscape))
+    return path
