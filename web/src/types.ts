@@ -136,3 +136,43 @@ export function orderText(order: Record<Entity, number | null> | null): string {
   const ranked = ENTITIES.filter((e) => order[e] !== null).sort((a, b) => order[a]! - order[b]!);
   return ranked.length ? ranked.map((e) => ENTITY_NAME[e]).join(" > ") : "三家都没提";
 }
+
+export type KbProcessStatus = "uploading" | "queued" | "processing" | "ready" | "failed";
+
+export interface KbDoc {
+  id: number;
+  title: string;
+  filename: string;
+  size_bytes: number;
+  received_bytes: number;
+  sha256: string | null;
+  effective_date: string;
+  status: "active" | "inactive";
+  process_status: KbProcessStatus;
+  n_pages: number;
+  n_chunks: number;
+  n_embedded: number;
+  embed_model: string | null;
+  message: string;
+  uploaded_by: string;
+  created_at: string;
+  processed_at: string | null;
+}
+
+export interface KbDocDetail extends KbDoc {
+  pages: { page_no: number; n_chars: number; n_images: number }[];
+  empty_pages: number[];
+}
+
+export interface KbHit {
+  chunk_id: number;
+  doc_id: number;
+  doc_title: string;
+  effective_date: string;
+  page_no: number;
+  half: "L" | "R" | "";  // 对开页的左 / 右半页，普通页为空串
+  text: string;
+  score: number;
+  semantic_rank: number | null;
+  keyword_rank: number | null;
+}

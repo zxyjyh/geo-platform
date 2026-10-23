@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { Button, Layout, Menu, Result, Select, Space, Spin, Typography } from "antd";
 import {
-  AppstoreOutlined, BulbOutlined, FileSearchOutlined, LinkOutlined, LogoutOutlined, QuestionCircleOutlined,
+  AppstoreOutlined, BookOutlined, BulbOutlined, FileSearchOutlined, LinkOutlined, LogoutOutlined, QuestionCircleOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
 import { api, ApiError, send } from "./api";
@@ -14,6 +14,7 @@ import Questions from "./pages/Questions";
 import Sources from "./pages/Sources";
 import Suggestions from "./pages/Suggestions";
 import Settings from "./pages/Settings";
+import Knowledge from "./pages/Knowledge";
 
 // 菜单分组参考 Answerbit：品牌 / 数据 / 优化 / 工作空间
 const PAGES = [
@@ -22,6 +23,7 @@ const PAGES = [
   { key: "/sources", icon: <LinkOutlined />, label: "信源分析", group: "数据" },
   { key: "/runs", icon: <FileSearchOutlined />, label: "大模型回答记录", group: "数据" },
   { key: "/suggestions", icon: <BulbOutlined />, label: "优化建议", group: "优化" },
+  { key: "/knowledge", icon: <BookOutlined />, label: "知识库", group: "工作空间" },
   { key: "/settings", icon: <SettingOutlined />, label: "设置", group: "工作空间" },
 ];
 const MENU = ["品牌", "数据", "优化", "工作空间"].map((g) => ({
@@ -95,6 +97,7 @@ export default function App() {
           <Route path="/sources" element={<Sources />} />
           <Route path="/runs" element={<Runs />} />
           <Route path="/suggestions" element={<Suggestions />} />
+          <Route path="/knowledge" element={<Knowledge />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
