@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Alert, Card, Col, DatePicker, Descriptions, Empty, Row, Select, Space, Spin, Switch, Table, Tag, Typography, message } from "antd";
-import type { Dayjs } from "dayjs";
+import dayjs, { type Dayjs } from "dayjs";
 import { get, send } from "../api";
 import { usePlatform } from "../platform";
 import { highlightSegments, plainSnippet } from "../format";
@@ -89,7 +89,8 @@ function Detail({ runId, aliases }: { runId: string; aliases: Record<Entity, str
 
 export default function Runs() {
   const platform = usePlatform();
-  const [range, setRange] = useState<[Dayjs | null, Dayjs | null] | null>(null);
+  const today = dayjs();
+  const [range, setRange] = useState<[Dayjs | null, Dayjs | null] | null>([today, today]);
   const [filters, setFilters] = useState<Record<string, string | undefined>>({ round: "daily" });
   const [page, setPage] = useState(1);
   const [data, setData] = useState<{ total: number; items: RunItem[] } | null>(null);
@@ -115,10 +116,18 @@ export default function Runs() {
       ...filters, platform, page, size: 20,
       date_from: range?.[0]?.format("YYYY-MM-DD"), date_to: range?.[1]?.format("YYYY-MM-DD"),
     })
-      .then((r) => !stale && setData(r))
+      .then((r) => {
+        if (stale) return;
+        setData(r);
+        // 如果有数据但没有选中任何回答，自动选中第一条
+        if (r.items.length > 0 && !selected) {
+          setSelected(r.items[0].run_id);
+        }
+      })
       .catch((e) => !stale && (setData(null), setError(String(e.message || e))))
       .finally(() => !stale && setLoading(false));
     return () => { stale = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters, page, range, platform]);
 
   const setF = (k: string) => (v: string | undefined) => {

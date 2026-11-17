@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  Alert, Button, Card, DatePicker, Drawer, Empty, Input, List, Popconfirm, Progress, Radio, Space, Switch, Table,
+  Alert, Button, Card, DatePicker, Empty, Input, List, Popconfirm, Progress, Space, Switch, Table,
   Tag, Tooltip, Typography, message,
 } from "antd";
 import dayjs, { type Dayjs } from "dayjs";
 import { get, send } from "../api";
 import { cstToday } from "../format";
 import { uploadInParts } from "../upload";
-import type { KbDoc, KbDocDetail, KbHit, KbProcessStatus } from "../types";
+import type { KbDoc, KbHit, KbProcessStatus } from "../types";
 
 const fail = (e: unknown) => message.error(String((e as Error).message || e));
 const mb = (n: number) => (n / 1024 / 1024).toFixed(1);
@@ -27,7 +27,6 @@ function Upload({ onDone }: { onDone: () => void }) {
   const [file, setFile] = useState<File | null>(null);
   const [title, setTitle] = useState("");
   const [date, setDate] = useState<Dayjs>(dayjs(cstToday()));
-  const [status, setStatus] = useState<"active" | "inactive">("active");
   const [sent, setSent] = useState<number | null>(null); // null = 没在上传
   const [stuck, setStuck] = useState<{ docId: number; file: File } | null>(null); // 重试用尽后留下，可继续上传
   const picker = useRef<HTMLInputElement>(null);
@@ -67,7 +66,7 @@ function Upload({ onDone }: { onDone: () => void }) {
     try {
       ({ id } = await send<{ id: number }>("POST", "/kb/docs", {
         title: title.trim(), filename: file.name, size_bytes: file.size,
-        effective_date: date.format("YYYY-MM-DD"), status,
+        effective_date: date.format("YYYY-MM-DD"), status: "active",
       }));
     } catch (e) { fail(e); return; }
     await run(file, id, false);
@@ -77,13 +76,15 @@ function Upload({ onDone }: { onDone: () => void }) {
     <Card title="上传" size="small">
       <Space direction="vertical" style={{ width: "100%" }}>
         <Space wrap>
+          <Button disabled={uploading} onClick={() => picker.current?.click()}>
+            选择文件
+          </Button>
           <input ref={picker} type="file" accept=".pdf,application/pdf" disabled={uploading}
-            onChange={(e) => pick(e.target.files?.[0])} />
+            onChange={(e) => pick(e.target.files?.[0])} style={{ display: "none" }} />
+          {file && <Typography.Text type="secondary">{file.name}</Typography.Text>}
           <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="标题" maxLength={256}
             style={{ width: 280 }} disabled={uploading} />
           <DatePicker value={date} onChange={(d) => d && setDate(d)} allowClear={false} disabled={uploading} />
-          <Radio.Group value={status} onChange={(e) => setStatus(e.target.value)} disabled={uploading}
-            options={[{ value: "active", label: "现行" }, { value: "inactive", label: "失效" }]} />
           {stuck ? (
             <Button type="primary" disabled={uploading} loading={uploading}
               onClick={() => run(stuck.file, stuck.docId, true)}>继续上传</Button>
@@ -102,39 +103,12 @@ function Upload({ onDone }: { onDone: () => void }) {
   );
 }
 
-function DocDrawer({ id, onClose }: { id: number | null; onClose: () => void }) {
-  const [doc, setDoc] = useState<KbDocDetail | null>(null);
-  useEffect(() => {
-    setDoc(null);
-    if (id !== null) get<KbDocDetail>(`/kb/docs/${id}`).then(setDoc).catch(fail);
-  }, [id]);
-  return (
-    <Drawer open={id !== null} onClose={onClose} width={520} title={doc?.title ?? "文档详情"}>
-      {doc && (
-        <Space direction="vertical" style={{ width: "100%" }}>
-          <Alert type={doc.empty_pages.length ? "warning" : "success"} showIcon
-            message={doc.empty_pages.length ? `这些页面的内容不会被检索到：共 ${doc.empty_pages.length} 页无文字层（红色行）` : "所有页面都有文字层"}
-            description="不做 OCR，整页没有文字的页面不入库。" />
-          <Table size="small" rowKey="page_no" dataSource={doc.pages} pagination={{ pageSize: 50, showSizeChanger: false }}
-            onRow={(p) => (p.n_chars === 0 ? { style: { background: "#fff1f0" } } : {})}
-            columns={[
-              { title: "PDF 页码", dataIndex: "page_no", width: 100 },
-              { title: "字数", dataIndex: "n_chars", width: 90 },
-              { title: "图片数", dataIndex: "n_images", width: 90 },
-              { title: "", render: (_, p) => (p.n_chars === 0 ? <Typography.Text type="danger">无文字层，未入库</Typography.Text> : null) },
-            ]} />
-        </Space>
-      )}
-    </Drawer>
-  );
-}
-
 function Docs({ docs, reload }: { docs: KbDoc[]; reload: () => void }) {
-  const [detailId, setDetailId] = useState<number | null>(null);
   const toggle = (d: KbDoc, on: boolean) =>
     send("PATCH", `/kb/docs/${d.id}`, { status: on ? "active" : "inactive" }).then(reload).catch(fail);
   const reprocess = (d: KbDoc) => send("POST", `/kb/docs/${d.id}/reprocess`).then(reload).catch(fail);
   const remove = (d: KbDoc) => send("DELETE", `/kb/docs/${d.id}`).then(reload).catch(fail);
+  const viewFile = (d: KbDoc) => window.open(`/api/kb/docs/${d.id}/file`, "_blank");
   return (
     <Card title="文档列表" size="small">
       <Table<KbDoc> size="small" rowKey="id" dataSource={docs} pagination={false}
@@ -150,7 +124,7 @@ function Docs({ docs, reload }: { docs: KbDoc[]; reload: () => void }) {
           { title: "上传时间", width: 160, render: (_, d) => d.created_at.slice(0, 16).replace("T", " ") },
           { title: "操作", width: 200, render: (_, d) => (
             <Space size={4}>
-              <Button size="small" type="link" onClick={() => setDetailId(d.id)}>查看</Button>
+              <Button size="small" type="link" onClick={() => viewFile(d)}>查看</Button>
               <Popconfirm title="重新处理这份文档？" description="重新处理期间这份文档检索不到，确定？" okText="重新处理"
                 onConfirm={() => reprocess(d)}>
                 <Button size="small" type="link" disabled={!["ready", "failed"].includes(d.process_status)}>重新处理</Button>
@@ -161,7 +135,6 @@ function Docs({ docs, reload }: { docs: KbDoc[]; reload: () => void }) {
               </Popconfirm>
             </Space>) },
         ]} />
-      <DocDrawer id={detailId} onClose={() => setDetailId(null)} />
     </Card>
   );
 }
