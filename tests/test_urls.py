@@ -1,4 +1,4 @@
-from app.models import OwnedPrefix
+from app.models import OwnedPrefix, Platform
 from app.urls import is_owned, normalize_url, platform_for
 
 
@@ -16,10 +16,17 @@ def test_normalize_url_param_order_irrelevant():
 
 
 def test_platform_longest_suffix(platforms):
-    assert platform_for("baijiahao.baidu.com", platforms) == "baijiahao"
-    assert platform_for("www.baidu.com", platforms) is None
     assert platform_for("post.m.smzdm.com", platforms) == "smzdm"
     assert platform_for("notsohu.com", platforms) is None
+    assert platform_for("www.baidu.com", platforms) is None
+
+
+def test_platform_longest_suffix_takes_longest_match():
+    # 后缀嵌套时取最长的：platform_for 是纯函数，用合成平台验证（种子平台后缀互不嵌套）
+    nested = [Platform(key="outer", name="外", domain_suffix="example.com", publishable=True),
+              Platform(key="inner", name="内", domain_suffix="sub.example.com", publishable=True)]
+    assert platform_for("www.sub.example.com", nested) == "inner"
+    assert platform_for("example.com", nested) == "outer"
 
 
 def test_is_owned_respects_boundary():

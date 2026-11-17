@@ -29,9 +29,9 @@ export function selfcheckReason(failures: string[], metric: Metric, entity: Enti
   return null;
 }
 
-/** 平台推荐：0 次的平台照样列出，标"未验证"。 */
+/** 平台推荐：显示平台名称和引用次数。 */
 export function platformLabel(p: Pick<PlatformCount, "key" | "name" | "count" | "verified">): string {
-  return p.count === 0 ? `${p.name} 0（未验证）` : `${p.name} ${p.count}`;
+  return `${p.name} ${p.count}`;
 }
 
 /** 短板原因翻成带分子分母的话。后端只给"mFood 或闪蜂排第一"的合计，不分家。 */

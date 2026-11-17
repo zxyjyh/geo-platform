@@ -39,8 +39,8 @@ describe("selfcheckReason", () => {
 import { highlightSegments, platformLabel, weakReasons } from "./format";
 
 describe("platformLabel", () => {
-  it("0 次标未验证", () => {
-    expect(platformLabel({ key: "zhihu", name: "知乎", count: 0, verified: false })).toBe("知乎 0（未验证）");
+  it("显示平台名称和引用次数", () => {
+    expect(platformLabel({ key: "zhihu", name: "知乎", count: 0, verified: false })).toBe("知乎 0");
     expect(platformLabel({ key: "sohu", name: "搜狐", count: 22, verified: true })).toBe("搜狐 22");
   });
 });

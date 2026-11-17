@@ -5,7 +5,7 @@ import pytest
 from app.analysis import (citation_lifecycle, domain_ranking, owned_citations, platform_counts, reference_articles,
                           weak_questions)
 from app.collector import run_daily
-from app.models import SourceTag
+from app.models import Platform, SourceTag
 from app.seed import seed_all
 from app.urls import normalize_url
 from app.timeutil import CST
@@ -27,8 +27,11 @@ def daily_from_trial(session, tmp_path):
 
 
 def test_platform_counts_include_zero(session, daily_from_trial):   # fixture：run_daily(FakeClient.from_trial("custom"), D0)
+    # 种子 3 个平台在 trial 里都被引用过；另加一个零引用平台，验证 count=0 也列出（verified=False）
+    session.add(Platform(key="zero", name="零引用", domain_suffix="zero.example.com", publishable=True))
+    session.commit()
     pc = {p.key: p for p in platform_counts(session, "api-custom", D0, D1)}
-    assert len(pc) == 7 and pc["zhihu"].count == 0 and pc["zhihu"].verified is False
+    assert len(pc) == 4 and pc["zero"].count == 0 and pc["zero"].verified is False
     counts = [p.count for p in platform_counts(session, "api-custom", D0, D1)]
     assert counts == sorted(counts, reverse=True)
 
@@ -203,13 +206,13 @@ def test_lifecycle_order_flags_and_latest_title(session):
 def test_platform_counts_attrs_do_not_affect_order(session):
     from app.models import Platform
     session.get(Platform, "sohu").review_strictness = "strict"
-    zhihu = session.get(Platform, "zhihu")
-    zhihu.review_strictness, zhihu.allows_links, zhihu.notes = "loose", "yes", "可带链接"
+    smzdm = session.get(Platform, "smzdm")
+    smzdm.review_strictness, smzdm.allows_links, smzdm.notes = "loose", "yes", "可带链接"
     session.commit()
     _cite(session, "Q01", D0, "https://www.sohu.com/a/1")
     _cite(session, "Q02", D0, "https://www.sohu.com/a/2")
-    _cite(session, "Q04", D0, "https://www.zhihu.com/p/1")
+    _cite(session, "Q04", D0, "https://www.smzdm.com/p/1")
     pc = platform_counts(session, "api-custom", D0, D0)
-    assert [p.key for p in pc[:2]] == ["sohu", "zhihu"]
+    assert [p.key for p in pc[:2]] == ["sohu", "smzdm"]
     assert (pc[0].review_strictness, pc[1].review_strictness, pc[1].allows_links, pc[1].notes) == \
         ("strict", "loose", "yes", "可带链接")

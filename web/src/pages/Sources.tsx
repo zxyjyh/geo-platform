@@ -51,8 +51,7 @@ export default function Sources() {
       {error && <Alert type="error" showIcon message={error} />}
       <Row gutter={[16, 16]}>
         <Col xs={24} xl={12}>
-          <Card className="ab-card" size="small" title="7 个可发布平台的被引用次数"
-            extra={<Typography.Text type="secondary">0 次 = 未验证</Typography.Text>}>
+          <Card className="ab-card" size="small" title="3 个可发布平台的被引用次数">
             <EChart option={option} height={300} />
           </Card>
         </Col>

@@ -1,4 +1,4 @@
-"""种子数据：题库 v3、别名表 v1、7 个平台、默认设置。可以重复执行，已有的行不覆盖。"""
+"""种子数据：题库 v3、别名表 v1、3 个平台、默认设置。可以重复执行，已有的行不覆盖。"""
 import csv
 
 from sqlalchemy import select
@@ -19,11 +19,7 @@ ALIASES_V1 = {
 PLATFORMS = [
     ("smzdm", "什么值得买", "smzdm.com"),
     ("toutiao", "头条号", "toutiao.com"),
-    ("baijiahao", "百家号", "baijiahao.baidu.com"),
     ("sohu", "搜狐", "sohu.com"),
-    ("bilibili", "B站", "bilibili.com"),
-    ("netease", "网易号", "163.com"),
-    ("zhihu", "知乎", "zhihu.com"),
 ]
 
 DEFAULT_SETTINGS = {

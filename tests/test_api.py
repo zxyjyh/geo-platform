@@ -113,7 +113,7 @@ def test_questions(authed):
 def test_sources_endpoints_and_tags(authed, seeded_one_day, session):
     p = {"start": "2026-10-22", "end": "2026-10-22"}
     plats = authed.get("/api/sources/platforms", params=p).json()
-    assert len(plats) == 7 and {"key", "name", "count", "verified"} <= set(plats[0])
+    assert len(plats) == 3 and {"key", "name", "count", "verified"} <= set(plats[0])
     assert authed.get("/api/sources/domains", params=p).json()[0][1] >= 1
     assert authed.post("/api/sources/tags", json={"url": "http://www.sohu.com/a/77/", "tag": "external_geo",
                                                   "note": "来源不明"}).status_code == 200
@@ -129,7 +129,7 @@ def test_suggestions_has_notice(authed, seeded_daily_two_days):
     assert j["notice"] == "排序来自 api-custom 渠道的信源，App 可能不同。"
     assert isinstance(j["items"], list)
     for it in j["items"]:
-        assert len(it["platforms"]) == 7 and it["weak"]["reasons"]
+        assert len(it["platforms"]) == 3 and it["weak"]["reasons"]
 
 
 def test_rerun_creates_requested_job(authed, session):

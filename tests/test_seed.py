@@ -17,8 +17,8 @@ def test_seed_questions_v3(session):
 def test_seed_aliases_platforms_settings(session):
     seed_all(session)
     assert {a.alias for a in session.scalars(select(Alias).where(Alias.entity == "shanfeng"))} == {"闪蜂", "閃蜂"}
-    assert session.get(Platform, "baijiahao").domain_suffix == "baijiahao.baidu.com"
-    assert len(session.scalars(select(Platform)).all()) == 7
+    assert session.get(Platform, "smzdm").domain_suffix == "smzdm.com"
+    assert len(session.scalars(select(Platform)).all()) == 3
     assert session.get(Setting, "api_channel").value == "api-custom"
 
 
